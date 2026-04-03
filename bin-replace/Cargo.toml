@@ -1,0 +1,19 @@
+[package]
+name = "arma3-wiki-replace"
+version = "0.1.0"
+authors = ["Brett Mayson"]
+edition = "2024"
+
+[dependencies]
+console = { version = "0.16.2" }
+dialoguer = { version = "0.12.0" }
+fs-err = { workspace = true }
+indicatif = { version = "0.18.3" }
+regex = { version = "1.12.2" }
+reqwest = { version = "0.13.1", features = ["cookies"] }
+serde = { workspace = true , features = ["derive"] }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+similar = { version = "2.7.0", features = ["inline"] }
+tokio = { workspace = true , features = ["full"] }
+urlencoding = { workspace = true }

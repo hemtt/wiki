@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "bin-github",
+    "bin-parse",
+    "bin-replace",
+
+    "clients/rust",
+]
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+nursery = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+cognitive_complexity = "allow"
+too_many_lines = "allow"
+
+[workspace.lints.rust]
+future_incompatible = "warn"
+nonstandard_style = "warn"
+
+[workspace.dependencies]
+fs-err = "3.2.2"
+serde = "1.0.228"
+serde_json = "1.0.148"
+serde_yaml = { version = "0.9.34-deprecated" }
+tokio = "1.48.0"
+urlencoding = "2.1.3"
