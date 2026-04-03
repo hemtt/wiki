@@ -1,25 +1,23 @@
 use serde::{Deserialize, Serialize};
 
-use crate::model::Return;
-
-use super::{Call, Locality, Param, Since};
+use super::{Call, Locality, Param, Return, Since};
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Syntax {
-    pub(crate) call: Call,
-    pub(crate) ret: Return,
+    pub call: Call,
+    pub ret: Return,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) left: Option<Param>,
+    pub left: Option<Param>,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) right: Option<Param>,
+    pub right: Option<Param>,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) since: Option<Since>,
+    pub since: Option<Since>,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) effect: Option<Locality>,
+    pub effect: Option<Locality>,
 }
 
 impl Syntax {

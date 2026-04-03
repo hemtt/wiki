@@ -9,6 +9,8 @@ edition = "2024"
 workspace = true
 
 [dependencies]
+arma3-wiki-model = { path = "../../model" }
+
 directories = "6.0.0"
 fs-err = { workspace = true }
 regex = "1.12.2"
@@ -27,6 +29,7 @@ remote = ["git2"]
 parser = []
 
 [build-dependencies]
+arma3-wiki-model = { path = "../../model" }
 directories = "6.0.0"
 fs_extra = { version = "1.3.0" }
 fs-err = { workspace = true }

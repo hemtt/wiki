@@ -1,9 +1,7 @@
+use arma3_wiki_model::{Command, Value};
 use std::{collections::HashMap, path::Path, sync::Arc};
 
-use arma3_wiki::{
-    model::{Command, Value},
-    parser::ParseError,
-};
+use arma3_wiki::parser::{ParseError, command::CommandParser};
 use arma3_wiki_github::report::Report;
 use indicatif::ProgressBar;
 use regex::Regex;

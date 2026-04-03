@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::model::Branch;
+use crate::Branch;
 
 use super::{Locality, Since, Syntax};
 

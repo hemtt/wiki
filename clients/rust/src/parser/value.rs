@@ -1,7 +1,11 @@
-use crate::model::{OneOfValue, Since, Value};
+use arma3_wiki_model::{OneOfValue, Since, Value};
 
-impl Value {
-    pub fn parse(source: &str, depth: u8) -> Result<Self, String> {
+pub trait ValueParser {
+    fn parse(source: &str, depth: u8) -> Result<Value, String>;
+}
+
+impl ValueParser for Value {
+    fn parse(source: &str, depth: u8) -> Result<Self, String> {
         if depth > 5 {
             return Err("Exceeded maximum recursion depth while parsing Value".to_string());
         }

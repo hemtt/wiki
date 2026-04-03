@@ -10,6 +10,8 @@ mod syntax;
 mod value;
 mod version;
 
+pub const BRANCH: &str = "dist";
+
 pub use branch::Branch;
 pub use call::{Arg, Call};
 pub use command::Command;

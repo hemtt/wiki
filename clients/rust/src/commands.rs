@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::model::Command;
+use arma3_wiki_model::Command;
 
 pub struct Commands {
     commands: HashMap<String, Command>,

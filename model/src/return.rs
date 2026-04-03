@@ -1,14 +1,14 @@
 use serde::{Deserialize, Serialize};
 
-use crate::model::Value;
+use crate::Value;
 
 #[derive(Clone, Debug, Serialize, PartialEq, Eq)]
 pub struct Return {
     #[serde(rename = "type")]
-    pub(crate) typ: Value,
+    pub typ: Value,
     #[serde(default, rename = "desc")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) desc: Option<String>,
+    pub desc: Option<String>,
 }
 
 // Support either a map like usualy, or an array with two items (the type and description)

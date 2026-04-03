@@ -1,6 +1,6 @@
 use std::process::Command;
 
-use arma3_wiki::BRANCH;
+use arma3_wiki_model::BRANCH;
 use octocrab::{models::pulls::PullRequest, Octocrab};
 
 use crate::{REPO_NAME, REPO_ORG};

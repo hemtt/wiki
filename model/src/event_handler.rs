@@ -1,5 +1,7 @@
 use std::str::FromStr;
 
+use crate::Version;
+
 use super::{Locality, ParamItem, Since};
 
 #[derive(Clone, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
@@ -116,8 +118,6 @@ impl ParsedEventHandler {
     }
 
     fn id_from_arg_title(source: &str) -> Result<(String, Option<Since>), String> {
-        use crate::model::Version;
-
         let source = if source.contains("&nbsp;") {
             source.split_once("&nbsp;").expect("Missing &nbsp;").0
         } else {

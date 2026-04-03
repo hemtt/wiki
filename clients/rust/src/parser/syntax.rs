@@ -1,12 +1,21 @@
 use std::collections::HashMap;
 
-use crate::{
-    model::{Call, Locality, Param, ParamItem, Return, Since, Syntax},
-    parser::{block_type, debold},
-};
+use arma3_wiki_model::{Call, Locality, Param, ParamItem, Return, Since, Syntax};
 
-impl Syntax {
-    pub fn parse(
+use crate::parser::{block_type, call::CallParser, debold, param::ParamItemParser};
+
+pub trait SyntaxParser {
+    fn parse(
+        command: &str,
+        source: &str,
+        blocks: &mut std::iter::Peekable<std::vec::IntoIter<(&str, &str)>>,
+    ) -> Result<Self, String>
+    where
+        Self: Sized;
+}
+
+impl SyntaxParser for Syntax {
+    fn parse(
         command: &str,
         source: &str,
         blocks: &mut std::iter::Peekable<std::vec::IntoIter<(&str, &str)>>,

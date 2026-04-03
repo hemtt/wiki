@@ -1,5 +1,7 @@
 use std::path::Path;
 
+use arma3_wiki::parser::command::CommandParser;
+
 const ROOT: &str = "tests/parse_sources";
 
 macro_rules! parse(
@@ -14,7 +16,7 @@ macro_rules! parse(
 
 fn parse(path: &str) {
     let content = fs_err::read_to_string(Path::new(ROOT).join(path)).expect("Failed to read file");
-    let result = arma3_wiki::model::Command::parse(path, &content);
+    let result = arma3_wiki_model::Command::parse(path, &content);
     println!("{result:?}");
     let result = result.expect("Failed to parse command");
     assert!(result.1.is_empty());

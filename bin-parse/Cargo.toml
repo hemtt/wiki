@@ -9,6 +9,7 @@ workspace = true
 
 [dependencies]
 arma3-wiki = { path = "../clients/rust", features = ["parser"]}
+arma3-wiki-model = { path = "../model" }
 arma3-wiki-github = { path = "../bin-github" }
 
 fs-err = { workspace = true }

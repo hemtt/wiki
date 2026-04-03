@@ -44,36 +44,3 @@ impl Call {
         matches!(self, Self::Binary(_, _))
     }
 }
-
-#[test]
-fn parse() {
-    assert_eq!(
-        Call::parse_params("[idc, path, name]").expect("Invalid parameters"),
-        Arg::Array(vec![
-            Arg::Item("idc".to_string()),
-            Arg::Item("path".to_string()),
-            Arg::Item("name".to_string())
-        ])
-    );
-    assert_eq!(
-        Call::parse_params("[idc, [row, column], colour]").expect("Invalid parameters"),
-        Arg::Array(vec![
-            Arg::Item("idc".to_string()),
-            Arg::Array(vec![
-                Arg::Item("row".to_string()),
-                Arg::Item("column".to_string())
-            ]),
-            Arg::Item("colour".to_string())
-        ])
-    );
-    assert_eq!(
-        Call::parse_params("[[row, column], colour]").expect("Invalid parameters"),
-        Arg::Array(vec![
-            Arg::Array(vec![
-                Arg::Item("row".to_string()),
-                Arg::Item("column".to_string())
-            ]),
-            Arg::Item("colour".to_string())
-        ])
-    );
-}

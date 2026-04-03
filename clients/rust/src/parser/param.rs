@@ -1,10 +1,15 @@
-use crate::{
-    model::{Call, Param, ParamItem, Since, Value},
-    parser::ParseError,
-};
+use arma3_wiki_model::{Call, Param, ParamItem, Since, Value};
 
-impl ParamItem {
-    pub fn parse(command: &str, source: &str) -> Result<(Self, Vec<ParseError>), String> {
+use crate::parser::{ParseError, call::CallParser, value::ValueParser};
+
+pub trait ParamItemParser {
+    fn parse(command: &str, source: &str) -> Result<(Self, Vec<ParseError>), String>
+    where
+        Self: Sized;
+}
+
+impl ParamItemParser for ParamItem {
+    fn parse(command: &str, source: &str) -> Result<(Self, Vec<ParseError>), String> {
         if let Some(parsed) = try_simple_line(source)? {
             return Ok((parsed, Vec::new()));
         }
@@ -144,7 +149,7 @@ pub fn try_optional(source: &str) -> Option<Option<String>> {
 
 #[cfg(test)]
 mod tests {
-    use crate::model::{ArraySizedElement, OneOfValue, Since};
+    use arma3_wiki_model::{Arg, ArraySizedElement, OneOfValue, Since};
 
     use super::*;
 
@@ -403,6 +408,39 @@ mod tests {
                     },
                 ]))
             }
+        );
+    }
+
+    #[test]
+    fn parse() {
+        assert_eq!(
+            Call::parse_params("[idc, path, name]").expect("Invalid parameters"),
+            Arg::Array(vec![
+                Arg::Item("idc".to_string()),
+                Arg::Item("path".to_string()),
+                Arg::Item("name".to_string())
+            ])
+        );
+        assert_eq!(
+            Call::parse_params("[idc, [row, column], colour]").expect("Invalid parameters"),
+            Arg::Array(vec![
+                Arg::Item("idc".to_string()),
+                Arg::Array(vec![
+                    Arg::Item("row".to_string()),
+                    Arg::Item("column".to_string())
+                ]),
+                Arg::Item("colour".to_string())
+            ])
+        );
+        assert_eq!(
+            Call::parse_params("[[row, column], colour]").expect("Invalid parameters"),
+            Arg::Array(vec![
+                Arg::Array(vec![
+                    Arg::Item("row".to_string()),
+                    Arg::Item("column".to_string())
+                ]),
+                Arg::Item("colour".to_string())
+            ])
         );
     }
 }

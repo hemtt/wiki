@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use arma3_wiki::model::{EventHandler, EventHandlerNamespace, ParsedEventHandler, Version};
+use arma3_wiki_model::{EventHandler, EventHandlerNamespace, ParsedEventHandler, Version};
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize, Serialize)]

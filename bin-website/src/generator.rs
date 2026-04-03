@@ -1,4 +1,4 @@
-use crate::models::{Command, Report, get_command_status, CommandStatus};
+use crate::models::{Command, CommandStatus, Report, get_command_status};
 use serde_json::json;
 use std::io;
 
@@ -9,7 +9,7 @@ pub fn generate_metadata(
 ) -> io::Result<()> {
     // Create subdirectories for data
     fs_err::create_dir_all(output_dir)?;
-    fs_err::create_dir_all(&format!("{output_dir}/commands"))?;
+    fs_err::create_dir_all(format!("{output_dir}/commands"))?;
 
     // Generate commands.json with only basic info
     generate_commands_file(commands, report, output_dir)?;
@@ -101,7 +101,7 @@ fn generate_individual_commands(
 ) -> io::Result<()> {
     for cmd in commands {
         let status = get_command_status(cmd.name(), report);
-        
+
         // Only generate individual files for passed commands
         if status != CommandStatus::Passed {
             continue;

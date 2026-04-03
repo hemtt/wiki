@@ -1,4 +1,4 @@
-pub use arma3_wiki::model::Command;
+pub use arma3_wiki_model::Command;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
@@ -64,7 +64,10 @@ pub fn load_commands(dir: &str) -> std::io::Result<Vec<Command>> {
             continue;
         }
 
-        let filename = path.file_name().expect("Failed to get file name").to_string_lossy();
+        let filename = path
+            .file_name()
+            .expect("Failed to get file name")
+            .to_string_lossy();
         if !filename.ends_with(".yml") && !filename.ends_with(".yaml") {
             continue;
         }

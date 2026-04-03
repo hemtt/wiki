@@ -1,7 +1,7 @@
 use std::{collections::HashMap, path::Path};
 
-use arma3_wiki::model::{EventHandler, EventHandlerNamespace, ParsedEventHandler};
 use arma3_wiki_github::report::Report;
+use arma3_wiki_model::{EventHandler, EventHandlerNamespace, ParsedEventHandler};
 use reqwest::Client;
 
 use crate::WafSkip;

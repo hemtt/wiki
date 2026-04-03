@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use arma3_wiki::model::Version;
+use arma3_wiki_model::Version;
 use regex::Regex;
 use reqwest::Client;
 

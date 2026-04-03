@@ -1,7 +1,11 @@
-use crate::model::{Branch, Command, Locality, Syntax};
-use crate::parser::ParseError;
+use crate::parser::{ParseError, syntax::SyntaxParser};
+use arma3_wiki_model::{Branch, Command, Locality, Syntax};
 
-impl Command {
+pub trait CommandParser {
+    fn parse(name: &str, source: &str) -> Result<(Command, Vec<ParseError>), String>;
+}
+
+impl CommandParser for Command {
     /// Parses a command from the wiki.
     ///
     /// # Errors
@@ -9,7 +13,7 @@ impl Command {
     ///
     /// # Panics
     /// Panics if the parameters are invalid.
-    pub fn parse(name: &str, source: &str) -> Result<(Self, Vec<ParseError>), String> {
+    fn parse(name: &str, source: &str) -> Result<(Self, Vec<ParseError>), String> {
         let mut errors = Vec::new();
 
         let mut source = source.to_string();

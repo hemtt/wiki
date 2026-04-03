@@ -1,4 +1,4 @@
-use crate::model::Since;
+use arma3_wiki_model::Since;
 
 pub mod call;
 pub mod command;

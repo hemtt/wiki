@@ -39,6 +39,7 @@ dependencies = [
 name = "arma3-wiki"
 version = "0.5.5"
 dependencies = [
+ "arma3-wiki-model",
  "directories",
  "fs-err",
  "fs_extra",
@@ -54,7 +55,7 @@ dependencies = [
 name = "arma3-wiki-github"
 version = "0.1.0"
 dependencies = [
- "arma3-wiki",
+ "arma3-wiki-model",
  "fs-err",
  "octocrab",
  "serde",
@@ -64,11 +65,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "arma3-wiki-model"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "serde_yaml",
+]
+
+[[package]]
 name = "arma3-wiki-parse"
 version = "0.1.0"
 dependencies = [
  "arma3-wiki",
  "arma3-wiki-github",
+ "arma3-wiki-model",
  "fs-err",
  "futures",
  "httpdate",
@@ -103,7 +114,7 @@ dependencies = [
 name = "arma3-wiki-website"
 version = "0.1.0"
 dependencies = [
- "arma3-wiki",
+ "arma3-wiki-model",
  "fs-err",
  "serde",
  "serde_json",

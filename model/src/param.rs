@@ -1,8 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::model::{ArraySizedElement, Call};
-
-use super::{Since, Value};
+use super::{Arg, ArraySizedElement, Call, Since, Value};
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
 pub enum Param {
@@ -43,24 +41,24 @@ impl Param {
     ///
     /// # Panics
     /// Panics if a `ParamItem` is not found in the pool.
-    pub fn build_from_arg(arg: &crate::model::Arg, pool: &[ParamItem]) -> Result<Self, String> {
+    pub fn build_from_arg(arg: &Arg, pool: &[ParamItem]) -> Result<Self, String> {
         match arg {
-            crate::model::Arg::Item(name) => Ok(Self::Item(
+            Arg::Item(name) => Ok(Self::Item(
                 pool.iter()
                     .find(|param| &param.name == name)
                     .cloned()
                     .ok_or_else(|| format!("Param `{name}` not found in pool"))?,
             )),
-            crate::model::Arg::Array(arg_list) => Ok(Self::Array(
+            Arg::Array(arg_list) => Ok(Self::Array(
                 arg_list
                     .iter()
                     .map(|arg| Self::build_from_arg(arg, pool))
                     .collect::<Result<Vec<Self>, String>>()?,
             )),
-            crate::model::Arg::InfiniteItem(arg_item) => {
+            Arg::InfiniteItem(arg_item) => {
                 Ok(Self::Infinite(vec![Self::build_from_arg(arg_item, pool)?]))
             }
-            crate::model::Arg::InfiniteFlat(arg_list) => Ok(Self::Infinite(
+            Arg::InfiniteFlat(arg_list) => Ok(Self::Infinite(
                 arg_list
                     .iter()
                     .map(|arg| Self::build_from_arg(arg, pool))
@@ -130,21 +128,21 @@ impl Param {
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
 pub struct ParamItem {
-    pub(crate) name: String,
+    pub name: String,
     #[serde(default, alias = "description")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) desc: Option<String>,
+    pub desc: Option<String>,
     #[serde(rename = "type")]
-    pub(crate) typ: Value,
+    pub typ: Value,
     #[serde(default)]
     #[serde(skip_serializing_if = "std::ops::Not::not")]
-    pub(crate) optional: bool,
+    pub optional: bool,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) default: Option<String>,
+    pub default: Option<String>,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) since: Option<Since>,
+    pub since: Option<Since>,
 }
 
 impl ParamItem {

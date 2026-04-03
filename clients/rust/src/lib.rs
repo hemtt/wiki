@@ -2,14 +2,11 @@ use std::{
     collections::HashMap, fs::File, io::Write, path::PathBuf, str::FromStr, time::SystemTime,
 };
 
+use arma3_wiki_model::{BRANCH, Command, EventHandlerNamespace, ParsedEventHandler, Version};
 use commands::Commands;
 use git2::Repository;
-use model::{Command, EventHandlerNamespace, ParsedEventHandler, Version};
-
-pub const BRANCH: &str = "dist";
 
 pub mod commands;
-pub mod model;
 pub mod parser;
 
 #[allow(clippy::disallowed_methods)]
@@ -146,6 +143,8 @@ impl Wiki {
             let repo = if let Ok(repo) = Repository::open(&appdata) {
                 repo
             } else {
+                use arma3_wiki_model::BRANCH;
+
                 git2::build::RepoBuilder::new()
                     .branch(BRANCH)
                     .clone("https://github.com/hemtt/arma3-wiki", &appdata)

@@ -1,6 +1,6 @@
 use rand::{Rng, distr::Alphanumeric, rng};
 
-const BRANCH: &str = "dist";
+use arma3_wiki_model::BRANCH;
 
 pub fn main() {
     use git2::Repository;
