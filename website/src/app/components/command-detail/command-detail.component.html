@@ -1,0 +1,150 @@
+<div class="min-h-screen bg-gray-50">
+    <!-- Header with back button -->
+    <div class="bg-white border-b border-gray-200 sticky top-0">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <button (click)="goBack()"
+                class="mb-4 px-4 py-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition">
+                ← Back to Commands
+            </button>
+
+            <!-- Loading state -->
+            @if (loading()) {
+            <div class="text-gray-500">Loading command details...</div>
+            }
+
+            <!-- Error state -->
+            @if (error() && !loading()) {
+            <div class="p-4 bg-red-100 text-red-800 rounded">
+                Command not found or failed to load.
+            </div>
+            }
+
+            <!-- Command header -->
+            @if (basicCommand() && !loading()) {
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-900">{{ basicCommand()!.name }}</h1>
+                </div>
+                <span [class]="getStatusClasses()">{{ basicCommand()!.status }}</span>
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- Content -->
+    @if (basicCommand() && !loading()) {
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Parsing Errors (if command failed) -->
+        @if (commandErrors().length > 0) {
+        <section class="mb-8 p-6 bg-red-50 border border-red-300 rounded-lg">
+            <h2 class="text-2xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                <span class="text-3xl">❌</span>
+                Parsing Errors
+            </h2>
+            <p class="text-red-800 mb-4">This command failed to parse correctly. Here are the errors encountered:</p>
+            <div class="space-y-3">
+                @for (error of commandErrors(); track error) {
+                <div
+                    class="p-4 bg-white border border-red-200 rounded font-mono text-sm whitespace-pre-wrap overflow-x-auto text-red-700">
+                    {{ error }}
+                </div>
+                }
+            </div>
+        </section>
+        }
+
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Description</h2>
+            <p class="text-gray-700">{{ fullCommand()?.description || 'No description available.' }}</p>
+        </section>
+
+        <!-- Groups -->
+        @if (commandGroups().length > 0) {
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Groups</h2>
+            <div class="flex flex-wrap gap-2">
+                @for (group of commandGroups(); track group) {
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    {{ group }}
+                </span>
+                }
+            </div>
+        </section>
+        }
+
+        <!-- Syntax -->
+        @if (commandSyntax().length > 0) {
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Syntax</h2>
+            <div class="space-y-4">
+                @for (syn of commandSyntax(); track syn) {
+                <h3 class="text-lg font-semibold text-gray-900">Syntax #{{ commandSyntax().indexOf(syn) + 1 }}</h3>
+                <app-syntax-viewer [command]="fullCommand()" [syntax]="syn"></app-syntax-viewer>
+                }
+            </div>
+        </section>
+        }
+
+        <!-- Examples -->
+        @if (commandExamples().length > 0) {
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Examples</h2>
+            <div class="space-y-3">
+                @for (example of commandExamples(); track example) {
+                <div
+                    class="p-4 bg-blue-50 border border-blue-200 rounded font-mono text-sm whitespace-pre-wrap overflow-x-auto">
+                    {{ example }}
+                </div>
+                }
+            </div>
+        </section>
+        }
+
+        <!-- Problem Notes -->
+        @if (commandProblemNotes().length > 0) {
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Problem Notes</h2>
+            <ul class="space-y-2">
+                @for (note of commandProblemNotes(); track note) {
+                <li class="flex gap-3 text-gray-700 p-3 bg-yellow-50 border border-yellow-200 rounded">
+                    <span class="text-yellow-600 font-bold">⚠</span>
+                    <span>{{ note }}</span>
+                </li>
+                }
+            </ul>
+        </section>
+        }
+
+        <!-- See Also -->
+        @if (commandSeeAlso().length > 0) {
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">See Also</h2>
+            <div class="flex flex-wrap gap-2">
+                @for (item of commandSeeAlso(); track item) {
+                <a [routerLink]="['/command', item]"
+                    class="px-4 py-2 bg-indigo-100 text-indigo-700 hover:bg-indigo-200 rounded transition font-medium">
+                    {{ item }}
+                </a>
+                }
+            </div>
+        </section>
+        }
+
+        <!-- Additional Details -->
+        <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            @if (commandArgumentLoc()) {
+            <div class="p-4 bg-gray-100 rounded">
+                <h3 class="font-semibold text-gray-900 mb-2">Argument Location</h3>
+                <p class="text-gray-700 font-mono text-sm">{{ commandArgumentLoc() }}</p>
+            </div>
+            }
+            @if (commandEffectLoc()) {
+            <div class="p-4 bg-gray-100 rounded">
+                <h3 class="font-semibold text-gray-900 mb-2">Effect Location</h3>
+                <p class="text-gray-700 font-mono text-sm">{{ commandEffectLoc() }}</p>
+            </div>
+            }
+        </section>
+    </div>
+    }
+</div>

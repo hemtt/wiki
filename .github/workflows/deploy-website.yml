@@ -1,45 +1,32 @@
-name: Run
+name: Generate and Deploy Website
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - 'dist/commands/**'
+      - 'dist/report.json'
+      - 'bin-website/**'
+      - 'website/**'
+      - 'Cargo.lock'
+      - 'Cargo.toml'
+      - 'package.json'
+      - '.github/workflows/deploy-website.yml'
   workflow_dispatch:
 
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Checkout Dist
-        uses: actions/checkout@v4
-        with:
-          path: dist
-          ref: dist
-      - name: Rust Cache
-        uses: Swatinem/rust-cache@v2
-        with:
-          key: run
-      - name: Parse Commands
-        run: cargo run --release --bin arma3-wiki-parse
-        env:
-          BI_WAF_SKIP: ${{ secrets.BI_WAF_SKIP }}
-      - name: Update GitHub
-        run: cargo run --release --bin arma3-wiki-github
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
+jobs:
   build-website:
     runs-on: ubuntu-latest
-    needs: run
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Checkout Dist
-        uses: actions/checkout@v4
-        with:
-          path: dist
-          ref: dist
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -75,17 +62,14 @@ jobs:
           path: dist-website
           retention-days: 5
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'dist-website'
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist-website
+          # Replace with your custom domain or remove for default github.io domain
+          # cname: hemtt-wiki.example.com
 
       - name: Create summary
         run: |

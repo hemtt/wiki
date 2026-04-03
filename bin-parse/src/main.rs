@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use arma3_wiki_github::report::Report;
 use reqwest::{Client, RequestBuilder};
 
@@ -41,6 +43,13 @@ async fn main() {
     let report_path = tmp.join("report.json");
     let report_json = serde_json::to_string_pretty(&report).expect("Failed to serialize report");
     fs_err::write(&report_path, report_json).expect("Failed to write report");
+    println!("Report written to {}", report_path.display());
+    let report_path = PathBuf::from("dist/report.json");
+    fs_err::write(
+        &report_path,
+        serde_json::to_string_pretty(&report).expect("Failed to serialize report"),
+    )
+    .expect("Failed to write report");
     println!("Report written to {}", report_path.display());
 }
 

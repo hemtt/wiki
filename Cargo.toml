@@ -4,6 +4,7 @@ members = [
     "bin-github",
     "bin-parse",
     "bin-replace",
+    "bin-website",
 
     "clients/rust",
 ]

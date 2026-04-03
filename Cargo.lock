@@ -100,6 +100,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "arma3-wiki-website"
+version = "0.1.0"
+dependencies = [
+ "arma3-wiki",
+ "fs-err",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tokio",
+]
+
+[[package]]
 name = "async-trait"
 version = "0.1.89"
 source = "registry+https://github.com/rust-lang/crates.io-index"

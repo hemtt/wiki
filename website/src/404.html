@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HEMTT Wiki</title>
+    <script>
+      // GitHub Pages redirect for SPA
+      // Convert the 404 request into an index.html request with pathname preserved
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          '/index.html?p=' +
+          l.pathname.slice(1).replace(/&/g, '~and~') +
+          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          (l.hash ? '&h=' + l.hash.slice(1).replace(/&/g, '~and~') : ''),
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

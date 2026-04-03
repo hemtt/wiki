@@ -1,4 +1,5 @@
 target/
 .vscode/settings.json
 dist/
+dist-website/
 .community_details.yaml

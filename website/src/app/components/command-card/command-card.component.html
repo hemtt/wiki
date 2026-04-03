@@ -1,0 +1,25 @@
+<div
+  (click)="viewDetails()"
+  class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 cursor-pointer hover:border-blue-300 border-2 border-transparent"
+>
+  <div class="p-6">
+    <div class="flex items-start justify-between mb-3">
+      <h3 class="text-xl font-bold text-gray-800 break-words flex-1 hover:text-blue-600">{{ command.name }}</h3>
+      <span [class]="getStatusClasses()" class="ml-2 flex-shrink-0"> {{ command.status }} </span>
+    </div>
+
+    <p class="text-gray-600 text-sm mb-4 line-clamp-2">{{ command.description || 'No description' }}</p>
+
+    @if (command.groups && command.groups.length > 0) {
+      <div class="mb-4 flex flex-wrap gap-2">
+        @for (group of command.groups; track group) {
+          <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-900 text-xs font-semibold rounded">
+            {{ group }}
+          </span>
+        }
+      </div>
+    }
+
+    <div class="mt-4 text-xs text-blue-600 font-medium">Click to view details →</div>
+  </div>
+</div>
