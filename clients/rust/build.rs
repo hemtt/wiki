@@ -1,6 +1,6 @@
 use rand::{Rng, distr::Alphanumeric, rng};
 
-const BRANCH: &str = "dist-2";
+const BRANCH: &str = "dist";
 
 pub fn main() {
     use git2::Repository;

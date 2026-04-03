@@ -6,7 +6,7 @@ use commands::Commands;
 use git2::Repository;
 use model::{Command, EventHandlerNamespace, ParsedEventHandler, Version};
 
-pub const BRANCH: &str = "dist-2";
+pub const BRANCH: &str = "dist";
 
 pub mod commands;
 pub mod model;
