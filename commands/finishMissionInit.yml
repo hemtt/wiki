@@ -1,0 +1,16 @@
+name: finishMissionInit
+desc: Finish world initialisation before mission is launched.
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '[[finishMissionInit]]'
+see_also:
+- startLoadingScreen
+- endLoadingScreen

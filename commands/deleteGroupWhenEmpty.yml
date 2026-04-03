@@ -1,0 +1,43 @@
+name: deleteGroupWhenEmpty
+desc: |-
+  Marks given group for auto-deletion when group is empty.
+  [[true]] will mark the group for auto-deletion once empty, [[false]] will simply unmark the group that was marked previously.
+  {{Feature|important|This command does '''not''' prevent group deletion (through e.g [[deleteGroup]] or any engine group management).}}
+groups:
+- Groups
+syntax:
+- call: !Binary
+  - group
+  - delete
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    type: Group
+  right: !Item
+    name: delete
+    desc: '[[true]] to mark for auto-deletion on empty group, [[false]] to not use this auto-deletion system'
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_group deleteGroupWhenEmpty true;</sqf>
+- "Executed on the server:\n<sqf>\nif (local _group) then\n{\n\t_group deleteGroupWhenEmpty true;\n}\nelse // group is local to a client\n{\n\t[_group, true] remoteExec [\"deleteGroupWhenEmpty\", groupOwner _group];\n};\n</sqf>"
+see_also:
+- deleteGroup
+- isGroupDeletedWhenEmpty
+- createGroup
+- group
+- setGroupId
+- groupID
+- units
+- groupFromNetId
+- netId
+- leader
+- selectLeader
+- join
+- createCenter
+- createUnit
+- createVehicle
+- Side

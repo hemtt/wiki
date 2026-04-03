@@ -1,0 +1,30 @@
+name: removeOwnedMine
+desc: Removes ownership over a remotely detonatable mine from the unit.
+groups:
+- Mines
+syntax:
+- call: !Binary
+  - unit
+  - mine
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: mine
+    desc: the mine object
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player removeOwnedMine SuperMine;</sqf>
+see_also:
+- allMines
+- createMine
+- detectedMines
+- mineActive
+- getAllOwnedMines
+- addOwnedMine
+- removeAllOwnedMines

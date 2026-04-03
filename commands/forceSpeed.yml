@@ -1,0 +1,30 @@
+name: forceSpeed
+desc: |-
+  Force the speed limit on given object (object will never attempt to move faster than given by forceSpeed). Use negative value to return to default behaviour.
+  {{Feature|important|This has no effect on [[player]]s.}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - object
+  - speed
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: speed
+    desc: in metre per second
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_helicopter forceSpeed 150;</sqf>
+see_also:
+- getForcedSpeed
+- forceWalk
+- isWalking
+- isForcedWalk
+- getSpeed

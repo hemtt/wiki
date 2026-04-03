@@ -1,0 +1,24 @@
+name: useAudioTimeForMoves
+desc: Switch between elapsed game time and audio time being used as animation timer. Used for audio/animation synchronization.
+groups:
+- Animations
+syntax:
+- call: !Binary
+  - soldier
+  - toggle
+  ret:
+    type: Nothing
+  left: !Item
+    name: soldier
+    type: Object
+  right: !Item
+    name: toggle
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player useAudioTimeForMoves true;</sqf>
+see_also:
+- setAccTime
+- accTime

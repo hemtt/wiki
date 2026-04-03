@@ -1,0 +1,19 @@
+name: pitch
+desc: Returns the pitch of a persons voice.
+groups:
+- Unit Identity
+- Sounds
+syntax:
+- call: !Unary person
+  ret:
+    type: Number
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>pitch player;</sqf>
+see_also:
+- setPitch

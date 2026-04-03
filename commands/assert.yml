@@ -1,0 +1,32 @@
+name: assert
+desc: |-
+  Tests a condition and if the condition is false, displays error on screen (if -showscripterrors enabled) and logs error into .rpt file. It does not interrupt the script execution.
+
+  If script was pre-processed with [[preprocessFileLineNumbers]], it will also show/log the error line number and the file name.
+groups:
+- Program Flow
+syntax:
+- call: !Unary condition
+  ret:
+    type: Boolean
+    desc: mirrors condition
+  right: !Item
+    name: condition
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>assert (1 > 2);</sqf>
+
+  [[File:PreprocessFile.jpg]]
+- "Check function params (Faster alternative to [[BIS_fnc_param]])\n<sqf>\nsome_func = {\n\t_0 = _this select 0;\n\t_1 = _this select 1;\n\t_2 = _this select 2;\n\tif (!assert (\n\t\ttypeName _0 == \"ARRAY\" && \n\t\ttypeName _1 == \"STRING\" &&\n\t\ttypeName _2 == \"SCALAR\"\n\t)) exitWith { /* optional error logging */ };\n\thint \"Alright!\";\n};\n[1,2,3] call some_func; // assert error\n[[1],\"2\",3] call some_func; // Alright!\n</sqf>"
+see_also:
+- try
+- catch
+- throw
+- halt
+- diag_captureFrame
+- diag_captureSlowFrame
+- diag_logSlowFrame

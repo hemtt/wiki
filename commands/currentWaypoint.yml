@@ -1,0 +1,28 @@
+name: currentWaypoint
+desc: |-
+  Returns the ''index'' of the current waypoint ('''not''' the waypoint in [[Waypoint|Waypoint Array]] format).
+
+  * To determine the validity of the index, compare it to the waypoints count.
+  * If all waypoints are completed, then the index is 1 greater than the last valid index.
+  * If there are no waypoints, then the index is 0.
+
+  By default, a group has one already-completed waypoint at their starting position, making the first waypoint number one, not zero.
+groups:
+- Waypoints
+syntax:
+- call: !Unary groupName
+  ret:
+    type: Number
+    desc: index of the current waypoint
+  right: !Item
+    name: groupName
+    type: Group
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_index = currentWaypoint group player;</sqf>
+- <sqf>_waypointFormat = [_group, currentWaypoint _group];</sqf>
+see_also:
+- waypoints
+- setCurrentWaypoint

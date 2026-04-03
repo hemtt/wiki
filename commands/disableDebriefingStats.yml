@@ -1,0 +1,18 @@
+name: disableDebriefingStats
+desc: |-
+  Disable debriefing score table.
+  {{Feature|warning|This command is broken.}}
+groups:
+- Broken Commands
+- Briefing
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>disableDebriefingStats;</sqf>
+see_also:
+- enableDebriefingStats

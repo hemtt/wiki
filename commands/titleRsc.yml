@@ -1,0 +1,42 @@
+name: titleRsc
+desc: |-
+  Displays a resource defined in RscTitles. Also see [[cutRsc]], with these two commands you can show two different resources at once.
+  {{Feature|arma3|{{GVI|arma3|1.58}} Multiple layers and map overlays are possible with [[cutRsc]] which provides more options and handles layers better.}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - text
+  - type
+  - speed
+  - showInMap
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: text
+    desc: the class name of the resource. ("Default" will remove the current resource)
+    type: String
+  - !Item
+    name: type
+    desc: 'can be one of: "PLAIN", "PLAIN DOWN", "BLACK", "BLACK FADED", "BLACK OUT", "BLACK IN", "WHITE OUT" and "WHITE IN"; see [[Title Effect Type]]s for more information about these values'
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default -1) time in seconds to fade in resource
+    type: Number
+  - !Item
+    name: showInMap
+    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>titleRsc ["BIS", "PLAIN"];</sqf>
+see_also:
+- titleText
+- titleObj
+- cutRsc
+- allActiveTitleEffects
+- activeTitleEffectParams

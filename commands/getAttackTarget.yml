@@ -1,0 +1,18 @@
+name: getAttackTarget
+desc: Returns the target given unit is engaging.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unit
+  ret:
+    type: Object
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _unitsTarget = getAttackTarget _unit;</sqf>
+see_also:
+- assignedTarget

@@ -1,0 +1,28 @@
+name: countUnknown
+desc: Count how many units in the array are unknown to the given unit.
+groups:
+- Sides
+syntax:
+- call: !Binary
+  - unit
+  - others
+  ret:
+    type: Number
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: others
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_num = player countUnknown list _triggerOne;</sqf>
+see_also:
+- countFriendly
+- countEnemy
+- count
+- countSide
+- countType

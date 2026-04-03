@@ -1,0 +1,19 @@
+name: getTotalDLCUsageTime
+desc: Returns total DLC usage time in this game session
+groups:
+- DLC
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: time (in seconds?)
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_dlcTime = getTotalDLCUsageTime;</sqf>
+see_also:
+- getDLCs
+- getObjectDLC
+- getPersonUsedDLCs
+- getMissionDLCs

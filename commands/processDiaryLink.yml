@@ -1,0 +1,27 @@
+name: processDiaryLink
+desc: Opens the [[Diary]] screen on the subject/record specified by link. To get a valid link format, use [[createDiaryLink]].
+groups:
+- Briefing
+syntax:
+- call: !Unary link
+  ret:
+    type: Nothing
+  right: !Item
+    name: link
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>processDiaryLink createDiaryLink ["Tasks", (simpleTasks player) select 0, ""]; // Select a task in the Task menu</sqf>
+- |-
+  <sqf>
+  // To select various tabs in the map screen:
+  processDiaryLink createDiaryLink ["selected_tab", player, ""];
+  // ... where "selected_tab" can be "Tasks", "Diary", "Units", "Players", "Statistics", other user created subjects
+  </sqf>
+see_also:
+- createDiaryLink
+- createDiaryRecord
+- createDiarySubject
+- diarySubjectExists

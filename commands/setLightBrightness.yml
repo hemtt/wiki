@@ -1,0 +1,34 @@
+name: setLightBrightness
+desc: |-
+  Set brightness of light. Does nothing for light reflector, for light point the formula is [[setLightIntensity]] ((brightness * 50) ^ 2)
+  {{Feature|arma3|This command is outdated. Use [[setLightIntensity]] instead.}}
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - brightness
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    type: Object
+  right: !Item
+    name: brightness
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight setLightBrightness 2;</sqf>
+see_also:
+- setLightIntensity
+- setLightAmbient
+- setLightColor
+- lightAttachObject
+- lightDetachObject
+- setLightAttenuation
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightDayLight

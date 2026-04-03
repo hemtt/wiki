@@ -1,0 +1,22 @@
+name: waypointBehaviour
+desc: Gets the waypoint behavior.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: String
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointBehaviour [groupOne,1];</sqf>
+see_also:
+- Mission_Editor:_Waypoints#Behaviour|Behaviour
+- Description
+- AIBehaviour
+- waypoints
+- setWaypointBehaviour

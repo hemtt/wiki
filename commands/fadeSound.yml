@@ -1,0 +1,34 @@
+name: fadeSound
+desc: 'Changes the sound volume smoothly within the given time. {{Feature|informative|The player''s in-game setting is not changed by this command: {{hl|Final Volume {{=}} Client Setting * Scripted Volume}}.}}'
+groups:
+- Sounds
+syntax:
+- call: !Binary
+  - time
+  - volume
+  ret:
+    type: Nothing
+  left: !Item
+    name: time
+    desc: fade interval in seconds
+    type: Number
+  right: !Item
+    name: volume
+    desc: sound volume
+    type: !NumberRange
+    - 0
+    - 1
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>5 fadeSound 0;</sqf>
+see_also:
+- fadeRadio
+- fadeSpeech
+- fadeMusic
+- fadeEnvironment
+- environmentVolume
+- soundVolume
+- musicVolume
+- radioVolume

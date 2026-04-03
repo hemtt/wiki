@@ -1,0 +1,22 @@
+name: radioVolume
+desc: Returns the current radio volume (set by [[fadeRadio]]).
+groups:
+- Sounds
+syntax:
+- call: Nular
+  ret:
+    type: !NumberRange
+    - 0
+    - 2
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str radioVolume;</sqf>
+see_also:
+- fadeRadio
+- soundVolume
+- musicVolume
+- speechVolume
+- environmentVolume
+- getAudioOptionVolumes

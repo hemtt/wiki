@@ -1,0 +1,38 @@
+name: leaderboardRequestRowsGlobal
+desc: Requests given leaderboard to download values from global table.
+groups:
+- Leaderboards
+syntax:
+- call: !Unary
+  - leaderboard
+  - offset
+  - rows
+  ret:
+    type: Boolean
+    desc: returns [[true]] if request has been started
+  right: !Array
+  - !Item
+    name: leaderboard
+    desc: name of the leaderboard
+    type: String
+  - !Item
+    name: offset
+    desc: defines how many rows are skipped
+    type: Number
+  - !Item
+    name: rows
+    desc: defines how many rows are requested
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isGettingValues = leaderboardRequestRowsGlobal ["TT01", 0, 10];</sqf>
+see_also:
+- leaderboardGetRows
+- leaderboardInit
+- leaderboardRequestRowsFriends
+- leaderboardRequestRowsGlobalAroundUser
+- leaderboardsRequestUploadScore
+- leaderboardsRequestUploadScoreKeepBest
+- leaderboardState

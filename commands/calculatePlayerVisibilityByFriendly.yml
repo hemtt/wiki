@@ -1,0 +1,19 @@
+name: calculatePlayerVisibilityByFriendly
+desc: Sets if friendly units will calculate [[player]]'s visibility or not. Default value is [[false]].
+groups:
+- System
+syntax:
+- call: !Unary calculate
+  ret:
+    type: Nothing
+  right: !Item
+    name: calculate
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>calculatePlayerVisibilityByFriendly true;</sqf>
+see_also:
+- getCalculatePlayerVisibilityByFriendly
+- knowsAbout

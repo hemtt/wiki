@@ -1,0 +1,21 @@
+name: onBriefingNotes
+desc: Select a sound declared in the [[Description.ext#CfgSounds|Description.ext]] of the mission to be played the first time the [[Briefing.html#Notes|Notes tab]] is selected in the [[Briefing.html|briefing]].
+groups:
+- Sounds
+- Briefing
+- Event Handlers
+syntax:
+- call: !Unary soundName
+  ret:
+    type: Nothing
+  right: !Item
+    name: soundName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>onBriefingNotes "NotesVoiceOver";</sqf>
+see_also:
+- playSound
+- '{{Link|Description.ext#CfgSounds}}'

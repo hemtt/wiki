@@ -1,0 +1,34 @@
+name: setPylonsPriority
+desc: Overrides default pylons priorities.
+groups:
+- Vehicle Loadouts
+syntax:
+- call: !Binary
+  - vehicle
+  - priorities
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: priorities
+    type: !ArrayUnsized
+      value: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>(vehicle player) setPylonsPriority [0,1,2,3,4,5,5,4,3,2,1,0];</sqf>
+see_also:
+- Arma
+- '3:'
+- Vehicle
+- Loadouts
+- getCompatiblePylonMagazines
+- getPylonMagazines
+- setAmmoOnPylon
+- ammoOnPylon
+- animatePylon
+- animateBay
+- setPylonLoadout

@@ -1,0 +1,26 @@
+name: clearMagazineCargoGlobal
+desc: Removes all magazines from the vehicle cargo space. MP synchronized.
+groups:
+- Containers
+syntax:
+- call: !Unary object
+  ret:
+    type: Nothing
+  right: !Item
+    name: object
+    desc: vehicle or ammo box
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>clearMagazineCargoGlobal jeepOne;</sqf>
+see_also:
+- clearMagazineCargo
+- addMagazineCargoGlobal
+- clearWeaponCargo
+- clearWeaponCargoGlobal
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearItemCargo
+- clearItemCargoGlobal

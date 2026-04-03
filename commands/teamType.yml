@@ -1,0 +1,27 @@
+name: teamType
+desc: Returns a type of given team.
+groups:
+- Teams
+syntax:
+- call: !Unary team
+  ret:
+    type: String
+  right: !Item
+    name: team
+    type: TeamMember
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_type = teamType _team;</sqf>
+see_also:
+- addTeamMember
+- createTeam
+- deleteTeam
+- forEachMemberTeam
+- removeTeamMember
+- teamMember
+- teamName
+- teams
+- forEachMember
+- forEachMemberAgent

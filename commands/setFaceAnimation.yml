@@ -1,0 +1,31 @@
+name: setFaceAnimation
+desc: |-
+  Sets facial animation phase (eye blinking).
+  {{Feature|arma3|This command is not functional in {{arma3}}.}}
+groups:
+- Animations
+- Broken Commands
+syntax:
+- call: !Binary
+  - unit
+  - blink
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: blink
+    desc: range 0..1
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_soldier1 setFaceAnimation 0.5;</sqf>
+see_also:
+- setRandomLip
+- setMimic
+- animate
+- animationPhase
+- animateDoor

@@ -1,0 +1,34 @@
+name: displayRemoveEventHandler
+desc: Remove a given event handler from the given display.
+groups:
+- GUI Control - Event Handlers
+- Event Handlers
+syntax:
+- call: !Binary
+  - display
+  - - handlerType
+    - id
+  ret:
+    type: Nothing
+  left: !Item
+    name: display
+    type: Display
+  right: !Array
+  - !Item
+    name: handlerType
+    desc: type of the event handler
+    type: String
+  - !Item
+    name: id
+    desc: index of the event handler
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>findDisplay 46 displayRemoveEventHandler ["keyDown",5];</sqf>
+see_also:
+- disableSerialization
+- Display
+- displayAddEventHandler
+- displayRemoveAllEventHandlers

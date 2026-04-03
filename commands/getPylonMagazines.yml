@@ -1,0 +1,31 @@
+name: getPylonMagazines
+desc: Return array of magazines on pylons.
+groups:
+- Vehicle Loadouts
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: !ArrayUnsized
+      value: String
+    desc: magazine names
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getPylonMagazines vehicle player;</sqf>
+see_also:
+- Arma
+- '3:'
+- Vehicle
+- Loadouts
+- getCompatiblePylonMagazines
+- setAmmoOnPylon
+- ammoOnPylon
+- animatePylon
+- animateBay
+- setPylonsPriority
+- setPylonLoadout
+- magazinesAllTurrets

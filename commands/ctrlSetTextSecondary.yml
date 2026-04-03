@@ -1,0 +1,28 @@
+name: ctrlSetTextSecondary
+desc: Sets the secondary text of a text control.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - text
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: text control
+    type: Control
+  right: !Item
+    name: text
+    desc: secondary text
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ctrlText ctrlSetTextSecondary "Hello World!";</sqf>
+see_also:
+- ctrlTextSecondary
+- ctrlSetText
+- ctrlText
+- ctrlSetTextColorSecondary

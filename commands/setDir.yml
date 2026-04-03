@@ -1,0 +1,54 @@
+name: setDir
+desc: |-
+  Sets object heading. Angles are measured in degrees clockwise from north; the regular range goes from 0 to 360 (0° = N, 90° = E, 180° = S, 270° = W). Negative angles represent counter-clockwise angles.
+  {{Feature|important|This command resets the object's [[velocity]] and [[vectorUp]]!}}
+  {{Feature|informative|In ''some'' earlier titles ({{ofp}}?), this command was {{Icon|localEffect|32}}.}}
+multiplayer_note: See the {{Link|#Notes}} below
+problem_notes:
+- '* The effect is {{Icon|localEffect|32}} when using [[setDir]] on a mine. Use a position modification to broadcast [[setDir]]''s change (see {{Link|#Example 4}})'
+- setting direction ''after'' position may lead to weird behaviours - see {{Link|#Notes}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - object
+  - heading
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: heading
+    type: Number
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>myUnit setDir 45; // will set myUnit to face North-East</sqf>
+- <sqf>myUnit setDir -675; // will also set myUnit to face North-East (= 45-360-360)</sqf>
+- |-
+  <sqf>
+  MyUnit setDir 30;
+  MyUnit setFormDir 30; // needed for AI to keep the given direction
+  </sqf>
+- |-
+  <sqf>
+  // provided _myMine is local
+  _myMine setDir 45;
+  _myMine setPosWorld getPosWorld _myMine;
+
+  // or
+  [_myMine, 45] remoteExec ["setDir"];
+  </sqf>
+- |-
+  <sqf>
+  // sets the direction of an object relative to a parent object's direction
+  _child setDir (_parentDir + (_childDir - _parentDir));
+  </sqf>
+see_also:
+- getDir
+- direction
+- setFormDir
+- setVectorDir
+- setVectorDirAndUp

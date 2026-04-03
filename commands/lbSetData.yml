@@ -1,0 +1,52 @@
+name: lbSetData
+desc: |-
+  Sets the additional text (invisible) in the item with the given index of the listbox or combobox with id idc of the topmost user [[dialog]] to the given data.
+
+  {{Feature|informative|See more information on the [[CT_LISTBOX]] command family [[CT_LISTBOX#Scripting_Example|here]].}}
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  - data
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    desc: control's IDC
+    type: Number
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: data
+    type: String
+- call: !Binary
+  - control
+  - - index
+    - data
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: data
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lbSetData [101, 1, "#1"];</sqf>
+- <sqf>_control lbSetData [1, "#1"];</sqf>
+see_also:
+- lbData
+- lbDelete
+- lbSetValue
+- lbValue

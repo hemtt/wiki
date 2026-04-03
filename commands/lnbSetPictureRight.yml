@@ -1,0 +1,63 @@
+name: lnbSetPictureRight
+desc: |-
+  Sets the cell's right-picture. The picture is set to the end of the '''row''', the ''column'' parameter does not matter.
+  {{Feature|informative|The picture is searched in the mission, directory, the campaign directory's dtaExt subdirectory, and the data bank (or directory).}}
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  - path
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      desc: 0-based index (first row is 0, second is 1, etc)
+      type: Number
+    - !Item
+      name: column
+      desc: 0-based index (first column is 0, second is 1, etc)
+      type: Number
+  - !Item
+    name: path
+    desc: the picture's file path
+    type: String
+- call: !Binary
+  - ctrl
+  - - - row
+      - column
+    - path
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Array
+    - !Item
+      name: row
+      desc: 0-based index (first row is 0, second is 1, etc)
+      type: Number
+    - !Item
+      name: column
+      desc: 0-based index (first column is 0, second is 1, etc)
+      type: Number
+  - !Item
+    name: path
+    desc: the picture's file path
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lnbSetPictureRight [1, [0, 0], "Picture.paa"];</sqf>
+- <sqf>_ctrl lnbSetPictureRight [[0, 0], "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa"];</sqf>
+see_also:
+- lnbPictureRight

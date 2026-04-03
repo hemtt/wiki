@@ -1,0 +1,56 @@
+name: lbTextRight
+desc: Returns the shown right text in the item with the given index of the listbox or combobox with id idc of the topmost user [[dialog]].
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: index
+    type: Number
+- call: !Binary
+  - control
+  - index
+  ret:
+    type: String
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_text = lbTextRight [101, 0];</sqf>
+- <sqf>_text = _control lbTextRight 0;</sqf>
+see_also:
+- lbSetTextRight
+- lbAdd
+- lbClear
+- lbColor
+- lbCurSel
+- lbData
+- lbDelete
+- lbIsSelected
+- lbPicture
+- lbSelection
+- lbSetColor
+- lbSetCurSel
+- lbSetData
+- lbSetPicture
+- lbSetSelected
+- lbSetTooltip
+- lbSetValue
+- lbSize
+- lbSort
+- lbSortByValue
+- lbValue

@@ -1,0 +1,67 @@
+name: lbSetText
+desc: Sets the text on the left side of the item with the given index of the listbox or combobox with id idc of the topmost user dialog.
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  - name
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: name
+    type: String
+- call: !Binary
+  - control
+  - - index
+    - name
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: name
+    type: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>lbSetText [101, 0, "iskoda"];</sqf>
+- <sqf>_control lbSetText [0, "iskoda"];</sqf>
+see_also:
+- lbAdd
+- lbClear
+- lbColor
+- lbCurSel
+- lbData
+- lbDelete
+- lbIsSelected
+- lbPicture
+- lbSelection
+- lbSetColor
+- lbSetCurSel
+- lbSetData
+- lbSetSelected
+- lbSetTextRight
+- lbSetTooltip
+- lbSetValue
+- lbSize
+- lbSort
+- lbSortByValue
+- lbText
+- lbValue
+- lbSetPicture
+- lbSetPictureColor

@@ -1,0 +1,22 @@
+name: waypointCombatMode
+desc: Gets the waypoint's combat mode setting.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: String
+    desc: one of "BLUE", "GREEN", "WHITE", "YELLOW" and "RED" or "ERROR"
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointCombatMode [groupOne, 1];</sqf>
+see_also:
+- Combat
+- Modes
+- waypoints
+- setWaypointCombatMode

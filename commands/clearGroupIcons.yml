@@ -1,0 +1,28 @@
+name: clearGroupIcons
+desc: Removes all icons from group.
+groups:
+- High Command
+syntax:
+- call: !Unary group
+  ret:
+    type: Nothing
+  right: !Item
+    name: group
+    type: Group
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>clearGroupIcons (group player);</sqf>
+see_also:
+- addGroupIcon
+- getGroupIcon
+- getGroupIconParams
+- groupIconSelectable
+- groupIconsVisible
+- onGroupIconClick
+- removeGroupIcon
+- setGroupIcon
+- setGroupIconParams
+- setGroupIconsSelectable
+- setGroupIconsVisible

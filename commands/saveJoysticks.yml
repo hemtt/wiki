@@ -1,0 +1,15 @@
+name: saveJoysticks
+desc: Saves joysticks key mappings into the joysticks.cfg file. Engine add these joysticks to the Joystick Scheme mapping dialog in options controls section.
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>saveJoysticks;</sqf>
+see_also:
+- saveProfileNamespace

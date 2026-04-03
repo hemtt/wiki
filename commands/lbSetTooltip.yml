@@ -1,0 +1,66 @@
+name: lbSetTooltip
+desc: Sets tooltip for item with given index of the listbox or combobox with id idc of the topmost user dialog to the given data.
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  - tooltip
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: tooltip
+    type: String
+- call: !Binary
+  - control
+  - - index
+    - tooltip
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: tooltip
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lbSetTooltip [101, 1, "tooltip"];</sqf>
+- <sqf>_control lbSetTooltip [0, "another tooltip"];</sqf>
+see_also:
+- lbTooltip
+- lnbSetTooltip
+- lbAdd
+- lbClear
+- lbColor
+- lbCurSel
+- lbData
+- lbDelete
+- lbIsSelected
+- lbPicture
+- lbSelection
+- lbSetColor
+- lbSetCurSel
+- lbSetData
+- lbSetPicture
+- lbSetSelected
+- lbSetValue
+- lbSize
+- lbSort
+- lbSortByValue
+- lbText
+- lbValue

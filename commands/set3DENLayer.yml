@@ -1,0 +1,32 @@
+name: set3DENLayer
+desc: Set layer for [[Eden Entity]].
+groups:
+- Eden Editor
+syntax:
+- call: !Binary
+  - entity
+  - layerID
+  ret:
+    type: Boolean
+    desc: '[[true]] if the entity was moved succesfully'
+  left: !Item
+    name: entity
+    type: EdenEntity
+  right: !Item
+    name: layerID
+    desc: layer ID as returned by [[add3DENLayer]] command
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _myLayer = -1 add3DENLayer "CTRG";
+  player set3DENLayer _myLayer;
+  </sqf>
+- <sqf>player set3DENLayer -1; // Move to root</sqf>
+see_also:
+- add3DENLayer
+- remove3DENLayer
+- get3DENLayerEntities

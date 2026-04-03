@@ -1,0 +1,20 @@
+name: logNetworkTerminate
+desc: Terminates a network log file started with [[logNetwork]] with the given handle
+groups:
+- Multiplayer
+- Diagnostic
+syntax:
+- call: !Unary handle
+  ret:
+    type: Nothing
+  right: !Item
+    name: handle
+    desc: handle to terminate (created with [[logNetwork]])
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>logNetworkTerminate _someHandle;</sqf>
+see_also:
+- logNetwork

@@ -1,0 +1,32 @@
+name: setSpeedMode
+desc: "Sets group speed mode. If unit is passed as param, unit's group is used. Mode may be one of: \n* '''\"UNCHANGED\"''' (unchanged)\n* '''\"LIMITED\"''' (half speed)\n* '''\"NORMAL\"''' (full speed, maintain formation)\n* '''\"FULL\"''' (do not wait for any other units in formation)"
+groups:
+- Groups
+syntax:
+- call: !Binary
+  - groupName
+  - mode
+  ret:
+    type: Nothing
+  left: !Item
+    name: groupName
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: mode
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_groupOne setSpeedMode "LIMITED";</sqf>
+see_also:
+- speedMode]],
+- getSpeed]],
+- forceSpeed

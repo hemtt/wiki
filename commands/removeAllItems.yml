@@ -1,0 +1,19 @@
+name: removeAllItems
+desc: Removes all special items from the unit.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeAllItems unitName;</sqf>
+see_also:
+- removeAllWeapons
+- removeMagazines

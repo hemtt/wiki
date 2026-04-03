@@ -1,0 +1,38 @@
+name: setBrakesRTD
+desc: |-
+  Enable landing gear wheel brakes for a helicopter.
+  * value 0: brakes off
+  * value 1: brakes on
+
+  * index 1: left wheels
+  * index 2: right wheels
+  * index 3: both sides
+  {{Feature|afm}}
+  {{Feature|informative|This command is implemented, but not fully supported.}}
+groups:
+- RTD
+syntax:
+- call: !Binary
+  - helicopterRTD
+  - - value
+    - wheelIndex
+  ret:
+    type: Nothing
+  left: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+  right: !Array
+  - !Item
+    name: value
+    desc: value of the brakes
+    type: Number
+  - !Item
+    name: wheelIndex
+    desc: wheel index
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myHelicopterRTD setBrakesRTD [1, 3];</sqf>

@@ -1,0 +1,16 @@
+name: sentencesEnabled
+desc: A getter for [[enableSentences]].
+groups:
+- Radio and Chat
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: returns [[true]] if sentences are enabled
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (sentencesEnabled) then\n{\n\thint \"sentences are enabled; changing that now\";\n\tenableSentences false;\n};\n</sqf>"
+see_also:
+- enableSentences

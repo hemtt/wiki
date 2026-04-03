@@ -1,0 +1,44 @@
+name: removeItemFromBackpack
+desc: Removes item from soldier's backpack.
+groups:
+- Containers
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeItemFromBackpack "itemGPS";</sqf>
+see_also:
+- removeItemFromUniform
+- removeItemFromVest
+- removeItemFromPrimaryWeapon
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- everyBackpack

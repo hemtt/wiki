@@ -1,0 +1,19 @@
+name: canUnloadInCombat
+desc: Returns config value of `unloadInCombat` for a vehicle. Alternatively see [[getUnloadInCombat]]
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (canUnloadInCombat _vehicle) then { hint "unload in combat is possible!" };</sqf>
+see_also:
+- setUnloadInCombat
+- getUnloadInCombat

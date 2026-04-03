@@ -1,0 +1,35 @@
+name: camPrepareFocus
+desc: |-
+  focusRange is . Prepares the camera focus blur.
+
+  '''[-1,1]''' will reset default values (auto focusing), '''[-1,-1]''' will disable postprocessing (all is focused). Needs the call of [[camCommitPrepared]] to be conducted.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - - distance
+    - blur
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    type: Object
+  right: !Array
+  - !Item
+    name: distance
+    desc: blur distance
+    type: Number
+  - !Item
+    name: blur
+    desc: blur intensity
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camera camPrepareFocus [50, 1];</sqf>
+see_also:
+- camPreload
+- camCommitPrepared
+- camSetFocus

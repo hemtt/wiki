@@ -1,0 +1,32 @@
+name: profileNamespace
+desc: |-
+  Returns the global namespace attached to the active user profile. Use [[setVariable]] and [[getVariable]] to save and load data to and from this [[Namespace]]. A variable can be deleted by setting its value to [[nil]]. By default the variables set in this namespace will exist while the game is running, and variables are saved persistently when the game is closed. Saving can also be forced by using [[saveProfileNamespace]] to prevent data loss on e.g game crash.<br>
+  The variables are stored next to the user profile in a file named {{hl|myUsername.vars.GAMENAME}}.
+groups:
+- Namespaces
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Namespace
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  profileNamespace setVariable ["TAG_kills", 10000];
+  // somewhere else in the code
+  _kills = profileNamespace getVariable ["TAG_kills", 0];
+  </sqf>
+see_also:
+- saveProfileNamespace
+- missionNamespace
+- uiNamespace
+- parsingNamespace
+- currentNamespace
+- localNamespace
+- allVariables
+- with
+- ArmA:_Editing#Forward_Compatibility|Forward
+- Compatibility

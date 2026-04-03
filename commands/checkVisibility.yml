@@ -1,0 +1,72 @@
+name: checkVisibility
+desc: |-
+  {{{!}} class="wikitable float-right"
+  ! style="width: 50%" {{!}} Affected by
+  ! Not affected by
+  {{!}}-
+  {{!}}
+  * [[getTerrainGrid|terrain grid]]
+  * obstacles
+  * particles<br><span style="font-size: .9em">(with <syntaxhighlight lang="cpp" inline>blockAIVisibility = 1</syntaxhighlight>)</span>
+  {{!}}
+  * [[time|daylight]]
+  * [[distance]]
+  * [[overcast]]
+  * [[fog]]
+  {{!}}}
+  Checks if one position is visible from another position and how much.
+
+  {{Feature|informative|Particles that have {{hl|blockAIVisibility}} set to 1 will influence the result, but will never make [[checkVisibility]] return 0; an extremely small number will be returned instead.}}
+groups:
+- Math - Geometry
+syntax:
+- call: !Binary
+  - - ignore
+    - LOD
+    - ignore2
+  - - beg
+    - end
+  ret:
+    type: Number
+    desc: how much end position is visible to start position in range 0..1, where 1 is fully visible.
+  left: !Array
+  - !Item
+    name: ignore
+    desc: object to exclude from calculations
+    type: Object
+  - !Item
+    name: LOD
+    desc: 'level of details to use. Possible values are: {{hl|"FIRE"}}, {{hl|"VIEW"}}, {{hl|"GEOM"}}, {{hl|"IFIRE"}}, and {{GVI|arma3|2.02|size= 0.75}} {{hl|"PHYSX"}}'
+    type: String
+  - !Item
+    name: ignore2
+    desc: (Optional, default [[objNull]]) second object to exclude from calculations
+    type: Object
+    since:
+      arma3: '1.62'
+  right: !Array
+  - !Item
+    name: beg
+    desc: start position
+    type: Position3dASL
+  - !Item
+    name: end
+    desc: end position
+    type: Position3dASL
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _canSee = [objNull, "VIEW"] checkVisibility [eyePos player, eyePos unit1];</sqf>
+see_also:
+- lineIntersectsWith
+- lineIntersectsSurfaces
+- lineIntersectsObjs
+- intersect
+- terrainIntersect
+- terrainIntersectASL
+- terrainIntersectAtASL
+- lineIntersects
+- cursorObject
+- cursorTarget
+- disableRemoteSensors

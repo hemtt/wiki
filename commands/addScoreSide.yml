@@ -1,0 +1,28 @@
+name: addScoreSide
+desc: Adds side score. This is shown in the MP score tab as the total score. '''MP only'''.
+groups:
+- Sides
+- Multiplayer
+syntax:
+- call: !Binary
+  - side
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: side
+    type: Side
+  right: !Item
+    name: value
+    type: Number
+argument_loc: Global
+effect_loc: Global
+server_exec: true
+since: {}
+examples:
+- <sqf>west addScoreSide 10;</sqf>
+see_also:
+- score
+- addScore
+- scoreSide
+- getPlayerScores

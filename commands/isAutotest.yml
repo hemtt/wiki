@@ -1,0 +1,15 @@
+name: isAutotest
+desc: Returns true if game was started with autotest parameter
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_bool = isAutotest;</sqf>
+see_also:
+- Arma_3_Startup_Parameters#autotest|autotest

@@ -1,0 +1,19 @@
+name: shownCompass
+desc: Checks if client has Compass enabled in [[Description.ext|description.ext]] (''showCompass'' param) or force enabled with [[showCompass]] command.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (shownCompass) then {hint "You have Compass enabled"};</sqf>
+see_also:
+- showCompass
+- visibleCompass
+- shownGPS
+- shownWatch
+- shownHUD

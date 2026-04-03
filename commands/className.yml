@@ -1,0 +1,27 @@
+name: className
+desc: Returns short name of location. For config class name, see [[configName]]
+groups:
+- Locations
+syntax:
+- call: !Unary location
+  ret:
+    type: String
+  right: !Item
+    name: location
+    type: Location
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_shortName = className myLocation;</sqf>
+see_also:
+- setText
+- createLocation
+- deleteLocation
+- drawLocation
+- locationPosition
+- locationNull
+- nearestLocation
+- nearestLocations
+- nearestLocationWithDubbing
+- name

@@ -1,0 +1,28 @@
+name: primaryWeapon
+desc: Returns name of unit's primary weapon. This command will also return a weapon class name if the weapon is not used by the player, for example, it is on the unit's back. Use [[currentWeapon]] to get the weapon the unit is using.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+    desc: weapon class name or "" if no primary weapon
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_pWeap = primaryWeapon player;</sqf>
+- <sqf>hint primaryWeapon player; // "arifle_MX_ACO_pointer_F"</sqf>
+see_also:
+- primaryWeaponMagazine
+- primaryWeaponItems
+- addPrimaryWeaponItem
+- removePrimaryWeaponItem
+- removeAllPrimaryWeaponItems
+- secondaryWeapon
+- handgunWeapon
+- currentWeapon
+- weapons

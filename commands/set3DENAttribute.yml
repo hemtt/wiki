@@ -1,0 +1,41 @@
+name: set3DENAttribute
+desc: |-
+  Sets one of entity [[Eden Editor: Entity Attributes|attributes]]. For the list of all attributes with their properties see [[Eden_Editor:_Setting_Attributes#Attributes|Setting Attributes]].
+  {{Feature|important|Attributes are available only within the [[:Category:Eden Editor|Eden Editor]] workspace. You cannot access them in scenario preview or exported scenario!}}
+groups:
+- Eden Editor
+syntax:
+- call: !Binary
+  - entity
+  - - class
+    - value
+  ret:
+    type: Boolean
+    desc: '[[true]] If the value was set'
+  left: !Item
+    name: entity
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: EdenEntity
+        desc: null
+        since: null
+      - type: EdenID
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: class
+    desc: attribute name
+    type: String
+  - !Item
+    name: value
+    desc: new attribute value
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player set3DENAttribute ["allowDamage", false]; // Mark player as invincible</sqf>
+see_also:
+- set3DENAttributes
+- get3DENAttribute

@@ -1,0 +1,39 @@
+name: playScriptedMission
+desc: |-
+  Load the given world, launch an empty mission, and execute the given expression.
+  If provided, ''config'' can reference to the config entry, replacing [[Description.ext]] for this mission.
+groups:
+- System
+syntax:
+- call: !Unary
+  - world
+  - expression
+  - config
+  - ignoreChildWindow
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: world
+    type: String
+  - !Item
+    name: expression
+    type: Code
+  - !Item
+    name: config
+    desc: (Optional)
+    type: Config
+  - !Item
+    name: ignoreChildWindow
+    desc: (Optional)
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nplayScriptedMission\n[\n\t\"desert_e\",\n\t{\n\t\texecVM \"\\ca\\missions_e\\data\\scenes\\credits1\\init.sqf\";\n\t},\n\tconfigFile / \"CfgMissions\" / \"Cutscenes\" / \"Credits\"\n];\n</sqf>"
+see_also:
+- hostMission
+- playMission
+- createMissionDisplay
+- createMPCampaignDisplay

@@ -1,0 +1,19 @@
+name: showWaypoints
+desc: Shows/Hides task HUD markers and waypoints that will fade out in time. Dependable on difficulty settings.
+groups:
+- Waypoints
+syntax:
+- call: !Unary enabled
+  ret:
+    type: Nothing
+  right: !Item
+    name: enabled
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>showWaypoints true;</sqf>
+see_also:
+- showWaypoint
+- waypointShow

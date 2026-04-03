@@ -1,0 +1,25 @@
+name: curatorAddons
+desc: Returns list of addons allowed to given curator. The addon names are not guaranteed to be all lower case
+groups:
+- Curator
+syntax:
+- call: !Unary curatorObj
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: curatorObj
+    desc: curator module
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _addons = curatorAddons myCurator;</sqf>
+see_also:
+- Arma
+- '3:'
+- Curator
+- addCuratorAddons
+- removeCuratorAddons
+- removeAllCuratorAddons

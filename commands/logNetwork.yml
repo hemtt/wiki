@@ -1,0 +1,31 @@
+name: logNetwork
+desc: |-
+  Registers new log file recording a network traffic and returns handle of the log. The log file is saved inside the {{arma3}} root folder.
+  {{Feature|important|[[logNetwork]] can potentially create a large log file.}}
+groups:
+- Multiplayer
+- Diagnostic
+syntax:
+- call: !Unary
+  - logFile
+  - filter
+  ret:
+    type: Number
+    desc: handle for the logging
+  right: !Array
+  - !Item
+    name: logFile
+    desc: where to store the log
+    type: String
+  - !Item
+    name: filter
+    desc: (Optional) ????
+    type: !ArrayUnsized
+      value: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_handle = logNetwork ["myLog.txt", [""]];</sqf>
+see_also:
+- logNetworkTerminate

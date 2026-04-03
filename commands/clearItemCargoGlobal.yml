@@ -1,0 +1,25 @@
+name: clearItemCargoGlobal
+desc: Removes all items from ammo box (or any general weapon holder container). It also removes vests and uniforms.
+groups:
+- Containers
+syntax:
+- call: !Unary box
+  ret:
+    type: Nothing
+  right: !Item
+    name: box
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>clearItemCargoGlobal _ammoBox;</sqf>
+see_also:
+- clearItemCargo
+- addItemCargoGlobal
+- clearMagazineCargo
+- clearMagazineCargoGlobal
+- clearWeaponCargo
+- clearWeaponCargoGlobal
+- clearBackpackCargo
+- clearBackpackCargoGlobal

@@ -1,0 +1,19 @@
+name: fog
+desc: A getter for [[setFog]]. Returns the current value of the fog in range 0..1.
+multiplayer_note: Before {{arma3}}, each client and the server could have different values. In {{arma3}} the value is synced across network.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_foglevel = fog;</sqf>
+see_also:
+- fogParams
+- fogForecast
+- setFog
+- nextWeatherChange

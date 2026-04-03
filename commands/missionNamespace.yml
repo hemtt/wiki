@@ -1,0 +1,30 @@
+name: missionNamespace
+desc: Returns the global namespace attached to mission.
+groups:
+- Namespaces
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Namespace
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  missionNamespace setVariable ["StringVariable", "myString"]; // same as: StringVariable = "myString";
+  _myStringValue = missionNamespace getVariable "StringVariable";
+  hint _myStringValue; // hints "myString"
+  </sqf>
+see_also:
+- currentNamespace
+- uiNamespace
+- parsingNamespace
+- profileNamespace
+- localNamespace
+- serverNamespace
+- allVariables
+- with
+- ArmA:_Editing#Forward_Compatibility|Forward
+- Compatibility

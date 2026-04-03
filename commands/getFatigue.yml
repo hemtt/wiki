@@ -1,0 +1,20 @@
+name: getFatigue
+desc: Returns fatigue of given unit.
+groups:
+- Stamina System
+syntax:
+- call: !Unary unit
+  ret:
+    type: Number
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (getFatigue player < 0.5) then { player sideChat "I'm good to go!" };</sqf>
+see_also:
+- setFatigue
+- enableFatigue
+- getStamina

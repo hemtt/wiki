@@ -1,0 +1,23 @@
+name: curatorWaypointCost
+desc: Return current price for placing waypoints (curator specific).
+groups:
+- Curator
+syntax:
+- call: !Unary curatorObj
+  ret:
+    type: Number
+  right: !Item
+    name: curatorObj
+    desc: curator module.
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>var_wpcost = curatorWaypointCost bis_curator;</sqf>
+see_also:
+- Arma
+- '3:'
+- Curator
+- curatorPoints
+- addCuratorPoints

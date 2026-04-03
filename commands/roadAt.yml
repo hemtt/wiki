@@ -1,0 +1,37 @@
+name: roadAt
+desc: Returns a road segment containing given position, [[objNull]] otherwise. Same as [[isOnRoad]] only returns the actual road object instead of boolean.
+groups:
+- Roads and Airports
+syntax:
+- call: !Unary position
+  ret:
+    type: Object
+    desc: road segment or [[objNull]]
+  right: !Item
+    name: position
+    desc: array, in which case Z will be automatically deduced as the height of the road surface
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since:
+          arma3: '2.0'
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_road = roadAt ASLToAGL getPosASL player;</sqf>
+- <sqf>_isOnRoad = !isNull roadAt player;</sqf>
+- |-
+  For detecting bridges, for example:
+  <sqf>getModelInfo (roadAt ASLToAGL getPosASL player); // ["bridgesea_01_f.p3d", "a3\structures_f_exp\infrastructure\bridges\bridgesea_01_f.p3d", true]</sqf>
+see_also:
+- nearRoads
+- roadsConnectedTo
+- isOnRoad
+- surfaceIsWater
+- getRoadInfo
+- nearestTerrainObjects

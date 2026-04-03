@@ -1,0 +1,54 @@
+name: assignedItems
+desc: |-
+  Get array with assigned items. The resulting [[Array]] order is not guaranteed.
+  To check availability of a particular slot item use [[getSlotItemName]].
+  To return stored items see [[items]] and [[itemsWithMagazines]].
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: unit
+    type: Object
+- call: !Unary
+  - unit
+  - allItems
+  - includeBinocs
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Array
+  - !Item
+    name: unit
+    desc: soldier
+    type: Object
+  - !Item
+    name: allItems
+    desc: '[[true]] to include all slot items, [[false]] exclude goggles and headgear'
+    type: Boolean
+  - !Item
+    name: includeBinocs
+    desc: '[[true]] to include binoculars (which is a weapon), [[false]] to exclude it'
+    type: Boolean
+  since:
+    arma3: '2.14'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str assignedItems player;</sqf>
+see_also:
+- getSlotItemName
+- assignItem
+- unassignItem
+- linkItem
+- unlinkItem
+- addItem
+- removeItem
+- removeAllAssignedItems
+- items
+- itemsWithMagazines
+- backpacks

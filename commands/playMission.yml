@@ -1,0 +1,43 @@
+name: playMission
+desc: The mission is launched (from the main menu).
+groups:
+- System
+syntax:
+- call: !Unary
+  - campaign
+  - mission
+  - skipBriefing
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: campaign
+    desc: directory of Campaign, if empty a single mission is launched
+    type: String
+  - !Item
+    name: mission
+    desc: directory if a string
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: String
+        desc: null
+        since: null
+      - type: Config
+        desc: null
+        since: null
+  - !Item
+    name: skipBriefing
+    desc: (Optional) If true, the intro and briefing are skipped.
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>playMission ["XOutrage", "x05Negotiator.Noe"];</sqf>
+- <sqf>playMission ["", configFile >> "CfgMissions" >> "Missions" >> "Armory1"];</sqf>
+- <sqf>playMission ["", "\A3\Missions_F_Bootcamp\Scenarios\Arsenal.VR"];</sqf>
+see_also:
+- hostMission
+- playScriptedMission
+- createMissionDisplay
+- createMPCampaignDisplay

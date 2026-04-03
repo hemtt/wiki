@@ -1,0 +1,29 @@
+name: triggerActivated
+desc: Returns true if the trigger has been activated.
+multiplayer_note: |-
+  {{Feature|important|
+  The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger activated status on the client that executed the command.
+  See [[createTrigger]] for more information.
+  }}
+groups:
+- Triggers
+syntax:
+- call: !Unary trigger
+  ret:
+    type: Boolean
+  right: !Item
+    name: trigger
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (triggerActivated trg1) then { hint "trigger trg1 activated!" };</sqf>
+see_also:
+- setTriggerActivation
+- triggerActivation
+- triggerInterval
+- setTriggerInterval
+- enableSimulation
+- simulationEnabled
+- createTrigger

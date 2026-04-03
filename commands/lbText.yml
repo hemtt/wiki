@@ -1,0 +1,38 @@
+name: lbText
+desc: Returns the shown text of the item with the given index of the [[CT_LISTBOX]] or [[CT_COMBO]].
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    desc: control IDC
+    type: Number
+  - !Item
+    name: index
+    type: Number
+- call: !Binary
+  - control
+  - index
+  ret:
+    type: String
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_text = lbText [101, 0];</sqf>
+- <sqf>_text = _control lbText 0;</sqf>
+see_also:
+- lbAdd
+- lbSetText

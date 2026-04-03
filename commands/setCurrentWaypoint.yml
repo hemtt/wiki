@@ -1,0 +1,52 @@
+name: setCurrentWaypoint
+desc: Sets the currently active waypoint for a group.
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - groupName
+  - waypoint
+  ret:
+    type: Nothing
+  left: !Item
+    name: groupName
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_grp setCurrentWaypoint [_grp, 1];</sqf>
+see_also:
+- waypoints
+- deleteWaypoint
+- copyWaypoints
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointDescription
+- setWaypointFormation
+- setWaypointHousePosition
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- setWaypointLoiterRadius
+- waypointLoiterRadius
+- addWaypoint
+- setWaypointLoiterType
+- waypointSpeed

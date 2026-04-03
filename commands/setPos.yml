@@ -1,0 +1,55 @@
+name: setPos
+desc: |-
+  Sets object position to format [[Position#PositionAGLS|PositionAGLS]] (over surface). The Z value is used to calculate the nearest surface below the provided position. If the surface is close, it uses the Z position of the surface. Otherwise, Z value becomes the offset from that surface.
+  {{Feature| important | It is recommended to '''avoid''' this command when placing objects above other objects, due to the unpredictable behavior described above.}}
+multiplayer_note: |-
+  {{Feature|arma1|{{Name|arma1|short}} 1.00 to 1.06: this command has local effect, but some simulation types do synchronise their changes over the network whilst others do not.<br>
+  So far, the only known simulation type that doesn't synchronise its position over the net is "static" ({{hl|c= simulation{{=}}"house"}}).}}
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - object
+  - pos
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: pos
+    desc: if [[Position#Introduction|Position2D]], Z will be set to 0
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position3dAGL
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>
+  player setPos [getPos player select 0, getPos player select 1, (getPos player select 2) +10];
+
+  // the same as above using set (OFP:R v1.75)
+  _pos = getPos player;
+  _pos set [2, _pos select 2 + 10];
+  player setPos _pos;
+
+  // the same as above using modelToWorld (ArmA v1.00)
+  player setPos (player modelToWorld [0,0,10]);
+
+  // the same as above using vectorAdd (Arma 3 v1.22)
+  player setPos (getPos player vectorAdd [0,0,10]);
+  </sqf>
+- <sqf>_obj setPos [getPos _obj select 0, getPos _obj select 1, -5];</sqf>
+- <sqf>player setPos (getPos _obj);</sqf>
+see_also:
+- setPosASL
+- getPos
+- setVehiclePosition
+- Position#setPosAGLS|setPosAGLS

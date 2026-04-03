@@ -1,0 +1,25 @@
+name: west
+desc: West (BLUFOR) [[Side|side]].
+alias:
+- '[[blufor]]'
+groups:
+- Sides
+syntax:
+- call: Nular
+  ret:
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  [[SQS Syntax]]:
+  <sqs>? side _unit == west : hint "This is a western unit!"</sqs>
+- "[[SQF Syntax]]:\n<sqf>\nif (side _unit == west) then\n{\n\thint \"This is a western unit!\";\n};\n</sqf>"
+see_also:
+- side
+- east
+- resistance
+- civilian
+- sideEmpty
+- sideAmbientLife

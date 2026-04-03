@@ -1,0 +1,34 @@
+name: linkItem
+desc: Create and assign item to the correct slot. If there is an item in the targeted slot, it gets replaced. See also [[assignItem]].
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>
+  bluforUnit linkItem "NVGoggles";
+  opforUnit linkItem "NVGoggles_OPFOR";
+  independentUnit linkItem "NVGoggles_INDEP";
+  </sqf>
+see_also:
+- unlinkItem
+- addItem
+- assignItem
+- removeItem
+- unassignItem
+- assignedItems
+- removeAllAssignedItems

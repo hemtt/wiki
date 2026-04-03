@@ -1,0 +1,20 @@
+name: isStaminaEnabled
+desc: Check if stamina depletion is enabled.
+groups:
+- Stamina System
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (isStaminaEnabled player) then { hint "You can get exhausted." };</sqf>
+see_also:
+- Arma
+- '3:'
+- Stamina

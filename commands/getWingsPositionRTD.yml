@@ -1,0 +1,18 @@
+name: getWingsPositionRTD
+desc: Returns position of stabilizers.{{Feature|afm}}
+groups:
+- RTD
+syntax:
+- call: !Unary RTD_helicopter
+  ret:
+    type: Number
+  right: !Item
+    name: RTD_helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_position = getWingsPositionRTD myHelicopter;</sqf>
+see_also:
+- getWingsOrientationRTD

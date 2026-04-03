@@ -1,0 +1,46 @@
+name: commandFSM
+desc: Orders a unit to process command defined by [[FSM]] file (via the radio).
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unitName
+  - - fsmFile
+    - position
+    - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: fsmFile
+    type: String
+  - !Item
+    name: position
+    type: Position
+  - !Item
+    name: target
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_soldierOne commandFSM ["move.fsm", position player, player];</sqf>
+see_also:
+- FSM
+- FSM_Editor_Manual
+- execFSM
+- completedFSM
+- doFSM
+- getFSMVariable
+- setFSMVariable

@@ -1,0 +1,25 @@
+name: isSensorTargetConfirmed
+desc: Returns if given unit is confirmed target for given side.
+groups:
+- Sensors
+syntax:
+- call: !Binary
+  - unit
+  - side
+  ret:
+    type: Boolean
+    desc: '[[true]] if confirmed target, otherwise [[false]]'
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _enemyConfirmed = _possibleEnemy isSensorTargetConfirmed opfor;</sqf>
+see_also:
+- listVehicleSensors
+- isVehicleSensorEnabled

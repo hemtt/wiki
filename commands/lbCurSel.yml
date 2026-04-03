@@ -1,0 +1,29 @@
+name: lbCurSel
+desc: Returns the index of the selected item of the [[CT_LISTBOX]], [[CT_LISTNBOX]], [[CT_COMBO]] or [[CT_TOOLBOX]]. For [[CT_LISTBOX]] with multi selection enabled use [[lbSelection]].
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary idc
+  ret:
+    type: Number
+    desc: selected index (row) or -1 if nothing is selected
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary control
+  ret:
+    type: Number
+    desc: selected index (row) or -1 if nothing is selected
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_index = lbCurSel 101;</sqf>
+- <sqf>lbCurSel _ctrl;</sqf>
+see_also:
+- lbIsSelected
+- lbSelection
+- lbSetCurSel

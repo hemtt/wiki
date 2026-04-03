@@ -1,0 +1,96 @@
+name: execFSM
+desc: |-
+  Execute scripted [[FSM]] and return the FSM handle or 0 when failed. The FSM file is first searched in the mission folder, then in the campaign scripts folder and finally in the global scripts folder. Argument (if any) are available in {{hl|_this}} variable inside FSM. Variables set inside FSMs can be read/modified externally, using [[setFSMVariable]] and [[getFSMVariable]] commands.<br>
+  <br>
+  The return value is the FSM handle; it can be used to determine (via [[completedFSM]]) when the FSM has finished.
+  {{Feature|arma3|In Arma 3, the FSM handle is also available within the FSM through the {{hl|_thisFSM}} variable.}}
+  <br>
+  Scripted FSMs are added into the scheduler just like [[exec]] scripts, [[execVM]] scripts and [[spawn]] scripts.<br>
+  To see what FSMs are currently in the scheduler, use [[diag_activeMissionFSMs]] command.
+  {{Feature|important|While the code placed into any of the sections of FSM cannot be suspended ([[canSuspend]] is false), the FSM itself is suspended every simulation between the state's {{hl|init}} and {{hl|precondition}} (exception is the '''init state'''). This is the only place where scripted FSM is suspended/resumed.
+  The usual difference between the state's {{hl|init}} and {{hl|precondition}} is 1 frame but if the scheduler is busy it can take longer. See [[FSM]] for more information about FSM's structure.}}
+groups:
+- Program Flow
+syntax:
+- call: !Binary
+  - arguments
+  - fsmFilePath
+  ret:
+    type: Number
+    desc: FSM handle (also available as {{hl|_thisFSM}} in the FSM)
+  left: !Item
+    name: arguments
+    desc: arguments accessible as {{hl|_this}} in the FSM
+    type: Anything
+  right: !Item
+    name: fsmFilePath
+    desc: file with FSM code
+    type: String
+- call: !Unary fsmFilePath
+  ret:
+    type: Number
+    desc: FSM handle (also available as {{hl|_thisFSM}} in the FSM)
+  right: !Item
+    name: fsmFilePath
+    desc: file with FSM code
+    type: String
+- call: !Binary
+  - arguments
+  - - fsmFilePath
+    - allowTermination
+  ret:
+    type: Number
+    desc: FSM handle (also available as {{hl|_thisFSM}} in the FSM)
+  left: !Item
+    name: arguments
+    desc: arguments accessible as {{hl|_this}} in the FSM
+    type: Anything
+  right: !Array
+  - !Item
+    name: fsmFilePath
+    desc: file with FSM code
+    type: String
+  - !Item
+    name: allowTermination
+    desc: '[[true]] to allow FSM termination with [[terminate]] command. Optional, default [[false]]'
+    type: Boolean
+  since:
+    arma3: '2.18'
+- call: !Unary
+  - fsmFilePath
+  - allowTermination
+  ret:
+    type: Number
+    desc: FSM handle (also available as {{hl|_thisFSM}} in the FSM)
+  right: !Array
+  - !Item
+    name: fsmFilePath
+    desc: file with FSM code
+    type: String
+  - !Item
+    name: allowTermination
+    desc: '[[true]] to allow FSM termination with [[terminate]] command. Optional, default [[false]]'
+    type: Boolean
+  since:
+    arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_id = player execFSM "test.fsm";</sqf>
+- <sqf>_handle = [_a, _b, _c] execFSM "test.fsm";</sqf>
+- <sqf>_handle = execFSM "test.fsm";</sqf>
+see_also:
+- FSM
+- FSM
+- Editor
+- Manual
+- execVM
+- call
+- spawn
+- exec
+- commandFSM
+- completedFSM
+- doFSM
+- getFSMVariable
+- setFSMVariable

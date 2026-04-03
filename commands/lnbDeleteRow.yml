@@ -1,0 +1,42 @@
+name: lnbDeleteRow
+desc: Removes row with the given index from the given listbox or combobox.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Binary
+  - _ctrl
+  - row
+  ret:
+    type: Nothing
+  left: !Item
+    name: _ctrl
+    type: Control
+  right: !Item
+    name: row
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ctrl lnbDeleteRow 1;</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbColor
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

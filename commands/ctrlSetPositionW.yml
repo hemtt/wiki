@@ -1,0 +1,32 @@
+name: ctrlSetPositionW
+desc: Sets the width of a 2D control. [[ctrlCommit]] is required to complete the operation.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: !Binary
+  - control
+  - w
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: 2D control
+    type: Control
+  right: !Item
+    name: w
+    desc: width of the control
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _ctrl ctrlSetPositionW 0.5;
+  _ctrl ctrlCommit 1;
+  </sqf>
+see_also:
+- ctrlSetPosition
+- ctrlSetPositionX
+- ctrlSetPositionY
+- ctrlSetPositionH

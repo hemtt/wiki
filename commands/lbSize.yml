@@ -1,0 +1,45 @@
+name: lbSize
+desc: Returns the number of items in a [[CT_LISTBOX]] or [[CT_COMBO]] control. For [[CT_TOOLBOX]] size see [[lnbSize]].
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary idc
+  ret:
+    type: Number
+  right: !Item
+    name: idc
+    desc: control's id
+    type: Number
+- call: !Unary control
+  ret:
+    type: Number
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_size = lbSize 101;</sqf>
+- <sqf>_size = lbSize _control;</sqf>
+see_also:
+- lbAdd
+- lbClear
+- lbColor
+- lbCurSel
+- lbData
+- lbDelete
+- lbIsSelected
+- lbPicture
+- lbSelection
+- lbSetColor
+- lbSetCurSel
+- lbSetData
+- lbSetPicture
+- lbSetSelected
+- lbSetTooltip
+- lbSetValue
+- lbSort
+- lbSortByValue
+- lbText
+- lbValue

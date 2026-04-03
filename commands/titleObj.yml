@@ -1,0 +1,42 @@
+name: titleObj
+desc: Shows object defined in global config in CfgTitles
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - class
+  - type
+  - speed
+  - showInMap
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: class
+    desc: defined in <sqf inline>configFile >> "CfgTitles" >> class</sqf>
+    type: String
+  - !Item
+    name: type
+    desc: one of "PLAIN", "PLAIN DOWN", "BLACK", "BLACK FADED", "BLACK OUT", "BLACK IN", "WHITE OUT" and "WHITE IN". See [[Title Effect Type]]s for more information about these values
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default -1) time in seconds to fade in resource
+    type: Number
+  - !Item
+    name: showInMap
+    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>titleObj ["BISLogo", "PLAIN"];</sqf>
+see_also:
+- titleText
+- titleRsc
+- cutRsc
+- cutObj
+- cutText
+- allActiveTitleEffects
+- activeTitleEffectParams

@@ -1,0 +1,24 @@
+name: incapacitatedState
+desc: |-
+  Returns the incapacitated sub-state of the given unit, when the [[lifeState]] of the unit is "INCAPACITATED". Could be one of:
+  * "UNCONSCIOUS"
+  * "MOVING"
+  * "SHOOTING"
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary person
+  ret:
+    type: String
+    desc: incapacitated sub-state (see description) or empty string ""
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_result = incapacitatedState player;</sqf>
+see_also:
+- setUnconscious
+- lifeState

@@ -1,0 +1,65 @@
+name: drawLine
+desc: Draw a line on the map. Can decrease framerate!
+groups:
+- GUI Control - Map
+syntax:
+- call: !Binary
+  - map
+  - - from
+    - to
+    - color
+    - width
+  ret:
+    type: Nothing
+  left: !Item
+    name: map
+    type: Control
+  right: !Array
+  - !Item
+    name: from
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  - !Item
+    name: to
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  - !Item
+    name: color
+    type: ArrayColor
+  - !Item
+    name: width
+    desc: (Optional, default 3)
+    type: Number
+    since:
+      arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\n(findDisplay 12 displayCtrl 51) ctrlAddEventHandler [\"Draw\",\n\t\"(_this select 0) drawLine [\n\t\tplayer,\n\t\t[0,0,0],\n\t\t[0,0,1,1]\n\t];\"\n];\n</sqf>\n\n{{GVI|arma3|2.02}} [[toString]] version:\n<sqf>\n(findDisplay 12 displayCtrl 51) ctrlAddEventHandler [\"Draw\", toString {\n\t(_this select 0) drawLine [\n\t\tplayer,\n\t\t[0,0,0],\n\t\t[0,0,1,1] // blue\n\t];\n}];\n</sqf>"
+see_also:
+- drawArrow
+- drawEllipse
+- drawIcon
+- drawRectangle
+- drawPolygon
+- drawTriangle
+- drawXPolygon

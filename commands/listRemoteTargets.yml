@@ -1,0 +1,30 @@
+name: listRemoteTargets
+desc: Return list of datalink targets and time for which they will be/were known.
+groups:
+- Sensors
+syntax:
+- call: !Unary side
+  ret:
+    type: !ArrayUnsized
+      value: !ArraySized
+      - name: remoteTarget
+        type: Object
+        desc: null
+        since: null
+      - name: lastDetected
+        type: Number
+        desc: null
+        since: null
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>listRemoteTargets opfor;</sqf>
+see_also:
+- listVehicleSensors
+- enableVehicleSensor
+- isVehicleRadarOn
+- isVehicleSensorEnabled

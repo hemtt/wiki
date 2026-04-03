@@ -1,0 +1,20 @@
+name: shownGPS
+desc: Checks if client has GPS receiver enabled in [[Description.ext|description.ext]] (''showGPS'' param) or force enabled with [[showGPS]] command.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (shownGPS) then { hint "You have the GPS receiver enabled" };</sqf>
+see_also:
+- showGPS
+- visibleGPS
+- openGPS
+- shownWatch
+- shownCompass
+- shownHUD

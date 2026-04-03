@@ -1,0 +1,36 @@
+name: firstBackpack
+desc: Returns the first stored backpack.
+groups:
+- Containers
+syntax:
+- call: !Unary box
+  ret:
+    type: Object
+  right: !Item
+    name: box
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myVariable = firstBackpack myBox;</sqf>
+see_also:
+- backpackContainer
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack

@@ -1,0 +1,25 @@
+name: currentWeaponMode
+desc: |-
+  Returns current weapon mode of unit's weapon.
+
+  {{Feature|warning|This command will return 0 [[Number]] if given object is a vehicle instead of a person.<br>
+  You can alternatively use <sqf>_muzzle = weaponState player select 2;</sqf>}}
+groups:
+- Weapons
+syntax:
+- call: !Unary gunner
+  ret:
+    type: String
+    desc: current mode's classname
+  right: !Item
+    name: gunner
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_weaponMode = currentWeaponMode player;</sqf>
+- <sqf>_weaponMode = currentWeaponMode gunner vehicle player;</sqf>
+see_also:
+- ArmA:_Actions#SWITCHWEAPON|SWITCHWEAPON
+- currentWeapon

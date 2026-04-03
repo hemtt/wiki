@@ -1,0 +1,19 @@
+name: speaker
+desc: Returns the speaker class name of a unit.
+groups:
+- Unit Identity
+- Sounds
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>speaker player; // Can return "male09eng"</sqf>
+see_also:
+- setSpeaker

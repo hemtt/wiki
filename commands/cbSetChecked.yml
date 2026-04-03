@@ -1,0 +1,31 @@
+name: cbSetChecked
+desc: Sets the current state of a [[CT_CHECKBOX]] control. Use {{hl|"CheckedChanged"}} control event handler with it.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: state
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_myCheckBox cbSetChecked true;</sqf>
+- |-
+  <sqf>
+  _disp = findDisplay 46 createDisplay "RscDisplayEmpty";
+  _chk = _disp ctrlCreate ["RscCheckBox", -1];
+  _chk cbSetChecked true;
+  </sqf>
+see_also:
+- cbChecked
+- ctrlSetChecked
+- ctrlChecked

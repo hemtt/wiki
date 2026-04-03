@@ -1,0 +1,23 @@
+name: setFormationTask
+desc: Set the current task of the formation member. {{Feature|arma2|This command is not available in {{arma2}}.}}
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - task
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: task
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_unit setFormationTask "MOVE";</sqf>
+see_also:
+- formationTask

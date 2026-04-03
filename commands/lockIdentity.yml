@@ -1,0 +1,20 @@
+name: lockIdentity
+desc: Locks the identity of a person. This will disable default identity.
+groups:
+- Unit Identity
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+    desc: '[[true]], if it was applied'
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_success = lockIdentity player;</sqf>
+see_also:
+- loadIdentity
+- setIdentity

@@ -1,0 +1,16 @@
+name: selectNoPlayer
+desc: Switches player to no unit, makes [[player]] return [[objNull]].
+multiplayer_note: Does '''not''' work in multiplayer.
+groups:
+- Object Manipulation
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "Single player:\n<sqf>selectNoPlayer;\nhint str player; // <NULL-object></sqf>\nRough multiplayer emulation:\n<sqf>\n_noPlayer = createGroup sideLogic createUnit [\n\t\"Logic\",\n\t[0,0,1000],\n\t[],\n\t0,\n\t\"NONE\"\n];\nselectPlayer _noPlayer;\nhint str player; // L Charlie 4-3:1 (KK)\n</sqf>"
+see_also:
+- selectPlayer

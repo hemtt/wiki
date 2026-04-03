@@ -1,0 +1,20 @@
+name: isAbleToBreathe
+desc: |-
+  If unit is diving and doesn't have a rebreather, it returns [[false]].
+  Diving means the unit's head is underwater. If unit is underwater and has a rebreather, the command returns [[true]].
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_canBreath = isAbleToBreathe player;</sqf>
+see_also:
+- underwater

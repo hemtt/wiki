@@ -1,0 +1,38 @@
+name: isLaserOn
+desc: Returns true if the vehicle has its laser turned on. Not to be confused with [[isIRLaserOn]] which is for units. Main syntax is for primary gunner turret.
+groups:
+- Weapons
+syntax:
+- call: !Unary entity
+  ret:
+    type: Boolean
+    desc: '[[true]] when laser is on, [[false]] otherwise'
+  right: !Item
+    name: entity
+    desc: unit or vehicle
+    type: Object
+- call: !Binary
+  - vehicle
+  - turret
+  ret:
+    type: Boolean
+    desc: '[[true]] when laser is on, [[false]] otherwise'
+  left: !Item
+    name: vehicle
+    desc: transport
+    type: Object
+  right: !Item
+    name: turret
+    desc: '[-1] for driver turret'
+    type: TurretPath
+  since:
+    arma3: '2.12'
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>if (isLaserOn _vehicle) then { hint "target ready" };</sqf>
+see_also:
+- laserTarget
+- enableIRLasers
+- isIRLaserOn

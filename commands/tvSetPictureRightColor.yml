@@ -1,0 +1,69 @@
+name: tvSetPictureRightColor
+desc: Sets color of the right picture on the tree view item defined by path
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  - color
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+  - !Item
+    name: color
+    type: ArrayColor
+- call: !Binary
+  - control
+  - - path
+    - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: path
+    type: Path
+  - !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>tvSetPictureRightColor [101, [0], [1,0,1,1]];</sqf>
+- <sqf>_ctrl tvSetPictureRightColor [[0], [1,0,1,1]];</sqf>
+see_also:
+- tvAdd
+- tvClear
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvExpand
+- tvPicture
+- tvSetCurSel
+- tvSetData
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvValue
+- tvText
+- tvSetText
+- tvSetPicture
+- tvSetPictureColor
+- tvSetPictureRight
+- tvSetPictureColor
+- tvSetPictureColorSelected
+- tvSetPictureColorDisabled
+- tvSetPictureRightColorSelected
+- tvSetPictureRightColorDisabled

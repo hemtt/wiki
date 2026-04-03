@@ -1,0 +1,54 @@
+name: leaveVehicle
+desc: |-
+  Ceases the using of the vehicle by a group and unassigns vehicle from the group.
+  If the argument is a single unit, the vehicle will be unassigned from unit's group.
+  After vehicle is unassigned from the group, each individual crew member then unassigned from the vehicle.<br>
+  <br>
+  In short the command could be hypothetically presented as:<br>
+  <sqf>leaveVehicle = un-addVehicle + unassignVehicle forEach crew</sqf>
+
+  However, to make it more reliable, it is best to move unit out of the vehicle manually with [[moveOut]] and force unassign the vehicle with [[unassignVehicle]].
+  {{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}
+groups:
+- Unit Control
+- Groups
+syntax:
+- call: !Binary
+  - group
+  - vehicle
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    desc: object's [[Group]] is used
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Group
+        desc: null
+        since: null
+      - type: Object
+        desc: null
+        since: null
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_unit leaveVehicle _vehicle;</sqf>
+- <sqf>_grp leaveVehicle _vehicle;</sqf>
+see_also:
+- addVehicle
+- assignAsCargo
+- assignAsCommander
+- assignAsDriver
+- assignAsGunner
+- assignedVehicle
+- unassignVehicle
+- doGetOut
+- commandGetOut
+- createVehicleCrew
+- assignedVehicles
+- assignedGroup
+- fullCrew

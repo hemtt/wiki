@@ -1,0 +1,22 @@
+name: removeVest
+desc: Removes vest from unit.
+groups:
+- Containers
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeVest player;</sqf>
+see_also:
+- addVest
+- vest
+- removeUniform
+- removeBackpack

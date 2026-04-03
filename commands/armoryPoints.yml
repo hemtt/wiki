@@ -1,0 +1,15 @@
+name: armoryPoints
+desc: Returns, stored in [USERNAME].ArmaXProfile, value of ''armoryPoints'' entry. If the entry doesn't exist, it returns 0.
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_points = armoryPoints;</sqf>
+see_also:
+- setArmoryPoints

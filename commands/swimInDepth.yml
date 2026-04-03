@@ -1,0 +1,28 @@
+name: swimInDepth
+desc: Sets the target depth level for swimming soldier. Depth should be a negative number.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: value
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>soldier swimInDepth -20;</sqf>
+- |-
+  <sqf>
+  bob swimInDepth -10;
+  bob doMove ASLToAGL getPosASL player;
+  </sqf>
+see_also:
+- underwater

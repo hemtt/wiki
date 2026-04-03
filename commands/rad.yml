@@ -1,0 +1,21 @@
+name: rad
+desc: Converts given value in degrees to radians. 1 radian equals 180 degrees divided by [[pi]].
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary value
+  ret:
+    type: Number
+    desc: radians
+  right: !Item
+    name: value
+    desc: degrees
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_radians = rad 180; // returns 3.1415 (pi)</sqf>
+see_also:
+- pi
+- deg

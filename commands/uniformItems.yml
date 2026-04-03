@@ -1,0 +1,21 @@
+name: uniformItems
+desc: Get array with all items (of any kind, even weapons) from uniform.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: String
+    desc: Class names of items
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nuniformItems player;\n// returns e.g\n/*\n[\n\t\"FirstAidKit\",\n\t\"30Rnd_65x39_caseless_mag\",\n\t\"30Rnd_65x39_caseless_mag\",\n\t\"30Rnd_65x39_caseless_mag\"\n]\n*/\n</sqf>"
+see_also:
+- vestItems
+- backpackItems

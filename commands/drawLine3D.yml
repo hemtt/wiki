@@ -1,0 +1,36 @@
+name: drawLine3D
+desc: 'Draws a line of a given colour between two 3D positions in the current frame. To be used mostly in a [[Arma 3: Mission Event Handlers#Draw3D|"Draw3D"]] [[addMissionEventHandler|mission event handler]].'
+groups:
+- Interaction
+syntax:
+- call: !Unary
+  - start
+  - end
+  - color
+  - width
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: start
+    type: Position3dAGL
+  - !Item
+    name: end
+    type: Position3dAGL
+  - !Item
+    name: color
+    type: ArrayColor
+  - !Item
+    name: width
+    desc: (Optional, default 3)
+    type: Number
+    since:
+      arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- "<sqf>\nonEachFrame {\n\tdrawLine3D [getPos player, getPos cursorTarget, [1,1,1,1]];\n};\n</sqf>"
+see_also:
+- drawIcon3D
+- ASLToAGL

@@ -1,0 +1,20 @@
+name: removeAllItemsWithMagazines
+desc: Removes all [[itemsWithMagazines]] from the uniform, vest and backpack. Command essentially clears all unit's containers.
+groups:
+- Unit Inventory
+- Containers
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>removeAllItemsWithMagazines player;</sqf>
+see_also:
+- itemsWithMagazines
+- items

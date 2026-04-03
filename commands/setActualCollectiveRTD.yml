@@ -1,0 +1,25 @@
+name: setActualCollectiveRTD
+desc: "Sets the collective pitch control to a specific position, regardless of input devices (until those are changed).\n* 0: collective fully down\n* ~0.7: approximate stable hover position\n* 1: collective fully up \n{{Feature|afm}}"
+groups:
+- RTD
+syntax:
+- call: !Binary
+  - helicopterRTD
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+  right: !Item
+    name: value
+    desc: collective position
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myHelicopterRTD setActualCollectiveRTD 0.7;</sqf>
+see_also:
+- collectiveRTD

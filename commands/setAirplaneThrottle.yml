@@ -1,0 +1,24 @@
+name: setAirplaneThrottle
+desc: Sets a wanted throttle position - works only on [[player]]'s vehicle.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - airplane
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: airplane
+    type: Object
+  right: !Item
+    name: value
+    desc: wanted throttle
+    type: Number
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>vehicle player setAirplaneThrottle 0.5;</sqf>
+see_also:
+- airplaneThrottle

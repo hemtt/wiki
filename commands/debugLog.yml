@@ -1,0 +1,18 @@
+name: debugLog
+desc: "Dump argument type and value to debugging output. \n\n{{Feature|warning|This command is non-functional in the retail version. Use [[diag_log]] instead.}}"
+groups:
+- Broken Commands
+syntax:
+- call: !Unary anything
+  ret:
+    type: Nothing
+  right: !Item
+    name: anything
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>debugLog player;</sqf>
+see_also:
+- diag_log

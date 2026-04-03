@@ -1,0 +1,42 @@
+name: throw
+desc: |-
+  Throws an exception. The exception is processed by first [[catch]] block. This command will terminate further execution of the code.
+
+  {{Feature|important|Avoid using alternative shorthand syntax if you are planning on preparing your exception information dynamically, as it will have to be generated first regardless of the condition of the [[if]] statement before it, as shown in {{Link|#Example 3}}.}}
+groups:
+- Program Flow
+syntax:
+- call: !Unary exception
+  ret:
+    type: Nothing
+  right: !Item
+    name: exception
+    desc: value that is put into the <sqf inline>_exception</sqf> variable inside [[catch]] block
+    type: Anything
+- call: !Binary
+  - ifType
+  - exception
+  ret:
+    type: Nothing
+  left: !Item
+    name: ifType
+    desc: if the condition returns [[true]], ''exception'' is thrown
+    type: IfType
+  right: !Item
+    name: exception
+    desc: value that is put into the <sqf inline>_exception</sqf> variable inside [[catch]] block
+    type: Anything
+  since:
+    arma3: '1.54'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>try { throw "invalid argument" } catch { hint str _exception };</sqf>
+- <sqf>123 try { if (_this != 123) throw "invalid argument" } catch { hint str _exception };</sqf>
+- "The correct usage of shorthand alt syntax:\n<sqf>\ntry\n{\n\tif (a > b)\n\t\tthrow \"Error: some error\";\t\t\t\t// OK - the command argument is static\n}\ncatch\n{\n\thint str _exception;\n};\n</sqf>\n<sqf>\ntry\n{\n\tif (a > b)\n\t\tthrow (call _someFunc);\t\t\t\t\t// NOT OK - the command argument is dynamic\n\t\t// _someFunc is called first to get the value regardless of (a > b) outcome\n}\ncatch\n{\n\thint str _exception;\n};\n</sqf>\n<sqf>\ntry\n{\n\tif (a > b) then { throw (call _someFunc) };\t// OK - the command argument is dynamic\n\t// _someFunc is only called when (a > b) is true\n}\ncatch\n{\n\thint str _exception;\n};\n</sqf>"
+see_also:
+- Exception
+- handling
+- try
+- catch

@@ -1,0 +1,38 @@
+name: unitBackpack
+desc: Returns unit's backpack
+groups:
+- Containers
+syntax:
+- call: !Unary unit
+  ret:
+    type: Object
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _myBackpack = unitBackpack player;</sqf>
+- <sqf>clearMagazineCargo unitBackpack player;</sqf>
+- <sqf>player action ["gear", unitBackpack player];</sqf>
+see_also:
+- backpackContainer
+- firstBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack

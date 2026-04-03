@@ -1,0 +1,25 @@
+name: onDoubleClick
+desc: |-
+  Defines an action performed when the user double clicks on the map. Command receives:,_pos array position,_units array selected units,_shift,_alt bool key state
+  {{Feature|informative|Some Old Editor Command}}
+groups:
+- Game 2 Editor
+syntax:
+- call: !Binary
+  - map
+  - command
+  ret:
+    type: Nothing
+  left: !Item
+    name: map
+    type: Control
+  right: !Item
+    name: command
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- onMapSingleClick

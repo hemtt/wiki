@@ -1,0 +1,23 @@
+name: cos
+desc: Cosine of a number, argument in degrees.
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>cos 60; // returns 0.5</sqf>
+see_also:
+- acos
+- sin
+- asin
+- tan
+- atan
+- atan2

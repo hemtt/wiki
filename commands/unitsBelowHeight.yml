@@ -1,0 +1,46 @@
+name: unitsBelowHeight
+desc: |-
+  Returns units in group/array below given Above Terrain Level (ATL) altitude.
+  {{Feature|informative|an object's ATL altitude can be found with <sqf inline>_altitude = (getPosATL _obj) select 2;</sqf>.}}
+groups:
+- Object Detection
+- Positions
+syntax:
+- call: !Binary
+  - units
+  - height
+  ret:
+    type: !ArrayUnsized
+      value: Object
+  left: !Item
+    name: units
+    type: !ArrayUnsized
+      value: Object
+  right: !Item
+    name: height
+    desc: height above terrain level ([[Position#PositionATL|PositionATL]])
+    type: Number
+- call: !Binary
+  - group
+  - height
+  ret:
+    type: !ArrayUnsized
+      value: Object
+  left: !Item
+    name: group
+    desc: AI group
+    type: Group
+  right: !Item
+    name: height
+    desc: height above terrain level ([[Position#PositionATL|PositionATL]])
+    type: Number
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_allOnGroudUnits = group player unitsBelowHeight 10;</sqf>
+- <sqf>_units = allUnits unitsBelowHeight 30;</sqf>
+see_also:
+- allUnits
+- getPosATL
+- group

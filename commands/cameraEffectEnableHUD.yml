@@ -1,0 +1,27 @@
+name: cameraEffectEnableHUD
+desc: Enable / disable showing of in-game UI during currently active camera effect. By default the HUD is off, which will make results of [[drawIcon3D]] invisible, for example.
+groups:
+- Camera Control
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>cameraEffectEnableHUD true;</sqf>
+see_also:
+- showHUD
+- shownMap
+- visibleMap
+- forceMap
+- shownGPS
+- shownWatch
+- shownCompass
+- shownUAVFeed
+- camCreate
+- cameraEffect

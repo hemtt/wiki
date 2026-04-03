@@ -1,0 +1,29 @@
+name: displayParent
+desc: Returns parent display of the given display.
+groups:
+- GUI Control
+syntax:
+- call: !Unary display
+  ret:
+    type: Display
+  right: !Item
+    name: display
+    type: Display
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqf>_display = displayParent findDisplay 49; // Display #46</sqf>'
+see_also:
+- displayChild
+- findDisplay
+- displayCtrl
+- createDisplay
+- createDialog
+- dialog
+- displayNull
+- ctrlCreate
+- controlNull
+- ctrlParent
+- ctrlParentControlsGroup
+- focusedCtrl

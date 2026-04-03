@@ -1,0 +1,70 @@
+name: splitString
+desc: |-
+  Splits the provided '''ANSI''' string into an array of tokens according to given delimiters.
+  {{Feature|informative|For Unicode support, see [[forceUnicode]].}}
+groups:
+- Strings
+syntax:
+- call: !Binary
+  - str
+  - delimiters
+  ret:
+    type: !ArrayUnsized
+      value: String
+  left: !Item
+    name: str
+    desc: the string to split
+    type: String
+  right: !Item
+    name: delimiters
+    desc: one or more characters, each used as a separate delimiter; if empty, ''str'' is split by each character
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _str = "- This, is a sample string." splitString "-,. "; // ["This","is","a","sample","string"]
+  _str joinString "#"; // "This#is#a#sample#string"
+  </sqf>
+- |-
+  <sqf>
+  "\A3\ui_f\data\map\vehicleicons\iconLogic_ca.paa" splitString "\."; // ["A3","ui_f","data","map","vehicleicons","iconLogic_ca","paa"]
+  </sqf>
+- <sqf>"1:2:3" splitString ":"; // ["1","2","3"]</sqf>
+- <sqf>"Japa is the best!" splitString "" joinString " "; // "J a p a   i s   t h e   b e s t !"</sqf>
+- |-
+  <sqf>
+  _cmd = currentMagazineDetail player; // "9mm 16Rnd Mag(13/16)[id/cr:10000011/0]"
+  _cmd splitString "([ ]/:)"; // ["9mm","16Rnd","Mag","13","16","id","cr","10000011","0"]
+  </sqf>
+- |-
+  Remove all \r\n from file:
+  <sqf>loadFile "somefile.txt" splitString toString [13,10] joinString " ";</sqf>
+see_also:
+- joinString
+- set
+- resize
+- reverse
+- select
+- in
+- find
+- toArray
+- forEach
+- count
+- deleteAt
+- deleteRange
+- append
+- sort
+- param
+- params
+- arrayIntersect
+- toString
+- endl
+- forceUnicode]],
+- '{{Link|http://www.utf8-chartable.de/|Unicode'
+- Character
+- Table}}
+- '{{Link|http://www.cplusplus.com/reference/cstring/strtok/|strtok'
+- (C++)}}

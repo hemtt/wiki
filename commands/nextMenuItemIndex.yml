@@ -1,0 +1,20 @@
+name: nextMenuItemIndex
+desc: |-
+  Returns the next available menu item index.
+  {{Feature|informative|Some Old Editor Command}}
+groups:
+- Game 2 Editor
+syntax:
+- call: !Unary map
+  ret:
+    type: Number
+  right: !Item
+    name: map
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- '-'

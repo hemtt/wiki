@@ -1,0 +1,37 @@
+name: getTerrainHeight
+desc: |-
+  Returns terrain height at the specified location.
+  {{Feature|informative|
+  Unlike [[getTerrainHeightASL]] which returns the exact position's height, this command returns the height at the closest terrain grid pixel to the provided position:
+  <sqf>
+  private _cellWidth = getTerrainInfo # 2;
+  getTerrainHeightASL (_pos apply { _cellWidth * round (_x / _cellWidth) });
+  </sqf>
+  }}
+groups:
+- Positions
+syntax:
+- call: !Unary positionWorld
+  ret:
+    type: Number
+    desc: terrain height
+  right: !Item
+    name: positionWorld
+    desc: world coordinates
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _gridCellHeight = getTerrainHeight getPosWorld player;</sqf>
+see_also:
+- setTerrainHeight
+- getTerrainHeightASL
+- getTerrainInfo

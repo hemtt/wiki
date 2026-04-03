@@ -1,0 +1,23 @@
+name: isHidden
+desc: |-
+  Returns whether a person is hidden (reached the hiding position).
+  {{Feature|Important | Not to be confused with [[isObjectHidden]], which is returning object visibility set with [[hideObject]]}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary person
+  ret:
+    type: Boolean
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_bobIsHidden = isHidden bob;</sqf>
+see_also:
+- isObjectHidden
+- getHideFrom
+- setHideBehind
+- findCover

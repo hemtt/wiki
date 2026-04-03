@@ -1,0 +1,35 @@
+name: isEqualType
+desc: Compares two values' types. A much faster alternative to <sqf inline>typeName a == typeName b</sqf>.
+groups:
+- Variables
+syntax:
+- call: !Binary
+  - val1
+  - val2
+  ret:
+    type: Boolean
+  left: !Item
+    name: val1
+    type: Anything
+  right: !Item
+    name: val2
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _var = [1,2,3];
+  _var isEqualType 0; // false
+  _var isEqualType []; // true
+  </sqf>
+see_also:
+- isEqualTypeAll
+- isEqualTypeArray
+- isEqualTypeAny
+- isEqualTypeParams
+- param
+- params
+- isEqualTo
+- typeName

@@ -1,0 +1,25 @@
+name: setMarkerDirLocal
+desc: Sets the orientation of the marker.
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - markerName
+  - angle
+  ret:
+    type: Nothing
+  left: !Item
+    name: markerName
+    type: String
+  right: !Item
+    name: angle
+    desc: angle of the marker in degree
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>"Marker1" setMarkerDirLocal 90;</sqf>
+see_also:
+- setMarkerDir
+- markerDir

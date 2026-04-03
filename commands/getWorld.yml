@@ -1,0 +1,19 @@
+name: getWorld
+desc: "Returns the name of the current map. Name is actually class as defined in config (eg Intro). \n{{Feature|warning|This command does not exist outside of {{ofp}}/{{arma0}}. Use [[worldName]] in later titles.}}"
+groups:
+- Mission Information
+syntax:
+- call: Nular
+  ret:
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqs>
+  ; if testing on Everon, getWorld will return "eden"
+  hint getWorld
+  </sqs>
+see_also:
+- worldName

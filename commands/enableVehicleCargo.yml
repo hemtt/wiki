@@ -1,0 +1,37 @@
+name: enableVehicleCargo
+desc: Enable/disable option to transport other vehicles (if configured) or be transported.
+groups:
+- Vehicle in Vehicle Transport
+syntax:
+- call: !Binary
+  - vehicle
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_vehicle enableVehicleCargo true;</sqf>
+see_also:
+- Arma
+- '3:'
+- Vehicle
+- in
+- Vehicle
+- Transport|
+- Vehicle
+- in
+- Vehicle
+- Transport
+- canVehicleCargo
+- setVehicleCargo
+- getVehicleCargo
+- isVehicleCargo
+- vehicleCargoEnabled

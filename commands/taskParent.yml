@@ -1,0 +1,18 @@
+name: taskParent
+desc: Returns the parent task of the specified task.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: Task
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_parent = taskParent someTask;</sqf>
+see_also:
+- taskChildren

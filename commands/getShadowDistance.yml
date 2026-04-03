@@ -1,0 +1,17 @@
+name: getShadowDistance
+desc: Gets the shadows rendering distance.
+groups:
+- System
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_value = getShadowDistance;</sqf>
+see_also:
+- setShadowDistance
+- isPipEnabled

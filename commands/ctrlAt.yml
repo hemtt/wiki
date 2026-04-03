@@ -1,0 +1,34 @@
+name: ctrlAt
+desc: Returns the control at the specified coordinates.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - display
+  - - x
+    - y
+  ret:
+    type: Control
+    desc: the control at the specified coordinates, [[controlNull]] if none
+  left: !Item
+    name: display
+    desc: the display to check
+    type: Display
+  right: !Array
+  - !Item
+    name: x
+    desc: position (0 = left, 1 = right)
+    type: Number
+  - !Item
+    name: y
+    desc: position (0 = top, 1 = bottom)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _ctrl = _myDisplay ctrlAt [0.5, 0.5];</sqf>
+see_also:
+- ctrlCreate
+- ctrlSetPosition
+- ctrlCommit

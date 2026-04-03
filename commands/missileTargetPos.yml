@@ -1,0 +1,21 @@
+name: missileTargetPos
+desc: Returns a guided missile's target position.
+groups:
+- Weapons
+syntax:
+- call: !Unary munition
+  ret:
+    type: Position3dASL
+  right: !Item
+    name: munition
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _targetDistance = vehicle player distance missileTargetPos missile1;</sqf>
+see_also:
+- missileTarget
+- setMissileTargetPos
+- setMissileTarget
+- missileState

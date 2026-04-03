@@ -1,0 +1,20 @@
+name: formationDirection
+desc: Return the direction in degrees of the 'unit' watching in formation.
+groups:
+- Groups
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Number
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_degrees = formationDirection _unit;</sqf>
+see_also:
+- setFormDir
+- formation
+- setFormation

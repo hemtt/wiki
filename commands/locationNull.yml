@@ -1,0 +1,27 @@
+name: locationNull
+desc: "A non-existing [[Location]]. To compare non-existent locations use [[isNull]] or [[isEqualTo]]:\n<sqf>\nlocationNull == locationNull;\t\t\t// false\nisNull locationNull;\t\t\t\t\t// true\nlocationNull isEqualTo locationNull;\t// true\n</sqf>"
+groups:
+- Locations
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Location
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>!isNull locationNull; // false</sqf>
+- <sqf>str locationNull; // No location</sqf>
+- <sqf>position locationNull; // [0,0,0]</sqf>
+see_also:
+- controlNull
+- displayNull
+- grpNull
+- objNull
+- taskNull
+- teamMemberNull
+- scriptNull
+- configNull
+- typeName
+- isNull

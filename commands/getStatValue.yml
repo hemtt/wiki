@@ -1,0 +1,25 @@
+name: getStatValue
+desc: |-
+  Returns value of the given stat.<br>
+  A list of possible StatNames can be found here: [[Arma 3: Stat Names]]
+groups:
+- System
+syntax:
+- call: !Unary name
+  ret:
+    type: Number
+    desc: (can return [[Nothing]])
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getStatValue "ExpWarlockDown"; // Checks if the "Warlock Down" Achivement was already aquired</sqf>
+see_also:
+- setStatValue
+- Arma
+- '3:'
+- Stat
+- Names

@@ -1,0 +1,30 @@
+name: numberToDate
+desc: Convert float number to a date.
+groups:
+- Environment
+syntax:
+- call: !Unary
+  - year
+  - time
+  ret:
+    type: ArrayDate
+  right: !Array
+  - !Item
+    name: year
+    desc: year value, e.g 2035
+    type: Number
+  - !Item
+    name: time
+    desc: year time in range 0..1, from beginning to end of the year (e.g {{hl|0}} is January 1<sup>st</sup> and {{hl|1}} is December 31<sup>st</sup>)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setDate numberToDate [2008, 0.5324]; // sets date to [2008,7,13,7,49]</sqf>
+see_also:
+- dateToNumber
+- getNumber
+- isNumber
+- parseNumber
+- playersNumber

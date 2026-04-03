@@ -1,0 +1,47 @@
+name: setFriend
+desc: |-
+  Sets how friendly a side is with another. The friendliness is set for one side, not for the other.  See also [[Side Relations]].
+
+  {{Feature|arma3|Since {{arma3}} this command can be used mid-mission. Before that it was intended to be used on mission start only, as changing value during mission could cause unexpected errors in AI behaviour (especially for groups already knowing about "switched to enemy" groups).
+  }}
+groups:
+- Sides
+syntax:
+- call: !Binary
+  - side1
+  - - side2
+    - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: side1
+    type: Side
+  right: !Array
+  - !Item
+    name: side2
+    type: Side
+  - !Item
+    name: value
+    desc: a value smaller than 0.6 results in being enemy, otherwise ''side1'' is friendly to ''side2''
+    type: Number
+argument_loc: Unspecified
+effect_loc: Global
+server_exec: true
+since: {}
+examples:
+- <sqf>west setFriend [resistance, 0]; // west will not like resistance from now on</sqf>
+- |-
+  <sqf>
+  resistance setFriend [east, 0];
+  east setFriend [resistance, 0]; // both are enemies
+
+  resistance setFriend [east, 1];
+  east setFriend [resistance, 0]; // resistance likes east, but east does not like resistance
+  </sqf>
+- <sqf>west setFriend [west, 0]; // free for all deathmatch! works with west/blufor, east/opfor, independent/resistance and civilian</sqf>
+see_also:
+- getFriend
+- BIS_fnc_sideIsFriendly
+- BIS_fnc_sideIsEnemy
+- Side
+- Relations

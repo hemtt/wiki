@@ -1,0 +1,28 @@
+name: removeHandgunItem
+desc: Removes given weapon item, including magazine, from the [[handgunWeapon]]
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    desc: config class
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeHandgunItem "muzzle_snds_L";</sqf>
+see_also:
+- addHandgunItem
+- removeAllHandgunItems
+- removePrimaryWeaponItem
+- removeSecondaryWeaponItem
+- removeBinocularItem

@@ -1,0 +1,25 @@
+name: attachedObject
+desc: Returns the object a location is attached to. If the location is unattached, then [[objNull]] is returned.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary location
+  ret:
+    type: Object
+  right: !Item
+    name: location
+    type: Location
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_locAttachedObj = attachedObject myLocation;</sqf>
+see_also:
+- attachObject
+- attachTo
+- attachedObjects
+- attachedTo
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- lightAttachObject
+- triggerAttachVehicle

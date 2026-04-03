@@ -1,0 +1,24 @@
+name: ctrlRemoveAllEventHandlers
+desc: Remove all event handlers from the given control.
+groups:
+- GUI Control - Event Handlers
+- Event Handlers
+syntax:
+- call: !Binary
+  - control
+  - handlerName
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: handlerName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ctrlButton ctrlRemoveAllEventHandlers "ButtonDown";</sqf>
+see_also:
+- ctrlAddEventHandler

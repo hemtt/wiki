@@ -1,0 +1,23 @@
+name: getCorpse
+desc: Returns the corpse associated with given weaponholder. When unit is killed and had a weapon, the weapon is placed inside "WeaponHolderSimulated" and dropped together with the unit. This command returns the dead body associated with this weaponholder.
+groups:
+- Unit Inventory
+- Object Manipulation
+syntax:
+- call: !Unary weaponholder
+  ret:
+    type: Object
+    desc: dead unit
+  right: !Item
+    name: weaponholder
+    desc: weaponholder dropped by the dead unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>systemChat str getCorpse cursorObject;</sqf>
+see_also:
+- getCorpseWeaponholders
+- nearSupplies
+- allDeadMen

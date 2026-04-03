@@ -1,0 +1,35 @@
+name: ctClear
+desc: Removes all the lines from the RscControlsTable. Returns Nothing.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Unary ctrl
+  ret:
+    type: Nothing
+  right: !Item
+    name: ctrl
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>ctClear _control;</sqf>
+see_also:
+- ctAddHeader
+- ctAddRow
+- ctCurSel
+- ctSetCurSel
+- ctRowControls
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctSetData
+- ctData
+- ctFindRowHeader
+- ctFindHeaderRows
+- ctRemoveRows
+- ctRemoveHeaders
+- ctSetRowTemplate
+- ctSetHeaderTemplate

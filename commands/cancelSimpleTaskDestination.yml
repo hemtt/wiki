@@ -1,0 +1,19 @@
+name: cancelSimpleTaskDestination
+desc: Cancels a simple task destination.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: Nothing
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>cancelSimpleTaskDestination myTask;</sqf>
+see_also:
+- taskDestination
+- setSimpleTaskDestination

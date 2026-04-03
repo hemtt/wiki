@@ -1,0 +1,35 @@
+name: menuCollapse
+desc: Collapses item on given path and all its children.
+groups:
+- GUI Control - Menu
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+- call: !Binary
+  - control
+  - path
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: path
+    type: Path
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>findDisplay 313 displayCtrl 120 menuCollapse [0];</sqf>
+see_also:
+- menuExpand

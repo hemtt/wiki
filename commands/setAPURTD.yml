@@ -1,0 +1,29 @@
+name: setAPURTD
+desc: Let the Auxiliary Power Unit (APU) reach a desired state over the given period of time.
+groups:
+- RTD
+syntax:
+- call: !Binary
+  - helicopterRTD
+  - - value
+    - time
+  ret:
+    type: Nothing
+  left: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+  right: !Array
+  - !Item
+    name: value
+    desc: desired APU state. 0 being completely off, 1 being fully powered up
+    type: Number
+  - !Item
+    name: time
+    desc: time to reach (seconds)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>vehicle player setAPURTD [1, 15];</sqf>

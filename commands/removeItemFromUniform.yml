@@ -1,0 +1,26 @@
+name: removeItemFromUniform
+desc: Removes item from soldier's uniform. Can be used with magazines and weapons too.
+groups:
+- Containers
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeItemFromUniform "FirstAidKit";</sqf>
+see_also:
+- addItemToUniform
+- removeItemFromVest
+- removeItemFromBackpack
+- removeItemFromPrimaryWeapon

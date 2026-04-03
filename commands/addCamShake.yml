@@ -1,0 +1,39 @@
+name: addCamShake
+desc: Creates the camera shaking effect, like when you are near an explosion
+groups:
+- Camera Control
+syntax:
+- call: !Unary
+  - power
+  - duration
+  - frequency
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: power
+    desc: strength of shake (camera movement), practical range is 0 to 20
+    type: Number
+  - !Item
+    name: duration
+    desc: duration in seconds divided by 2
+    type: Number
+  - !Item
+    name: frequency
+    desc: frequency of shake, practical range is 0 to 100
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>addCamShake [10, 2, 25]; // Shakes the camera for 1 second</sqf>
+- |-
+  <sqf>
+  enableCamShake true;
+  addCamShake [5, 5, 25];
+  </sqf>
+see_also:
+- enableCamShake
+- setCamShakeDefParams
+- setCamShakeParams
+- resetCamShake

@@ -1,0 +1,42 @@
+name: doFollow
+desc: |-
+  Order the given unit(s) to follow another from his own group as his [[formLeader|formation leader]] (without radio messages).<br>
+  It is also used to order the unit to '''return to formation''' after e.g [[doStop]] even if it is the leader himself that should return to formation (see [[#Example 2|Example 2]]).
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - unitLead
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: unitLead
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldier1 doFollow _soldier2;</sqf>
+- <sqf>units _group doFollow leader _group; // returns all the units to formation</sqf>
+see_also:
+- doStop
+- doMove
+- commandFollow
+- formationLeader
+- formLeader
+- isFormationLeader
+- leader
+- selectLeader
+- setLeader

@@ -1,0 +1,57 @@
+name: addWeaponGlobal
+desc: |-
+  Add a weapon to a unit. Infantry units can only carry weapons in their respective slots (primary, secondary and handgun),
+  the [[addWeaponGlobal]] command will replace the weapon currently in a slot with the added weapon if it shares the same slot.
+  This command can link items to respective slots as well, in which case the functionality is identical to [[linkItem]].
+
+  To make sure the added weapon is loaded and ready, add the magazine first.
+  {{Feature|informative|This command was broken when used on dedicated server and fixed on {{GVI|arma3|2.00|size= 0.75}}.}}
+groups:
+- Vehicle Inventory
+- Unit Inventory
+syntax:
+- call: !Binary
+  - object
+  - weapon
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    desc: unit or vehicle to add the weapon to
+    type: Object
+  right: !Item
+    name: weapon
+    desc: weapon class name
+    type: String
+- call: !Binary
+  - object
+  - - weapon
+    - autoselect
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    desc: unit or vehicle to add the weapon to
+    type: Object
+  right: !Array
+  - !Item
+    name: weapon
+    desc: weapon class name. See the topic [[:Category:Weapons]] for reference about possible values.
+    type: String
+  - !Item
+    name: autoselect
+    desc: (Optional, default [[true]]) [[false]] to abort weapon autoselection if no weapon was selected.
+    type: String
+  since:
+    arma3: '2.20'
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- "<sqf>\n{\n\t_x addMagazineGlobal \"Laserbatteries\";\n\t_x addWeaponGlobal \"Laserdesignator\";\n} forEach allUnits;\n</sqf>"
+- "<sqf>\n{\n\tif (typeOf _x == \"O_Heli_Attack_02_black_F\") then\n\t{\n\t\t_x addMagazineGlobal \"38Rnd_80mm_rockets\";\n\t\t_x addWeaponGlobal \"rockets_Skyfire\";\n\t};\n} forEach vehicles;\n</sqf>"
+see_also:
+- removeWeaponGlobal
+- addWeapon
+- addMagazine
+- addMagazineGlobal

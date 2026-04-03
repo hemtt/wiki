@@ -1,0 +1,29 @@
+name: getCargoIndex
+desc: Returns index of the unit in cargo. -1 if not in cargo.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicle
+  - unit
+  ret:
+    type: Number
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  player moveInCargo heli;
+  hint str (heli getCargoIndex player);
+  </sqf>
+see_also:
+- moveInCargo
+- assignAsCargoIndex
+- emptyPositions

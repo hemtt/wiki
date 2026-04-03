@@ -1,0 +1,22 @@
+name: getWaterFillPercentage
+desc: Get an object's water filling.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary obj
+  ret:
+    type: Number
+    desc: water level in range 0..1 (empty to full)
+  right: !Item
+    name: obj
+    desc: object to manipulate
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (getWaterFillPercentage _myCar > 0) then\n{\n\thint \"My feet are wet.\";\n};\n</sqf>"
+see_also:
+- setWaterLeakiness
+- getWaterLeakiness
+- setWaterFillPercentage

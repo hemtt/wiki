@@ -1,0 +1,70 @@
+name: targetKnowledge
+desc: Returns unit's knowledge about target.
+groups:
+- Object Detection
+syntax:
+- call: !Binary
+  - unit
+  - target
+  ret:
+    type: !ArraySized
+    - name: knownByGroup
+      type: Boolean
+      desc: target known by group
+      since: null
+    - name: knownByUnit
+      type: Boolean
+      desc: target known by the unit
+      since: null
+    - name: lastSeen
+      type: Number
+      desc: last time the target was seen by the unit
+      since: null
+    - name: lastThreat
+      type: Number
+      desc: last time the target endangered the unit
+      since: null
+    - name: side
+      type: Side
+      desc: target side
+      since: null
+    - name: errorMargin
+      type: Number
+      desc: position error
+      since: null
+    - name: position
+      type: Position
+      desc: target position
+      since: null
+    - name: ignoreTarget
+      type: Boolean
+      desc: target is ignored ([[ignoreTarget]])
+      since:
+        arma3: '2.18'
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: target
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _allInfo = _soldierOne targetKnowledge _jeepOne;
+  _allInfo params ["_knownByGroup", "_knownByUnit", "_lastSeen", "_lastThreat", "_side", "_errorMargin", "_position", "_ignoreTarget"];
+  </sqf>
+- <sqf>private _posError = (_soldierOne targetKnowledge _jeepOne) select 5;</sqf>
+see_also:
+- knowsAbout
+- targets
+- targetsQuery
+- nearTargets
+- targetsAggregate
+- reveal
+- forgetTarget
+- setTargetAge
+- getHideFrom
+- ignoreTarget

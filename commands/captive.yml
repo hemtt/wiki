@@ -1,0 +1,26 @@
+name: captive
+desc: |-
+  Returns the captive state of the given unit (set with [[setCaptive]]). A captive unit will not be attacked by its enemies.
+  {{Feature|important|
+  While a captive unit won't be attacked, it will still attack its enemies – be sure to [[setBehaviour]] "CARELESS" / [[removeAllWeapons]] accordingly.}}
+groups:
+- Object Manipulation
+- Sides
+syntax:
+- call: !Unary object
+  ret:
+    type: Boolean
+    desc: '[[true]] if the unit is captive, [[false]] if not'
+  right: !Item
+    name: object
+    desc: unit or vehicle
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (captive _general) then { removeAllWeapons _general; };</sqf>
+see_also:
+- captiveNum
+- setCaptive
+- side

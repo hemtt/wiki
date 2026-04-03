@@ -1,0 +1,26 @@
+name: setBatteryRTD
+desc: Toggle a helicopter's electrical systems on and off.
+groups:
+- RTD
+syntax:
+- call: !Binary
+  - helicopterRTD
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+  right: !Item
+    name: enable
+    desc: on or off
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>(vehicle player) setBatteryRTD false;</sqf>
+see_also:
+- setBatteryChargeRTD
+- batteryChargeRTD

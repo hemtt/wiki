@@ -1,0 +1,18 @@
+name: distributionRegion
+desc: |-
+  Returns the numerical index for the distribution region of this copy of [[:Category:ArmA: Armed Assault|{{arma1}}]].
+  # USA
+  # Rest of the world
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (distributionRegion == 1) then { hint "miles"; } else { hint "kilometres"; };</sqf>
+see_also:
+- productVersion

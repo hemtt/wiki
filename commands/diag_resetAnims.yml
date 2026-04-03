@@ -1,0 +1,14 @@
+name: diag_resetAnims
+desc: Resets the animations system cache, so that animation makers can test their animations without restarting the game. A '''mission restart''' is required for the changes to be applied.
+groups:
+- Diagnostic
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+see_also:
+- diag_resetShapes

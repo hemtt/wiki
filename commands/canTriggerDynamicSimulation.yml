@@ -1,0 +1,33 @@
+name: canTriggerDynamicSimulation
+desc: A getter for [[triggerDynamicSimulation]]. {{Feature|important|This command returns always true for vehicles.}}
+groups:
+- Dynamic Simulation
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str canTriggerDynamicSimulation player;</sqf>
+see_also:
+- enableDynamicSimulationSystem
+- dynamicSimulationSystemEnabled
+- enableDynamicSimulation
+- dynamicSimulationEnabled
+- setDynamicSimulationDistance
+- dynamicSimulationDistance
+- setDynamicSimulationDistanceCoef
+- dynamicSimulationDistanceCoef
+- triggerDynamicSimulation
+- enableSimulation
+- simulationEnabled
+- enableSimulationGlobal
+- Arma
+- '3:'
+- Dynamic
+- Simulation

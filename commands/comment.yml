@@ -1,0 +1,37 @@
+name: comment
+desc: |-
+  Defines a comment. See {{Link|SQF Syntax#Comments}} to learn more about comments.
+  {{Feature|warning|
+  This command is evaluated during execution, and as such is infinitely slower than other SQF comment methods (<sqf inline>// comment</sqf> or <sqf inline>/* comment */</sqf>) which get preprocessed and do not exist at runtime).
+  See [[SQF Syntax|SQF Syntax]] for additional documentation on comments.
+  }}
+  {{Feature|informative|
+  This command is only used to place comments in unpreprocessed codes, such as trigger On Activation field, object init field, etc.
+  Alternatively, one can use a plain string followed by a semicolon as a way to comment; e.g <sqf inline>"Some comment";</sqf>.
+  }}
+groups:
+- Strings
+syntax:
+- call: !Unary text
+  ret:
+    type: Nothing
+  right: !Item
+    name: text
+    desc: the comment
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "In a preprocessed SQF script (e.g. when doing <sqf inline>execVM \"myScript.sqf\"</sqf>)\n<sqf>\ncomment \"This is a commented line\";\t\t// bad\n\"This is a commented line\";\t\t\t\t// slightly better\n// This is a commented line\t\t\t\t// perfect\n</sqf>"
+- |-
+  In an object init field (in editor):
+  <sqf>
+  comment "This comment works";
+  "This comment works too";
+  // This doesn't work
+  /* This doesn't work either */
+  </sqf>
+see_also:
+- Control
+- Structures

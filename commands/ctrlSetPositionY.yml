@@ -1,0 +1,32 @@
+name: ctrlSetPositionY
+desc: Sets vertical position (y) of a 2D control. [[ctrlCommit]] is required to complete the operation.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: !Binary
+  - control
+  - y
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: 2D control
+    type: Control
+  right: !Item
+    name: y
+    desc: vertical position of the control
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _ctrl ctrlSetPositionY 0.5;
+  _ctrl ctrlCommit 1;
+  </sqf>
+see_also:
+- ctrlSetPosition
+- ctrlSetPositionX
+- ctrlSetPositionW
+- ctrlSetPositionH

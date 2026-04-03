@@ -1,0 +1,23 @@
+name: openCuratorInterface
+desc: Force opens curator interface.
+groups:
+- Curator
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- |-
+  Open interface:
+  <sqf>openCuratorInterface;</sqf>
+- |-
+  Close interface:
+  <sqf>findDisplay 312 closeDisplay 2;</sqf>
+- "Detect if user used \"Zeus\" key to open curator interface in the absence of event handler for it:\n<sqf>\nfindDisplay 46 displayAddEventHandler [\"KeyDown\", {\n\tif (inputAction \"CuratorInterface\" > 0) then\n\t{\n\t\thint \"Curator interface is open\";\n\t};\n\tfalse\n}];\n</sqf>"
+see_also:
+- Arma
+- '3:'
+- Curator

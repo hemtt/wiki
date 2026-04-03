@@ -1,0 +1,18 @@
+name: airplaneThrottle
+desc: Returns throttle position. Works only on player's vehicle.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary airplane
+  ret:
+    type: Number
+  right: !Item
+    name: airplane
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _throttle = airplaneThrottle objectParent player;</sqf>
+see_also:
+- setAirplaneThrottle

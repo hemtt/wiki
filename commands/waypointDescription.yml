@@ -1,0 +1,19 @@
+name: waypointDescription
+desc: Gets the waypoint description.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: String
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointDescription [groupOne,1];</sqf>
+see_also:
+- waypoints
+- setWaypointDescription

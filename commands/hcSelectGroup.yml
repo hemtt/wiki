@@ -1,0 +1,36 @@
+name: hcSelectGroup
+desc: Select given group in [[High Command|high command]] bar.
+groups:
+- High Command
+syntax:
+- call: !Binary
+  - unit
+  - array
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: HC Owner
+    type: Object
+  right: !Item
+    name: array
+    type: !ArrayUnsized
+      value: Group
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player hcSelectGroup [group_1,group_2];</sqf>
+see_also:
+- High
+- Command
+- hcAllGroups
+- hcGroupParams
+- hcLeader
+- hcRemoveAllGroups
+- hcRemoveGroup
+- hcSelected
+- hcSetGroup
+- hcShowBar
+- hcShownBar
+- onHCGroupSelectionChanged

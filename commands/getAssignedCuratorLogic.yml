@@ -1,0 +1,19 @@
+name: getAssignedCuratorLogic
+desc: Returns curator logic to which given player has access.
+groups:
+- Curator
+syntax:
+- call: !Unary player
+  ret:
+    type: Object
+  right: !Item
+    name: player
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>(getAssignedCuratorLogic player) removeCuratorEditableObjects [allDead, true];</sqf>
+see_also:
+- allCurators
+- getAssignedCuratorUnit

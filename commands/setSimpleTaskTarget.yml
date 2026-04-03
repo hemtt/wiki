@@ -1,0 +1,31 @@
+name: setSimpleTaskTarget
+desc: Attach a target to the simple task.<br>Overrides [[setSimpleTaskDestination]].
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - task
+  - - target
+    - precisePosition
+  ret:
+    type: Nothing
+  left: !Item
+    name: task
+    type: Task
+  right: !Array
+  - !Item
+    name: target
+    type: Object
+  - !Item
+    name: precisePosition
+    desc: use exact position of the target for map marker / HUD indicator instead of the position known to the task's owner (depending on the unit's knowledge of the target)
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_task setSimpleTaskTarget [targetVehicle, true];</sqf>
+see_also:
+- briefing
+- createSimpleTask
+- setSimpleTaskDestination

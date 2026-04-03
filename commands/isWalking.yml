@@ -1,0 +1,23 @@
+name: isWalking
+desc: |-
+  Returns [[true]] if walk is '''toggled''' (default {{Controls|W|S}} in {{arma3}}).
+  {{Feature|informative|This command can still return true when the unit is sprinting or stopped; it only returns the '''toggle''' value of walking, not if the unit is walking right now.}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Boolean
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_bool = isWalking player;</sqf>
+see_also:
+- forceWalk
+- isForcedWalk
+- forceSpeed
+- getSpeed

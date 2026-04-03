@@ -1,0 +1,18 @@
+name: stopped
+desc: Check if unit is stopped by [[stop]] command.
+groups:
+- Unit Control
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Boolean
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqs>? (stopped _loon1) : hint "Loon1 is stopped"</sqs>'
+see_also:
+- stop

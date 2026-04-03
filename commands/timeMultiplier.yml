@@ -1,0 +1,25 @@
+name: timeMultiplier
+desc: Returns the value set with [[setTimeMultiplier]].
+groups:
+- Time
+- Mission Information
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: current time multiplier
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_multiplier = timeMultiplier;</sqf>
+see_also:
+- setTimeMultiplier
+- skipTime
+- setAccTime
+- accTime
+- time
+- serverTime
+- date
+- dayTime

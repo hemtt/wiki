@@ -1,0 +1,28 @@
+name: weaponCargo
+desc: Get array with weapons from ammo box (or any general weapon holder container).
+groups:
+- Vehicle Inventory
+- Unit Inventory
+- Containers
+syntax:
+- call: !Unary box
+  ret:
+    type: !ArrayUnsized
+      value: String
+    desc: list of present classes
+  right: !Item
+    name: box
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str weaponCargo backpackContainer player;</sqf>
+see_also:
+- getWeaponCargo
+- addWeaponCargo
+- addWeaponCargoGlobal
+- clearWeaponCargo
+- clearWeaponCargoGlobal
+- magazineCargo
+- itemCargo

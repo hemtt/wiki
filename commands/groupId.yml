@@ -1,0 +1,32 @@
+name: groupId
+desc: Returns a group's name or a unit's group ID number.
+groups:
+- Groups
+syntax:
+- call: !Unary group
+  ret:
+    type: String
+    desc: the group's name (e.g "Alpha Red")
+  right: !Item
+    name: group
+    type: Group
+- call: !Unary unit
+  ret:
+    type: Number
+    desc: the unit's group ID (e.g "2, taking command")
+  right: !Item
+    name: unit
+    desc: a group's unit
+    type: Object
+  since:
+    arma3: '2.12'
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>_name = groupId group player;\t\t\t// e.g \"B Alpha 1-1\"</sqf>"
+- "<sqf>private _unitGroupId = groupId player;\t// e.g 3 (number, not a string)</sqf>"
+see_also:
+- setGroupId
+- setGroupIdGlobal
+- group

@@ -1,0 +1,32 @@
+name: allowDammage
+desc: Allow or prevent an object being damaged (or injured, or killed). The command does not prevent object from taking scripted damage such as [[setDamage]] or [[setHit]].
+alias:
+- '[[allowDamage]]'
+multiplayer_note: |-
+  {{Feature | important | The command has to be executed where the object is [[Multiplayer Scripting#Locality|local]] and will be effective as long as the object does not change locality.
+  If the object changes locality, the command needs to be executed again on the new [[owner]]'s machine to maintain the effect.}}
+problem_notes:
+- This command did nothing until {{arma2}}.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - object
+  - allow
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: allow
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player allowDammage false;</sqf>
+see_also:
+- setDamage
+- damage
+- allowDamage

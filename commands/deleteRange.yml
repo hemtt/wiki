@@ -1,0 +1,55 @@
+name: deleteRange
+desc: Removes a range of array elements from the given array. Modifies the original array, just like [[resize]] or [[set]].
+groups:
+- Arrays
+syntax:
+- call: !Binary
+  - array
+  - - from
+    - count
+  ret:
+    type: Nothing
+  left: !Item
+    name: array
+    type: !ArrayUnsized
+      value: Anything
+  right: !Array
+  - !Item
+    name: from
+    desc: array index to start selection from.
+    type: Number
+  - !Item
+    name: count
+    desc: number of array elements to remove. If the selected range exceeds source array boundaries, selection will be made up to the end of the array.
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _arr = [1,2,3,4,5,6];
+  _arr deleteRange [1,4];
+  hint str _arr; // [1,6]
+  </sqf>
+see_also:
+- deleteAt
+- set
+- resize
+- select
+- in
+- find
+- toArray
+- toString
+- forEach
+- count
+- pushBack
+- pushBackUnique
+- apply
+- append
+- sort
+- param
+- params
+- arrayIntersect
+- splitString
+- joinString

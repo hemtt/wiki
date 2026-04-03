@@ -1,0 +1,22 @@
+name: diag_dumpScriptAssembly
+desc: Dump script assembly.
+groups:
+- Diagnostic
+syntax:
+- call: !Unary code
+  ret:
+    type: Nothing
+  right: !Item
+    name: code
+    type: Code
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+examples:
+- <sqf>diag_dumpScriptAssembly BIS_fnc_taskCreate;</sqf>
+see_also:
+- Arma
+- '3:'
+- Diagnostics
+- Exe

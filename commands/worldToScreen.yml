@@ -1,0 +1,71 @@
+name: worldToScreen
+desc: |-
+  Converts position in world space into screen (UI) space. If a specified position is not within the current screen view, an empty array is returned.
+  {{Feature | informative | [[SafeZone]]s should be considered:
+  * the result can be out of the [0,0]..[1,1] range
+  * the result can be a filled array even if the position is not displayed on screen if it would appear on a triplescreen setup
+  }}
+groups:
+- Positions
+syntax:
+- call: !Unary position
+  ret:
+    type: !ArraySized
+    - name: x
+      type: Number
+      desc: null
+      since: null
+    - name: y
+      type: Number
+      desc: null
+      since: null
+    desc: screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.
+  right: !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3dAGL
+        desc: null
+        since: null
+- call: !Binary
+  - camera
+  - position
+  ret:
+    type: !ArraySized
+    - name: x
+      type: Number
+      desc: null
+      since: null
+    - name: y
+      type: Number
+      desc: null
+      since: null
+    desc: screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.
+  left: !Item
+    name: camera
+    desc: camera object
+    type: Object
+  right: !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3dAGL
+        desc: null
+        since: null
+  since:
+    arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_screenPos = worldToScreen ASLToAGL getPosASL soldier1;</sqf>
+- <sqf>_screenPos = worldToScreen (player modelToWorld [0,10,0]);</sqf>
+see_also:
+- screenToWorld
+- SafeZone

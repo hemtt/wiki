@@ -1,0 +1,20 @@
+name: systemOfUnits
+desc: |-
+  Returns the currently selected system of units.
+  * 0: Metric
+  * 1: Mixed (ground vehicles use Metric / air vehicles use Imperial)
+  * 2: Imperial
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_system = systemOfUnits;</sqf>
+see_also:
+- BIS_fnc_convertUnits
+- setSystemOfUnits

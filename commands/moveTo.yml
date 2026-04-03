@@ -1,0 +1,29 @@
+name: moveTo
+desc: Low level command to person to move to given position. It is good to check first if AI pilot unit state is COMPLETED [[moveToCompleted]] first as this command will set unit into WAIT state waiting for instruction, but only if the unit has COMPLETED.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: position
+    type: Position3dATL
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_myAgent moveTo getPosATL player;</sqf>
+see_also:
+- doMove
+- commandMove
+- setDestination
+- move
+- moveToCompleted
+- moveToFailed
+- addWaypoint

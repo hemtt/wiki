@@ -1,0 +1,22 @@
+name: teamSwitchEnabled
+desc: |-
+  Check if [[Team Switch]] is currently enabled.
+  Team Switch is enabled by default.
+groups:
+- Team Switch
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isTeamSwitchEnabled = teamSwitchEnabled;</sqf>
+see_also:
+- Team
+- Switch
+- enableTeamSwitch
+- onBriefingTeamSwitch
+- onTeamSwitch
+- teamSwitch

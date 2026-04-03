@@ -1,0 +1,27 @@
+name: formLeader
+desc: |-
+  Returns the formation leader of a given unit.
+  This is often the same as the group leader, but not always, for example in cases when a unit is ordered to follow another unit.
+groups:
+- Unit Control
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Object
+    desc: the leader of the formation is returned. If used on a dead unit, the returned value is [[objNull]]
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (formLeader player != leader player) then\n{\n\thint \"The formation leader is different to the group leader!\";\n};\n</sqf>"
+see_also:
+- commandFollow
+- doFollow
+- formationLeader
+- isFormationLeader
+- leader
+- selectLeader
+- setLeader

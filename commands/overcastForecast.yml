@@ -1,0 +1,17 @@
+name: overcastForecast
+desc: Return the overcast forecast.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_forecast = overcastForecast;</sqf>
+see_also:
+- overcast
+- rain
+- fog

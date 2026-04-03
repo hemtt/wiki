@@ -1,0 +1,54 @@
+name: lockWP
+desc: Disable switching to next waypoint (current waypoint will never complete while lockwp is used). Sometimes used during cut-scenes.
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - groupName
+  - lock
+  ret:
+    type: Nothing
+  left: !Item
+    name: groupName
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: lock
+    type: Boolean
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_groupOne lockWP true;</sqf>
+- <sqf>_Soldier lockWP true;</sqf>
+- <sqf>_MyTank lockWP false;</sqf>
+see_also:
+- waypoints
+- deleteWaypoint
+- copyWaypoints
+- setCurrentWaypoint
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointFormation
+- setWaypointHousePosition
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- setWaypointLoiterRadius
+- waypointLoiterRadius
+- addWaypoint
+- setWaypointLoiterType
+- waypointSpeed

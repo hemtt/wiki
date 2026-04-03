@@ -1,0 +1,25 @@
+name: camPreparePos
+desc: Prepares the camera position. Needs the call of [[camCommitPrepared]] to be conducted.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    type: Object
+  right: !Item
+    name: position
+    type: Position
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camera camPreparePos getPos player;</sqf>
+see_also:
+- camPreload
+- camCommitPrepared
+- camSetPos

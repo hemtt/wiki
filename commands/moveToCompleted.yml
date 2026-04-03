@@ -1,0 +1,19 @@
+name: moveToCompleted
+desc: Check if latest low level moveTo command is finished. Returns true if given AI pilot unit state == COMPLETED
+groups:
+- Unit Control
+syntax:
+- call: !Unary person
+  ret:
+    type: Boolean
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isCompleted = moveToCompleted _unit;</sqf>
+see_also:
+- moveTo
+- moveToFailed

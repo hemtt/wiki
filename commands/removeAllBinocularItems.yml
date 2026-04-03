@@ -1,0 +1,22 @@
+name: removeAllBinocularItems
+desc: Removes all items from [[binocular]] weapon, except magazine.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeAllBinocularItems player;</sqf>
+see_also:
+- addBinocularItem
+- removeBinocularItem
+- removeAllPrimaryWeaponItems
+- removeAllSecondaryWeaponItems
+- removeAllHandgunItems

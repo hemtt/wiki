@@ -1,0 +1,22 @@
+name: asin
+desc: Arcsine of a number, result in [[Number#Degrees|Degrees]].
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    desc: any other value returns [[NaN]]
+    type: !NumberRange
+    - -1
+    - 1
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_degrees = asin 0.5; // Returns 30</sqf>
+see_also:
+- Math
+- Commands

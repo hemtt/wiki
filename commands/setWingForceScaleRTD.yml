@@ -1,0 +1,31 @@
+name: setWingForceScaleRTD
+desc: Set effectivity of wings. {{Feature|afm}}
+groups:
+- RTD
+syntax:
+- call: !Binary
+  - helicopterRTD
+  - - leftHorizontal
+    - rightHorizontal
+    - vertical
+  ret:
+    type: Nothing
+  left: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+  right: !Array
+  - !Item
+    name: leftHorizontal
+    type: Number
+  - !Item
+    name: rightHorizontal
+    type: Number
+  - !Item
+    name: vertical
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- ''

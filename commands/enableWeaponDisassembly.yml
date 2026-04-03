@@ -1,0 +1,37 @@
+name: enableWeaponDisassembly
+desc: Enables or disables disassembly of static weapons. Could be applied to local [[player]], to another unit or to static weapon directly.
+groups:
+- Weapons
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    desc: '[[false]] to prevent local [[player]] from being able to disassemble static weapons'
+    type: Boolean
+- call: !Binary
+  - entity
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: entity
+    desc: unit or static weapon
+    type: Object
+  right: !Item
+    name: enable
+    desc: '[[false]] to prevent a unit from being able to disassemble static weapons, or to prevent a static weapon from being disassembled by anyone'
+    type: Boolean
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>enableWeaponDisassembly false;</sqf>
+- <sqf>soldier1 enableWeaponDisassembly false;</sqf>
+- <sqf>mortar1 enableWeaponDisassembly false;</sqf>
+see_also:
+- weaponDisassemblyEnabled
+- weapons
+- action
+- inGameUISetEventHandler

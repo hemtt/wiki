@@ -1,0 +1,25 @@
+name: vehicleReceiveRemoteTargets
+desc: Gets whether the vehicle can acquire targets via datalink from the [[Side]] center.
+groups:
+- Sensors
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>vehicleReceiveRemoteTargets vehicle player;</sqf>
+see_also:
+- setVehicleRadar
+- vehicleReportRemoteTargets
+- setVehicleReportRemoteTargets
+- setVehicleReceiveRemoteTargets
+- vehicleReportOwnPosition
+- setVehicleReportOwnPosition
+- reportRemoteTarget
+- confirmSensorTarget

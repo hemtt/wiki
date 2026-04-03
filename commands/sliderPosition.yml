@@ -1,0 +1,24 @@
+name: sliderPosition
+desc: Returns current thumb position of [[CT_SLIDER]] or [[CT_XSLIDER]] with given idc of topmost user [[dialog]].
+groups:
+- GUI Control
+syntax:
+- call: !Unary idc
+  ret:
+    type: Number
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary control
+  ret:
+    type: Number
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_slidepos1 = sliderPosition 105;</sqf>
+see_also:
+- sliderSetPosition

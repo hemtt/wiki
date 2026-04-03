@@ -1,0 +1,19 @@
+name: ctrlShown
+desc: Returns whether given control is shown.
+groups:
+- GUI Control
+syntax:
+- call: !Unary controlName
+  ret:
+    type: Boolean
+  right: !Item
+    name: controlName
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_bool = ctrlShown _ctrl;</sqf>
+see_also:
+- ctrlShow
+- ctrlVisible

@@ -1,0 +1,31 @@
+name: unregisterTask
+desc: Unregisters a task type from given agent. The task type is the name given in {{hl|CfgTasks}} classes in {{hl|name}} property. Also available from [[registeredTasks]] array.
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - teamMember
+  - name
+  ret:
+    type: Boolean
+    desc: '[[true]] on success'
+  left: !Item
+    name: teamMember
+    desc: '[[teamMember]] [[agent]]'
+    type: TeamMember
+  right: !Item
+    name: name
+    desc: name of the task
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>teamMember _agent unregisterTask ((registeredTasks _agent) select 0);</sqf>
+see_also:
+- registerTask
+- registeredTasks
+- sendTask
+- createTask
+- currentTasks
+- taskCompleted

@@ -1,0 +1,44 @@
+name: setTrafficSpeed
+desc: Set ambient traffic speed in a rectangle (in kilometers per hour). {{Feature|arma3|This command does nothing in {{arma3}}.}}
+groups:
+- Environment
+syntax:
+- call: !Unary
+  - speed
+  - xMin
+  - xMax
+  - zMin
+  - zMax
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: speed
+    desc: traffic speed (in kilometers per hour)
+    type: Number
+  - !Item
+    name: xMin
+    desc: western border of the affected rectangle
+    type: Number
+  - !Item
+    name: xMax
+    desc: eastern border of the affected rectangle
+    type: Number
+  - !Item
+    name: zMin
+    desc: southern border of the affected rectangle
+    type: Number
+  - !Item
+    name: zMax
+    desc: northern border of the affected rectangle
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setTrafficSpeed [50, _xMin, _xMax, _zMin, _zMax];</sqf>
+see_also:
+- enableTraffic
+- setTrafficDensity
+- setTrafficDistance
+- setTrafficGap

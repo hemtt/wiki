@@ -1,0 +1,42 @@
+name: setSimpleTaskDescription
+desc: Attach descriptions to the simple task.
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - task
+  - - description
+    - descriptionShort
+    - descriptionHUD
+  ret:
+    type: Nothing
+  left: !Item
+    name: task
+    type: Task
+  right: !Array
+  - !Item
+    name: description
+    desc: task description
+    type: String
+  - !Item
+    name: descriptionShort
+    desc: task title
+    type: String
+  - !Item
+    name: descriptionHUD
+    desc: task waypoint description
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myTask setSimpleTaskDescription ["Today you have to kill Spongebob", "Kill Spongebob", "There he is!"];</sqf>
+see_also:
+- taskDescription
+- Tasks
+- createSimpleTask
+- removeSimpleTask
+- setSimpleTaskDestination
+- setTaskState
+- setTaskResult
+- taskState

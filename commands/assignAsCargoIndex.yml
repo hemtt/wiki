@@ -1,0 +1,41 @@
+name: assignAsCargoIndex
+desc: |-
+  Assigns the character to a specific cargo / passenger index of the given vehicle.
+  {{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - character
+  - - vehicle
+    - index
+  ret:
+    type: Boolean
+  left: !Item
+    name: character
+    desc: character to assign
+    type: Object
+  right: !Array
+  - !Item
+    name: vehicle
+    desc: vehicle to assign to
+    type: Object
+  - !Item
+    name: index
+    desc: cargo / passenger index
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player assignAsCargoIndex [myHelicopter, 1];</sqf>
+see_also:
+- assignAsCargo
+- assignAsDriver
+- assignAsCommander
+- assignAsGunner
+- assignAsTurret
+- getCargoIndex
+- assignedVehicleRole
+- unassignVehicle
+- fullCrew

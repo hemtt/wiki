@@ -1,0 +1,25 @@
+name: queryItemsPool
+desc: Returns the number of items of type in the weapon pool (used in campaigns to transfer weapons to the next mission).
+groups:
+- Weapon Pool
+syntax:
+- call: !Unary name
+  ret:
+    type: Number
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _amountOfFAKgiven = queryItemsPool "FirstAidKit";</sqf>
+see_also:
+- :Category:Command
+- 'Group:'
+- Weapon
+- Pool|Command
+- 'Group:'
+- Weapon
+- Pool
+- queryWeaponPool

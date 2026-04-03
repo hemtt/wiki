@@ -1,0 +1,24 @@
+name: unitAimPositionVisual
+desc: Returns the position on the unit other units can aim at in render scope. See also [[aimPos]], [[unitAimPosition]].
+groups:
+- Object Manipulation
+- Render Time Scope
+syntax:
+- call: !Unary unit
+  ret:
+    type: Position3dAGL
+    desc: position
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>unitAimPositionVisual player;</sqf>
+see_also:
+- unitAimPosition
+- aimPos
+- eyePos
+- getPosASL
+- weaponDirection

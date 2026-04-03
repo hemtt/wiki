@@ -1,0 +1,19 @@
+name: tan
+desc: Tangent of x, argument in [[Number#Degrees|Degrees]].
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>_tangent = tan 45;</sqf> \nResult is 1"
+see_also:
+- Math
+- Commands

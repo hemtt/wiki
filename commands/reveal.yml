@@ -1,0 +1,69 @@
+name: reveal
+desc: |-
+  Reveals a target to a [[group]]. If ''toWhom'' is a unit, unit's group is considered. If ''toWhom'' is a vehicle, vehicle commander's group is considered.  The [[knowsAbout|knowledge value]] will be set to the highest level any unit of the revealing side has about the revealed target. If the revealing side has ''no'' knowledge about the revealed target, the value will be set to 1.
+
+  {{Feature | informative | The knowledge level can only be increased by this command, not decreased. Use [[forgetTarget]] first if you need to decrease value.}}
+multiplayer_note: '[[targetKnowledge]] and [[knowsAbout]] information only get updated on the PC where this command was executed.'
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - toWhom
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: toWhom
+    desc: which receives revealing information
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: target
+    desc: which is revealed
+    type: Object
+- call: !Binary
+  - toWhom
+  - - target
+    - accuracy
+  ret:
+    type: Nothing
+  left: !Item
+    name: toWhom
+    desc: which receives revealing information
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: target
+    desc: which is revealed
+    type: Object
+  - !Item
+    name: accuracy
+    desc: knowledge value, clamped to 0..4 range
+    type: Number
+  since:
+    arma2oa: '1.60'
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_soldierOne reveal _soldierTwo; // soldierOne knowsAbout information about soldierTwo is updated</sqf>
+- <sqf>player reveal cursorObject; // player knowsAbout information about object under cursor is updated</sqf>
+- <sqf>_soldierOne reveal [_soldierTwo, 1.5];</sqf>
+see_also:
+- nearTargets
+- knowsAbout
+- forgetTarget
+- ignoreTarget

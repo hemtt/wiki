@@ -1,0 +1,17 @@
+name: profileNameSteam
+desc: Returns name of the current Steam profile. For currently chosen user profile name see [[profileName]]
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mySteamProfileName = profileNameSteam;</sqf>
+see_also:
+- profileName
+- getPlayerUID
+- name

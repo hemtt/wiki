@@ -1,0 +1,36 @@
+name: ropeAttachEnabled
+desc: Returns [[true]] if entity can be attached to a rope end.
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: !Unary entity
+  ret:
+    type: Boolean
+    desc: '[[true]] if allowed'
+  right: !Item
+    name: entity
+    desc: entity to check
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ropeAttachEnabled veh1;</sqf>
+see_also:
+- ropes
+- canSlingLoad
+- enableRopeAttach
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeDestroy
+- ropeLength
+- ropeUnwound
+- ropeAttachedTo
+- ropeCreate
+- ropeDetach
+- ropeCut
+- ropeEndPosition
+- ropeUnwind
+- setSlingLoad
+- slingLoadAssistantShown

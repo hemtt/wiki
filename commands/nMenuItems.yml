@@ -1,0 +1,35 @@
+name: nMenuItems
+desc: Returns the total number of user-added menu items belonging to the given menu. {{Feature|informative|Some Old Editor Command}}
+groups:
+- Game 2 Editor
+syntax:
+- call: !Binary
+  - map
+  - menuName
+  ret:
+    type: Number
+  left: !Item
+    name: map
+    type: Control
+  right: !Item
+    name: menuName
+    desc: '"file" or "view"'
+    type: String
+- call: !Binary
+  - map
+  - index
+  ret:
+    type: Number
+  left: !Item
+    name: map
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- '-'

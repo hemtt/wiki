@@ -1,0 +1,49 @@
+name: addPlayerScores
+desc: "MP server only: Adds player score.\n{{{!}} class=\"wikitable align-center\"\n! Kill Type\n{{!}} infantry\t{{!}}{{!}} soft\t{{!}}{{!}} armor\t{{!}}{{!}} air\t{{!}}{{!}} killed\n{{!}}-\n! Score Points\n{{!}} 1\t\t{{!}}{{!}} 2\t{{!}}{{!}} 3\t\t{{!}}{{!}} 5\t{{!}}{{!}} -1\n{{!}}}"
+groups:
+- Object Manipulation
+- Multiplayer
+syntax:
+- call: !Binary
+  - unit
+  - values
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: values
+    type: !ArraySized
+    - name: killsInfantry
+      type: Number
+      desc: number of infantry units killed
+      since: null
+    - name: killsSoft
+      type: Number
+      desc: number of soft vehicles killed
+      since: null
+    - name: killsArmor
+      type: Number
+      desc: number of armored vehicles killed
+      since: null
+    - name: killsAir
+      type: Number
+      desc: number of air vehicles killed
+      since: null
+    - name: score
+      type: Number
+      desc: total score
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+server_exec: true
+since: {}
+examples:
+- <sqf>player addPlayerScores [0, 1, 0, 0, 1];</sqf>
+see_also:
+- addScore
+- addScoreSide
+- getPlayerScores
+- score
+- scoreSide

@@ -1,0 +1,44 @@
+name: displayCtrl
+desc: Return child control with specified idc.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - display
+  - idc
+  ret:
+    type: Control
+  left: !Item
+    name: display
+    type: Display
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary idc
+  ret:
+    type: Control
+  right: !Item
+    name: idc
+    type: Number
+  since:
+    arma3: '2.6'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_displayControl = _ParentDisplay displayCtrl 101;</sqf>
+- <sqf>_dialogControl = displayCtrl 101;</sqf>
+see_also:
+- findDisplay
+- ctrlCreate
+- ctrlDelete
+- ctrlModel
+- ctrlSetModel
+- ctrlPosition
+- ctrlSetPosition
+- ctrlClassName
+- ctrlModelScale
+- ctrlSetModelScale
+- ctrlModelDirAndUp
+- ctrlSetModelDirAndUp
+- displayParent

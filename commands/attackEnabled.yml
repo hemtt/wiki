@@ -1,0 +1,26 @@
+name: attackEnabled
+desc: Return whether a group's leader can issue attack commands to soldiers under his command.
+groups:
+- Groups
+- Unit Control
+syntax:
+- call: !Unary name
+  ret:
+    type: Boolean
+  right: !Item
+    name: name
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (not attackEnabled _soldier) then { _soldier setCombatMode "Careless" };</sqf>
+see_also:
+- enableAttack

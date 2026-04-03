@@ -1,0 +1,23 @@
+name: unitAimPosition
+desc: Returns the position on the unit other units can aim at. Same as [[aimPos]] only returns position in [[Position#PositionAGL|PositionAGL]] format and has render scope alternative [[unitAimPositionVisual]].
+groups:
+- Object Manipulation
+- Positions
+syntax:
+- call: !Unary unit
+  ret:
+    type: Position3dAGL
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _aimPosAGL = unitAimPosition player;</sqf>
+see_also:
+- unitAimPositionVisual
+- aimPos
+- eyePos
+- getPosASL
+- weaponDirection

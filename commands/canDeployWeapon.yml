@@ -1,0 +1,20 @@
+name: canDeployWeapon
+desc: Returns [[true]] if a unit's weapon can be deployed.
+groups:
+- Weapons
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+    desc: '[[true]] if unit''s weapon can be deployed'
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (canDeployWeapon player) then { hint "I could rest my weapon here..." };</sqf>
+see_also:
+- isWeaponDeployed
+- isWeaponRested

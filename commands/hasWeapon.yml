@@ -1,0 +1,26 @@
+name: hasWeapon
+desc: Checks if a unit has the given weapon in hands or on back/in holster. Weapons inside unit containers such as vest and backpack are not counted.
+groups:
+- Weapons
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unitName
+  - weaponName
+  ret:
+    type: Boolean
+    desc: returns true if the unit has the weapon, false if not.
+  left: !Item
+    name: unitName
+    type: Object
+  right: !Item
+    name: weaponName
+    desc: the name of the weapon to check for.
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if !(player hasWeapon "arifle_MX_ACO_pointer_F") then { player addWeapon "arifle_MX_ACO_pointer_F" };</sqf>
+see_also:
+- weapons

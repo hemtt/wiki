@@ -1,0 +1,22 @@
+name: getUserMFDValue
+desc: Returns array of user text variables used in MFD.
+groups:
+- Interaction
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: vehicle
+    desc: a vehicle with MFD
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getUserMFDValue vehicle player; // user0 in MFD will return 1</sqf>
+see_also:
+- setUserMFDValue
+- setUserMFDText
+- getUserMFDText

@@ -1,0 +1,23 @@
+name: publicVariableServer
+desc: |-
+  Send the variable value to the server - same limitations regarding variable type as [[publicVariable#Description|publicVariable]].
+  {{Feature|arma3|In {{arma3}} it is possible to broadcast the [[nil]] value.}}
+groups:
+- Multiplayer
+- Variables
+syntax:
+- call: !Unary varName
+  ret:
+    type: Nothing
+  right: !Item
+    name: varName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>publicVariableServer "CTFscoreOne";</sqf>
+see_also:
+- publicVariable
+- publicVariableClient
+- addPublicVariableEventHandler

@@ -1,0 +1,19 @@
+name: getElevationOffset
+desc: |-
+  Returns the map elevation offset from [map]/config.cpp.
+
+  Returns 0 if there is no elevationOffset defined in the config of the current world.
+groups:
+- Map
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: elevation offset of the map
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_offset = getElevationOffset;</sqf>
+see_also:
+- getTerrainHeightASL

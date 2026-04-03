@@ -1,0 +1,38 @@
+name: getArtilleryETA
+desc: Returns ETA to the target in seconds for given artillery unit based on target position and used magazine, -1 if target can't be hit.
+groups:
+- Artillery
+syntax:
+- call: !Binary
+  - unit
+  - - targetPosition
+    - magazineType
+  ret:
+    type: Number
+  left: !Item
+    name: unit
+    desc: artillery unit
+    type: Object
+  right: !Array
+  - !Item
+    name: targetPosition
+    desc: position of the target
+    type: Position3dAGLS
+  - !Item
+    name: magazineType
+    desc: type of magazine used
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mortar getArtilleryETA [getPos _target, getArtilleryAmmo [_mortar] select 0];</sqf>
+- <sqf>_mortar getArtilleryETA [position _target, currentMagazine _mortar];</sqf>
+see_also:
+- getArtilleryAmmo
+- commandArtilleryFire
+- doArtilleryFire
+- enableEngineArtillery
+- getArtilleryComputerSettings
+- shownArtilleryComputer
+- inRangeOfArtillery

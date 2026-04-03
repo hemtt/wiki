@@ -1,0 +1,25 @@
+name: jsonToGameValue
+desc: Try to convert the provided JSON to game value.
+groups:
+- Argo
+syntax:
+- call: !Unary json
+  ret:
+    type: Anything
+  right: !Item
+    name: json
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _num = jsonToGameValue "3.14";
+  _arrOfKeyValues = jsonToGameValue "{ 'key0': false, 'key1': 'value', 'key2', 2 }";
+  </sqf>
+see_also:
+- gameValueToJson
+- toString
+- str
+- parseSimpleArray

@@ -1,0 +1,24 @@
+name: addHeadgear
+desc: Creates a headgear item and tries to link it to headgear slot. If slot is occupied with another item, the item in the slot will be replaced.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player addHeadgear "H_HelmetB";</sqf>
+see_also:
+- headgear
+- removeHeadgear

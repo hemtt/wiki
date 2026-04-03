@@ -1,0 +1,21 @@
+name: default
+desc: Defines a [[Switch Type]] default case - does '''not''' need a colon to define its block. See [[switch]] for more information.
+groups:
+- Program Flow
+syntax:
+- call: !Unary a
+  ret:
+    type: Nothing
+  right: !Item
+    name: a
+    type: Code
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nswitch (_condition) do\n{\n\tcase 1: { hint \"1\" };\n\tcase 2: { hint \"2\" };\n\tdefault { hint \"default\" }; // no colon after default\n};\n</sqf>"
+see_also:
+- Control
+- Structures
+- switch
+- case

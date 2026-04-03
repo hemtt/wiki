@@ -1,0 +1,24 @@
+name: saveIdentity
+desc: Saves units's identity to [[Objects.sav]] file in campaign directory as entry name.
+groups:
+- Unit Identity
+syntax:
+- call: !Binary
+  - unit
+  - name
+  ret:
+    type: Boolean
+    desc: '[[true]] if successful, otherwise [[false]]'
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_successful = player saveIdentity "playerid";</sqf>
+see_also:
+- loadIdentity

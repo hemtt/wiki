@@ -1,0 +1,19 @@
+name: deleteLocation
+desc: Deletes scripted location.
+groups:
+- Locations
+syntax:
+- call: !Unary location
+  ret:
+    type: Nothing
+  right: !Item
+    name: location
+    type: Location
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>deleteLocation myLocation;</sqf>
+see_also:
+- location
+- text

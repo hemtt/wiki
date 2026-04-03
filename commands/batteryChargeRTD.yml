@@ -1,0 +1,23 @@
+name: batteryChargeRTD
+desc: |-
+  Returns the current charge of a helicopter's batteries.
+  * 0: empty
+  * 1: fully charged
+groups:
+- RTD
+syntax:
+- call: !Unary helicopterRTD
+  ret:
+    type: Number
+  right: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_charge = batteryChargeRTD vehicle player;</sqf>
+see_also:
+- setBatteryChargeRTD
+- setBatteryRTD

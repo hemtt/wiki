@@ -1,0 +1,47 @@
+name: cutFadeOut
+desc: |-
+  Terminates the effect in the given layer by fading it out according to the given duration. If named layer is used and it doesn't exist, it will be allocated. For title layer see [[titleFadeOut]].
+  {{Feature|arma3|For greater efficiency and ease of moddability, it is recommended to use named layers.}}
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - layer
+  - duration
+  ret:
+    type: Nothing
+  left: !Item
+    name: layer
+    type: Number
+  right: !Item
+    name: duration
+    type: Number
+- call: !Binary
+  - layerName
+  - duration
+  ret:
+    type: Number
+    desc: number of the corresponding layer
+  left: !Item
+    name: layerName
+    desc: effect layer name. Layer names are CaSe SeNsItIvE
+    type: String
+  right: !Item
+    name: duration
+    desc: fade out time
+    type: Number
+  since:
+    arma3: '1.58'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>0 cutFadeOut 2;</sqf>
+- <sqf>private _layer = "layer1" cutFadeOut 2;</sqf>
+see_also:
+- allCutLayers
+- cutText
+- cutRsc
+- cutObj
+- allActiveTitleEffects
+- activeTitleEffectParams

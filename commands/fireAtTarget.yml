@@ -1,0 +1,46 @@
+name: fireAtTarget
+desc: Remotely forces a unit to fire the given weapon. See also [[BIS_fnc_fire]].
+groups:
+- Unit Control
+- Weapons
+syntax:
+- call: !Binary
+  - sourceVehicle
+  - - targetVehicle
+    - weaponMuzzleName
+  ret:
+    type: Boolean
+    desc: '[[true]] if fired, [[false]] if not'
+  left: !Item
+    name: sourceVehicle
+    desc: source vehicle to fire from
+    type: Object
+  right: !Array
+  - !Item
+    name: targetVehicle
+    desc: target vehicle to fire at
+    type: Object
+  - !Item
+    name: weaponMuzzleName
+    desc: (Optional) weapon muzzle classname, optional parameter
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_handle = this fireAtTarget [groundtarget1, "HellfireLauncher"];</sqf>
+- <sqf>_handle = Igla_AA_pod_TK_EP1 fireAtTarget [_helicopter, currentWeapon Igla_AA_pod_TK_EP1];</sqf>
+- <sqf>_handle = Igla_AA_pod_TK_EP1 fireAtTarget [helicopter];</sqf>
+see_also:
+- fire
+- doFire
+- commandFire
+- canFire
+- forceWeaponFire
+- commandArtilleryFire
+- commandSuppressiveFire
+- doArtilleryFire
+- doSuppressiveFire
+- isManualFire
+- aimedAtTarget
+- BIS_fnc_fire

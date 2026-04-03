@@ -1,0 +1,26 @@
+name: setOxygenRemaining
+desc: Sets oxygen remaining. It has no effect when soldier is not diving.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - unit
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: value
+    type: !NumberRange
+    - 0
+    - 1
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (!isAbleToBreathe player) then\n{\n\tplayer setOxygenRemaining 0; // drowns player\n};\n</sqf>"
+see_also:
+- isAbleToBreathe
+- getOxygenRemaining

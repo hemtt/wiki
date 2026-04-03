@@ -1,0 +1,27 @@
+name: debugFSM
+desc: |-
+  Dump (something about FSM) to debugging output. This command is (assumed to be) non-functional in the retail version.
+  {{Feature|warning|Non functional in retail}}
+groups:
+- Broken Commands
+syntax:
+- call: !Binary
+  - FSMhandle
+  - 'true'
+  ret:
+    type: Nothing
+  left: !Item
+    name: FSMhandle
+    type: Number
+  right: !Item
+    name: 'true'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- FSM
+- FSM
+- Editor

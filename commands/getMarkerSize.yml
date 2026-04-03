@@ -1,0 +1,39 @@
+name: getMarkerSize
+desc: Returns the size of the given marker. A getter for [[setMarkerSize]] and an alias of [[markerSize]].
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: !ArraySized
+    - name: a_axis
+      type: Number
+      desc: 1/2 width of marker
+      since: null
+    - name: b_axis
+      type: Number
+      desc: 1/2 height of marker
+      since: null
+  right: !Item
+    name: markerName
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  "MarkerOne" setMarkerSize [100,200];
+  _size = getMarkerSize "MarkerOne"; //returns [100,200]
+  </sqf>
+see_also:
+- setMarkerSize
+- setMarkerBrush
+- setMarkerColor
+- setMarkerDir
+- setMarkerPos
+- setMarkerShape
+- createMarker
+- setMarkerText
+- setMarkerType
+- setMarkerAlpha

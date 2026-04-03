@@ -1,0 +1,18 @@
+name: ctrlTooltip
+desc: Returns the tooltip property of a button control. Getter for [[ctrlSetTooltip]].
+groups:
+- GUI Control
+syntax:
+- call: !Unary control
+  ret:
+    type: String
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ctrlTooltip _control;</sqf>
+see_also:
+- ctrlSetTooltip

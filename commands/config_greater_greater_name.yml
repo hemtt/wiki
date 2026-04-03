@@ -1,0 +1,36 @@
+name: '>>'
+desc: Returns [[Config | config]] entry with given name (alias of [[a / b]], slightly faster but with [[Operators#Order of Precedence|lower precedence]])
+groups:
+- Config
+syntax:
+- call: !Binary
+  - config
+  - name
+  ret:
+    type: Config
+    desc: config entry
+  left: !Item
+    name: config
+    type: Config
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>configFile >> "CfgVehicles";</sqf>
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getText
+- isArray
+- isClass
+- isNumber
+- isText
+- select
+- configClasses

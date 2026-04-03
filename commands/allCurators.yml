@@ -1,0 +1,23 @@
+name: allCurators
+desc: Returns list of all curator logic units, not the units assigned to the logic.
+groups:
+- Curator
+- Object Detection
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_allCuratorLogics = allCurators;</sqf>
+see_also:
+- allGroups
+- allDead
+- playableUnits
+- switchableUnits
+- vehicles
+- allUnitsUAV
+- allSites

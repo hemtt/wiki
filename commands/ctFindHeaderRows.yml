@@ -1,0 +1,42 @@
+name: ctFindHeaderRows
+desc: Gets array of indices of rows under this header.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Binary
+  - ctrl
+  - index
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: index
+    desc: header's index
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>private _indices = _control ctFindHeaderRows 0;</sqf>
+see_also:
+- ctAddRow
+- ctAddHeader
+- ctClear
+- ctCurSel
+- ctSetCurSel
+- ctRowControls
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctSetData
+- ctData
+- ctFindRowHeader
+- ctRemoveRows
+- ctRemoveHeaders
+- ctSetRowTemplate
+- ctSetHeaderTemplate

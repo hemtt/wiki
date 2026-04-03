@@ -1,0 +1,81 @@
+name: setUnitRank
+desc: |-
+  Sets rank of given unit.
+
+  Possible rank values, and the associated [[rating]] that is '''set''' (not added, the value replaces previous rating) with it:
+
+  {{{!}} class="wikitable" style="text-align: center"
+  ! colspan="2" {{!}} Ranks
+  ! PRIVATE
+  ! CORPORAL
+  ! SERGEANT
+  ! LIEUTENANT
+  ! CAPTAIN
+  ! MAJOR
+  ! COLONEL
+  {{!}}-
+  ! rowspan="3" {{!}} Ratings
+  !
+  {{Name|arma1|short}}<br>
+  {{Name|arma2|short}}<br>
+  {{Name|arma2oa|short}}<br>
+  {{Name|tkoh|short}}
+  {{!}} 0
+  {{!}} 500
+  {{!}} 1500
+  {{!}} 2500
+  {{!}} 3500
+  {{!}} 5000
+  {{!}} 7500
+  {{!}}-
+  ! {{Name|arma3|short}} (ca 2015)
+  {{!}} 0
+  {{!}} 50
+  {{!}} 150
+  {{!}} 250
+  {{!}} 350
+  {{!}} 500
+  {{!}} 750
+  {{!}}-
+  ! {{Name|arma3|short}}
+  {{!}} 0
+  {{!}} 0
+  {{!}} 0
+  {{!}} 0
+  {{!}} 0
+  {{!}} 0
+  {{!}} 0
+  {{!}}}
+
+  {{Feature|arma3|Before {{arma3}} v1.68 and in previous titles, this command was {{Icon|globalArgument|32}} {{Icon|localEffect|32}}.}}
+groups:
+- Unit Identity
+syntax:
+- call: !Binary
+  - unitName
+  - rank
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: Object
+  right: !Item
+    name: rank
+    desc: see above. If a wrong string is provided, the command errors and reverts to using "PRIVATE"
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player setUnitRank "COLONEL";</sqf>
+see_also:
+- 'ArmA:'
+- Armed
+- 'Assault:'
+- Rating
+- Values|Rating
+- Values
+- rating
+- addRating
+- rank
+- setRank

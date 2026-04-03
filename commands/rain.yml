@@ -1,0 +1,19 @@
+name: rain
+desc: Returns the current value of rain density.
+multiplayer_note: Pre-{{arma3}}, each client and the server could have different rain values. Since {{arma3}} the value is synced over network.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: !NumberRange
+    - 0
+    - 1
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_rainLevel = rain;</sqf>
+see_also:
+- setRain
+- fog

@@ -1,0 +1,27 @@
+name: teamName
+desc: Return a name of given [[Team|team]].
+groups:
+- Teams
+syntax:
+- call: !Unary team
+  ret:
+    type: String
+  right: !Item
+    name: team
+    type: TeamMember
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_name = teamName _team;</sqf>
+see_also:
+- addTeamMember
+- createTeam
+- deleteTeam
+- forEachMemberTeam
+- removeTeamMember
+- teamMember
+- teams
+- teamType
+- forEachMember
+- forEachMemberAgent

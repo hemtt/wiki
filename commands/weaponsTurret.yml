@@ -1,0 +1,35 @@
+name: weaponsTurret
+desc: Returns all weapons of a given turret. Use turret path [-1] for driver's turret.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - turretPath
+  ret:
+    type: !ArrayUnsized
+      value: String
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: turretPath
+    type: TurretPath
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_weapons = vehicle player weaponsTurret [0,0];</sqf>
+- <sqf>_weapons = _tank weaponsTurret [0];</sqf>
+- <sqf>_driverWeapon = _ka50pilot weaponsTurret [-1];</sqf>
+- <sqf>_weaponsForAnyTurrentPosition = (vehicle player) weaponsTurret ((assignedVehicleRole player) select 1);</sqf>
+see_also:
+- addMagazineTurret
+- magazinesTurret
+- removeMagazinesTurret
+- removeMagazineTurret
+- weapons
+- assignedVehicleRole
+- addWeaponTurret
+- removeWeaponTurret
+- turretLocal

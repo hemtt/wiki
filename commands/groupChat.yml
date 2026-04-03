@@ -1,0 +1,45 @@
+name: groupChat
+desc: |-
+  Types text to the group radio channel. The text will be visible only on the PC where command was executed. If you need the message to show on all computers, you have to execute it globally (see [[remoteExec]]). Use [[clearRadio]] to clear chat history
+
+  {{Feature|important|The unit must have an [[assignItem|assigned]] radio item (such as '''''"ItemRadio"''''') to see or transmit the messages. A radio item must have the property <syntaxhighlight lang="cpp" inline>simulation = "ItemRadio";</syntaxhighlight> in its [[CfgWeapons_Config_Reference#simulation.3D.22Weapon.22|CfgWeapons config]].}}
+groups:
+- Radio and Chat
+syntax:
+- call: !Binary
+  - unit
+  - chatText
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: unit transmitting message
+    type: Object
+  right: !Item
+    name: chatText
+    desc: message to transmit
+    type: String
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_soldierOne groupChat "Show this text";</sqf>
+- |-
+  [[File:xChat.jpg|right]]
+  <sqf>
+  driver vehicle player sideChat "sideChat";
+  driver vehicle player globalChat "globalChat";
+  driver vehicle player groupChat "groupChat";
+  vehicle player vehicleChat "vehicleChat";
+  driver vehicle player commandChat "commandChat";
+  driver vehicle player customChat [1, "customChat"];
+  systemChat "systemChat";
+  </sqf>
+see_also:
+- globalChat
+- sideChat
+- vehicleChat
+- commandChat
+- customChat
+- systemChat
+- groupRadio

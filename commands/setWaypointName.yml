@@ -1,0 +1,39 @@
+name: setWaypointName
+desc: Changes the waypoint name.
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - name
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>[_grp,2] setWaypointName "myName";</sqf>
+see_also:
+- addWaypoint
+- waypointName
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointDescription
+- setWaypointFormation
+- setWaypointHousePosition
+- setWaypointLoiterRadius
+- setWaypointLoiterType
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible

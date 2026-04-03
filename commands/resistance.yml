@@ -1,0 +1,23 @@
+name: resistance
+desc: Pre-defined variable for the resistance [[Side|side]].
+alias:
+- '[[independent]]'
+groups:
+- Sides
+syntax:
+- call: Nular
+  ret:
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (side _unit == resistance) then\n{\n\thint \"This is a resistance unit!\";\n};\n</sqf>"
+- <sqf>hint format ["%1", resistance]; // Returns "GUER"</sqf>
+see_also:
+- side
+- west
+- east
+- civilian
+- sideEmpty
+- sideAmbientLife

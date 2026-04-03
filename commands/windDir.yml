@@ -1,0 +1,19 @@
+name: windDir
+desc: Returns the current wind azimuth.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: azimuth
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (windDir < 45 || windDir > 315) then {\n\thint \"I feel a southern wind\"; // wind going from South to North\n};\n</sqf>"
+see_also:
+- wind
+- setWindDir
+- setWindStr
+- setWindForce

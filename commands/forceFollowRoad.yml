@@ -1,0 +1,28 @@
+name: forceFollowRoad
+desc: Forces the vehicle to stay on road.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - vehicle
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    desc: vehicle
+    type: Object
+  right: !Item
+    name: state
+    desc: 'true: Force on road, false: default behaviour'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>car forceFollowRoad true;</sqf>
+see_also:
+- setConvoySeparation
+- limitSpeed
+- setDriveOnPath
+- useAISteeringComponent

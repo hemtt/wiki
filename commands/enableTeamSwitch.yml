@@ -1,0 +1,23 @@
+name: enableTeamSwitch
+desc: Enable / disable [[Team Switch]]. The default setting is enabled.
+groups:
+- Team Switch
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>enableTeamSwitch true;</sqf>
+see_also:
+- Team_Switch
+- onBriefingTeamSwitch
+- onTeamSwitch
+- teamSwitch
+- teamSwitchEnabled
+- selectPlayer

@@ -1,0 +1,29 @@
+name: brakesDisabled
+desc: Returns the status of autobrake (see [[disableBrakes]]).
+groups:
+- PhysX
+syntax:
+- call: !Unary transport
+  ret:
+    type: Boolean
+    desc: '[[true]] if autobrake is disabled'
+  right: !Item
+    name: transport
+    desc: PhysX car or tank
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif !(brakesDisabled _vehicle) then\n{\n\t_vehicle disableBrakes true;\n};\n</sqf>"
+see_also:
+- disableBrakes
+- awake
+- isAwake
+- addTorque
+- addForce
+- vectorModelToWorld
+- vectorModelToWorldVisual
+- selectionPosition
+- setVelocityTransformation
+- setVelocityModelSpace

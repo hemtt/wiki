@@ -1,0 +1,24 @@
+name: focusedCtrl
+desc: Returns display's focused control.
+groups:
+- GUI Control
+syntax:
+- call: !Unary display
+  ret:
+    type: Control
+    desc: control which has focus
+  right: !Item
+    name: display
+    desc: parent display
+    type: Display
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _focusedCtrl = focusedCtrl findDisplay 12;</sqf>
+- <sqf>private _isFocused = focusedCtrl _display == _ctrl;</sqf>
+- <sqf>private _isFocused = focusedCtrl (ctrlParent _ctrl) == _ctrl;</sqf>
+see_also:
+- ctrlSetFocus
+- displayParent
+- ctrlParent

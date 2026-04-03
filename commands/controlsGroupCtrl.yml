@@ -1,0 +1,26 @@
+name: controlsGroupCtrl
+desc: Returns a child control with specified idc from a controls group
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - ctrlgrp
+  - idc
+  ret:
+    type: Control
+  left: !Item
+    name: ctrlgrp
+    type: Control
+  right: !Item
+    name: idc
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control = _controlsGroup controlsGroupCtrl 101;</sqf>
+see_also:
+- allDisplays
+- allControls
+- ctrlCreate
+- ctrlParentControlsGroup

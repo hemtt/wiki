@@ -1,0 +1,30 @@
+name: ammo
+desc: |-
+  Check how many rounds are left in the currently loaded magazine in the given muzzle.
+  {{Feature|informative|In older titles and before {{arma3}} v1.56, the command did not return ammo for units in vehicles.}}
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - muzzle
+  ret:
+    type: Number
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: muzzle
+    desc: weapon's muzzle - see the [[:Category:Weapons|Weapons]] topic for reference about possible values
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_count = player ammo "M16"; // returns 30 in case of a full magazine</sqf>
+- <sqf>_count = player ammo "M203Muzzle";</sqf>
+- <sqf>_count = player ammo primaryWeapon player;</sqf>
+see_also:
+- setAmmo
+- someAmmo
+- magazines

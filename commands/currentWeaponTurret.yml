@@ -1,0 +1,27 @@
+name: currentWeaponTurret
+desc: Returns the name of the currently selected weapon on specified turret. Use turret path [-1] for driver's turret.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - turretPath
+  ret:
+    type: String
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: turretPath
+    type: TurretPath
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_weapon = MBT_Kuma currentWeaponTurret [0];</sqf>
+see_also:
+- currentMagazineDetailTurret
+- currentMagazineTurret
+- addWeaponTurret
+- removeWeaponTurret
+- turretLocal

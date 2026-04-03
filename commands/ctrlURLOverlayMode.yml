@@ -1,0 +1,20 @@
+name: ctrlURLOverlayMode
+desc: Returns the URL overlay mode 0, 1, 2 (see [[ctrlSetURLOverlayMode]]) or -1 if something went wrong.
+groups:
+- GUI Control
+syntax:
+- call: !Unary control
+  ret:
+    type: Number
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mode = ctrlURLOverlayMode _control; // e.g. 0</sqf>
+see_also:
+- ctrlSetURLOverlayMode
+- ctrlURL
+- isSteamOverlayEnabled

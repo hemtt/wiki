@@ -1,0 +1,45 @@
+name: magazines
+desc: Returns array of type names of all vehicle's magazines. When applied to a unit, the command behaves differently and will omit magazines already loaded into unit's weapons. Use [[currentMagazine]] to get this information for a currently loaded magazine.
+groups:
+- Unit Inventory
+- Vehicle Inventory
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: vehicle
+    desc: unit or vehicle
+    type: Object
+- call: !Unary
+  - vehicle
+  - includeEmpty
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Array
+  - !Item
+    name: vehicle
+    desc: unit or vehicle
+    type: Object
+  - !Item
+    name: includeEmpty
+    desc: (Optional, default [[false]]) [[true]] to include empty magazines
+    type: Boolean
+  since:
+    arma3: '2.0'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mags = magazines player;</sqf>
+see_also:
+- currentMagazine
+- magazinesTurret
+- magazinesDetail
+- magazinesAmmo
+- magazinesAmmoFull
+- ammo
+- weapons
+- backpacks

@@ -1,0 +1,24 @@
+name: disableNVGEquipment
+desc: Enables or disables transport NV (Night Vision). To disable TI (Thermal Imaging) use [[disableTIEquipment]].
+groups:
+- Weapons
+syntax:
+- call: !Binary
+  - vehicle
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: state
+    type: Boolean
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>myTank disableNVGEquipment true;</sqf>
+see_also:
+- equipmentDisabled
+- disableTIEquipment

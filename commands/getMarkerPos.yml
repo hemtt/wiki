@@ -1,0 +1,39 @@
+name: getMarkerPos
+desc: Returns marker position.
+alias:
+- '[[markerPos]]'
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: Position3dAGL
+    desc: format [x,y,0]
+  right: !Item
+    name: markerName
+    type: String
+- call: !Unary
+  - markerName
+  - preserveElevation
+  ret:
+    type: Position3dAGL
+    desc: if ''preserveElevation'' is [[true]] or [x,y,0] if ''preserveElevation'' is [[false]]
+  right: !Array
+  - !Item
+    name: markerName
+    type: String
+  - !Item
+    name: preserveElevation
+    desc: (Optional, default [[false]])
+    type: Boolean
+  since:
+    arma3: '1.94'
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_mPos1 = getMarkerPos "markerOne";</sqf>
+- <sqf>_mPos2 = getMarkerPos ["markerTwo", true];</sqf>
+see_also:
+- setMarkerPos
+- setMarkerPosLocal

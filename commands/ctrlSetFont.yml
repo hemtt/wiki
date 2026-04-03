@@ -1,0 +1,24 @@
+name: ctrlSetFont
+desc: Sets the font for given control (see [[Fonts#Available_Fonts|available fonts]])
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - fontName
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: fontName
+    desc: one of the fonts defined in CfgFontFamilies
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlSetFont "TahomaB";</sqf>
+see_also:
+- Fonts#Available_Fonts|Fonts

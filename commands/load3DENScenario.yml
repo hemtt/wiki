@@ -1,0 +1,27 @@
+name: load3DENScenario
+desc: Load the provided scenario or an empty scenario in the provided world.
+groups:
+- Eden Editor
+syntax:
+- call: !Unary scenarioOrWorld
+  ret:
+    type: Boolean
+    desc: '[[true]] on success, [[false]] otherwise'
+  right: !Item
+    name: scenarioOrWorld
+    desc: scenario name or world name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>load3DENScenario "MyMission.VR";</sqf>
+- <sqf>load3DENScenario "Stratis";</sqf>
+- |-
+  <sqf>
+  //For a scenario located at ...\Arma 3 - Other Profiles\<PROFILENAME>\missions\subfolder\myMission.VR
+  //full path needs to be provided without leading \
+  load3DENScenario "missions\subfolder\myMission.VR";
+  </sqf>
+see_also:
+- is3DENPreview

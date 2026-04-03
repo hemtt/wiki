@@ -1,0 +1,40 @@
+name: nearestBuilding
+desc: Finds the nearest building to a given object or position. A "building" is defined as an object that is of class "House" and contains a path LOD.
+groups:
+- Object Detection
+syntax:
+- call: !Unary position
+  ret:
+    type: Object
+  right: !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3dAGL
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_nBuilding = nearestBuilding player;</sqf>
+- <sqf>_nBuilding = nearestBuilding position player;</sqf>
+see_also:
+- buildingPos
+- nearestObject
+- nearestObjects
+- nearObjects
+- nearestLocation
+- nearEntities
+- nearTargets
+- nearSupplies
+- nearestLocationWithDubbing
+- nearObjectsReady
+- nearRoads
+- nearestMines

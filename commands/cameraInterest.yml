@@ -1,0 +1,18 @@
+name: cameraInterest
+desc: Return camera interest for given entity, as set by [[setCameraInterest]], or as autodetected.
+groups:
+- Camera Control
+syntax:
+- call: !Unary entity
+  ret:
+    type: Number
+  right: !Item
+    name: entity
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>camInterest = cameraInterest myUnit;</sqf>
+see_also:
+- setCameraInterest

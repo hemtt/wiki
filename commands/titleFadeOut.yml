@@ -1,0 +1,27 @@
+name: titleFadeOut
+desc: Terminate the title effect and set duration of the fade out phase to the given time. Same as [[cutFadeOut]] but for the title layer.
+groups:
+- GUI Control
+syntax:
+- call: !Unary duration
+  ret:
+    type: Nothing
+  right: !Item
+    name: duration
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  titleText ["Hi", "plain"];
+  titleFadeOut 2;
+  </sqf>
+see_also:
+- titleText
+- titleRsc
+- titleObj
+- cutFadeOut
+- allActiveTitleEffects
+- activeTitleEffectParams

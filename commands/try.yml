@@ -1,0 +1,44 @@
+name: try
+desc: |-
+  Defines a try-catch structure. This sets up an [[Exception handling|exception handling]] block. Any thrown exception in a try block is caught in a [[catch]] block. The structured exception block has the following form:
+  <sqf>
+  try
+  { /* block that can throw exception */ }
+  catch
+  { /* block that processes the exception. Exception is described in the _exception variable */ };
+  </sqf>
+groups:
+- Program Flow
+syntax:
+- call: !Unary code
+  ret:
+    type: ExceptionHandle
+  right: !Item
+    name: code
+    type: Code
+- call: !Binary
+  - args
+  - code
+  ret:
+    type: ExceptionHandle
+  left: !Item
+    name: args
+    desc: passed arguments, will be put in ''_this'' variable inside the "code"
+    type: Anything
+  right: !Item
+    name: code
+    type: Code
+  since:
+    arma3: '1.54'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>try { throw "invalid argument" } catch { hint str _exception };</sqf>
+- <sqf>123 try { if (_this != 123) throw "invalid argument" } catch { hint str _exception };</sqf>
+- "<sqf>\ntry {\n\tif (a > b) throw \"Error: some error\"; // OK\n\t// the command argument is static\n} catch {\n\thint str _exception;\n};\n\ntry {\n\t_someFunc = {\n\t\t// ...\n\t};\n\tif (a > b) throw (call _someFunc); // NOT OK\n\t// the command argument is dynamic\n\t// _someFunc is called first to get the value regardless of (a > b) outcome\n} catch {\n\thint str _exception;\n};\n\ntry {\n\t_someFunc = {\n\t\t// ...\n\t};\n\tif (a > b) then {throw (call _someFunc)}; // OK\n\t// the command argument is dynamic\n\t// _someFunc is only called when (a > b) is true\n} catch {\n\thint str _exception;\n};\n</sqf>"
+see_also:
+- Exception
+- handling
+- throw
+- catch

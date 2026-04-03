@@ -1,0 +1,26 @@
+name: ctrlSetTooltipColorBox
+desc: Sets tooltip border color of given control.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: color
+    desc: color in format
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlSetTooltipColorBox [1, 0, 0, 1];</sqf>
+see_also:
+- ctrlSetTooltip
+- ctrlSetTooltipColorShade
+- ctrlSetTooltipColorText

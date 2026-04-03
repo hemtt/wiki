@@ -1,0 +1,18 @@
+name: showChat
+desc: Shows/hides the whole chat window.
+groups:
+- Radio and Chat
+syntax:
+- call: !Unary bool
+  ret:
+    type: Nothing
+  right: !Item
+    name: bool
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>showChat false;</sqf>
+see_also:
+- shownChat

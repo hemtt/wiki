@@ -1,0 +1,25 @@
+name: setWaypointVisible
+desc: Sets the visibility of the given waypoint in 3D HUD view (for map visibility see [[showWaypoint]]).
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - visible
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: visible
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Global
+since: {}
+examples:
+- <sqf>[grp, 2] setWaypointVisible false;</sqf>
+- <sqf>[group player, currentWaypoint group player] setWaypointVisible false;</sqf>
+see_also:
+- waypointVisible
+- showWaypoint

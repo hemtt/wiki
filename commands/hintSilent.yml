@@ -1,0 +1,35 @@
+name: hintSilent
+desc: Same as [[hint]], but without a sound.
+groups:
+- Interaction
+- Structured Text
+- Strings
+syntax:
+- call: !Unary text
+  ret:
+    type: Nothing
+  right: !Item
+    name: text
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: String
+        desc: null
+        since: null
+      - type: StructuredText
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>hintSilent format ["Hello, %1!", name player];</sqf>
+- |-
+  <sqf>
+  hint "Hello there!";
+  sleep 5;
+  hintSilent ""; // removes message
+  </sqf>
+see_also:
+- hint
+- hintC
+- hintCadet

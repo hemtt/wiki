@@ -1,0 +1,51 @@
+name: createDialog
+desc: |-
+  Creates a dialog which is defined either in the mission's [[Description.ext|description.ext]], in the campaign's description.ext or in the global [[Resource.cpp/bin|resource.cpp]]. The given name has to be the class name used in one of these files. If another dialog is already opened, the desired dialog is created as a child dialog of the one already opened.
+
+  {{Feature|informative|By default, displays created with [[createDisplay]] are rendered on top of dialogs created with [[createDialog]]. If ''forceOnTop'' is set to [[true]], the dialog will be rendered on top of displays.}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary dialogName
+  ret:
+    type: Boolean
+    desc: '[[true]] when the dialog was created successfully'
+  right: !Item
+    name: dialogName
+    desc: class name used in the description.ext, resource.cpp or config.cpp
+    type: String
+- call: !Unary
+  - dialogName
+  - forceOnTop
+  ret:
+    type: Display
+    desc: created dialog
+  right: !Array
+  - !Item
+    name: dialogName
+    desc: class name used in the description.ext, resource.cpp or config.cpp
+    type: String
+  - !Item
+    name: forceOnTop
+    desc: (Optional, default [[false]]) if [[true]], dialog will be rendered on top of displays
+    type: Boolean
+  since:
+    arma3: '2.8'
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- |-
+  <sqf>
+  private _ok = createDialog "RscDisplayGame";
+  if (!_ok) then { hint "Dialog could not be opened!" };
+  </sqf>
+see_also:
+- displayCtrl
+- createDisplay
+- closeDialog
+- dialog
+- displayNull
+- controlNull
+- ctrlCreate
+- displayParent

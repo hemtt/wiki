@@ -1,0 +1,29 @@
+name: radioChannelSetLabel
+desc: Set the custom radio channel's label.
+groups:
+- Radio and Chat
+- Custom Radio and Chat
+syntax:
+- call: !Binary
+  - customChannelID
+  - label
+  ret:
+    type: Nothing
+  left: !Item
+    name: customChannelID
+    desc: '[[Channel IDs|custom channel ID]] returned by [[radioChannelCreate]] command'
+    type: Number
+  right: !Item
+    name: label
+    desc: label
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>5 radioChannelSetLabel "Q-dance Radio";</sqf>
+see_also:
+- radioChannelAdd
+- radioChannelCreate
+- radioChannelRemove
+- radioChannelSetCallSign

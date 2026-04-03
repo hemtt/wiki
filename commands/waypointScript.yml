@@ -1,0 +1,19 @@
+name: waypointScript
+desc: Gets the waypoint script.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: String
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointScript [groupOne,1];</sqf>
+see_also:
+- waypoints
+- setWaypointScript

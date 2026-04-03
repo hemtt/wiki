@@ -1,0 +1,64 @@
+name: addBackpackCargoGlobal
+desc: |-
+  Add backpack(s) to the cargo space of vehicle.
+  {{Feature|informative|
+  Classname list of available backpacks:
+  * [[Arma 2: Operation Arrowhead: Backpacks|{{Name|arma2oa|short}} backpacks]]
+  * [[Arma 3: CfgVehicles Equipment|{{arma3}} backpacks]] - objects starting with "B_", starts near {{Link|Arma 3: CfgVehicles Equipment#Bag Base|"B_AssaultPack_khk"}}
+  }}
+groups:
+- Containers
+syntax:
+- call: !Binary
+  - vehicle
+  - - packClassName
+    - count
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    desc: object to add the Backpack to
+    type: Object
+  right: !Array
+  - !Item
+    name: packClassName
+    desc: see the topic [[:Category:Weapons]] for reference about possible values.
+    type: String
+  - !Item
+    name: count
+    desc: number of backpacks to add; {{GVI|arma3|2.14|size= 0.75}} a negative value will remove backpacks.
+    type: Number
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>this addBackpackCargoGlobal ["TK_RPG_Backpack_EP1", 2];</sqf>
+- <sqf>_apc addBackpackCargoGlobal ["US_Patrol_Pack_EP1", 4];</sqf>
+see_also:
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack
+- addMagazineCargo
+- clearMagazineCargo
+- clearWeaponCargo
+- addMagazineCargoGlobal
+- addWeaponCargo
+- addWeaponCargoGlobal
+- addItemCargo
+- addItemCargoGlobal

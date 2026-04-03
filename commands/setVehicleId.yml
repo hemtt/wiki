@@ -1,0 +1,27 @@
+name: setVehicleId
+desc: |-
+  Sets ID to vehicle. By this ID vehicle is referenced by triggers and waypoints.
+
+  {{Feature|warning|This command is '''not''' to be used.}}
+groups:
+- Object Manipulation
+- Broken Commands
+syntax:
+- call: !Binary
+  - vehicleName
+  - id
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicleName
+    type: Object
+  right: !Item
+    name: id
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player setVehicleId 1;</sqf>
+see_also:
+- setVehicleVarName

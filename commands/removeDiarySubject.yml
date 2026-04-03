@@ -1,0 +1,27 @@
+name: removeDiarySubject
+desc: Removes a page and all its subjects from the [[Diary]].
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - player
+  - diaryPage
+  ret:
+    type: Nothing
+  left: !Item
+    name: player
+    type: Object
+  right: !Item
+    name: diaryPage
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>player removeDiarySubject "myPage";</sqf>
+see_also:
+- createDiarySubject
+- diarySubjectExists
+- selectDiarySubject
+- removeDiaryRecord
+- allDiarySubjects

@@ -1,0 +1,19 @@
+name: setArmoryPoints
+desc: Stores passed number into [USERNAME].ArmaXProfile file, where it assigns it as a value to ''armoryPoints'' entry. If entry doesn't exist, it is created.
+groups:
+- System
+syntax:
+- call: !Unary points
+  ret:
+    type: Nothing
+  right: !Item
+    name: points
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setArmoryPoints (armoryPoints + 20);</sqf>
+- <sqf>setArmoryPoints 3.14;</sqf>
+see_also:
+- armoryPoints

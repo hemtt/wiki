@@ -1,0 +1,33 @@
+name: ppEffectForceInNVG
+desc: Forces use of [[Post Process Effects]] in NVG.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - ppHandle
+  - force
+  ret:
+    type: Nothing
+  left: !Item
+    name: ppHandle
+    desc: handle of the post processing returned by [[ppEffectCreate]]
+    type: Number
+  right: !Item
+    name: force
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_ppGrain ppEffectForceInNVG true;</sqf>
+see_also:
+- Post
+- Process
+- Effects
+- ppEffectEnable
+- ppEffectEnabled
+- ppEffectDestroy
+- ppEffectCreate
+- ppEffectCommit
+- ppEffectCommitted
+- ppEffectAdjust

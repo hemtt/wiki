@@ -1,0 +1,64 @@
+name: lnbColor
+desc: Returns the text color of the item with the given position of the 2D listbox. The color is returned in format [[Color|Color (RGBA)]].
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  ret:
+    type: ArrayColor
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      type: Number
+    - !Item
+      name: column
+      type: Number
+- call: !Binary
+  - control
+  - - row
+    - column
+  ret:
+    type: ArrayColor
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: row
+    type: Number
+  - !Item
+    name: column
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ctrl lnbColor [0,0];</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

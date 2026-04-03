@@ -1,0 +1,26 @@
+name: saveStatus
+desc: Saves object's properties to [[Objects.sav]] file in campaign directory as entry name.
+groups:
+- Weapon Pool
+- Mission Information
+syntax:
+- call: !Binary
+  - object
+  - name
+  ret:
+    type: Boolean
+    desc: '[[true]] if successful, otherwise [[false]]'
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player saveStatus "playerstate";</sqf>
+see_also:
+- loadStatus
+- saveVar

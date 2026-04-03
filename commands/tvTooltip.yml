@@ -1,0 +1,56 @@
+name: tvTooltip
+desc: Gets the tooltip text associated with the specified tree view path.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: String
+    desc: tooltip text
+  right: !Array
+  - !Item
+    name: idc
+    desc: IDC of the tree view control
+    type: Number
+  - !Item
+    name: path
+    type: Path
+- call: !Binary
+  - ctrl
+  - path
+  ret:
+    type: String
+    desc: tooltip text
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: path
+    type: Path
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_text = tvTooltip [101, [0,2]];</sqf>
+- <sqf>_text = _treeCtrl tvTooltip [0,2];</sqf>
+see_also:
+- tvSetTooltip
+- tvAdd
+- tvClear
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvExpand
+- tvPicture
+- tvSetCurSel
+- tvSetData
+- tvSetPicture
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvText
+- tvValue

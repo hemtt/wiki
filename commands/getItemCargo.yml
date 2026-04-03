@@ -1,0 +1,32 @@
+name: getItemCargo
+desc: Returns all items names and count from ammo box (or any general weapon holder container).
+groups:
+- Vehicle Inventory
+syntax:
+- call: !Unary box
+  ret:
+    type: !ArraySized
+    - name: classes
+      type: !ArrayUnsized
+        value: String
+      desc: Item class names
+      since: null
+    - name: counts
+      type: !ArrayUnsized
+        value: Number
+      desc: Item counts
+      since: null
+  right: !Item
+    name: box
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\ngetItemCargo cursorTarget;\n/*\n\treturns e.g\n\t[\n        [\"5ItemA\", \"10ItemB\"]\n        [5, 10]\n\t]\n*/\n</sqf>"
+see_also:
+- itemCargo
+- addItemCargo
+- addItemCargoGlobal
+- clearItemCargo
+- clearItemCargoGlobal

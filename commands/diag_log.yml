@@ -1,0 +1,34 @@
+name: diag_log
+desc: Dumps the argument's value to the [[arma.RPT|report file]]. Each call creates a new line in the file.
+groups:
+- Diagnostic
+syntax:
+- call: !Unary output
+  ret:
+    type: Nothing
+  right: !Item
+    name: output
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>diag_log time;</sqf>
+- <sqf>diag_log format ["%1, %2", player, time];</sqf>
+- "<sqf>\n_array = [1, \"foo\", player, \"bar\"];\n{\n\tdiag_log _x;\n} forEach _array ; // creates 4 entries on 4 lines\n</sqf>"
+- |-
+  <sqf>
+  _array = [1, "foo", player, "bar"];
+  diag_log _array; // Creates one entry of e.g. [1,"foo",B Alpha 1-1:1 (Player Name),"bar"]
+  </sqf>
+see_also:
+- arma.RPT
+- diag_dumpCalltraceToLog
+- diag_stacktrace
+- copyToClipboard
+- copyFromClipboard
+- diag_fps
+- diag_fpsMin
+- diag_frameNo
+- diag_tickTime
+- diag_deltaTime

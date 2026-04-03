@@ -1,0 +1,62 @@
+name: lnbSetTextRight
+desc: Sets cell's right-aligned text. Does not replace [[lnbText|cell's text]].
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  - text
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      desc: 0-based index (first row is 0, second is 1, etc)
+      type: Number
+    - !Item
+      name: column
+      desc: 0-based index (first column is 0, second is 1, etc)
+      type: Number
+  - !Item
+    name: text
+    type: String
+- call: !Binary
+  - ctrl
+  - - - row
+      - column
+    - text
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Array
+    - !Item
+      name: row
+      desc: 0-based index (first row is 0, second is 1, etc)
+      type: Number
+    - !Item
+      name: column
+      desc: 0-based index (first column is 0, second is 1, etc)
+      type: Number
+  - !Item
+    name: text
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lnbSetTextRight [1492, [1,0], "right text"];</sqf>
+- <sqf>_ctrl lnbSetTextRight [[0, 3], "right text"];</sqf>
+see_also:
+- lnbTextRight
+- lnbSetColorRight
+- lnbColorRight
+- lnbText

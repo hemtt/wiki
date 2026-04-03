@@ -1,0 +1,47 @@
+name: setDestination
+desc: |-
+  Set the destination for path planning of the pilot.
+
+  Possible values for planningMode are:
+
+  * "DoNotPlan" - used when not moving
+  * "DoNotPlanFormation" - used in formation when simple path testing is used
+  * "LEADER PLANNED" - used for formation leader (full path finding used)
+  * "LEADER DIRECT" - used for DirectGo (like getin, supply)
+  * "FORMATION PLANNED" - used in formation when full path finding is used
+  * "VEHICLE PLANNED" - used for vehicle driver
+
+  Works best when used on [[agents]]. Using "LEADER PLANNED" will trigger {{hl|"PathCalculated"}} [[Arma_3:_Event_Handlers#PathCalculated | Event Handler]]
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - object
+  - - position
+    - planningMode
+    - forceReplan
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Array
+  - !Item
+    name: position
+    type: Position
+  - !Item
+    name: planningMode
+    type: String
+  - !Item
+    name: forceReplan
+    desc: specifies if replanning of the path should be forced.
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>bob setDestination [screenToWorld [0.5,0.5], "LEADER PLANNED", true];</sqf>
+see_also:
+- expectedDestination
+- doMove
+- calculatePath

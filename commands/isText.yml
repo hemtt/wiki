@@ -1,0 +1,23 @@
+name: isText
+desc: Checks if config entry represents a text value.
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: Boolean
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isText = isText (configFile >> "CfgVehicles") // false</sqf>
+- <sqf>_isText = isText (configFile >> "CfgVehicles" >> "B_MRAP_01_F" >> "displayName") // true</sqf>
+see_also:
+- getText
+- getNumber
+- isArray
+- isClass
+- isNumber

@@ -1,0 +1,30 @@
+name: camSetFovRange
+desc: "Set the zoom level ('''F'''ield '''O'''f '''V'''iew) start and end values for automatical zooming. \n<br>\nThe default zoom level is ''{{hl|0.7}}'' where ''{{hl|0}}'' is the nearest and ''{{hl|1}}'' is the most far zoom value.\n {{Feature|warning|This command is '''non-functional'''!}}"
+groups:
+- Broken Commands
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - - minFovRange
+    - maxFovRange
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    desc: object of type "camera"
+    type: Object
+  right: !Array
+  - !Item
+    name: minFovRange
+    type: Number
+  - !Item
+    name: maxFovRange
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_cam camSetFovRange [0.1, 0.7];</sqf>
+see_also:
+- camSetFov

@@ -1,0 +1,29 @@
+name: modelToWorldWorld
+desc: |-
+  Converts position from object model space to world space in [[Position#PositionASL|PositionASL]] format from the object's centre position.
+  {{Feature|important|
+  For [[setObjectScale|scaled objects]], the relative position will first be [[vectorMultiply|multiplied]] by the object scale.<br>
+  For example, if the object scale is 2, <sqf inline>_obj modelToWorldWorld [0,1,0]</sqf> will be offset '''2 meters''' from the model center (<sqf inline>[0,0,0]</sqf>).
+  }}
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - obj
+  - modelPos
+  ret:
+    type: Position3dASL
+    desc: the model's centre (see [[getPosWorld]])
+  left: !Item
+    name: obj
+    type: Object
+  right: !Item
+    name: modelPos
+    type: Position3dRelative
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _playersFrontWorld = player modelToWorldWorld [0,1,0];</sqf>
+see_also:
+- modelToWorldVisualWorld

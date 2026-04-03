@@ -1,0 +1,26 @@
+name: isUniformAllowed
+desc: Check whether given uniform can be dressed by target soldier.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - type
+  ret:
+    type: Boolean
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: type
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_canUse = _unit isUniformAllowed "U_B_CombatUniform_mcam";</sqf>
+see_also:
+- addUniform
+- forceAddUniform
+- removeUniform
+- uniform

@@ -1,0 +1,71 @@
+name: lnbData
+desc: Returns the additional text (invisible) in an item with the given position of the 2D listbox.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Number
+        desc: null
+        since: null
+      - type: Control
+        desc: null
+        since: null
+  - !Array
+    - !Item
+      name: row
+      type: Number
+    - !Item
+      name: column
+      type: Number
+- call: !Binary
+  - ctrl
+  - - row
+    - column
+  ret:
+    type: String
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Item
+    name: row
+    type: Number
+  - !Item
+    name: column
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_ctrl lnbData [lnbCurSelRow _ctrl,0]; // "#1"</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbColor
+- lnbCurSelRow
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

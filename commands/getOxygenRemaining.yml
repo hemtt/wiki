@@ -1,0 +1,18 @@
+name: getOxygenRemaining
+desc: Returns amount of remaining oxygen.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unit
+  ret:
+    type: Number
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_oxygen = getOxygenRemaining player;</sqf>
+see_also:
+- setOxygenRemaining

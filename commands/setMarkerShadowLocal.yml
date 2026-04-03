@@ -1,0 +1,28 @@
+name: setMarkerShadowLocal
+desc: Sets the shadow property of given marker.
+problem_notes:
+- '[[setMarkerType]] will reset the shadow value to the one defined in marker type.'
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - marker
+  - shadowState
+  ret:
+    type: Nothing
+  left: !Item
+    name: marker
+    desc: the marker
+    type: String
+  right: !Item
+    name: shadowState
+    desc: '[[true]] to enable the shadow, [[false]] to disable it'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_myMarker setMarkerShadowLocal true; // enable shadow</sqf>
+see_also:
+- markerShadow
+- setMarkerShadow

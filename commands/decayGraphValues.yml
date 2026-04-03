@@ -1,0 +1,34 @@
+name: decayGraphValues
+desc: Multiplies graph values by the given coefficient. The corresponding lower bound value is used instead if the product is smaller than the bound.
+groups:
+- Math
+syntax:
+- call: !Unary
+  - lowerBoundValues
+  - graphValues
+  - coef
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  right: !Array
+  - !Item
+    name: lowerBoundValues
+    desc: lower bound for the new graph
+    type: !ArrayUnsized
+      value: Number
+  - !Item
+    name: graphValues
+    desc: graph values
+    type: !ArrayUnsized
+      value: Number
+  - !Item
+    name: coef
+    desc: the multiplication coefficient
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>decayGraphValues [[1,2,3,4,5], [1,4,9,16,25], 0.3]; // returns [1,2,3,4.8,7.5]</sqf>
+see_also:
+- getGraphValues

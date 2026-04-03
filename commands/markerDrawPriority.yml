@@ -1,0 +1,32 @@
+name: markerDrawPriority
+desc: Returns marker draw priority.
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: Number
+    desc: draw priority
+  right: !Item
+    name: markerName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>markerDrawPriority "MarkerOne"</sqf>
+see_also:
+- setMarkerDrawPriority
+- setMarkerType
+- setMarkerTypeLocal
+- markerType
+- setMarkerAlphaLocal
+- setMarkerBrush
+- setMarkerColor
+- setMarkerDir
+- setMarkerPos
+- setMarkerShape
+- setMarkerSize
+- setMarkerText
+- createMarker
+- CfgMarkers

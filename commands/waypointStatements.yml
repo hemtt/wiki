@@ -1,0 +1,27 @@
+name: waypointStatements
+desc: Gets the waypoint statements.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: !ArraySized
+    - name: condition
+      type: String
+      desc: null
+      since: null
+    - name: statement
+      type: String
+      desc: null
+      since: null
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointStatements [groupOne,1];</sqf>
+see_also:
+- waypoints
+- setWaypointStatements

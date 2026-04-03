@@ -1,0 +1,27 @@
+name: alive
+desc: Check if given vehicle/person/building is alive (i.e. not dead or destroyed).
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Boolean
+    desc: '[[true]] if alive, [[false]] if dead/destroyed'
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  SQS:
+  <sqs>? not alive player : exit</sqs>
+- |-
+  SQF:
+  <sqf>if (!alive player) exitWith {};</sqf>
+- <sqf>alive objNull; // returns false</sqf>
+see_also:
+- setDamage
+- damage
+- waterDamaged

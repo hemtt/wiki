@@ -1,0 +1,45 @@
+name: lightAttachObject
+desc: Attach light to given object at given position on object.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - - object
+    - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    type: Object
+  right: !Array
+  - !Item
+    name: object
+    type: Object
+  - !Item
+    name: position
+    type: Position
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight lightAttachObject [myVehicle, [-0.5,-0.25,1]];</sqf>
+see_also:
+- setLightAmbient
+- setLightBrightness
+- lightDetachObject
+- setLightColor
+- setLightIntensity
+- setLightAttenuation
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightDayLight
+- attachObject
+- attachTo
+- attachedObjects
+- attachedTo
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- triggerAttachVehicle
+- attachedObject

@@ -1,0 +1,28 @@
+name: setCollisionLight
+desc: Switches collision lights of a vehicle on/off.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - vehicle
+  - set
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: set
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>heli setCollisionLight true;</sqf>
+see_also:
+- isLightOn
+- isCollisionLightOn
+- setPilotLight
+- isIRLaserOn
+- engineOn
+- isEngineOn

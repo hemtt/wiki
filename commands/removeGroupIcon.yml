@@ -1,0 +1,33 @@
+name: removeGroupIcon
+desc: Remove icon with given ID from group.
+groups:
+- High Command
+syntax:
+- call: !Binary
+  - group
+  - iconID
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    type: Group
+  right: !Item
+    name: iconID
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_target removeGroupIcon (_target getVariable "hc_attackicon");</sqf>
+see_also:
+- addGroupIcon
+- clearGroupIcons
+- getGroupIcon
+- getGroupIconParams
+- groupIconSelectable
+- groupIconsVisible
+- onGroupIconClick
+- setGroupIcon
+- setGroupIconParams
+- setGroupIconsSelectable
+- setGroupIconsVisible

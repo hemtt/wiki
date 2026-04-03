@@ -1,0 +1,34 @@
+name: getSpeed
+desc: |-
+  Get the speed for the given speed mode.
+
+  SpeedMode can be:
+  *"AUTO"
+  *"SLOW"
+  *"NORMAL"
+  *"FAST"
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - object
+  - speedMode
+  ret:
+    type: Number
+    desc: m/s
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: speedMode
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_spd = player getSpeed "FAST";</sqf>
+see_also:
+- forceWalk
+- isWalking
+- forceSpeed
+- isForcedWalk

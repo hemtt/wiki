@@ -1,0 +1,21 @@
+name: atg
+desc: Returns the '''arcus tangens'''.<br><br>[[File:atan.jpg|200px]]
+alias:
+- '[[atan]]'
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+    desc: result in degrees
+  right: !Item
+    name: x
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_atanThreeFifth = atg 3/5;</sqf>
+see_also:
+- atan

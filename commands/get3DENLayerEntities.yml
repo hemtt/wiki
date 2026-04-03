@@ -1,0 +1,29 @@
+name: get3DENLayerEntities
+desc: Return all entities and sub-layer in [[Eden Entity]] layer. In order to get all layer entities during a scenario use [[getMissionLayerEntities]].
+groups:
+- Eden Editor
+syntax:
+- call: !Unary layerID
+  ret:
+    type: !ArrayUnsized
+      value: EdenEntity
+  right: !Item
+    name: layerID
+    desc: layer ID as returned by [[add3DENLayer]] command
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _myLayer = -1 add3DENLayer "CTRG";
+  player set3DENLayer _myLayer;
+  _entities = get3DENLayerEntities _myLayer;
+  </sqf>
+see_also:
+- add3DENLayer
+- remove3DENLayer
+- set3DENLayer
+- getMissionLayerEntities
+- getMissionLayers

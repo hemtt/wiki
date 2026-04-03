@@ -1,0 +1,44 @@
+name: triggerArea
+desc: |-
+  Returns currently monitored trigger area. Since Arma 3 v1.60, the command returns 3rd dimension for the monitored area. If height is not set, the value for it would be -1.
+  {{Feature | important | The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger area set up locally on the client that executed the command. See [[createTrigger]] for more info.}}
+groups:
+- Triggers
+syntax:
+- call: !Unary trigger
+  ret:
+    type: !ArraySized
+    - name: a
+      type: Number
+      desc: trigger area X size / 2
+      since: null
+    - name: b
+      type: Number
+      desc: trigger area Y size / 2
+      since: null
+    - name: angle
+      type: !NumberRange
+      - 0
+      - 360
+      desc: null
+      since: null
+    - name: isRectangle
+      type: Boolean
+      desc: null
+      since: null
+    - name: c
+      type: Number
+      desc: trigger area Z size / 2 (since {{arma3}} v1.60)
+      since: null
+  right: !Item
+    name: trigger
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_area = triggerArea sensor1; // result is [200, 120, 45, false, -1];</sqf>
+see_also:
+- setTriggerArea
+- inArea
+- inAreaArray

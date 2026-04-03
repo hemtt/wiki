@@ -1,0 +1,34 @@
+name: groupRadio
+desc: "Sends the audio message to the group radio channel. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol. \n{{Feature|important|\nThe unit must have an [[assignItem|assigned]] radio item (such as '''''\"ItemRadio\"''''') to see or transmit the messages.\nA radio item must have the property <syntaxhighlight lang=\"cpp\" inline>simulation = \"ItemRadio\";</syntaxhighlight> in its [[CfgWeapons_Config_Reference#simulation.3D.22Weapon.22|CfgWeapons config]].\n}}\n{{Feature|informative|When the transmitting unit gets killed, the transmission is interrupted. However when the receiving unit gets killed, the transmission continues to play.}}"
+multiplayer_note: If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]).
+groups:
+- Radio and Chat
+- Sounds
+syntax:
+- call: !Binary
+  - unit
+  - radioName
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: unit to transmit
+    type: Object
+  right: !Item
+    name: radioName
+    desc: class name from {{hl|CfgRadio}}
+    type: String
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_soldierOne groupRadio "messageOne";</sqf>
+- <sqf>player groupRadio (configName selectRandom ("true" configClasses (configFile >> "CfgRadio")));</sqf>
+see_also:
+- sideRadio
+- groupChat
+- customRadio
+- vehicleRadio
+- globalRadio
+- directSay
+- commandRadio

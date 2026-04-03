@@ -1,0 +1,22 @@
+name: pixelH
+desc: Returns the height of one pixel for current resolution.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: pixel height
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_pixelHeight = pixelH;</sqf>
+see_also:
+- pixelGrid
+- pixelGridBase
+- pixelGridNoUIScale
+- pixelW
+- Pixel
+- Grid
+- System

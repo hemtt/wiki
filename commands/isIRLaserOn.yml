@@ -1,0 +1,28 @@
+name: isIRLaserOn
+desc: Returns [[true]] if there is a linked and enabled IR on the given weapon.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - unit
+  - weapon
+  ret:
+    type: Boolean
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: weapon
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player isIRLaserOn currentWeapon player;</sqf>
+see_also:
+- enableIRLasers
+- enableGunLights
+- isLightOn
+- isCollisionLightOn
+- setPilotLight
+- setCollisionLight

@@ -1,0 +1,20 @@
+name: viewDistance
+desc: Returns the rendering distance.
+groups:
+- System
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint ("my view distance is " + str viewDistance + " meters");</sqf>
+see_also:
+- setViewDistance
+- setDetailMapBlendPars
+- setTerrainGrid
+- getObjectViewDistance
+- setObjectViewDistance

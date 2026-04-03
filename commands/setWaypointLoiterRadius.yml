@@ -1,0 +1,47 @@
+name: setWaypointLoiterRadius
+desc: Assignes loiter radius to waypoint
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - radius
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: radius
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>[_grp, 2] setWaypointLoiterRadius 200;</sqf>
+see_also:
+- waypoints
+- deleteWaypoint
+- copyWaypoints
+- setCurrentWaypoint
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointDescription
+- setWaypointFormation
+- setWaypointHousePosition
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- waypointLoiterRadius
+- addWaypoint
+- setWaypointLoiterType
+- currentWaypoint
+- waypointSpeed
+- setWPPos

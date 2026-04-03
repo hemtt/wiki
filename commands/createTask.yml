@@ -1,0 +1,58 @@
+name: createTask
+desc: Create a new AI task (subtask of parentTask). Type is name of registered task type.
+groups:
+- Briefing
+- Teams
+syntax:
+- call: !Binary
+  - teamMember
+  - - - type
+      - parentTask
+    - priority
+    - - nameN
+      - valueN
+  ret:
+    type: Task
+  left: !Item
+    name: teamMember
+    type: TeamMember
+  right: !Array
+  - !Array
+    - !Item
+      name: type
+      desc: '{{hl|name}} defined in {{hl|CfgTasks}}'
+      type: String
+    - !Item
+      name: parentTask
+      desc: (Optional)
+      type: Task
+  - !Item
+    name: priority
+    type: Number
+  - !Infinite
+    - !Item
+      name: nameN
+      type: String
+    - !Item
+      name: valueN
+      type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- ''
+see_also:
+- Tasks
+- type
+- briefing
+- createSimpleTask
+- simpleTasks
+- currentTask
+- currentTasks
+- setCurrentTask
+- taskState
+- setTaskState
+- taskResult
+- setTaskResult
+- taskCompleted
+- removeSimpleTask

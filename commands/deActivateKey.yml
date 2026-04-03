@@ -1,0 +1,22 @@
+name: deActivateKey
+desc: |-
+  Deactivates the given keyname for the current user profile. The keys are used to unlock missions or campaigns.
+
+  See keys, keysLimit and doneKeys in the [[Description.ext#keys|description.ext]] file of the missions.
+groups:
+- Mission Information
+syntax:
+- call: !Unary keyname
+  ret:
+    type: Nothing
+  right: !Item
+    name: keyname
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>deActivateKey "Mission04Key";</sqf>
+see_also:
+- isKeyActive
+- activateKey

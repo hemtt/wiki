@@ -1,0 +1,35 @@
+name: assignedCargo
+desc: Returns the list of soldiers assigned to the given vehicle as a cargo.
+groups:
+- Unit Control
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: !ArrayUnsized
+      value: Object
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_list = assignedCargo _vehicleName;</sqf>
+see_also:
+- assignAsCargo
+- assignAsGunner
+- assignAsCommander
+- assignAsDriver
+- moveInCargo
+- moveInGunner
+- moveInCommander
+- moveInDriver
+- assignAsTurret
+- gunner
+- commander
+- driver
+- moveInTurret
+- assignedGunner
+- assignedCommander
+- assignedDriver

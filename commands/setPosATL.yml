@@ -1,0 +1,27 @@
+name: setPosATL
+desc: Sets the position of an object relative to the terrain.
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - object
+  - pos
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: pos
+    type: Position3dATL
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player setPosATL [getPosATL player select 0, (getPosATL player select 1) - 10, getPosATL player select 2];</sqf>
+see_also:
+- getPosATL
+- getPos
+- getPosASL
+- setPos
+- setPosASL

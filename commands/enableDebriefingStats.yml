@@ -1,0 +1,32 @@
+name: enableDebriefingStats
+desc: Enable debriefing score table.
+groups:
+- Briefing
+syntax:
+- call: !Unary
+  - left
+  - top
+  - width
+  - height
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: left
+    type: Number
+  - !Item
+    name: top
+    type: Number
+  - !Item
+    name: width
+    type: Number
+  - !Item
+    name: height
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>enableDebriefingStats [0.1, 0.1, 0.8, 0.8];</sqf>
+see_also:
+- disableDebriefingStats

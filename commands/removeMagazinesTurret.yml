@@ -1,0 +1,37 @@
+name: removeMagazinesTurret
+desc: Removes all magazines of the given type from given vehicle. Use turret path [-1] for driver's turret.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - - magazineName
+    - turretPath
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: magazineName
+    type: String
+  - !Item
+    name: turretPath
+    type: TurretPath
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>vehicle player removeMagazinesTurret ["60rnd_CMFlareMagazine", [-1]];</sqf>
+- <sqf>_tank removeMagazinesTurret ["20Rnd_120mmSABOT_M1A2", [0]];</sqf>
+see_also:
+- removeAllMagazinesTurret
+- addMagazineTurret
+- removeAllMagazines
+- magazinesTurret
+- removeMagazineTurret
+- weaponsTurret
+- addWeaponTurret
+- removeWeaponTurret
+- turretLocal

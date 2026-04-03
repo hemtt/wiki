@@ -1,0 +1,19 @@
+name: collectiveRTD
+desc: "Returns the current position of a helicopter's collective pitch control.\n* 0: fully lowered\n* 1: fully raised \n{{Feature|afm}}"
+groups:
+- RTD
+syntax:
+- call: !Unary helicopterRTD
+  ret:
+    type: Number
+  right: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_collective = collectiveRTD vehicle player;</sqf>
+see_also:
+- setActualCollectiveRTD

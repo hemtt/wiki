@@ -1,0 +1,42 @@
+name: breakOut
+desc: |-
+  Breaks out of the [[Variables#Scopes|scope]] with given '''name'''.
+  * An unknown [[scopeName]] name will cause the script error {{hl|Generic error in expression}}
+  * If multiple scopes with the same '''name''' exist, the command will break out the nearest scope. See {{Link|#Example 3}}.
+groups:
+- Program Flow
+syntax:
+- call: !Unary name
+  ret:
+    type: Nothing
+  right: !Item
+    name: name
+    desc: name of the scope which was previously set with [[scopeName]]. <sqf inline>""</sqf> will exit the current scope (see also [[exitWith]])
+    type: String
+- call: !Binary
+  - value
+  - name
+  ret:
+    type: Anything
+    desc: will return value
+  left: !Item
+    name: value
+    desc: a value to return
+    type: Anything
+  right: !Item
+    name: name
+    desc: name of the scope which was previously set with [[scopeName]]. <sqf inline>""</sqf> will exit the current scope (see also [[exitWith]])
+    type: String
+  since:
+    arma3: '1.48'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nscopeName \"main\";\nwhile { true } do {\n\tscopeName \"loop1\";\n\twhile {true} do {\n\t\tscopeName \"loop2\";\n\t\tif (condition1) then {breakTo \"main\"}; // Breaks all scopes and return to \"main\"\n\t\tif (condition2) then {breakOut \"loop2\"}; // Breaks scope named \"loop2\"\n\t\tsleep 1;\n\t};\n\tsleep 1;\n};\n</sqf>"
+- "<sqf>\ncall {\n\tscopeName \"main\";\n\tcall {\n\t\t123 breakOut \"main\"\n\t};\n\t345\n}; // call returns 123\n</sqf>"
+- "<sqf>\ncall {\n\tscopeName \"Main\"; // Parent Main\n\tcall {\n\t\tscopeName \"Main\"; // Child Main\n\t\t\"String\" breakOut \"Main\"; // Will break out of child main and return \"String\" to parent main\n\t};\n};\n</sqf>"
+see_also:
+- scopeName
+- breakTo
+- exitWith

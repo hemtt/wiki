@@ -1,0 +1,19 @@
+name: echo
+desc: Sends any text into the debugger console or the logfile. This command is only '''present in internal version ''' not in the retail version. Use [[diag_log]] instead!
+groups:
+- Diagnostic
+- Broken Commands
+syntax:
+- call: !Unary text
+  ret:
+    type: Nothing
+  right: !Item
+    name: text
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>echo "Text in logfile";</sqf>
+see_also:
+- diag_log

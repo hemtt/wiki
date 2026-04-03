@@ -1,0 +1,26 @@
+name: secondaryWeapon
+desc: Returns the name of a unit's secondary weapon (launcher). To detect the weapon which is '''currently''' being used by the unit use [[currentWeapon]].
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+    desc: class name of the secondary weapon or <sqf inline>""</sqf> if none available
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _secondaryWeapon = secondaryWeapon player;</sqf>
+- <sqf>hint secondaryWeapon player; // "launch_NLAW_F"</sqf>
+see_also:
+- secondaryWeaponMagazine
+- secondaryWeaponItems
+- addSecondaryWeaponItem
+- primaryWeapon
+- handgunWeapon
+- currentWeapon
+- weapons

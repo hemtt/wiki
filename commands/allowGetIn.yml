@@ -1,0 +1,28 @@
+name: allowGetIn
+desc: |-
+  Set if the units given in the list are allowed to enter vehicles.
+  {{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}
+groups:
+- Object Manipulation
+- Unit Control
+syntax:
+- call: !Binary
+  - unitArray
+  - allow
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitArray
+    type: !ArrayUnsized
+      value: Object
+  right: !Item
+    name: allow
+    desc: '[[true]] allows the [[units]] to enter, [[false]] denies them'
+    type: Boolean
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>[_soldier1, _soldier2] allowGetIn true;</sqf>
+see_also:
+- orderGetIn

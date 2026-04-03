@@ -1,0 +1,21 @@
+name: activateKey
+desc: |-
+  Activates the given keyname for the current user profile. The keys are used to unlock missions or campaigns.
+  See <syntaxhighlight lang="cpp" inline>keys</syntaxhighlight>, <syntaxhighlight lang="cpp" inline>keysLimit</syntaxhighlight> and <syntaxhighlight lang="cpp" inline>doneKeys</syntaxhighlight> in the [[Description.ext#Mission Keys]] chapter.
+groups:
+- Mission Information
+syntax:
+- call: !Unary keyname
+  ret:
+    type: Nothing
+  right: !Item
+    name: keyname
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>activateKey "Mission04Key";</sqf>
+see_also:
+- deActivateKey
+- isKeyActive

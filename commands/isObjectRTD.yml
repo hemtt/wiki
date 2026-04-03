@@ -1,0 +1,19 @@
+name: isObjectRTD
+desc: Returns true if RTD model is loaded.{{Feature|afm}}
+groups:
+- RTD
+syntax:
+- call: !Unary helicopter
+  ret:
+    type: Boolean
+  right: !Item
+    name: helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_heliRTD = isObjectRTD vehicle player;</sqf>
+see_also:
+- weightRTD
+- difficultyEnabledRTD

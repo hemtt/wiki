@@ -1,0 +1,24 @@
+name: pixelGridNoUIScale
+desc: |-
+  Returns grid size based on screen resolution and configs: <syntaxhighlight lang="cpp" inline>uiScaleFactor</syntaxhighlight>, <syntaxhighlight lang="cpp" inline>uiScaleMaxGrids</syntaxhighlight>.
+  As mentioned in the name of this command, '''the user interface scale is ignored'''.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: 'grid size, see [[Arma 3: Pixel Grid System]]'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _gridHeightNoUIScale = pixelH * pixelGridNoUIScale;</sqf>
+see_also:
+- pixelGrid
+- pixelGridBase
+- pixelH
+- pixelW
+- Pixel
+- Grid
+- System

@@ -1,0 +1,27 @@
+name: hcShownBar
+desc: Return whether the [[High Command]] bar is shown/active.
+groups:
+- High Command
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: '[[true]] if HC bar is shown, otherwise [[false]]'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (hcShownBar) then { hint "HC bar is active"; };</sqf>
+see_also:
+- High
+- Command
+- hcAllGroups
+- hcGroupParams
+- hcLeader
+- hcRemoveAllGroups
+- hcRemoveGroup
+- hcSelected
+- hcSelectGroup
+- hcSetGroup
+- hcShowBar
+- onHCGroupSelectionChanged

@@ -1,0 +1,26 @@
+name: missionConfigFile
+desc: |-
+  Return root of mission [[Description.ext]] entries hierarchy.
+  {{Feature|important|Since the introduction of the [[:Category:Eden Editor|Eden Editor]], scenario attributes can be configured in the editor itself, not only in the external Description.ext file.
+  To access desired value independently on where it is stored, use the following commands:
+  * [[getMissionConfigValue]]
+  * [[getMissionConfig]]
+  }}
+groups:
+- Config
+syntax:
+- call: Nular
+  ret:
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nfor \"_i\" from 0 to (count paramsArray - 1) do\n{\n\tmissionNamespace setVariable [configName ((missionConfigFile/\"Params\") select _i), paramsArray select _i];\n};\n</sqf>"
+- "To define custom values in [[Description.ext|description.ext]]:\n<syntaxhighlight lang=\"cpp\">\nclass myMissionConfig\n{\n\tclass mySetup\n\t{\n\t\tmyNumber = 3;\n\t\tmyArray[] = { 1, 2, 3 };\n\t\tmyText = \"LOL\";\n\t};\n};\n</syntaxhighlight>\n\nTo read defined custom values from a script:\n<sqf>\n_myNumber = getNumber (missionConfigFile >> \"myMissionConfig\" >> \"mySetup\" >> \"myNumber\");\n_myArray = getArray (missionConfigFile >> \"myMissionConfig\" >> \"mySetup\" >> \"myArray\");\n_myText = getText (missionConfigFile >> \"myMissionConfig\" >> \"mySetup\" >> \"myText\");\n</sqf>"
+see_also:
+- configFile
+- campaignConfigFile
+- getMissionConfigValue
+- getMissionConfig
+- getMissionPath

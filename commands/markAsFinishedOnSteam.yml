@@ -1,0 +1,19 @@
+name: markAsFinishedOnSteam
+desc: Marks current mission as finished on Steam. Returns true if Steam query is successfully started or false otherwise.
+groups:
+- Mission Information
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  markAsFinishedOnSteam;
+  endMission "END1";
+  </sqf>
+see_also:
+- isSteamMission

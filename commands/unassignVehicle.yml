@@ -1,0 +1,41 @@
+name: unassignVehicle
+desc: |-
+  Unassigns individual unit from a vehicle, usually previously assigned with ''assignAsXXX'' command, i.e removes [[assignedVehicleRole]] of the unit.
+  If the unit is currently in that vehicle, the group leader will issue an order to disembark.
+  {{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}
+groups:
+- Object Manipulation
+- Unit Control
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Nothing
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>unassignVehicle player;</sqf>
+- |-
+  Make all the occupants of a vehicle disembark:
+  <sqf>{ unassignVehicle _x } forEach crew _vehicle;</sqf>
+- |-
+  Make all the occupants of a vehicle disembark and unable to get back in:
+  <sqf>
+  private _crew = crew _vehicle;
+  { unassignVehicle _x } forEach _crew;
+  _crew allowGetIn false;
+  </sqf>
+see_also:
+- assignAsCargo
+- assignAsCommander
+- assignAsDriver
+- assignAsGunner
+- assignAsTurret
+- assignedVehicle
+- leaveVehicle
+- assignedVehicles
+- assignedGroup
+- fullCrew

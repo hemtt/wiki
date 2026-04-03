@@ -1,0 +1,24 @@
+name: showGPS
+desc: Shows or hides the GPS receiver on the map screen, if enabled for the mission and you possess the item. (default [[false]]). {{Feature|arma3|This command does nothing in Arma 3. Use the command [[openGPS]] that is available since v2.04.}}
+groups:
+- Interaction
+syntax:
+- call: !Unary show
+  ret:
+    type: Nothing
+  right: !Item
+    name: show
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>showGPS true;</sqf>
+see_also:
+- openGPS
+- shownGPS
+- visibleGPS
+- showCompass
+- showRadio
+- showWatch
+- showPad

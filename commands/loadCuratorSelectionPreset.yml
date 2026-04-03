@@ -1,0 +1,26 @@
+name: loadCuratorSelectionPreset
+desc: Load the given selection preset to the current selection of the curator.
+groups:
+- Curator
+syntax:
+- call: !Unary numkey
+  ret:
+    type: Nothing
+  right: !Item
+    name: numkey
+    desc: the number key under which the selection preset is saved
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>loadCuratorSelectionPreset 1;</sqf>
+see_also:
+- curatorSelectionPreset
+- setCuratorSelectionPreset
+- curatorSelected
+- setCuratorSelected
+- addCuratorSelected
+- Arma
+- '3:'
+- Curator

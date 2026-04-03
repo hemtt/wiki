@@ -1,0 +1,33 @@
+name: add3DENLayer
+desc: Adds an editing layer in [[:Category:Eden Editor|Eden Editor]].
+groups:
+- Eden Editor
+syntax:
+- call: !Binary
+  - parentLayerID
+  - name
+  ret:
+    type: Number
+    desc: layer ID
+  left: !Item
+    name: parentLayerID
+    desc: ID of the parent layer. No layer will be created when the ID does not point to a layer. Use {{hl|-1}} to create the layer to root.
+    type: Number
+  right: !Item
+    name: name
+    desc: layer display name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _myLayer = -1 add3DENLayer "Enemy Base";
+  _myLayerFort = _myLayer add3DENLayer "Fortifications";
+  _myLayerPatrol = _myLayer add3DENLayer "Patrols";
+  </sqf>
+see_also:
+- remove3DENLayer
+- set3DENLayer
+- get3DENLayerEntities

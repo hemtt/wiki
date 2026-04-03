@@ -1,0 +1,30 @@
+name: diag_exportConfig
+desc: Exports given [[Config|config]] into file of given path.
+groups:
+- Diagnostic
+- Config
+syntax:
+- call: !Unary
+  - path
+  - config
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: path
+    desc: file path on disc
+    type: String
+  - !Item
+    name: config
+    desc: the config you would like to export
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+examples:
+- |-
+  export an [[Arma: All-in-one Config|All-in-One config]]:
+  <sqf>diag_exportConfig ["O:/config.cpp", configFile];</sqf>
+see_also:
+- configFile

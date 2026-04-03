@@ -1,0 +1,24 @@
+name: goggles
+desc: Returns name of currently used goggles (for NVGoggles use [[hmd]]).
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_goggles = goggles assaultDiver; //G_Diving</sqf>
+- <sqf>_goggles = goggles reconTeamLeader; //G_Shades_Black</sqf>
+see_also:
+- removeGoggles
+- addGoggles
+- hmd
+- headgear
+- binocular
+- getDiverState

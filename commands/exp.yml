@@ -1,0 +1,20 @@
+name: exp
+desc: Exponential function with the base {{Link|https://en.wikipedia.org/wiki/E_(mathematical_constant)|e}}. Equal to {{hl|e^x}}. [[File:A3 expx.jpg|thumb|See how green and blue are identical except for the offset]]
+groups:
+- Math
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_e = exp 1; // Returns e (2.7182...)</sqf>
+- <sqf>ln exp 1; // Returns 1</sqf>
+see_also:
+- Math
+- Commands

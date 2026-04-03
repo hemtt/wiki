@@ -1,0 +1,46 @@
+name: setMarkerSizeLocal
+desc: Set marker size.
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - markerName
+  - - axisA
+    - axisB
+  ret:
+    type: Nothing
+  left: !Item
+    name: markerName
+    type: String
+  right: !Array
+  - !Item
+    name: axisA
+    desc: 1/2 width of marker
+    type: Number
+  - !Item
+    name: axisB
+    desc: 1/2 height of marker
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>"MarkerOne" setMarkerSizeLocal [100, 200];</sqf>
+see_also:
+- setMarkerAlpha
+- setMarkerAlphaLocal
+- setMarkerBrush
+- setMarkerBrushLocal
+- setMarkerColor
+- setMarkerColorLocal
+- setMarkerDir
+- setMarkerDirLocal
+- setMarkerPos
+- setMarkerPosLocal
+- setMarkerShape
+- setMarkerShapeLocal
+- setMarkerSize
+- setMarkerText
+- setMarkerTextLocal
+- setMarkerType
+- setMarkerTypeLocal

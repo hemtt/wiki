@@ -1,0 +1,19 @@
+name: triggerText
+desc: Returns trigger text.
+multiplayer_note: The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger text set up locally on the client that executed the command. See [[createTrigger]] for more info.
+groups:
+- Triggers
+syntax:
+- call: !Unary trigger
+  ret:
+    type: String
+  right: !Item
+    name: trigger
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_text = triggerText triggerName;</sqf>
+see_also:
+- setTriggerText

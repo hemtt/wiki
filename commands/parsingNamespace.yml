@@ -1,0 +1,28 @@
+name: parsingNamespace
+desc: Returns the global namespace attached to config parser.
+groups:
+- Namespaces
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Namespace
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  parsingNamespace setVariable ["var1", 101.23124];
+  _profVar1 = parsingNamespace getVariable "var1";
+  </sqf>
+see_also:
+- missionNamespace
+- uiNamespace
+- currentNamespace
+- profileNamespace
+- localNamespace
+- allVariables
+- with
+- ArmA:_Editing#Forward_Compatibility|Forward
+- Compatibility

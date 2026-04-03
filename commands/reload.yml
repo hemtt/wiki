@@ -1,0 +1,53 @@
+name: reload
+desc: |-
+  Main syntax: Reload first found muzzle that needs reloading (with some inconsistencies).<br>
+  Alternative syntax: this syntax allows to reload given muzzle with given magazine while playing proper animation.
+  If ''param'' is omitted or is empty string, default value is used. The default behaviour is to find the best matching magazine for the provided muzzle from the pool of available magazines.
+  If specific magazine is requested, the reload will fail if unit has run out of this type of magazines. If an empty array <sqf inline>[]</sqf> is given, the behaviour is similar to pressing the "Reload" key.
+  The command reloads the given muzzle but does not select it. In case of [[currentThrowable|throwable]] muzzles, each throwable has its own muzzle, they are autoreloaded after throw.
+  Using [[reload]] on the throwable muzzle will just swap throwable for another one of the same type from inventory.
+groups:
+- Weapons
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Nothing
+  right: !Item
+    name: unitName
+    type: Object
+- call: !Binary
+  - unit
+  - - muzzle
+    - magazine
+  ret:
+    type: Boolean
+    desc: '[[true]] on success'
+  left: !Item
+    name: unit
+    desc: person
+    type: Object
+  right: !Array
+  - !Item
+    name: muzzle
+    desc: (Optional, default [[currentMuzzle]]) muzzle name or "" for the current muzzle.
+    type: String
+  - !Item
+    name: magazine
+    desc: (Optional, default given muzzle magazine) magazine name or "" for given muzzle's magazine. If given muzzle is [[currentMuzzle]] then [[currentMagazine]]
+    type: String
+  since:
+    arma3: '2.8'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (needReload player == 1) then { reload player };</sqf>
+- <sqf>player reload ["GL_3GL_F", "1Rnd_HE_Grenade_shell"];</sqf>
+- |-
+  Reload current muzzle:
+  <sqf>player reload [];</sqf>
+see_also:
+- reloadEnabled
+- needReload
+- enableReload
+- setWeaponReloadingTime

@@ -1,0 +1,18 @@
+name: isServer
+desc: Returns [[true]] if the machine executing the command is the server in a multiplayer game or is running single player. It will return [[true]] for both dedicated and player-hosted server. See also [[Multiplayer Scripting#Different machines and how to target them|Multiplayer Scripting/machines]].
+groups:
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (!isServer) exitWith {};</sqf>
+see_also:
+- isDedicated
+- isMultiplayer
+- hasInterface
+- local

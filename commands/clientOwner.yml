@@ -1,0 +1,22 @@
+name: clientOwner
+desc: Returns the [[Multiplayer_Scripting#Machine_network_ID | machine network ID]] of the client executing the command.
+groups:
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _myNetworkId = clientOwner;</sqf>
+see_also:
+- owner
+- groupOwner
+- onPlayerConnected
+- onPlayerDisconnected
+- getClientState
+- getClientStateNumber
+- admin
+- remoteExecutedOwner

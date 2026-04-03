@@ -1,0 +1,38 @@
+name: lnbGetColumnsPosition
+desc: Returns relative screen X of ListNBox control columns position [0.1,0.3,0.6...]. Use [[lnbSetColumnsPos]] to set positions.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary _ctrl
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: _ctrl
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>lnbGetColumnsPosition _ctrl;</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbColor
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

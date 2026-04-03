@@ -1,0 +1,32 @@
+name: isArray
+desc: Check if config entry represents array.
+groups:
+- Config
+- Arrays
+syntax:
+- call: !Unary config
+  ret:
+    type: Boolean
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ok = isArray (configFile >> "CfgVehicles") // returns false</sqf>
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getArray
+- getText
+- getNumber
+- inheritsFrom
+- isClass
+- isNumber
+- isText
+- select

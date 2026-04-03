@@ -1,0 +1,32 @@
+name: setLightDayLight
+desc: Sets if light can be used during the day.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - bool
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    type: Object
+  right: !Item
+    name: bool
+    type: Boolean
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight setLightDayLight true;</sqf>
+see_also:
+- setLightAmbient
+- setLightColor
+- lightAttachObject
+- lightDetachObject
+- setLightIntensity
+- setLightAttenuation
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightBrightness

@@ -1,0 +1,26 @@
+name: rotorsRpmRTD
+desc: Returns rotors RPM. {{Feature|afm}}
+groups:
+- RTD
+syntax:
+- call: !Unary RTD_helicopter
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: RTD_helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _mh9_main = (rotorsRpmRTD _MH9) select 0;//main rotor
+  _mh9_tail = (rotorsRpmRTD _MH9) select 1;//tail rotor
+  </sqf>
+see_also:
+- rotorsForcesRTD
+- weightRTD
+- wingsForcesRTD
+- airDensityRTD

@@ -1,0 +1,22 @@
+name: removeAllSecondaryWeaponItems
+desc: Removes all items from [[secondaryWeapon]], except magazine.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeAllSecondaryWeaponItems player;</sqf>
+see_also:
+- addSecondaryWeaponItem
+- removeSecondaryWeaponItem
+- removeAllPrimaryWeaponItems
+- removeAllHandgunItems
+- removeAllBinocularItems

@@ -1,0 +1,24 @@
+name: leaderboardRequestRowsFriends
+desc: Requests given leaderboard to download friends rows from the given leaderboard
+groups:
+- Leaderboards
+syntax:
+- call: !Unary boardName
+  ret:
+    type: Boolean
+  right: !Item
+    name: boardName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>leaderboardRequestRowsFriends "TT01";</sqf>
+see_also:
+- leaderboardDeInit
+- leaderboardGetRows
+- leaderboardRequestRowsGlobal
+- leaderboardRequestRowsGlobalAroundUser
+- leaderboardsRequestUploadScore
+- leaderboardsRequestUploadScoreKeepBest
+- leaderboardState

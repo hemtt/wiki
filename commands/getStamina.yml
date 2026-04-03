@@ -1,0 +1,23 @@
+name: getStamina
+desc: Get current stamina (~ seconds until depletion)
+groups:
+- Stamina System
+syntax:
+- call: !Unary unit
+  ret:
+    type: Number
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getStamina player;</sqf>
+see_also:
+- Arma
+- '3:'
+- Stamina
+- setStamina
+- setFatigue
+- getFatigue

@@ -1,0 +1,19 @@
+name: getFuelConsumptionCoef
+desc: Returns the fuel consumption coefficient, which is a multiplier of the [[CfgVehicles_Config_Reference#fuelConsumptionRate|fuel consumption rate]] in config.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Number
+    desc: fuel consumption coefficient
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (getFuelConsumptionCoef myCar > 1) then { hint "You should have a mechanic look at your engine!" }</sqf>
+see_also:
+- setFuelConsumptionCoef

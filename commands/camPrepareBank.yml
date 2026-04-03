@@ -1,0 +1,27 @@
+name: camPrepareBank
+desc: |-
+  Prepares the camera bank angle.
+  {{Feature|warning|This command is '''non-functional'''!}}
+groups:
+- Broken Commands
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - bank
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    type: Object
+  right: !Item
+    name: bank
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camera camPrepareBank -0.1;</sqf>
+see_also:
+- camPreload
+- camCommitPrepared

@@ -1,0 +1,19 @@
+name: groupSelectedUnits
+desc: Returns selected units in source group for normal commanding mode (individual units). For the High Command equivalent, see [[hcSelected]].
+groups:
+- Interaction
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: Object
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_selectedUnits = groupSelectedUnits player;</sqf>
+see_also:
+- groupSelectUnit

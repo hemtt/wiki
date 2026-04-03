@@ -1,0 +1,16 @@
+name: isMultiplayer
+desc: Return true if multiPlayer.
+groups:
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (isMultiplayer) then\n{\n\t// ...block\n}\n</sqf>"
+see_also:
+- isDedicated
+- isServer

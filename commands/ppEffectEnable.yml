@@ -1,0 +1,62 @@
+name: ppEffectEnable
+desc: |-
+  Enable / disable [[Post Process Effects]]
+  {{Feature | important | If effect fails to get enabled (can check it with [[ppEffectEnabled]]) try adding a little [[sleep]] in front of it. }}
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - effect
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: effect
+    desc: name of the effect
+    type: String
+  right: !Item
+    name: enable
+    type: Boolean
+- call: !Binary
+  - effect
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: effect
+    desc: handle of the effect
+    type: Number
+  right: !Item
+    name: enable
+    type: Boolean
+- call: !Binary
+  - effectArray
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: effectArray
+    desc: array of effect handles
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>"colorCorrections" ppEffectEnable true;</sqf>
+- <sqf>_hndl ppEffectEnable true;</sqf>
+- <sqf>[_hndl1, _hndl2] ppEffectEnable true;</sqf>
+see_also:
+- Post
+- Process
+- Effects
+- ppEffectForceInNVG
+- ppEffectDestroy
+- ppEffectCreate
+- ppEffectEnabled
+- ppEffectCommit
+- ppEffectCommitted
+- ppEffectAdjust

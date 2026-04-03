@@ -1,0 +1,44 @@
+name: addItemToBackpack
+desc: Create new item and store it to soldier's backpack. The item can also be a weapon or a magazine.
+groups:
+- Containers
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player addItemToBackpack "arifle_MXM_Hamr_pointer_F";</sqf>
+- <sqf>player addItemToBackpack "itemGPS";</sqf>
+see_also:
+- addItemToUniform
+- addItemToVest
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- removeItemFromBackpack
+- everyBackpack

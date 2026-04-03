@@ -1,0 +1,37 @@
+name: configName
+desc: Returns name of config entry.
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: String
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_name = configName (configFile >> "CfgVehicles"); // result is "CfgVehicles"</sqf>
+see_also:
+- configFile
+- a
+- /
+- b
+- config
+- greater
+- greater
+- name|config
+- '>>'
+- name
+- count
+- getArray
+- getText
+- getNumber
+- inheritsFrom
+- isArray
+- isClass
+- isNumber
+- isText
+- select

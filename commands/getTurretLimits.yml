@@ -1,0 +1,51 @@
+name: getTurretLimits
+desc: Returns the rotation and elevation limits for the given turret.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - turret
+  ret:
+    type: !ArraySized
+    - name: minTurn
+      type: Number
+      desc: from 0 to -angle in degrees (left)
+      since: null
+    - name: maxTurn
+      type: Number
+      desc: from 0 to +angle in degrees (right)
+      since: null
+    - name: minElev
+      type: Number
+      desc: from 0 to -angle in degrees (down)
+      since: null
+    - name: maxElev
+      type: Number
+      desc: from 0 to +angle in degrees (up)
+      since: null
+    - name: overridden
+      type: Boolean
+      desc: if custom limits were applied
+      since: null
+  left: !Item
+    name: vehicle
+    desc: vehicle the turret belongs to
+    type: Object
+  right: !Item
+    name: turret
+    type: TurretPath
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _turretLimits = m2 getTurretLimits [0];
+  _turretLimits params ["_minTurn", "_maxTurn", "_minElev", "_maxElev", "_overridden"];
+  </sqf>
+see_also:
+- setTurretLimits
+- setTurretOpticsMode
+- turretLocal
+- selectWeaponTurret

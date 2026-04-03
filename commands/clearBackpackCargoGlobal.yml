@@ -1,0 +1,42 @@
+name: clearBackpackCargoGlobal
+desc: Removes all backpacks from the vehicle cargo space. MP synchronized.
+groups:
+- Containers
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>clearBackpackCargoGlobal jeepOne;</sqf>
+see_also:
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack
+- clearMagazineCargo
+- clearMagazineCargoGlobal
+- clearWeaponCargo
+- clearWeaponCargoGlobal
+- clearItemCargo
+- clearItemCargoGlobal

@@ -1,0 +1,28 @@
+name: taskType
+desc: Returns the type of the given task. A new task returns "Default" for the type.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: String
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_type = taskType (currentTask player);</sqf>
+see_also:
+- setSimpleTaskType
+- taskName
+- currentTask
+- setSimpleTaskCustomData
+- taskCustomData
+- Arma
+- '3:'
+- Task
+- Framework#Task
+- Overhaul|Tasks
+- Overhaul

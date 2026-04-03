@@ -1,0 +1,47 @@
+name: lnbText
+desc: Returns the shown text in the item with the given position of the given 2D listbox.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Binary
+  - control
+  - - row
+    - column
+  ret:
+    type: String
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: row
+    type: Number
+  - !Item
+    name: column
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_text = _ctrl lnbText [0,0];</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbColor
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbValue

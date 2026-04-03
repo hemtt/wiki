@@ -1,0 +1,73 @@
+name: getRoadInfo
+desc: |-
+  Returns road piece information.
+  {{Feature|informative|
+  * Bridges are special case. Only large bridges are part of Road Net. Small pedestrian bridges are not recognized as roads. Bridge "mapType" is {{hl|"ROAD"}} so the best way to detect bridges is to check "isBridge" value. Bridges are not part of new roads and don't have the same info as other new roads, so only "mapType", "texture" (maybe "textureEnd"), "begPos", "endPos" and "isBridge" are  updated.
+  * Pedestrian roads "mapType" is usually {{hl|"TRAIL"}}. They are part of Road Net but excluded from path finding. Use [[roadsConnectedTo]] with alternative flag to find the connections between pedestrian roads.
+  }}
+groups:
+- Roads and Airports
+syntax:
+- call: !Unary road
+  ret:
+    type: !ArraySized
+    - name: mapType
+      type: String
+      desc: road segment type, could be {{hl|"HIDE"}}, {{hl|"ROAD"}}, {{hl|"MAIN ROAD"}}, {{hl|"TRACK"}}, {{hl|"TRAIL"}} (see [[nearestTerrainObjects]])
+      since: null
+    - name: width
+      type: Number
+      desc: road segment width
+      since: null
+    - name: isPedestrian
+      type: Boolean
+      desc: when [[true]] road is for pedestrian use only
+      since: null
+    - name: texture
+      type: String
+      desc: road segment surface texture
+      since: null
+    - name: textureEnd
+      type: String
+      desc: road segment surface texture
+      since: null
+    - name: material
+      type: String
+      desc: road segment surface material
+      since: null
+    - name: begPos
+      type: Position3dASL
+      desc: start of the road segment
+      since: null
+    - name: endPos
+      type: Position3dASL
+      desc: finish of the road segment
+      since: null
+    - name: isBridge
+      type: Boolean
+      desc: when [[true]] road segment is a bridge
+      since: null
+    - name: AIpathOffset
+      type: Number
+      desc: config value of `AIpathOffset`
+      since:
+        arma3: '2.12'
+  right: !Item
+    name: road
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _info = getRoadInfo _road;
+  _info params ["_mapType", "_width", "_isPedestrian", "_texture", "_textureEnd", "_material", "_begPos", "_endPos", "_isBridge"];
+  private _roadDirection = _begPos getDir _endPos;
+  </sqf>
+see_also:
+- nearRoads
+- roadsConnectedTo
+- isOnRoad
+- roadAt
+- nearestTerrainObjects

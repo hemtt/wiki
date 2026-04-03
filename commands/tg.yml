@@ -1,0 +1,20 @@
+name: tg
+desc: Identical to [[tan]]
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_tangent = tg 45; // Result is 1</sqf>
+see_also:
+- tan
+- sin
+- cos

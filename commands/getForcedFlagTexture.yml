@@ -1,0 +1,23 @@
+name: getForcedFlagTexture
+desc: A getter for [[forceFlagTexture]]. Forced texture is different from your normal flag texture, which can be retrieved with [[flagTexture]]
+groups:
+- Flags
+syntax:
+- call: !Unary object
+  ret:
+    type: String
+  right: !Item
+    name: object
+    desc: vehicle, unit or flag pole
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getForcedFlagTexture player;</sqf>
+see_also:
+- forceFlagTexture
+- Arma
+- '3:'
+- Flag
+- Textures

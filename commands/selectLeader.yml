@@ -1,0 +1,38 @@
+name: selectLeader
+desc: |-
+  Select the group's leader. Group locality can be checked with [[local]] command and group ownership with [[groupOwner]] command.
+
+  {{Feature | important | An invalid combination can be provided to this command, e.g ''unitName'' '''not''' being part of ''group''. In that case:
+  * ''unitName'' will be [[leader]] of ''group'', but will not be able to command them
+  * if ''unitName'' is deleted or killed, [[leader]] of ''group'' will be [[objNull]] and will not automatically be reassigned.
+  }}
+groups:
+- Groups
+syntax:
+- call: !Binary
+  - group
+  - unitName
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    type: Group
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>group player selectLeader player;</sqf>
+- |-
+  Make unit a leader from server:
+  <sqf>[group _unit, _unit] remoteExec ["selectLeader", groupOwner group _unit];</sqf>
+see_also:
+- commandFollow
+- doFollow
+- formationLeader
+- formLeader
+- isFormationLeader
+- leader
+- setLeader

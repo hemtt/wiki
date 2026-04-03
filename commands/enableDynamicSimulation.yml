@@ -1,0 +1,57 @@
+name: enableDynamicSimulation
+desc: |-
+  Enables or disables [[Arma 3: Dynamic Simulation]] for an object or group.
+
+  {{Feature|important|Dynamic simulation for AI units operates on [[Group]]s:
+  <sqf>
+  _unit enableDynamicSimulation true; // Does not work
+  group _unit enableDynamicSimulation true; // Works
+  </sqf>
+  It is not possible to enable dynamic simulation for groups that contain a player unit.
+  }}
+
+  {{Feature|informative|This command has no effect on ''mines''!}}
+groups:
+- Dynamic Simulation
+syntax:
+- call: !Binary
+  - target
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: target
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Global
+effect_loc: Local
+server_exec: true
+since: {}
+examples:
+- <sqf>_myObject enableDynamicSimulation true;</sqf>
+see_also:
+- enableDynamicSimulationSystem
+- dynamicSimulationSystemEnabled
+- dynamicSimulationEnabled
+- setDynamicSimulationDistance
+- dynamicSimulationDistance
+- setDynamicSimulationDistanceCoef
+- dynamicSimulationDistanceCoef
+- triggerDynamicSimulation
+- canTriggerDynamicSimulation
+- enableSimulation
+- simulationEnabled
+- enableSimulationGlobal
+- Arma
+- '3:'
+- Dynamic
+- Simulation

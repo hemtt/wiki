@@ -1,0 +1,36 @@
+name: textLogFormat
+desc: |-
+  Debugging output.
+  {{Feature|warning|This command is non-functional in the retail version}}
+groups:
+- Broken Commands
+syntax:
+- call: !Unary
+  - format
+  - arg1
+  - arg2
+  - argN
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: format
+    type: String
+  - !Item
+    name: arg1
+    type: Anything
+  - !Item
+    name: arg2
+    type: Anything
+  - !Item
+    name: argN
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- diag_log
+- BIS_fnc_log
+- BIS_fnc_logFormat

@@ -1,0 +1,21 @@
+name: gearSlotAmmoCount
+desc: Returns ammo count of assigned magazine.
+groups:
+- Unit Inventory
+- GUI Control
+syntax:
+- call: !Unary control
+  ret:
+    type: Number
+  right: !Item
+    name: control
+    desc: '{{hl|CT_ITEMSLOT 103}}'
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _ammoCount = gearSlotAmmoCount _control;</sqf>
+see_also:
+- gearSlotData
+- gearIDCAmmoCount

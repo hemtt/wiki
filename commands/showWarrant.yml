@@ -1,0 +1,23 @@
+name: showWarrant
+desc: Enable ID card. {{Feature|warning|Obsolete command.}}
+groups:
+- Interaction
+- Broken Commands
+syntax:
+- call: !Unary show
+  ret:
+    type: Nothing
+  right: !Item
+    name: show
+    desc: (default [[false]])
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>showWarrant true;</sqf>
+see_also:
+- showCompass
+- showGPS
+- showMap
+- showWatch

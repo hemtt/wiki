@@ -1,0 +1,30 @@
+name: engineOn
+desc: Activates and deactivates the engine of a vehicle.
+multiplayer_note: Executed on a remote vehicle this command may turn the engine on but then it will get turned off by itself after a short while.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicle
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: state
+    desc: '[[true]] to turn the engine on, [[false]] to turn it off'
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>if (!isEngineOn _jeep) then { _jeep engineOn true; };</sqf>
+- |-
+  <sqf>
+  waitUntil { player == driver _jeep; };
+  vehicle player engineOn true;
+  </sqf>
+see_also:
+- isEngineOn

@@ -1,0 +1,25 @@
+name: enableAutoTrimRTD
+desc: "Toggle auto-trim for RTD helicopters. \n{{Feature|afm}}"
+groups:
+- RTD
+syntax:
+- call: !Binary
+  - helicopterRTD
+  - enable
+  ret:
+    type: Boolean
+  left: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+  right: !Item
+    name: enable
+    desc: enable or disable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myHelicopterRTD enableAutoTrimRTD true;</sqf>
+see_also:
+- isAutoTrimOnRTD

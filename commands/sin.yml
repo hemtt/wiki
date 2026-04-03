@@ -1,0 +1,20 @@
+name: sin
+desc: Sine of x.
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    desc: value in degree
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_sine = sin 30; // result is 0.5</sqf>
+see_also:
+- cos
+- tan

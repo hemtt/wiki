@@ -1,0 +1,36 @@
+name: ctrlMapPosition
+desc: A getter for [[ctrlMapSetPosition]]. Returns map position in format [x, y, w, h]. If map is inside a Controls Group, the x and y position is relative to the Controls Group top left corner.
+groups:
+- GUI Control - Map
+syntax:
+- call: !Unary map
+  ret:
+    type: !ArraySized
+    - name: x
+      type: Number
+      desc: position in x
+      since: null
+    - name: y
+      type: Number
+      desc: position in y
+      since: null
+    - name: w
+      type: Number
+      desc: width of the map control
+      since: null
+    - name: h
+      type: Number
+      desc: height of the map control
+      since: null
+  right: !Item
+    name: map
+    desc: '[[CT_MAP|Map control]]'
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ctrlMapPosition _map;</sqf>
+see_also:
+- ctrlMapSetPosition
+- ctrlCreate

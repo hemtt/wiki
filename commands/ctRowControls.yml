@@ -1,0 +1,41 @@
+name: ctRowControls
+desc: Returns array of controls on the row with the given index.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Binary
+  - control
+  - index
+  ret:
+    type: !ArrayUnsized
+      value: Control
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_array = _control ctRowControls 0;</sqf>
+see_also:
+- ctAddRow
+- ctAddHeader
+- ctClear
+- ctCurSel
+- ctSetCurSel
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctSetData
+- ctData
+- ctFindRowHeader
+- ctFindHeaderRows
+- ctRemoveRows
+- ctRemoveHeaders
+- ctSetRowTemplate
+- ctSetHeaderTemplate

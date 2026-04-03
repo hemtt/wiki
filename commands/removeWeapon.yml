@@ -1,0 +1,57 @@
+name: removeWeapon
+desc: |-
+  Remove weapon from a unit. The unit must be [[Multiplayer Scripting#Locality|local]] to the computer where command is executed.
+  For a global version of this command, see [[removeWeaponGlobal]].
+
+  {{Feature|informative|
+  It is possible to create invalid combinations with this command (e.g attempting to remove a weapon that a unit does not possess).
+  When doing so, application behaviour is undefined.
+  }}
+groups:
+- Unit Inventory
+- Vehicle Inventory
+syntax:
+- call: !Binary
+  - unit
+  - weapon
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: unit or vehicle
+    type: Object
+  right: !Item
+    name: weapon
+    desc: weapon class name
+    type: String
+- call: !Binary
+  - object
+  - - weapon
+    - autoselect
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    desc: unit or vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: weapon
+    desc: weapon class name
+    type: String
+  - !Item
+    name: autoselect
+    desc: (Optional, default [[true]]) [[false]] to abort weapon autoselection when removing primary weapon.
+    type: String
+  since:
+    arma3: '2.20'
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeWeapon "BAF_L85A2_RIS_SUSAT";</sqf>
+- <sqf>An_2 removeWeapon "M240_veh";</sqf>
+see_also:
+- removeWeaponGlobal
+- addWeapon
+- removeAllWeapons

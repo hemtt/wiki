@@ -1,0 +1,56 @@
+name: createGuardedPoint
+desc: |-
+  Adds a point guarded by the given side (scripted way of adding equivalent of "GUARDED BY" trigger in [[:Category:Eden Editor|Editor]]). A closest AI group in the given side with assigned "GUARD" waypoint will attempt to secure this guard point. The actual guarded position is determined via the following rules:
+  * Given "position" is always considered. It could be [[Object]], [[Group]], [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]. In every case, z coordinate will be ignored and point will be placed on nearest surface.
+  * If "objectMapID" is not negative, the position of the object with the given ID is used (Overrides "position"). -1 to ignore this argument. z of the object position will be intact.
+  * If the given "vehicle" is valid, the position of the vehicle is extracted and guarded (Overrides both "position" and "objectMapID"). [[objNull]] to ignore. z of the vehicle position will be intact.
+  To be used with "GUARD" [[setWaypointType|waypoint]].
+  {{Feature|informative|To know how does the "GUARD" waypoint work, see [[Waypoint:Guard]].}}
+groups:
+- Waypoints
+syntax:
+- call: !Unary
+  - side
+  - position
+  - objectMapID
+  - vehicle
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: side
+    desc: the side which will be guarding
+    type: Side
+  - !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  - !Item
+    name: objectMapID
+    desc: static id of map object. -1 to ignore
+    type: Number
+  - !Item
+    name: vehicle
+    desc: vehicle to be used for position. [[objNull]] to ignore
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>createGuardedPoint [east, [0,0], -1, vehicle player];</sqf>
+see_also:
+- createTrigger
+- addWaypoint
+- setWaypointType

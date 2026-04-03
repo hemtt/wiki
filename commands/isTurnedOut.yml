@@ -1,0 +1,21 @@
+name: isTurnedOut
+desc: Returns [[true]] if given unit is turned out, otherwise [[false]]. The output changes to [[true]] after unit finished turning out, however will change to [[false]] almost immediately after unit is ordered to turn in.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+  right: !Item
+    name: unit
+    desc: unit on turn(in/out) enabled turret
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_commanderOut = isTurnedOut (tank turretUnit [0,0]);</sqf>
+see_also:
+- moveOut
+- moveInDriver
+- turretUnit

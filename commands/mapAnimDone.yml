@@ -1,0 +1,21 @@
+name: mapAnimDone
+desc: Check if map animation is finished.
+groups:
+- Map
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>private _isDone = mapAnimDone;</sqf>
+see_also:
+- mapAnimAdd
+- mapAnimClear
+- mapAnimCommit
+- ctrlMapAnimAdd
+- ctrlMapAnimClear
+- ctrlMapAnimCommit
+- ctrlMapAnimDone

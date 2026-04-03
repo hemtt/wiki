@@ -1,0 +1,28 @@
+name: camSetRelPos
+desc: Sets the position of the given camera relative to its target, set with [[camSetTarget]]. Needs a call to [[camCommit]] to be conducted.{{Feature | important |Since it sets relative position to the target, the [[camSetTarget]] command should be executed already, before [[camSetRelPos]].}}
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    desc: object of type "camera"
+    type: Object
+  right: !Item
+    name: position
+    type: Position3dRelative
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- |-
+  <sqf>
+  _cam camSetTarget _car;
+  _cam camSetRelPos [0,10,8];
+  </sqf>
+see_also:
+- camSetPos

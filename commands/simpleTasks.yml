@@ -1,0 +1,20 @@
+name: simpleTasks
+desc: Return all simple tasks assigned to given unit.
+groups:
+- Briefing
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: Task
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_tasks = simpleTasks player;</sqf>
+see_also:
+- createSimpleTask
+- currentTask

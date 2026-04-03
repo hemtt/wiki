@@ -1,0 +1,34 @@
+name: disableBrakes
+desc: Disables autobrake, which is engaged when vehicle is stationary and stops wheels from rotating freely when vehicle is pushed.
+groups:
+- PhysX
+syntax:
+- call: !Binary
+  - transport
+  - disable
+  ret:
+    type: Nothing
+  left: !Item
+    name: transport
+    desc: PhysX car or tank
+    type: Object
+  right: !Item
+    name: disable
+    desc: '[[true]] to disable autobrake. The autobrake is re-enabled if the driver uses brakes'
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>myCar disableBrakes true;</sqf>
+see_also:
+- brakesDisabled
+- awake
+- isAwake
+- addTorque
+- addForce
+- vectorModelToWorld
+- vectorModelToWorldVisual
+- selectionPosition
+- setVelocityTransformation
+- setVelocityModelSpace

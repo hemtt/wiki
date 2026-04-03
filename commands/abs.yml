@@ -1,0 +1,19 @@
+name: abs
+desc: Returns absolute (positive) value of a real number.
+groups:
+- Math
+syntax:
+- call: !Unary x
+  ret:
+    type: Number
+  right: !Item
+    name: x
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_n = abs -3; // Returns 3</sqf>
+see_also:
+- +
+- '-'

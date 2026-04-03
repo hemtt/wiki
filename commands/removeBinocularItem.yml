@@ -1,0 +1,28 @@
+name: removeBinocularItem
+desc: Removes given weapon item, including magazine, from the [[binocular]] weapon.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeBinocularItem "Laserbatteries";</sqf>
+see_also:
+- addBinocularItem
+- binocularItems
+- removeAllBinocularItems
+- removePrimaryWeaponItem
+- removeSecondaryWeaponItem
+- removeHandgunItem

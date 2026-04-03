@@ -1,0 +1,21 @@
+name: getConnectedUAVUnit
+desc: Returns UAV/UGV AI unit, which player is controlling. To return UAV vehicle, see [[getConnectedUAV]]
+groups:
+- Remote Control
+syntax:
+- call: !Unary person
+  ret:
+    type: Object
+    desc: UAV unit (AI driver or AI gunner) or [[objNull]] otherwise including if the connected person is remote
+  right: !Item
+    name: person
+    desc: unit controlling the UAV/UGV
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _playersDrone = getConnectedUAVUnit player;</sqf>
+see_also:
+- getConnectedUAV
+- isUAVConnected

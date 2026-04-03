@@ -1,0 +1,22 @@
+name: setTrafficDistance
+desc: Set maximum ambient traffic draw distance (in 2D). {{Feature|arma3|This command does nothing in {{arma3}}.}}
+groups:
+- Environment
+syntax:
+- call: !Unary distance
+  ret:
+    type: Nothing
+  right: !Item
+    name: distance
+    desc: draw distance (in meter)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setTrafficDistance 1000;</sqf>
+see_also:
+- enableTraffic
+- setTrafficDensity
+- setTrafficGap
+- setTrafficSpeed

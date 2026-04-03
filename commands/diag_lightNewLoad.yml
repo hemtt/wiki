@@ -1,0 +1,22 @@
+name: diag_lightNewLoad
+desc: |-
+  Allows loading of lighting config during the gameplay (effectively changing the current scene lighting).
+  Filename path can be either absolute or relative. The file must contain only the class LightingNew, which should contain lighting configuration.
+groups:
+- Lights
+- Diagnostic
+syntax:
+- call: !Unary path
+  ret:
+    type: Nothing
+  right: !Item
+    name: path
+    desc: the path to the config filename
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>diag_lightNewLoad "o:\lighting.txt";</sqf>
+see_also:
+- diag_setLightNew

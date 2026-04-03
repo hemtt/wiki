@@ -1,0 +1,19 @@
+name: waypointCompletionRadius
+desc: Gets the radius around the waypoint where the waypoint is completed.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: Number
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_radius = waypointCompletionRadius [groupOne, 1];</sqf>
+see_also:
+- waypoints
+- setWaypointCompletionRadius

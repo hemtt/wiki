@@ -1,0 +1,30 @@
+name: ctrlRemoveEventHandler
+desc: Remove a given event handler from the given control.
+groups:
+- GUI Control - Event Handlers
+- Event Handlers
+syntax:
+- call: !Binary
+  - control
+  - - type
+    - id
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: type
+    type: String
+  - !Item
+    name: id
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_map ctrlRemoveEventHandler ["Draw", _id];</sqf>
+see_also:
+- ctrlAddEventHandler
+- ctrlRemoveAllEventHandlers

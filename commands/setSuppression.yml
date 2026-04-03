@@ -1,0 +1,26 @@
+name: setSuppression
+desc: Sets the given suppression value for the given unit.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - unit
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: value
+    type: !NumberRange
+    - 0
+    - 1
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>unit_1 setSuppression 1;</sqf>
+see_also:
+- getSuppression
+- suppressFor

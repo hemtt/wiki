@@ -1,0 +1,27 @@
+name: setAutonomous
+desc: Sets UAV autonomous mode.
+groups:
+- Remote Control
+syntax:
+- call: !Binary
+  - uav
+  - bool
+  ret:
+    type: Boolean
+    desc: whether the operation was successful. Returns [[false]] when the object is not a uav.
+  left: !Item
+    name: uav
+    type: Object
+  right: !Item
+    name: bool
+    type: Boolean
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>uav setAutonomous true;</sqf>
+see_also:
+- isAutonomous
+- disableAI
+- enableAI
+- checkAIFeature

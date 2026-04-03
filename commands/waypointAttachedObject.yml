@@ -1,0 +1,18 @@
+name: waypointAttachedObject
+desc: Gets the object attached to the waypoint.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: Object
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointAttachedObject [groupOne,1];</sqf>
+see_also:
+- waypointAttachObject

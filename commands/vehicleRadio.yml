@@ -1,0 +1,35 @@
+name: vehicleRadio
+desc: |-
+  Sends the audio message to the vehicle radio channel. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol. The transmission will play only on the PC where command was executed. If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]).
+  {{Feature|informative|When transmitting unit gets killed, transmission will be interrupted. However when receiving unit gets killed, the transmission continues to play.}}
+groups:
+- Radio and Chat
+- Sounds
+syntax:
+- call: !Binary
+  - unit
+  - radioName
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: unit to transmit
+    type: Object
+  right: !Item
+    name: radioName
+    desc: class name from CfgRadio
+    type: String
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_soldierOne vehicleRadio "messageOne";</sqf>
+- <sqf>player vehicleRadio configName selectRandom ("true" configClasses (configFile >> "CfgRadio"));</sqf>
+see_also:
+- sideRadio
+- groupRadio
+- customRadio
+- vehicleChat
+- globalRadio
+- directSay
+- commandRadio

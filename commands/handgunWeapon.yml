@@ -1,0 +1,26 @@
+name: handgunWeapon
+desc: Returns the name of a unit's handgun (an empty string if there is none).
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint handgunWeapon player; //"hgun_P07_F"</sqf>
+see_also:
+- handgunMagazine
+- handgunItems
+- addHandgunItem
+- removeHandgunItem
+- removeAllHandgunItems
+- primaryWeapon
+- secondaryWeapon
+- currentWeapon
+- weapons

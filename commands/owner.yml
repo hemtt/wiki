@@ -1,0 +1,28 @@
+name: owner
+desc: On server machine, returns the [[Multiplayer_Scripting#Machine_network_ID | machine network ID]] of the client to which the object is [[Multiplayer Scripting#Locality|local]]. Otherwise returns 0. For use on clients [[clientOwner]] command is available. To find out the owner of a [[Group]], use [[groupOwner]].
+groups:
+- Multiplayer
+syntax:
+- call: !Unary object
+  ret:
+    type: Number
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+server_exec: true
+since: {}
+examples:
+- <sqf>_clientID = owner _someobject;</sqf>
+see_also:
+- publicVariableClient
+- setOwner
+- setGroupOwner
+- groupOwner
+- flagOwner
+- onPlayerConnected
+- didJIPOwner
+- local
+- admin
+- remoteExecutedOwner

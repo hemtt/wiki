@@ -1,0 +1,16 @@
+name: moveTime
+desc: Returns the current time of the most important RTM animation currently being played on the soldier.
+groups:
+- Animations
+syntax:
+- call: !Unary soldier
+  ret:
+    type: Number
+  right: !Item
+    name: soldier
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>moveTime player;</sqf>

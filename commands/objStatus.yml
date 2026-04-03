@@ -1,0 +1,30 @@
+name: objStatus
+desc: |-
+  Sets the status of an objective that was defined in [[Briefing.html|briefing.html]].
+
+  Status may be one of:
+  * "ACTIVE"
+  * "FAILED"
+  * "DONE"
+  * "HIDDEN"
+
+  To refer to an objective that is named "OBJ_1", for example, use only the index number in this command (i.e. "1" objStatus "HIDDEN").
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - objectivenumber
+  - status
+  ret:
+    type: Nothing
+  left: !Item
+    name: objectivenumber
+    type: String
+  right: !Item
+    name: status
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\"1\" objStatus \"DONE\";</sqf> \nMarks the objective named \"OBJ_1\" as completed."

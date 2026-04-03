@@ -1,0 +1,41 @@
+name: setVehicleTIPars
+desc: |-
+  Sets the "heat" state of different vehicle parts for Thermal Imaging detection.
+  This allows simulation of heated up parts of a vehicle without it actually having to utilize them - on a 0..1 range - 0 being cold, 1 being hot.
+  {{Feature|informative|This command does not work on infantry weapons.}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicle
+  - - engine
+    - wheels
+    - weapon
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    desc: vehicle whose components are manipulated
+    type: Object
+  right: !Array
+  - !Item
+    name: engine
+    desc: engine and body's heat
+    type: Number
+  - !Item
+    name: wheels
+    desc: tracks/wheels' heat
+    type: Number
+  - !Item
+    name: weapon
+    desc: main weapon's heat
+    type: Number
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- "<sqf>\nvehicle player setVehicleTIPars [1, 1, 1];\t\t\t// set all parts hot\nvehicle player setVehicleTIPars [0, 0, 0];\t\t\t// set all parts cold\nvehicle player setVehicleTIPars [0.5, 0.5, 0.5];\t// set all parts warm\n</sqf>"
+- <sqf>vehicle player setVehicleTIPars [1, 0, 0]; // set the engine warm, perfect for winter</sqf>
+see_also:
+- disableTIEquipment
+- setCamUseTI

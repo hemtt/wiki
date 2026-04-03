@@ -1,0 +1,19 @@
+name: isHideBehindScripted
+desc: Return whether the vehicle has set the [[hideBehindScripted]] to [[true]] or not.
+groups:
+- Broken Commands
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isHidden = isHideBehindScripted _vehicle;</sqf>
+see_also:
+- hideBehindScripted

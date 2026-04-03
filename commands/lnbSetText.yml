@@ -1,0 +1,74 @@
+name: lnbSetText
+desc: Sets the text in the item with the given position of the 2D listbox.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  - data
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      type: Number
+    - !Item
+      name: column
+      type: Number
+  - !Item
+    name: data
+    type: String
+- call: !Binary
+  - ctrl
+  - - - row
+      - column
+    - data
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Array
+    - !Item
+      name: row
+      type: Number
+    - !Item
+      name: column
+      type: Number
+  - !Item
+    name: data
+    type: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>lnbSetText [101, [0,1], "#1"];</sqf>
+- <sqf>_ctrl lnbSetText [[0,1], "#1"];</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbColor
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

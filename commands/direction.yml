@@ -1,0 +1,36 @@
+name: direction
+desc: Returns the direction an object or a location is facing (differs from [[getDir]] in that this also works with locations).
+groups:
+- Object Manipulation
+- Locations
+syntax:
+- call: !Unary object
+  ret:
+    type: !NumberRange
+    - 0
+    - 360
+    desc: Direction in degrees
+  right: !Item
+    name: object
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Location
+        desc: null
+        since: null
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  player setDir 90;
+  _d = direction player;//returns 90
+  </sqf>
+see_also:
+- getDir
+- getDirVisual
+- setDir
+- setDirection

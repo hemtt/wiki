@@ -1,0 +1,36 @@
+name: enableIRLasers
+desc: Allows the AI to use IR lasers. Units should be in "Combat" [[behaviour]].
+groups:
+- Weapons
+syntax:
+- call: !Binary
+  - unitOrGroup
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitOrGroup
+    desc: the unit or the group allowed to use IR lasers
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: value
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>group player enableIRLasers true;</sqf>
+see_also:
+- isIRLaserOn
+- enableGunLights
+- isLightOn
+- isCollisionLightOn
+- setPilotLight
+- setCollisionLight

@@ -1,0 +1,24 @@
+name: removeUniform
+desc: Removes uniform from unit.
+groups:
+- Containers
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeUniform player;</sqf>
+see_also:
+- addUniform
+- forceAddUniform
+- isUniformAllowed
+- uniform
+- removeVest
+- removeBackpack

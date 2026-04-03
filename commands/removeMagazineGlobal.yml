@@ -1,0 +1,24 @@
+name: removeMagazineGlobal
+desc: Removes the magazine from the unit.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - magazineName
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: magazineName
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeMagazineGlobal "30Rnd_65x39_caseless_mag";</sqf>
+see_also:
+- removeMagazine
+- removeMagazines

@@ -1,0 +1,40 @@
+name: dynamicSimulationEnabled
+desc: A getter for [[enableDynamicSimulation]].
+groups:
+- Dynamic Simulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Boolean
+  right: !Item
+    name: object
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str dynamicSimulationEnabled _myObject;</sqf>
+see_also:
+- enableDynamicSimulationSystem
+- dynamicSimulationSystemEnabled
+- enableDynamicSimulation
+- setDynamicSimulationDistance
+- dynamicSimulationDistance
+- setDynamicSimulationDistanceCoef
+- dynamicSimulationDistanceCoef
+- triggerDynamicSimulation
+- canTriggerDynamicSimulation
+- enableSimulation
+- simulationEnabled
+- enableSimulationGlobal
+- Arma
+- '3:'
+- Dynamic
+- Simulation

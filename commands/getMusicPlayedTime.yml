@@ -1,0 +1,20 @@
+name: getMusicPlayedTime
+desc: Returns elapsed time in seconds for currently playing music track.
+groups:
+- Sounds
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  playMusic ["LeadTrack06_F_Tank", 0];
+  onEachFrame {hintSilent str getMusicPlayedTime};
+  </sqf>
+see_also:
+- addMusicEventHandler
+- playMusic

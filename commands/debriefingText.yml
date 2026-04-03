@@ -1,0 +1,21 @@
+name: debriefingText
+desc: Returns debriefing text of provided end.
+groups:
+- Briefing
+syntax:
+- call: !Unary end
+  ret:
+    type: String
+    desc: '''''end'''' debriefing text. If it does not exist in config, empty string is returned.'
+  right: !Item
+    name: end
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_deathText = debriefingText "endDeath";</sqf>
+see_also:
+- setDebriefingText
+- disableDebriefingStats
+- enableDebriefingStats

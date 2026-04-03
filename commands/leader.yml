@@ -1,0 +1,30 @@
+name: leader
+desc: Returns the group leader for the given '''unit''' or '''group'''. For dead units, [[objNull]] is returned.
+groups:
+- Groups
+syntax:
+- call: !Unary unitOrGroup
+  ret:
+    type: Object
+  right: !Item
+    name: unitOrGroup
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>leader group player == leader player;</sqf>
+- <sqf>leader group vehicle player;</sqf>
+- <sqf>leader player;</sqf>
+see_also:
+- formationLeader
+- formLeader
+- isFormationLeader
+- selectLeader

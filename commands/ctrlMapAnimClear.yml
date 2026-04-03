@@ -1,0 +1,24 @@
+name: ctrlMapAnimClear
+desc: Clears the map animation.
+groups:
+- GUI Control - Map
+syntax:
+- call: !Unary controlName
+  ret:
+    type: Nothing
+  right: !Item
+    name: controlName
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>ctrlMapAnimClear _ctrlMap;</sqf>
+see_also:
+- mapAnimAdd
+- mapAnimClear
+- mapAnimCommit
+- mapAnimDone
+- ctrlMapAnimAdd
+- ctrlMapAnimCommit
+- ctrlMapAnimDone

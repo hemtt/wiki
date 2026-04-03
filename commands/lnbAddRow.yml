@@ -1,0 +1,59 @@
+name: lnbAddRow
+desc: Adds a row of strings.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - data
+  ret:
+    type: Number
+    desc: row index
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: data
+    type: !ArrayUnsized
+      value: String
+- call: !Binary
+  - ctrl
+  - data
+  ret:
+    type: Number
+    desc: row index
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: data
+    type: !ArrayUnsized
+      value: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>lnbAddRow [1, ["COL1", "COL2"]];</sqf>
+- <sqf>_ctrl lnbAddRow ["COL1", "COL2"];</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbClear
+- lnbColor
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

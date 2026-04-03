@@ -1,0 +1,72 @@
+name: setFog
+desc: |-
+  Smoothly change the fog over given time (in seconds). See also [[fogParams]].
+  {{Feature|arma3|This command is MP synchronised, if executed on server, the changes will propagate globally. If executed on client effect is temporary as it will soon change to the server setting.}}
+multiplayer_note: Before {{arma3}}, server and clients could have each a different (local) fog value.
+groups:
+- Environment
+syntax:
+- call: !Binary
+  - time
+  - fog
+  ret:
+    type: Nothing
+  left: !Item
+    name: time
+    desc: transition time to the new value
+    type: Number
+  right: !Item
+    name: fog
+    desc: fog density in range 0..1
+    type: Number
+- call: !Binary
+  - time
+  - - fogValue
+    - fogDecay
+    - fogBase
+  ret:
+    type: Nothing
+  left: !Item
+    name: time
+    desc: transition time to the new value
+    type: Number
+  right: !Array
+  - !Item
+    name: fogValue
+    desc: normal [[fog]] value that represents fog density at ''fogBase'' level, in range 0..1
+    type: Number
+  - !Item
+    name: fogDecay
+    desc: decay of fog density with altitude, in range -1..1; a negative value means a "ceiling" fog
+    type: Number
+  - !Item
+    name: fogBase
+    desc: base altitude ([[Position#PositionASL|ASL]]) of fog (in meters), in range -5000..5000
+    type: Number
+  since:
+    arma3: '0.50'
+argument_loc: Unspecified
+effect_loc: Global
+server_exec: true
+since: {}
+examples:
+- <sqf>15 setFog 0.5;</sqf>
+- |-
+  Force no fog:
+  <sqf>
+  0 setFog 0;
+  // forceWeatherChange; // change is immediate
+  999999 setFog 0;
+  </sqf>
+- "<sqf>\n// Arma 3 examples:\n0 setFog [1, 0.01, 0];\n0 setFog [1, -1, 70];\t// mountain fog, starts from 70m ASL and thickens the higher you climb\n0 setFog [1, 1, 60];\t// valley fog, starts from 60m ASL and thickens the lower you descend\n0 setFog [1, 1, 0];\t\t// fooooog on the waaaater\n</sqf>"
+see_also:
+- Arma
+- '3:'
+- Improved
+- Fog
+- fog
+- fogParams
+- fogForecast
+- nextWeatherChange
+- forceWeatherChange
+- setRain

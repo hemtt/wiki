@@ -1,0 +1,37 @@
+name: ctrlSetDisabledColor
+desc: Sets the colorDisabled attribute of a control.
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - idc
+  - color
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+- call: !Binary
+  - ctrl
+  - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlSetDisabledColor [0.5, 0.5, 0.5, 0.5];</sqf>
+see_also:
+- ctrlSetActiveColor
+- ctrlSetBackgroundColor
+- ctrlTextColor

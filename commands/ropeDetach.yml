@@ -1,0 +1,40 @@
+name: ropeDetach
+desc: Detaches attached object from rope (i.e. detaches rope end from attached to it entity). See [[ropeAttachTo]] for attach operation.
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: !Binary
+  - attachedObject
+  - rope
+  ret:
+    type: Nothing
+  left: !Item
+    name: attachedObject
+    desc: entity attached to the end of rope
+    type: Object
+  right: !Item
+    name: rope
+    desc: rope object to which entity is attached
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>vehicle player ropeDetach myRope;</sqf>
+see_also:
+- ropeCreate
+- ropeDestroy
+- ropeSetCargoMass
+- ropes
+- canSlingLoad
+- enableRopeAttach
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeLength
+- ropeUnwound
+- ropeAttachedTo
+- ropeAttachEnabled
+- ropeCut
+- ropeEndPosition
+- ropeUnwind

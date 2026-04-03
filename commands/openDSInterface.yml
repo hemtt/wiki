@@ -1,0 +1,15 @@
+name: openDSInterface
+desc: |-
+  Opens MP interface.
+  {{Feature|arma3|This command is not present in {{arma3}}.}}
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>openDSInterface;</sqf>

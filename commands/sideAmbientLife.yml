@@ -1,0 +1,28 @@
+name: sideAmbientLife
+desc: Returns side of ambient life, for example ambient life placed in [[:Category:Eden Editor|Eden Editor]].
+groups:
+- Sides
+syntax:
+- call: Nular
+  ret:
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_sideAmbientLife = sideAmbientLife;</sqf>
+see_also:
+- side
+- west
+- blufor
+- east
+- opfor
+- resistance
+- independent
+- civilian
+- sideLogic
+- sideFriendly
+- sideEnemy
+- sideUnknown
+- playerSide
+- sideEmpty

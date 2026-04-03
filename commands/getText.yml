@@ -1,0 +1,35 @@
+name: getText
+desc: |-
+  Extracts [[localize]]d text from config entry, if entry is subject to [[localize|localization]], otherwise returns text value.
+  To obtain the translation key itself, see [[getTextRaw]].
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: String
+    desc: text value
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_text = getText (configFile >> "CfgVehicles" >> "Thing" >> "icon"); // "Get in %1 as Driver"</sqf>
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getArray
+- getNumber
+- inheritsFrom
+- isArray
+- isClass
+- isNumber
+- isText
+- select
+- getTextRaw

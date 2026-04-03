@@ -1,0 +1,44 @@
+name: commandWatch
+desc: Orders the unit(s) to watch the given position or target (via the radio). Use [[objNull]] as the target to order a unit to stop watching a position/target.
+multiplayer_note: |-
+  This command is only effective when used on local units.
+  When used on a remote unit, this command will create radio dialogue on the machine the unit is local to, but the unit will not watch the target object/position.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - units
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: units
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: target
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position
+        desc: null
+        since: null
+      - type: Object
+        desc: null
+        since: null
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldierOne commandWatch markerPos "MarkerMoveOne";</sqf>
+- <sqf>[s1, s2] commandWatch player;</sqf>
+see_also:
+- doWatch
+- lookAt
+- glanceAt

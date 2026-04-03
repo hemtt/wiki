@@ -1,0 +1,22 @@
+name: isKeyActive
+desc: |-
+  Checks whether the given key is active in the current user profile.
+
+  See keys, keysLimit and doneKeys in the [[Description.ext#keys|description.ext]] file of the missions.
+groups:
+- Mission Information
+syntax:
+- call: !Unary keyName
+  ret:
+    type: Boolean
+  right: !Item
+    name: keyName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_active = isKeyActive "Mission04Key";</sqf>
+see_also:
+- activateKey
+- deActivateKey

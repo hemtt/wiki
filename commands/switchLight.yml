@@ -1,0 +1,32 @@
+name: switchLight
+desc: |-
+  Controls whether a lamp is lit or not.
+  {{Feature|arma3|
+  This command was originally designed to only work with {{hl|CfgNonAIVehicles}} class {{hl|"StreetLamp"}} only.
+  Since {{arma3}} v1.92 this command was extended to work with street lights and some prop lights, like portable construction light.
+  }}
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - lamp
+  - mode
+  ret:
+    type: Nothing
+  left: !Item
+    name: lamp
+    type: Object
+  right: !Item
+    name: mode
+    desc: 'mode can be: "ON", "OFF" or "AUTO" (''''lamp'''' is on only during nighttime, default)'
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>(object 12345) switchLight "OFF";</sqf>
+- <sqf>nearestObject [player, "Streetlamp"] switchLight "OFF";</sqf>
+- <sqf>cursorObject switchLight "ON";</sqf>
+see_also:
+- lightIsOn
+- BIS_fnc_switchLamp

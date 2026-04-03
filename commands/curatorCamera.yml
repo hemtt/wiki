@@ -1,0 +1,17 @@
+name: curatorCamera
+desc: Returns curator camera object.
+groups:
+- Curator
+syntax:
+- call: Nular
+  ret:
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camCurator = curatorCamera;</sqf>
+see_also:
+- Arma
+- '3:'
+- Curator

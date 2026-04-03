@@ -1,0 +1,28 @@
+name: catch
+desc: Processes code when an [[Exception handling|exception]] is thrown in a [[try]] block. The exception caught can be found in the ''_exception'' variable.
+groups:
+- Program Flow
+syntax:
+- call: !Binary
+  - tryBlock
+  - code
+  ret:
+    type: Anything
+  left: !Item
+    name: tryBlock
+    type: ExceptionHandle
+  right: !Item
+    name: code
+    type: Code
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>try { throw "invalid argument" } catch {hint str _exception};</sqf>
+- <sqf>123 try { if (_this != 123) throw "invalid argument" } catch { hint str _exception };</sqf>
+- "The correct usage of shorthand alt syntax:\n<sqf>\ntry {\n\tif (a > b) throw \"Error: some error\"; // OK\n\t// the command argument is static\n} catch {\n\thint str _exception;\n};\n\ntry {\n\t_someFunc = {\n\t\t// ...\n\t};\n\tif (a > b) throw (call _someFunc); // NOT OK\n\t// the command argument is dynamic\n\t// _someFunc is called first to get the value regardless of (a > b) outcome\n} catch {\n\thint str _exception;\n};\n\ntry {\n\t_someFunc = {\n\t\t// ...\n\t};\n\tif (a > b) then { throw (call _someFunc) }; /// OK\n\t// the command argument is dynamic\n\t// _someFunc is only called when (a > b) is true\n} catch {\n\thint str _exception;\n};\n</sqf>"
+see_also:
+- Exception
+- handling
+- try
+- throw

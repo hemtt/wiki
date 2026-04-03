@@ -1,0 +1,36 @@
+name: waypointPosition
+desc: Get provided waypoint's position.
+alias:
+- '[[getWPPos]]'
+groups:
+- Waypoints
+syntax:
+- call: !Unary
+  - groupOrUnit
+  - index
+  ret:
+    type: Position3dAGL
+  right: !Array
+  - !Item
+    name: groupOrUnit
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Group
+        desc: null
+        since: null
+      - type: Object
+        desc: null
+        since: null
+  - !Item
+    name: index
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_wPos = waypointPosition [_groupOne, 1];</sqf>
+see_also:
+- waypoints
+- setWaypointPosition
+- waypointHousePosition
+- setWPPos

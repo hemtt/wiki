@@ -1,0 +1,45 @@
+name: setCenterOfMass
+desc: Changes the center of mass of an object smoothly during the given time (in seconds). A time of zero (or using the alternative syntax) means an immediate change.
+groups:
+- PhysX
+syntax:
+- call: !Binary
+  - myObject
+  - - centerOfMass
+    - time
+  ret:
+    type: Nothing
+  left: !Item
+    name: myObject
+    type: Object
+  right: !Array
+  - !Item
+    name: centerOfMass
+    desc: relative to the model centre
+    type: Position3dRelative
+  - !Item
+    name: time
+    desc: transition time, 0 for instant center of mass transfer
+    type: Number
+- call: !Binary
+  - myObject
+  - centerOfMass
+  ret:
+    type: Nothing
+  left: !Item
+    name: myObject
+    type: Object
+  right: !Item
+    name: centerOfMass
+    desc: relative to the model centre
+    type: Position3dRelative
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>myObject setCenterOfMass [[0,-1,0], 0.5];</sqf>
+- <sqf>myObject setCenterOfMass [0,-1,0];</sqf>
+see_also:
+- getCenterOfMass
+- setMass
+- getMass

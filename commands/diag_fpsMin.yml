@@ -1,0 +1,20 @@
+name: diag_fpsMin
+desc: Returns minimal framerate. Calculated from the longest frame over last 16 frames.
+groups:
+- Diagnostic
+- Performance Profiling
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_minfps = diag_fpsMin;</sqf>
+see_also:
+- diag_fps
+- diag_frameNo
+- diag_log
+- diag_tickTime
+- diag_deltaTime

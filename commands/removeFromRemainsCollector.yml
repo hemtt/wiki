@@ -1,0 +1,21 @@
+name: removeFromRemainsCollector
+desc: Removes vehicles/units from the garbage collector, so they do not get deleted automatically; added earlier with [[addToRemainsCollector]].
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary remains
+  ret:
+    type: Nothing
+  right: !Item
+    name: remains
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeFromRemainsCollector [unit1, unit2, vehicle1];</sqf>
+see_also:
+- addToRemainsCollector
+- isInRemainsCollector
+- diag_remainsCollector

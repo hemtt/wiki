@@ -1,0 +1,15 @@
+name: clearWeaponPool
+desc: Remove all weapons from the weapon pool, of which the player may choose in the following missions. Available in campaigns only.
+groups:
+- Weapon Pool
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>clearWeaponPool;</sqf>
+see_also:
+- addWeaponPool

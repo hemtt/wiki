@@ -1,0 +1,39 @@
+name: setCuratorSelected
+desc: Clear and set the curator selected items. Leave the items array empty to clear curator selection.
+groups:
+- Curator
+syntax:
+- call: !Unary items
+  ret:
+    type: Nothing
+  right: !Item
+    name: items
+    desc: flat array of items to set; strings are marker names
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+      - type: Waypoint
+        desc: null
+        since: null
+      - type: String
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setCuratorSelected [unit1, group1, [group1, waypointIndex], markerName1];</sqf>
+- <sqf>setCuratorSelected [vehicle1, unit1, unit2, unit3, unit4, group1];</sqf>
+see_also:
+- curatorMouseOver
+- curatorSelected
+- addCuratorSelected
+- curatorEditableObjects
+- Arma
+- '3:'
+- Curator

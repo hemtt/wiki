@@ -1,0 +1,20 @@
+name: isAllowedCrewInImmobile
+desc: Whether or not units can be in a vehicle with broken tracks/wheels.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+    desc: '[[true]] - allowed, [[false]] - not allowed'
+  right: !Item
+    name: vehicle
+    desc: transport
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif !(isAllowedCrewInImmobile _tank) then\n{\n\t_tank allowCrewInImmobile true;\n};\n</sqf>"
+see_also:
+- allowCrewInImmobile

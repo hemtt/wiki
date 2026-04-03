@@ -1,0 +1,19 @@
+name: ctrlForegroundColor
+desc: Returns control's foreground color.
+groups:
+- GUI Control
+syntax:
+- call: !Unary control
+  ret:
+    type: ArrayColor
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ctrlForegroundColor _control;</sqf>
+see_also:
+- ctrlSetForegroundColor
+- ctrlText

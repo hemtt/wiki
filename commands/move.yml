@@ -1,0 +1,39 @@
+name: move
+desc: Let group move to given position. Active waypoints will be ignored when command is used.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - group
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3dATL
+        desc: null
+        since: null
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_groupOne move position player;</sqf>
+see_also:
+- doMove
+- commandMove
+- addWaypoint

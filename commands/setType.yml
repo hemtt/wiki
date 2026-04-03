@@ -1,0 +1,23 @@
+name: setType
+desc: Changes a location to the specified class. Location classes are defined in CfgLocationTypes.
+groups:
+- Locations
+syntax:
+- call: !Binary
+  - location
+  - name
+  ret:
+    type: Nothing
+  left: !Item
+    name: location
+    type: Location
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myLocation setType "RockArea";</sqf>
+see_also:
+- type

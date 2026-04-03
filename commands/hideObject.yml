@@ -1,0 +1,33 @@
+name: hideObject
+desc: Hide entity. Can be used on soldiers and vehicles, also on static objects.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Nothing
+  right: !Item
+    name: object
+    type: Object
+- call: !Binary
+  - object
+  - hidden
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: hidden
+    desc: '[[true]]->hidden; [[false]]->visible'
+    type: Boolean
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>hideObject unitName;</sqf>
+- <sqf>objectName hideObject true;</sqf>
+see_also:
+- isObjectHidden
+- hideObjectGlobal
+- deleteCollection

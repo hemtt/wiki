@@ -1,0 +1,24 @@
+name: allDead
+desc: Return a list of all dead units including agents and destroyed vehicles. Dead units may be in vehicles.
+groups:
+- Object Detection
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>{ deleteVehicle _x } forEach allDead;</sqf>
+- "allAlive:\n<sqf>\n_all = allUnits + vehicles;\n{\n\t_all pushBack agent _x;\n} forEach (agents - [teamMemberNull]);\nallAlive = _all - allDead;\n</sqf>"
+see_also:
+- allDeadMen
+- allUnits
+- allGroups
+- playableUnits
+- switchableUnits
+- units
+- vehicles
+- allCurators

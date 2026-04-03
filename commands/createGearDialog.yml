@@ -1,0 +1,29 @@
+name: createGearDialog
+desc: |-
+  Opens gear dialog for given unit.
+  {{Feature|informative|[[action]] command can also be used:<sqf>player action ["Gear", player];</sqf>}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - unit
+  - resource
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: unit
+    type: Object
+  - !Item
+    name: resource
+    desc: (Optional)
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>createGearDialog [player];</sqf>
+see_also:
+- createDialog
+- createDisplay
+- action

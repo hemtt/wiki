@@ -1,0 +1,19 @@
+name: openDLCPage
+desc: Opens a Steam page of the app with given appId. Only works for known appId (game + linked DLCs)
+groups:
+- DLC
+syntax:
+- call: !Unary dlcID
+  ret:
+    type: Boolean
+    desc: result
+  right: !Item
+    name: dlcID
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '[[openDLCPage]] 288520'
+see_also:
+- isDLCAvailable

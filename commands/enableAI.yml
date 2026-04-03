@@ -1,0 +1,28 @@
+name: enableAI
+desc: "Enables parts of the AI behavior that was disabled by [[disableAI]]. \n{{Feature|important|When player switches and leaves behind AI unit, you need to enable \"TeamSwitch\" AI on it <sqf inline>_unit enableAI \"TeamSwitch\";</sqf> so that the unit continues with [[waypoints]].}}\n{{Feature|arma3|Since Arma 3 v1.96 it is possible to return the state of the given AI flag via [[checkAIFeature]] or set it using alias command [[enableAIFeature]].}}"
+groups:
+- AI Behaviour
+syntax:
+- call: !Binary
+  - unit
+  - skilltype
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: skilltype
+    desc: see [[disableAI]] for possible values.
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldierOne enableAI "Move";</sqf>
+see_also:
+- disableAI
+- checkAIFeature
+- enableAIFeature
+- vehicleMoveInfo
+- getUnitState

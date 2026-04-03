@@ -1,0 +1,28 @@
+name: diag_toggle
+desc: Toggles various diagnostics.
+groups:
+- Diagnostic
+syntax:
+- call: !Unary mode
+  ret:
+    type: Nothing
+  right: !Item
+    name: mode
+    desc: 'see [[Arma 3: Diagnostics Exe]]'
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+examples:
+- |-
+  <sqf>
+  diag_toggle "Animation"; // enable
+  diag_toggle "Animation"; // disable
+  </sqf>
+see_also:
+- Arma
+- '3:'
+- Diagnostics
+- Exe
+- diag_enable

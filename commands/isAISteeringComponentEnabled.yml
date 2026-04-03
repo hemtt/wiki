@@ -1,0 +1,20 @@
+name: isAISteeringComponentEnabled
+desc: Returns whether the [[useAISteeringComponent|AI steering component]] feature is enabled for the specified vehicle.
+groups:
+- AI Behaviour
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+    desc: '[[true]] if AI steering component is supported by the vehicle (i.e. defined in config) and enabled, [[false]] otherwise'
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>isAISteeringComponentEnabled myTank;</sqf>
+see_also:
+- useAISteeringComponent
+- isUsingAISteeringComponent

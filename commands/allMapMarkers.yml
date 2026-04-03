@@ -1,0 +1,29 @@
+name: allMapMarkers
+desc: |-
+  Returns all map marker names, including user-placed markers.
+
+  {{Feature|informative|
+  * {{GVI|arma3|1.58|size= 0.75}} User-defined markers have the following name format: {{hl|_USER_DEFINED #<PlayerID>/<MarkerID>/<ChannelID>}}, where:
+  ** <PlayerID> - unique network id of the player in [[String]] format, also available as [[String]] in the 6th param in [[Arma 3: Mission Event Handlers#PlayerConnected | "PlayerConnected"]] and [[Arma 3: Mission Event Handlers#PlayerDisconnected|"PlayerDisconnected"]] Event Handlers
+  ** <MarkerID> - an incrementing marker counter id
+  ** <ChannelID> - id of the chat channel in which the marker was placed (see [[currentChannel]])
+  * To obtain the custom waypoint's (set with {{Controls|LShift|LMB}}) position, see [[customWaypointPosition]].
+  }}
+groups:
+- Markers
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqf>_markers = allMapMarkers; // returns e.g ["marker1", "_USER_DEFINED #2/0"]</sqf>'
+- "<sqf>\n{\n\tprivate \"_a\";\n\t_a = toArray _x;\n\t_a resize 15;\n\tif (toString _a == \"_USER_DEFINED #\") then\n\t// or if (_x select [0, 15] == \"_USER_DEFINED #\") since {{arma3}} v1.28\n\t{\n\t\tdeleteMarker _x;\n\t};\n} forEach allMapMarkers;\n</sqf>"
+- "<sqf>\nif (_someString in allMapMarkers) then\n{\n\thint (_someString + \" is an existing marker\");\n};\n</sqf>"
+see_also:
+- createMarker
+- deleteMarker
+- customWaypointPosition

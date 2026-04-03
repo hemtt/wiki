@@ -1,0 +1,32 @@
+name: getArray
+desc: Extract array from config entry.
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: !ArrayUnsized
+      value: Anything
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_array = getArray (configFile >> "CfgVehicles" >> "Thing" >> "threat");</sqf>
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getText
+- getNumber
+- inheritsFrom
+- isArray
+- isClass
+- isNumber
+- isText
+- select

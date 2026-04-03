@@ -1,0 +1,24 @@
+name: inflame
+desc: Sets the state of a fireplace.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - fireplace
+  - burn
+  ret:
+    type: Nothing
+  left: !Item
+    name: fireplace
+    type: Object
+  right: !Item
+    name: burn
+    desc: '[[true]] to let it burn, [[false]] to extinguish it.'
+    type: Boolean
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_fireplaceOne inflame true;</sqf>
+see_also:
+- inflamed

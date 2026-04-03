@@ -1,0 +1,37 @@
+name: ppEffectDestroy
+desc: Destroy [[Post Process Effects]] given by handle or array of handles.
+groups:
+- Camera Control
+syntax:
+- call: !Unary effect
+  ret:
+    type: Nothing
+  right: !Item
+    name: effect
+    desc: effect handle
+    type: Number
+- call: !Unary effects
+  ret:
+    type: Nothing
+  right: !Item
+    name: effects
+    desc: array of effect handles
+    type: !ArrayUnsized
+      value: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ppEffectDestroy _hndl;</sqf>
+- <sqf>ppEffectDestroy [_hndl0, _hndl1, _hndl2];</sqf>
+see_also:
+- Post
+- Process
+- Effects
+- ppEffectForceInNVG
+- ppEffectEnable
+- ppEffectEnabled
+- ppEffectCreate
+- ppEffectCommit
+- ppEffectCommitted
+- ppEffectAdjust

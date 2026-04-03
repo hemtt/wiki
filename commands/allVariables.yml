@@ -1,0 +1,55 @@
+name: allVariables
+desc: Returns a list of all variables from the desired namespace.
+multiplayer_note: '{{Feature|important|Using [[profileNamespace]] and [[uiNamespace]] with this command has been disabled in multiplayer in {{GVI|arma3|1.40}} - see {{Link|https://forums.bohemia.net/forums/topic/140837-development-branch-changelog/?do{{=}}findComment&comment{{=}}2869646|Changelog}}.}}'
+groups:
+- Namespaces
+- Variables
+syntax:
+- call: !Unary namespace
+  ret:
+    type: !ArrayUnsized
+      value: String
+    desc: array of variable names. All names are in lower case (see [[toLower]])
+  right: !Item
+    name: namespace
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Namespace
+        desc: null
+        since: null
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+      - type: Task
+        desc: null
+        since: null
+      - type: Location
+        desc: null
+        since: null
+      - type: TeamMember
+        desc: null
+        since: null
+      - type: Control
+        desc: null
+        since:
+          arma3: '2.2'
+      - type: Display
+        desc: null
+        since:
+          arma3: '2.2'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_allVarsUINamespace = allVariables uiNamespace;</sqf>
+- <sqf>_allVarsTrigger = allVariables trigger1;</sqf>
+see_also:
+- allControls
+- allDisplays
+- allCurators
+- allGroups
+- allDead
+- allDeadMen

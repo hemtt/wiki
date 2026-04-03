@@ -1,0 +1,32 @@
+name: ctrlIDC
+desc: Returns control IDC.
+groups:
+- GUI Control
+syntax:
+- call: !Unary control
+  ret:
+    type: Number
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ctrlIDC _ctrl;</sqf>
+- <sqf>ctrlIDC controlNull; // returns -1</sqf>
+see_also:
+- allControls
+- allDisplays
+- controlsGroupCtrl
+- ctrlDelete
+- ctrlModel
+- ctrlSetModel
+- ctrlPosition
+- ctrlSetPosition
+- ctrlClassName
+- ctrlModelScale
+- ctrlSetModelScale
+- ctrlModelDirAndUp
+- ctrlSetModelDirAndUp
+- displayParent

@@ -1,0 +1,26 @@
+name: removeAllMagazines
+desc: Removes all magazines from the unit.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeAllMagazines player;</sqf>
+see_also:
+- removeMagazines
+- addMagazine
+- magazines
+- removeMagazine
+- removeWeapon
+- removeMagazinesTurret
+- removeAllMagazinesTurret
+- removeMagazineTurret
+- setVehicleAmmo

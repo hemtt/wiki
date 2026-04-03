@@ -1,0 +1,19 @@
+name: markerAlpha
+desc: Gets the marker alpha. See [[setMarkerAlpha]].
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: Number
+  right: !Item
+    name: markerName
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>AlphaMarker = markerAlpha "myMarker";</sqf>
+see_also:
+- setMarkerAlpha
+- setMarkerAlphaLocal

@@ -1,0 +1,30 @@
+name: diag_enable
+desc: Toggles various diagnostics.
+groups:
+- Diagnostic
+syntax:
+- call: !Binary
+  - mode
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: mode
+    desc: 'see [[Arma 3: Diagnostics Exe]]'
+    type: String
+  right: !Item
+    name: state
+    desc: '[[true]] to enable diag mode, [[false]] to disable it'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+examples:
+- <sqf>"All" diag_enable true;</sqf>
+see_also:
+- Arma
+- '3:'
+- Diagnostics
+- Exe
+- diag_toggle

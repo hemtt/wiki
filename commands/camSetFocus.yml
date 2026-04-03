@@ -1,0 +1,35 @@
+name: camSetFocus
+desc: Sets camera focus range. It does not automatically commit changes (see [[camCommit]]). Use [-1, -1] to disable focus completely.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - focusRange
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    type: Object
+  right: !Item
+    name: focusRange
+    type: !ArraySized
+    - name: distance
+      type: Number
+      desc: null
+      since: null
+    - name: blur
+      type: Number
+      desc: sets the camera focus blur
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camera camSetFocus [50, 1];</sqf>
+see_also:
+- camCreate
+- camCommand
+- camDestroy
+- camCommit
+- camPrepareFocus

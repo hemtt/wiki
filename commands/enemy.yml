@@ -1,0 +1,19 @@
+name: enemy
+desc: |-
+  Returns ''Enemy'' side which is hostile to all units.
+  {{Feature|warning|This command is not functional and appears to have been replaced by [[sideEnemy]].}}
+groups:
+- Sides
+- Broken Commands
+syntax:
+- call: Nular
+  ret:
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqs>? _side == enemy : hint "ouch"</sqs>'
+see_also:
+- sideEnemy
+- sideFriendly

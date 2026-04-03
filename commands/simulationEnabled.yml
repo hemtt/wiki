@@ -1,0 +1,29 @@
+name: simulationEnabled
+desc: "Check if the entity has enabled simulation. \n\n{{Feature | important | The entity could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the entity simulation set up locally on the client that executed the command.\nSee [[enableSimulation]] for more info.}}"
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary entity
+  ret:
+    type: Boolean
+  right: !Item
+    name: entity
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>simulationEnabled player;</sqf>
+see_also:
+- enableSimulation
+- enableSimulationGlobal
+- enableDynamicSimulationSystem
+- dynamicSimulationSystemEnabled
+- enableDynamicSimulation
+- dynamicSimulationEnabled
+- setDynamicSimulationDistance
+- dynamicSimulationDistance
+- setDynamicSimulationDistanceCoef
+- dynamicSimulationDistanceCoef
+- triggerDynamicSimulation
+- canTriggerDynamicSimulation

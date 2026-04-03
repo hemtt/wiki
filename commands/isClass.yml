@@ -1,0 +1,31 @@
+name: isClass
+desc: Check if config entry represents config class.
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: Boolean
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ok = isClass (configFile >> "CfgVehicles");</sqf> Result is [[true]].
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getArray
+- getText
+- getNumber
+- inheritsFrom
+- isArray
+- isNumber
+- isText
+- select

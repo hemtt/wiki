@@ -1,0 +1,34 @@
+name: setVehicleInit
+desc: |-
+  Attach a statement to a unit. The statement is propagated over the network in MP games, it can be executed by invoking [[processInitCommands]].
+
+  {{Feature|arma3|For security reasons, the command was disabled in Arma 3. Use [[remoteExec]] for remote execution.}}
+multiplayer_note: |-
+  The statement will be sent to clients connecting after the command has been executed.<br>
+  Note that the statement will be executed automatically by [[Multiplayer Scripting#Join In Progress|JIP]] clients before [[Event Scripts#init.sqs|init.sqs]]/[[Event_Scripts#init.sqf|init.sqf]] have been executed - see [[Initialisation Order]].
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - unitName
+  - statement
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: Object
+  right: !Item
+    name: statement
+    type: String
+argument_loc: Unspecified
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldier3 setVehicleInit "this allowFleeing 0";</sqf>
+see_also:
+- Multiplayer
+- Scripting
+- Initialisation
+- Order
+- processInitCommands
+- clearVehicleInit

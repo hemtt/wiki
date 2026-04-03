@@ -1,0 +1,25 @@
+name: clearWeaponCargoGlobal
+desc: Removes all weapons from the vehicle cargo space. MP synchronized.
+groups:
+- Containers
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>clearWeaponCargoGlobal jeepOne;</sqf>
+see_also:
+- clearWeaponCargo
+- addWeaponCargo
+- clearMagazineCargo
+- clearMagazineCargoGlobal
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearItemCargo
+- clearItemCargoGlobal

@@ -1,0 +1,22 @@
+name: waypointHousePosition
+desc: Returns [[buildingPos]] index assigned to the waypoint.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: Number
+    desc: '[[buildingPos]] index'
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointHousePosition [groupOne,1];</sqf>
+see_also:
+- waypoints
+- waypointPosition
+- setWaypointHousePosition
+- buildingPos

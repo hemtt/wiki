@@ -1,0 +1,29 @@
+name: get3DENEntityID
+desc: |-
+  Returns unique index of an [[Eden Entity]]. This number remains the same even after saving and loading the scenario. ´
+
+  {{Feature|informative|Since {{GVI|arma3|2.22}} this command also returns the IDs of [[Eden Entity|Eden Entities]] of type Object, Trigger, Group and Logic during [[is3DENPreview|preview]].}}
+groups:
+- Eden Editor
+syntax:
+- call: !Unary entity
+  ret:
+    type: Number
+    desc: '[[Eden ID]] If ID is not available, -1 is returned'
+  right: !Item
+    name: entity
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: EdenEntity
+        desc: null
+        since: null
+      - type: EdenID
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myID = get3DENEntityID player;</sqf>
+see_also:
+- get3DENEntity

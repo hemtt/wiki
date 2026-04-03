@@ -1,0 +1,31 @@
+name: waypointTimeout
+desc: Gets the waypoint timeout values.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: !ArraySized
+    - name: min
+      type: Number
+      desc: null
+      since: null
+    - name: mid
+      type: Number
+      desc: null
+      since: null
+    - name: max
+      type: Number
+      desc: null
+      since: null
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointTimeout [groupOne,1];</sqf>
+see_also:
+- waypoints
+- setWaypointTimeout

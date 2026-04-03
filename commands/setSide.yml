@@ -1,0 +1,38 @@
+name: setSide
+desc: |-
+  Sets a location's [[Side|side]]. The default side is Unknown.
+  {{Feature|important|To change a ''unit'''s side, see {{Link|#Notes}}.}}
+groups:
+- Sides
+- Locations
+syntax:
+- call: !Binary
+  - location
+  - side
+  ret:
+    type: Nothing
+  left: !Item
+    name: location
+    type: Location
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_myLocation setSide resistance;</sqf>
+see_also:
+- Side
+- side
+- west
+- east
+- resistance
+- civilian
+- sideUnknown
+- sideFriendly
+- sideEnemy
+- playerSide
+- Side
+- Relations
+- independent

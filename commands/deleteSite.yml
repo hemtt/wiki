@@ -1,0 +1,21 @@
+name: deleteSite
+desc: |-
+  Removes the site.
+  {{Feature|warning|This command is considered deprecated and is no longer supported}}
+groups:
+- Broken Commands
+syntax:
+- call: !Unary site
+  ret:
+    type: Nothing
+  right: !Item
+    name: site
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- createSite
+- allSites

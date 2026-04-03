@@ -1,0 +1,37 @@
+name: setFeatureType
+desc: |-
+  Enable/disable object as a feature/landmark. Possible feature types:
+  * 0 - Feature disabled
+  * 1 - Object is always visible within object view distance
+  * 2 - Object is always visible within terrain view distance
+
+  {{Feature|important|
+  The limit is '''500''' map/static objects and '''200''' dynamic objects including config features and auto features (flying helicopters, airplanes).<br>
+  The command returns [[false]] if the related limit is reached.
+  }}
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - object
+  - type
+  ret:
+    type: Boolean
+    desc: '[[true]] if the feature is set, [[false]] otherwise (limit reached)'
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: type
+    desc: the desired feature type
+    type: Number
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- |-
+  Set a building to be always rendered:
+  <sqf>building setFeatureType 2;</sqf>
+see_also:
+- setViewDistance
+- setObjectViewDistance

@@ -1,0 +1,21 @@
+name: headgear
+desc: Returns headgear of unit.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint headgear player; //H_HelmetB</sqf>
+see_also:
+- addHeadgear
+- removeHeadgear
+- goggles
+- hmd

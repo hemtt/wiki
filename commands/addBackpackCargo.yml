@@ -1,0 +1,55 @@
+name: addBackpackCargo
+desc: |-
+  Add backpack(s) to the cargo space of vehicle. Classname list of available backpacks is [[Arma 2: Operation Arrowhead: Backpacks|here]].
+  For a list of possible backpacks, see:
+  * {{GVI|arma2|1.50}} [[Arma 2: Operation Arrowhead: Backpacks]]
+  * {{GVI|arma3|1.00}} [[Arma 3: CfgVehicles Equipment]] (starting with {{hl|B_}})
+  {{Feature|arma3|In {{arma3}}, arguments for this command are local {{Icon|localArgument|32}}. For the global variant, see [[addBackpackCargoGlobal]].}}
+groups:
+- Containers
+syntax:
+- call: !Binary
+  - vehicle
+  - - backpackClassName
+    - count
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    desc: vehicle to add the backpack to
+    type: Object
+  right: !Array
+  - !Item
+    name: backpackClassName
+    desc: backpack classname
+    type: String
+  - !Item
+    name: count
+    desc: number of backpacks to add. {{GVI|arma3|2.14|size= 0.75}} negative count will remove backpacks.
+    type: Number
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>this addBackpackCargo ["TK_RPG_Backpack_EP1", 2];</sqf>
+- <sqf>_apc addBackpackCargo ["US_Patrol_Pack_EP1", 4];</sqf>
+see_also:
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack

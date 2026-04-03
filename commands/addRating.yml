@@ -1,0 +1,42 @@
+name: addRating
+desc: |-
+  Add a number to the [[rating]] of a unit - negative values can be used to reduce the rating.<br>
+  This command is usually used to reward for completed mission objectives.The rating is given at the end of the mission and is automatically adjusted when killing enemies or friendlies.<br>
+  When the rating gets below -2000, the unit's side switches to [[sideEnemy]] and the unit is attacked by everyone.
+  {{Feature|informative|See also {{Link|ArmA: Armed Assault: Rating Values}} and {{Link|Arma 3: Event Handlers#HandleRating}}.}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - unitName
+  - rating
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: Object
+  right: !Item
+    name: rating
+    type: Number
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player addRating 2000;</sqf>
+- |-
+  Set the rating to a specific value:
+  <sqf>
+  private _wantedRating = 9001;
+  player addRating (_wantedRating - rating player);
+  </sqf>
+see_also:
+- Side
+- Relations
+- 'ArmA:'
+- Rating
+- Values|Rating
+- Values
+- rating
+- rank
+- setUnitRank
+- sideEnemy

@@ -1,0 +1,50 @@
+name: getFSMVariable
+desc: Return the value of variable in the variable space of given FSM. The FSM handle is the number returned by the [[execFSM]] command.
+groups:
+- Variables
+syntax:
+- call: !Binary
+  - FSMhandle
+  - name
+  ret:
+    type: Anything
+  left: !Item
+    name: FSMhandle
+    type: Number
+  right: !Item
+    name: name
+    desc: name of the variable
+    type: String
+- call: !Binary
+  - FSMhandle
+  - - name
+    - defaultValue
+  ret:
+    type: Anything
+  left: !Item
+    name: FSMhandle
+    type: Number
+  right: !Array
+  - !Item
+    name: name
+    desc: name of the variable
+    type: String
+  - !Item
+    name: defaultValue
+    desc: value to return if variable is [[nil]]
+    type: Anything
+  since:
+    arma3: '1.68'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_handle getFSMVariable "_foo";</sqf>
+- <sqf>_handle getFSMVariable ["_foo", 123];</sqf>
+see_also:
+- FSM
+- commandFSM
+- completedFSM
+- doFSM
+- execFSM
+- setFSMVariable

@@ -1,0 +1,38 @@
+name: actionKeysImages
+desc: |-
+  Returns a list of button images or names assigned to the given user action.
+  A maximum of ''maxKeys'' keys is listed.
+  You can find the action names in the ControllerSchemes config class or [[:Category:Key Actions|user action names]].
+groups:
+- Interaction
+syntax:
+- call: !Unary userAction
+  ret:
+    type: StructuredText
+  right: !Item
+    name: userAction
+    type: String
+- call: !Unary
+  - userAction
+  - maxKeys
+  ret:
+    type: StructuredText
+  right: !Array
+  - !Item
+    name: userAction
+    type: String
+  - !Item
+    name: maxKeys
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_text = actionKeysImages "ReloadMagazine";</sqf>
+- <sqf>_reload = actionKeysImages ["ReloadMagazine", 1] // returns "R" (including the quotation marks!)</sqf>
+see_also:
+- actionKeys
+- actionKeysNames
+- actionKeysNamesArray
+- actionName
+- inputAction

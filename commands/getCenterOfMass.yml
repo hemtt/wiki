@@ -1,0 +1,24 @@
+name: getCenterOfMass
+desc: Returns center of mass of an object.
+groups:
+- PhysX
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dRelative
+    desc: relative to the model centre
+  right: !Item
+    name: object
+    desc: PhysX object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_com = getCenterOfMass _myCar;</sqf>
+see_also:
+- getMass
+- setCenterOfMass
+- setMass
+- addTorque
+- addForce

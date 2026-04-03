@@ -1,0 +1,29 @@
+name: ctrlMapAnimCommit
+desc: Plays the map animation.
+groups:
+- GUI Control - Map
+syntax:
+- call: !Unary mapControl
+  ret:
+    type: Nothing
+  right: !Item
+    name: mapControl
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- |-
+  Center map on player:
+  <sqf>
+  _ctrl ctrlMapAnimAdd [0, 0.05, player];
+  ctrlMapAnimCommit _ctrl;
+  </sqf>
+see_also:
+- mapAnimAdd
+- mapAnimClear
+- mapAnimCommit
+- mapAnimDone
+- ctrlMapAnimAdd
+- ctrlMapAnimClear
+- ctrlMapAnimDone

@@ -1,0 +1,26 @@
+name: ctrlSetTooltipMaxWidth
+desc: Set maximum width of a control's tooltip.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - ctrl
+  - width
+  ret:
+    type: Number
+    desc: the previous maximum width of the tooltip
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: width
+    desc: in screen measurement units
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _previousMaxWidth = _myControl ctrlSetTooltipMaxWidth (SafeZoneW / 2);</sqf>
+see_also:
+- SafeZone
+- SafeZoneW

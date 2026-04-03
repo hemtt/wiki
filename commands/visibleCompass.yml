@@ -1,0 +1,18 @@
+name: visibleCompass
+desc: Checks if the player has compass opened and visible. Keep in mind that the GPS minimap in Arma 3 also shows the direction.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (visibleCompass) then {hint "Compass is visible"};</sqf>
+see_also:
+- showCompass
+- shownCompass
+- visibleGPS
+- visibleWatch

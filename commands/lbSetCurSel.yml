@@ -1,0 +1,43 @@
+name: lbSetCurSel
+desc: |-
+  Selects the item with the given index in the listbox, listnbox, combobox, xcombobox, xlistbox<br>
+  {{Feature|important|'''The following only applies to the {{Link|#Syntax 2|Alternative Syntax}} when used with [[CT_LISTBOX]] and [[CT_LISTNBOX]].'''<br>
+  To deselect all entries, use -1: <sqf inline>_ctrl lbSetCurSel -1;</sqf> For listbox of style LB_MULTI use [[lbSetSelected]] instead.<br>
+  [[CT_COMBO]] does not allow deselecting entries, it will instead select the first one as it is not a combobox usual behaviour.
+  If you really need to deselect a combobox, see {{Link|#Notes|DreadedEntity's note}}. For the ComboBox you might as well want to explicitly select index 0 to avoid showing ghost row.
+  }}
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    desc: control's IDC
+    type: Number
+  - !Item
+    name: index
+    type: Number
+- call: !Binary
+  - control
+  - index
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lbSetCurSel [101, 0];</sqf>
+- <sqf>_control lbSetCurSel 0;</sqf>
+see_also:
+- lbCurSel

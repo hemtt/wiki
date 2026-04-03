@@ -1,0 +1,56 @@
+name: waypointAttachVehicle
+desc: |-
+  Attaches the [[Waypoint]] to the provided vehicle [[Object]].
+  {{Feature | important | Use this command to associate a transport with {{hl|"GETIN"}} waypoint, other types of waypoints might or might not work.
+  See also [[setWaypointType]] to set the waypoint type to "GETIN".}}
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - vehicleName
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: vehicleName
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>[_grp, 2] waypointAttachVehicle vehicle player;</sqf>
+- <sqf>((waypoints player) select 0) waypointAttachVehicle _soldier1;</sqf>
+see_also:
+- waypoints
+- deleteWaypoint
+- copyWaypoints
+- setCurrentWaypoint
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointDescription
+- setWaypointFormation
+- setWaypointHousePosition
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible
+- waypointAttachedVehicle
+- setWaypointLoiterRadius
+- waypointLoiterRadius
+- addWaypoint
+- setWaypointLoiterType
+- currentWaypoint
+- attachObject
+- attachTo
+- attachedObjects
+- attachedTo
+- lightAttachObject
+- triggerAttachVehicle
+- attachedObject

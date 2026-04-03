@@ -1,0 +1,32 @@
+name: camSetFov
+desc: |-
+  Set the zoom level ('''F'''ield '''O'''f '''V'''iew) of the given camera.
+  <br>
+  The zoom level is from ''{{hl|0.01}}'' for the nearest and ''{{hl|8.5}}'' for the furthest zoom value, with a default zoom level of ''{{hl|0.75}}''
+  <br>
+  The angle of the field of view is ''{{hl|atan(FOV)*2}}'' radians when in 4:3 aspect ratio. Needs the call of [[camCommit]] to be conducted.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - level
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    desc: object of type "camera"
+    type: Object
+  right: !Item
+    name: level
+    desc: zoom level, range 0.01 to 8.5 (see description above)
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_cam camSetFov 0.75;</sqf>
+see_also:
+- camPrepareFov
+- camSetFovRange
+- camSetTarget

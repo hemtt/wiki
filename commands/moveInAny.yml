@@ -1,0 +1,35 @@
+name: moveInAny
+desc: |-
+  Moves unit to the first available seat in the specified vehicle.
+
+  The order of priorities is the same order used in squad command when you order subordinates to get in vehicle to any position and is the same order used in Zeus when you drag units to a vehicle.<br><br>
+  Seat assignment seems to use the following priority logic:<br>
+  driver ([[moveInDriver]]) &rarr; commander ([[moveInCommander]]) &rarr; gunner ([[moveInGunner]]) &rarr; turrets ([[moveInTurret]]) &rarr; cargo ([[moveInCargo]]).
+  {{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}
+  {{Feature|informative|This command will move player into the [[locked]] vehicle or seat just as well.}}
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - vehicle
+  ret:
+    type: Boolean
+    desc: '[[true]] on success, [[false]] on failure'
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player moveInAny tank;</sqf>
+see_also:
+- moveInDriver
+- moveInCommander
+- moveInGunner
+- moveInTurret
+- moveInCargo

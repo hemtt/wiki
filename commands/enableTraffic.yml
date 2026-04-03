@@ -1,0 +1,22 @@
+name: enableTraffic
+desc: Enable ambient traffic. {{Feature|arma3|This command does nothing in {{arma3}}.}}
+groups:
+- Environment
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    desc: enable or disable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>enableTraffic true;</sqf>
+see_also:
+- setTrafficDensity
+- setTrafficDistance
+- setTrafficGap
+- setTrafficSpeed

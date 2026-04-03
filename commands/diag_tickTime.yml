@@ -1,0 +1,31 @@
+name: diag_tickTime
+desc: Real time in seconds spent from the start of the game. On Windows the command uses {{Link|https://docs.microsoft.com/en-us/windows/win32/api/timeapi/nf-timeapi-timegettime|timeGetTime}}.
+groups:
+- Diagnostic
+- Time
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: time in seconds from game start
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  // Measure execution time of a script
+  _start = diag_tickTime;
+  // code
+  _stop = diag_tickTime;
+  diag_log format ["%1",_stop - _start];
+  </sqf>
+see_also:
+- diag_fps
+- diag_fpsMin
+- diag_frameNo
+- diag_log
+- diag_deltaTime
+- time
+- systemTime
+- systemTimeUTC

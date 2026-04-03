@@ -1,0 +1,19 @@
+name: estimatedEndServerTime
+desc: Estimated end of MP game in seconds converted to [[serverTime]].
+groups:
+- Time
+- Mission Information
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: seconds left
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "Estimated minutes left: \n<sqf>_min = ceil (estimatedEndServerTime - serverTime) / 60;</sqf>"
+see_also:
+- estimatedTimeLeft
+- serverTime

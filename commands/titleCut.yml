@@ -1,0 +1,33 @@
+name: titleCut
+desc: |-
+  Displays text on screen.
+  {{Feature|obsolete|[[cutText]] should be used instead.}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - text
+  - type
+  - speed
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: text
+    desc: text to be displayed on screen
+    type: String
+  - !Item
+    name: type
+    desc: can be one of [[Title Effect Type]]s
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default 1)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>titleCut ["Hello, how are you?","Plain Down",3];</sqf>
+see_also:
+- cutText

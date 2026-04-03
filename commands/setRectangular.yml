@@ -1,0 +1,30 @@
+name: setRectangular
+desc: Set the shape of a location to be either rectangular or elliptical. Locations default shape is elliptical.
+groups:
+- Locations
+syntax:
+- call: !Binary
+  - location
+  - set
+  ret:
+    type: Nothing
+  left: !Item
+    name: location
+    type: Location
+  right: !Item
+    name: set
+    desc: '[[true]] set rectangular, [[false]] set elliptical'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>myLocation setRectangular true;</sqf>
+see_also:
+- setText
+- nearestLocation
+- nearestLocations
+- locationPosition
+- nearestLocationWithDubbing
+- createLocation
+- rectangular

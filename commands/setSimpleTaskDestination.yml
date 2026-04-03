@@ -1,0 +1,31 @@
+name: setSimpleTaskDestination
+desc: Attach a destination to the simple task.<br>Overrides [[setSimpleTaskTarget]]
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - task
+  - pos
+  ret:
+    type: Nothing
+  left: !Item
+    name: task
+    type: Task
+  right: !Item
+    name: pos
+    type: Position
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_tskGoHere setSimpleTaskDestination (getMarkerPos "obj1");</sqf>
+see_also:
+- Tasks
+- createSimpleTask
+- removeSimpleTask
+- setSimpleTaskDescription
+- setTaskState
+- setTaskResult
+- taskState
+- taskDestination
+- cancelSimpleTaskDestination

@@ -1,0 +1,60 @@
+name: moveInCargo
+desc: |-
+  Moves a unit into a vehicle cargo position (immediately and without animation).
+  {{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}
+  {{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}
+multiplayer_note: '{{Feature|informative|The command should execute where the ''''''unit'''''' (not ''''''vehicle'''''') is local.}}'
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - vehicle
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: vehicle
+    type: Object
+- call: !Binary
+  - unit
+  - - vehicle
+    - cargoIndex
+    - canReassign
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Array
+  - !Item
+    name: vehicle
+    type: Object
+  - !Item
+    name: cargoIndex
+    type: Number
+  - !Item
+    name: canReassign
+    desc: (Optional, default [[true]]) try to move ''unit'' into the first free ''vehicle'' cargo seat if ''cargoIndex'' is already occupied
+    type: Boolean
+    since:
+      arma3: '2.8'
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldierOne moveInCargo _jeepOne;</sqf>
+- <sqf>_soldierOne moveInCargo [_jeepOne, 1];</sqf>
+see_also:
+- moveInAny
+- moveInCommander
+- moveInDriver
+- moveInGunner
+- moveInTurret
+- assignAsCargo
+- assignAsCommander
+- assignAsDriver
+- assignAsGunner
+- getCargoIndex

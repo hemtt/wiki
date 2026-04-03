@@ -1,0 +1,19 @@
+name: unitReady
+desc: Check if the unit is ready. Unit is busy when it is given some command like [[move]], until the command is finished.
+groups:
+- Unit Control
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Boolean
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _isReady = unitReady _soldierOne;</sqf>
+- "<sqf>\nif (not unitReady _soldierOne) then\n{\n\t_soldierOne groupChat \"Wait one, sarge!\";\n};\n</sqf>"
+see_also:
+- move

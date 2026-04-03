@@ -1,0 +1,22 @@
+name: mineActive
+desc: Checks if the given mine is active.
+groups:
+- Mines
+syntax:
+- call: !Unary obj
+  ret:
+    type: Boolean
+  right: !Item
+    name: obj
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (mineActive _mine) then {hint "BOOM!"};</sqf>
+see_also:
+- allMines
+- detectedMines
+- mineDetectedBy
+- createMine
+- revealMine

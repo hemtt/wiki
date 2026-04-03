@@ -1,0 +1,42 @@
+name: setFlagSide
+desc: Sets flag [[Side]]. A flag may be taken by any unit that is enemy to the side that owns the flag. Just like with [[setFlagTexture]], if the command executed where unit is [[Multiplayer Scripting#Locality|local]] effect of the command will be global and [[Multiplayer Scripting#Join In Progress|JIP]] compatible.
+groups:
+- Flags
+syntax:
+- call: !Binary
+  - flag
+  - side
+  ret:
+    type: Nothing
+  left: !Item
+    name: flag
+    type: Object
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_flag1 setFlagSide east;</sqf>
+- |-
+  Capturable OPFOR flag:
+  <sqf>
+  private _flag = "FlagPole_F" createVehicle position player;
+  _flag setFlagTexture "\A3\Data_F\Flags\Flag_CSAT_CO.paa";
+  _flag setFlagSide east;
+  </sqf>
+see_also:
+- flag
+- flagOwner
+- setFlagOwner
+- setFlagTexture
+- flagSide
+- flagTexture
+- setFlagAnimationPhase
+- flagAnimationPhase
+- forceFlagTexture
+- getForcedFlagTexture
+- :Category:Flag
+- Textures|Flag
+- Textures

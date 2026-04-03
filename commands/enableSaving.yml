@@ -1,0 +1,37 @@
+name: enableSaving
+desc: Enable / disable saving of the game with an optional autosave.
+groups:
+- Mission Information
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    type: Boolean
+- call: !Unary
+  - enable
+  - save
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: enable
+    desc: allow [[saveGame]] command usage and manual saving
+    type: Boolean
+  - !Item
+    name: save
+    desc: create an autosave on command execution
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nenableSaving false;\t\t// saving disabled, does autosave - same as [false, true]\nenableSaving true;\t\t// saving enabled, does not autosave - same as [true, false]\n\nenableSaving [false, false];\t// saving disabled, does not autosave\nenableSaving [false, true];\t\t// saving disabled, does autosave\nenableSaving [true, false];\t\t// saving enabled, doesn't autosave\nenableSaving [true, true];\t\t// saving enabled, does autosave\n</sqf>"
+see_also:
+- loadGame
+- saveGame
+- savingEnabled
+- isSaving
+- BIS_fnc_enableSaving
+- '{{Link|Description.ext#saving}}'

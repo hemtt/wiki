@@ -1,0 +1,26 @@
+name: getDLCUsageTime
+desc: Returns total time the assets of the given DLC have been used. See [[:Category:Arma 3 DLCs & Expansions|Arma 3 DLCs & Expansions]] for a list of DLCs and ids.
+groups:
+- DLC
+syntax:
+- call: !Unary appId
+  ret:
+    type: Number
+    desc: DLC assets usage time in seconds
+  right: !Item
+    name: appId
+    desc: DLC's Steam appId
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _kartsUsage = getDLCUsageTime 288520;</sqf>
+see_also:
+- getDLCs
+- getObjectDLC
+- getPersonUsedDLCs
+- getMissionDLCs
+- getDLCAssetsUsageByName
+- getDLCAssetsUsage
+- getAssetDLCInfo

@@ -1,0 +1,22 @@
+name: groups
+desc: Returns an array with all groups of given side.
+groups:
+- Groups
+syntax:
+- call: !Unary side
+  ret:
+    type: !ArrayUnsized
+      value: Group
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _allBluforGroups = groups blufor; // equivalent of allGroups select { side _x == blufor };</sqf>
+see_also:
+- group
+- allGroups
+- units
+- allUnits

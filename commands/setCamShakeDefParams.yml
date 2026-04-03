@@ -1,0 +1,48 @@
+name: setCamShakeDefParams
+desc: Sets camera shake default parameters.
+groups:
+- Camera Control
+syntax:
+- call: !Unary
+  - power
+  - duration
+  - frequency
+  - minSpeed
+  - minMass
+  - caliberCoefHit
+  - vehicleCoef
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: power
+    type: Number
+  - !Item
+    name: duration
+    type: Number
+  - !Item
+    name: frequency
+    type: Number
+  - !Item
+    name: minSpeed
+    type: Number
+  - !Item
+    name: minMass
+    type: Number
+  - !Item
+    name: caliberCoefHit
+    type: Number
+  - !Item
+    name: vehicleCoef
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>setCamShakeDefParams [1, 2, 3, 4, 5, .5, .5];</sqf>
+- <sqf>setCamShakeDefParams [100, 10, 10, 4, 5, 1, 1];</sqf>
+see_also:
+- enableCamShake
+- addCamShake
+- setCamShakeParams
+- resetCamShake

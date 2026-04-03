@@ -1,0 +1,21 @@
+name: score
+desc: Returns the person's score in MP.
+groups:
+- Multiplayer
+syntax:
+- call: !Unary unit
+  ret:
+    type: Number
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_pScore = score player;</sqf>
+see_also:
+- addScore
+- scoreSide
+- addScoreSide
+- getPlayerScores

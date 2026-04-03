@@ -1,0 +1,23 @@
+name: displayUpdate
+desc: Set the provided display to update its [[Procedural Textures#UI On Texture|UI On Texture]] render.
+groups:
+- GUI Control
+syntax:
+- call: !Unary display
+  ret:
+    type: Nothing
+  right: !Item
+    name: display
+    desc: the display to update
+    type: Display
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>displayUpdate _myDisplay;</sqf>
+see_also:
+- displayUniqueName
+- '{{Link|Procedural'
+- Textures#UI
+- On
+- Texture}}

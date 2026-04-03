@@ -1,0 +1,30 @@
+name: radioChannelRemove
+desc: Remove the units from the custom radio channel.
+groups:
+- Radio and Chat
+- Custom Radio and Chat
+syntax:
+- call: !Binary
+  - customChannelID
+  - units
+  ret:
+    type: Nothing
+  left: !Item
+    name: customChannelID
+    desc: '[[Channel IDs|custom channel ID]] returned by [[radioChannelCreate]] command'
+    type: Number
+  right: !Item
+    name: units
+    desc: units
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>3 radioChannelRemove [blufor_unit_1, blufor_unit_2];</sqf>
+see_also:
+- radioChannelAdd
+- radioChannelCreate
+- radioChannelSetCallSign
+- radioChannelSetLabel

@@ -1,0 +1,30 @@
+name: setSimpleTaskType
+desc: Attach type to the simple task. See [[Arma_3_Tasks_Overhaul#Default_Task_Types:_Actions|Default Task Types]].
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - task
+  - taskType
+  ret:
+    type: Nothing
+  left: !Item
+    name: task
+    type: Task
+  right: !Item
+    name: taskType
+    desc: type of task
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>(currentTask player) setSimpleTaskType "attack";</sqf>
+see_also:
+- taskType
+- currentTask
+- setSimpleTaskCustomData
+- taskCustomData
+- Arma_3_Tasks_Overhaul#Default_Task_Types:_Actions|Default
+- Task
+- Types

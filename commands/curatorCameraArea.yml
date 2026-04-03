@@ -1,0 +1,36 @@
+name: curatorCameraArea
+desc: Returns all curator camera areas.
+groups:
+- Curator
+syntax:
+- call: !Unary curatorObj
+  ret:
+    type: !ArraySized
+    - name: cameraAreaID
+      type: Number
+      desc: null
+      since: null
+    - name: position
+      type: Position
+      desc: null
+      since: null
+    - name: radius
+      type: Number
+      desc: null
+      since: null
+  right: !Item
+    name: curatorObj
+    desc: curator module.
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camArea = curatorCameraArea myCurator; // [[8052,[4027.36,4024.89,0],250]]</sqf>
+see_also:
+- Arma
+- '3:'
+- Curator
+- addCuratorCameraArea
+- removeCuratorCameraArea
+- removeAllCuratorCameraAreas

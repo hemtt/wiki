@@ -1,0 +1,20 @@
+name: vest
+desc: nameof vest.
+groups:
+- Containers
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_myVest = vest player;</sqf>
+see_also:
+- removeVest
+- addVest

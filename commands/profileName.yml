@@ -1,0 +1,16 @@
+name: profileName
+desc: Returns currently chosen user profile name. For Steam profile name see [[profileNameSteam]].
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_myInGameProfileName = profileName;</sqf>
+see_also:
+- profileNameSteam
+- name

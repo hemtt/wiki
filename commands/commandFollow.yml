@@ -1,0 +1,40 @@
+name: commandFollow
+desc: |-
+  Order the given unit(s) to follow another from his own group (via radio).
+  It can also be used to resume unit formation after e.g [[doStop]].
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - unitLead
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: unitLead
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_soldier1 commandFollow _soldier2;</sqf>
+- <sqf>(units group _leader - [_leader]) commandFollow _leader; // returns all the units (but the leader) to formation</sqf>
+see_also:
+- doFollow
+- formationLeader
+- formLeader
+- isFormationLeader
+- leader
+- selectLeader
+- setLeader

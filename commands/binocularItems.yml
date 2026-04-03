@@ -1,0 +1,44 @@
+name: binocularItems
+desc: Returns array with all items assigned to the [[binocular]] weapon except magazines. Use [[binocularMagazine]] command for the latter. This command is used for infantry weapons only.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArraySized
+    - name: silencer
+      type: String
+      desc: null
+      since: null
+    - name: pointer
+      type: String
+      desc: laserpointer or flashlight
+      since: null
+    - name: optic
+      type: String
+      desc: null
+      since: null
+    - name: bipod
+      type: String
+      desc: null
+      since: null
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>binocularItems player;</sqf>
+see_also:
+- addBinocularItem
+- removeBinocularItem
+- removeAllBinocularItems
+- binocularMagazine
+- weaponAccessories
+- weaponAccessoriesCargo
+- primaryWeaponItems
+- secondaryWeaponItems
+- handgunItems
+- weaponsItems
+- weaponsItemsCargo

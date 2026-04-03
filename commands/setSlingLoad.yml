@@ -1,0 +1,45 @@
+name: setSlingLoad
+desc: Creates a sling loading from a helicopter to an entity if possible. To unload cargo, pass [[objNull]] as second param. {{Feature|informative|FROM object has to be a helicoper, alive with [[enableRopeAttach | rope attachment]] enabled, TO object has to be an entity, alive with [[enableRopeAttach | rope attachment]] enabled.}}
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: !Binary
+  - heli
+  - cargo
+  ret:
+    type: Boolean
+    desc: '[[true]] on success'
+  left: !Item
+    name: heli
+    desc: the helicopter slinging the load
+    type: Object
+  right: !Item
+    name: cargo
+    desc: the cargo load entity
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_success = heli1 setSlingLoad veh1;</sqf>
+- |-
+  To unload cargo:
+  <sqf>_success = heli setSlingLoad objNull;</sqf>
+see_also:
+- ropes
+- canSlingLoad
+- enableRopeAttach
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeDestroy
+- ropeLength
+- ropeUnwound
+- ropeAttachedTo
+- ropeCreate
+- ropeDetach
+- ropeAttachEnabled
+- ropeCut
+- ropeEndPosition
+- ropeUnwind
+- slingLoadAssistantShown

@@ -1,0 +1,51 @@
+name: lbSetTextRight
+desc: Sets the text on the right side of the item with the given row index of the listbox or combobox with id idc of the topmost user dialog.
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Binary
+  - control
+  - - row
+    - name
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: row
+    desc: 0-based index (first row is 0, second is 1, etc)
+    type: Number
+  - !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control lbSetTextRight [0, "iskoda"];</sqf>
+see_also:
+- lbAdd
+- lbClear
+- lbColor
+- lbCurSel
+- lbData
+- lbDelete
+- lbIsSelected
+- lbPicture
+- lbSelection
+- lbSetColor
+- lbSetCurSel
+- lbSetData
+- lbSetSelected
+- lbSetText
+- lbSetTooltip
+- lbSetValue
+- lbSize
+- lbSort
+- lbSortByValue
+- lbText
+- lbValue
+- lbSetPicture
+- lbSetPictureColor

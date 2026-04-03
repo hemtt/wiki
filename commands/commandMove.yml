@@ -1,0 +1,37 @@
+name: commandMove
+desc: Order the given unit(s) to move to the given location (via the radio). Exactly the same as [[doMove]], except this command displays a radio message. The command will not put a visible waypoint marker unlike when move command is given via commanding menu.
+multiplayer_note: When used on a remote unit, this command will still create a radio message on the remote machine but the unit will not move.
+groups:
+- Groups
+syntax:
+- call: !Binary
+  - unitName
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: position
+    type: Position
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldier1 commandMove getMarkerPos "Marker1";</sqf>
+- <sqf>[_soldier1, _soldier2] commandMove getMarkerPos "Marker1";</sqf>
+see_also:
+- doMove
+- setDestination
+- moveTo
+- move
+- addWaypoint

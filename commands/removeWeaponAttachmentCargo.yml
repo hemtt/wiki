@@ -1,0 +1,34 @@
+name: removeWeaponAttachmentCargo
+desc: "Remove attachment linked to a weapon from the vehicle cargo space. \n{{Feature|warning|This is unofficial documentation. All Information here is as it exists in the Engine. It might not reflect the reality.}}"
+groups:
+- Vehicle Inventory
+syntax:
+- call: !Binary
+  - object
+  - - weaponID
+    - creatorID
+    - attachment
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    desc: vehicle or ammo box
+    type: Object
+  right: !Array
+  - !Item
+    name: weaponID
+    type: Number
+  - !Item
+    name: creatorID
+    type: Number
+  - !Item
+    name: attachment
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>rearmTruckOne removeWeaponAttachmentCargo [weaponID, creatorID, "attachment"];</sqf>
+see_also:
+- removeWeaponCargo
+- weaponAccessoriesCargo

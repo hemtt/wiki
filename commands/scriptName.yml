@@ -1,0 +1,23 @@
+name: scriptName
+desc: |-
+  Assign a user friendly name to the [[Script Handle|VM script]] this command is executed from.
+  {{Feature|important|Once a name is assigned, it cannot be changed.}}
+groups:
+- Program Flow
+syntax:
+- call: !Unary name
+  ret:
+    type: Nothing
+  right: !Item
+    name: name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>scriptName "leetScript.sqf";</sqf>
+- '<sqf>scriptName format ["%1ARTY\data\scripts\ARTY_sadarmDeploy.sqf (_this: %1)", _this];</sqf>'
+see_also:
+- spawn
+- execVM
+- scriptDone

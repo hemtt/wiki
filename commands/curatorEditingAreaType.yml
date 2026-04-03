@@ -1,0 +1,21 @@
+name: curatorEditingAreaType
+desc: Returns type of edit areas assigned to curator (blacklist/whitelist).
+groups:
+- Curator
+syntax:
+- call: !Unary curator
+  ret:
+    type: Boolean
+  right: !Item
+    name: curator
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isBlacklist = curatorEditingAreaType _curator;</sqf>
+see_also:
+- BIS_fnc_addCuratorAreaFromTrigger
+- removeCuratorEditingArea
+- removeAllCuratorEditingAreas
+- curatorEditingArea

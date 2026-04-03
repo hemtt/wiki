@@ -1,0 +1,105 @@
+name: isNull
+desc: |-
+  Checks whether the tested item is null.<br>
+  Which null type the item has to be equal to depends on the type of game entity tested:
+
+  {{{!}} class="wikitable" style="text-align: center"
+  ! [[:Category:Data Types|Type]]
+  {{!}} [[Object]]
+  {{!}} [[Group]]
+  {{!}} [[Control]]
+  {{!}} [[Display]]
+  {{!}} [[Location]]
+  {{!}} [[Task]]
+  {{!}} [[Script Handle|Script]]
+  {{!}} [[Config]]
+  {{!}} [[Diary Record]]
+  {{!}} [[Team Member]]
+  {{!}}-
+  ! Null value
+  {{!}} [[objNull]]
+  {{!}} [[grpNull]]
+  {{!}} [[controlNull]]
+  {{!}} [[displayNull]]
+  {{!}} [[locationNull]]
+  {{!}} [[taskNull]]
+  {{!}} [[scriptNull]]
+  {{!}} [[configNull]]
+  {{!}} [[diaryRecordNull]]
+  {{!}} [[teamMemberNull]]
+  {{!}}- style="font-size: .85em"
+  ! Since
+  {{!}} colspan="2" {{!}} {{GVI|ofp|1.00}}
+  {{!}} colspan="2" {{!}} {{GVI|arma1|1.00}}
+  {{!}} colspan="2" {{!}} {{GVI|arma2|1.00}}
+  {{!}} {{GVI|arma3|1.30}}
+  {{!}} {{GVI|arma3|1.54}}
+  {{!}} {{GVI|arma3|2.00}}
+  {{!}} {{GVI|arma3|2.10}}
+  {{!}}}
+
+  {{Feature|important|2= A test via [[a == b|==]] does '''not''' work because a null value is not equal to anything, not even itself ([[configNull]] being the exception).
+  See also [[isEqualTo]].}}
+groups:
+- Variables
+syntax:
+- call: !Unary entity
+  ret:
+    type: Boolean
+  right: !Item
+    name: entity
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Control
+        desc: null
+        since: null
+      - type: Display
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+      - type: Location
+        desc: null
+        since: null
+      - type: Task
+        desc: null
+        since: null
+      - type: ScriptHandle
+        desc: null
+        since: null
+      - type: Config
+        desc: null
+        since: null
+      - type: DiaryRecord
+        desc: null
+        since: null
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (isNil \"obj\") exitWith { hint \"obj variable is undefined\" };\n\nif (isNull obj) then\n{\n\thint \"obj variable is defined but is null\";\n}\nelse\n{\n\thint \"obj variable is defined and is not null\";\n};\n</sqf>"
+- |-
+  [[Diary Record]] support before {{GVI|arma3|2.00}}:
+  <sqf>
+  private _nullRecord = objNull createDiaryRecord []; // wrong parameters = failure to create a record = null value
+  private _createdRecord = player createDiaryRecord ["Diary", ["title", "description"]];
+  if (_createdRecord isEqualTo _nullRecord) then { hint "Failed" };
+  </sqf>
+
+  [[Team Member]] support before {{GVI|arma3|2.10}}:
+  <sqf>private _isNull = _teamMember isEqualTo teamMemberNull;</sqf>
+see_also:
+- controlNull
+- displayNull
+- grpNull
+- locationNull
+- objNull
+- taskNull
+- teamMemberNull
+- scriptNull
+- configNull
+- typeName

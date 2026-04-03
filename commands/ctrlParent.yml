@@ -1,0 +1,32 @@
+name: ctrlParent
+desc: Returns the parent [[Display]] of the given control. For parent [[Control]]s group see [[ctrlParentControlsGroup]].
+groups:
+- GUI Control
+syntax:
+- call: !Unary control
+  ret:
+    type: Display
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_display = ctrlParent _control;</sqf>
+see_also:
+- allControls
+- allDisplays
+- controlsGroupCtrl
+- ctrlDelete
+- ctrlModel
+- ctrlSetModel
+- ctrlPosition
+- ctrlSetPosition
+- ctrlClassName
+- ctrlModelScale
+- ctrlSetModelScale
+- ctrlModelDirAndUp
+- ctrlSetModelDirAndUp
+- displayParent
+- ctrlParentControlsGroup

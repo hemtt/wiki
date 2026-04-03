@@ -1,0 +1,29 @@
+name: endl
+desc: "Creates a string containing a line break, similar to [[lineBreak]] for [[text]]. The name is inspired by c++ std::endl ('''end''' '''l'''ine).\nThe command returns {{hl|\"\\r\\n\"}}, which contains control characters rather than printable characters:\n<sqf>\nhint str count \"\\r\\n\";\t// 4\nhint str count endl;\t// 2\n</sqf>\nThe line break works for [[diag_log]] and [[ctrlSetText]].\nIt does not work with the [[hint]] because [[hint]] interprets printable \"\\n\" as line break instead.\nAlternatively one can use [[toString]] command to get other characters."
+groups:
+- Strings
+syntax:
+- call: Nular
+  ret:
+    type: String
+    desc: line break
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>diag_log ("line1" + endl + "line2");</sqf>
+- |-
+  <sqf>
+  _ctrl = findDisplay 46 ctrlCreate ["RscTextMulti", -1];
+  _ctrl ctrlSetPosition [0,0,1,1];
+  _ctrl ctrlCommit 0;
+  _ctrl ctrlSetText format ["line1%1line2%1line3", endl];
+  </sqf>
+see_also:
+- lineBreak
+- str
+- format
+- toString
+- joinString
+- splitString
+- toArray

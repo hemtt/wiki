@@ -1,0 +1,24 @@
+name: ctrlMapScale
+desc: Returns the current scale of given map control.
+groups:
+- GUI Control - Map
+syntax:
+- call: !Unary ctrl
+  ret:
+    type: Number
+  right: !Item
+    name: ctrl
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _control = (findDisplay 12) displayCtrl 51; //Arma 3
+  _scale = ctrlMapScale _control; //returns number from 1 to 0.001
+  </sqf>
+see_also:
+- ctrlScale
+- ctrlSetScale
+- ctrlMapDir

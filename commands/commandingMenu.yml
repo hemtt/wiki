@@ -1,0 +1,23 @@
+name: commandingMenu
+desc: Returns the name of the topmost commanding menu or "" if the menu is closed. For action menu visibility check see [[isActionMenuVisible]]. See {{Link|#Notes}} for {{arma2}}/{{arma3}} structure.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  waitUntil { sleep 0.1; commandingMenu == "RscStatus" };
+  hint "Press 4, I'm bleeding !";
+  </sqf>
+- <sqf>if (commandingMenu != "") then { hint "Command menu is opened" };</sqf>
+see_also:
+- showCommandingMenu
+- isActionMenuVisible
+- BIS_fnc_addCommMenuItem
+- BIS_fnc_removeCommMenuItem

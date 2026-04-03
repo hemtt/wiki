@@ -1,0 +1,49 @@
+name: getBackpackCargo
+desc: Returns all backpack types and count from the cargo space.
+groups:
+- Containers
+syntax:
+- call: !Unary object
+  ret:
+    type: !ArraySized
+    - name: classes
+      type: !ArrayUnsized
+        value: String
+      desc: Backpack class names
+      since: null
+    - name: counts
+      type: !ArrayUnsized
+        value: Number
+      desc: Backpack counts
+      since: null
+  right: !Item
+    name: object
+    desc: object to check
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\ngetBackpackCargo cursorTarget;\n/*\n\treturns e.g\n\t[\n        [\"5BackpackA\", \"10BackpackB\"]\n        [5, 10]\n\t]\n*/\n</sqf>"
+- <sqf>_content = getBackpackCargo carName;</sqf>
+- <sqf>_content = getBackpackCargo ammoBoxName;</sqf>
+see_also:
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack

@@ -1,0 +1,29 @@
+name: ctrlCommit
+desc: |-
+  Commits control animation to last specified duration.
+  {{Feature|important|The duration of the animation is not guaranteed to be exactly the same as the given time.}}
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - time
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: control to animate
+    type: Control
+  right: !Item
+    name: time
+    desc: animation duration
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlCommit 2; // make animation last approx. 2 seconds</sqf>
+see_also:
+- ctrlCommitted
+- ctrlSetPosition
+- ctrlSetFade

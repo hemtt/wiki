@@ -1,0 +1,30 @@
+name: tvSetSelectColor
+desc: Sets the select color of given path.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Binary
+  - ctrl
+  - - path
+    - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Item
+    name: path
+    desc: path of the item
+    type: !ArrayUnsized
+      value: Number
+  - !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control tvSetSelectColor [[0, 0], [1,1,1,0.5]];</sqf>
+see_also:
+- tvSetColor

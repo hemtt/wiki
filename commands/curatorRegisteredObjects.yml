@@ -1,0 +1,22 @@
+name: curatorRegisteredObjects
+desc: Returns array with all objects that has curator registered and their settings.
+groups:
+- Curator
+syntax:
+- call: !Unary curator
+  ret:
+    type: !ArrayUnsized
+      value: Object
+  right: !Item
+    name: curator
+    desc: curator module
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>curatorRegisteredObjects _curatorModule;</sqf>
+see_also:
+- Arma
+- '3:'
+- Curator

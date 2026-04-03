@@ -1,0 +1,63 @@
+name: ignoreTarget
+desc: Sets a target to be ignored by this Group. It will not appear in [[nearTargets]] and the group will not notice its presence. [[targetKnowledge]] can be used to check if a target is currently ignored. While a unit is ignored, [[reveal]] has no effect.
+groups:
+- Object Detection
+syntax:
+- call: !Binary
+  - group
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    desc: which receives revealing information
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: target
+    desc: which would be ignored
+    type: Object
+- call: !Binary
+  - group
+  - - target
+    - isIgnored
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    desc: which receives revealing information
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: target
+    desc: which would be ignored
+    type: Object
+  - !Item
+    name: isIgnored
+    desc: whether the target should be ignored
+    type: Boolean
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>aiGroup ignoreTarget player</sqf>
+see_also:
+- knowsAbout
+- targetsQuery
+- targetsAggregate
+- nearTargets
+- reveal
+- targetKnowledge

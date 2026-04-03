@@ -1,0 +1,29 @@
+name: weaponDisassemblyEnabled
+desc: |-
+  Returns if weapon disassembly is enabled. As disassembly can be enabled/disabled on both player and weapon, it might be necessary to check both.
+
+  {{Feature|important|
+  Beware that when the weapon disassembly is disabled on the player, it is tracking the unit itself.
+  If the player leaves the server and another player joins into the same playable unit, they will not have the option to disassemble either.
+  }}
+groups:
+- Weapons
+syntax:
+- call: !Unary entity
+  ret:
+    type: Boolean
+    desc: '[[true]] if enabled'
+  right: !Item
+    name: entity
+    desc: '[[player]] or weapon'
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _enabled = weaponDisassemblyEnabled player && weaponDisassemblyEnabled _weapon;</sqf>
+see_also:
+- enableWeaponDisassembly
+- weapons
+- action
+- inGameUISetEventHandler

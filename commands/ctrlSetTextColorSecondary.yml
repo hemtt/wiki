@@ -1,0 +1,27 @@
+name: ctrlSetTextColorSecondary
+desc: Sets the secondary text color of a text control.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: text control
+    type: Control
+  right: !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ctrlText ctrlSetTextColorSecondary [1, 0.5, 0.1, 0.5];</sqf>
+see_also:
+- ctrlTextSecondary
+- ctrlSetText
+- ctrlText
+- ctrlSetTextSecondary

@@ -1,0 +1,27 @@
+name: removeAllMPEventHandlers
+desc: Removes all MP event handlers of the given type which were added by [[addMPEventHandler]]. Command needs to be executed only on one PC for MP event handler to be removed globally.
+groups:
+- Multiplayer
+syntax:
+- call: !Binary
+  - objectName
+  - event
+  ret:
+    type: Nothing
+  left: !Item
+    name: objectName
+    type: Object
+  right: !Item
+    name: event
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player removeAllMPEventHandlers "MPKilled";</sqf>
+see_also:
+- :Category:Event
+- Handlers|EventHandlers
+- list
+- addMPEventHandler
+- removeMPEventHandler

@@ -1,0 +1,21 @@
+name: formationMembers
+desc: Return list of units (drivers) in the formation.
+groups:
+- Groups
+syntax:
+- call: !Unary person
+  ret:
+    type: !ArrayUnsized
+      value: Object
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_drivers = formationMembers _person;</sqf>
+see_also:
+- formation
+- setFormation
+- driver

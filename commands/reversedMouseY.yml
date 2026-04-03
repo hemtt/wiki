@@ -1,0 +1,16 @@
+name: reversedMouseY
+desc: Returns [[true]] if mouse vertical axe is inverted.
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (reversedMouseY) then { hint "Dude!" };</sqf>
+see_also:
+- setMousePosition
+- getMousePosition

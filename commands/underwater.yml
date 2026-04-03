@@ -1,0 +1,24 @@
+name: underwater
+desc: |-
+  Returns whether the object is fully underwater.
+  {{Feature|informative|This command works well with Arma 3 mini-submarines, which was most likely the primary design goal.}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Boolean
+    desc: '[[true]] if submerged'
+  right: !Item
+    name: object
+    desc: mini-submarine
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _isUnderwater = underwater vehicle player;</sqf>
+- <sqf>private _isHeadUnderwater = eyePos player select 2 < 0;</sqf>
+see_also:
+- isTouchingGround
+- isAbleToBreathe

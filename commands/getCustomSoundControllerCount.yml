@@ -1,0 +1,29 @@
+name: getCustomSoundControllerCount
+desc: Returns current number of custom sound controllers supported by the engine for the given vehicle (currently 32)
+groups:
+- Sounds
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Number
+    desc: number of custom controllers
+  right: !Item
+    name: vehicle
+    desc: a transport type vehicle. Does not work on characters or buildings
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getCustomSoundControllerCount vehicle player;</sqf>
+see_also:
+- Arma
+- '3:'
+- Sound
+- setCustomSoundController
+- getCustomSoundController
+- getSoundController
+- getSoundControllerResult
+- getAllSoundControllers
+- getEnvSoundController
+- getAllEnvSoundControllers

@@ -1,0 +1,26 @@
+name: ASLToATL
+desc: Converts a position from [[Position#PositionASL|PositionASL]] to [[Position#PositionATL|PositionATL]]
+groups:
+- Positions
+syntax:
+- call: !Unary pos
+  ret:
+    type: Position3dATL
+  right: !Item
+    name: pos
+    desc: position to convert
+    type: Position3dASL
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ASLToATL getPosASL player isEqualTo getPosATL player;</sqf>
+see_also:
+- ATLToASL
+- AGLToASL
+- ASLToAGL
+- getPos
+- getPosATL
+- getPosASL
+- visiblePosition
+- visiblePositionASL

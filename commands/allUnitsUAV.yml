@@ -1,0 +1,33 @@
+name: allUnitsUAV
+desc: Return a list of all UAV vehicles.
+groups:
+- Remote Control
+- Object Detection
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: Object
+    desc: array of UAV vehicles
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqf>hint format ["Number of UAV(s) on the map: %1", count allUnitsUAV];</sqf>'
+- <sqf>{ _x setDamage 1 } forEach allUnitsUAV;</sqf>
+see_also:
+- unitIsUAV
+- allCurators
+- allGroups
+- allDead
+- playableUnits
+- switchableUnits
+- vehicles
+- allDeadMen
+- agents
+- showUAVFeed
+- shownUAVFeed
+- getConnectedUAV
+- UAVControl
+- connectTerminalToUAV
+- isUAVConnected

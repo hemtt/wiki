@@ -1,0 +1,26 @@
+name: setMarkerAlphaLocal
+desc: Sets the marker alpha. See [[setMarkerAlpha]].
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - marker
+  - alpha
+  ret:
+    type: Nothing
+  left: !Item
+    name: marker
+    type: String
+  right: !Item
+    name: alpha
+    desc: alpha value from 0 (invisible) to 1 (fully visible)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>"my_marker" setMarkerAlphaLocal 0.5;</sqf>
+- <sqf>"enemy_convoy_marker" setMarkerAlphaLocal 0;</sqf>
+see_also:
+- setMarkerAlpha
+- markerAlpha

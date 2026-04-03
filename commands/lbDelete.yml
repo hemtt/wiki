@@ -1,0 +1,38 @@
+name: lbDelete
+desc: Removes the item with the given index from the [[CT_LISTBOX]], [[CT_COMBO]] or [[CT_TOOLBOX]].
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    desc: control IDC
+    type: Number
+  - !Item
+    name: index
+    type: Number
+- call: !Binary
+  - control
+  - index
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>lbDelete [101, 0];</sqf>
+- <sqf>_control lbDelete 0;</sqf>
+see_also:
+- lbAdd
+- lbClear

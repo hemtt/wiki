@@ -1,0 +1,44 @@
+name: findEmptyPositionReady
+desc: |-
+  Preloads area to be used with [[findEmptyPosition]] command and returns [[true]] when area is ready.
+  The size of the area preloaded is from {{hl|center - radius - maxDistance}} to {{hl|center + radius + maxDistance}}
+  {{Feature|important|Preloading large areas may take a long time, we are talking minutes. However once preloaded, it stays preloaded even after mission restart.}}
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - center
+  - - radius
+    - maxDistance
+  ret:
+    type: Boolean
+    desc: '[[true]] when ready'
+  left: !Item
+    name: center
+    desc: search area center position in format [x,y] or [x,y,z] in which case z is ignored
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: radius
+    desc: distance from the center
+    type: Number
+  - !Item
+    name: maxDistance
+    desc: distance from the end of radius
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  Preload aread within 500m:
+  <sqf>_ready = _center findEmptyPositionReady [0, 500];</sqf>
+see_also:
+- findEmptyPosition

@@ -1,0 +1,29 @@
+name: getPosASL
+desc: Returns the object position height above sea level.
+groups:
+- Positions
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dASL
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_aslPos = getPosASL player;</sqf>
+- '<sqf>hint format ["position above sea level: %1", (getPosASL player) select 2];</sqf>'
+see_also:
+- getPosASLVisual
+- setPosASL
+- setPosASL2
+- position
+- getPos
+- getPosATL
+- getPosASLW
+- visiblePosition
+- visiblePositionASL
+- getTerrainHeightASL
+- setUnitFreefallHeight

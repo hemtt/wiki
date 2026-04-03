@@ -1,0 +1,21 @@
+name: missileTarget
+desc: Returns a guided missile's target.
+groups:
+- Weapons
+syntax:
+- call: !Unary munition
+  ret:
+    type: Object
+  right: !Item
+    name: munition
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>missileTarget missile1;</sqf>
+see_also:
+- missileTargetPos
+- setMissileTargetPos
+- setMissileTarget
+- missileState

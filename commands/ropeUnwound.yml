@@ -1,0 +1,40 @@
+name: ropeUnwound
+desc: Returns [[false]] if rope length changing animation is in progress. Returns [[true]] if animation is done.
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: !Unary rope
+  ret:
+    type: Boolean
+    desc: '[[true]] if unwinding is complete'
+  right: !Item
+    name: rope
+    desc: given rope object
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  waitUntil { ropeUnwound (ropes heli1 select 0) };
+  hint "Unwinding Complete";
+  </sqf>
+see_also:
+- ropes
+- canSlingLoad
+- enableRopeAttach
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeDestroy
+- ropeLength
+- ropeAttachedTo
+- ropeCreate
+- ropeDetach
+- ropeAttachEnabled
+- ropeCut
+- ropeEndPosition
+- ropeUnwind
+- setSlingLoad
+- slingLoadAssistantShown

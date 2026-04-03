@@ -1,0 +1,23 @@
+name: lockedCargo
+desc: Check whether cargo position of the vehicle is locked.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicle
+  - cargoIndex
+  ret:
+    type: Boolean
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: cargoIndex
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_result = vehicleName lockedCargo 0;</sqf>
+see_also:
+- lockCargo

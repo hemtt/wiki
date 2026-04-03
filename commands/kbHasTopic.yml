@@ -1,0 +1,33 @@
+name: kbHasTopic
+desc: Check if conversation topic was registered to given person. See [[Conversations]] for more details.
+groups:
+- Conversations
+syntax:
+- call: !Binary
+  - person
+  - topicName
+  ret:
+    type: Boolean
+  left: !Item
+    name: person
+    type: Object
+  right: !Item
+    name: topicName
+    type: String
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_obiHasTopic = player kbHasTopic "helloThereGeneralK";</sqf>
+- <sqf>if (player kbHasTopic "dontShoot") then { player kbRemoveTopic "dontShoot"; };</sqf>
+see_also:
+- Conversations
+- kbAddTopic
+- kbTell
+- kbReact
+- kbRemoveTopic
+- kbAddDatabase
+- kbAddDatabaseTargets
+- FSM
+- FSM
+- Editor

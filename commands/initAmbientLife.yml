@@ -1,0 +1,16 @@
+name: initAmbientLife
+desc: Initialises the ambient life on [[Multiplayer Scripting#Locality|local]] client from {{hl|CfgWorlds >> worldName >> AmbientA3}}. Has no effect on dedicated server or headless client.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>initAmbientLife;</sqf>
+see_also:
+- enableEnvironment
+- sideAmbientLife

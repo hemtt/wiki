@@ -1,0 +1,26 @@
+name: configSourceModList
+desc: Returns an array of mods (CfgMods) in which the given config class is defined.
+groups:
+- Mods and Addons
+syntax:
+- call: !Unary config
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _mods = configSourceModList (configFile >> "CfgVehicles" >> "Man");
+  hint str _mods; // ["A3","curator","heli"]
+  </sqf>
+see_also:
+- configFile
+- configSourceMod
+- configSourceAddonList
+- modParams

@@ -1,0 +1,20 @@
+name: deleteCenter
+desc: |-
+  In a nutshell, this command removes gaming [[Side]] (see [[createCenter]]). If a side has >0 [[Group]]s it cannot be deleted. Center can only be created for: [[east]], [[west]], [[resistance]], [[civilian]] and [[sideLogic]], therefore only centers from the mentioned sides can be deleted.<br><br>
+  '''Old description:''' Destroys the AI center of the given side.
+groups:
+- Sides
+syntax:
+- call: !Unary side
+  ret:
+    type: Nothing
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Unspecified
+effect_loc: Global
+since: {}
+examples:
+- <sqf>deleteCenter east;</sqf>
+see_also:
+- createCenter

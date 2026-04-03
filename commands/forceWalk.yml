@@ -1,0 +1,28 @@
+name: forceWalk
+desc: Forces unit to walk even if run or sprint is selected.
+groups:
+- Stamina System
+syntax:
+- call: !Binary
+  - unit
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: the unit forced to walk
+    type: Object
+  right: !Item
+    name: value
+    desc: true/false
+    type: Boolean
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player forceWalk true;</sqf>
+see_also:
+- isForcedWalk
+- isWalking
+- forceSpeed
+- getSpeed

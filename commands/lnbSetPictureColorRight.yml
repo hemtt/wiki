@@ -1,0 +1,60 @@
+name: lnbSetPictureColorRight
+desc: Sets color of the right picture in a [[CT_LISTNBOX]].
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  - color
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      desc: index of the row
+      type: Number
+    - !Item
+      name: column
+      desc: index of the column
+      type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+- call: !Binary
+  - ctrl
+  - - - row
+      - column
+    - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Array
+    - !Item
+      name: row
+      desc: index of the row
+      type: Number
+    - !Item
+      name: column
+      desc: index of the column
+      type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control lnbSetPictureColorRight [[0, 0], [1,1,1,0.5]];</sqf>
+see_also:
+- lnbSetColor
+- lnbColorRight
+- lnbColor

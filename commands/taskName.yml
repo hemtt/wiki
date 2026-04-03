@@ -1,0 +1,20 @@
+name: taskName
+desc: Returns the name of the given task.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: String
+    desc: task name
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _taskName = taskName _mytask;</sqf>
+see_also:
+- taskType
+- createSimpleTask

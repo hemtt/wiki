@@ -1,0 +1,30 @@
+name: mod
+desc: Remainder of a divided by b.
+alias:
+- '[[a % b]]'
+groups:
+- Math
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_remaining = 5 mod 2; // returns 1, as 5 divided by 2 is 2 &times; 2 + 1</sqf>
+see_also:
+- Math
+- Commands
+- Operators
+- a
+- '%'
+- b

@@ -1,0 +1,19 @@
+name: shownPad
+desc: Checks if client has Notepad enabled.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (shownPad) then {hint "You have Notepad enabled."};</sqf>
+see_also:
+- shownMap
+- shownGPS
+- shownWatch
+- shownCompass
+- shownUAVFeed

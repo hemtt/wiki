@@ -1,0 +1,25 @@
+name: nextWeatherChange
+desc: |-
+  Return the remaining time (in seconds) over which the current weather change will occur.
+  <br>
+  When a weather change finishes, the game engine will automatically generate a new random weather change over a realistic time period (minimum of 90 minutes).
+multiplayer_note: Each client and the server can have differing weather.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_seconds = nextWeatherChange;</sqf>
+see_also:
+- fog
+- fogForecast
+- setFog
+- overcast
+- setOvercast
+- overcastForecast
+- forceWeatherChange

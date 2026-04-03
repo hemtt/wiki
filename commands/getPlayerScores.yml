@@ -1,0 +1,44 @@
+name: getPlayerScores
+desc: |-
+  Returns the unit's table of scores (infantry kills, soft vehicle kills, armor kills, air kills, deaths, total score) '''in multiplayer''' or an empty array in singleplayer.
+  {{Feature|important|This command does not work (returns empty array) if the unit's side has been changed (e.g <sqf inline>[player] joinSilent createGroup east</sqf>).}}
+groups:
+- Multiplayer
+syntax:
+- call: !Unary unitName
+  ret:
+    type: !ArraySized
+    - name: killsInfantry
+      type: Number
+      desc: number of infantry units killed
+      since: null
+    - name: killsSoft
+      type: Number
+      desc: number of soft vehicles killed
+      since: null
+    - name: killsArmor
+      type: Number
+      desc: number of armored vehicles killed
+      since: null
+    - name: killsAir
+      type: Number
+      desc: number of air vehicles killed
+      since: null
+    - name: score
+      type: Number
+      desc: total score
+      since: null
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\ngetPlayerScores BIS_player1;\t// e.g [4, 0, 3, 1, 2, 16]\n\t\t\t\t\t\t\t\t// or in SP: []\n</sqf>"
+see_also:
+- score
+- addScore
+- scoreSide
+- addScoreSide
+- addPlayerScores

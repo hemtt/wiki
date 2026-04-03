@@ -1,0 +1,33 @@
+name: addHandgunItem
+desc: Adds weapon item, including magazine, directly to the [[handgunWeapon]]. This is used for infantry weapons.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player addHandgunItem "muzzle_snds_L";</sqf>
+see_also:
+- addWeaponItem
+- removeHandgunItem
+- removeAllHandgunItems
+- addPrimaryWeaponItem
+- addSecondaryWeaponItem
+- addBinocularItem
+- weaponsItems
+- handgunItems
+- primaryWeaponItems
+- secondaryWeaponItems
+- binocularItems

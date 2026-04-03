@@ -1,0 +1,46 @@
+name: lockCargo
+desc: |-
+  Lock all cargo positions of a vehicle or lock by index.
+  This command will remove user "get in" action (not get out) but will also stop player getting into vehicle via script commands (e.g [[moveInCargo]]) unlike [[lock]] command.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicle
+  - lock
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: lock
+    type: Boolean
+- call: !Binary
+  - vehicle
+  - - index
+    - lock
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: lock
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>vehicleName lockCargo true;</sqf>
+- <sqf>vehicleName lockCargo [0, true];</sqf>
+see_also:
+- lock
+- setVehicleLock
+- lockDriver
+- lockedCargo
+- lockTurret

@@ -1,0 +1,54 @@
+name: tvExpand
+desc: Expands tree item pointed to by the path. IDC means id of parent Tree View.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    desc: '[] will expand the whole tree if it was collapsed previously with []'
+    type: Path
+- call: !Binary
+  - control
+  - path
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: path
+    desc: '[] will expand the whole tree if it was collapsed previously with []'
+    type: Path
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>tvExpand [101, [0]];</sqf>
+- <sqf>_ctrl tvExpand [1];</sqf>
+see_also:
+- tvExpandAll
+- tvAdd
+- tvClear
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvPicture
+- tvSetCurSel
+- tvSetData
+- tvSetPicture
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvText
+- tvValue

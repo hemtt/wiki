@@ -1,0 +1,37 @@
+name: lbData
+desc: Returns the data set in given index of the [[CT_LISTBOX]] or [[CT_COMBO]].
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    desc: control's IDC
+    type: Number
+  - !Item
+    name: index
+    type: Number
+- call: !Binary
+  - control
+  - index
+  ret:
+    type: String
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_data = lbData [101, 0];</sqf>
+- <sqf>_data = _control lbData 0;</sqf>
+see_also:
+- lbSetData

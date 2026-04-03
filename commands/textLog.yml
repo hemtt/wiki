@@ -1,0 +1,20 @@
+name: textLog
+desc: |-
+  Dump argument value to debugging output. <br>
+  {{Feature|warning|This command is non-functional in the retail version}}
+groups:
+- Broken Commands
+syntax:
+- call: !Unary anything
+  ret:
+    type: Nothing
+  right: !Item
+    name: anything
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>textLog player;</sqf>
+see_also:
+- diag_log

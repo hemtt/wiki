@@ -1,0 +1,29 @@
+name: getPosWorldVisual
+desc: Returns the provided object's, model centre position in render version in format [[Position#PositionASL|PositionASL]], rather than transformed [[boundingCenter]] or [[Oxygen_2_-_Manual#LandContact|LandContact]] vertices.
+groups:
+- Object Manipulation
+- Render Time Scope
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dASL
+    desc: the model centre's position (see [[getPosWorld]]) in render scope
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_obj setPosWorld getPosWorldVisual _obj;</sqf>
+- <sqf>_groundObj modelToWorldVisualWorld [0,0,0] isEqualTo getPosWorldVisual _groundObj; // true</sqf>
+- <sqf>private _waveHeight = ((boat modelToWorldVisual [0,0,0]) vectorDiff getPosWorldVisual boat) select 2;</sqf>
+see_also:
+- getPosWorld
+- setPosWorld
+- visiblePosition
+- getPosATLVisual
+- getPosASLVisual
+- visiblePositionASL
+- modelToWorldVisual
+- modelToWorldVisualWorld

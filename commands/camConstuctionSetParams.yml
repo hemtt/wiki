@@ -1,0 +1,35 @@
+name: camConstuctionSetParams
+desc: |-
+  Sets construction camera parameters. To work with "camconstruct" object.
+  {{Feature|important|Beware: {{sic|camCon'''stu'''ctionSetParams|camConstRuctionSetParams}}.}}
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - - position
+    - radius
+    - maxAboveLand
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    type: Object
+  right: !Array
+  - !Item
+    name: position
+    type: Position
+  - !Item
+    name: radius
+    type: Number
+  - !Item
+    name: maxAboveLand
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camera camConstuctionSetParams [getPos player, 50, 20];</sqf>
+see_also:
+- camCreate
+- cameraEffect

@@ -1,0 +1,24 @@
+name: items
+desc: Returns an array of names of all unit's stored items, including [[weapons]] but excluding [[magazines]] (see [[itemsWithMagazines]]) and [[assignedItems]].
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_itemsPlayer = items player;</sqf>
+- <sqf>player sideChat format ["%1", items player];</sqf>
+see_also:
+- itemsWithMagazines
+- assignedItems
+- primaryWeaponItems
+- secondaryWeaponItems
+- backpacks

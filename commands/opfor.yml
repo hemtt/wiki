@@ -1,0 +1,23 @@
+name: opfor
+desc: Pre-defined variable for the opfor [[Side|side]].
+alias:
+- '[[east]]'
+groups:
+- Sides
+syntax:
+- call: Nular
+  ret:
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (side player == opfor) then\n{\n\thint \"OPFOR\";\n};\n</sqf>"
+see_also:
+- side
+- civilian
+- blufor
+- east
+- independent
+- resistance
+- west

@@ -1,0 +1,54 @@
+name: setMarkerBrushLocal
+desc: |-
+  Selects the fill texture for the marker ("RECTANGLE" or "ELLIPSE"). Brush is the name of the subclass in CfgMarkerBrushes.
+  <br>
+  <br>
+  ''brush'' can be:
+  * "Solid"
+  * "SolidFull" (A3 only)
+  * "Horizontal"
+  * "Vertical"
+  * "Grid"
+  * "FDiagonal"
+  * "BDiagonal"
+  * "DiagGrid"
+  * "Cross"
+  * "Border" (A2/A3 only)
+  * "SolidBorder" (OA/A3 only)
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - markerName
+  - brush
+  ret:
+    type: Nothing
+  left: !Item
+    name: markerName
+    type: String
+  right: !Item
+    name: brush
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>"Marker1" setMarkerBrushLocal "DiagGrid";</sqf>
+see_also:
+- setMarkerAlpha
+- setMarkerAlphaLocal
+- setMarkerBrush
+- setMarkerColor
+- setMarkerColorLocal
+- setMarkerDir
+- setMarkerDirLocal
+- setMarkerPos
+- setMarkerPosLocal
+- setMarkerShape
+- setMarkerShapeLocal
+- setMarkerSize
+- setMarkerSizeLocal
+- setMarkerText
+- setMarkerTextLocal
+- setMarkerType
+- setMarkerTypeLocal

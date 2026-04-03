@@ -1,0 +1,34 @@
+name: isNumber
+desc: Check if config entry represents number.
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: Boolean
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>_ok = isNumber (configFile >> "CfgVehicles");</sqf>
+
+  Result is false
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getArray
+- getText
+- getNumber
+- inheritsFrom
+- isArray
+- isClass
+- isText
+- select

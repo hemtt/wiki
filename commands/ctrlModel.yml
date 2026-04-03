@@ -1,0 +1,30 @@
+name: ctrlModel
+desc: 'Returns model used in 3D-[[Arma: GUI Configuration|Dialog]].'
+groups:
+- GUI Control - Object
+syntax:
+- call: !Unary control
+  ret:
+    type: String
+    desc: model path
+  right: !Item
+    name: control
+    desc: 3D control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_model = ctrlModel _control3D;</sqf>
+see_also:
+- ctrlCreate
+- ctrlDelete
+- ctrlSetModel
+- ctrlPosition
+- ctrlSetPosition
+- ctrlClassName
+- displayCtrl
+- ctrlModelScale
+- ctrlSetModelScale
+- ctrlModelDirAndUp
+- ctrlSetModelDirAndUp

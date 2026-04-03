@@ -1,0 +1,31 @@
+name: setUserMFDText
+desc: Stored user text value in MFD, limit is 50, user0...user49
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - vehicle
+  - - index
+    - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    desc: vehicle with MFD
+    type: Object
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: value
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_vehicle setUserMFDText [0, "some text"];</sqf>
+see_also:
+- getUserMFDText
+- setUserMFDValue
+- getUserMFDValue

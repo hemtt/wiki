@@ -1,0 +1,42 @@
+name: setMarkerTypeLocal
+desc: Sets marker type locally. Marker type is a class name in [[CfgMarkers]].
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - markerName
+  - type
+  ret:
+    type: Nothing
+  left: !Item
+    name: markerName
+    type: String
+  right: !Item
+    name: type
+    desc: see [[CfgMarkers]].
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>"MarkerOne" setMarkerTypeLocal "Warning";</sqf>
+see_also:
+- CfgMarkers
+- setMarkerAlpha
+- setMarkerAlphaLocal
+- setMarkerBrush
+- setMarkerBrushLocal
+- setMarkerColor
+- setMarkerColorLocal
+- setMarkerDir
+- setMarkerDirLocal
+- setMarkerPos
+- setMarkerPosLocal
+- setMarkerShape
+- setMarkerShapeLocal
+- setMarkerSize
+- setMarkerSizeLocal
+- setMarkerText
+- setMarkerTextLocal
+- setMarkerType
+- markerType

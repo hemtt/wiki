@@ -1,0 +1,35 @@
+name: else
+desc: Executes [[else]] code when [[if]] condition returns [[false]].
+groups:
+- Program Flow
+syntax:
+- call: !Binary
+  - thenCode
+  - elseCode
+  ret:
+    type: !ArraySized
+    - name: thenCode
+      type: Code
+      desc: null
+      since: null
+    - name: elseCode
+      type: Code
+      desc: null
+      since: null
+  left: !Item
+    name: thenCode
+    type: Code
+  right: !Item
+    name: elseCode
+    type: Code
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (a > b) then { c = 0 } else { c = 1 };</sqf>
+- "<sqf>\nif (a < b) then {\n\thint \"B is greater than A\";\n} else {\n\thint \"A is greater than B\";\n};\n</sqf>"
+see_also:
+- Control
+- Structures
+- if
+- then

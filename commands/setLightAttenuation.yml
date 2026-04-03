@@ -1,0 +1,61 @@
+name: setLightAttenuation
+desc: |-
+  Sets attenuation of light. Standard method of attenuation (1 / (constant + linear*dist + quadratic*dist*dist)).
+  ''start'' param represents distance where the attenuation starts to take effects (dist = distance - start).
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - - start
+    - constant
+    - linear
+    - quadratic
+    - hardlimitstart
+    - hardlimitend
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    type: Object
+  right: !Array
+  - !Item
+    name: start
+    desc: distance with 100% intensity, falloff starts here
+    type: Number
+  - !Item
+    name: constant
+    desc: constant attenuation coef
+    type: Number
+  - !Item
+    name: linear
+    desc: linear attenuation coef
+    type: Number
+  - !Item
+    name: quadratic
+    desc: quadratic attenuation coef
+    type: Number
+  - !Item
+    name: hardlimitstart
+    desc: (Optional) max distance hard limit start (start of fading of intensity to 0) in m
+    type: Number
+  - !Item
+    name: hardlimitend
+    desc: (Optional) max distance hard limit end (end of fading of intensity to 0) in m
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight setLightAttenuation [2, 4, 4, 0, 9, 10];</sqf>
+see_also:
+- setLightAmbient
+- setLightColor
+- lightAttachObject
+- lightDetachObject
+- setLightBrightness
+- setLightIntensity
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightDayLight

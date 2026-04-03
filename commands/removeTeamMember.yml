@@ -1,0 +1,31 @@
+name: removeTeamMember
+desc: Remove given member from given team. Effect is local, unless both member and team are local to PC on which command is executed, then effect is global.
+groups:
+- Teams
+syntax:
+- call: !Binary
+  - team
+  - member
+  ret:
+    type: Nothing
+  left: !Item
+    name: team
+    type: TeamMember
+  right: !Item
+    name: member
+    type: TeamMember
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_team removeTeamMember _teamMember;</sqf>
+see_also:
+- addTeamMember
+- createTeam
+- deleteTeam
+- forEachMemberTeam
+- teamMember
+- teamMemberNull
+- teamName
+- teams
+- teamType

@@ -1,0 +1,42 @@
+name: vectorUp
+desc: |-
+  [[File:arma3_object-vectors.jpg|thumb|right|An object with its [[vectorDir]], [[vectorUp]] and [[vectorSide]] (vectors not to scale)]]
+  Returns an object's up vector in world space.
+
+  {{Feature|important|The vector is '''not necessarily [[vectorNormalized|normalized]]'''. The [[vectorMagnitude|magnitude]] of the vector depends on the [[getObjectScale|object's scale]].}}
+groups:
+- Math - Vectors
+syntax:
+- call: !Unary object
+  ret:
+    type: Vector3d
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_vecUp = vectorUp MyObject;</sqf>
+see_also:
+- vectorUpVisual
+- vectorDir
+- vectorSide
+- vectorSideVisual
+- setVectorDir
+- setVectorUp
+- setVectorDirAndUp
+- vectorDiff
+- vectorAdd
+- vectorMultiply
+- vectorCrossProduct
+- vectorDistance
+- vectorMagnitudeSqr
+- vectorDistanceSqr
+- vectorCos
+- vectorMagnitude
+- vectorDotProduct
+- vectorNormalized
+- vectorFromTo
+- BIS_fnc_getPitchBank
+- BIS_fnc_transformVectorDirAndUp

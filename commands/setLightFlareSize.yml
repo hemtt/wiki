@@ -1,0 +1,32 @@
+name: setLightFlareSize
+desc: Sets relative size of the flare for the light.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - size
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    type: Object
+  right: !Item
+    name: size
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight setLightFlareSize 5;</sqf>
+see_also:
+- setLightAmbient
+- setLightColor
+- lightAttachObject
+- lightDetachObject
+- setLightIntensity
+- setLightAttenuation
+- setLightUseFlare
+- setLightBrightness
+- setLightFlareMaxDistance
+- setLightDayLight

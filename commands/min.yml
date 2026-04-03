@@ -1,0 +1,31 @@
+name: min
+desc: The smaller of a and b.
+groups:
+- Math
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>3 min 2 // Result is 2</sqf>
+- <sqf>-3 min -2 // Result is -3</sqf>
+see_also:
+- max
+- selectMin
+- selectMax
+- ceil
+- floor
+- linearConversion
+- Math
+- Commands

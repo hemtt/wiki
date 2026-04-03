@@ -1,0 +1,26 @@
+name: displayUniqueName
+desc: |-
+  Get the provided display's [[Procedural Textures#UI On Texture|UI On Texture]] unique name.
+  {{Feature|informative|See [[findDisplay]] to get a [[Display]] by its unique name.}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary display
+  ret:
+    type: String
+    desc: the unique display identifier
+  right: !Item
+    name: display
+    type: Display
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _displayName = displayUniqueName _myDisplay;</sqf>
+see_also:
+- findDisplay
+- displayUpdate
+- '{{Link|Procedural'
+- Textures#UI
+- On
+- Texture}}

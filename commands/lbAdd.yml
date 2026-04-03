@@ -1,0 +1,44 @@
+name: lbAdd
+desc: |-
+  Adds an item with the given text to the [[CT_LISTBOX]] or [[CT_COMBO]] or [[CT_TOOLBOX]].
+
+  {{Feature|informative| If using {{hl|RscToolBox}} as template with [[ctrlCreate]], clear it first with [[lbClear]]}}
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - text
+  ret:
+    type: Number
+    desc: index (row) of newly added item
+  right: !Array
+  - !Item
+    name: idc
+    desc: control IDC
+    type: Number
+  - !Item
+    name: text
+    desc: visible text
+    type: String
+- call: !Binary
+  - control
+  - text
+  ret:
+    type: Number
+    desc: index (row) of newly added item
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: text
+    type: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_index = lbAdd [101, "First item"];</sqf>
+- <sqf>_index = _control lbAdd "First item";</sqf>
+see_also:
+- lbDelete
+- lbText

@@ -1,0 +1,28 @@
+name: remove3DENLayer
+desc: |-
+  Remove [[:Category:Eden Editor|Eden Editor]] editing layer.
+  {{Feature|informative|[[delete3DENEntities]] seems to be more reliable.}}
+groups:
+- Eden Editor
+syntax:
+- call: !Unary layerID
+  ret:
+    type: Boolean
+    desc: '[[true]] if the layer was removed successfully (i.e., correct layer ID was used)'
+  right: !Item
+    name: layerID
+    desc: layer ID as returned by [[add3DENLayer]] command
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _myLayer = -1 add3DENLayer "Enemy Base";
+  remove3DENLayer _myLayer;
+  </sqf>
+see_also:
+- add3DENLayer
+- set3DENLayer
+- get3DENLayerEntities

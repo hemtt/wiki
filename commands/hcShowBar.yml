@@ -1,0 +1,31 @@
+name: hcShowBar
+desc: Shows or hides [[High Command|high command]] bar. There must be some groups under HC command to show HC bar.{{Feature|arma3| Since Arma 3 v1.94 this command returns [[Nothing]] as it should}}
+groups:
+- High Command
+syntax:
+- call: !Unary bool
+  ret:
+    type: Nothing
+    desc: (before {{GVI|arma3|1.94|size= 0.75}} this command returned [[Object]] of [[objNull | null]] value)
+  right: !Item
+    name: bool
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hcShowBar true;</sqf>
+- <sqf>hcShowBar false;</sqf>
+see_also:
+- High
+- Command
+- hcAllGroups
+- hcGroupParams
+- hcLeader
+- hcRemoveAllGroups
+- hcRemoveGroup
+- hcSelected
+- hcSelectGroup
+- hcSetGroup
+- hcShownBar
+- onHCGroupSelectionChanged

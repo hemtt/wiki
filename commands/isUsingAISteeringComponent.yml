@@ -1,0 +1,16 @@
+name: isUsingAISteeringComponent
+desc: Returns whether the [[useAISteeringComponent|AI steering component]] setting is enabled globally.
+groups:
+- AI Behaviour
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (isUsingAISteeringComponent) then\n{\n\tuseAISteeringComponent false;\n};\n</sqf>"
+see_also:
+- useAISteeringComponent
+- isAISteeringComponentEnabled

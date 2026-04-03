@@ -1,0 +1,21 @@
+name: ctrlHTMLLoaded
+desc: Returns [[true]] when HTML content was successfully loaded.
+groups:
+- GUI Control - HTML
+syntax:
+- call: !Unary control
+  ret:
+    type: Boolean
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\n_control htmlLoad \"test.html\";\nif (!ctrlHTMLLoaded _control) then {\n\thint \"Loading test.html failed!\";\n};\n</sqf>"
+see_also:
+- htmlLoad
+- 'Arma:'
+- GUI
+- Configuration

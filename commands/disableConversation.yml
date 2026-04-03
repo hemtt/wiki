@@ -1,0 +1,28 @@
+name: disableConversation
+desc: "In theory disables the ability to talk to other people. In actuality, if [[true]] is given, the command increases unit's [[kbTell]] ''IsSpeaking'' status by 1, thus stopping unit from having a conversation. If [[false]] is given, the command decreases unit's [[kbTell]] ''IsSpeaking'' status by 1. The unit \"is speaking\" if ''IsSpeaking > 0''. \n{{Feature|important|[[kbTell]] ''IsSpeaking'' is a number that is increased or decreased by 1 internally. Default is 0, but it can be any positive or negative value. [[disableConversation]] allows to increase or decrease this number. When executed multiple times this can present an unexpected problem. Use [[conversationDisabled]] which returns [[true]] if this number > 0, to reset this number to 0 if necessary: \n<sqf>while {!conversationDisabled _unit} do {_unit disableConversation true}; while {conversationDisabled _unit} do {_unit disableConversation false};</sqf>}}"
+groups:
+- Radio and Chat
+syntax:
+- call: !Binary
+  - unitName
+  - disable
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: Object
+  right: !Item
+    name: disable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player disableConversation true;</sqf>
+- <sqf>soldier1 disableConversation false;</sqf>
+see_also:
+- conversationDisabled
+- setSpeaker
+- enableRadio
+- enableSentences
+- showSubtitles

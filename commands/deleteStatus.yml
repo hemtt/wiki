@@ -1,0 +1,22 @@
+name: deleteStatus
+desc: Deletes a status created with [[saveStatus]] from the campaign's progress file.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary statusName
+  ret:
+    type: Boolean
+    desc: '[[true]] if the status was deleted successfully, [[false]] if not'
+  right: !Item
+    name: statusName
+    desc: name of the saved status
+    type: String
+argument_loc: Unspecified
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_deleted = deleteStatus "playerStatus";</sqf>
+see_also:
+- saveStatus
+- deleteIdentity
+- saveIdentity

@@ -1,0 +1,27 @@
+name: setCurrentTask
+desc: Set the task as a current task of the person.
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - object
+  - task
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    desc: the unit having the task
+    type: Object
+  right: !Item
+    name: task
+    desc: the task you want to select
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player setCurrentTask tskKillSpongebob;</sqf>
+see_also:
+- createSimpleTask
+- simpleTasks
+- currentTask

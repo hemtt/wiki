@@ -1,0 +1,57 @@
+name: nearRoads
+desc: Find the road segments within the circle of given radius.
+groups:
+- Roads and Airports
+- Object Detection
+syntax:
+- call: !Binary
+  - pos
+  - radius
+  ret:
+    type: !ArrayUnsized
+      value: Object
+    desc: road segments within radius
+  left: !Item
+    name: pos
+    desc: center of search radius
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position3dAGL
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+  right: !Item
+    name: radius
+    desc: search radius in meters
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_list = player nearRoads 50;</sqf>
+- <sqf>_list = (position _unit) nearRoads 50;</sqf>
+- <sqf>_list = [1800,5700] nearRoads 50;</sqf>
+see_also:
+- isOnRoad
+- roadAt
+- surfaceIsWater
+- roadsConnectedTo
+- findNearestEnemy
+- nearestBuilding
+- nearestObject
+- nearestObjects
+- nearObjects
+- nearestLocation
+- nearEntities
+- nearTargets
+- nearSupplies
+- nearestLocationWithDubbing
+- nearObjectsReady
+- getRoadInfo
+- nearestTerrainObjects
+- nearestMines

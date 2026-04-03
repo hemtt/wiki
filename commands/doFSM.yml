@@ -1,0 +1,48 @@
+name: doFSM
+desc: "Orders a unit to process command defined by [[FSM]] file (silently). \n\nUnlike with execFSM where ''_this'' is passed to the FSM, the following parameters are passed when using doFSM/commandFSM:\n\n: _leader: leader of subgroup with this command \n: _destination: command destination/position\n: _target: command target \n: _units: list of all persons in subgroup"
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - - fsmName
+    - position
+    - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: fsmName
+    type: String
+  - !Item
+    name: position
+    type: Position
+  - !Item
+    name: target
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_soldierOne doFSM ["move.fsm", position player, player];</sqf>
+- <sqf>units player doFSM ["move.fsm", position player, player];</sqf>
+see_also:
+- FSM
+- FSM_Editor_Manual
+- commandFSM
+- completedFSM
+- execFSM
+- getFSMVariable
+- setFSMVariable
+- unitReady

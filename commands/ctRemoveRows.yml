@@ -1,0 +1,42 @@
+name: ctRemoveRows
+desc: Takes array of row indices as a parameter and removes rows with those indices. Indices of remaining rows will be recomputed.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Binary
+  - ctrl
+  - - indexN
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Infinite
+    - !Item
+      name: indexN
+      type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_control ctRemoveRows [0, 1, 2];</sqf>
+see_also:
+- ctAddRow
+- ctAddHeader
+- ctClear
+- ctCurSel
+- ctSetCurSel
+- ctRowControls
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctSetData
+- ctData
+- ctFindRowHeader
+- ctFindHeaderRows
+- ctRemoveHeaders
+- ctSetRowTemplate
+- ctSetHeaderTemplate

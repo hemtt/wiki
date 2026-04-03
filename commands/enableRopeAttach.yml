@@ -1,0 +1,41 @@
+name: enableRopeAttach
+desc: Enables or disables the ability to be attached to a rope end for the given entity.
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: !Binary
+  - entity
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: entity
+    desc: given entity
+    type: Object
+  right: !Item
+    name: enable
+    desc: '[[false]] to disable rope attachment'
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>vehicle player enableRopeAttach false;</sqf>
+see_also:
+- ropes
+- canSlingLoad
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeDestroy
+- ropeLength
+- ropeUnwound
+- ropeAttachedTo
+- ropeCreate
+- ropeDetach
+- ropeAttachEnabled
+- ropeCut
+- ropeEndPosition
+- ropeUnwind
+- setSlingLoad
+- slingLoadAssistantShown

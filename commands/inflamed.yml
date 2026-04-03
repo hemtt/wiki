@@ -1,0 +1,19 @@
+name: inflamed
+desc: Checks if fireplace is inflamed (burning) or not. To check if a unit is receiving damage from fire, use [[isBurning]] command.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary fireplace
+  ret:
+    type: Boolean
+  right: !Item
+    name: fireplace
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_inflamed = inflamed _fireplaceOne;</sqf>
+see_also:
+- inflame
+- isBurning

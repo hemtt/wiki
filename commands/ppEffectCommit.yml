@@ -1,0 +1,63 @@
+name: ppEffectCommit
+desc: Commit [[Post Process Effects|post process effect]] in given time.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - effect
+  - commit
+  ret:
+    type: Nothing
+  left: !Item
+    name: effect
+    desc: name of the effect
+    type: String
+  right: !Item
+    name: commit
+    desc: duration
+    type: Number
+- call: !Binary
+  - handle
+  - commit
+  ret:
+    type: Nothing
+  left: !Item
+    name: handle
+    desc: handle of the effect
+    type: Number
+  right: !Item
+    name: commit
+    desc: duration
+    type: Number
+- call: !Binary
+  - handles
+  - commit
+  ret:
+    type: Nothing
+  left: !Item
+    name: handles
+    desc: list of handles
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: commit
+    desc: duration
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>"colorCorrection" ppEffectCommit 3;</sqf>
+- <sqf>_hndl ppEffectCommit 3;</sqf>
+- <sqf>[_hndl1, _hndl2] ppEffectCommit 3;</sqf>
+see_also:
+- Post
+- Process
+- Effects
+- ppEffectForceInNVG
+- ppEffectEnable
+- ppEffectEnabled
+- ppEffectDestroy
+- ppEffectCreate
+- ppEffectCommitted
+- ppEffectAdjust

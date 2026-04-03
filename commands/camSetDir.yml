@@ -1,0 +1,76 @@
+name: camSetDir
+desc: Sets the orientation of the given camera in the direction of the given vector. Needs [[camCommit]]. Since {{GVI|arma3|0.50}}, only the second syntax with a [[Vector3D]] is available.
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - azimuth
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    desc: object of type "camera"
+    type: Object
+  right: !Item
+    name: azimuth
+    desc: camera azimuth
+    type: Number
+- call: !Binary
+  - camera
+  - direction
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    desc: object of type "camera"
+    type: Object
+  right: !Item
+    name: direction
+    desc: direction of camera. Must be a valid vector.
+    type: Vector3d
+  since:
+    arma3: '0.50'
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- |-
+  Since {{arma3}}:
+  <sqf>
+  private _pos1 = player modelToWorld [0, 5, 5];
+  private _pos2 = player modelToWorld [0, 50, 50];
+
+  private _cam = "camera" camCreate _pos1;
+  _cam cameraEffect ["INTERNAL", "BACK"];
+
+  _cam camSetPos _pos2;
+  _cam camSetDir (_pos2 vectorFromTo _pos1);
+  _cam camCommit 5;
+  waitUntil { camCommitted _cam };
+
+  _cam camSetPos _pos1;
+  _cam camCommit 5;
+  </sqf>
+- |-
+  Before {{arma3}}:
+  <sqf>
+  private _pos1 = player modelToWorld [0, 5, 5];
+  private _pos2 = player modelToWorld [0, 50, 50];
+
+  private _cam = "camera" camCreate _pos1;
+  _cam cameraEffect ["INTERNAL", "BACK"];
+
+  _cam camSetPos _pos2;
+  _cam camSetDir 180;
+  _cam camCommit 5;
+  waitUntil { camCommitted _cam };
+
+  _cam camSetPos _pos1;
+  _cam camCommit 5;
+  </sqf>
+see_also:
+- direction
+- setDir
+- camSetTarget
+- getCameraViewDirection

@@ -1,0 +1,25 @@
+name: ATLToASL
+desc: Converts a position from [[Position#PositionATL|PositionATL]] to [[Position#PositionASL|PositionASL]]
+groups:
+- Positions
+syntax:
+- call: !Unary pos
+  ret:
+    type: Position3dASL
+  right: !Item
+    name: pos
+    desc: position to convert
+    type: Position3dATL
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>ATLToASL (getPosATL player) isEqualTo getPosASL player;</sqf>
+- <sqf>_camPosASL = ATLToASL positionCameraToWorld [0,0,0];</sqf>
+see_also:
+- ASLToATL
+- AGLToASL
+- ASLToAGL
+- getPos
+- getPosATL
+- getPosASL

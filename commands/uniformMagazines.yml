@@ -1,0 +1,22 @@
+name: uniformMagazines
+desc: Get array with all magazines from uniform of the given unit.
+groups:
+- Containers
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nuniformMagazines player;\n// returns e.g\n/*\n[\n\t\"6.5mm 30Rnd STANAG Mag(30/30)[id/cr:1/0](3x)\"\n]\n*/\n</sqf>"
+see_also:
+- vestMagazines
+- backpackMagazines
+- soldierMagazines

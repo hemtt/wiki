@@ -1,0 +1,31 @@
+name: setPilotCameraDirection
+desc: 'Sets the direction of airplane''s or helicopter''s {{Link|Arma 3: Targeting config reference#class pilotCamera|pilotCamera}}.'
+groups:
+- Pilot Camera
+syntax:
+- call: !Binary
+  - object
+  - vector3D
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    desc: a vehicle equipped with pilot camera
+    type: Object
+  right: !Item
+    name: vector3D
+    desc: in model space, relative to the model centre (In a similar fashion to [[Position#PositionRelative|PositionRelative]])
+    type: Vector3d
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>vehicle player setPilotCameraDirection [0,1,0] // re-centers the camera</sqf>
+see_also:
+- hasPilotCamera
+- getPilotCameraPosition
+- getPilotCameraDirection
+- getPilotCameraRotation
+- getPilotCameraTarget
+- setPilotCameraRotation
+- setPilotCameraTarget

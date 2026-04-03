@@ -1,0 +1,31 @@
+name: allGroups
+desc: Return a list of all groups created on the following sides [[east]], [[west]], [[resistance]]/[[independent]] and [[civilian]] only. Does not contain groups of [[sideLogic]].
+groups:
+- Groups
+- Object Detection
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: Group
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>{ leader _x sideChat "Go ! Go ! Go !" } forEach allGroups;</sqf>
+- |-
+  All groups with players:
+  <sqf>
+  private _allGroupsWithPlayers = [];
+  { _allGroupsWithPlayers pushBackUnique group _x } forEach allPlayers;
+  </sqf>
+see_also:
+- group
+- groups
+- units
+- allCurators
+- allDead
+- playableUnits
+- switchableUnits
+- vehicles
+- allUnitsUAV

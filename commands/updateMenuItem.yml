@@ -1,0 +1,35 @@
+name: updateMenuItem
+desc: |-
+  Sets the text and command for the menu item. Index is index returned by [[addMenuItem]] command. Command is optional.
+  {{Feature|informative|Some Old Editor Command}}
+groups:
+- Game 2 Editor
+syntax:
+- call: !Binary
+  - map
+  - - menu item index
+    - text
+    - command
+  ret:
+    type: Nothing
+  left: !Item
+    name: map
+    type: Control
+  right: !Array
+  - !Item
+    name: menu item index
+    desc: See [[addMenuItem]]
+    type: Number
+  - !Item
+    name: text
+    type: String
+  - !Item
+    name: command
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- '-'

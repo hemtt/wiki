@@ -1,0 +1,20 @@
+name: isBleeding
+desc: Returns whether the unit is bleeding.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (isBleeding player) then { player groupChat "I'm bleeding!!"; };</sqf>
+see_also:
+- getBleedingRemaining
+- isBurning
+- setBleedingRemaining

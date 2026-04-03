@@ -1,0 +1,27 @@
+name: getPlayerCloudId
+desc: Return the provided player's unique Cloud service account id.
+multiplayer_note: '{{Feature|important|Only works in multiplayer and on official servers.}}'
+groups:
+- Argo
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+    desc: the Cloud ID or empty string if in single player or if ''unit'' is not a live player unit
+  right: !Item
+    name: unit
+    desc: the player unit from whom to obtain the Cloud ID
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _localPlayerCloudID = getPlayerCloudId player;
+  _remotePlayerCloudID = getPlayerCloudId _otherPlayer;
+  _emptyString = getPlayerCloudId objNull;
+  </sqf>
+see_also:
+- getPlayerUID
+- getPlayerUIDOld

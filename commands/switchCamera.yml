@@ -1,0 +1,48 @@
+name: switchCamera
+desc: |-
+  Switch camera to given vehicle / camera. Mode is one of:
+  * '''"INTERNAL"''': 1st person
+  * '''"GUNNER"''': optics / sights
+  * '''"EXTERNAL"''': 3rd person (inaccessible if difficulty settings do not allow for it)
+  * '''"GROUP"''': group
+  * '''"CARGO"''': same as "INTERNAL"
+
+  If you switch to a unit in a vehicle, this command uses the correct turret.
+  {{Feature|important|
+  * Control over the unit is not given to the player. Use [[selectPlayer]] or a combination of [[switchCamera]] and [[remoteControl]] to achieve this.
+  * Always [[switchCamera]] first (when needed) '''before''' using [[remoteControl]] as doing it after may lead to unpredictable results.
+  }}
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - target
+  - mode
+  ret:
+    type: Nothing
+  left: !Item
+    name: target
+    type: Object
+  right: !Item
+    name: mode
+    type: String
+- call: !Unary target
+  ret:
+    type: Nothing
+  right: !Item
+    name: target
+    type: Object
+  since:
+    arma3: '1.66'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player switchCamera "Gunner";</sqf>
+- <sqf>vehicle player switchCamera "External";</sqf>
+see_also:
+- cameraView
+- cameraOn
+- cameraEffect
+- selectPlayer
+- remoteControl

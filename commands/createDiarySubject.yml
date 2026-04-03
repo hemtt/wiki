@@ -1,0 +1,41 @@
+name: createDiarySubject
+desc: Creates a new subject in the [[Diary]].
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - player
+  - - subject
+    - displayName
+    - picture
+  ret:
+    type: Number
+    desc: index of the entry that was added
+  left: !Item
+    name: player
+    type: Object
+  right: !Array
+  - !Item
+    name: subject
+    type: String
+  - !Item
+    name: displayName
+    desc: the visible name
+    type: String
+  - !Item
+    name: picture
+    desc: (Optional, default {{hl|""}}) icon to display next to the subject. Can be set later with [[setDiarySubjectPicture]]. Similar to [[lbSetPictureRight]].
+    type: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_index = player createDiarySubject ["myPage","My page"];</sqf>
+see_also:
+- removeDiarySubject
+- processDiaryLink
+- createDiaryLink
+- createDiaryRecord
+- diarySubjectExists
+- setDiarySubjectPicture
+- allDiarySubjects

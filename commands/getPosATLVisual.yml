@@ -1,0 +1,28 @@
+name: getPosATLVisual
+desc: Returns an object's rendered [[Position#PositionATL|ATL position]] (z value above ground) in render time scope.
+groups:
+- Object Manipulation
+- Render Time Scope
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dATL
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_playerRenderedPosATL = getPosATLVisual player;</sqf>
+see_also:
+- getPosVisual
+- getPosASLVisual
+- getPosWorldVisual
+- visiblePositionASL
+- visiblePosition
+- position
+- getPos
+- getPosATL
+- getPosASL
+- getPosASLW

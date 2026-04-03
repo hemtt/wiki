@@ -1,0 +1,30 @@
+name: playActionNow
+desc: |-
+  When used on a person, a smooth transition to the given action will be initiated, but all previous playAction are discarded.
+  {{Feature|arma3|For {{arma3}} actions, see [[playAction/actions]].}}
+groups:
+- Animations
+syntax:
+- call: !Binary
+  - soldier
+  - action
+  ret:
+    type: Nothing
+  left: !Item
+    name: soldier
+    type: Object
+  right: !Item
+    name: action
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>soldierOne playActionNow "SitDown";</sqf>
+- <sqf>rabbitTwo playActionNow "WalkF";</sqf>
+see_also:
+- playAction
+- switchAction
+- playMove
+- playMoveNow
+- switchMove

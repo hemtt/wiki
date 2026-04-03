@@ -1,0 +1,21 @@
+name: stopSound
+desc: Terminates the given sound
+groups:
+- Sounds
+syntax:
+- call: !Unary id
+  ret:
+    type: Nothing
+  right: !Item
+    name: id
+    desc: id returned by [[playSoundUI]] and [[playSound3D]] commands{{Feature|important|Sound ids are local.}}
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>stopSound 10;</sqf>
+see_also:
+- playSoundUI
+- playSound3D
+- soundParams

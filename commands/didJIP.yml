@@ -1,0 +1,16 @@
+name: didJIP
+desc: Checks if the current client {{Link|Multiplayer Scripting#Join In Progress|Joined In Progress}}.
+groups:
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (didJIP) then\n{\n\thint \"you're late to the party!\";\n};\n</sqf>"
+see_also:
+- didJIPOwner
+- exportJIPMessages

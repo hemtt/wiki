@@ -1,0 +1,49 @@
+name: setWaypointLoiterType
+desc: Sets the waypoint loiter type.
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - type
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: type
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>[_grp, 2] setWaypointLoiterType "CIRCLE";</sqf>
+- <sqf>[_grp, 2] setWaypointLoiterType "CIRCLE_L";</sqf>
+see_also:
+- waypoints
+- deleteWaypoint
+- copyWaypoints
+- setCurrentWaypoint
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointDescription
+- setWaypointFormation
+- setWaypointHousePosition
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- setWaypointLoiterRadius
+- waypointLoiterRadius
+- addWaypoint
+- currentWaypoint
+- waypointSpeed
+- setWPPos
+- waypointName

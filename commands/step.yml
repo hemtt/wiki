@@ -1,0 +1,24 @@
+name: step
+desc: Optional step value. A countdown can be made with a negative value. If not set, the default step is 1.
+groups:
+- Program Flow
+syntax:
+- call: !Binary
+  - for
+  - stepSize
+  ret:
+    type: ForType
+  left: !Item
+    name: for
+    type: ForType
+  right: !Item
+    name: stepSize
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nfor \"_i\" from 20 to 10 step -2 do\n{\n\t// ...\n};\n</sqf>"
+see_also:
+- Control
+- Structures

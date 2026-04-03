@@ -1,0 +1,36 @@
+name: enablePersonTurret
+desc: Enables or disables firing from a vehicle cargo position. To get the turret path use [[assignedVehicleRole]] or [[getCargoIndex]] command.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - - turretPath
+    - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: turretPath
+    type: TurretPath
+  - !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>heli enablePersonTurret [[1], true];</sqf>
+see_also:
+- assignedVehicleRole
+- allTurrets
+- moveInTurret
+- turretUnit
+- assignAsTurret
+- getCargoIndex
+- moveInCargo
+- assignAsCargoIndex
+- emptyPositions

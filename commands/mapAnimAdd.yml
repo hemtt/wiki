@@ -1,0 +1,55 @@
+name: mapAnimAdd
+desc: Add next frame to map animation.
+groups:
+- Map
+syntax:
+- call: !Unary
+  - time
+  - zoom
+  - position
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: time
+    desc: animation duration in seconds
+    type: Number
+  - !Item
+    name: zoom
+    desc: range from 0.01 (max. zoom) to 1 (zoomed out)
+    type: Number
+  - !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- |-
+  <sqf>
+  mapAnimAdd [1, 0.1, markerPos "anim1"];
+  mapAnimCommit;
+  </sqf>
+- |-
+  <sqf>
+  mapAnimAdd [3, 0.01, player];
+  mapAnimCommit;
+  </sqf>
+see_also:
+- mapAnimClear
+- mapAnimCommit
+- mapAnimDone
+- ctrlMapAnimAdd
+- ctrlMapAnimClear
+- ctrlMapAnimCommit
+- ctrlMapAnimDone

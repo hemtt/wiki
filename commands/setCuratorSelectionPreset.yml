@@ -1,0 +1,33 @@
+name: setCuratorSelectionPreset
+desc: Set the list of objects in the given selection preset. Only [[Object]] is supported in selection presets, unlike [[curatorSelected]] which also returns the selected [[Group]], [[Waypoint]], and Marker [[String]]
+groups:
+- Curator
+syntax:
+- call: !Binary
+  - numkey
+  - objects
+  ret:
+    type: Nothing
+  left: !Item
+    name: numkey
+    desc: number key under which the selection preset is saved
+    type: Number
+  right: !Item
+    name: objects
+    desc: objects to save to the selection preset
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>1 setCuratorSelectionPreset [object1, object2];</sqf>
+see_also:
+- curatorSelectionPreset
+- loadCuratorSelectionPreset
+- curatorSelected
+- setCuratorSelected
+- addCuratorSelected
+- Arma
+- '3:'
+- Curator

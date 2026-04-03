@@ -1,0 +1,31 @@
+name: saveProfileNamespace
+desc: |-
+  Saves all variables stored in [[profileNamespace]] to the active [[Profile]].
+  {{Feature|informative|This command should be used when it is likely that the game will not be closed the usual way (e.g. via {{Controls|Alt|F4}}) or when the data is important and must not be lost due to a game crash.}}
+  {{Feature|warning|
+  * This command triggers a file operation. As file operations are slow (even on SSDs), it is not recommended to use this command too frequently (i.e. several times per second).
+  * Do not save large amounts of data to the profile; the larger the profile file gets, the slower it loads!
+  * The [[profileNamespace]] is saved automatically when the game is closed.
+  }}
+  {{Feature|tkoh|Heliport status, used in the Career mode for example, is stored in the file that is modified by this command, so be mindful of this to avoid losing data and progress.}}
+groups:
+- Namespaces
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  profileNamespace setVariable ["TAG_lastPlayerLocation", getPosASL player];
+  saveProfileNamespace; // Optional since namespace is saved when game is closed
+  </sqf>
+see_also:
+- saveMissionProfileNamespace
+- save3DENPreferences
+- profileNamespace
+- Profile

@@ -1,0 +1,29 @@
+name: visiblePositionASL
+desc: Returns an object's rendered [[Position#PositionASL|ASL position]] (z value above sea level) in render time scope.
+groups:
+- Positions
+- Render Time Scope
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dASL
+  right: !Item
+    name: object
+    desc: name of the object
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_playerRenderedPosASL = visiblePositionASL player;</sqf>
+see_also:
+- getPosVisual
+- getPosASLVisual
+- getPosATLVisual
+- getPosWorldVisual
+- visiblePosition
+- position
+- getPos
+- getPosATL
+- getPosASL
+- getPosASLW

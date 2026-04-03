@@ -1,0 +1,30 @@
+name: agents
+desc: Return a list of agents in the current mission.
+groups:
+- Teams
+- Object Detection
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: TeamMember
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>{ agent _x moveTo position player } forEach agents;</sqf>
+see_also:
+- teams
+- agent
+- createAgent
+- isAgent
+- forEachMemberAgent
+- entities
+- allCurators
+- allGroups
+- allDead
+- playableUnits
+- switchableUnits
+- vehicles
+- allUnitsUAV
+- allDeadMen

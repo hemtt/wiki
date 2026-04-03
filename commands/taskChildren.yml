@@ -1,0 +1,34 @@
+name: taskChildren
+desc: Return the child tasks of the specified task.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: !ArrayUnsized
+      value: Task
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_children = taskChildren someTask;</sqf>
+see_also:
+- BIS_fnc_taskCreate
+- BIS_fnc_taskCurrent
+- BIS_fnc_taskExists
+- BIS_fnc_taskParent
+- BIS_fnc_taskType
+- BIS_fnc_taskTypeIcon
+- BIS_fnc_taskVar
+- Arma
+- '3:'
+- Task
+- Framework
+- '{{Link|Arma'
+- '3:'
+- Task
+- Framework#Task
+- Overhaul}}

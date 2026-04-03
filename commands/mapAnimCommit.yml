@@ -1,0 +1,21 @@
+name: mapAnimCommit
+desc: Play map animation.
+groups:
+- Map
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>mapAnimCommit;</sqf>
+see_also:
+- mapAnimAdd
+- mapAnimClear
+- mapAnimDone
+- ctrlMapAnimAdd
+- ctrlMapAnimClear
+- ctrlMapAnimCommit
+- ctrlMapAnimDone

@@ -1,0 +1,20 @@
+name: camPreloaded
+desc: Checks whether the camera has finished preloading.
+groups:
+- Camera Control
+syntax:
+- call: !Unary camera
+  ret:
+    type: Boolean
+  right: !Item
+    name: camera
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (camPreloaded _camera) exitWith { hint "loaded" };</sqf>
+see_also:
+- cameraEffect
+- camCreate
+- camCommit

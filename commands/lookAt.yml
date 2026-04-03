@@ -1,0 +1,43 @@
+name: lookAt
+desc: Control what the unit(s) is/are looking at (target or [[Position]]). If target is used, it will get revealed fully.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit(s)
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit(s)
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position3dAGL
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_someSoldier lookAt _otherSoldier;</sqf>
+- <sqf>[_someSoldier, _otherSoldier] lookAt markerPos "markerOne";</sqf>
+- "<sqf>\nhint \"R U N !\";\nBFG = \"B_AAA_System_01_F\" createVehicle position player;\ncreateVehicleCrew BFG;\nt = time + 10;\nonEachFrame\n{\n\tBFG lookAt (unitAimPosition player vectorAdd (velocity player vectorMultiply 0.2));\n\tif (time > t && alive player) then\n\t{\n\t\t[BFG,\"weapon_Cannon_Phalanx\",[0]] call BIS_fnc_fire;\n\t};\n};\n</sqf>"
+see_also:
+- glanceAt
+- commandWatch
+- doWatch
+- freeLook

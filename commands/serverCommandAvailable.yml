@@ -1,0 +1,87 @@
+name: serverCommandAvailable
+desc: |-
+  Returns [[true]] if given [[serverCommand]] is available on current machine, [[false]] if not.
+
+  {{Feature|informative|
+  Execution via [[BattlEye#RCon|RCon]] is basically being '''logged-in''' as [[admin]] in terms of permissions.
+  }}
+
+  {{{!}} class="wikitable align-center"
+  ! rowspan="2" {{!}} {{arma3}} [[Multiplayer Server Commands]]
+  ! colspan="4" {{!}} Available to
+  {{!}}-
+  ! Client
+  ! Voted [[admin|Admin]]
+  ! Logged [[admin|Admin]]
+  ! [[isServer|Server Host]]
+  {{!}}-
+  {{!}} {{hl|#login}}, {{hl|#userlist}}, {{hl|#beclient}}, {{hl|#vote}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}}-
+  {{!}} {{hl|#kick}}, {{hl|#debug}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}}-
+  {{!}} {{hl|#lock}}, {{hl|#unlock}}, {{hl|#maxping}}, {{hl|#maxdesync}}, {{hl|#maxpacketloss}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}}-
+  {{!}} {{hl|#logout}}, {{hl|#restart}}, {{hl|#mission}}, {{hl|#missions}}, {{hl|#reassign}}, {{hl|#monitor}}, {{hl|#init}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}}-
+  {{!}} {{hl|#shutdown}}, {{hl|#restartserver}}, {{hl|#restartserveraftermission}}, {{hl|#shutdownaftermission}}, {{hl|#dctimeout}}, {{hl|#exec}}, {{hl|#monitords}}, {{hl|#beserver}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}}-
+  {{!}} {{hl|#logentities}}, {{hl|#exportjipqueue}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}}-
+  {{!}} Profiling type builds only: {{hl|#captureframe}}, {{hl|#captureslowframe}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+
+  {{!}}}
+
+  To check if a [[Multiplayer Server Commands|server command]] can be executed in the current environment, use [[serverCommandExecutable]].
+
+  {{Feature|informative|The table above does not apply to the command's password variant on a dedicated server as everything is available to it.}}
+groups:
+- Multiplayer
+syntax:
+- call: !Unary command
+  ret:
+    type: Boolean
+  right: !Item
+    name: command
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_can = serverCommandAvailable "#kick";</sqf>
+- "<sqf>\nif (serverCommandAvailable \"#logout\") then \n{\n\thint \"You are a some sort of admin\";\n};\n</sqf>"
+see_also:
+- serverCommand
+- serverCommandExecutable
+- admin
+- isServer
+- Multiplayer
+- Server
+- Commands

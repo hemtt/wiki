@@ -1,0 +1,42 @@
+name: diag_activeSQSScripts
+desc: Returns array with active SQSs. To see number of all scripts currently in the scheduler use [[diag_activeScripts]].
+groups:
+- Diagnostic
+syntax:
+- call: Nular
+  ret:
+    type: !ArraySized
+    - name: ''
+      type: !ArraySized
+      - name: name
+        type: String
+        desc: function or file name
+        since: null
+      - name: fileName
+        type: String
+        desc: null
+        since: null
+      - name: isRunning
+        type: Boolean
+        desc: null
+        since: null
+      - name: currentLine
+        type: Number
+        desc: line currently executing
+        since: null
+      desc: null
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>{ systemChat str _x } forEach diag_activeSQSScripts;</sqf>
+see_also:
+- diag_activeMissionFSMs
+- diag_activeSQFScripts
+- diag_log
+- diag_fps
+- diag_fpsmin
+- diag_frameno
+- diag_tickTime
+- diag_activeScripts

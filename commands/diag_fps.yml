@@ -1,0 +1,20 @@
+name: diag_fps
+desc: Returns average framerate calculated over last 16 frames.
+groups:
+- Diagnostic
+- Performance Profiling
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>diag_log diag_fps;</sqf>
+see_also:
+- diag_fpsMin
+- diag_frameNo
+- diag_log
+- diag_tickTime
+- diag_deltaTime

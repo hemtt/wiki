@@ -1,0 +1,43 @@
+name: isRemoteExecutedJIP
+desc: |-
+  Returns [[true]] if the code context is being remote executed from the JIP queue by [[remoteExec]] or [[remoteExecCall]] (when JIP param was set). It is a subset of [[isRemoteExecuted]]:
+
+  :{{{!}} class="wikitable align-center align-left-col-1 align-center-row-1"
+  ! rowspan="2" {{!}} command
+  ! rowspan="2" {{!}} Single Player
+  ! colspan="2" {{!}} Multiplayer
+  {{!}}-
+  ! Direct remoteExec
+  ! JIP remoteExec
+  {{!}}-
+  {{!}} [[isRemoteExecuted]]
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}} {{Icon|checked}}
+  {{!}}-
+  {{!}} [[isRemoteExecutedJIP]]
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|unchecked}}
+  {{!}} {{Icon|checked}}
+  {{!}}}
+groups:
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (isRemoteExecutedJIP) then\n{\n\twaitUntil { sleep 0.1; not isNull player };\n\thint \"Welcome... the battlefield did not wait for you!\";\n}\nelse\n{\n\thint \"You are present and that's good!\";\n};\n</sqf>"
+see_also:
+- isRemoteExecuted
+- remoteExec
+- remoteExecCall
+- canSuspend
+- remoteExecutedOwner
+- isUIContext
+- isGamePaused
+- isGameFocused
+- remoteExecutedJIPID

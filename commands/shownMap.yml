@@ -1,0 +1,22 @@
+name: shownMap
+desc: Checks if client has Map enabled in [[Description.ext|description.ext]] (''showMap'' param) or force enabled with [[showMap]] command.
+groups:
+- Map
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (shownMap) then {hint "You have Map enabled"};</sqf>
+see_also:
+- showMap
+- visibleMap
+- forceMap
+- shownGPS
+- shownWatch
+- shownCompass
+- shownUAVFeed
+- shownHUD

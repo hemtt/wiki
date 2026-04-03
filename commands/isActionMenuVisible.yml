@@ -1,0 +1,19 @@
+name: isActionMenuVisible
+desc: Returns [[true]] if scroll menu is visible.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (isActionMenuVisible) then { hint "Scroll menu is opened" };</sqf>
+see_also:
+- inGameUISetEventHandler
+- commandingMenu
+- showCommandingMenu
+- BIS_fnc_addCommMenuItem
+- BIS_fnc_removeCommMenuItem

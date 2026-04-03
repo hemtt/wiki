@@ -1,0 +1,20 @@
+name: diag_getTerrainGrid
+desc: |-
+  Returns terrain cell size (size of each grid cell in the Heightmap).
+  {{Feature|obsolete|This command is subject to be removed and replaced with: [[getTerrainInfo]]|arma3|2.10}}
+groups:
+- Diagnostic
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: terrain grid
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+examples:
+- <sqf>private _terrainGrid = diag_getTerrainGrid;</sqf>
+see_also:
+- diag_getTerrainSegmentOffset
+- getTerrainGrid

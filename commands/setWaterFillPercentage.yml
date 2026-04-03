@@ -1,0 +1,27 @@
+name: setWaterFillPercentage
+desc: Set an object's water filling.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - obj
+  - level
+  ret:
+    type: Nothing
+  left: !Item
+    name: obj
+    desc: object to manipulate
+    type: Object
+  right: !Item
+    name: level
+    desc: water level in range 0..1 (empty to full)
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- "<sqf>\nif (getWaterLeakiness _myCar > 0 && surfaceIsWater getPosASL _myCar) then\n{\n\t_myCar setWaterFillPercentage 1;\n\thint \"I told you not to go in the water!\";\n};\n</sqf>"
+see_also:
+- setWaterLeakiness
+- getWaterLeakiness
+- getWaterFillPercentage

@@ -1,0 +1,31 @@
+name: enableAttack
+desc: Set if leader can issue attack commands to the soldiers in his group.
+groups:
+- Groups
+- Unit Control
+syntax:
+- call: !Binary
+  - group
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_group1 enableAttack true;</sqf>
+see_also:
+- attackEnabled

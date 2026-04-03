@@ -1,0 +1,25 @@
+name: detach
+desc: Detaches previously attached with [[attachTo]] object.
+multiplayer_note: Only has to be executed on one client.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Nothing
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>
+  obj1 attachTo [player];
+  detach obj1;
+  </sqf>
+see_also:
+- attachedObjects
+- attachedTo
+- attachTo

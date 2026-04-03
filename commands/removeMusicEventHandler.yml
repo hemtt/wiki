@@ -1,0 +1,43 @@
+name: removeMusicEventHandler
+desc: 'Removes specified music track event handler. See {{Link|Arma 3: Event Handlers#Music Event Handlers}}.'
+groups:
+- Event Handlers
+- Sounds
+syntax:
+- call: !Unary
+  - type
+  - id
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: type
+    desc: '"MusicStart" or "MusicStop"'
+    type: String
+  - !Item
+    name: id
+    desc: event handler id
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>removeMusicEventHandler ["MusicStart", 12];</sqf>
+- <sqf>removeMusicEventHandler ["MusicStop", 12];</sqf>
+- |-
+  <sqf>
+  private _stopMusicEH = addMusicEventHandler ["MusicStop", {}];
+  // ...
+  removeMusicEventHandler ["MusicStop", _stopMusicEH];
+  </sqf>
+see_also:
+- addMusicEventHandler
+- '{{Link|Arma'
+- '3:'
+- Event
+- Handlers#Music
+- Event
+- Handlers}}
+- setMusicEventHandler
+- removeAllMusicEventHandlers
+- playMusic

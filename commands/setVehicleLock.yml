@@ -1,0 +1,27 @@
+name: setVehicleLock
+desc: "Sets vehicle lock. Possible values:\n<br> \n* \"UNLOCKED\" \n* \"DEFAULT\"\n* \"LOCKED\"\n* \"LOCKEDPLAYER\""
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicleName
+  - lockState
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicleName
+    type: Object
+  right: !Item
+    name: lockState
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_veh1 setVehicleLock "LOCKED";</sqf>
+see_also:
+- lock
+- locked
+- lockDriver
+- lockCargo
+- lockTurret

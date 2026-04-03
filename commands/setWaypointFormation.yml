@@ -1,0 +1,48 @@
+name: setWaypointFormation
+desc: "Switches the group formation when the waypoint becomes active.\n<br>\n<br>\nPossible values are: \n* \"NO CHANGE\"\n* \"COLUMN\"\n* \"STAG COLUMN\"\n* \"WEDGE\"\n* \"ECH LEFT\"\n* \"ECH RIGHT\"\n* \"VEE\"\n* \"LINE\"\n* \"FILE\"\n* \"DIAMOND\""
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - formation
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: formation
+    type: String
+argument_loc: Unspecified
+effect_loc: Global
+server_exec: true
+since: {}
+examples:
+- <sqf>[_grp, 2] setWaypointFormation "LINE";</sqf>
+see_also:
+- Mission_Editor:_Waypoints#Formation|formations
+- description
+- waypoints
+- deleteWaypoint
+- copyWaypoints
+- setCurrentWaypoint
+- setWaypointBehaviour
+- setWaypointCombatMode
+- setWaypointCompletionRadius
+- setWaypointDescription
+- setWaypointHousePosition
+- setWaypointPosition
+- setWaypointScript
+- setWaypointSpeed
+- setWaypointStatements
+- setWaypointTimeout
+- setWaypointType
+- setWaypointVisible
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- setWaypointLoiterRadius
+- waypointLoiterRadius
+- addWaypoint
+- setWaypointLoiterType
+- waypointSpeed

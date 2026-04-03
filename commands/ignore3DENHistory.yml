@@ -1,0 +1,20 @@
+name: ignore3DENHistory
+desc: Ignores all history steps created by executing the given code.
+groups:
+- Eden Editor
+syntax:
+- call: !Unary code
+  ret:
+    type: Nothing
+  right: !Item
+    name: code
+    type: Code
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nignore3DENHistory {\n\tcreate3DENEntity [\"Object\", \"B_Soldier_F\", screenToWorld [0.5, 0.5]]; // no Ctrl+Z available for this operation\n};\n</sqf>"
+see_also:
+- collect3DENHistory
+- create3DENEntity
+- set3DENAttributes

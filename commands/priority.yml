@@ -1,0 +1,19 @@
+name: priority
+desc: Return the priority of the task.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: Number
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_prioTsk01 = priority task01;</sqf>
+see_also:
+- createSimpleTask
+- simpleTasks

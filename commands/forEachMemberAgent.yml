@@ -1,0 +1,36 @@
+name: forEachMemberAgent
+desc: Executes the given command recursively for each agent that is a member of the given team. For just teams use [[forEachMemberTeam]]. For both teams and agents use [[forEachMember]].
+groups:
+- Program Flow
+syntax:
+- call: !Binary
+  - command
+  - team
+  ret:
+    type: Nothing
+  left: !Item
+    name: command
+    type: Code
+  right: !Item
+    name: team
+    type: TeamMember
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- ''
+see_also:
+- agent
+- agents
+- createAgent
+- isAgent
+- addTeamMember
+- createTeam
+- deleteTeam
+- forEachMemberTeam
+- removeTeamMember
+- teamMember
+- teamName
+- teams
+- teamType
+- forEachMember

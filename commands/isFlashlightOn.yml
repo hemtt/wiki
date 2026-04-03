@@ -1,0 +1,24 @@
+name: isFlashlightOn
+desc: Returns true if there is a linked and enabled flashlight on a given weapon.
+groups:
+- Object Manipulation
+- Weapons
+syntax:
+- call: !Binary
+  - unit
+  - weapon
+  ret:
+    type: Boolean
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: weapon
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>player isFlashlightOn (currentWeapon player);</sqf>
+see_also:
+- enableGunLights

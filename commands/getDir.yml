@@ -1,0 +1,58 @@
+name: getDir
+desc: |-
+  Returns the object heading in the range 0..360.
+  {{Feature|arma3|The alternative syntax gets heading from one object or position to another object or position, and should be used instead of [[BIS_fnc_dirTo]].}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Number
+  right: !Item
+    name: object
+    type: Object
+- call: !Binary
+  - pos1
+  - pos2
+  ret:
+    type: Number
+  left: !Item
+    name: pos1
+    desc: from where
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  right: !Item
+    name: pos2
+    desc: to where
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  since:
+    arma3: '1.56'
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_azimuth = getDir player;</sqf>
+- <sqf>_azimuth = player getDir tank;</sqf>
+see_also:
+- getDirVisual
+- direction
+- getRelDir

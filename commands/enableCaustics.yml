@@ -1,0 +1,16 @@
+name: enableCaustics
+desc: Enable/disable caustics drawing.
+groups:
+- System
+syntax:
+- call: !Unary bool
+  ret:
+    type: Nothing
+  right: !Item
+    name: bool
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>enableCaustics true;</sqf>

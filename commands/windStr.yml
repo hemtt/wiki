@@ -1,0 +1,22 @@
+name: windStr
+desc: Returns the current wind strength.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>10 setWindStr (0.5 * windStr);</sqf>
+see_also:
+- setWindStr
+- gusts
+- setGusts
+- setWind
+- setWindDir
+- setWindForce
+- wind
+- windDir

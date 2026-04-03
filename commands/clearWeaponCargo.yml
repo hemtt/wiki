@@ -1,0 +1,26 @@
+name: clearWeaponCargo
+desc: Remove all weapons from the given vehicle's weapon cargo space.
+groups:
+- Containers
+syntax:
+- call: !Unary vehicleName
+  ret:
+    type: Nothing
+  right: !Item
+    name: vehicleName
+    type: Object
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>clearWeaponCargo _truck;</sqf>
+see_also:
+- clearWeaponCargoGlobal
+- addWeaponCargo
+- addMagazineCargo
+- clearMagazineCargo
+- clearMagazineCargoGlobal
+- clearBackpackCargo
+- clearBackpackCargoGlobal
+- clearItemCargo
+- clearItemCargoGlobal

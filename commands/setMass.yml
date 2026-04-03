@@ -1,0 +1,42 @@
+name: setMass
+desc: Changes the mass of a PhysX object. When using the alternative syntax the mass change is gradual during the given time. A time of zero means immediate change.{{Feature | important | When main syntax is used on [[Multiplayer Scripting#Locality|local]] vehicle, the change is global. When alternative syntax is used with time transition on [[Multiplayer Scripting#Locality|local]] vehicle, the gradual mass change doesn't happen on remote clients, only final mass is applied after the given time. If you need gradual change on remote clients too, [[remoteExec | remote execute]] [[setMass]] globally. }}
+groups:
+- PhysX
+syntax:
+- call: !Binary
+  - myObject
+  - mass
+  ret:
+    type: Nothing
+  left: !Item
+    name: myObject
+    type: Object
+  right: !Item
+    name: mass
+    type: Number
+- call: !Binary
+  - myObject
+  - - mass
+    - time
+  ret:
+    type: Nothing
+  left: !Item
+    name: myObject
+    type: Object
+  right: !Array
+  - !Item
+    name: mass
+    type: Number
+  - !Item
+    name: time
+    type: Number
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>myObject setMass [10, 0.5];</sqf>
+- <sqf>myObject setMass 10;</sqf>
+see_also:
+- getMass
+- setCenterOfMass
+- getCenterOfMass

@@ -1,0 +1,35 @@
+name: kbAddDatabase
+desc: |-
+  Register knowledge base database to given person. See [[Conversations]] for more details.
+  {{Feature|important|This command is no longer available in {{arma2}} and {{arma3}}.}}
+groups:
+- Conversations
+syntax:
+- call: !Binary
+  - person
+  - fileName
+  ret:
+    type: Boolean
+  left: !Item
+    name: person
+    type: Object
+  right: !Item
+    name: fileName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_hasBeenAdded = _unit kbAddDatabase "chat.txt";</sqf>
+see_also:
+- Conversations
+- kbAddTopic
+- kbHasTopic
+- kbTell
+- kbWasSaid
+- kbReact
+- kbRemoveTopic
+- kbAddDatabaseTargets
+- FSM
+- FSM
+- Editor

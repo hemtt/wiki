@@ -1,0 +1,18 @@
+name: visibleWatch
+desc: Checks if the player has watch opened and visible. Keep in mind that the GPS minimap in {{arma3}} also shows the time.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (visibleWatch) then { hint "Watch is visible" };</sqf>
+see_also:
+- showWatch
+- shownWatch
+- visibleGPS
+- visibleCompass

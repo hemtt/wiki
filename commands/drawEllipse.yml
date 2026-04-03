@@ -1,0 +1,73 @@
+name: drawEllipse
+desc: '[[File:drawEllipse.jpg|250px|right]] Draws an ellipse on the map. Just like with marker or trigger area, negative ''''a'''' and ''''b'''' will result in hexagon.'
+groups:
+- GUI Control - Map
+syntax:
+- call: !Binary
+  - map
+  - - centre
+    - a
+    - b
+    - angle
+    - color
+    - fill
+    - alignWithMap
+  ret:
+    type: Nothing
+  left: !Item
+    name: map
+    type: Control
+  right: !Array
+  - !Item
+    name: centre
+    desc: ellipse's centre
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+  - !Item
+    name: a
+    desc: horizontal (x) radius
+    type: Number
+  - !Item
+    name: b
+    desc: vertical (y) radius
+    type: Number
+  - !Item
+    name: angle
+    desc: angle of rotation in degrees
+    type: Number
+  - !Item
+    name: color
+    desc: line color
+    type: ArrayColor
+  - !Item
+    name: fill
+    desc: fill texture file or [[Procedural Textures]]. Note that the file texture will not rotate with rectangle, use [[drawIcon]] for that. If fill texture is not empty, set line color to white [1,1,1,1]
+    type: String
+  - !Item
+    name: alignWithMap
+    desc: (Optional, default [[true]]) - when [[false]] the shape will not follow map rotation.
+    type: Boolean
+    since:
+      arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nfindDisplay 12 displayCtrl 51 ctrlAddEventHandler [\"Draw\", \n{\n\t_this select 0 drawEllipse [\n\t\tplayer, 10, 10, 0, [1, 0, 0, 1], \"\"\n\t];\n\t_this select 0 drawEllipse [\n\t\tplayer, -10, -10, 0, [1, 1, 1, 1], \"#(rgb,8,8,3)color(1,0.6,0,1)\"\n\t];\n\t_this select 0 drawEllipse [\n\t\tplayer, -10, -10, 90, [0, 0, 1, 1], \"\"\n\t];\n}];\n</sqf>"
+see_also:
+- drawArrow
+- drawIcon
+- drawLine
+- drawRectangle
+- drawPolygon
+- drawTriangle
+- drawXPolygon

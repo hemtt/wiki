@@ -1,0 +1,23 @@
+name: objectFromNetId
+desc: Get object with given unique ID. For groups, use [[groupFromNetId]].
+multiplayer_note: Before {{GVI|arma3|2.18|size= 0.75}} it would return [[objNull]] in multiplayer - see [[BIS_fnc_objectFromNetId]]
+groups:
+- Multiplayer
+syntax:
+- call: !Unary id
+  ret:
+    type: Object
+  right: !Item
+    name: id
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>objectFromNetId "2:3"</sqf>
+see_also:
+- groupFromNetId
+- netId
+- BIS_fnc_objectFromNetId
+- BIS_fnc_netId
+- BIS_fnc_groupFromNetId

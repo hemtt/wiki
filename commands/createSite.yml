@@ -1,0 +1,25 @@
+name: createSite
+desc: "Create a new site. \n{{Feature|warning|This command is considered deprecated and is no longer supported}}"
+groups:
+- Broken Commands
+- Sides
+syntax:
+- call: !Binary
+  - type
+  - pos
+  ret:
+    type: Object
+  left: !Item
+    name: type
+    type: String
+  right: !Item
+    name: pos
+    type: Position
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- deleteSite
+- allSites

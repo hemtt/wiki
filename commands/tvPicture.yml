@@ -1,0 +1,51 @@
+name: tvPicture
+desc: Returns name of picture from item pointed to by path. IDC means id of parent Tree View.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+- call: !Binary
+  - ctrl
+  - path
+  ret:
+    type: String
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: path
+    type: Path
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>tvPicture [101, [0]];</sqf>
+- <sqf>_ctrl tvPicture [0,0,0];</sqf>
+see_also:
+- tvAdd
+- tvClear
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvExpand
+- tvSetCurSel
+- tvSetData
+- tvSetPicture
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvText
+- tvValue

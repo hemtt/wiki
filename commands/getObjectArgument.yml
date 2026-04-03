@@ -1,0 +1,37 @@
+name: getObjectArgument
+desc: |-
+  Return name of object argument in mission editor.
+  {{Feature|informative|Some Old Editor Command}}
+groups:
+- Game 2 Editor
+syntax:
+- call: !Binary
+  - map
+  - - object
+    - argument
+  ret:
+    type: String
+  left: !Item
+    name: map
+    type: Control
+  right: !Array
+  - !Item
+    name: object
+    type: Object
+  - !Item
+    name: argument
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  // returns string "[1009.0351, 1319.4928]"
+  (findDisplay 128 displayCtrl 51) getObjectArgument ["_unit_1", "POSITION"];
+
+  // returns array [1009.0351, 1319.4928]
+  (findDisplay 128 displayCtrl 51) evalObjectArgument ["_unit_1", "POSITION"];
+  </sqf>
+see_also:
+- '-'

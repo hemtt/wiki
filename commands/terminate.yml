@@ -1,0 +1,53 @@
+name: terminate
+desc: |-
+  Terminates (aborts) [[spawn]]ed or [[execVM]]ed script.
+  {{Feature | important | The given script will not terminate immediately upon [[terminate]] command execution, it will do so the next time the script is processed by the [[Scheduler|scheduler]]}}
+groups:
+- Program Flow
+syntax:
+- call: !Unary scriptHandle
+  ret:
+    type: Nothing
+  right: !Item
+    name: scriptHandle
+    type: ScriptHandle
+- call: !Unary FSMHandle
+  ret:
+    type: Nothing
+  right: !Item
+    name: FSMHandle
+    desc: The FSM script must be launched with 'allowTermination' flag for this command to work (see [[execFSM]]).
+    type: Number
+  since:
+    arma3: '2.18'
+- call: !Binary
+  - scriptHandle
+  - result
+  ret:
+    type: Nothing
+  left: !Item
+    name: scriptHandle
+    desc: Only [[Script_Handle#Promise_Handles|"Empty Handle"]]'s can have their result set.
+    type: ScriptHandle
+  right: !Item
+    name: result
+    desc: The result to write into the [[Script_Handle#Promise_Handles|Promise]]
+    type: Anything
+  since:
+    arma3: '2.22'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _script = [] execVM "script.sqf";
+  sleep 5;
+  terminate _script;
+  </sqf>
+see_also:
+- execVM
+- spawn
+- scriptDone
+- halt
+- execFSM

@@ -1,0 +1,29 @@
+name: surfaceNormal
+desc: Returns terrain's {{Link|https://en.wikipedia.org/wiki/Normal_(geometry)|surface normal}} on given position.
+groups:
+- Positions
+syntax:
+- call: !Unary position
+  ret:
+    type: Vector3d
+  right: !Item
+    name: position
+    desc: when using [[Position#Introduction|Position3D]], Z is ignored
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_normal = surfaceNormal [300, 500];</sqf>
+- <sqf>_normal = surfaceNormal getPosASL player;</sqf>
+see_also:
+- setVectorUp
+- surfaceIsWater
+- surfaceType

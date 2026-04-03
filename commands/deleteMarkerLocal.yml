@@ -1,0 +1,19 @@
+name: deleteMarkerLocal
+desc: Destroys the given marker.
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: Nothing
+  right: !Item
+    name: markerName
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>deleteMarkerLocal "Marker1";</sqf>
+see_also:
+- createMarkerLocal
+- deleteMarker

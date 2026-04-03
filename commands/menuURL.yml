@@ -1,0 +1,35 @@
+name: menuURL
+desc: Returns current URL set in entry on given path.
+groups:
+- GUI Control - Menu
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+- call: !Binary
+  - control
+  - path
+  ret:
+    type: String
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: path
+    type: Path
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>findDisplay 313 displayCtrl 120 menuURL [7, 0]; // returns "https://community.bistudio.com/wiki/Eden_Editor"</sqf>
+see_also:
+- menuSetURL

@@ -1,0 +1,15 @@
+name: isSteamMission
+desc: Returns true if the current mission is a Steam Workshop mission.
+groups:
+- Mission Information
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (isSteamMission) then\n{\n\thint \"Thank you for subscribing to my mission on Steam!\";\n}\nelse\n{\n\thint \"Thank you for downloading my mission off the Internet!\";\n};\n</sqf>"
+see_also:
+- markAsFinishedOnSteam

@@ -1,0 +1,36 @@
+name: environmentEnabled
+desc: Returns status of [[enableEnvironment]] command
+groups:
+- Environment
+- Sounds
+syntax:
+- call: Nular
+  ret:
+    type: !ArraySized
+    - name: ambientLife
+      type: Boolean
+      desc: null
+      since: null
+    - name: ambientSound
+      type: Boolean
+      desc: null
+      since: null
+    - name: windyCoef
+      type: Number
+      desc: see [[enableEnvironment]]
+      since:
+        arma3: '2.12'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _enabled = environmentEnabled;</sqf>
+see_also:
+- enableEnvironment
+- fadeEnvironment
+- environmentVolume
+- initAmbientLife
+- sideAmbientLife
+- getAllEnvSoundControllers
+- getEnvSoundController
+- setSoundEffect

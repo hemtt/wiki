@@ -1,0 +1,55 @@
+name: tvValue
+desc: Returns numeric value set for given tree view path.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: Number
+    desc: set value; if no value was set, 0 is returned
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: !ArrayUnsized
+      value: Number
+- call: !Binary
+  - ctrl
+  - path
+  ret:
+    type: Number
+    desc: set value; if no value was set, 0 is returned
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: path
+    type: !ArrayUnsized
+      value: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>tvValue [101, [0]];</sqf>
+- <sqf>_ctrl tvValue [0,0,0];</sqf>
+see_also:
+- tvAdd
+- tvClear
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvExpand
+- tvPicture
+- tvSetCurSel
+- tvSetData
+- tvSetPicture
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvText

@@ -1,0 +1,17 @@
+name: netObjNull
+desc: A non-existing network object. {{Feature|informative|'''NetObject''' data type was never implemented in {{arma3}} - this command always returns [[false]].}}
+groups:
+- Broken Commands
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: always returns [[false]]
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '-'
+see_also:
+- objNull

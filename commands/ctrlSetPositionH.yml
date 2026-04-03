@@ -1,0 +1,32 @@
+name: ctrlSetPositionH
+desc: Sets the height of a 2D control. [[ctrlCommit]] is required to complete the operation.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: !Binary
+  - control
+  - h
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: 2D control
+    type: Control
+  right: !Item
+    name: h
+    desc: height of the control
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _ctrl ctrlSetPositionH 0.5;
+  _ctrl ctrlCommit 1;
+  </sqf>
+see_also:
+- ctrlSetPosition
+- ctrlSetPositionX
+- ctrlSetPositionY
+- ctrlSetPositionW

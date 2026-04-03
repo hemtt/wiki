@@ -1,0 +1,24 @@
+name: didJIPOwner
+desc: Checks if the current [[owner]] of supplied [[Object]] Joined In Progress. Returns [[false]] on clients.
+groups:
+- Multiplayer
+syntax:
+- call: !Unary object
+  ret:
+    type: Boolean
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+server_exec: true
+since: {}
+examples:
+- <sqf>_ownerDidJip = didJIPOwner tank;</sqf>
+see_also:
+- didJIP
+- owner
+- setOwner
+- groupOwner
+- remoteExecutedOwner
+- exportJIPMessages

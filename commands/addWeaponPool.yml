@@ -1,0 +1,29 @@
+name: addWeaponPool
+desc: Add weapons to the weapon pool, of which the player may choose in the following mission. Available in campaigns only.
+groups:
+- Weapon Pool
+syntax:
+- call: !Unary
+  - weaponName
+  - count
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: weaponName
+    desc: weapon name. See the topic [[:Category:Weapons]] for reference about possible values.
+    type: String
+  - !Item
+    name: count
+    desc: number of weapons to add
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>addWeaponPool ["M16",5];</sqf>
+see_also:
+- addMagazinePool
+- clearWeaponPool
+- queryWeaponPool
+- addMagazineAmmoCargo

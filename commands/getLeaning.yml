@@ -1,0 +1,22 @@
+name: getLeaning
+desc: Returns the leaning factor of the given unit.
+groups:
+- Unit Control
+syntax:
+- call: !Unary unit
+  ret:
+    type: Number
+    desc: leaning factor from -1 to 1
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (getLeaning player < 0) then { systemChat "player is leaning left" };</sqf>
+see_also:
+- animationState
+- unitPos
+- stance
+- pose

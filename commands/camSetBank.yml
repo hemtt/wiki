@@ -1,0 +1,27 @@
+name: camSetBank
+desc: |-
+  Sets camera bank angle. Does not commit changes.
+  {{Feature|warning|This command is '''non-functional'''!}}
+groups:
+- Broken Commands
+- Camera Control
+syntax:
+- call: !Binary
+  - camera
+  - bank
+  ret:
+    type: Nothing
+  left: !Item
+    name: camera
+    type: Object
+  right: !Item
+    name: bank
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_camera camSetBank -0.1;</sqf>
+see_also:
+- camSetDive
+- setVectorUp

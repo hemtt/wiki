@@ -1,0 +1,28 @@
+name: setWaypointForceBehaviour
+desc: Forces the behavior of waypoint, disables AUTOCOMBAT.
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: state
+    desc: force or not
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>[grp, 2] setWaypointForceBehaviour true;</sqf>
+see_also:
+- waypointForceBehaviour
+- setWaypointBehaviour
+- waypointBehaviour
+- Mission_Editor:_Waypoints#Behaviour|Behaviour
+- Description

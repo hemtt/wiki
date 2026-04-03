@@ -1,0 +1,34 @@
+name: diag_getTerrainSegmentOffset
+desc: |-
+  Returns the terrain segment. It is basically the same as:
+  <sqf>
+  _worldPos params ["_x", "_y"];
+  [floor (_x / diag_getTerrainGrid), floor (_y / diag_getTerrainGrid)];
+  </sqf>
+groups:
+- Diagnostic
+syntax:
+- call: !Unary worldPos
+  ret:
+    type: Position2d
+    desc: '[x,y] of terrain segment (integer, basically pixel coordinates in heightmap)'
+  right: !Item
+    name: worldPos
+    desc: world coordinates
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Position2d
+        desc: null
+        since: null
+      - type: Position3d
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+branch: Diag
+examples:
+- <sqf>private _segmentOffset = diag_getTerrainSegmentOffset getPosWorld player;</sqf>
+see_also:
+- diag_getTerrainHeight
+- diag_getTerrainGrid

@@ -1,0 +1,56 @@
+name: activeTitleEffectParams
+desc: Returns type, effect, speed and map visibility of the given active title effect (see [[allActiveTitleEffects]])
+groups:
+- GUI Control
+syntax:
+- call: !Unary layer
+  ret:
+    type: !ArraySized
+    - name: type
+      type: String
+      desc: type of effect, can be {{hl|"OBJ"}}, {{hl|"RSC"}} or {{hl|"TXT"}}
+      since: null
+    - name: effect
+      type: String
+      desc: '[[Title Effect Type]] ({{hl|"PLAIN"}}, {{hl|"BLACK OUT"}} etc)'
+      since: null
+    - name: speed
+      type: Number
+      desc: effect speed multiplier
+      since: null
+    - name: showInMap
+      type: Boolean
+      desc: '[[true]] if effect is available over map'
+      since: null
+  right: !Item
+    name: layer
+    desc: layer number or -1 (see [[allActiveTitleEffects]])
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  21 cutText ["Hello World!", "PLAIN", 2];
+  hint str activeTitleEffectParams 21; // ["TXT", "PLAIN", 2, true]
+  </sqf>
+- |-
+  <sqf>
+  titleText ["Hello World!", "BLACK"];
+  hint str activeTitleEffectParams -1; // ["TXT", "BLACK", 1, true]
+  </sqf>
+see_also:
+- allCutLayers
+- cutText
+- cutRsc
+- cutObj
+- cutFadeOut
+- titleText
+- titleRsc
+- titleObj
+- titleFadeOut
+- allActiveTitleEffects
+- Title
+- Effect
+- Type

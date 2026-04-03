@@ -1,0 +1,42 @@
+name: forgetTarget
+desc: Resets the info a group has about a target, forcing [[knowsAbout]] value to 0.
+groups:
+- Unit Control
+- Groups
+syntax:
+- call: !Binary
+  - group
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    desc: group itself or unit in a group
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Group
+        desc: null
+        since: null
+      - type: Object
+        desc: null
+        since: null
+  right: !Item
+    name: target
+    desc: group target
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>soldier1 forgetTarget soldier2;</sqf>
+- |-
+  Give enemyBob some amnesia:
+  <sqf>onEachFrame { enemyBob forgetTarget player };</sqf>
+see_also:
+- knowsAbout
+- targetsQuery
+- targetsAggregate
+- nearTargets
+- reveal
+- getHideFrom
+- targetKnowledge

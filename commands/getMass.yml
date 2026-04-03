@@ -1,0 +1,23 @@
+name: getMass
+desc: Returns mass of a PhysX object.
+groups:
+- PhysX
+syntax:
+- call: !Unary object
+  ret:
+    type: Number
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mass = getMass _myCar;</sqf>
+see_also:
+- getCenterOfMass
+- setCenterOfMass
+- setMass
+- load
+- weightRTD
+- getModelInfo

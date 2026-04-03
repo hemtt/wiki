@@ -1,0 +1,24 @@
+name: deg
+desc: |-
+  Converts given value in radians to degrees. 1 degree equals 0.01745 radians or [[pi]] / 180.
+
+  {{Feature|informative|{{hl|1= 2 * pi ≙ 360° → 1 rad = 2 * pi / 360°}}}}
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary value
+  ret:
+    type: Number
+    desc: degrees
+  right: !Item
+    name: value
+    desc: radians
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_degrees = deg 1; // Returns 57.2958</sqf>
+- <sqf>deg (2 * pi / 360); // Returns 1</sqf>
+see_also:
+- rad

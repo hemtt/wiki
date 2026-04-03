@@ -1,0 +1,60 @@
+name: tvSetData
+desc: Sets string data to item on given path. IDC means id of parent Tree View.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  - data
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+  - !Item
+    name: data
+    type: String
+- call: !Binary
+  - ctrl
+  - - path
+    - data
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Item
+    name: path
+    type: Path
+  - !Item
+    name: data
+    type: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>tvSetData [101, [0], "Test data"];</sqf>
+- <sqf>_ctrl tvSetData [[0,0,0], "Test data"];</sqf>
+see_also:
+- tvAdd
+- tvClear
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvExpand
+- tvPicture
+- tvSetCurSel
+- tvSetPicture
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvText
+- tvValue

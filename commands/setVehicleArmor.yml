@@ -1,0 +1,34 @@
+name: setVehicleArmor
+desc: "Sets the armor (or health for men) state of the vehicle (a value from 0 to 1). \n\nWorks like [[setDamage]], but the other way around: 1 is full health - see {{Link|#Example 2}}."
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - vehicleName
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicleName
+    type: Object
+  right: !Item
+    name: value
+    desc: in range 0..1
+    type: Number
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player setVehicleArmor 0.5;</sqf>
+- |-
+  <sqf>
+  player setVehicleArmor 1;
+  // is the same as
+  player setDamage 0;
+
+  player setVehicleArmor 0;
+  // is the same as
+  player setDamage 0.97;
+  </sqf>
+see_also:
+- setDamage

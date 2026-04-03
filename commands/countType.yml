@@ -1,0 +1,32 @@
+name: countType
+desc: Count how many objects in the array are of given type. This command also works with parent classes like "Air", "Tank", and "Car". For a full class reference see [[CfgVehicles|Classes]].
+groups:
+- Object Detection
+syntax:
+- call: !Binary
+  - type
+  - objects
+  ret:
+    type: Number
+  left: !Item
+    name: type
+    desc: class type
+    type: String
+  right: !Item
+    name: objects
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_count = "Tank" countType list _triggerOne;</sqf>
+- <sqf>_count = "B_medic_F" countType units player;</sqf>
+see_also:
+- count
+- isKindOf
+- typeOf
+- countFriendly
+- countEnemy
+- countSide
+- countUnknown

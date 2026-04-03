@@ -1,0 +1,30 @@
+name: setStamina
+desc: Set units' stamina (seconds until depletion)
+groups:
+- Stamina System
+syntax:
+- call: !Binary
+  - unit
+  - stamina
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: stamina
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>player setStamina 42;</sqf>
+see_also:
+- setStaminaScheme
+- getStamina
+- enableStamina
+- setFatigue
+- getFatigue
+- Arma
+- '3:'
+- Stamina

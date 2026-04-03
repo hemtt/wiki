@@ -1,0 +1,31 @@
+name: showMap
+desc: |-
+  Enable Map (default [[true]]).
+  {{Feature|informative|
+  In {{arma2}} and later this command no longer works, the map now being an inventory item ("ItemMap" class name).
+  <sqf>
+  unitName removeWeapon "ItemMap";
+  unitName addWeapon "ItemMap";
+  </sqf>
+  }}
+groups:
+- Map
+syntax:
+- call: !Unary show
+  ret:
+    type: Nothing
+  right: !Item
+    name: show
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>showMap false;</sqf>
+see_also:
+- showCompass
+- showGPS
+- showRadio
+- showWatch
+- showPad
+- shownMap

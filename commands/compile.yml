@@ -1,0 +1,35 @@
+name: compile
+desc: Compiles [[String]] expression into [[Code]].
+groups:
+- Strings
+syntax:
+- call: !Unary expression
+  ret:
+    type: Code
+    desc: compiled expression
+  right: !Item
+    name: expression
+    desc: expression to be compiled
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _string = "a = a + 1";
+  _code = compile _string;
+  call _code;
+  </sqf>
+- |-
+  <sqf>
+  hint str compile "a = b";
+  // result: { a = b }
+  </sqf>
+see_also:
+- call
+- spawn
+- compileFinal
+- compileScript
+- parseSimpleArray
+- isFinal

@@ -1,0 +1,36 @@
+name: posScreenToWorld
+desc: Converts map screen coordinates into world coordinates. Unlike [[ctrlMapScreenToWorld]], this command returns world position is format [x, y, 0], otherwise it is identical to it.
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - map
+  - - x
+    - y
+  ret:
+    type: Position3d
+    desc: world position in format [x,y,0]
+  left: !Item
+    name: map
+    desc: map control
+    type: Control
+  right: !Array
+  - !Item
+    name: x
+    desc: screen X
+    type: Number
+  - !Item
+    name: y
+    desc: screen Y
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_worldCoord = _control posScreenToWorld _ScreenCoord;</sqf>
+- <sqf>_worldCoord = _control posScreenToWorld [_x, _y];</sqf>
+- <sqf>_worldCoord = _control posScreenToWorld [0.5, 0.5];</sqf>
+see_also:
+- posWorldToScreen
+- ctrlMapScreenToWorld
+- ctrlMapWorldToScreen

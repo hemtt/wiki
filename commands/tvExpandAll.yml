@@ -1,0 +1,27 @@
+name: tvExpandAll
+desc: Expands all tree items for the given Tree View.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary idc
+  ret:
+    type: Nothing
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary control
+  ret:
+    type: Nothing
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>tvExpandAll 101;</sqf>
+- <sqf>tvExpandAll _ctrl;</sqf>
+see_also:
+- tvExpand
+- tvCollapse
+- tvCollapseAll

@@ -1,0 +1,25 @@
+name: maxLoad
+desc: Returns maximum load limit for a unit, uniform/vest/backpack containers, vehicle cargo, supply boxes and weapon holders.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary container
+  ret:
+    type: Number
+  right: !Item
+    name: container
+    desc: unit, uniform/vest/backpack container, vehicle cargo, supply box, weapon holder
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _maxLoad = maxLoad _yaMum;</sqf>
+see_also:
+- setMaxLoad
+- load
+- loadAbs
+- loadBackpack
+- loadUniform
+- loadVest
+- getContainerMaxLoad

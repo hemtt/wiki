@@ -1,0 +1,44 @@
+name: nearObjectsReady
+desc: Check whether all data are loaded to nearObjects will return in reasonable time.
+groups:
+- Object Detection
+syntax:
+- call: !Binary
+  - position
+  - radius
+  ret:
+    type: Boolean
+  left: !Item
+    name: position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position3dAGL
+        desc: null
+        since: null
+      - type: Position2d
+        desc: null
+        since: null
+  right: !Item
+    name: radius
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_twnpos nearObjectsReady 500; //from ALICE</sqf>
+see_also:
+- findNearestEnemy
+- nearestBuilding
+- nearestObject
+- nearestObjects
+- nearObjects
+- nearestLocation
+- nearEntities
+- nearTargets
+- nearSupplies
+- nearestLocationWithDubbing
+- nearRoads
+- nearestMines

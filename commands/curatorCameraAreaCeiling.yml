@@ -1,0 +1,17 @@
+name: curatorCameraAreaCeiling
+desc: Returns ceiling height for curator camera.
+groups:
+- Curator
+syntax:
+- call: !Unary curatorObj
+  ret:
+    type: Number
+  right: !Item
+    name: curatorObj
+    desc: curator module
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _height = curatorCameraAreaCeiling BIS_curatorUnit;</sqf>

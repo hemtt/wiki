@@ -1,0 +1,35 @@
+name: enableUAVWaypoints
+desc: Enables/disables the option for player to set waypoints for UAV in AV terminal.
+groups:
+- Waypoints
+- Remote Control
+syntax:
+- call: !Binary
+  - uav
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: uav
+    type: Object
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _uav enableUAVWaypoints false;
+  hint str waypointsEnabledUAV _uav; // returns false
+  </sqf>
+see_also:
+- waypointsEnabledUAV
+- enableUAVConnectability
+- disableUAVConnectability
+- isUAVConnected
+- isUAVConnectable
+- allUnitsUAV
+- getConnectedUAV
+- connectTerminalToUAV

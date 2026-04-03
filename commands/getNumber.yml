@@ -1,0 +1,31 @@
+name: getNumber
+desc: Extract number from config entry.
+groups:
+- Config
+syntax:
+- call: !Unary config
+  ret:
+    type: Number
+  right: !Item
+    name: config
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_value = getNumber (configFile >> "CfgVehicles" >> "Thing" >> "maxSpeed");</sqf>
+see_also:
+- configFile
+- a
+- /
+- b
+- configName
+- count
+- getArray
+- getText
+- inheritsFrom
+- isArray
+- isClass
+- isNumber
+- isText
+- select

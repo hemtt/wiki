@@ -1,0 +1,15 @@
+name: lightnings
+desc: Return the current lightnings value.
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- Get the current ''lightnings'' value:<sqf>_lightningsVal = lightnings;</sqf>
+see_also:
+- setLightnings

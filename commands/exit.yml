@@ -1,0 +1,22 @@
+name: exit
+desc: |-
+  Stops the execution of a [[SQS Syntax|SQS script]].
+
+  It is ignored in [[SQF Syntax|SQF Scripts]].
+groups:
+- Program Flow
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  [[SQS Syntax]]:
+  <sqs>? not alive player : exit</sqs>
+see_also:
+- exitWith
+- Control
+- Structures

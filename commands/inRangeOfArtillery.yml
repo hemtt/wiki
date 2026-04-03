@@ -1,0 +1,37 @@
+name: inRangeOfArtillery
+desc: Returns true if all given units are able to fire at given position with given magazineType.
+groups:
+- Artillery
+syntax:
+- call: !Binary
+  - pos
+  - - units
+    - magazineType
+  ret:
+    type: Boolean
+  left: !Item
+    name: pos
+    type: Position
+  right: !Array
+  - !Item
+    name: units
+    desc: array of units.
+    type: !ArrayUnsized
+      value: Object
+  - !Item
+    name: magazineType
+    desc: case-sensitive
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isInRange = getMarkerPos "myTarget" inRangeOfArtillery [[myArty], "32Rnd_155mm_Mo_shells"];</sqf>
+see_also:
+- getArtilleryAmmo
+- commandArtilleryFire
+- doArtilleryFire
+- enableEngineArtillery
+- getArtilleryComputerSettings
+- shownArtilleryComputer
+- getArtilleryETA

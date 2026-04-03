@@ -1,0 +1,21 @@
+name: currentTask
+desc: Return current task of given person.
+groups:
+- Briefing
+syntax:
+- call: !Unary person
+  ret:
+    type: Task
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_currTask = currentTask player;</sqf>
+see_also:
+- taskNull
+- createSimpleTask
+- simpleTasks
+- taskCompleted

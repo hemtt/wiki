@@ -1,0 +1,36 @@
+name: tvData
+desc: Returns string data from item on given path. IDC means id of parent [[CT_TREE]].
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+- call: !Binary
+  - control
+  - path
+  ret:
+    type: String
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: path
+    type: Path
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>tvData [101, [0]];</sqf>
+- <sqf>(_display displayCtrl 101) tvData [0];</sqf>
+see_also:
+- tvSetData

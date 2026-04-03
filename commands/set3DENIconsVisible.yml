@@ -1,0 +1,29 @@
+name: set3DENIconsVisible
+desc: Toggle visibility of [[:Category:Eden Editor|Eden Editor]] icons.
+groups:
+- Eden Editor
+syntax:
+- call: !Unary
+  - showMap
+  - showScene
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: showMap
+    desc: visibility in the map
+    type: Boolean
+  - !Item
+    name: showScene
+    desc: visibility in the scene
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>set3DENIconsVisible [false, false]; // Hide all icons</sqf>
+see_also:
+- get3DENIconsVisible
+- set3DENLinesVisible
+- get3DENLinesVisible
+- set3DENModelsVisible

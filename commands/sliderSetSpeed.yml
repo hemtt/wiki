@@ -1,0 +1,59 @@
+name: sliderSetSpeed
+desc: "Sets slider line step and page step delta amount as well as optional step amount of [[CT_SLIDER]] or [[CT_XSLIDER]] with given idc of topmost user [[dialog]]. \n* Click to arrow - move by line\n* Click to scale outside thumb - move by page.\n\n{{Feature|informative|[[CT_XSLIDER]] does not use the ''page'' parameter, it acts as scrollbar when clicked on the bar. It also can only be horizontal.}}"
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - idc
+  - line
+  - page
+  - step
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    desc: control's idc
+    type: Number
+  - !Item
+    name: line
+    desc: value delta to move the slider when clicking on the outer arrows
+    type: Number
+  - !Item
+    name: page
+    desc: value delta to move the slider when clicking inside the slider bar
+    type: Number
+  - !Item
+    name: step
+    desc: (Optional, default 0) slider step
+    type: Number
+- call: !Binary
+  - control
+  - - line
+    - page
+    - step
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: line
+    desc: value delta to move the slider when clicking on the outer arrows
+    type: Number
+  - !Item
+    name: page
+    desc: value delta to move the slider when clicking inside the slider bar
+    type: Number
+  - !Item
+    name: step
+    desc: (Optional, default 0) slider step
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>sliderSetSpeed [101, 0.5, 2];</sqf>
+see_also:
+- sliderSpeed

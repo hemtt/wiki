@@ -1,0 +1,19 @@
+name: isWeaponRested
+desc: Returns true if weapon is currently rested.
+groups:
+- Weapons
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_rest = isWeaponRested player;</sqf>
+see_also:
+- isWeaponDeployed
+- canDeployWeapon

@@ -1,0 +1,35 @@
+name: doTarget
+desc: Order the given unit(s) to target the given target (without radio messages).<br>Targeting can be stopped by <sqf>_unit doWatch objNull;</sqf> or<sqf>_unit commandWatch objNull;</sqf>
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: a single unit or array of units
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: target
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_ESoldier1 doTarget _WSoldier1;</sqf>
+see_also:
+- assignedTarget
+- commandTarget
+- doWatch
+- doFire

@@ -1,0 +1,29 @@
+name: waypointAttachedVehicle
+desc: |-
+  Gets the vehicle attached to the waypoint.
+  <br>A vehicle can be attached to a waypoint by
+  * creating the waypoint on top of the vehicle in the [[2D Editor]]
+  * using [[waypointAttachVehicle]]
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: Object
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointAttachedVehicle [groupOne, 1];</sqf>
+- <sqf>waypointAttachedVehicle [group player, currentWaypoint group player];</sqf>
+see_also:
+- attachObject
+- attachTo
+- attachedObjects
+- attachedTo
+- lightAttachObject
+- triggerAttachVehicle
+- attachedObject

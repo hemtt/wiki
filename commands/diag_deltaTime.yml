@@ -1,0 +1,22 @@
+name: diag_deltaTime
+desc: Returns the duration of the previous frame in seconds
+groups:
+- Diagnostic
+- Time
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _frameTime = diag_deltaTime;</sqf>
+- <sqf>private _fps = 1 / diag_deltaTime;</sqf>
+see_also:
+- diag_tickTime
+- diag_fps
+- diag_fpsMin
+- diag_frameNo
+- diag_log
+- time

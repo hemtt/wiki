@@ -1,0 +1,36 @@
+name: triggerAttachObject
+desc: Assigns a static object to the trigger. The activation source is changed to "STATIC".
+groups:
+- Triggers
+syntax:
+- call: !Binary
+  - triggerName
+  - objectId
+  ret:
+    type: Nothing
+  left: !Item
+    name: triggerName
+    type: Object
+  right: !Item
+    name: objectId
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_trigger triggerAttachObject 1234;</sqf>
+see_also:
+- attachObject
+- attachTo
+- attachedObjects
+- attachedTo
+- waypointAttachVehicle
+- waypointAttachedVehicle
+- lightAttachObject
+- triggerAttachVehicle
+- attachedObject
+- triggerAttachedVehicle
+- triggerInterval
+- setTriggerInterval
+- enableSimulation
+- simulationEnabled

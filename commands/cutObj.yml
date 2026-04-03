@@ -1,0 +1,132 @@
+name: cutObj
+desc: |-
+  Displays an object defined in the global config in {{hl|CfgTitles}}.
+  {{Feature|arma3|For greater efficiency and ease of modability, it is recommended to use named layers with {{Link|#Syntax 3}}.}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - class
+  - type
+  - speed
+  - showInMap
+  - drawOverHUD
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: class
+    desc: the className of the object defined in {{hl|[[configFile]] >> "CfgTitles" >> class}}
+    type: String
+  - !Item
+    name: type
+    desc: one of "PLAIN", "PLAIN DOWN", "BLACK", "BLACK FADED", "BLACK OUT", "BLACK IN", "WHITE OUT" and "WHITE IN". See [[Title Effect Type]]s for more information about these values
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default -1) time in seconds to fade in resource
+    type: Number
+  - !Item
+    name: showInMap
+    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    type: Boolean
+  - !Item
+    name: drawOverHUD
+    desc: (Optional, default [[true]]) [[false]] to show the object under in-game HUD
+    type: Boolean
+    since:
+      arma3: '2.16'
+- call: !Binary
+  - layer
+  - - class
+    - type
+    - speed
+    - showInMap
+    - drawOverHUD
+  ret:
+    type: Nothing
+  left: !Item
+    name: layer
+    desc: layer number on which the effect is shown, where 0 is the back most. Layer number is rounded to the nearest integer and also cannot be negative. Layer 99.5 will be treated as layer 100
+    type: Number
+  right: !Array
+  - !Item
+    name: class
+    desc: the className of the object defined in {{hl|[[configFile]] >> "CfgTitles" >> class}}
+    type: String
+  - !Item
+    name: type
+    desc: one of "PLAIN", "PLAIN DOWN", "BLACK", "BLACK FADED", "BLACK OUT", "BLACK IN", "WHITE OUT" and "WHITE IN". See [[Title Effect Type]]s for more information about these values.
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default -1) time in seconds to fade in resource
+    type: Number
+  - !Item
+    name: showInMap
+    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    type: Boolean
+  - !Item
+    name: drawOverHUD
+    desc: (Optional, default [[true]]) [[false]] to show the object under in-game HUD
+    type: Boolean
+    since:
+      arma3: '2.16'
+- call: !Binary
+  - layerName
+  - - class
+    - type
+    - speed
+    - showInMap
+    - drawOverHUD
+  ret:
+    type: Number
+    desc: number of the allocated layer
+  left: !Item
+    name: layerName
+    desc: layer name on which the effect is shown. Layer names are CaSe SeNsItIvE
+    type: String
+  right: !Array
+  - !Item
+    name: class
+    desc: the className of the object defined in {{hl|[[configFile]] >> "CfgTitles" >> class}}
+    type: String
+  - !Item
+    name: type
+    desc: one of "PLAIN", "PLAIN DOWN", "BLACK", "BLACK FADED", "BLACK OUT", "BLACK IN", "WHITE OUT" and "WHITE IN". See [[Title Effect Type]]s for more information about these values
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default -1) time in seconds to fade in resource
+    type: Number
+  - !Item
+    name: showInMap
+    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    type: Boolean
+  - !Item
+    name: drawOverHUD
+    desc: (Optional, default [[true]]) [[false]] to show the object under in-game HUD
+    type: Boolean
+    since:
+      arma3: '2.16'
+  since:
+    arma3: '1.58'
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- |-
+  <sqf>
+  cutObj ["TVSet", "PLAIN"];
+  cutObj ["TVSet", "PLAIN", 2];
+  </sqf>
+- <sqf>2 cutObj ["Sphere", "PLAIN"];</sqf>
+- <sqf>private _layer = "layer1" cutObj ["BISLogo", "PLAIN"];</sqf>
+see_also:
+- allCutLayers
+- titleObj
+- cutText
+- cutRsc
+- cutFadeOut
+- allActiveTitleEffects
+- activeTitleEffectParams

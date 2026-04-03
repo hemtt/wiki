@@ -1,0 +1,20 @@
+name: activateAddons
+desc: Activates the listed addons.
+groups:
+- Mods and Addons
+syntax:
+- call: !Unary addonsList
+  ret:
+    type: Nothing
+  right: !Item
+    name: addonsList
+    type: !ArrayUnsized
+      value: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>activateAddons ["BISOFP"];</sqf>
+see_also:
+- unitAddons
+- activatedAddons

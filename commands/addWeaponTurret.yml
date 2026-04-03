@@ -1,0 +1,38 @@
+name: addWeaponTurret
+desc: Adds a weapon to the turret. Use turret path [-1] for driver's turret.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - - weaponName
+    - turretPath
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: weaponName
+    type: String
+  - !Item
+    name: turretPath
+    type: TurretPath
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_tank addWeaponTurret ["LMG_M200", [0,0]];</sqf>
+see_also:
+- removeWeaponTurret
+- turretLocal
+- addMagazineTurret
+- magazinesTurret
+- removeMagazinesTurret
+- removeMagazineTurret
+- weaponsTurret
+- currentMagazineDetailTurret
+- currentMagazineTurret
+- currentWeaponTurret
+- selectWeaponTurret

@@ -1,0 +1,43 @@
+name: actionKeys
+desc: |-
+  Returns [[Array]] containing [[DIK_KeyCodes|dikCodes]] of keys, buttons and combos assigned to the given user action. Action names could be found in config class ControllerSchemes or [[:Category:Key Actions|user action names]] or user profile, for example:
+  <syntaxhighlight lang="cpp">
+  keyWatch[] = { 24 };
+  </syntaxhighlight>
+  To retrieve the value, use the property name without 'key':
+  <sqf>actionKeys "Watch"; // 24</sqf>
+  In addition, some of the actions are also listed in here: [[inputAction/actions]]
+groups:
+- Interaction
+syntax:
+- call: !Unary userAction
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: userAction
+    type: String
+- call: !Unary
+  - userAction
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Array
+  - !Item
+    name: userAction
+    type: String
+  since:
+    arma3: '2.8'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_arrayOfNumbers = actionKeys "ReloadMagazine";</sqf>
+- 'From {{arma3}} v2.08: <sqf>_arrayOfStrings = actionKeys ["ReloadMagazine"];</sqf>'
+see_also:
+- actionKeysNames
+- actionKeysNamesArray
+- actionKeysImages
+- actionName
+- inputAction
+- addUserActionEventHandler

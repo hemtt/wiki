@@ -1,0 +1,22 @@
+name: pixelW
+desc: Returns width of one pixel for current resolution.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: Nular
+  ret:
+    type: Number
+    desc: pixel width
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_pixelWidth = pixelW;</sqf>
+see_also:
+- pixelGrid
+- pixelGridBase
+- pixelGridNoUIScale
+- pixelH
+- Pixel
+- Grid
+- System

@@ -1,0 +1,23 @@
+name: copyToClipboard
+desc: Copies ANSI text string to the clipboard. If Unicode support is desired, see [[forceUnicode]].
+multiplayer_note: '{{Feature|important|Restricted to ''''''[[isServer|the server]]'''''' for safety reasons.}}'
+groups:
+- System
+- Strings
+syntax:
+- call: !Unary text
+  ret:
+    type: Nothing
+  right: !Item
+    name: text
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+server_exec: true
+since: {}
+examples:
+- <sqf>copyToClipboard str _data;</sqf>
+see_also:
+- copyFromClipboard
+- diag_log
+- forceUnicode

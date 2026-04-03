@@ -1,0 +1,36 @@
+name: preloadTitleObj
+desc: Preloads data for the given resource object.
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - name
+  - type
+  - speed
+  - showInMap
+  ret:
+    type: Boolean
+  right: !Array
+  - !Item
+    name: name
+    desc: defined in <sqf inline>configFile >> "CfgTitles" >> name</sqf>
+    type: String
+  - !Item
+    name: type
+    desc: see [[Title Effect Type]]s
+    type: String
+  - !Item
+    name: speed
+    desc: (Optional, default -1)
+    type: Number
+  - !Item
+    name: showInMap
+    desc: (Optional, default [[true]])
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ok = preloadTitleObj ["BISLogo", "PLAIN"];</sqf>
+see_also:
+- cutObj

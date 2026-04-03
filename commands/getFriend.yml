@@ -1,0 +1,29 @@
+name: getFriend
+desc: Returns if sides are friendly or hostile. For a value smaller than 0.6 it results in being enemy, otherwise it is friendly. See also [[Side Relations]].
+groups:
+- Sides
+syntax:
+- call: !Binary
+  - side1
+  - side2
+  ret:
+    type: Number
+    desc: decimal value between 0.0 to 1.0
+  left: !Item
+    name: side1
+    type: Side
+  right: !Item
+    name: side2
+    type: Side
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>value = west getFriend east;</sqf>
+- <sqf>_isEnemy = side _killer getFriend side _victim < 0.6;</sqf>
+see_also:
+- setFriend
+- BIS_fnc_sideIsFriendly
+- BIS_fnc_sideIsEnemy
+- Side
+- Relations

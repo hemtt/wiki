@@ -1,0 +1,21 @@
+name: waypointFormation
+desc: "Gets the waypoint formation.\n\nPossible values are: \n* \"NO CHANGE\"\n* \"COLUMN\"\n* \"STAG COLUMN\"\n* \"WEDGE\"\n* \"ECH LEFT\"\n* \"ECH RIGHT\"\n* \"VEE\"\n* \"LINE\"\n* \"FILE\"\n* \"DIAMOND\""
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: String
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>waypointFormation [groupOne,1];</sqf>
+see_also:
+- Mission_Editor:_Waypoints#Formation|formations
+- description
+- waypoints
+- setWaypointFormation

@@ -1,0 +1,47 @@
+name: lbSetPictureColorDisabled
+desc: Sets the disabled color of item's picture (left) with the given index of the listbox with id idc of the topmost user dialog to the given color. Color is in format [[Color|Color (RGBA)]]. Color which consists from only zeros means disable this override.
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  - color
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+- call: !Binary
+  - control
+  - - index
+    - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lbSetPictureColorDisabled [101, 0, [1, 1, 1, 0.25]];</sqf>
+- <sqf>_ctrl lbSetPictureColorDisabled [0, [1, 1, 1, 0.25]];</sqf>
+see_also:
+- lbSetPictureColor
+- lbSetPictureRightColor
+- lbSetPictureRightColorDisabled

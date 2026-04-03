@@ -1,0 +1,44 @@
+name: setLightConePars
+desc: Sets the {{hl|#lightreflector}}'s cone params.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - lightReflector
+  - - outerAngle
+    - innerAngle
+    - fadeCoef
+  ret:
+    type: Nothing
+  left: !Item
+    name: lightReflector
+    desc: object of class {{hl|#lightreflector}}
+    type: Object
+  right: !Array
+  - !Item
+    name: outerAngle
+    type: Number
+  - !Item
+    name: innerAngle
+    type: Number
+  - !Item
+    name: fadeCoef
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_light setLightConePars [90, 45, 1];</sqf>
+see_also:
+- setLightColor
+- setLightAmbient
+- setLightBrightness
+- lightAttachObject
+- lightDetachObject
+- setLightIntensity
+- setLightAttenuation
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightDayLight
+- setLightIR

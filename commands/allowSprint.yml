@@ -1,0 +1,26 @@
+name: allowSprint
+desc: Force player to run/jog if set to false.
+groups:
+- Stamina System
+syntax:
+- call: !Binary
+  - unit
+  - state
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: state
+    type: Boolean
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>player allowSprint false;</sqf>
+see_also:
+- Arma
+- '3:'
+- Stamina
+- isSprintAllowed

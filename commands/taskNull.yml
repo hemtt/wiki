@@ -1,0 +1,26 @@
+name: taskNull
+desc: "A non-existing [[Task]]. To compare non-existent tasks use [[isNull]] or [[isEqualTo]]:\n<sqf>\ntaskNull == taskNull;\t\t\t// false\nisNull taskNull;\t\t\t\t// true\ntaskNull isEqualTo taskNull;\t// true\n</sqf>"
+groups:
+- Briefing
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>!isNull taskNull; // false</sqf>
+- <sqf>str taskNull; // no task</sqf>
+see_also:
+- controlNull
+- displayNull
+- grpNull
+- locationNull
+- objNull
+- teamMemberNull
+- scriptNull
+- configNull
+- typeName
+- isNull

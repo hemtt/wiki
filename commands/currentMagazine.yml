@@ -1,0 +1,29 @@
+name: currentMagazine
+desc: Returns class name of currently loaded vehicle's / unit's magazine.
+groups:
+- Unit Inventory
+- Vehicle Inventory
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: String
+  right: !Item
+    name: vehicle
+    desc: unit or vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqf>_magazineClass = currentMagazine player;//Example: "30Rnd_545x39_AK"</sqf>'
+see_also:
+- magazines
+- currentMagazineDetail
+- currentWeapon
+- currentMuzzle
+- currentThrowable
+- currentVisionMode
+- currentWeaponMode
+- currentZeroing
+- magazinesTurret
+- weaponsTurret

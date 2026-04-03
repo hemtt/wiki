@@ -1,0 +1,23 @@
+name: getMarkerType
+desc: Gets type of marker. See [[CfgMarkers]] for a list of standard markers.
+alias:
+- '[[markerType]]'
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: String
+    desc: marker class name. See [[CfgMarkers]].
+  right: !Item
+    name: markerName
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (getMarkerType "Marker1" == "") then { hint "Marker1 is not an icon!" };</sqf>
+see_also:
+- setMarkerType
+- setMarkerTypeLocal
+- markerType

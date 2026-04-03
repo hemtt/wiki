@@ -1,0 +1,59 @@
+name: doWatch
+desc: Order the given unit(s) to watch the given position or target (without radio messages). Use [[objNull]] as the target to order a unit to stop watching a position/target.
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit(s)
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit(s)
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: position
+    type: Position
+- call: !Binary
+  - unit(s)
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit(s)
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
+  right: !Item
+    name: target
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>_soldierOne doWatch markerPos "MarkerMoveOne";</sqf>
+
+  The unit named "soldierOne" will watch the position where the marker "MarkerMoveOne" is placed.
+- |-
+  <sqf>_soldierOne doWatch _eastSoldier;</sqf>
+
+  The unit named "soldierOne" will watch the unit named "eastSoldier".
+see_also:
+- commandWatch
+- lookAt
+- glanceAt

@@ -1,0 +1,20 @@
+name: 'false'
+desc: Always false.
+groups:
+- Math
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _var = false;
+  systemChat str _var; // false
+  </sqf>
+see_also:
+- 'true'

@@ -1,0 +1,21 @@
+name: removeSwitchableUnit
+desc: Remove a unit from the list of units available for [[Team Switch]].
+groups:
+- Team Switch
+- Multiplayer
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Nothing
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>removeSwitchableUnit _unit1;</sqf>
+see_also:
+- Team
+- Switch
+- addSwitchableUnit

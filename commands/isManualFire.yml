@@ -1,0 +1,27 @@
+name: isManualFire
+desc: Returns [[true]] if manual fire is on. Manual fire could either be selected in vehicle action menu (if available) or with [[action]] "ManualFire" and "ManualFireCancel". Always returns [[false]] for a soldier.
+groups:
+- Weapons
+syntax:
+- call: !Unary vehicleName
+  ret:
+    type: Boolean
+  right: !Item
+    name: vehicleName
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_bool = isManualFire vehicle player;</sqf>
+see_also:
+- fire
+- doFire
+- commandFire
+- canFire
+- fireAtTarget
+- forceWeaponFire
+- commandArtilleryFire
+- commandSuppressiveFire
+- doArtilleryFire
+- doSuppressiveFire

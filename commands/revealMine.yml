@@ -1,0 +1,27 @@
+name: revealMine
+desc: Sets given mine as known to the side. (Knowledge about a mine is always shared across all units in a side.)
+groups:
+- Mines
+syntax:
+- call: !Binary
+  - side
+  - mine
+  ret:
+    type: Nothing
+  left: !Item
+    name: side
+    type: Side
+  right: !Item
+    name: mine
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>west revealMine _mine;</sqf>
+see_also:
+- allMines
+- detectedMines
+- mineDetectedBy
+- createMine
+- mineActive

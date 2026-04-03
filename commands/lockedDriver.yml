@@ -1,0 +1,19 @@
+name: lockedDriver
+desc: Check whether driver position of the vehicle turret is locked.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_driverLocked = lockedDriver vehicle player;</sqf>
+see_also:
+- vehicle
+- driver

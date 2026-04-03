@@ -1,0 +1,44 @@
+name: setGroupIdGlobal
+desc: A [[Multiplayer Scripting#Locality|global]] equivalent of  [[setGroupId]].
+groups:
+- Groups
+syntax:
+- call: !Binary
+  - group
+  - - format
+    - keywordN
+  ret:
+    type: Nothing
+  left: !Item
+    name: group
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Group
+        desc: null
+        since: null
+  right: !Array
+  - !Item
+    name: format
+    desc: format template (e.g "%keyword1 - %keyword2 / %keyword4 (%keyword3)")
+    type: String
+  - !Infinite
+    - !Item
+      name: keywordN
+      desc: keyword value
+      type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>
+  group player setGroupIdGlobal ["PAPA BEAR"];
+  hint groupId group player; // "PAPA BEAR"
+  </sqf>
+see_also:
+- setGroupId
+- groupId
+- group

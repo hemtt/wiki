@@ -1,0 +1,24 @@
+name: camDestroy
+desc: "Destroys camera object created with [[camCreate]]. This command doesn't need [[camCommit]]. \n{{Feature | important | Destroying camera object does not terminate camera effect automatically, use [[cameraEffect]] prior to deleting the camera (see Example 2)}}"
+groups:
+- Camera Control
+syntax:
+- call: !Unary object
+  ret:
+    type: Nothing
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>camDestroy _cam;</sqf>
+- |-
+  <sqf>
+  _cam cameraEffect ["terminate","back"];
+  camDestroy _cam;
+  </sqf>
+see_also:
+- camCreate
+- cameraEffect

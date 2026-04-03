@@ -1,0 +1,35 @@
+name: setLightIR
+desc: Sets lightpoint in infrared range.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - value
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    desc: object of class {{hl|"#lightpoint"}} or similar
+    type: Object
+  right: !Item
+    name: value
+    desc: '[[true]] to make it visible ''''only'''' with night vision goggles, [[false]] to make it a normal light'
+    type: Boolean
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight setLightIR true; // visible with NVG only!</sqf>
+see_also:
+- setLightColor
+- setLightAmbient
+- setLightBrightness
+- lightAttachObject
+- lightDetachObject
+- setLightIntensity
+- setLightAttenuation
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightDayLight

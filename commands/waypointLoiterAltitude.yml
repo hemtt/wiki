@@ -1,0 +1,18 @@
+name: waypointLoiterAltitude
+desc: Gets the waypoint loiter altitude.
+groups:
+- Waypoints
+syntax:
+- call: !Unary waypoint
+  ret:
+    type: Number
+  right: !Item
+    name: waypoint
+    type: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _loiterAlt = waypointLoiterAltitude [groupOne, 1];</sqf>
+see_also:
+- setWaypointLoiterAltitude

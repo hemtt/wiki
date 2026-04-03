@@ -1,0 +1,32 @@
+name: setLightFlareMaxDistance
+desc: Sets max distance where the flare is visible.
+groups:
+- Lights
+syntax:
+- call: !Binary
+  - light
+  - distance
+  ret:
+    type: Nothing
+  left: !Item
+    name: light
+    type: Object
+  right: !Item
+    name: distance
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>myLight setLightFlareMaxDistance 500;</sqf>
+see_also:
+- setLightAmbient
+- setLightColor
+- lightAttachObject
+- lightDetachObject
+- setLightIntensity
+- setLightAttenuation
+- setLightUseFlare
+- setLightFlareSize
+- setLightBrightness
+- setLightDayLight

@@ -1,0 +1,20 @@
+name: setShadowDistance
+desc: Sets the shadows rendering distance.
+groups:
+- System
+- Environment
+syntax:
+- call: !Unary value
+  ret:
+    type: Nothing
+  right: !Item
+    name: value
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>setShadowDistance 200;</sqf>
+see_also:
+- getShadowDistance
+- isPipEnabled

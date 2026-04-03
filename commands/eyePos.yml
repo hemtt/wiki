@@ -1,0 +1,23 @@
+name: eyePos
+desc: Returns the object's eyes / main turret position.
+groups:
+- Positions
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dASL
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_eyesPos = eyePos player;</sqf>
+see_also:
+- eyeDirection
+- getPosASL
+- setPosASL
+- setPosASL2
+- getCameraViewDirection
+- positionCameraToWorld

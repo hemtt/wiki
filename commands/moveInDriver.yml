@@ -1,0 +1,37 @@
+name: moveInDriver
+desc: |-
+  Moves soldier into vehicle driver position (immediate, no animation).
+  {{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}
+  {{Feature|important|If the unit is already in a vehicle, nothing will happen unless [[moveOut]] (since {{arma2}}) is used first to move the unit out of their vehicle (see {{Link|#Example 2}}).}}
+multiplayer_note: '''''unit'''' must be [[Multiplayer Scripting#Locality|local]], while the vehicle''s locality does not matter.'
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - vehicle
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldierOne moveInDriver _tankOne;</sqf>
+- "<sqf>\nif (not isNull vehicle player) then\n{\n\tmoveOut player;\n};\n\nplayer moveInDriver _myTruck;\n</sqf>"
+see_also:
+- moveInAny
+- moveInCargo
+- moveInCommander
+- moveInGunner
+- moveInTurret
+- assignAsCargo
+- assignAsCommander
+- assignAsDriver
+- assignAsGunner
+- isTurnedOut

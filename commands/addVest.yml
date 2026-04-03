@@ -1,0 +1,24 @@
+name: addVest
+desc: Create a new vest and try to link it into vest slot.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - type
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: type
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player addVest "V_TacVest_blk_POLICE";</sqf>
+see_also:
+- removeVest
+- vest

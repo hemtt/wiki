@@ -1,0 +1,37 @@
+name: setMarkerSize
+desc: |-
+  Sets the marker's size.
+  {{Feature|informative|
+  '''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.
+  As such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).
+  }}
+groups:
+- Markers
+syntax:
+- call: !Binary
+  - markerName
+  - - a-axis
+    - b-axis
+  ret:
+    type: Nothing
+  left: !Item
+    name: markerName
+    type: String
+  right: !Array
+  - !Item
+    name: a-axis
+    desc: 1/2 width of marker
+    type: Number
+  - !Item
+    name: b-axis
+    desc: 1/2 height of marker
+    type: Number
+argument_loc: Unspecified
+effect_loc: Global
+since: {}
+examples:
+- <sqf>"MarkerOne" setMarkerSize [100, 200];</sqf>
+see_also:
+- setMarkerSizeLocal
+- getMarkerSize
+- markerSize

@@ -1,0 +1,101 @@
+name: showHUD
+desc: |-
+  Enable / disable showing of HUD. Defines visibility of weapon crosshair and any informational tags that appear when pointing the weapon at an object as well as availability of the default action menu. Unfortunately, it also hides icons drawn with [[drawIcon3D]].
+  {{Feature|arma3|
+  '''Since {{arma3}} v1.50''' there is a Description.ext's [[Description.ext#showHUD|showHUD[]]] array param that is identical in format to the extended [[showHUD]] command.
+  When present, it will disable [[showHUD]] command entirely, allowing mission makers to permanently alter visibility of some HUD elements.<br>
+  '''Since {{arma3}} v2.04''' it is possible to force drawing of [[drawIcon3D]] icons when HUD is hidden.
+  The icons will also show when custom camera is [[camCreate|created]] and the view is switched to it via [[switchCamera]] or [[cameraEffect]] provided [[cameraEffectEnableHUD]] is enabled.
+  For more information see [[drawIcon3D]].
+  }}
+groups:
+- Interaction
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    type: Boolean
+- call: !Unary
+  - scriptedHUD
+  - info
+  - radar
+  - compass
+  - direction
+  - menu
+  - group
+  - cursors
+  - panels
+  - kills
+  - showIcon3D
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: scriptedHUD
+    desc: show scripted HUD such as weapon crosshair, action menu and overlays created with [[cutRsc]] and [[titleRsc]]. Same as [[showHUD]]'s first syntax
+    type: Boolean
+  - !Item
+    name: info
+    desc: (Optional, default [[true]]) show vehicle, soldier and weapon info
+    type: Boolean
+  - !Item
+    name: radar
+    desc: (Optional, default [[true]]) show vehicle radar
+    type: Boolean
+  - !Item
+    name: compass
+    desc: (Optional, default [[true]]) show vehicle compass
+    type: Boolean
+  - !Item
+    name: direction
+    desc: (Optional, default [[true]]) show tank direction indicator. Not present in vanilla {{arma3}}
+    type: Boolean
+  - !Item
+    name: menu
+    desc: (Optional, default [[true]]) show commanding menu (HC related menus)
+    type: Boolean
+  - !Item
+    name: group
+    desc: (Optional, default [[true]]) show group info bar (Squad leader info bar)
+    type: Boolean
+  - !Item
+    name: cursors
+    desc: (Optional, default [[true]]) show HUD weapon cursors (connected with scripted HUD)
+    type: Boolean
+  - !Item
+    name: panels
+    desc: '(Optional, default [[true]]) show [[Arma 3: Custom Info]]'
+    type: Boolean
+    since:
+      arma3: '1.70'
+  - !Item
+    name: kills
+    desc: (Optional, default [[true]]) show "x killed by y" [[systemChat]] messages
+    type: Boolean
+  - !Item
+    name: showIcon3D
+    desc: (Optional, default [[false]]) show icons drawn with [[drawIcon3D]] even when the HUD is hidden
+    type: Boolean
+    since:
+      arma3: '2.4'
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>showHUD false;</sqf>
+- "Hide vehicle radar and compass:\n<sqf>\nshowHUD [\n\ttrue,  // scriptedHUD\n\ttrue,  // info\n\tfalse, // radar\n\tfalse, // compass\n\ttrue,  // direction\n\ttrue,  // menu\n\ttrue,  // group\n\ttrue,  // cursors\n\ttrue,  // panels\n\ttrue,  // kills\n\ttrue   // showIcon3D\n];\n</sqf>"
+- |-
+  Check if HUD visibility is hardcoded in mission config and [[showHUD]] command is overridden:
+  <sqf>private _disabledShowHUD = isArray (missionConfigFile >> "showHUD");</sqf>
+see_also:
+- shownHUD
+- showCinemaBorder
+- showSubtitles
+- showWatch
+- showRadio
+- showMap
+- showGPS
+- showCompass
+- showPad

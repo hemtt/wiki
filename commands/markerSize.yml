@@ -1,0 +1,27 @@
+name: markerSize
+desc: Returns marker size. This command is identical to [[getMarkerSize]].
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: !ArraySized
+    - name: a_axis
+      type: Number
+      desc: 1/2 width of marker
+      since: null
+    - name: b_axis
+      type: Number
+      desc: 1/2 height of marker
+      since: null
+  right: !Item
+    name: markerName
+    type: String
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mSize = markerSize "Marker1";</sqf>
+see_also:
+- setMarkerSize
+- setMarkerSizeLocal

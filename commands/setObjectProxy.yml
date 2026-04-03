@@ -1,0 +1,30 @@
+name: setObjectProxy
+desc: |-
+  Set the proxy object associated with the given editor object.
+  {{Feature|informative|Some Old Editor Command}}
+groups:
+- Game 2 Editor
+syntax:
+- call: !Binary
+  - map
+  - - object
+    - proxy
+  ret:
+    type: Nothing
+  left: !Item
+    name: map
+    type: Control
+  right: !Array
+  - !Item
+    name: object
+    type: String
+  - !Item
+    name: proxy
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_map setObjectProxy ["_group_0", vehicle (leader _group)];</sqf>
+see_also:
+- getObjectProxy

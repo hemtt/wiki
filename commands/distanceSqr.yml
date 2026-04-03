@@ -1,0 +1,65 @@
+name: distanceSqr
+desc: |-
+  Computes the {{Link|https://en.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance|squared distance}} between two objects or positions.
+  This command is faster than {{Link|distance}} by saving a {{Link|sqrt|square root}} operation, useful for mass-checking distance without the need of the distance value itself.
+groups:
+- Math - Geometry
+syntax:
+- call: !Binary
+  - var1
+  - var2
+  ret:
+    type: Number
+    desc: distance in meters or 1e10 if distance cannot be calculated
+  left: !Item
+    name: var1
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position
+        desc: null
+        since: null
+  right: !Item
+    name: var2
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position
+        desc: null
+        since: null
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+    desc: distance c calculated as <sqf inline>c = a * a + b * b</sqf>
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+  since:
+    arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nprivate _distanceSquared = 5 * 5;\nif (player distanceSqr leader player < _distanceSquared) then // similar to player distance leader player < 5\n{\n\thint \"You are less than 5m from the leader!\";\n};\n</sqf>"
+- |-
+  <sqf>
+  private _distance = sqrt ((x2 - x1) ^ 2 + (y2 - y1) ^ 2 + (z2 - z1) ^ 2);
+  private _distanceSqr = (x2 - x1) ^ 2 + (y2 - y1) ^ 2 + (z2 - z1) ^ 2;
+  _distance = [x1, y1, z1] distance [x2, y2, z2];
+  _distanceSqr = [x1, y1, z1] distanceSqr [x2, y2, z2];
+  _distance = sqrt ([x1, y1, z1] distanceSqr [x2, y2, z2]);
+  _distanceSqr = ([x1, y1, z1] distance [x2, y2, z2]) ^ 2;
+  </sqf>
+see_also:
+- distance
+- vectorDistanceSqr
+- distance2D

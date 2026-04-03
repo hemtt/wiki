@@ -1,0 +1,24 @@
+name: ctrlMapAnimDone
+desc: Checks whether the map animation has finished.
+groups:
+- GUI Control - Map
+syntax:
+- call: !Unary controlName
+  ret:
+    type: Boolean
+  right: !Item
+    name: controlName
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_isDone = ctrlMapAnimDone _ctrlMap;</sqf>
+see_also:
+- mapAnimAdd
+- mapAnimClear
+- mapAnimCommit
+- mapAnimDone
+- ctrlMapAnimAdd
+- ctrlMapAnimClear
+- ctrlMapAnimCommit

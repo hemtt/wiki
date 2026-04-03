@@ -1,0 +1,16 @@
+name: enableEndDialog
+desc: Enables the execution of a custom camera sequence after the players death, coded in [[Event Scripts#onPlayerKilled.sqs|onPlayerKilled.sqs]].
+groups:
+- Camera Control
+- Mission Information
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>enableEndDialog;</sqf>
+see_also:
+- forceEnd

@@ -1,0 +1,25 @@
+name: binocular
+desc: Returns class name of currently used binocular weapon.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_binocs = binocular player; //Rangefinder</sqf>
+see_also:
+- binocularMagazine
+- binocularItems
+- addBinocularItem
+- removeBinocularItem
+- removeAllBinocularItems
+- headgear
+- goggles
+- hmd

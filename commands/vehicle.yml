@@ -1,0 +1,26 @@
+name: vehicle
+desc: |-
+  Vehicle in which given unit is mounted. If none, unit is returned. Alternatively, use [[objectParent]]
+  {{Feature|important|While [[vehicle]] may return the vehicle the unit is in for '''[[alive]]''' units, for dead units which are groupless, this command returns the unit itself - use [[objectParent]] instead.}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Object
+  right: !Item
+    name: unitName
+    desc: '[[alive]] unit'
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  SQS
+  <sqs>? vehicle player != player : hint "Player is in a vehicle"</sqs>
+- |-
+  SQF
+  <sqf>if (vehicle player != player) then { hint "Player is in a vehicle" };</sqf>
+see_also:
+- objectParent

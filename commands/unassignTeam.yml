@@ -1,0 +1,19 @@
+name: unassignTeam
+desc: Unassigns the unit (in the case of a vehicle its commander unit) from his team. This is equal to unit [[assignTeam]] "MAIN".
+groups:
+- Groups
+syntax:
+- call: !Unary vehicleName
+  ret:
+    type: Nothing
+  right: !Item
+    name: vehicleName
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>unassignTeam _soldier2;</sqf>
+see_also:
+- assignTeam
+- dissolveTeam

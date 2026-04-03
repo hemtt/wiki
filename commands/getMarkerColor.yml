@@ -1,0 +1,26 @@
+name: getMarkerColor
+desc: |-
+  Returns marker color for given marker.
+  {{Feature|informative|This command is identical to [[markerColor]].}}
+groups:
+- Markers
+syntax:
+- call: !Unary markerName
+  ret:
+    type: String
+  right: !Item
+    name: markerName
+    desc: marker name
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  "MarkerOne" setMarkerColor "ColorBlack";
+  _color = getMarkerColor "MarkerOne"; // returns "ColorBlack"
+  </sqf>
+see_also:
+- setMarkerColor
+- setMarkerColorLocal

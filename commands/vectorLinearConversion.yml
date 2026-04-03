@@ -1,0 +1,52 @@
+name: vectorLinearConversion
+desc: Interpolates vector between the given ''vectorFrom'' and ''vectorTo'' value according to the given range value.
+groups:
+- Math - Vectors
+syntax:
+- call: !Unary
+  - rangeFrom
+  - rangeTo
+  - rangeValue
+  - vectorFrom
+  - vectorTo
+  - clip
+  ret:
+    type: Vector3d
+    desc: interpolated vector
+  right: !Array
+  - !Item
+    name: rangeFrom
+    desc: start "from" range
+    type: Number
+  - !Item
+    name: rangeTo
+    desc: end "to" range
+    type: Number
+  - !Item
+    name: rangeValue
+    desc: variable range value
+    type: Number
+  - !Item
+    name: vectorFrom
+    desc: start "from" vector
+    type: Vector3d
+  - !Item
+    name: vectorTo
+    desc: end "to" vector
+    type: Vector3d
+  - !Item
+    name: clip
+    desc: (Optional, default [[false]]) if [[true]], range value will be clipped to stay within "from" - "to" range
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>vectorLinearConversion [0, 1, 0.5, [0,0,0], [25,50,100], false];\t// [12.5,25,50]</sqf>"
+- "<sqf>vectorLinearConversion [0, 1, 100, [0,0,0], [25,50,100], true];\t// [25,50,100]</sqf>"
+- "<sqf>vectorLinearConversion [0, 1, 100, [0,0,0], [25,50,100], false];\t// [2500,5000,10000]</sqf>"
+see_also:
+- linearConversion
+- bezierInterpolation
+- matrixMultiply
+- matrixTranspose

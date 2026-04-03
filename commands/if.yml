@@ -1,0 +1,35 @@
+name: if
+desc: This operator creates a [[If Type]] which is used in the if-construct as described [[Control_Structures#if-Statement|here]].
+groups:
+- Program Flow
+syntax:
+- call: !Unary condition
+  ret:
+    type: IfType
+    desc: predicate which will execute 1st or 2nd option when used. This predicate is used in [[then]] or [[exitWith]] commands
+  right: !Item
+    name: condition
+    desc: if it evaluates as [[true]], the [[then]] clause is executed.  Otherwise, the [[else]] clause (if present) is executed
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _retVal = if (1 > 0) then { "It's true" } else { "It's false" };
+  hint str _retVal;
+  </sqf>
+- |-
+  <sqf>
+  _val = if (true) then [{ "true" }, { "false" }];
+  hint _val;
+  </sqf>
+see_also:
+- else
+- exitWith
+- then
+- Control
+- Structures
+- Code_Optimisation#Lazy_evaluation|Lazy
+- evaluation

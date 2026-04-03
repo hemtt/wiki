@@ -1,0 +1,37 @@
+name: unlinkItem
+desc: Unassign and delete existing item from its assigned slot. Nothing happens if the item does not exist or is not assigned. See also [[unassignItem]].
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - item
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: item
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>
+  bluforUnit unlinkItem "NVGoggles";
+  opforUnit unlinkItem "NVGoggles_OPFOR";
+  indepUnit unlinkItem "NVGoggles_INDEP";
+
+  // or
+  { _x unlinkItem hmd _x } forEach [bluforUnit, opforUnit, indepUnit];
+  </sqf>
+see_also:
+- linkItem
+- addItem
+- assignItem
+- removeItem
+- unassignItem
+- assignedItems
+- removeAllAssignedItems

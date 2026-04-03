@@ -1,0 +1,32 @@
+name: ctrlSetFontH1B
+desc: Sets H1 bold font of given HTML control.
+groups:
+- GUI Control - HTML
+syntax:
+- call: !Binary
+  - controlName
+  - fontName
+  ret:
+    type: Nothing
+  left: !Item
+    name: controlName
+    type: Control
+  right: !Item
+    name: fontName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlSetFontH1B "TahomaB";</sqf>
+see_also:
+- ctrlSetFontH2
+- ctrlSetFontH2B
+- ctrlSetFontH3
+- ctrlSetFontH3B
+- ctrlSetFontH4
+- ctrlSetFontH4B
+- ctrlSetFontH5
+- ctrlSetFontH5B
+- ctrlSetFontH6
+- ctrlSetFontH6B

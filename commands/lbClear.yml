@@ -1,0 +1,27 @@
+name: lbClear
+desc: Clear all items from a [[CT_LISTBOX]] or [[CT_COMBO]] control.
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary idc
+  ret:
+    type: Nothing
+  right: !Item
+    name: idc
+    desc: control IDC
+    type: Number
+- call: !Unary control
+  ret:
+    type: Nothing
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>lbClear 101;</sqf>
+- <sqf>lbClear _ctrl;</sqf>
+see_also:
+- lbAdd
+- lbDelete

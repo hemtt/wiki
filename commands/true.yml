@@ -1,0 +1,16 @@
+name: 'true'
+desc: Always true
+groups:
+- Math
+- Variables
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\n_var = true;\nsystemChat str _var; // true\n\nif (_var) then\n{\n\thint \"_var is true!\";\n};\n</sqf>"
+see_also:
+- 'false'

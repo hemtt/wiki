@@ -1,0 +1,23 @@
+name: isAimPrecisionEnabled
+desc: Returns true if procedural aiming precision affects weapon sway.
+groups:
+- Stamina System
+syntax:
+- call: !Unary unit
+  ret:
+    type: Boolean
+    desc: true if affected, false if not
+  right: !Item
+    name: unit
+    desc: unit which should be checked
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_isAffected = isAimPrecisionEnabled player;</sqf>
+see_also:
+- getAnimAimPrecision
+- Arma
+- '3:'
+- Stamina

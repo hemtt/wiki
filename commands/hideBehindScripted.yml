@@ -1,0 +1,24 @@
+name: hideBehindScripted
+desc: When set to [[true]] it disables the default engine hiding behavior.
+groups:
+- Object Manipulation
+- Unit Control
+syntax:
+- call: !Binary
+  - object
+  - scriptedHideBehind
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: scriptedHideBehind
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_unit hideBehindScripted true;</sqf>
+see_also:
+- isHideBehindScripted

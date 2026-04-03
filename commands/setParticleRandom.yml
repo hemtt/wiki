@@ -1,0 +1,74 @@
+name: setParticleRandom
+desc: "Sets randomization of particle source parameters. Correspondence between CfgCloudlets class param names and command array of params:\n<sqf>\nparticleSource setParticleRandom\n[\n\tlifeTimeVar,\n\tpositionVar,\n\tmoveVelocityVar,\n\trotationVelocityVar,\n\tsizeVar,\n\tcolorVar,\n\trandomDirectionPeriodVar,\n\trandomDirectionIntensityVar,\n\tangleVar,\n\tbounceOnSurfaceVar\n];\n</sqf>"
+groups:
+- Particles
+syntax:
+- call: !Binary
+  - particleSource
+  - - lifeTime
+    - position
+    - moveVelocity
+    - rotationVelocity
+    - size
+    - color
+    - directionPeriod
+    - directionIntensity
+    - angle
+    - bounceOnSurface
+  ret:
+    type: Nothing
+  left: !Item
+    name: particleSource
+    type: Object
+  right: !Array
+  - !Item
+    name: lifeTime
+    type: Number
+  - !Item
+    name: position
+    desc: in format [randomX, randomY, randomZ]
+    type: !ArrayUnsized
+      value: Number
+  - !Item
+    name: moveVelocity
+    desc: in format [randomX, randomY, randomZ]
+    type: !ArrayUnsized
+      value: Number
+  - !Item
+    name: rotationVelocity
+    type: Number
+  - !Item
+    name: size
+    type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+  - !Item
+    name: directionPeriod
+    type: Number
+  - !Item
+    name: directionIntensity
+    type: Number
+  - !Item
+    name: angle
+    desc: (Optional)
+    type: Number
+  - !Item
+    name: bounceOnSurface
+    desc: (Optional)
+    type: Number
+    since:
+      arma3: '0.74'
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_particleSource setParticleRandom [0, [0.1, 0.1, 0.1], [0, 0, 0.5], 0, 0.1, [0, 0, 0, 0], 0, 0, 45, 0];</sqf>
+see_also:
+- ParticleArray
+- setParticleCircle
+- setParticleParams
+- ParticleTemplates
+- setParticleClass
+- particlesQuality
+- setParticleFire

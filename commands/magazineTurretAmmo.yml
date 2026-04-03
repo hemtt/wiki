@@ -1,0 +1,31 @@
+name: magazineTurretAmmo
+desc: Returns ammo count of given magazine from given turret (see [[setMagazineTurretAmmo]] for more info)
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - - magazineClass
+    - turretPath
+  ret:
+    type: Number
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: magazineClass
+    type: String
+  - !Item
+    name: turretPath
+    desc: '[-1] for driver turret is supported'
+    type: TurretPath
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>vehicle player magazineTurretAmmo ["cls", [0]];</sqf>
+see_also:
+- setMagazineTurretAmmo
+- magazinesAllTurrets
+- ammoOnPylon

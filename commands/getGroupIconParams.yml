@@ -1,0 +1,53 @@
+name: getGroupIconParams
+desc: Returns group icons params used for command bar drawing such as color, text, scale, visibility, waypoint visibility, waypoint color.
+groups:
+- High Command
+syntax:
+- call: !Unary group
+  ret:
+    type: !ArraySized
+    - name: color
+      type: ArrayColor
+      desc: icon color
+      since: null
+    - name: text
+      type: String
+      desc: icon text
+      since: null
+    - name: scale
+      type: Number
+      desc: icon scale
+      since: null
+    - name: visibility
+      type: Boolean
+      desc: icon visibility
+      since: null
+    - name: WPvisibility
+      type: Boolean
+      desc: waypoint visibility
+      since: null
+    - name: WPcolor
+      type: ArrayColor
+      desc: waypoint color
+      since: null
+  right: !Item
+    name: group
+    type: Group
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_iconParams = getGroupIconParams group player;</sqf>
+- <sqf>getGroupIconParams group player params ["_color", "_text", "_scale", "_visibility", "_WPVisibility", "_WPColor"];</sqf>
+see_also:
+- addGroupIcon
+- clearGroupIcons
+- getGroupIcon
+- groupIconSelectable
+- groupIconsVisible
+- onGroupIconClick
+- removeGroupIcon
+- setGroupIcon
+- setGroupIconParams
+- setGroupIconsSelectable
+- setGroupIconsVisible

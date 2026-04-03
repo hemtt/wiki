@@ -1,0 +1,21 @@
+name: ctrlVisible
+desc: 'Returns if a control of the currently active user dialog is shown or not. Read [[Arma: GUI Configuration]] for more information about user dialogs and controls.'
+groups:
+- GUI Control
+syntax:
+- call: !Unary idc
+  ret:
+    type: Boolean
+    desc: '[[true]] if the control is shown, [[false]] if not'
+  right: !Item
+    name: idc
+    desc: control IDC
+    type: Number
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_bool = ctrlVisible 100;</sqf>
+see_also:
+- ctrlShow
+- ctrlShown

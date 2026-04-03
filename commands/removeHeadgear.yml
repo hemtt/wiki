@@ -1,0 +1,19 @@
+name: removeHeadgear
+desc: Removes headgear from a unit. If unit has no headgear command quietly fails.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: Nothing
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>removeHeadgear player;</sqf>
+see_also:
+- headgear
+- addHeadgear

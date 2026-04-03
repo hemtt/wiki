@@ -1,0 +1,20 @@
+name: someAmmo
+desc: Check if unit has some ammo.
+groups:
+- Unit Inventory
+syntax:
+- call: !Unary unitName
+  ret:
+    type: Boolean
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '<sqs>? not (someAmmo _loon1) : hint "Loon1 is out of ammo!"</sqs>'
+- <sqf>if (not someAmmo _loon1) then { hint "Loon1 is out of ammo!" };</sqf>
+see_also:
+- ammo
+- magazines

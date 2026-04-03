@@ -1,0 +1,19 @@
+name: visibleGPS
+desc: Checks if the player has GPS receiver (minimap) opened and visible.
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (visibleGPS) then {hint "GPS is visible"};</sqf>
+see_also:
+- openGPS
+- showGPS
+- shownGPS
+- visibleWatch
+- visibleCompass

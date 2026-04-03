@@ -1,0 +1,43 @@
+name: lnbCurSelRow
+desc: Returns the index of the selected row id 2D listbox.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary idc
+  ret:
+    type: Number
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary ctrl
+  ret:
+    type: Number
+  right: !Item
+    name: ctrl
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lnbCurSelRow _ctrl;</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbClear
+- lnbColor
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

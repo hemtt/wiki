@@ -1,0 +1,38 @@
+name: ropes
+desc: Returns all ropes attached to a ropes owner transport vehicle.
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: !Unary ropesOwner
+  ret:
+    type: !ArrayUnsized
+      value: Object
+    desc: array of the actual rope objects
+  right: !Item
+    name: ropesOwner
+    desc: a transport from which the ropes originate
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str (ropes vehicle player);</sqf>
+- <sqf>_rope1 = (ropes heli1) select 0;</sqf>
+see_also:
+- canSlingLoad
+- enableRopeAttach
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeDestroy
+- ropeLength
+- ropeUnwound
+- ropeAttachedTo
+- ropeCreate
+- ropeDetach
+- ropeAttachEnabled
+- ropeCut
+- ropeEndPosition
+- ropeUnwind
+- setSlingLoad
+- slingLoadAssistantShown

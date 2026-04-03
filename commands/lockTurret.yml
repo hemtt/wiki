@@ -1,0 +1,36 @@
+name: lockTurret
+desc: |-
+  Lock the gunner position of the vehicle turret.
+  This command will remove user "get in" action (not "get out") but will also stop player getting into vehicle via script commands unlike [[lock]] command.
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - - turretPath
+    - lock
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: turretPath
+    type: TurretPath
+  - !Item
+    name: lock
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>vehicleName lockTurret [[0,0], true];</sqf>
+- <sqf>vehicle player lockTurret [[0], true];</sqf>
+see_also:
+- lockedTurret
+- lockCargo
+- lockDriver
+- assignedVehicleRole
+- turretUnit
+- moveInTurret

@@ -1,0 +1,23 @@
+name: enableSentences
+desc: Enables radio transmissions to be heard and seen on screen. It does not affect KBTell conversations.
+groups:
+- Radio and Chat
+- Sounds
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>enableSentences false;</sqf>
+see_also:
+- sentencesEnabled
+- setSpeaker
+- disableConversation
+- enableRadio
+- showSubtitles

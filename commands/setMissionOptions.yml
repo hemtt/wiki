@@ -1,0 +1,33 @@
+name: setMissionOptions
+desc: |-
+  Sets various mission options. The options are automatically reset between missions and are saved/restored with the save system.<br>
+  Available Options:
+
+  * IgnoreNoDamage: [[Boolean]] - (default [[false]]) [[true]] to filter out no change in damage from {{Link|Arma 3: Event Handlers#HandleDamage|HandleDamage}} calls
+  * IgnoreFakeHeadHit: [[Boolean]] - (default [[false]]) [[true]] to filter out FakeHeadHit context from {{Link|Arma 3: Event Handlers#HandleDamage|HandleDamage}} calls
+  * IgnoreUpsideDownDamage: [[Boolean]] - (default [[false]]) [[true]] to ignore some minor upside down damage accumulation for a helicopter
+  * {{GVI|arma3|2.20|size= 0.75}} SnakesCanOpenDoors: [[Boolean]] - (default [[false]]) [[true]] to revert to legacy behaviour when snakes would open doors when entering houses
+  * {{GVI|arma3|2.20|size= 0.75}} AIThinkOnlyLocal: [[Boolean]] - (default [[false]]) [[true]] to disable processing targetting data for remote AI units, [[knowsAbout]], [[targets]] and similar commands will cease to work on remote units. For a gain in client performance because they no longer have to calculate all AI units.
+
+  Providing a empty HashMap will reset all options to defaults.
+groups:
+- System
+syntax:
+- call: !Unary options
+  ret:
+    type: Nothing
+  right: !Item
+    name: options
+    desc: a HashMap containing all the options to be changed
+    type: HashMapUnknown
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>setMissionOptions createHashMapFromArray [["IgnoreNoDamage", true], ["IgnoreFakeHeadHit", true], ["IgnoreUpsideDownDamage", true]];</sqf>
+- <sqf>setMissionOptions createHashMap; // reset options to default</sqf>
+see_also:
+- getMissionOptions
+- getResolution
+- getAudioOptionVolumes
+- getSubtitleOptions

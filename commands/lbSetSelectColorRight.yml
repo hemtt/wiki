@@ -1,0 +1,66 @@
+name: lbSetSelectColorRight
+desc: Sets the select color of the of the secondary text (right aligned) of the item with the given index of the listbox or combobox with id idc of the topmost user [[dialog]] to color.
+groups:
+- GUI Control - ListBox
+syntax:
+- call: !Unary
+  - idc
+  - index
+  - color
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+- call: !Binary
+  - control
+  - - index
+    - color
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: index
+    type: Number
+  - !Item
+    name: color
+    type: ArrayColor
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lbSetSelectColorRight [101, 0, [0, 1, 0, 0.5]];</sqf>
+- <sqf>_control lbSetSelectColorRight [0, [0, 1, 0, 0.5]];</sqf>
+see_also:
+- lbSetSelectColor
+- lbSetColor
+- lbAdd
+- lbClear
+- lbColor
+- lbCurSel
+- lbData
+- lbDelete
+- lbIsSelected
+- lbPicture
+- lbSelection
+- lbSetCurSel
+- lbSetData
+- lbSetPicture
+- lbSetSelected
+- lbSetTooltip
+- lbSetValue
+- lbSize
+- lbSort
+- lbSortByValue
+- lbText
+- lbValue

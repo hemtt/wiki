@@ -1,0 +1,25 @@
+name: enableStamina
+desc: Enable/disable stamina system
+groups:
+- Stamina System
+syntax:
+- call: !Binary
+  - unit
+  - enabled
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: enabled
+    type: Boolean
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player enableStamina true;</sqf>
+see_also:
+- Arma
+- '3:'
+- Stamina

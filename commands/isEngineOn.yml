@@ -1,0 +1,21 @@
+name: isEngineOn
+desc: Returns [[true]] if engine is on, [[false]] if it is off.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Boolean
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_carEngineIsOn = isEngineOn _carOne;</sqf>
+see_also:
+- engineOn
+- setCollisionLight
+- isLightOn
+- isCollisionLightOn

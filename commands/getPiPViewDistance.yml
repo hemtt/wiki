@@ -1,0 +1,20 @@
+name: getPiPViewDistance
+desc: Get the set PiP (Picture-in-Picture) view distance (that can be set by [[setPiPViewDistance]]).
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>private _pipViewDistance = getPiPViewDistance;</sqf>
+- <sqf>private _pipViewDistanceRatio = getPiPViewDistance / viewDistance;</sqf>
+see_also:
+- setPiPViewDistance
+- setViewDistance
+- setObjectViewDistance
+- viewDistance
+- getObjectViewDistance

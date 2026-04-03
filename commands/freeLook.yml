@@ -1,0 +1,16 @@
+name: freeLook
+desc: Returns if freelook is active on the current machine's controlled character.
+groups:
+- Object Manipulation
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: '[[true]] if freelook is active, [[false]] otherwise'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif freeLook then\n{\n\tsystemChat \"Quit looking around, soldier!\";\n};\n</sqf>"
+see_also:
+- lookAt

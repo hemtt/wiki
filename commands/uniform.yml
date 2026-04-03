@@ -1,0 +1,23 @@
+name: uniform
+desc: Returns name of uniform.
+groups:
+- Containers
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_uniform = uniform _unit;</sqf>
+see_also:
+- addUniform
+- forceAddUniform
+- isUniformAllowed
+- removeUniform
+- uniformContainer

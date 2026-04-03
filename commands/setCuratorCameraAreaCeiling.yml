@@ -1,0 +1,32 @@
+name: setCuratorCameraAreaCeiling
+desc: Sets maximal ([[Position#PositionATL|ATL]]) height to which curator camera can move.
+groups:
+- Curator
+syntax:
+- call: !Binary
+  - curatorObj
+  - height
+  ret:
+    type: Nothing
+  left: !Item
+    name: curatorObj
+    desc: '[[Arma 3 Curator|Curator]] module'
+    type: Object
+  right: !Item
+    name: height
+    desc: '[[Position#PositionATL|ATL]], in metres'
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+server_exec: true
+since: {}
+examples:
+- <sqf>myCurator setCuratorCameraAreaCeiling 50;</sqf>
+see_also:
+- Arma
+- '3'
+- Curator
+- addCuratorCameraArea
+- removeCuratorCameraArea
+- removeAllCuratorCameraAreas
+- curatorCameraArea

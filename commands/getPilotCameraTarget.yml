@@ -1,0 +1,36 @@
+name: getPilotCameraTarget
+desc: 'Returns the target of the object airplane or helicopter [[Arma 3: Targeting config reference#class pilotCamera|pilotCamera]] tracking. Returns <sqf inline>[false, [0,0,0], objNull]</sqf> if camera is not in a tracking mode or if object has no [[Arma 3: Targeting config reference#class pilotCamera|pilotCamera]].'
+groups:
+- Pilot Camera
+syntax:
+- call: !Unary object
+  ret:
+    type: !ArraySized
+    - name: isTracking
+      type: Boolean
+      desc: returns whether the camera is in a tracking mode
+      since: null
+    - name: targetPosition
+      type: Position3dASL
+      desc: returns the position of the tracked area or object
+      since: null
+    - name: targetObject
+      type: Object
+      desc: returns the tracked object, [[objNull]] if camera is only tracking an area
+      since: null
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getPilotCameraTarget vehicle player params ["_pilotCamTracking", "_pilotCamTargetPos", "_pilotCamTarget"];</sqf>
+see_also:
+- hasPilotCamera
+- getPilotCameraPosition
+- getPilotCameraDirection
+- getPilotCameraRotation
+- setPilotCameraDirection
+- setPilotCameraRotation
+- setPilotCameraTarget

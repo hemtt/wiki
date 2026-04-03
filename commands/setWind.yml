@@ -1,0 +1,36 @@
+name: setWind
+desc: |-
+  Set current or permanent wind vector.
+  {{Feature | important | The effect is global only if it is executed on the server. Wind set locally will sync back to server value in a while.}}
+groups:
+- Environment
+syntax:
+- call: !Unary
+  - x
+  - y
+  - forced
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: x
+    desc: easterly component (in m/s, positive = to the east)
+    type: Number
+  - !Item
+    name: y
+    desc: northerly component (in m/s, positive = to the north)
+    type: Number
+  - !Item
+    name: forced
+    desc: (Optional, default [[false]]) set to [[true]] to lock the wind to constantly blows in set direction
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Global
+since: {}
+examples:
+- <sqf>setWind [10, 10, true];</sqf>
+see_also:
+- wind
+- setWindDir
+- gusts
+- setGusts

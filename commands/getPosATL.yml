@@ -1,0 +1,25 @@
+name: getPosATL
+desc: Returns the position of an object relative to the terrain.
+groups:
+- Positions
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dATL
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_objPosition = getPosATL player;</sqf>
+see_also:
+- getPosATLVisual
+- setPosATL
+- position
+- getPos
+- getPosASL
+- getPosASLW
+- visiblePosition
+- visiblePositionASL

@@ -1,0 +1,18 @@
+name: configOf
+desc: Returns config path of the provided object.
+groups:
+- Config
+syntax:
+- call: !Unary object
+  ret:
+    type: Config
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>configOf player; // returns bin\config.bin/CfgVehicles/B_W_Soldier_TL_F</sqf>
+see_also:
+- typeOf

@@ -1,0 +1,32 @@
+name: mapGridPosition
+desc: |-
+  Returns the map grid position of an object or position.<br>
+  The format is determined by the Grid format specified in the CfgWorlds for the current world. Eg: "024577" or "De82" or similar.
+groups:
+- Positions
+- Map
+syntax:
+- call: !Unary param
+  ret:
+    type: String
+    desc: grid position
+  right: !Item
+    name: param
+    desc: determines reference position
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: Position
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_gridPos = mapGridPosition player;</sqf>
+- <sqf>_gridPos = mapGridPosition getPos player;</sqf>
+see_also:
+- BIS_fnc_gridToPos
+- BIS_fnc_posToGrid

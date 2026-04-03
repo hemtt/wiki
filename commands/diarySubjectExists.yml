@@ -1,0 +1,27 @@
+name: diarySubjectExists
+desc: Checks whether given subject is present in the [[Diary]] of given player.
+groups:
+- Briefing
+syntax:
+- call: !Binary
+  - player
+  - name
+  ret:
+    type: Boolean
+  left: !Item
+    name: player
+    type: Object
+  right: !Item
+    name: name
+    type: String
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_exists = player diarySubjectExists "subjectName";</sqf>
+see_also:
+- processDiaryLink
+- createDiaryLink
+- createDiaryRecord
+- createDiarySubject
+- allDiarySubjects

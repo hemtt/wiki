@@ -1,0 +1,25 @@
+name: hintCadet
+desc: |-
+  Shows a text hint only when in [[cadetMode]].
+
+  The text can contain several lines. \n is used to indicate the end of a line.
+groups:
+- Interaction
+- Difficulty
+syntax:
+- call: !Unary text
+  ret:
+    type: Nothing
+  right: !Item
+    name: text
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>hintCadet "Press W to move forward";</sqf>
+see_also:
+- hint
+- hintC
+- hintSilent
+- cadetMode

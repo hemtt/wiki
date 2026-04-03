@@ -1,0 +1,28 @@
+name: synchronizeObjectsAdd
+desc: Add given objects to the unit's list of synchronized objects.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - unit
+  - objects
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: objects
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- |-
+  <sqf>
+  _acm = _groupLogic createUnit ["AmbientCombatManager", position player, [], 0, "NONE"];
+  _acm synchronizeObjectsAdd [player];
+  </sqf>
+see_also:
+- synchronizeObjectsRemove

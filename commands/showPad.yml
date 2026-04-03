@@ -1,0 +1,22 @@
+name: showPad
+desc: Shows or hides the notebook on the map screen, if enabled for the mission. (default [[true]]). It is no longer relevant to Arma 2.
+groups:
+- Interaction
+syntax:
+- call: !Unary show
+  ret:
+    type: Nothing
+  right: !Item
+    name: show
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>showPad false;</sqf>
+see_also:
+- shownPad
+- showCompass
+- showGPS
+- showRadio
+- showWatch

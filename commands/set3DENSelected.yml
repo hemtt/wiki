@@ -1,0 +1,30 @@
+name: set3DENSelected
+desc: Changes selection in [[:Category:Eden Editor|Eden Editor]] to what is inside entities array. {{Feature|warning|This command will trigger the 3DEN event handler '''"OnSelectionChange"'''. Do not use it inside this event handler!}}
+groups:
+- Eden Editor
+syntax:
+- call: !Unary entities
+  ret:
+    type: Nothing
+  right: !Item
+    name: entities
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: EdenEntity
+        desc: null
+        since: null
+      - type: EdenID
+        desc: null
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>set3DENSelected [0,5,3,6,7,12];</sqf>
+see_also:
+- get3DENMouseOver
+- all3DENEntities
+- collect3DENHistory
+- get3DENEntityID
+- get3DENSelected
+- set3DENObjectType

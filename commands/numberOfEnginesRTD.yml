@@ -1,0 +1,17 @@
+name: numberOfEnginesRTD
+desc: Returns the number of engines a helicopter has. {{Feature|afm}}
+groups:
+- RTD
+syntax:
+- call: !Unary helicopterRTD
+  ret:
+    type: Number
+  right: !Item
+    name: helicopterRTD
+    desc: helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_engineCount = numberOfEnginesRTD vehicle player;</sqf>

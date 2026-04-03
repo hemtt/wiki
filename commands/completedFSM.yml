@@ -1,0 +1,23 @@
+name: completedFSM
+desc: Checks whether the given FSM is completed. The FSM handle is the number returned by the [[execFSM]] command.
+groups:
+- System
+syntax:
+- call: !Unary fsmHandle
+  ret:
+    type: Boolean
+  right: !Item
+    name: fsmHandle
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_completed = completedFSM _fsmHandle;</sqf>
+see_also:
+- FSM
+- commandFSM
+- doFSM
+- execFSM
+- getFSMVariable
+- setFSMVariable

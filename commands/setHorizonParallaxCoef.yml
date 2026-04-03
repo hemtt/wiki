@@ -1,0 +1,17 @@
+name: setHorizonParallaxCoef
+desc: Sets coef used to shift horizon position based on camera height (use 0 to disable shifting).
+groups:
+- Camera Control
+- System
+syntax:
+- call: !Unary coef
+  ret:
+    type: Nothing
+  right: !Item
+    name: coef
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setHorizonParallaxCoef 1;</sqf>

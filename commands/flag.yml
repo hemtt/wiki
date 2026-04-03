@@ -1,0 +1,31 @@
+name: flag
+desc: Returns the original flag pole of the flag the unit is carrying.
+groups:
+- Flags
+syntax:
+- call: !Unary unit
+  ret:
+    type: Object
+    desc: flag pole object the flag belongs to. If the unit carries no flag, [[objNull]] is returned.
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_flag = flag _soldier;</sqf>
+see_also:
+- flagOwner
+- setFlagOwner
+- setFlagSide
+- setFlagTexture
+- flagSide
+- flagTexture
+- setFlagAnimationPhase
+- flagAnimationPhase
+- forceFlagTexture
+- getForcedFlagTexture
+- :Category:Flag
+- Textures|Flag
+- Textures

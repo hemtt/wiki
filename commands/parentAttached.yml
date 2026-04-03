@@ -1,0 +1,19 @@
+name: parentAttached
+desc: Get the parent of a [[attachChild]] attached child.
+groups:
+- PhysX
+syntax:
+- call: !Unary child
+  ret:
+    type: Object
+  right: !Item
+    name: child
+    desc: Must be a Transport vehicle like Car/Tank (Maybe helicopter/airplane works?).
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+branch: Dev
+see_also:
+- attachChild
+- childAttached

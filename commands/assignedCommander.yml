@@ -1,0 +1,34 @@
+name: assignedCommander
+desc: Returns the soldier assigned to the given vehicle as a commander.
+groups:
+- Unit Control
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Object
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_commander = assignedCommander vehicleName;</sqf>
+see_also:
+- assignAsCommander
+- assignAsGunner
+- assignAsTurret
+- assignAsDriver
+- moveInCommander
+- moveInGunner
+- moveInTurret
+- moveInDriver
+- commander
+- gunner
+- assignAsCargo
+- driver
+- moveInCargo
+- assignedGunner
+- assignedCargo
+- assignedDriver

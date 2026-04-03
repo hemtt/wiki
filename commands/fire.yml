@@ -1,0 +1,72 @@
+name: fire
+desc: |-
+  Forces a unit to fire the given weapon.
+  {{Feature|informative|Just like with [[forceWeaponFire]] it is possible to pass remote unit as argument, but this could be unreliable. Considering this command might need to be used in combination with [[selectWeapon]], which takes only [[Multiplayer Scripting#Locality|local]] arguments, it would make sense to execute the [[fire]] command where the unit is [[Multiplayer Scripting#Locality|local]] as well.}}
+groups:
+- Unit Control
+- Weapons
+syntax:
+- call: !Binary
+  - unit
+  - muzzle
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: unit that is supposed to fire
+    type: Object
+  right: !Item
+    name: muzzle
+    desc: name of the muzzle to be fired
+    type: String
+- call: !Binary
+  - unit
+  - - muzzle
+    - mode
+    - magazine
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Array
+  - !Item
+    name: muzzle
+    type: String
+  - !Item
+    name: mode
+    type: String
+  - !Item
+    name: magazine
+    desc: (Optional)
+    type: String
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_soldier fire "M16";</sqf>
+- <sqf>_soldier fire "SmokeShellMuzzle";</sqf>
+- <sqf>_soldier fire ["SmokeShellMuzzle", "SmokeShellMuzzle", "SmokeShellRed"];</sqf>
+- |-
+  <sqf>
+  player playActionNow "PutDown";
+  player selectWeapon "DemoChargeMuzzle";
+  player fire ["DemoChargeMuzzle", "DemoChargeMuzzle", "DemoCharge_Remote_Mag"];
+  player setWeaponReloadingTime [player, "DemoChargeMuzzle", 0];
+  </sqf>
+see_also:
+- BIS_fnc_fire
+- doFire
+- commandFire
+- canFire
+- fireAtTarget
+- forceWeaponFire
+- commandArtilleryFire
+- commandSuppressiveFire
+- doArtilleryFire
+- doSuppressiveFire
+- isManualFire
+- selectWeapon
+- ArmA:_Actions#USEWEAPON|action
+- '["UseWeapon"]'
+- :Category:Weapons

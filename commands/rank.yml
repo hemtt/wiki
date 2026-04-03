@@ -1,0 +1,33 @@
+name: rank
+desc: |-
+  Returns the rank of the given unit. Rank can be one of the following:
+  * {{hl|"PRIVATE"}}
+  * {{hl|"CORPORAL"}}
+  * {{hl|"SERGEANT"}}
+  * {{hl|"LIEUTENANT"}}
+  * {{hl|"CAPTAIN"}}
+  * {{hl|"MAJOR"}}
+  * {{hl|"COLONEL"}}
+groups:
+- Unit Identity
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_rank = rank player;</sqf>
+see_also:
+- rankId
+- rating
+- addRating
+- setUnitRank
+- 'ArmA:'
+- Rating
+- Values|Rating
+- Values

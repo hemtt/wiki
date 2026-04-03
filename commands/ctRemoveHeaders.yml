@@ -1,0 +1,41 @@
+name: ctRemoveHeaders
+desc: Takes array of header indices as a parameter and removes headers with those indices. Indices of remaining headers will be recomputed.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Binary
+  - ctrl
+  - indices
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Item
+    name: indices
+    type: !ArrayUnsized
+      value: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_control ctRemoveHeaders [0, 1, 2];</sqf>
+see_also:
+- ctAddRow
+- ctAddHeader
+- ctClear
+- ctCurSel
+- ctSetCurSel
+- ctRowControls
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctSetData
+- ctData
+- ctFindRowHeader
+- ctFindHeaderRows
+- ctRemoveRows
+- ctSetRowTemplate
+- ctSetHeaderTemplate

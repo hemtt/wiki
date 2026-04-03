@@ -1,0 +1,21 @@
+name: mapAnimClear
+desc: Clear map animation.
+groups:
+- Map
+syntax:
+- call: Nular
+  ret:
+    type: Nothing
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>mapAnimClear;</sqf>
+see_also:
+- mapAnimAdd
+- mapAnimCommit
+- mapAnimDone
+- ctrlMapAnimAdd
+- ctrlMapAnimClear
+- ctrlMapAnimCommit
+- ctrlMapAnimDone

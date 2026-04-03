@@ -1,0 +1,27 @@
+name: lockInventory
+desc: |-
+  Lock or unlock a vehicle's inventory access.
+  This command can also lock backpack a unit is wearing to prevent access by a third party.
+  If set to [[true]] (locked), the inventory cannot be accessed via hotkey or action menu.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - vehicle
+  - lock
+  ret:
+    type: Nothing
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: lock
+    type: Boolean
+argument_loc: Global
+effect_loc: Local
+since: {}
+examples:
+- <sqf>vehicle player lockInventory true;</sqf>
+- <sqf>backpackContainer player lockInventory true;</sqf>
+see_also:
+- lockedInventory

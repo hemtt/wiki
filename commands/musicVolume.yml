@@ -1,0 +1,22 @@
+name: musicVolume
+desc: Returns the current music volume (set by [[fadeMusic]])
+groups:
+- Sounds
+syntax:
+- call: Nular
+  ret:
+    type: !NumberRange
+    - 0
+    - 5
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str musicVolume;</sqf>
+see_also:
+- fadeMusic
+- soundVolume
+- radioVolume
+- speechVolume
+- environmentVolume
+- getAudioOptionVolumes

@@ -1,0 +1,20 @@
+name: diag_frameNo
+desc: Returns number of frame currently displayed.
+groups:
+- Diagnostic
+- Performance Profiling
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_currFrameNo = diag_frameNo;</sqf>
+see_also:
+- diag_fps
+- diag_fpsMin
+- diag_log
+- diag_tickTime
+- diag_deltaTime

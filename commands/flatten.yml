@@ -1,0 +1,22 @@
+name: flatten
+desc: Flattens an array.
+groups:
+- Arrays
+syntax:
+- call: !Unary array
+  ret:
+    type: !ArrayUnsized
+      value: Anything
+    desc: flattened array
+  right: !Item
+    name: array
+    type: !ArrayUnsized
+      value: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>flatten [1, [2], [[3]], [[[4]]]]; // returns [1, 2, 3, 4]</sqf>
+- <sqf>flatten getUnitLoadout player;</sqf>
+see_also:
+- arrayIntersect

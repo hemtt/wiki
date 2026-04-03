@@ -1,0 +1,27 @@
+name: deleteTeam
+desc: Destroy given team.
+groups:
+- Teams
+syntax:
+- call: !Unary team
+  ret:
+    type: Nothing
+  right: !Item
+    name: team
+    type: TeamMember
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>deleteTeam _team;</sqf>
+see_also:
+- addTeamMember
+- createTeam
+- forEachMemberTeam
+- removeTeamMember
+- teamMember
+- teamName
+- teams
+- teamType
+- forEachMember
+- forEachMemberAgent

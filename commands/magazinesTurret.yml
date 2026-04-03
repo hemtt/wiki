@@ -1,0 +1,59 @@
+name: magazinesTurret
+desc: |-
+  Returns all magazines of given turret. Use turret path [-1] for driver's turret. Alternatively, use [[magazinesAllTurrets]].
+  {{Feature|informative|When main syntax is used, command excludes empty magazines for driver turret [-1] but returns empty magazines for all the other turrets.}}
+groups:
+- Turrets
+syntax:
+- call: !Binary
+  - vehicle
+  - turretPath
+  ret:
+    type: !ArrayUnsized
+      value: String
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Item
+    name: turretPath
+    type: TurretPath
+- call: !Binary
+  - vehicle
+  - - turretPath
+    - includeEmpty
+  ret:
+    type: !ArrayUnsized
+      value: String
+  left: !Item
+    name: vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: turretPath
+    type: TurretPath
+  - !Item
+    name: includeEmpty
+    desc: (Optional, default [[true]]) - [[true]] = include empty magazines (behaviour as the primary syntax, but consistent), [[false]] = exclude empty magazines
+    type: Boolean
+  since:
+    arma3: '2.2'
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_mags = vehicle player magazinesTurret [0, 0];</sqf>
+- <sqf>_mags = _tank magazinesTurret [[0], false];</sqf>
+see_also:
+- magazinesAllTurrets
+- addMagazineTurret
+- removeMagazinesTurret
+- removeMagazineTurret
+- weaponsTurret
+- loadMagazine
+- magazines
+- magazinesDetail
+- magazinesAmmo
+- magazinesAmmoFull
+- addWeaponTurret
+- removeWeaponTurret
+- turretLocal

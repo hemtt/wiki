@@ -1,0 +1,44 @@
+name: ctrlShow
+desc: |-
+  Shows or hides a control, or group of controls together with all the controls inside that group of controls.<br>
+  Read [[Arma: GUI Configuration]] for more information about user dialogs and controls.<br>
+  {{ Feature | Informative | Using [[ctrlShow]] on a [[CT_CONTROLS_GROUP|controls group]] will show or hide all controls within the controls group (including controls that are placed in nested controls groups). }}
+groups:
+- GUI Control
+syntax:
+- call: !Unary
+  - idc
+  - show
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    desc: control IDC
+    type: Number
+  - !Item
+    name: show
+    desc: '[[true]] to show the control, [[false]] to hide it'
+    type: Boolean
+- call: !Binary
+  - control
+  - show
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: show
+    desc: '[[true]] to show the control, [[false]] to hide it'
+    type: Boolean
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>ctrlShow [100, false];</sqf>
+- <sqf>_control ctrlShow false;</sqf>
+see_also:
+- ctrlVisible
+- ctrlShown
+- ctrlEnable

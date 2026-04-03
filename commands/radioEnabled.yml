@@ -1,0 +1,16 @@
+name: radioEnabled
+desc: A getter for [[enableRadio]].
+groups:
+- Radio and Chat
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: returns [[true]] if radio is enabled
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (radioEnabled) then { enableRadio false };</sqf>
+see_also:
+- enableRadio

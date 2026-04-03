@@ -1,0 +1,31 @@
+name: uiSleep
+desc: |-
+  Suspend execution of script for given [[uiTime]]. [[uiSleep]] is a sleep method to delay script execution where script time/simulation time is stopped.
+  [[uiSleep]] is basically using the system time (uiTime more specifically) and not simulation time.
+  So in the cases where [[sleep]] would get stuck indefinitely, [[uiSleep]] can still be used to effectively delay script execution for example in pause or in a mission briefing or an editor or when simulation is paused in general.
+groups:
+- Program Flow
+syntax:
+- call: !Unary delay
+  ret:
+    type: Nothing
+  right: !Item
+    name: delay
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "In singleplayer:\n<sqf>\nsetAccTime 0.25;\t// slows down time\nsleep 1;\t\t\t// waits for 1 second in-game, 4 IRL seconds (1 / 0.25)\n\nsetAccTime 0;\t\t// freezes simulation\n// sleep 1;\t\t\t// would wait forever\nuiSleep 1;\t\t\t// waits for 1 IRL second\n</sqf>"
+see_also:
+- uiTime
+- sleep
+- waitUntil
+- canSuspend
+- spawn
+- execVM
+- Control
+- Structures
+- sleep
+- vs
+- uiSleep

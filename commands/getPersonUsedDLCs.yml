@@ -1,0 +1,25 @@
+name: getPersonUsedDLCs
+desc: Returns a list of all DLCs objects the unit is currently using. For example if a unit is inside a vehicle from DLC, it will return the code of that DLC.
+groups:
+- Broken Commands
+- DLC
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: Number
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_objects = getPersonUsedDLCs player;</sqf>
+see_also:
+- getDLCs
+- getObjectDLC
+- getMissionDLCs
+- getDLCAssetsUsageByName
+- getDLCAssetsUsage
+- getAssetDLCInfo

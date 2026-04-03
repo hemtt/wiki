@@ -1,0 +1,34 @@
+name: terrainIntersect
+desc: Checks for intersection of terrain between two AGL positions. Returns [[true]] if intersects with terrain. For ASL variant see [[terrainIntersectASL]].
+groups:
+- Math - Geometry
+syntax:
+- call: !Unary
+  - start
+  - end
+  ret:
+    type: Boolean
+  right: !Array
+  - !Item
+    name: start
+    desc: start position
+    type: Position3dAGL
+  - !Item
+    name: end
+    desc: end position
+    type: Position3dAGL
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_intersects = terrainIntersect [getPos player, getPos chopper];</sqf>
+- <sqf>_intersects = terrainIntersect [position player, position enemy1];</sqf>
+see_also:
+- terrainIntersectAtASL
+- lineIntersectsSurfaces
+- intersect
+- lineIntersects
+- lineIntersectsWith
+- terrainIntersectASL
+- lineIntersectsObjs
+- checkVisibility

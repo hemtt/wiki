@@ -1,0 +1,29 @@
+name: setPosWorld
+desc: Sets position of an object based on the model's centre position (see [[getPosWorld]]).
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - object
+  - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: position
+    type: Position3dASL
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_obj setPosWorld getPosWorld _obj;</sqf>
+see_also:
+- getPosWorld
+- setPos
+- setPosATL
+- setPosASL
+- setPosASLW
+- setMarkerPos
+- setVehiclePosition

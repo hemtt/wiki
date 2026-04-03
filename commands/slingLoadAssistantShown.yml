@@ -1,0 +1,35 @@
+name: slingLoadAssistantShown
+desc: Returns [[true]] if Sling Load Assistant is open.
+groups:
+- Ropes and Sling Loading
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: '[[true]] if sling load assistant is shown, [[false]] otherwise'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  waitUntil { slingLoadAssistantShown };
+  hint "You lack rudimentary motor skills and basic eye-hand coordination."; // scold user for unethical practices
+  </sqf>
+see_also:
+- ropes
+- canSlingLoad
+- enableRopeAttach
+- getSlingLoad
+- ropeAttachedObjects
+- ropeAttachTo
+- ropeDestroy
+- ropeLength
+- ropeUnwound
+- ropeAttachedTo
+- ropeCreate
+- ropeDetach
+- ropeAttachEnabled
+- ropeCut
+- ropeEndPosition
+- ropeUnwind

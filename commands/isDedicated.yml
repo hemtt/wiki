@@ -1,0 +1,16 @@
+name: isDedicated
+desc: Returns [[true]] if the machine executing the command is a dedicated multiplayer server. Returns [[false]] in single player.
+groups:
+- Multiplayer
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (isDedicated) then { diag_log "Dedicated Server on the run !"; };</sqf>
+see_also:
+- isServer
+- hasInterface

@@ -1,0 +1,29 @@
+name: forceMap
+desc: |-
+  Opens non-interactive main map in background that overrides user screen. To force open interactive map use [[openMap]] command.
+  {{Feature|warning|
+  When the map is forced open with this command, the user is still able to fire but cannot see the world, just the map.
+  The map cannot be closed manually and the user can get stuck requiring a game restart. Make sure you provide scripted mechanics to de-force the map at a later stage.
+  }}
+groups:
+- Map
+- Interaction
+syntax:
+- call: !Unary show
+  ret:
+    type: Nothing
+  right: !Item
+    name: show
+    desc: '[[true]] to force, [[false]] to go back to normal map behaviour'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>forceMap true;</sqf>
+see_also:
+- forcedMap
+- showMap
+- shownMap
+- openMap
+- visibleMap

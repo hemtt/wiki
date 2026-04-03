@@ -1,0 +1,22 @@
+name: scoreSide
+desc: Returns score for the given [[Side|side]]. MP Only.
+groups:
+- Multiplayer
+- Sides
+syntax:
+- call: !Unary side
+  ret:
+    type: Number
+  right: !Item
+    name: side
+    type: Side
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_number = scoreSide west;</sqf>
+see_also:
+- score
+- addScore
+- addScoreSide
+- getPlayerScores

@@ -1,0 +1,48 @@
+name: ctSetData
+desc: Associates metadata (string) with the row determined by the index. Returns Nothing.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Binary
+  - ctrl
+  - - index
+    - data
+  ret:
+    type: Nothing
+  left: !Item
+    name: ctrl
+    desc: the respective control
+    type: Control
+  right: !Array
+  - !Item
+    name: index
+    desc: the row index
+    type: Number
+  - !Item
+    name: data
+    desc: the data to set
+    type: String
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_control ctSetData [0, "Test"];</sqf>
+see_also:
+- ctAddRow
+- ctAddHeader
+- ctClear
+- ctCurSel
+- ctSetCurSel
+- ctRowControls
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctData
+- ctFindRowHeader
+- ctFindHeaderRows
+- ctRemoveRows
+- ctRemoveHeaders
+- ctSetRowTemplate
+- ctSetHeaderTemplate

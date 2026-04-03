@@ -1,0 +1,22 @@
+name: getMissionOptions
+desc: Returns various mission options
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: HashMapUnknown
+    desc: Containing the names and values of all options (see [[setMissionOptions]])
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  private _missionOptions = getMissionOptions;
+  </sqf>
+see_also:
+- setMissionOptions
+- getResolution
+- getAudioOptionVolumes
+- getSubtitleOptions

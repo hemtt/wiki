@@ -1,0 +1,39 @@
+name: tvClear
+desc: Removes all items from Tree View with given idc.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary idc
+  ret:
+    type: Nothing
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary control
+  ret:
+    type: Nothing
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>tvClear 101;</sqf>
+see_also:
+- tvAdd
+- tvCollapse
+- tvCount
+- tvCurSel
+- tvData
+- tvDelete
+- tvExpand
+- tvPicture
+- tvSetCurSel
+- tvSetData
+- tvSetPicture
+- tvSetValue
+- tvSort
+- tvSortByValue
+- tvText
+- tvValue

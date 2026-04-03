@@ -1,0 +1,32 @@
+name: ctrlSetFontH2
+desc: Sets H2 font of given HTML control
+groups:
+- GUI Control - HTML
+syntax:
+- call: !Binary
+  - controlName
+  - fontName
+  ret:
+    type: Nothing
+  left: !Item
+    name: controlName
+    type: Control
+  right: !Item
+    name: fontName
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlSetFontH2 "TahomaB";</sqf>
+see_also:
+- ctrlSetFontH1B
+- ctrlSetFontH2B
+- ctrlSetFontH3
+- ctrlSetFontH3B
+- ctrlSetFontH4
+- ctrlSetFontH4B
+- ctrlSetFontH5
+- ctrlSetFontH5B
+- ctrlSetFontH6
+- ctrlSetFontH6B

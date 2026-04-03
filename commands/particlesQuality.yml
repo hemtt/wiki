@@ -1,0 +1,20 @@
+name: particlesQuality
+desc: Returns current user settings for particles quality (configure->video->general->particles). 0-low, 1-normal, 2-high
+groups:
+- Particles
+syntax:
+- call: Nular
+  ret:
+    type: Number
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_currentQuality = particlesQuality;</sqf>
+see_also:
+- setParticleCircle
+- setParticleParams
+- setParticleRandom
+- ParticleTemplates
+- setParticleClass
+- setParticleFire

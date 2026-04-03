@@ -1,0 +1,25 @@
+name: currentPilot
+desc: Returns the person piloting the vehicle. If co-pilot is piloting, co-pilot is returned. If you need current pilot of a UAV or UGV, see [[UAVControl]] command.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Object
+    desc: piloting unit or [[objNull]]
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (currentPilot _vehicle != driver _vehicle) then\n{\n\thint \"The pilot is not piloting!\";\n};\n</sqf>"
+see_also:
+- driver
+- gunner
+- commander
+- effectiveCommander
+- turretUnit
+- UAVControl
+- enableCopilot

@@ -1,0 +1,17 @@
+name: visibleMap
+desc: Return true if the main map is shown (active). In {{arma3}} it also returns true if the respawn screen map is visible.
+groups:
+- Map
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (visibleMap) then { hint "You're showing the map !" };</sqf>
+see_also:
+- forceMap
+- openMap

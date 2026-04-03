@@ -1,0 +1,58 @@
+name: roadsConnectedTo
+desc: |-
+  Find the road segments connected to the given road segment.
+  {{Feature|important|
+  * Pedestrian roads such as {{hl|"TRAIL"}}s are missing connection information by design, therefore the primary syntax will return empty array for those - use the alternative syntax to return pedestrian roads.
+  * Road connection is not bidirectional; e.g road segment Y can be connected to road segment Z, but road segment Z can lack a connection with road segment Y.
+  }}
+groups:
+- Roads and Airports
+syntax:
+- call: !Unary roadSegment
+  ret:
+    type: !ArrayUnsized
+      value: Object
+    desc: connected road segments
+  right: !Item
+    name: roadSegment
+    desc: road segment
+    type: Object
+- call: !Unary
+  - roadSegment
+  - extended
+  ret:
+    type: !ArrayUnsized
+      value: Object
+    desc: connected road segments
+  right: !Array
+  - !Item
+    name: roadSegment
+    desc: road segment
+    type: Object
+  - !Item
+    name: extended
+    desc: (Optional, default [[false]]) when [[true]], performs a more thorough search on top of base behaviour, slower but returns pedestrian and other missing road segments
+    type: Boolean
+  since:
+    arma3: '2.0'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _road = (player nearRoads 50) select 0;
+  _connectedRoads = roadsConnectedTo _road;
+  </sqf>
+- |-
+  <sqf>
+  _road = (player nearRoads 50) select 0;
+  _connectedRoadsIncPedestrian = roadsConnectedTo [_road, true];
+  </sqf>
+see_also:
+- nearRoads
+- isOnRoad
+- roadAt
+- surfaceIsWater
+- getRoadInfo
+- nearestTerrainObjects

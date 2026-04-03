@@ -1,0 +1,47 @@
+name: ctrlSetEventHandler
+desc: |-
+  {{Feature|obsolete|Use [[ctrlAddEventHandler]] instead as it can stack event handlers.|arma2|1.00}}
+  Sets given event handler of given control: any previously added event handler is removed.
+
+  {{Feature|informative|
+  * See [[User Interface Event Handlers]] for the full list of handler names
+  * See also [[DIK KeyCodes]] for a list of key code constants relevant to key-related events like [[User_Interface_Event_Handlers#onKeyDown|KeyDown]] and [[User_Interface_Event_Handlers#onKeyUp|KeyUp]]
+  }}
+
+  {{Feature|important|When using the event names listed [[User Interface Event Handlers|here]] with the [[ctrlAddEventHandler]], [[ctrlSetEventHandler]], [[displayAddEventHandler]] or [[displaySetEventHandler]] commands, the prefix "on" in the event name must be removed (e.g. ''''ButtonDown'''' instead of ''''onButtonDown'''').}}
+groups:
+- GUI Control - Event Handlers
+- Event Handlers
+syntax:
+- call: !Binary
+  - controlName
+  - - handlerName
+    - function
+  ret:
+    type: Nothing
+  left: !Item
+    name: controlName
+    type: Control
+  right: !Array
+  - !Item
+    name: handlerName
+    type: String
+  - !Item
+    name: function
+    desc: should return a [[Boolean]] indicating that the event has handled this event fully or not and whether the engine should execute its default code or not afterwards
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_control ctrlSetEventHandler ["KeyDown", ""];</sqf>
+- <sqf>(_display displayCtrl 108) ctrlSetEventHandler ["LBSelChanged","['ListChange',_this] call FireEvents"];</sqf>
+see_also:
+- displaySetEventHandler
+- ctrlAddEventHandler
+- ctrlRemoveEventHandler
+- User_Interface_Event_Handlers|UI
+- Event
+- Handlers
+- DIK
+- KeyCodes

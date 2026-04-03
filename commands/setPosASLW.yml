@@ -1,0 +1,27 @@
+name: setPosASLW
+desc: Sets the object position above sea surface. The pos array uses the [[Position#PositionASLW|PositionASLW]] format.
+groups:
+- Positions
+syntax:
+- call: !Binary
+  - obj
+  - pos
+  ret:
+    type: Nothing
+  left: !Item
+    name: obj
+    type: Object
+  right: !Item
+    name: pos
+    type: Position3dASLW
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>_diver setPosASLW [(position _diver) select 0, (position _diver) select 1, -10];</sqf>
+see_also:
+- getPosASLW
+- setPosASL
+- setPosATL
+- setPos
+- setPosWorld

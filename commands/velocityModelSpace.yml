@@ -1,0 +1,22 @@
+name: velocityModelSpace
+desc: Returns the velocity (speed vector) of the vehicle as an array with format [x, y, z] in metre per second. Vector is in model space.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Vector3d
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>velocityModelSpace _chopper; // returns [X (left(-) right(+)), Y (backward(-) forward(+)), Z (down(-) up(+))]</sqf>
+see_also:
+- setVelocityModelSpace
+- velocity
+- speed
+- setVelocity
+- setVelocityTransformation

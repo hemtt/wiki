@@ -1,0 +1,53 @@
+name: lnbPictureRight
+desc: Returns the right picture of given row. The ''column'' parameter does not matter.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary
+  - idc
+  - - row
+    - column
+  ret:
+    type: String
+    desc: path of image
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      desc: index of the row
+      type: Number
+    - !Item
+      name: column
+      desc: index of the column
+      type: Number
+- call: !Binary
+  - ctrl
+  - - row
+    - column
+  ret:
+    type: String
+    desc: path of image
+  left: !Item
+    name: ctrl
+    type: Control
+  right: !Array
+  - !Item
+    name: row
+    desc: index of the row
+    type: Number
+  - !Item
+    name: column
+    desc: index of the column
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_path = _control lnbPictureRight [0, 0];</sqf>
+see_also:
+- lnbSetPictureRight
+- lnbSetPicture
+- lnbPicture

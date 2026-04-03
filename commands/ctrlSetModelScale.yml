@@ -1,0 +1,39 @@
+name: ctrlSetModelScale
+desc: Sets 3D control model scale
+groups:
+- GUI Control - Object
+- GUI Control - Positioning
+syntax:
+- call: !Binary
+  - control
+  - scale
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: 3D control
+    type: Control
+  right: !Item
+    name: scale
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_ctrl3D ctrlSetModelScale 1.5;</sqf>
+see_also:
+- ctrlModelDirAndUp
+- ctrlCreate
+- ctrlDelete
+- ctrlModel
+- ctrlSetModel
+- ctrlSetModelDirAndUp
+- ctrlModelScale
+- ctrlPosition
+- ctrlScale
+- ctrlSetScale
+- ctrlSetPosition
+- ctrlClassName
+- vectorDir
+- vectorUp
+- setVectorDirAndUp

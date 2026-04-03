@@ -1,0 +1,21 @@
+name: enableDiagLegend
+desc: Enable or disable the legend for diagnostics. '''Internal dev only!'''
+groups:
+- Diagnostic
+syntax:
+- call: !Unary enable
+  ret:
+    type: Nothing
+  right: !Item
+    name: enable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>enableDiagLegend false;</sqf>
+see_also:
+- diag_fpsMin
+- diag_frameNo
+- diag_log
+- diag_tickTime

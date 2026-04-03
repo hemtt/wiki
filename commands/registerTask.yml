@@ -1,0 +1,32 @@
+name: registerTask
+desc: Registers a new task type. Parameters are defined in the given config class (subclass of {{hl|CfgTasks}})
+groups:
+- Briefing
+- Teams
+syntax:
+- call: !Binary
+  - teamMember
+  - entryName
+  ret:
+    type: Boolean
+    desc: '[[true]] on success'
+  left: !Item
+    name: teamMember
+    desc: '[[teamMember]] [[agent]]'
+    type: TeamMember
+  right: !Item
+    name: entryName
+    desc: '{{hl|CfgTasks}} classname'
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>teamMember _agent registerTask "MyTask";</sqf>
+see_also:
+- registeredTasks
+- unregisterTask
+- sendTask
+- createTask
+- currentTasks
+- taskCompleted

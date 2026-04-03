@@ -1,0 +1,26 @@
+name: groupIconSelectable
+desc: Returns whether or not group icons raise [[onGroupIconClick]], [[onGroupIconOverEnter]] and [[onGroupIconOverLeave]] events.
+groups:
+- High Command
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: '[[true]] is selectable'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>hint str groupIconSelectable;</sqf>
+see_also:
+- addGroupIcon
+- clearGroupIcons
+- getGroupIcon
+- getGroupIconParams
+- groupIconsVisible
+- onGroupIconClick
+- removeGroupIcon
+- setGroupIcon
+- setGroupIconParams
+- setGroupIconsSelectable
+- setGroupIconsVisible

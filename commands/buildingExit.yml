@@ -1,0 +1,25 @@
+name: buildingExit
+desc: Returns the given indexed exit in a building. The returned value is in format Position.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - building
+  - index
+  ret:
+    type: Position
+  left: !Item
+    name: building
+    type: Object
+  right: !Item
+    name: index
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_building buildingExit 0;</sqf>
+see_also:
+- buildingPos
+- insideBuilding
+- BIS_fnc_buildingPositions

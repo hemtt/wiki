@@ -1,0 +1,21 @@
+name: agent
+desc: Return a person for a given agent.
+groups:
+- Teams
+syntax:
+- call: !Unary teamMember
+  ret:
+    type: Object
+  right: !Item
+    name: teamMember
+    type: TeamMember
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_obj = agent teamMember _unit;</sqf>
+see_also:
+- agents
+- createAgent
+- forEachMemberAgent
+- isAgent

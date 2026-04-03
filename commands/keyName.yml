@@ -1,0 +1,35 @@
+name: keyName
+desc: Returns the name of a button with extra quotation marks (on the keyboard, mouse or joystick) with the given code.
+groups:
+- System
+syntax:
+- call: !Unary dikCode
+  ret:
+    type: String
+  right: !Item
+    name: dikCode
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Number
+        desc: null
+        since: null
+      - type: String
+        desc: null
+        since:
+          arma3: '2.8'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_name = keyName 28; // result is """Enter"""</sqf>
+- |-
+  From {{arma3}} v2.08:
+  <sqf>private _name = keyName "-1660944350"; // result is """Right Ctrl+G"""</sqf>
+see_also:
+- keyImage
+- actionKeys
+- actionKeysImages
+- actionKeysNames
+- actionKeysNamesArray
+- DIK
+- KeyCodes

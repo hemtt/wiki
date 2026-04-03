@@ -1,0 +1,32 @@
+name: ctrlSetPositionX
+desc: Sets horizontal position (x) of the 2D control. [[ctrlCommit]] is required to complete the operation.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: !Binary
+  - control
+  - x
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    desc: 2D control
+    type: Control
+  right: !Item
+    name: x
+    desc: horizontal position of the control
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _ctrl ctrlSetPositionX 0.5;
+  _ctrl ctrlCommit 1;
+  </sqf>
+see_also:
+- ctrlSetPosition
+- ctrlSetPositionY
+- ctrlSetPositionW
+- ctrlSetPositionH

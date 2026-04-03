@@ -1,0 +1,44 @@
+name: ctAddHeader
+desc: Adds a header line of controls according to the HeaderTemplate class. Note that rows and headers are indexed separately.
+groups:
+- GUI Control - Controls Table
+syntax:
+- call: !Unary control
+  ret:
+    type: !ArraySized
+    - name: headerIndex
+      type: Number
+      desc: null
+      since: null
+    - name: createdControls
+      type: !ArrayUnsized
+        value: Control
+      desc: null
+      since: null
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>private _array = ctAddHeader _control;</sqf>
+see_also:
+- ctAddRow
+- ctClear
+- ctCurSel
+- ctSetCurSel
+- ctRowControls
+- ctHeaderControls
+- ctRowCount
+- ctHeaderCount
+- ctSetValue
+- ctValue
+- ctSetData
+- ctData
+- ctFindRowHeader
+- ctFindHeaderRows
+- ctRemoveRows
+- ctRemoveHeaders
+- ctSetRowTemplate
+- ctSetHeaderTemplate

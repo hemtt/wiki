@@ -1,0 +1,47 @@
+name: findDisplay
+desc: |-
+  Finds a display by its IDD which can either be defined in [[missionConfigFile]] ([[Description.ext|description.ext]]) or [[configFile]] ([[config.cpp]]) or by its [[Procedural Textures#UI On Texture|UI On Texture]]'s unique name (see [[displayUniqueName]]).<br>
+  If the specified display cannot be found, [[displayNull]] is returned.
+  {{Feature|important|
+  Dedicated servers and [[Arma 3: Headless Client|headless clients]] do not have a primary display (e.g <sqf inline>findDisplay 46</sqf> will return [[displayNull]]).<br>
+  Detect both with the [[hasInterface]] command.
+  }}
+
+  {{Feature|informative|For a list of (almost) all {{arma3}}'s IDDs, see [[Arma 3: IDD List]].}}
+groups:
+- GUI Control
+syntax:
+- call: !Unary idd
+  ret:
+    type: Display
+  right: !Item
+    name: idd
+    type: Number
+- call: !Unary displayName
+  ret:
+    type: Display
+  right: !Item
+    name: displayName
+    type: String
+  since:
+    arma3: '2.12'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\n0 spawn\n{\n\twaitUntil { !isNull findDisplay 46 };\n\thint \"Mission Display is now available!\";\n};\n</sqf>"
+- <sqf>_display = findDisplay 1;</sqf>
+- <sqf>private _display = findDisplay "RscDisplayRenderTest";</sqf>
+see_also:
+- allDisplays
+- displayCtrl
+- createDisplay
+- createDialog
+- dialog
+- displayNull
+- controlNull
+- isNull
+- createDisplay
+- ctrlCreate
+- displayParent
+- displayUniqueName

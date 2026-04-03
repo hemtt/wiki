@@ -1,0 +1,30 @@
+name: addMagazineGlobal
+desc: Adds magazine to a unit regardless of locality. This command can also be used to add magazine to a vehicle, like a static gun, for example.
+multiplayer_note: Before {{arma3}} v2.00 this command was broken in MP and duplicated items per the number of clients.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - magazineName
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: magazineName
+    type: String
+argument_loc: Global
+effect_loc: Global
+since: {}
+examples:
+- <sqf>player addMagazineGlobal "30Rnd_65x39_caseless_mag";</sqf>
+see_also:
+- addMagazine
+- addMagazines
+- addMagazineCargo
+- addMagazineCargoGlobal
+- addMagazinePool
+- addMagazineTurret
+- addMagazineAmmoCargo

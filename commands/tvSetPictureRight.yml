@@ -1,0 +1,49 @@
+name: tvSetPictureRight
+desc: Sets right picture on the tree view item defined by path.
+groups:
+- GUI Control - Tree View
+syntax:
+- call: !Unary
+  - idc
+  - path
+  - name
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Item
+    name: path
+    type: Path
+  - !Item
+    name: name
+    desc: picture texture
+    type: String
+- call: !Binary
+  - control
+  - - path
+    - name
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Array
+  - !Item
+    name: path
+    type: Path
+  - !Item
+    name: name
+    desc: picture texture
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>tvSetPictureRight [101, [0], "picture"];</sqf>
+- <sqf>_ctrl tvSetPictureRight [[0], "picture"];</sqf>
+see_also:
+- tvPictureRight
+- tvSetPicture
+- tvPicture

@@ -1,0 +1,27 @@
+name: ctrlParentControlsGroup
+desc: Returns the parent control of a given child control. If the control is not part of a [[CT_CONTROLS_GROUP]] control then [[controlNull]] is returned. To return parent [[Display]] of the control use [[ctrlParent]].
+groups:
+- GUI Control
+syntax:
+- call: !Unary ctrl
+  ret:
+    type: Control
+  right: !Item
+    name: ctrl
+    desc: child control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _ctrlCombo = _ctrl controlsGroupCtrl 100; // control
+  ctrlParentControlsGroup _ctrlCombo; // parent control group (_ctrl)
+  </sqf>
+see_also:
+- controlsGroupCtrl
+- ctrlParent
+- displayParent
+- allControls
+- allDisplays

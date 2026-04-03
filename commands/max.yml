@@ -1,0 +1,31 @@
+name: max
+desc: The greater value of a and b.
+groups:
+- Math
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>3 max 2; // Result is 3</sqf>
+- <sqf>-3 max -2; // Result is -2</sqf>
+see_also:
+- min
+- selectMin
+- selectMax
+- ceil
+- floor
+- linearConversion
+- Math
+- Commands

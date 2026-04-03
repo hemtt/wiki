@@ -1,0 +1,54 @@
+name: pushBackUnique
+desc: |-
+  Adds element to the back of the given array but only if it is unique to the array. The index of the added element is returned upon success, otherwise -1. This command modifies the original array.
+  {{Feature|informative|Adding string elements is '''case sensitive'''.}}
+groups:
+- Arrays
+syntax:
+- call: !Binary
+  - array
+  - element
+  ret:
+    type: Number
+    desc: index of inserted element or -1
+  left: !Item
+    name: array
+    type: !ArrayUnsized
+      value: Anything
+  right: !Item
+    name: element
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  _arr = [1,2,3];
+  _index = _arr pushBackUnique 3;
+  hint str [_index, _arr]; // [-1,[1,2,3]]
+  </sqf>
+- |-
+  <sqf>
+  _arr = [1,2,3];
+  _index = _arr pushBackUnique 4;
+  hint str [_index, _arr]; // [3,[1,2,3,4]]
+  </sqf>
+see_also:
+- pushBack
+- select
+- set
+- resize
+- reverse
+- count
+- find
+- in
+- forEach
+- deleteAt
+- deleteRange
+- append
+- sort
+- arrayIntersect
+- apply
+- BIS_fnc_arrayPushStack
+- BIS_fnc_arrayPush

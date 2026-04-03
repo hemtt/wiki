@@ -1,0 +1,31 @@
+name: vehicles
+desc: Returns an array of all vehicles available to current client. This command returns both empty and crewed vehicles <u>but not soldiers</u>. It will also return "WeaponHolderSimulated" of dead bodies (weapon on the ground). Vehicles created with [[createVehicleLocal]] will only be returned on the client that created them.
+groups:
+- Object Detection
+syntax:
+- call: Nular
+  ret:
+    type: !ArrayUnsized
+      value: Object
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_vehicles = vehicles;</sqf>
+see_also:
+- allGroups
+- allUnits
+- units
+- entities
+- agents
+- playableUnits
+- switchableUnits
+- allPlayers
+- allDead
+- allDeadMen
+- allUnitsUAV
+- allCurators
+- allObjects
+- allMissionObjects
+- allSimpleObjects
+- allMines

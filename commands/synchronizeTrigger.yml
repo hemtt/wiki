@@ -1,0 +1,30 @@
+name: synchronizeTrigger
+desc: '[[ArmA:_Mission_Editor#Synchronize_Mode_.28F5.29|Synchronizes]] the trigger with zero or more waypoints.'
+groups:
+- Triggers
+- Waypoints
+syntax:
+- call: !Binary
+  - trigger
+  - waypoints
+  ret:
+    type: Nothing
+  left: !Item
+    name: trigger
+    desc: trigger to synchronize
+    type: Object
+  right: !Item
+    name: waypoints
+    desc: waypoints to synchronize with trigger. Array can be empty to unset
+    type: !ArrayUnsized
+      value: Waypoint
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_trigger synchronizeTrigger [];</sqf>
+- <sqf>_trigger synchronizeTrigger [_waypoint1];</sqf>
+- <sqf>_trigger synchronizeTrigger [_waypoint1, [_group5, 7], _waypoint3];</sqf>
+see_also:
+- createTrigger
+- synchronizeWaypoint

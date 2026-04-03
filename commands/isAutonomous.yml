@@ -1,0 +1,21 @@
+name: isAutonomous
+desc: Returns whether the UAV is in autonomous mode or not.
+groups:
+- Remote Control
+syntax:
+- call: !Unary uav
+  ret:
+    type: Boolean
+  right: !Item
+    name: uav
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _isAutonomous = isAutonomous uav;</sqf>
+see_also:
+- setAutonomous
+- disableAI
+- enableAI
+- checkAIFeature

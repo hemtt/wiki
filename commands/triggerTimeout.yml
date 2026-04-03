@@ -1,0 +1,38 @@
+name: triggerTimeout
+desc: |-
+  Returns trigger timeout.
+
+  {{Feature | important | The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger timeout set up locally on the client that executed the command. See [[createTrigger]] for more info.}}
+groups:
+- Triggers
+syntax:
+- call: !Unary trigger
+  ret:
+    type: !ArraySized
+    - name: min
+      type: Number
+      desc: null
+      since: null
+    - name: mid
+      type: Number
+      desc: null
+      since: null
+    - name: max
+      type: Number
+      desc: null
+      since: null
+    - name: interruptible
+      type: Boolean
+      desc: null
+      since: null
+  right: !Item
+    name: trigger
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_timeOut = triggerTimeout someTrigger;</sqf>
+see_also:
+- setTriggerTimeout
+- triggerTimeoutCurrent

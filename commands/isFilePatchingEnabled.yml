@@ -1,0 +1,19 @@
+name: isFilePatchingEnabled
+desc: Returns [[true]] if file patching is enabled otherwise [[false]]
+groups:
+- System
+- Diagnostic
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_state = isFilePatchingEnabled;</sqf>
+see_also:
+- Arma
+- '3:'
+- Startup
+- Parameters#Developer_Options|-filePatching

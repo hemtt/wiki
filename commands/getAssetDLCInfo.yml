@@ -1,0 +1,96 @@
+name: getAssetDLCInfo
+desc: Returns DLC information about given object or model.
+groups:
+- DLC
+syntax:
+- call: !Unary asset
+  ret:
+    type: !ArraySized
+    - name: isDlc
+      type: Boolean
+      desc: the asset belongs to a DLC
+      since: null
+    - name: isOwned
+      type: Boolean
+      desc: null
+      since: null
+    - name: isInstalled
+      type: Boolean
+      desc: null
+      since: null
+    - name: isAvailable
+      type: Boolean
+      desc: null
+      since: null
+    - name: appID
+      type: String
+      desc: actual steam item ID or "0" for none or "-1" for unknown
+      since: null
+    - name: DLCName
+      type: String
+      desc: actual DLC name or ""
+      since: null
+  right: !Item
+    name: asset
+    desc: object reference or path to the model
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: String
+        desc: null
+        since: null
+- call: !Unary
+  - class
+  - config
+  ret:
+    type: !ArraySized
+    - name: isDlc
+      type: Boolean
+      desc: the asset belongs to a DLC
+      since: null
+    - name: isOwned
+      type: Boolean
+      desc: null
+      since: null
+    - name: isInstalled
+      type: Boolean
+      desc: null
+      since: null
+    - name: isAvailable
+      type: Boolean
+      desc: null
+      since: null
+    - name: appID
+      type: String
+      desc: actual steam item ID or "0" for none or "-1" for unknown
+      since: null
+    - name: DLCName
+      type: String
+      desc: actual DLC name or ""
+      since: null
+  right: !Array
+  - !Item
+    name: class
+    desc: class name of the asset
+    type: String
+  - !Item
+    name: config
+    desc: (Optional, default <sqf inline>configFile >> "CfgVehicles"</sqf>) config in which to search
+    type: Config
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>getAssetDLCInfo player;</sqf>
+- <sqf>getAssetDLCInfo "a3\Weapons_F_Enoch\Rifles\MSBS\MSBS65_F";</sqf>
+- <sqf>getAssetDLCInfo ["C_Van_01_transport_F"];</sqf>
+- <sqf>getAssetDLCInfo ["arifle_AK12_F", configFile >> "CfgWeapons"];</sqf>
+see_also:
+- getDLCs
+- getObjectDLC
+- getPersonUsedDLCs
+- getMissionDLCs
+- getDLCAssetsUsageByName
+- getDLCAssetsUsage

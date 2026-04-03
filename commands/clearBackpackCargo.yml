@@ -1,0 +1,36 @@
+name: clearBackpackCargo
+desc: Removes all backpacks from ammo box (or any general weapon holder container).
+groups:
+- Containers
+syntax:
+- call: !Unary box
+  ret:
+    type: Nothing
+  right: !Item
+    name: box
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>clearBackpackCargo myBox;</sqf>
+see_also:
+- backpackContainer
+- firstBackpack
+- unitBackpack
+- backpack
+- backpackCargo
+- getBackpackCargo
+- backpackItems
+- addBackpack
+- addBackpackCargo
+- addBackpackCargoGlobal
+- removeBackpack
+- clearBackpackCargoGlobal
+- clearAllItemsFromBackpack
+- loadBackpack
+- backpackSpaceFor
+- canAddItemToBackpack
+- addItemToBackpack
+- removeItemFromBackpack
+- everyBackpack

@@ -1,0 +1,43 @@
+name: lnbClear
+desc: Clears all items in the given listbox or combobox.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Unary idc
+  ret:
+    type: Nothing
+  right: !Item
+    name: idc
+    type: Number
+- call: !Unary ctrl
+  ret:
+    type: Nothing
+  right: !Item
+    name: ctrl
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>lnbClear _ctrl;</sqf>
+see_also:
+- lnbAddArray
+- lnbAddColumn
+- lnbAddRow
+- lnbColor
+- lnbCurSelRow
+- lnbData
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbPicture
+- lnbSetColor
+- lnbSetColumnsPos
+- lnbSetCurSelRow
+- lnbSetData
+- lnbSetPicture
+- lnbSetText
+- lnbSetValue
+- lnbSize
+- lnbText
+- lnbValue

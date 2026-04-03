@@ -1,0 +1,24 @@
+name: cadetMode
+desc: '''''''Prior to {{arma3}}'''''' it returns if the player is currently playing in cadet or veteran mode.'
+problem_notes:
+- |-
+  {{Feature|arma3|
+  This command returns the status of the global [[Arma 3: Difficulty Settings| difficulty]] {{hl|showCadetHints}}.<br>
+  Use <sqf inline>difficulty in [0, 1]</sqf> to achieve the '''original intended''' functionality!
+  }}
+groups:
+- Difficulty
+syntax:
+- call: Nular
+  ret:
+    type: Boolean
+    desc: true when playing in cadet mode, false when playing in veteran mode
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- '[[SQS Syntax]]: <sqs>? (cadetMode) : _AIsoldier setSkill 0.1</sqs>'
+- '[[SQF Syntax]]: <sqf>if (cadetMode) then { _AIsoldier setSkill 0.1 };</sqf>'
+see_also:
+- hintCadet
+- difficulty
