@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the input focus on given control.\n\n{{Feature|important|\n* [[ctrlSetFocus]] seems to only work on controls that accept any input from keyboard or mouse.\n* if [[ctrlSetFocus]] is used on a [[CT_CONTROLS_GROUP]] that contains an interactable control, that control will automatically be active.\n* if [[ctrlSetFocus]] is used on a [[CT_CONTROLS_GROUP]] in which there are no interactable controls, then [[ctrlSetFocus]] will do nothing.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ctrlSetFocus _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlSetFocus",
+  "problem_notes": [],
+  "see_also": [
+    "focusedCtrl"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

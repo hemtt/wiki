@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the leaning factor of the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (getLeaning player < 0) then { systemChat \"player is leaning left\" };</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "getLeaning",
+  "problem_notes": [],
+  "see_also": [
+    "animationState",
+    "unitPos",
+    "stance",
+    "pose"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "leaning factor from -1 to 1",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "argument_loc": "Global",
+  "description": "[[File:distance2D.jpg|400px|right]]\nReturns a distance in meters between [[Object]]s, [[Position]]s or [[Location]]s.\n{{Feature | important | If positions are supplied as arguments, the coordinates are treated as [[Position#PositionAGL|PositionAGL]]. If [[Position#Introduction|Position2D]] is supplied, z is assumed 0. If you need distance between two [[Position#Position3D|Position3D]] coordinates, use [[vectorDistance]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_meters = player distance _object;</sqf>",
+    "<sqf>_meters = player distance [1,2,3];</sqf>",
+    "<sqf>_meters = [1,2,3] distance [4,5,6];</sqf>",
+    "<sqf>_meters = position player distance nearestLocation [position player, \"hill\"];</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "name": "distance",
+  "problem_notes": [],
+  "see_also": [
+    "distanceSqr",
+    "vectorDistance",
+    "distance2D"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "param1",
+          "param2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "param1",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "distance in meters or 1e10 if distance cannot be calculated",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "param2",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "location1",
+          "location2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "location1",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Location"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "distance in meters or 1e10 if distance cannot be calculated",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "location2",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Location"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "a",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "desc": "distance c calculated as c = sqrt(a * a + b * b);",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

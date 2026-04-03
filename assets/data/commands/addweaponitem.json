@@ -1,0 +1,154 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds a weapon item to the specified weapon. The item can be weapon magazine, in which case the amount of ammo and target muzzle could also be specified. Since Arma 3 2.22 it is possible to add a magazine directly into a 'Throw' muzzle provided it is configured with <syntaxhighlight lang=\"cpp\" inline>keepInInventory = 0;</syntaxhighlight>. To remove such magazine see [[removeWeaponItem]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addWeaponItem [\"arifle_MX_GL_ACO_F\", \"1Rnd_HE_Grenade_shell\"];</sqf>",
+    "<sqf>player addWeaponItem [\"arifle_MX_GL_ACO_F\", [\"1Rnd_HE_Grenade_shell\", 1, \"GL_3GL_F\"]];</sqf>",
+    "<sqf>player addWeaponItem [\"LaserDesignator\", \"LaserBatteries\"];</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "addWeaponItem",
+  "problem_notes": [],
+  "see_also": [
+    "removeWeaponItem",
+    "addPrimaryWeaponItem",
+    "addSecondaryWeaponItem",
+    "addHandgunItem",
+    "addBinocularItem",
+    "weaponsItems",
+    "handgunItems",
+    "primaryWeaponItems",
+    "secondaryWeaponItems",
+    "binocularItems",
+    "removePrimaryWeaponItem",
+    "removeSecondaryWeaponItem",
+    "removeHandgunItem",
+    "removeBinocularItem"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "weaponName",
+            "itemName",
+            "instant"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the weapon to add magazine to",
+              "name": "weaponName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "class name of the item to add (if magazine, muzzle will be autodetected)",
+              "name": "itemName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to skip animation",
+              "name": "instant",
+              "since": {
+                "arma3": "1.96"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "weaponName",
+            [
+              "itemName",
+              "ammoCount",
+              "muzzleName"
+            ],
+            "instant"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the weapon to add magazine to",
+              "name": "weaponName",
+              "type": "String"
+            }
+          },
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "class name of the item to add (if magazine, muzzle will be autodetected unless specified)",
+                  "name": "itemName",
+                  "type": "String"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "(Optional) optional amount of ammo in magazine",
+                  "name": "ammoCount",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "(Optional) optional target muzzle to add magazine to",
+                  "name": "muzzleName",
+                  "type": "String"
+                }
+              }
+            ]
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to skip animation",
+              "name": "instant",
+              "since": {
+                "arma3": "1.96"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

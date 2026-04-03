@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the optics mode index (zoom) for the [[Arma 3: Targeting config reference#class pilotCamera|pilotCamera]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getPilotCameraOpticsMode vehicle player</sqf>"
+  ],
+  "groups": [
+    "Pilot Camera"
+  ],
+  "name": "getPilotCameraOpticsMode",
+  "problem_notes": [],
+  "see_also": [
+    "setPilotCameraOpticsMode",
+    "hasPilotCamera",
+    "getPilotCameraPosition",
+    "getPilotCameraDirection",
+    "getPilotCameraRotation",
+    "setPilotCameraDirection",
+    "setPilotCameraRotation",
+    "setPilotCameraTarget",
+    "getPilotCameraTarget",
+    "getTurretOpticsMode",
+    "setTurretOpticsMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "the index of the optic mode",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all music track event handlers of given type.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>removeAllMusicEventHandlers \"MusicStart\";</sqf>",
+    "<sqf>removeAllMusicEventHandlers \"MusicStop\";</sqf>"
+  ],
+  "groups": [
+    "Event Handlers",
+    "Sounds"
+  ],
+  "name": "removeAllMusicEventHandlers",
+  "problem_notes": [],
+  "see_also": [
+    "addMusicEventHandler",
+    "setMusicEventHandler",
+    "removeMusicEventHandler",
+    "playMusic"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "type"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "\"MusicStart\" or \"MusicStop\"",
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

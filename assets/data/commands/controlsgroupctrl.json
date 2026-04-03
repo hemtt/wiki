@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a child control with specified idc from a controls group",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control = _controlsGroup controlsGroupCtrl 101;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "controlsGroupCtrl",
+  "problem_notes": [],
+  "see_also": [
+    "allDisplays",
+    "allControls",
+    "ctrlCreate",
+    "ctrlParentControlsGroup"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrlgrp",
+          "idc"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrlgrp",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Control"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

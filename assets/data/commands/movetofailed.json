@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if latest low level [[moveTo]] command failed.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _hasFailed = moveToFailed _unit;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "moveToFailed",
+  "problem_notes": [],
+  "see_also": [
+    "moveTo",
+    "moveToCompleted"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "NOT IMPLEMENTED, ALWAYS [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Terminates (aborts) [[spawn]]ed or [[execVM]]ed script.\n{{Feature | important | The given script will not terminate immediately upon [[terminate]] command execution, it will do so the next time the script is processed by the [[Scheduler|scheduler]]}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_script = [] execVM \"script.sqf\";\nsleep 5;\nterminate _script;\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "terminate",
+  "problem_notes": [],
+  "see_also": [
+    "execVM",
+    "spawn",
+    "scriptDone",
+    "halt",
+    "execFSM"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "scriptHandle"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "scriptHandle",
+          "type": "ScriptHandle"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "FSMHandle"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "The FSM script must be launched with 'allowTermination' flag for this command to work (see [[execFSM]]).",
+          "name": "FSMHandle",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "scriptHandle",
+          "result"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "Only [[Script_Handle#Promise_Handles|\"Empty Handle\"]]'s can have their result set.",
+          "name": "scriptHandle",
+          "type": "ScriptHandle"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "The result to write into the [[Script_Handle#Promise_Handles|Promise]]",
+          "name": "result",
+          "type": "Anything"
+        }
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}

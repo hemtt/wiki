@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Load cargo vehicle inside vehicle if possible, returns bool based on whether the vehicle was able to be loaded.  Can also be used to unload a specific loaded vehicle or all loaded vehicles.",
+  "effect_loc": "Global",
+  "examples": [
+    "Blackfish with no vehicle cargo loaded\n<sqf>private _success = blackfish setVehicleCargo offroad; // true</sqf>",
+    "Blackfish with full cargo already loaded\n<sqf>private _success = blackfish setVehicleCargo offroad; // false</sqf>",
+    "Unload specific loaded vehicle (will paradrop if dropped from high altitude)\n<sqf>private _success = objNull setVehicleCargo offroad;</sqf>",
+    "Unload all vehicles (will paradrop if dropped from high altitude)\n<sqf>private _success = blackfish setVehicleCargo objNull;</sqf>"
+  ],
+  "groups": [
+    "Vehicle in Vehicle Transport"
+  ],
+  "name": "setVehicleCargo",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport|",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport",
+    "canVehicleCargo",
+    "enableVehicleCargo",
+    "getVehicleCargo",
+    "isVehicleCargo",
+    "vehicleCargoEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "cargo"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle for carrying cargo, [[objNull]] to unload specific loaded cargo",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "whether or not operation was a success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "cargo to put/loaded in vehicle, [[objNull]] to unload all loaded cargo",
+          "name": "cargo",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

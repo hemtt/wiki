@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return true if multiPlayer.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (isMultiplayer) then\n{\n\t// ...block\n}\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "isMultiplayer",
+  "problem_notes": [],
+  "see_also": [
+    "isDedicated",
+    "isServer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

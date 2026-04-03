@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the {{Link|https://en.wikipedia.org/wiki/Magnetic_declination|declination angle}} of player's compass, which is the difference between magnetic north and true north.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setCompassDeclination rad 10; // declination angle is 10 degrees</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "name": "setCompassDeclination",
+  "problem_notes": [],
+  "see_also": [
+    "setCompassOscillation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "angleRad"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "Declination angle in radians. Use 0 to reset it to default.",
+          "name": "angleRad",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

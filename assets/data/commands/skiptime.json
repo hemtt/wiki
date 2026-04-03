@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Jumps the specified number of hours forward or backward.<br>The time of day and tides are adjusted, but no changes are made to any units. If present, the lower level of clouds instantly jump to the position they would be in if time had passed normally.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>skipTime 5;</sqf>",
+    "<sqf>skipTime (5/60); // be sure to use parentheses, otherwise here (skipTime 5)/60 will happen</sqf>",
+    "<sqf>\nwhile {true} do \n{\n\tskipTime 0.00333;\n\tsleep 0.1; // smooth time transition\n};\n</sqf>",
+    "<sqf>skipTime ((_timeToSkipTo - dayTime + 24) % 24); // skip forward to a specific time, irrespective of the current mission time</sqf>"
+  ],
+  "groups": [
+    "Time",
+    "Environment"
+  ],
+  "name": "skipTime",
+  "problem_notes": [],
+  "see_also": [
+    "setDate",
+    "accTime",
+    "setTimeMultiplier",
+    "timeMultiplier",
+    "BIS_fnc_setDate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "duration"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "hours to skip. A positive value will create a forward time jump, a negative value will jump backwards.",
+          "name": "duration",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets orientation of 3D control model. It is similar to [[setVectorDirAndUp]] command for an object.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrl3D ctrlSetModelDirAndUp [[0,1,0],[0,0,1]]; //default orientation</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object"
+  ],
+  "name": "ctrlSetModelDirAndUp",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlModelDirAndUp",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "vectorDir",
+    "vectorUp",
+    "setVectorDirAndUp",
+    "ctrlModelVectorSide"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "dirAndUp"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "dirAndUp",
+          "type": {
+            "ArraySized": [
+              {
+                "desc": "see [[vectorDir]]",
+                "name": "vectorDir",
+                "since": null,
+                "type": "Vector3d"
+              },
+              {
+                "desc": "see [[vectorUp]]",
+                "name": "vectorUp",
+                "since": null,
+                "type": "Vector3d"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

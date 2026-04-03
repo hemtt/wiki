@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns model used in 3D-[[Arma: GUI Configuration|Dialog]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_model = ctrlModel _control3D;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object"
+  ],
+  "name": "ctrlModel",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlSetModel",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "displayCtrl",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "desc": "model path",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

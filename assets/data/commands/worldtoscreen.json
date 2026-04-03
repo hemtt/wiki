@@ -1,0 +1,128 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts position in world space into screen (UI) space. If a specified position is not within the current screen view, an empty array is returned.\n{{Feature | informative | [[SafeZone]]s should be considered:\n* the result can be out of the [0,0]..[1,1] range\n* the result can be a filled array even if the position is not displayed on screen if it would appear on a triplescreen setup\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_screenPos = worldToScreen ASLToAGL getPosASL soldier1;</sqf>",
+    "<sqf>_screenPos = worldToScreen (player modelToWorld [0,10,0]);</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "worldToScreen",
+  "problem_notes": [],
+  "see_also": [
+    "screenToWorld",
+    "SafeZone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "position"
+      },
+      "ret": {
+        "desc": "screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.",
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "x",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "y",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "camera object",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.",
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "x",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "y",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

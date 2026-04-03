@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Executes [[else]] code when [[if]] condition returns [[false]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (a > b) then { c = 0 } else { c = 1 };</sqf>",
+    "<sqf>\nif (a < b) then {\n\thint \"B is greater than A\";\n} else {\n\thint \"A is greater than B\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "else",
+  "problem_notes": [],
+  "see_also": [
+    "Control",
+    "Structures",
+    "if",
+    "then"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "thenCode",
+          "elseCode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "thenCode",
+          "type": "Code"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "thenCode",
+              "since": null,
+              "type": "Code"
+            },
+            {
+              "desc": null,
+              "name": "elseCode",
+              "since": null,
+              "type": "Code"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "elseCode",
+          "type": "Code"
+        }
+      }
+    }
+  ]
+}

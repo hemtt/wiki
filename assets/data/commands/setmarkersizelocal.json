@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set marker size.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\"MarkerOne\" setMarkerSizeLocal [100, 200];</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "setMarkerSizeLocal",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerAlpha",
+    "setMarkerAlphaLocal",
+    "setMarkerBrush",
+    "setMarkerBrushLocal",
+    "setMarkerColor",
+    "setMarkerColorLocal",
+    "setMarkerDir",
+    "setMarkerDirLocal",
+    "setMarkerPos",
+    "setMarkerPosLocal",
+    "setMarkerShape",
+    "setMarkerShapeLocal",
+    "setMarkerSize",
+    "setMarkerText",
+    "setMarkerTextLocal",
+    "setMarkerType",
+    "setMarkerTypeLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          [
+            "axisA",
+            "axisB"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "1/2 width of marker",
+              "name": "axisA",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "1/2 height of marker",
+              "name": "axisB",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "This command sets random heading on the player's compass (both in map and in 3D view) with given frequency, which is also randomised.",
+  "effect_loc": "Local",
+  "examples": [
+    "Set compass to oscillate every second within -90/+90 degrees:\n<sqf>setCompassOscillation [rad 90, 1, 1];</sqf>",
+    "Change heading every 60 to 90 seconds:\n<sqf>setCompassOscillation [rad 180, 60, 90];</sqf>",
+    "Make compass go crazy:\n<sqf>setCompassOscillation [rad 360, 0.1, 0.2];</sqf>",
+    "Reset to default behaviour:\n<sqf>setCompassOscillation [-1, 0, 0];</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "name": "setCompassOscillation",
+  "problem_notes": [],
+  "see_also": [
+    "visibleCompass",
+    "shownCompass",
+    "shownCuratorCompass",
+    "showCompass",
+    "showCuratorCompass",
+    "setCompassDeclination"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "angle",
+          "frequencyMin",
+          "frequencyMax"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "heading deviation angle in [[rad]]ians; the random angle will be picked up from {{hl|[-angle...+angle]}} range",
+              "name": "angle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "lower bound of heading change in seconds",
+              "name": "frequencyMin",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "higher bound of heading change in seconds",
+              "name": "frequencyMax",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

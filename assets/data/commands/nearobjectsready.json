@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check whether all data are loaded to nearObjects will return in reasonable time.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_twnpos nearObjectsReady 500; //from ALICE</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "name": "nearObjectsReady",
+  "problem_notes": [],
+  "see_also": [
+    "findNearestEnemy",
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearObjects",
+    "nearestLocation",
+    "nearEntities",
+    "nearTargets",
+    "nearSupplies",
+    "nearestLocationWithDubbing",
+    "nearRoads",
+    "nearestMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "position",
+          "radius"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "radius",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

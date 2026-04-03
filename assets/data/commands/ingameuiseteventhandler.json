@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets given event handler of in-game UI. If EH function returns [[true]], performed action is overridden. Event handlers available are:\n* \"PrevAction\" - mouse scroll up\n* \"Action\" - action key press\n* \"NextAction\" - mouse scroll down\nIn order to remove a previously added event handler, set it again with an empty ''code'' string {{hl|\"\"}}.\n\n{{Feature|important|This is a \"set\" command, which means event handlers are not stackable and will replace previously set event handlers of the same type.}}\n\n{{Feature|arma3|Since {{arma3}} v1.50 the event handler receives an array of the selected/activated action's arguments in {{hl|_this}} variable:\n<sqf>params [\"_target\", \"_caller\", \"_index\", \"_engineName\", \"_text\", \"_priority\", \"_showWindow\", \"_hideOnUse\", \"_shortcut\", \"_visibleMenu\", \"_eventName\"];</sqf>\n* _target: [[Object]] - target object to which action is attached\n* _caller: [[Object]] - caller object, basically [[player]]\n* _index: [[Number]] - index of the action in action menu (0 - top most)\n* _engineName: [[String]] - engine based action name (\"User\" for user added actions)\n* _text: [[String]] - [[localize]]d action plain text as seen by the caller\n* _priority: [[Number]] - action ''priority'' value\n* _showWindow: [[Boolean]] - action ''showWindow'' value\n* _hideOnUse: [[Boolean]] - action ''hideOnUse'' value\n* _shortcut: [[String]] - action ''shortcut'' name or \"\"\n* _visibleMenu: [[Boolean]] - [[isActionMenuVisible|action menu visibility]] - on first scroll or action press the menu is still invisible, the menu is shown but no action is performed\n* _eventName: [[String]] - event name\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\ninGameUISetEventHandler [\"Action\", \"hint 'Lights, Camera, Action!'; true\"];\nsleep 10;\ninGameUISetEventHandler [\"Action\", \"\"]; // removes the \"Action\" EH\n</sqf>",
+    "<sqf>\ninGameUISetEventHandler [\"PrevAction\", \"hint str _this; false\"];\ninGameUISetEventHandler [\"NextAction\", \"hint str _this; false\"];\ninGameUISetEventHandler [\"Action\", \"hint str _this; false\"];\n</sqf>",
+    "Deny any weapon disassembly:\n<sqf>\ninGameUISetEventHandler [\"Action\", \"\n\tif (_this select 3 == 'DisAssemble') then {\n\t\thint 'You are not allowed to do this';\n\t\ttrue\n\t}\n\"];\n</sqf>",
+    "Detect explosive/mine placement:\n<sqf>\nprivate _onMagazineUse = '\n\tparams [\"_target\", \"\", \"\", \"_action\", \"\", \"\", \"\", \"\", \"\", \"\", \"_event\"];\n\tif (_action == \"UseMagazine\") then {\n\t\tif (_event == \"Action\") then {\n\t\t\t_target spawn {\n\t\t\t\twaitUntil {!(all_magazines isEqualTo magazines _this)};\n\t\t\t\t{\n\t\t\t\t\t0 = all_magazines deleteAt (all_magazines find _x);\n\t\t\t\t} count magazines _this;\n\t\t\t\thint format [\"Magazine Used: %1\", all_magazines select 0];\n\t\t\t};\n\t\t} else {\n\t\t\tall_magazines = magazines _target;\n\t\t};\n\t};\n\tfalse\n';\ninGameUISetEventHandler [\"PrevAction\", _onMagazineUse];\ninGameUISetEventHandler [\"NextAction\", _onMagazineUse];\ninGameUISetEventHandler [\"Action\", _onMagazineUse];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Event Handlers",
+    "Event Handlers",
+    "Interaction"
+  ],
+  "name": "inGameUISetEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "isActionMenuVisible",
+    "addEventHandler",
+    "ctrlAddEventHandler",
+    "displayAddEventHandler",
+    "actionIDs",
+    "actionParams",
+    "addAction",
+    "setUserActionText",
+    "showHUD",
+    "inputAction",
+    "removeAction",
+    "removeAllActions",
+    "action",
+    "enableWeaponDisassembly"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "handlerName",
+          "code"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "handlerName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "code",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Used to draw locations in [[2D Editor]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "GUI Control - Map",
+    "Locations"
+  ],
+  "name": "drawLocation",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "location"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      }
+    }
+  ]
+}

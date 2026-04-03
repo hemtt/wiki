@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current radio volume (set by [[fadeRadio]]).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str radioVolume;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "radioVolume",
+  "problem_notes": [],
+  "see_also": [
+    "fadeRadio",
+    "soundVolume",
+    "musicVolume",
+    "speechVolume",
+    "environmentVolume",
+    "getAudioOptionVolumes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "NumberRange": [
+            0,
+            2
+          ]
+        }
+      }
+    }
+  ]
+}

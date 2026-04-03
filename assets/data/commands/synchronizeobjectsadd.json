@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Add given objects to the unit's list of synchronized objects.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n_acm = _groupLogic createUnit [\"AmbientCombatManager\", position player, [], 0, \"NONE\"];\n_acm synchronizeObjectsAdd [player];\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "synchronizeObjectsAdd",
+  "problem_notes": [],
+  "see_also": [
+    "synchronizeObjectsRemove"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "objects"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

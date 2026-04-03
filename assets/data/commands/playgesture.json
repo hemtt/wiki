@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "When used on a person,a smooth transition to the given move will be initiated. '''Command doesn't seem to be functional'''\n{{Feature|arma3|Use [[switchGesture]] instead (the alternative syntax, since{{GVI|arma3|2.18}})}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>soldierOne playGesture \"Wave\";</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "name": "playGesture",
+  "problem_notes": [],
+  "see_also": [
+    "playMove",
+    "playMoveNow",
+    "playAction",
+    "playActionNow",
+    "switchMove",
+    "switchGesture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "soldier",
+          "moveName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "soldier",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "moveName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

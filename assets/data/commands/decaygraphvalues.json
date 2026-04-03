@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Multiplies graph values by the given coefficient. The corresponding lower bound value is used instead if the product is smaller than the bound.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>decayGraphValues [[1,2,3,4,5], [1,4,9,16,25], 0.3]; // returns [1,2,3,4.8,7.5]</sqf>"
+  ],
+  "groups": [
+    "Math"
+  ],
+  "name": "decayGraphValues",
+  "problem_notes": [],
+  "see_also": [
+    "getGraphValues"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "lowerBoundValues",
+          "graphValues",
+          "coef"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "lower bound for the new graph",
+              "name": "lowerBoundValues",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "graph values",
+              "name": "graphValues",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "the multiplication coefficient",
+              "name": "coef",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "The [[missionProfileNamespace]] variables are loaded at the start of a mission, before 'init.sqf' is executed. If the file with saved variables for current mission exists in user profile and is loaded, the command returns [[true]]. It also will return [[true]] after the first execution of [[saveMissionProfileNamespace]] command, which also creates the file.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _isLoaded = isMissionProfileNamespaceLoaded;</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "Variables"
+  ],
+  "name": "isMissionProfileNamespaceLoaded",
+  "problem_notes": [],
+  "see_also": [
+    "missionProfileNamespace",
+    "saveMissionProfileNamespace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[[true]] if mission profile variables file exists and is loaded.",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns action stored in item on given path in [[CT_MENU_STRIP]] control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>menuAction [120, [1, 0]];</sqf>",
+    "<sqf>findDisplay 313 displayCtrl 120 menuAction [1, 0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuAction",
+  "problem_notes": [],
+  "see_also": [
+    "menuSetAction"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "desc": "action",
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "action",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

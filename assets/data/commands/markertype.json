@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Gets type of marker. See [[CfgMarkers]] for a list of standard markers.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (markerType \"Marker1\" == \"\") then { hint \"Marker1 is not an icon!\" };</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "markerType",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerType",
+    "setMarkerTypeLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "desc": "marker class name. See [[CfgMarkers]].",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

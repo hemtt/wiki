@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the global namespace attached to the active user profile. Use [[setVariable]] and [[getVariable]] to save and load data to and from this [[Namespace]]. A variable can be deleted by setting its value to [[nil]]. By default the variables set in this namespace will exist while the game is running, and variables are saved persistently when the game is closed. Saving can also be forced by using [[saveProfileNamespace]] to prevent data loss on e.g game crash.<br>\nThe variables are stored next to the user profile in a file named {{hl|myUsername.vars.GAMENAME}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprofileNamespace setVariable [\"TAG_kills\", 10000];\n// somewhere else in the code\n_kills = profileNamespace getVariable [\"TAG_kills\", 0];\n</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "Variables"
+  ],
+  "name": "profileNamespace",
+  "problem_notes": [],
+  "see_also": [
+    "saveProfileNamespace",
+    "missionNamespace",
+    "uiNamespace",
+    "parsingNamespace",
+    "currentNamespace",
+    "localNamespace",
+    "allVariables",
+    "with",
+    "ArmA:_Editing#Forward_Compatibility|Forward",
+    "Compatibility"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Namespace"
+      }
+    }
+  ]
+}

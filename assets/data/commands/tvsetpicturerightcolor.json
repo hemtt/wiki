@@ -1,0 +1,114 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets color of the right picture on the tree view item defined by path",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tvSetPictureRightColor [101, [0], [1,0,1,1]];</sqf>",
+    "<sqf>_ctrl tvSetPictureRightColor [[0], [1,0,1,1]];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetPictureRightColor",
+  "problem_notes": [],
+  "see_also": [
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvValue",
+    "tvText",
+    "tvSetText",
+    "tvSetPicture",
+    "tvSetPictureColor",
+    "tvSetPictureRight",
+    "tvSetPictureColor",
+    "tvSetPictureColorSelected",
+    "tvSetPictureColorDisabled",
+    "tvSetPictureRightColorSelected",
+    "tvSetPictureRightColorDisabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "color"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "color"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the font size of the secondary text of given control.",
+  "effect_loc": "Local",
+  "examples": [
+    "_control [[ctrlSetFontSecondary]] \"TahomaB\";"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlSetFontSecondary",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFontP",
+    "ctrlSetFontHeightSecondary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "fontClass"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "font class",
+          "name": "fontClass",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

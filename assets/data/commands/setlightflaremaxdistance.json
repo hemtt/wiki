@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets max distance where the flare is visible.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>myLight setLightFlareMaxDistance 500;</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "name": "setLightFlareMaxDistance",
+  "problem_notes": [],
+  "see_also": [
+    "setLightAmbient",
+    "setLightColor",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightIntensity",
+    "setLightAttenuation",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightBrightness",
+    "setLightDayLight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "light",
+          "distance"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "light",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "distance",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

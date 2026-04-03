@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds a backpack to a unit - global variant of [[addBackpack]].\n{{Feature|warning|\nThe backpack added with this command will be created on the PC [[Multiplayer Scripting#Locality|local]] to the unit you are adding it to, even if executed on the server.\nBecause of this, if non-local unit is the target and one tries to immediately access added backpack, the backpack returned will be [[objNull|null]].\nWhen adding backpack dynamically to a remote unit, [[waitUntil|wait until]] the backpack is added (See {{Link|#Example 2}}).\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addBackpackGlobal \"B_AssaultPack_khk\";</sqf>",
+    "<sqf>\n_unit spawn \n{\n\tif (not isNull backpackContainer _this) then\n\t{\n\t\tremoveBackpackGlobal _this;\n\t\twaitUntil { sleep 0.01; isNull backpackContainer _this };\n\t};\n\n\t_this addBackpackGlobal \"B_AssaultPack_khk\";\n\twaitUntil { sleep 0.01; not isNull backpackContainer _this };\n\tbackpackContainer _this addMagazineCargoGlobal [\"30Rnd_556x45_Stanag\", 5];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "addBackpackGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "addBackpack",
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "backpack"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "soldier",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "backpack class name",
+          "name": "backpack",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

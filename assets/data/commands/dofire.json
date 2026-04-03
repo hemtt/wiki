@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Local",
+  "description": "Order the given unit(s) to fire on the given target (without radio messages).\n\nThe target is set with [[doTarget]] or [[commandTarget]].\n\nThe target can be a unit or a vehicle, but not an object.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_ESoldier1 doFire _WSoldier1;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "doFire",
+  "problem_notes": [],
+  "see_also": [
+    "fire",
+    "commandFire",
+    "canFire",
+    "fireAtTarget",
+    "forceWeaponFire",
+    "commandArtilleryFire",
+    "commandSuppressiveFire",
+    "doArtilleryFire",
+    "doSuppressiveFire",
+    "isManualFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

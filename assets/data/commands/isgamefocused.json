@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the state of game focus changed by pressing {{Controls|ALT|TAB}} or similar action.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (!isGameFocused) then { endMission \"End\" };</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "isGameFocused",
+  "problem_notes": [],
+  "see_also": [
+    "isGamePaused"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[[true]] if game window is focused, [[false]] if not",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

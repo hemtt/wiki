@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the proxy object associated with the given editor object.\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n(findDisplay 128 displayCtrl 51) getObjectProxy \"_unit_1\"\n// returns the object 'B 1-1-A:1 (Sean Johnson)'\n</sqf>"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "getObjectProxy",
+  "problem_notes": [],
+  "see_also": [
+    "setObjectProxy"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "object"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

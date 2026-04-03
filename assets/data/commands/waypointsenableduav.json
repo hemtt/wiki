@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the UAV has waypoints enabled.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_uav enableUAVWaypoints false;\nhint str waypointsEnabledUAV _uav; // returns false\n</sqf>"
+  ],
+  "groups": [
+    "Waypoints",
+    "Remote Control"
+  ],
+  "name": "waypointsEnabledUAV",
+  "problem_notes": [],
+  "see_also": [
+    "enableUAVWaypoints",
+    "enableUAVConnectability",
+    "disableUAVConnectability",
+    "isUAVConnected",
+    "isUAVConnectable",
+    "allUnitsUAV",
+    "getConnectedUAV",
+    "connectTerminalToUAV"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "uav"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "uav",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Computes the {{Link|https://en.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance|squared distance}} between two objects or positions.\nThis command is faster than {{Link|distance}} by saving a {{Link|sqrt|square root}} operation, useful for mass-checking distance without the need of the distance value itself.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _distanceSquared = 5 * 5;\nif (player distanceSqr leader player < _distanceSquared) then // similar to player distance leader player < 5\n{\n\thint \"You are less than 5m from the leader!\";\n};\n</sqf>",
+    "<sqf>\nprivate _distance = sqrt ((x2 - x1) ^ 2 + (y2 - y1) ^ 2 + (z2 - z1) ^ 2);\nprivate _distanceSqr = (x2 - x1) ^ 2 + (y2 - y1) ^ 2 + (z2 - z1) ^ 2;\n_distance = [x1, y1, z1] distance [x2, y2, z2];\n_distanceSqr = [x1, y1, z1] distanceSqr [x2, y2, z2];\n_distance = sqrt ([x1, y1, z1] distanceSqr [x2, y2, z2]);\n_distanceSqr = ([x1, y1, z1] distance [x2, y2, z2]) ^ 2;\n</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "name": "distanceSqr",
+  "problem_notes": [],
+  "see_also": [
+    "distance",
+    "vectorDistanceSqr",
+    "distance2D"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "var1",
+          "var2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "var1",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "distance in meters or 1e10 if distance cannot be calculated",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "var2",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "a",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "desc": "distance c calculated as <sqf inline>c = a * a + b * b</sqf>",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

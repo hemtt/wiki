@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Global",
+  "description": "Order the given unit(s) to stop (without radio messages). The units stopped in this way will leave the groups formation. It will prevent them from moving around with their group (or formation leader), while still being able to turn around and even move to a new position if they see fit. <br><br>The units will still respond to orders from their group leader (like engage, rearm, board a vehicle), but all of their actions will be separate from the group formation. To resume group default behaviour, use [[doFollow]] command. For example: <sqf inline>units _group doFollow leader _group;</sqf>",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>doStop _soldier1;</sqf>",
+    "<sqf>doStop [_soldier1, _soldier2];</sqf>",
+    "<sqf>doStop (units player);</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "doStop",
+  "problem_notes": [],
+  "see_also": [
+    "commandStop",
+    "stop",
+    "stopped",
+    "doMove",
+    "doFollow"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit(s)"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit(s)",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

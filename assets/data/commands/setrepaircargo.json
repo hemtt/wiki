@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Local",
+  "description": "Set amount of repair resources in cargo space of repair vehicle.\nAmount 1 is full cargo.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_repairTruck1 setRepairCargo 0;</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "name": "setRepairCargo",
+  "problem_notes": [],
+  "see_also": [
+    "getRepairCargo",
+    "setAmmoCargo",
+    "setFuelCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicleName",
+          "amount"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "amount",
+          "type": {
+            "NumberRange": [
+              0,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

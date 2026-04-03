@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Local",
+  "description": "Move player into given unit. Some usage advices:\n* Avoid using [[selectPlayer]] on editor-placed units in multiplayer, as it may, on occasion, lead to some undefined behaviour.\n* If you need to [[selectPlayer]] into another unit, consider [[createUnit|creating a unit]] dynamically.{{Feature|informative|Before {{arma3}} it was possible to [[selectPlayer]] another player-controlled unit, leading to control issues. }}\n{{Feature|warning|\nCreating and immediately selecting player into newly created unit could cause all sort of problems due to possible delay in unit initialisation.\nGive the unit some time to propagate properly on the network before using this command on it.\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>selectPlayer bob;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Multiplayer"
+  ],
+  "name": "selectPlayer",
+  "problem_notes": [],
+  "see_also": [
+    "selectNoPlayer",
+    "remoteControl",
+    "Team",
+    "Switch",
+    "switchCamera",
+    "teamSwitch",
+    "enableTeamSwitch"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

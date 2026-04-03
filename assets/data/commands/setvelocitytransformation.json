@@ -1,0 +1,135 @@
+{
+  "argument_loc": "Local",
+  "description": "[[File:setVelocityTransformation.jpg|thumb|right]]\nInterpolates and applies [[Position#PositionASL|PositionASL]], [[velocity]], [[vectorDir]] and [[vectorUp]] to the given object based on the interval value.<br>\n\nWhen interval is 0 the \"fromXXX\" values are used for the beginning of the interpolation. When interval is 1, the \"toXXX\" values are used for the end of interpolation.\nWhen interval value is in between, interpolated values are used (see diagram below). The interpolation is linear and along straight line between \"from\" and \"to\" positions.\nIf curve is needed, then it should be constructed from multiple straight sections or by dynamically changing value of position params during the interpolation cycle, similar to {{Link|https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves|Quadratic Curve animation}} (see {{Link|#Example 3}}).<br>\n\nThe [[velocity]] param does not do much in SP, but in MP, provided the velocity component is set correctly, it helps the engine to figure out what the next position of the moving object should be on other clients.<br><br>\nThe actual approximate interpolation formula for this command is:\n<sqf>_vecCurrent = _vecFrom vectorAdd (_vecTo vectorDiff _vecFrom vectorMultiply _interval);</sqf>\n\n{{Feature|informative|\nFor continuous movement this command should be executed each frame while changing the interval value.\nFor example to apply interpolation for 10 seconds one could use the following command to translate 10 seconds into 0..1 interval:\n<sqf>\nt1 = time;\nt2 = time + 10;\n</sqf>\nLater inside some on frame event...\n<sqf>_interval = linearConversion [t1, t2, time, 0, 1];</sqf>\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n_tracker setVelocityTransformation\n[\n\t_currentPos,\n\t_nextPos,\n\t_currentVelocity,\n\t_nextVelocity,\n\t_currentVectorDir,\n\t_nextVectorDir,\n\t_currentVectorUp,\n\t_nextVectorUp,\n\t_interval\n];\n</sqf>",
+    "Bob on imaginary stairway to heaven:\n<sqf>\nbob = createAgent [\"C_man_1\", player getRelPos [5, 0], [], 0, \"CAN_COLLIDE\"];\nbob switchMove \"ladderCivilUpLoop\";\npos1 = getPosASL bob;\npos2 = pos1 vectorAdd [0,0,0.75];\nbob addEventHandler [\"AnimDone\",\n{\n\tpos1 = pos2;\n\tpos2 = pos2 vectorAdd [0,0,0.75]\n}];\n\nonEachFrame\n{\n\tif (!alive bob) then\n\t{\n\t\tonEachFrame {};\n\t\tbob switchMove \"\";\n\t\tbob removeAllEventHandlers \"AnimDone\";\n\t};\n\tbob setVelocityTransformation [\n\t\tpos1,\n\t\tpos2,\n\t\t[0,0,0],\n\t\t[0,0,0],\n\t\t[0,1,0],\n\t\t[0,1,0],\n\t\t[0,0,1],\n\t\t[0,0,1],\n\t\tmoveTime bob\n\t];\n};\n</sqf>",
+    "Advanced trickery with curved movement. The curve is controlled with one control point (controlPointASL), just like quadratic Bézier curve:\n<sqf>\ndisableSerialization;\nplayer setDir 0;\ninterval = 0;\n_disp = findDisplay 46 createDisplay \"RscDisplayEmpty\";\n_ctrl = _disp ctrlCreate [\"RscSlider\", -1];\n_ctrl ctrlSetPosition [safeZoneX + 0.1, 1, safeZoneW - 0.2, 0.1];\n_ctrl ctrlSetActiveColor [1,0,0,1];\n_ctrl ctrlCommit 0;\n_ctrl sliderSetPosition 0;\n_ctrl sliderSetRange [0,1];\n_ctrl sliderSetSpeed [0.1,0.5];\n_ctrl ctrlAddEventHandler [\"SliderPosChanged\", {interval = _this select 1}];\nctrlSetFocus _ctrl;\nbox = \"Land_VR_Shape_01_cube_1m_F\" createVehicle [0,0,0];\ncontrolPointASL = AGLToASL (player getRelPos [70, -30]) vectorAdd [0, 0, 30];\nfromPosASL = AGLToASL (player getRelPos [10, -45]);\ntoPosASL = AGLToASL (player getRelPos [10, 45]);\nfromControlPointOffset = controlPointASL vectorDiff fromPosASL;\ntoControlPointOffset = toPosASL vectorDiff controlPointASL;\nonEachFrame\n{\n\thintSilent format [\"Interval: %1\", interval];\n\tbox setVelocityTransformation\n\t[\n\t\tfromPosASL vectorAdd (fromControlPointOffset vectorMultiply interval),\n\t\tcontrolPointASL vectorAdd (toControlPointOffset vectorMultiply interval),\n\t\t[0,0,0],\n\t\t[0,0,0],\n\t\t[0,1,0],\n\t\t[1,0,0],\n\t\t[0,0,1],\n\t\t[0,1,0],\n\t\tinterval\n\t];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setVelocityTransformation",
+  "problem_notes": [],
+  "see_also": [
+    "velocity",
+    "setVelocity",
+    "velocityModelSpace",
+    "setVelocityModelSpace",
+    "speed",
+    "moveTime",
+    "disableBrakes",
+    "brakesDisabled",
+    "getModelInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "fromPosASL",
+            "toPosASL",
+            "fromVelocity",
+            "toVelocity",
+            "fromVectorDir",
+            "toVectorDir",
+            "fromVectorUp",
+            "toVectorUp",
+            "interval",
+            "customCenter"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object to be interpolated",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "starting [[getPosASL]] of the object",
+              "name": "fromPosASL",
+              "type": "Position3dASL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "ending [[getPosASL]] of the object",
+              "name": "toPosASL",
+              "type": "Position3dASL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "starting [[velocity]] of the object",
+              "name": "fromVelocity",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "ending [[velocity]] of the object",
+              "name": "toVelocity",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "starting [[vectorDir]] of the object",
+              "name": "fromVectorDir",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "ending [[vectorDir]] of the object",
+              "name": "toVectorDir",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "starting [[vectorUp]] of the object",
+              "name": "fromVectorUp",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "ending [[vectorUp]] of the object",
+              "name": "toVectorUp",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "interpolation interval (variable value, normally between 0 and 1)",
+              "name": "interval",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default placing point of the model (see [[getModelInfo]])) custom center [x, y, z] to which transformation would be applied in model coordinates",
+              "name": "customCenter",
+              "since": {
+                "arma3": "2.8"
+              },
+              "type": "Position3dRelative"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

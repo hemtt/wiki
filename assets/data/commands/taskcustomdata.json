@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns custom data attached to the local task or an empty array if there are no custom data attached.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_data = taskCustomData someTask;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "taskCustomData",
+  "problem_notes": [],
+  "see_also": [
+    "setSimpleTaskCustomData",
+    "setSimpleTaskType",
+    "taskType",
+    "Arma",
+    "3:",
+    "Task",
+    "Framework#Task",
+    "Overhaul|Tasks",
+    "Overhaul"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "task"
+      },
+      "ret": {
+        "desc": "iconPath, iconText, descriptionText",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      }
+    }
+  ]
+}

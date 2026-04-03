@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get array with all magazines from uniform of the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nuniformMagazines player;\n// returns e.g\n/*\n[\n\t\"6.5mm 30Rnd STANAG Mag(30/30)[id/cr:1/0](3x)\"\n]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Containers",
+    "Unit Inventory"
+  ],
+  "name": "uniformMagazines",
+  "problem_notes": [],
+  "see_also": [
+    "vestMagazines",
+    "backpackMagazines",
+    "soldierMagazines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

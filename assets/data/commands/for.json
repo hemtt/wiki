@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "This operator creates a [[For Type]] which is used in the for-constructs.\n{{Feature|warning|\nThe alternative syntax <sqf inline>for _array do _code</sqf> is [[Code Optimisation#for|slower]] than the first syntax because the condition is checked in every iteration, and it has a few bugs.<br>\nIt is only kept for backward compatibility; always use the first syntax <sqf inline>for \"_i\" from 0 to _end do _code</sqf>.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// will output 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 (the to value being inclusive)\nfor \"_i\" from 1 to 10 do { systemChat str _i; };\n</sqf>",
+    "<sqf>\n// will output 9, 7, 5, 3, 1\nfor \"_i\" from 9 to 1 step -2 do { systemChat str _i; };\n</sqf>",
+    "<sqf>\n// will output 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\nfor [{ _i = 0 }, { _i < 10 }, { _i = _i + 1 }] do { systemChat str _i };\n</sqf>",
+    "<sqf>\n// BAD CODE\n_i = 100;\nfor [{ _i = 0 }, { _i < 5 }, { _i = _i + 1 }] do { /* code */ };\nhint str _i; // 5\n\n// GOOD CODE (private keyword is recommended)\n_i = 100;\nfor [{ private _i = 0 }, { _i < 5 }, { _i = _i + 1 }] do { /* code */ };\nhint str _i; // 100\n\n// BEST CODE (primary syntax, fastest)\n_i = 100;\nfor \"_i\" from 0 to 4 do { /* code */ };\nhint str _i; // 100\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "for",
+  "problem_notes": [
+    "{{Feature|arma2|There is an {{GameCategory|arma2|link= y}} issue (not present in {{Name|arma2oa|short}} nor in {{arma3}}) where having a capital letter in the variable name '''will''' throw an error:\n<sqf>\nfor \"_i\" from 0 to 2 do { hintSilent str _i; }; // works\nfor \"_I\" from 0 to 2 do { hintSilent str _I; }; // \"variable _i is not defined\" error\n</sqf>\n}}"
+  ],
+  "see_also": [
+    "Control",
+    "Structures",
+    "while",
+    "do"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "arguments"
+      },
+      "ret": {
+        "type": "ForType"
+      },
+      "right": {
+        "Item": {
+          "desc": "declares the index variable name like \"_myVar\". [[from]] and [[to]] are required, [[step]] is optional.",
+          "name": "arguments",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "init",
+          "condition",
+          "codeToExecute"
+        ]
+      },
+      "ret": {
+        "type": "ForType"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "loop variable definition",
+              "name": "init",
+              "type": "Code"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[call]]ed code returns [[false]], leave the [[for]]-loop",
+              "name": "condition",
+              "type": "Code"
+            }
+          },
+          {
+            "Item": {
+              "desc": "code to be run on each loop",
+              "name": "codeToExecute",
+              "type": "Code"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

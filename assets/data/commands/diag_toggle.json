@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggles various diagnostics.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ndiag_toggle \"Animation\"; // enable\ndiag_toggle \"Animation\"; // disable\n</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_toggle",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Diagnostics",
+    "Exe",
+    "diag_enable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "mode"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[Arma 3: Diagnostics Exe]]",
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

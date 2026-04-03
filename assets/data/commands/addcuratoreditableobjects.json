@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Register objects which can be edited by a curator.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>MyCuratorModule addCuratorEditableObjects [[MyCar], true];</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "addCuratorEditableObjects",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "allCurators",
+    "removeCuratorEditableObjects",
+    "curatorEditableObjects"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          [
+            "objects",
+            "addCrew"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "objects",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Object"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "addCrew",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

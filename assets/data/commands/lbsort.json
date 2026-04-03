@@ -1,0 +1,141 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sorts listbox entries alphabetically ascending by their [[lbText]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lbSort _myControl;</sqf>",
+    "<sqf>lbSort [_myControl, \"DESC\"];</sqf>",
+    "<sqf>lbSort 101;</sqf>",
+    "<sqf>lbSort [101, \"DESC\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbSort",
+  "problem_notes": [],
+  "see_also": [
+    "lbSortBy",
+    "lnbSortBy",
+    "lbSortByValue",
+    "lnbSort",
+    "tvSort",
+    "lbSortByValue",
+    "tvSortByValue",
+    "lnbSortByValue",
+    "lbAdd",
+    "lbClear",
+    "lbColor",
+    "lbCurSel",
+    "lbData",
+    "lbDelete",
+    "lbIsSelected",
+    "lbPicture",
+    "lbSelection",
+    "lbSetColor",
+    "lbSetCurSel",
+    "lbSetData",
+    "lbSetPicture",
+    "lbSetSelected",
+    "lbSetTooltip",
+    "lbSetValue",
+    "lbSize",
+    "lbText",
+    "lbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "control",
+          "sortOrder"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "control",
+              "type": "Control"
+            }
+          },
+          {
+            "Item": {
+              "desc": "\"ASC\": ascending, \"DESC\": descending",
+              "name": "sortOrder",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.18"
+      }
+    },
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "sortOrder"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "\"ASC\": ascending, \"DESC\": descending",
+              "name": "sortOrder",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

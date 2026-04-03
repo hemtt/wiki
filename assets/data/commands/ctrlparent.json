@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the parent [[Display]] of the given control. For parent [[Control]]s group see [[ctrlParentControlsGroup]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_display = ctrlParent _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlParent",
+  "problem_notes": [],
+  "see_also": [
+    "allControls",
+    "allDisplays",
+    "controlsGroupCtrl",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp",
+    "displayParent",
+    "ctrlParentControlsGroup"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Display"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

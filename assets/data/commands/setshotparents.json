@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets vehicle and instigator pair for the given projectile.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>myProjectile setShotParents [vehicle bob, bob];</sqf>",
+    "<sqf>tank addEventHandler [\"Fired\", {_this select 6 setShotParents [tank, commander tank]}];</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "name": "setShotParents",
+  "problem_notes": [],
+  "see_also": [
+    "getShotParents"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "projectile",
+          [
+            "vehicle",
+            "instigator"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the actual projectile shot",
+          "name": "projectile",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "vehicle shooting projectile (appears as the 'killer' in \"Killed\" EH)",
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "person pulling the trigger (appears as the 'instigator' in \"Killed\" EH)",
+              "name": "instigator",
+              "type": "Object"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

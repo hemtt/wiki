@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns marker size. This command is identical to [[getMarkerSize]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mSize = markerSize \"Marker1\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "markerSize",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerSize",
+    "setMarkerSizeLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "1/2 width of marker",
+              "name": "a_axis",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "1/2 height of marker",
+              "name": "b_axis",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

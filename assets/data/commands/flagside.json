@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns [[Side]] of the [[Multiplayer Scripting#Locality|local]] instance of the flag. A getter for [[setFlagSide]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_flagSide =  flagSide aFlag;</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "name": "flagSide",
+  "problem_notes": [],
+  "see_also": [
+    "setFlagSide",
+    "Arma",
+    "3:",
+    "Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "flag"
+      },
+      "ret": {
+        "type": "Side"
+      },
+      "right": {
+        "Item": {
+          "desc": "flag",
+          "name": "flag",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

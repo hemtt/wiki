@@ -1,0 +1,80 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set entity [[Eden Editor: Entity Attributes|attributes]].\nAn attribute is identified by its {{hl|property}} ({{hl|data}} when it is engine-drive attribute) value in config.\nFor the list of all attributes with their properties, see [[Eden_Editor:_Setting_Attributes#Attributes|Setting Attributes]].\n\n{{Feature|important|Attributes are available only within the Eden Editor workspace and cannot be accessed in scenario preview or exported scenario!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// Set all selected objects as playable\nset3DENAttributes [[get3DENSelected \"Object\", \"ControlMP\", true]];\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "set3DENAttributes",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENAttribute",
+    "clear3DENAttribute"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          [
+            "entitiesN",
+            "classN",
+            "valueN"
+          ]
+        ]
+      },
+      "ret": {
+        "desc": "[[true]] if the value was set",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "name": "entitiesN",
+                  "type": {
+                    "ArrayUnsized": {
+                      "value": {
+                        "OneOf": [
+                          {
+                            "desc": null,
+                            "since": null,
+                            "type": "EdenEntity"
+                          },
+                          {
+                            "desc": null,
+                            "since": null,
+                            "type": "EdenID"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Item": {
+                  "desc": "attribute name",
+                  "name": "classN",
+                  "type": "String"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "new attribute value",
+                  "name": "valueN",
+                  "type": "Anything"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if given unit is confirmed target for given side.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _enemyConfirmed = _possibleEnemy isSensorTargetConfirmed opfor;</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "name": "isSensorTargetConfirmed",
+  "problem_notes": [],
+  "see_also": [
+    "listVehicleSensors",
+    "isVehicleSensorEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "side"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if confirmed target, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      }
+    }
+  ]
+}

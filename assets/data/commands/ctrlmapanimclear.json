@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Local",
+  "description": "Clears the map animation.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>ctrlMapAnimClear _ctrlMap;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "name": "ctrlMapAnimClear",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimAdd",
+    "mapAnimClear",
+    "mapAnimCommit",
+    "mapAnimDone",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimCommit",
+    "ctrlMapAnimDone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "controlName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets that the vehicle will be able to receive targets acquired by someone else via datalink from the [[Side]] center.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setVehicleReceiveRemoteTargets true;</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "name": "setVehicleReceiveRemoteTargets",
+  "problem_notes": [],
+  "see_also": [
+    "setVehicleRadar",
+    "vehicleReportRemoteTargets",
+    "setVehicleReportRemoteTargets",
+    "vehicleReceiveRemoteTargets",
+    "vehicleReportOwnPosition",
+    "setVehicleReportOwnPosition",
+    "reportRemoteTarget",
+    "confirmSensorTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "bool"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

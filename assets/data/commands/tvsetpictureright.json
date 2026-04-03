@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets right picture on the tree view item defined by path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tvSetPictureRight [101, [0], \"picture\"];</sqf>",
+    "<sqf>_ctrl tvSetPictureRight [[0], \"picture\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetPictureRight",
+  "problem_notes": [],
+  "see_also": [
+    "tvPictureRight",
+    "tvSetPicture",
+    "tvPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "name"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "picture texture",
+              "name": "name",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "name"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "picture texture",
+              "name": "name",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

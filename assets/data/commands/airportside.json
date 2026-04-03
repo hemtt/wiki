@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the side of an airport, set by [[setAirportSide]]. Default side is [[sideUnknown]].\n{{Feature|informative|See [[Arma: Airport IDs]] for a list of airport ids.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _airportSide = airportSide 0;</sqf>"
+  ],
+  "groups": [
+    "Sides",
+    "Roads and Airports"
+  ],
+  "name": "airportSide",
+  "problem_notes": [
+    "When used on a non-existent airport id:",
+    "negative numbers will always return [[sideUnknown]]",
+    "positive numbers may return [[east]], [[west]], [[resistance]], [[sideEmpty]], [[sideUnknown]], [[sideAmbientLife]], or 'ERROR' (see [[#Notes|Notes]])."
+  ],
+  "see_also": [
+    "Arma:",
+    "Airport",
+    "IDs",
+    "setAirportSide",
+    "land",
+    "landAt",
+    "assignToAirport",
+    "allAirports"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "id"
+      },
+      "ret": {
+        "type": "Side"
+      },
+      "right": {
+        "Item": {
+          "name": "id",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "target"
+      },
+      "ret": {
+        "type": "Side"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

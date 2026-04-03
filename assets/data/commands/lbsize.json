@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the number of items in a [[CT_LISTBOX]] or [[CT_COMBO]] control. For [[CT_TOOLBOX]] size see [[lnbSize]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_size = lbSize 101;</sqf>",
+    "<sqf>_size = lbSize _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbSize",
+  "problem_notes": [],
+  "see_also": [
+    "lbAdd",
+    "lbClear",
+    "lbColor",
+    "lbCurSel",
+    "lbData",
+    "lbDelete",
+    "lbIsSelected",
+    "lbPicture",
+    "lbSelection",
+    "lbSetColor",
+    "lbSetCurSel",
+    "lbSetData",
+    "lbSetPicture",
+    "lbSetSelected",
+    "lbSetTooltip",
+    "lbSetValue",
+    "lbSort",
+    "lbSortByValue",
+    "lbText",
+    "lbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "control's id",
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

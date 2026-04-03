@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all [[itemsWithMagazines]] from the uniform, vest and backpack. Command essentially clears all unit's containers.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>removeAllItemsWithMagazines player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "Containers"
+  ],
+  "name": "removeAllItemsWithMagazines",
+  "problem_notes": [],
+  "see_also": [
+    "itemsWithMagazines",
+    "items"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

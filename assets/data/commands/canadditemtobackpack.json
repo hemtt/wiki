@@ -1,0 +1,113 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if given object can be stored into soldier's backpack.\n\n{{Feature|important|\nAvoid passing an empty string <sqf inline>\"\"</sqf> to this command as it will create a warning dialog:\n[[File:a3 warning badvehicletype.jpg|none|alt= Warning Message: Bad vehicle type|Warning Message: Bad vehicle type]]\nThis message will show once per mission restart.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (player canAddItemToBackpack \"HandGrenade\") then { player addItemToBackpack _item } else { hint \"no room!\" };</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "name": "canAddItemToBackpack",
+  "problem_notes": [],
+  "see_also": [
+    "canAdd",
+    "canAddItemToUniform",
+    "canAddItemToVest",
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "item",
+            "count",
+            "ignoreSoldierMaxLoad"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "item",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "count",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to ignore 'soldierMaxLoad' param, container [[maxLoad]] is still counted.",
+              "name": "ignoreSoldierMaxLoad",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.56"
+      }
+    }
+  ]
+}

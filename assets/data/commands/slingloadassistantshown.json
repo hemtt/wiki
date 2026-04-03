@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if Sling Load Assistant is open.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nwaitUntil { slingLoadAssistantShown };\nhint \"You lack rudimentary motor skills and basic eye-hand coordination.\"; // scold user for unethical practices\n</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "name": "slingLoadAssistantShown",
+  "problem_notes": [],
+  "see_also": [
+    "ropes",
+    "canSlingLoad",
+    "enableRopeAttach",
+    "getSlingLoad",
+    "ropeAttachedObjects",
+    "ropeAttachTo",
+    "ropeDestroy",
+    "ropeLength",
+    "ropeUnwound",
+    "ropeAttachedTo",
+    "ropeCreate",
+    "ropeDetach",
+    "ropeAttachEnabled",
+    "ropeCut",
+    "ropeEndPosition",
+    "ropeUnwind"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[[true]] if sling load assistant is shown, [[false]] otherwise",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

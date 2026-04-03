@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array with all groups of given side.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _allBluforGroups = groups blufor; // equivalent of allGroups select { side _x == blufor };</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "name": "groups",
+  "problem_notes": [],
+  "see_also": [
+    "group",
+    "allGroups",
+    "units",
+    "allUnits"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "side"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Group"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      }
+    }
+  ]
+}

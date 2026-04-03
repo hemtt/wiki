@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns name of the current Steam profile. For currently chosen user profile name see [[profileName]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mySteamProfileName = profileNameSteam;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "profileNameSteam",
+  "problem_notes": [],
+  "see_also": [
+    "profileName",
+    "getPlayerUID",
+    "name"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

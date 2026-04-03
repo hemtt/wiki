@@ -1,0 +1,74 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the additional integer value of the item with the given index of the [[CT_LISTBOX]] or [[CT_COMBO]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_value = lbValue [101, 0];</sqf>",
+    "<sqf>_value = _control lbValue 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbValue",
+  "problem_notes": [],
+  "see_also": [
+    "lbSetValue",
+    "lbSortByValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "desc": "only integers",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "only integers",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

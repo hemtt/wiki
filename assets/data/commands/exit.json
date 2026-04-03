@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Stops the execution of a [[SQS Syntax|SQS script]].\n\nIt is ignored in [[SQF Syntax|SQF Scripts]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "[[SQS Syntax]]:\n<sqs>? not alive player : exit</sqs>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "exit",
+  "problem_notes": [],
+  "see_also": [
+    "exitWith",
+    "Control",
+    "Structures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggle secondary obstruction test on road paths.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>useAIOperMapObstructionTest true;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "useAIOperMapObstructionTest",
+  "problem_notes": [],
+  "see_also": [
+    "forceFollowRoad",
+    "setDriveOnPath",
+    "setConvoySeparation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "state"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to enable, [[false]] to disable",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

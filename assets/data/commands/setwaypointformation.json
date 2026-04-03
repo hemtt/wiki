@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Switches the group formation when the waypoint becomes active.\n<br>\n<br>\nPossible values are: \n* \"NO CHANGE\"\n* \"COLUMN\"\n* \"STAG COLUMN\"\n* \"WEDGE\"\n* \"ECH LEFT\"\n* \"ECH RIGHT\"\n* \"VEE\"\n* \"LINE\"\n* \"FILE\"\n* \"DIAMOND\"",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointFormation \"LINE\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "setWaypointFormation",
+  "problem_notes": [],
+  "see_also": [
+    "Mission_Editor:_Waypoints#Formation|formations",
+    "description",
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "formation"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "formation",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

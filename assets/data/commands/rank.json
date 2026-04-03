@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the rank of the given unit. Rank can be one of the following:\n* {{hl|\"PRIVATE\"}}\n* {{hl|\"CORPORAL\"}}\n* {{hl|\"SERGEANT\"}}\n* {{hl|\"LIEUTENANT\"}}\n* {{hl|\"CAPTAIN\"}}\n* {{hl|\"MAJOR\"}}\n* {{hl|\"COLONEL\"}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_rank = rank player;</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "name": "rank",
+  "problem_notes": [],
+  "see_also": [
+    "rankId",
+    "rating",
+    "addRating",
+    "setUnitRank",
+    "ArmA:",
+    "Rating",
+    "Values|Rating",
+    "Values"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Registers new log file recording a network traffic and returns handle of the log. The log file is saved inside the {{arma3}} root folder.\n{{Feature|important|[[logNetwork]] can potentially create a large log file.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_handle = logNetwork [\"myLog.txt\", [\"\"]];</sqf>"
+  ],
+  "groups": [
+    "Multiplayer",
+    "Diagnostic"
+  ],
+  "name": "logNetwork",
+  "problem_notes": [],
+  "see_also": [
+    "logNetworkTerminate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "logFile",
+          "filter"
+        ]
+      },
+      "ret": {
+        "desc": "handle for the logging",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "where to store the log",
+              "name": "logFile",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) ????",
+              "name": "filter",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "String"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

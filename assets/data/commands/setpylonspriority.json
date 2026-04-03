@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Overrides default pylons priorities.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>(vehicle player) setPylonsPriority [0,1,2,3,4,5,5,4,3,2,1,0];</sqf>"
+  ],
+  "groups": [
+    "Vehicle Loadouts"
+  ],
+  "name": "setPylonsPriority",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "Loadouts",
+    "getCompatiblePylonMagazines",
+    "getPylonMagazines",
+    "setAmmoOnPylon",
+    "ammoOnPylon",
+    "animatePylon",
+    "animateBay",
+    "setPylonLoadout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "priorities"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "priorities",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Array]] containing [[DIK_KeyCodes|dikCodes]] of keys, buttons and combos assigned to the given user action. Action names could be found in config class ControllerSchemes or [[:Category:Key Actions|user action names]] or user profile, for example:\n<syntaxhighlight lang=\"cpp\">\nkeyWatch[] = { 24 };\n</syntaxhighlight>\nTo retrieve the value, use the property name without 'key':\n<sqf>actionKeys \"Watch\"; // 24</sqf>\nIn addition, some of the actions are also listed in here: [[inputAction/actions]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_arrayOfNumbers = actionKeys \"ReloadMagazine\";</sqf>",
+    "From {{arma3}} v2.08: <sqf>_arrayOfStrings = actionKeys [\"ReloadMagazine\"];</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "name": "actionKeys",
+  "problem_notes": [],
+  "see_also": [
+    "actionKeysNames",
+    "actionKeysNamesArray",
+    "actionKeysImages",
+    "actionName",
+    "inputAction",
+    "addUserActionEventHandler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "userAction"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "userAction",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "userAction"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "userAction",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.8"
+      }
+    }
+  ]
+}

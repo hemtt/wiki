@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return child control with specified idc.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_displayControl = _ParentDisplay displayCtrl 101;</sqf>",
+    "<sqf>_dialogControl = displayCtrl 101;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "displayCtrl",
+  "problem_notes": [],
+  "see_also": [
+    "findDisplay",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp",
+    "displayParent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "display",
+          "idc"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "type": "Control"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Control"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "2.6"
+      }
+    }
+  ]
+}

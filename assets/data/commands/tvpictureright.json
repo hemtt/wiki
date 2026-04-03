@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the right picture of a [[CT_TREE]] on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _result = _controlTV tvPictureRight [0, 0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvPictureRight",
+  "problem_notes": [],
+  "see_also": [
+    "tvSetPictureRight",
+    "tvSetPicture",
+    "tvPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "desc": "path to picture",
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "path to picture",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

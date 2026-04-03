@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the target depth level for swimming soldier. Depth should be a negative number.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>soldier swimInDepth -20;</sqf>",
+    "<sqf>\nbob swimInDepth -10;\nbob doMove ASLToAGL getPosASL player;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "swimInDepth",
+  "problem_notes": [],
+  "see_also": [
+    "underwater"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

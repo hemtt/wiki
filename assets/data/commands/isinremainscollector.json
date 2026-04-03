@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Global",
+  "description": "Checks if unit or vehicle is queued for disposal after death.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (isInRemainsCollector unit1) then {hint \"unit1 is queued for disposal\"};</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "isInRemainsCollector",
+  "problem_notes": [],
+  "see_also": [
+    "addToRemainsCollector",
+    "removeFromRemainsCollector",
+    "diag_remainsCollector"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "remain"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle or unit",
+          "name": "remain",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all map airports, both static and dynamic.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_airplane landAt selectRandom (allAirports select 0);</sqf>"
+  ],
+  "groups": [
+    "Roads and Airports"
+  ],
+  "name": "allAirports",
+  "problem_notes": [],
+  "see_also": [
+    "airportSide",
+    "setAirportSide",
+    "land",
+    "landAt",
+    "assignToAirport",
+    "Arma:",
+    "Airport",
+    "IDs"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "static airports IDs",
+              "name": "staticAirports",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            },
+            {
+              "desc": "dynamic airports objects (such as \"DynamicAirport_01_F\" found on aircraft carrier)",
+              "name": "dynamicAirports",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Object"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

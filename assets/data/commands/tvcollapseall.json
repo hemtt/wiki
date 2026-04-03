@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Local",
+  "description": "Collapses all tree items for the given Tree View.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvCollapseAll 101;</sqf>",
+    "<sqf>tvCollapseAll _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvCollapseAll",
+  "problem_notes": [],
+  "see_also": [
+    "tvExpandAll",
+    "tvCollapse",
+    "tvAdd",
+    "tvClear",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

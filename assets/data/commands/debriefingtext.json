@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns debriefing text of provided end.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_deathText = debriefingText \"endDeath\";</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "debriefingText",
+  "problem_notes": [],
+  "see_also": [
+    "setDebriefingText",
+    "disableDebriefingStats",
+    "enableDebriefingStats"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "end"
+      },
+      "ret": {
+        "desc": "''end'' debriefing text. If it does not exist in config, empty string is returned.",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "end",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

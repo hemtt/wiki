@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Local",
+  "description": "Return the list of objects synchronized with the given unit.\n{{Feature|Informative|[[synchronizedObjects]] only works on triggers and entities with AI (logics, soldiers/players, or vehicles that contain soldiers as the effective commander)}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_objects = synchronizedObjects _logic;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "synchronizedObjects",
+  "problem_notes": [],
+  "see_also": [
+    "synchronizeObjectsAdd",
+    "synchronizeObjectsRemove",
+    "synchronizedTriggers",
+    "synchronizedWaypoints"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

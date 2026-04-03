@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Local",
+  "description": "Force player to run/jog if set to false.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player allowSprint false;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "name": "allowSprint",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina",
+    "isSprintAllowed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

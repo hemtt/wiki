@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return a list of all UAV vehicles.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"Number of UAV(s) on the map: %1\", count allUnitsUAV];</sqf>",
+    "<sqf>{ _x setDamage 1 } forEach allUnitsUAV;</sqf>"
+  ],
+  "groups": [
+    "Remote Control",
+    "Object Detection"
+  ],
+  "name": "allUnitsUAV",
+  "problem_notes": [],
+  "see_also": [
+    "unitIsUAV",
+    "allCurators",
+    "allGroups",
+    "allDead",
+    "playableUnits",
+    "switchableUnits",
+    "vehicles",
+    "allDeadMen",
+    "agents",
+    "showUAVFeed",
+    "shownUAVFeed",
+    "getConnectedUAV",
+    "UAVControl",
+    "connectTerminalToUAV",
+    "isUAVConnected"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "array of UAV vehicles",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

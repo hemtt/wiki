@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current game language.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_myLanguage = language; // will return \"English\" if game language is set to English</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "language",
+  "problem_notes": [],
+  "see_also": [
+    "Stringtable.xml",
+    "getTextRaw",
+    "localize",
+    "isLocalized",
+    "diag_localized",
+    "BIS_fnc_localize"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "see [[Stringtable.xml#Supported_Languages|supported languages]] for possible values",
+        "type": "String"
+      }
+    }
+  ]
+}

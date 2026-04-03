@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a list of all activated addons.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_addons = activatedAddons;</sqf>"
+  ],
+  "groups": [
+    "Mods and Addons"
+  ],
+  "name": "activatedAddons",
+  "problem_notes": [],
+  "see_also": [
+    "activateAddons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      }
+    }
+  ]
+}

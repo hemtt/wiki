@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[buildingPos]] index assigned to the waypoint.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waypointHousePosition [groupOne,1];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "waypointHousePosition",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "waypointPosition",
+    "setWaypointHousePosition",
+    "buildingPos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "desc": "[[buildingPos]] index",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

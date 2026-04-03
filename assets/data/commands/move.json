@@ -1,0 +1,78 @@
+{
+  "argument_loc": "Local",
+  "description": "Let group move to given position. Active waypoints will be ignored when command is used.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_groupOne move position player;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "move",
+  "problem_notes": [],
+  "see_also": [
+    "doMove",
+    "commandMove",
+    "addWaypoint"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "group",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dATL"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

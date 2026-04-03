@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the rotation and elevation limits for the given turret.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _turretLimits = m2 getTurretLimits [0];\n_turretLimits params [\"_minTurn\", \"_maxTurn\", \"_minElev\", \"_maxElev\", \"_overridden\"];\n</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "name": "getTurretLimits",
+  "problem_notes": [],
+  "see_also": [
+    "setTurretLimits",
+    "setTurretOpticsMode",
+    "turretLocal",
+    "selectWeaponTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "turret"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle the turret belongs to",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "from 0 to -angle in degrees (left)",
+              "name": "minTurn",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "from 0 to +angle in degrees (right)",
+              "name": "maxTurn",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "from 0 to -angle in degrees (down)",
+              "name": "minElev",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "from 0 to +angle in degrees (up)",
+              "name": "maxElev",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "if custom limits were applied",
+              "name": "overridden",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "turret",
+          "type": "TurretPath"
+        }
+      }
+    }
+  ]
+}

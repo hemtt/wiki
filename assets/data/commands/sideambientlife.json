@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns side of ambient life, for example ambient life placed in [[:Category:Eden Editor|Eden Editor]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_sideAmbientLife = sideAmbientLife;</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "sideAmbientLife",
+  "problem_notes": [],
+  "see_also": [
+    "side",
+    "west",
+    "blufor",
+    "east",
+    "opfor",
+    "resistance",
+    "independent",
+    "civilian",
+    "sideLogic",
+    "sideFriendly",
+    "sideEnemy",
+    "sideUnknown",
+    "playerSide",
+    "sideEmpty"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

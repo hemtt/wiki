@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a sling loading from a helicopter to an entity if possible. To unload cargo, pass [[objNull]] as second param. {{Feature|informative|FROM object has to be a helicoper, alive with [[enableRopeAttach | rope attachment]] enabled, TO object has to be an entity, alive with [[enableRopeAttach | rope attachment]] enabled.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_success = heli1 setSlingLoad veh1;</sqf>",
+    "To unload cargo:\n<sqf>_success = heli setSlingLoad objNull;</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "name": "setSlingLoad",
+  "problem_notes": [],
+  "see_also": [
+    "ropes",
+    "canSlingLoad",
+    "enableRopeAttach",
+    "getSlingLoad",
+    "ropeAttachedObjects",
+    "ropeAttachTo",
+    "ropeDestroy",
+    "ropeLength",
+    "ropeUnwound",
+    "ropeAttachedTo",
+    "ropeCreate",
+    "ropeDetach",
+    "ropeAttachEnabled",
+    "ropeCut",
+    "ropeEndPosition",
+    "ropeUnwind",
+    "slingLoadAssistantShown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "heli",
+          "cargo"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the helicopter slinging the load",
+          "name": "heli",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "the cargo load entity",
+          "name": "cargo",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

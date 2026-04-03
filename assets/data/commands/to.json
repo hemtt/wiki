@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Continue sequence of [[for]] construct. It sets the end value of the index variable.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nfor \"_i\" from 10 to 20 do\n{\n\thint str _i; // will hint from 10 to 20, spaced by 1 second\n\tsleep 1;\n};\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "to",
+  "problem_notes": [],
+  "see_also": [
+    "Control",
+    "Structures",
+    "for",
+    "from",
+    "step"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "forType",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "forType",
+          "type": "ForType"
+        }
+      },
+      "ret": {
+        "type": "ForType"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

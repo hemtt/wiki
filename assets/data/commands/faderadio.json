@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the radio volume smoothly within the given time. {{Feature|informative|The player's in-game setting is not changed by this command: {{hl|Final Volume {{=}} Client Setting * Scripted Volume}}.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>5 fadeRadio 0.1;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "fadeRadio",
+  "problem_notes": [],
+  "see_also": [
+    "fadeSound",
+    "fadeMusic",
+    "fadeSpeech",
+    "fadeEnvironment",
+    "environmentVolume",
+    "radioVolume",
+    "soundVolume",
+    "musicVolume"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "volume"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "fade interval in seconds",
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "radio volume",
+          "name": "volume",
+          "type": {
+            "NumberRange": [
+              0,
+              2
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Global",
+  "description": "Count how many units in the array are considered friendly to the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_num = player countFriendly list _triggerOne;</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "countFriendly",
+  "problem_notes": [],
+  "see_also": [
+    "count",
+    "countEnemy",
+    "countUnknown",
+    "countSide",
+    "countType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "others"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "others",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Global",
+  "description": "Get marker text.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"Marker Text: %1\", markerText \"Marker1\"];</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "markerText",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerText",
+    "setMarkerTextLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

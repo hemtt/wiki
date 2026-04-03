@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Select given group in [[High Command|high command]] bar.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player hcSelectGroup [group_1,group_2];</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "name": "hcSelectGroup",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcAllGroups",
+    "hcGroupParams",
+    "hcLeader",
+    "hcRemoveAllGroups",
+    "hcRemoveGroup",
+    "hcSelected",
+    "hcSetGroup",
+    "hcShowBar",
+    "hcShownBar",
+    "onHCGroupSelectionChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "array"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "HC Owner",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Group"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

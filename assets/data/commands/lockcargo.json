@@ -1,0 +1,83 @@
+{
+  "argument_loc": "Local",
+  "description": "Lock all cargo positions of a vehicle or lock by index.\nThis command will remove user \"get in\" action (not get out) but will also stop player getting into vehicle via script commands (e.g [[moveInCargo]]) unlike [[lock]] command.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>vehicleName lockCargo true;</sqf>",
+    "<sqf>vehicleName lockCargo [0, true];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "lockCargo",
+  "problem_notes": [],
+  "see_also": [
+    "lock",
+    "setVehicleLock",
+    "lockDriver",
+    "lockedCargo",
+    "lockTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "lock"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "lock",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "index",
+            "lock"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "lock",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

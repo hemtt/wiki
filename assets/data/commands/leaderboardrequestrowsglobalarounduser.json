@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Requests given leaderboard to download values around the user position in the table.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isGettingValues = leaderboardRequestRowsGlobalAroundUser [\"TT01\", -5, 10];</sqf>"
+  ],
+  "groups": [
+    "Leaderboards"
+  ],
+  "name": "leaderboardRequestRowsGlobalAroundUser",
+  "problem_notes": [],
+  "see_also": [
+    "leaderboardGetRows",
+    "leaderboardInit",
+    "leaderboardRequestRowsFriends",
+    "leaderboardRequestRowsGlobal",
+    "leaderboardsRequestUploadScore",
+    "leaderboardsRequestUploadScoreKeepBest",
+    "leaderboardState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "leaderboard",
+          "offset",
+          "rows"
+        ]
+      },
+      "ret": {
+        "desc": "returns [[true]] if request has been started",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the leaderboard",
+              "name": "leaderboard",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "offset from user position.",
+              "name": "offset",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "defines how many rows are requested",
+              "name": "rows",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

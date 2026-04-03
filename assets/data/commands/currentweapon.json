@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the name of the currently selected weapon (on the primary turret for vehicles).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_weaponClass = currentWeapon (vehicle player);//Example: \"M16A2GL\"</sqf>",
+    "<sqf>_weaponClass = currentWeapon player;</sqf>"
+  ],
+  "groups": [
+    "Weapons",
+    "Unit Inventory"
+  ],
+  "name": "currentWeapon",
+  "problem_notes": [],
+  "see_also": [
+    "currentMagazine",
+    "currentMuzzle",
+    "currentThrowable",
+    "currentVisionMode",
+    "currentWeaponMode",
+    "currentZeroing",
+    "magazinesTurret",
+    "weaponsTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

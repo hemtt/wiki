@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes group from unit's [[High Command|high command]] bar.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player hcRemoveGroup BIS_group;</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "name": "hcRemoveGroup",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcAllGroups",
+    "hcGroupParams",
+    "hcLeader",
+    "hcRemoveAllGroups",
+    "hcSelected",
+    "hcSelectGroup",
+    "hcSetGroup",
+    "hcShowBar",
+    "hcShownBar",
+    "onHCGroupSelectionChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "group"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

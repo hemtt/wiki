@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Loads the given file as a [[Config]], allowing easy processing of the config file contents using commands such as [[configClasses]], [[configProperties]], [[config greater greater name|>>]], etc. It can load [[Rvmat File Format|.rvmat]], .bisurf, [[CPP File Format|.cpp]], [[BIN File Formats|.bin]], [[Mission.sqm|.sqm]], and [[Description.ext|description.ext]] files (both binarized and unbinarized configs are supported).\n{{Feature|important|\n* Config loading can be very slow; the config should only be loaded once and cached, e.g in a [[HashMap]] of {{hl|File Path &rarr; Config}} pairs (see {{Link|#Example 3}}).\n* It is advised to store the generated config in a variable, otherwise it will get destroyed if it is not being referenced directly (see {{Link|#Example 2}}).\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _cfg = loadConfig \"a3\\data_f\\default_super.rvmat\"; // note: very slow! ~0.1200 ms on tested system\ngetText (_cfg >> \"Stage2\" >> \"uvSource\");\n</sqf>",
+    "<sqf>\n// INCORRECT - the config is destroyed after the first operator >> accesses it\ngetNumber (loadConfig \"mission.sqm\" >> \"ScenarioData\" >> \"respawnDelay\");\n\n// CORRECT - the config is destroyed only when the variable _cfg is destroyed\n_cfg = loadConfig \"mission.sqm\";\ngetNumber (_cfg >> \"ScenarioData\" >> \"respawnDelay\");\n</sqf>",
+    "<sqf>\n// using a hashmap to cache loaded configs, since loading configs is very slow and should be done once.\nprivate _fnc_loadConfig = {\n\tparams [\"_path\"];\n\t// initialize cache if not initialized yet\n\tif (isNil \"TAG_configCache\") then\n\t{\n\t\tTAG_configCache = createHashMap;\n\t};\n\tprivate _cfg = TAG_configCache getOrDefault [_path, configNull];\n\t// if path doesn't exist in the cache or cfg is null, load the config\n\tif (isNull _cfg) then\n\t{\n\t\t_cfg = loadConfig _path;\n\t\tTAG_configCache set [_path, _cfg];\n\t};\n\t_cfg;\n};\n// the first call will be slow (~0.1200 ms), but subsequent calls are fast (~0.0050 ms)\n[\"a3\\data_f\\default_super.rvmat\"] call _fnc_loadConfig;\n</sqf>",
+    "<sqf>\n// converting a config into hashmap\nprivate _fnc_convertClass = {\n\tparams [\"_cfgClass\"];\n\n\tprivate _result = createHashMap;\n\tprivate _props = configProperties [_cfgClass, \"true\", true];\n\t// note: Hashmaps are case-sensitive so configName cases have to be consistent (e.g. all lowercase)\n\t{\n\t\tif (isNumber _x)\tthen { _result set [toLowerANSI configName _x, getNumber _x];\tcontinue; };\n\t\tif (isText _x)\t\tthen { _result set [toLowerANSI configName _x, getText _x];\t\tcontinue; };\n\t\tif (isArray _x)\t\tthen { _result set [toLowerANSI configName _x, getArray _x];\tcontinue; };\n\t} forEach _props;\n\n\tprivate _classes = \"true\" configClasses _cfgClass;\n\t{\n\t\t_result set [toLowerANSI configName _x, _x call _fnc_convertClass];\n\t} forEach _classes;\n\n\t_result;\n};\n\nprivate _cfg = loadConfig \"mission.sqm\";\nprivate _cfgMap = _cfg call _fnc_convertClass;\n\n// the following expression is similar to getNumber(_cfg >> \"EditorData\" >> \"moveGridStep\")\n// note that all strings are lowercase (which is how they were stored in hashmap)\n_cfgMap get \"editordata\" get \"movegridstep\";\n</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "name": "loadConfig",
+  "problem_notes": [],
+  "see_also": [
+    "loadFile",
+    "config",
+    "greater",
+    "greater",
+    "name|>>",
+    "configFile",
+    "configClasses",
+    "isText",
+    "isNumber",
+    "isArray",
+    "isClass",
+    "configName",
+    "getText",
+    "getNumber",
+    "getArray"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "path"
+      },
+      "ret": {
+        "desc": "loaded config. Returns [[configNull]] if the file doesn't exist.",
+        "type": "Config"
+      },
+      "right": {
+        "Item": {
+          "desc": "path to the file, which should be in a valid config format.",
+          "name": "path",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

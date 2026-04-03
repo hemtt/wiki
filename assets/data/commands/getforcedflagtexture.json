@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[forceFlagTexture]]. Forced texture is different from your normal flag texture, which can be retrieved with [[flagTexture]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getForcedFlagTexture player;</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "name": "getForcedFlagTexture",
+  "problem_notes": [],
+  "see_also": [
+    "forceFlagTexture",
+    "Arma",
+    "3:",
+    "Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle, unit or flag pole",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

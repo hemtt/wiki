@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Runs given statement every frame in an [[Scheduler#Unscheduled Environment|unscheduled environment]].\n{{Feature|arma3|\nIn order to keep compatibility between official and community content:\n* Since {{arma3}} v1.58 a stackable version of this EH is available: [[Arma 3: Mission Event Handlers#EachFrame|EachFrame Mission Event Handler]]\n* Before that, the scripted version of the event handler should be used instead (using [[BIS_fnc_addStackedEventHandler]] and [[BIS_fnc_removeStackedEventHandler]]).\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>onEachFrame { hintSilent str getPosWorld player }; // hints position every frame</sqf>",
+    "Private variables defined outside of the [[onEachFrame]] scope are not inherited:\n<sqf>\n_myVar = \"bob\";\nMyVar = \"bill\";\nonEachFrame { hintSilent str [_myVar, MyVar]; };\n// Result: [any, \"bill\"]\n</sqf>",
+    "Only one [[onEachFrame]] loop can exist at any time:\n<sqf>\nonEachFrame { player sideChat \"first\"; };\nonEachFrame { player sideChat \"second\"; };\t// replaces the first one\nonEachFrame {};\t\t\t\t\t\t\t\t// reset to the initial state\n</sqf>",
+    "Script suspension is not permitted within [[onEachFrame]] scope:\n<sqf>\n// will throw an error\nonEachFrame { sleep 1; };\n</sqf>",
+    "<sqf>\nonEachFrame { if (diag_frameNo mod 60 isEqualTo 0) then { /* code */ } };\t// executes every 60 frames (every second @ 60 FPS, every two seconds @ 30 FPS, etc)\n\nonEachFrame {\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// this version is the closest to a precise 1 second tick\n\tif (isNil \"TAG_LastHint\") then\n\t{\n\t\tTAG_LastHint = diag_tickTime;\n\t}\n\telse\n\t{\n\t\tif (diag_tickTime - TAG_LastHint >= 1) then // set the duration in seconds here\n\t\t{\n\t\t\thint format [\"a second has passed (%1s since game start)\", diag_tickTime];\n\t\t\tTAG_LastHint = diag_tickTime;\n\t\t};\n\t};\n};\n</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "name": "onEachFrame",
+  "problem_notes": [],
+  "see_also": [
+    "diag_frameNo",
+    "diag_fps"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "statement"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "statement",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

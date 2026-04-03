@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Global",
+  "description": "Get list of all available magazines of artillery units on the list. Command returns only unique magazine types and doesn't contain any information about which unit has which magazine.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (\"8Rnd_82mm_Mo_Flare_white\" in getArtilleryAmmo [\n\t_mortar1,\n\t_mortar2,\n\t_mortar3, \n\t_mortar4\n]) then\n{\n\thint \"Sir, we have white flares, Sir!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Artillery"
+  ],
+  "name": "getArtilleryAmmo",
+  "problem_notes": [],
+  "see_also": [
+    "getArtilleryETA",
+    "commandArtilleryFire",
+    "doArtilleryFire",
+    "enableEngineArtillery",
+    "getArtilleryComputerSettings",
+    "shownArtilleryComputer",
+    "inRangeOfArtillery"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "artilleryList"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "artilleryList",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

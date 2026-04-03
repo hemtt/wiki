@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Executes the given command recursively for each team that is a member of the given team. For just agents use [[forEachMemberAgent]]. For both teams and agents use [[forEachMember]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    ""
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "forEachMemberTeam",
+  "problem_notes": [],
+  "see_also": [
+    "addTeamMember",
+    "createTeam",
+    "deleteTeam",
+    "removeTeamMember",
+    "teamMember",
+    "teamName",
+    "teams",
+    "teamType",
+    "forEachMember",
+    "forEachMemberAgent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "command",
+          "team"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "command",
+          "type": "Code"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "team",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

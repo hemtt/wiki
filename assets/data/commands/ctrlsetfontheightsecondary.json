@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the font size of the secondary text of given control.",
+  "effect_loc": "Local",
+  "examples": [
+    "_control [[ctrlSetFontHeightSecondary]] 0.05;"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlSetFontHeightSecondary",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFontP",
+    "ctrlSetFontSecondary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

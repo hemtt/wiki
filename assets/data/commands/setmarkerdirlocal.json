@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the orientation of the marker.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\"Marker1\" setMarkerDirLocal 90;</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "setMarkerDirLocal",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerDir",
+    "markerDir"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "angle"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "angle of the marker in degree",
+          "name": "angle",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

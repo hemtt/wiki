@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the density of ambient cars in a rectangle (in cars per kilometer). {{Feature|arma3|This command does nothing in {{arma3}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setTrafficDensity [40, 31000, 32000, 30000, 32000];</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "setTrafficDensity",
+  "problem_notes": [],
+  "see_also": [
+    "enableTraffic",
+    "setTrafficDistance",
+    "setTrafficGap",
+    "setTrafficSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "density",
+          "xMin",
+          "xMax",
+          "zMin",
+          "zMax"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "density (in cars per kilometer)",
+              "name": "density",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "western border of the affected rectangle",
+              "name": "xMin",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "eastern border of the affected rectangle",
+              "name": "xMax",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "southern border of the affected rectangle",
+              "name": "zMin",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "northern border of the affected rectangle",
+              "name": "zMax",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

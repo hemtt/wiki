@@ -1,0 +1,92 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds new submenu entry into item on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuAdd [[], \"Custom Tools\"]; // Add new entry at the top level to the menu strip in Eden Editor</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuAdd",
+  "problem_notes": [],
+  "see_also": [
+    "menuDelete"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "text"
+        ]
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "text"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "index of the item",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "path where the items should be added",
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "displayed name for the entry",
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

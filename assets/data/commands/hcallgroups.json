@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns selected groups in [[High Command|high command]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hcAllGroups player;</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "name": "hcAllGroups",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcGroupParams",
+    "hcLeader",
+    "hcRemoveAllGroups",
+    "hcRemoveGroup",
+    "hcSelected",
+    "hcSelectGroup",
+    "hcSetGroup",
+    "hcShowBar",
+    "hcShownBar",
+    "onHCGroupSelectionChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Group"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "commander",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

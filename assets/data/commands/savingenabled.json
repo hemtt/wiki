@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if saving the game is enabled.\n{{Feature|arma3|If saving is disabled by [[:Category:Eden Editor|Eden Editor]] mission attribute, this command will still return [[true]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (savingEnabled) then\n{\n\thint \"Saving is enabled!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "name": "savingEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "enableSaving",
+    "loadGame",
+    "saveGame",
+    "isSaving"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

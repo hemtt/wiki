@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Local",
+  "description": "Toggles stress damage in [[Description.ext#forceRotorLibSimulation | Advanced Flight Model]], which otherwise could be manually toggles in game setting: {{hl|Options &gt; Game &gt; Helicopter Flight Model &gt; Advanced &gt; Stress Damage}}.\n{{Feature|afm}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>if (difficultyEnabledRTD) then { enableStressDamage true };</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "name": "enableStressDamage",
+  "problem_notes": [],
+  "see_also": [
+    "Description.ext#forceRotorLibSimulation",
+    "|",
+    "forceRotorLibSimulation",
+    "difficultyEnabledRTD",
+    "isStressDamageEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "state"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to enable stress damage, [[false]] to disable it",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets picture to item selected by path. IDC means id of parent Tree View. Name is picture name. The picture is searched in the mission directory.\n{{Feature|informative|\n* Adding pictures to lists is very slow. In order to prevent the filling of the list to be slowed down, add the pictures in a '''scheduled''' environment - See {{Link|#Example 3}}.\nOne drawback of this method is that sorting the entries is not easily possible.\n* If not all items have a picture but you still want them to be aligned at the front, use a [[Procedural Textures|Procedural Texture]] that is transparent {{hl|#(rgb,32,32,3)color(1,1,1,0)}}.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tvSetPicture [101, [0], \"picture\"];</sqf>",
+    "<sqf>_ctrl tvSetPicture [[0,0,0], getText (configFile >> \"CfgWeapons\" >> \"optic_NVS\" >> \"picture\")];</sqf>",
+    "Adding images in a scheduled environment:\n<sqf>\nprivate _path = _ctrlTV tvAdd [[], \"Some Entry\"];\n[_ctrlTV, _path] spawn {\n\t(_this select 0) tvSetPictureRight [[_this select 1], \"someImage.paa\"];\n};\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetPicture",
+  "problem_notes": [],
+  "see_also": [
+    "tvPicture",
+    "tvSetPictureColor",
+    "tvSetPictureRight",
+    "tvSetPictureRightColor"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "name"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "name",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "name"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "name",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

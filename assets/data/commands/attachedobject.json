@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the object a location is attached to. If the location is unattached, then [[objNull]] is returned.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_locAttachedObj = attachedObject myLocation;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "attachedObject",
+  "problem_notes": [],
+  "see_also": [
+    "attachObject",
+    "attachTo",
+    "attachedObjects",
+    "attachedTo",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "lightAttachObject",
+    "triggerAttachVehicle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "location"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      }
+    }
+  ]
+}

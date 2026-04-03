@@ -1,0 +1,25 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the current lightnings value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Get the current ''lightnings'' value:<sqf>_lightningsVal = lightnings;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "lightnings",
+  "problem_notes": [],
+  "see_also": [
+    "setLightnings"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

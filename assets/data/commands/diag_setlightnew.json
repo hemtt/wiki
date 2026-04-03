@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Overrides currently used scene lighting. The operand is config that is placed as a string (not file).\nThe changes may not be applied immediately, but can be forced by the call of [[simulWeatherSync]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_setLightNew \"sunOrMoon = 1; diffuse[] = { 0, 0, 0, 0 }; diffuseCloud[] = { 0, 0, 0, 0 }; ambient[] = { 0, 0, 0, 0 }; ... \";</sqf>"
+  ],
+  "groups": [
+    "Lights",
+    "Diagnostic"
+  ],
+  "name": "diag_setLightNew",
+  "problem_notes": [],
+  "see_also": [
+    "diag_lightNewLoad"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "config"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "config in string form",
+          "name": "config",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

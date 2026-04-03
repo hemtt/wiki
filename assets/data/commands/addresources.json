@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds resources to a team member.",
+  "effect_loc": "Local",
+  "examples": [
+    ""
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "addResources",
+  "problem_notes": [],
+  "see_also": [
+    "resources",
+    "deleteResources"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "teamMember",
+          [
+            "resourceN"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "name": "resourceN",
+                  "type": "String"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

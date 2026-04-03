@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the formation leader of a given unit.\nThis is often the same as the group leader, but not always, for example in cases when a unit is ordered to follow another unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (formLeader player != leader player) then\n{\n\thint \"The formation leader is different to the group leader!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "formLeader",
+  "problem_notes": [],
+  "see_also": [
+    "commandFollow",
+    "doFollow",
+    "formationLeader",
+    "isFormationLeader",
+    "leader",
+    "selectLeader",
+    "setLeader"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "desc": "the leader of the formation is returned. If used on a dead unit, the returned value is [[objNull]]",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

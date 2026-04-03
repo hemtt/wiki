@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns [[true]] if manual fire is on. Manual fire could either be selected in vehicle action menu (if available) or with [[action]] \"ManualFire\" and \"ManualFireCancel\". Always returns [[false]] for a soldier.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_bool = isManualFire vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "name": "isManualFire",
+  "problem_notes": [],
+  "see_also": [
+    "fire",
+    "doFire",
+    "commandFire",
+    "canFire",
+    "fireAtTarget",
+    "forceWeaponFire",
+    "commandArtilleryFire",
+    "commandSuppressiveFire",
+    "doArtilleryFire",
+    "doSuppressiveFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicleName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

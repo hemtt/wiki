@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if the code context is being remote executed by [[remoteExec]] or [[remoteExecCall]]. In SP always returns [[false]]. See also [[isRemoteExecutedJIP]]:\n:{{{!}} class=\"wikitable align-center align-left-col-1 align-center-row-1\"\n! rowspan=\"2\" {{!}} command\n! rowspan=\"2\" {{!}} Single Player\n! colspan=\"2\" {{!}} Multiplayer\n{{!}}-\n! Direct remoteExec\n! JIP remoteExec\n{{!}}-\n{{!}} [[isRemoteExecuted]]\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} [[isRemoteExecutedJIP]]\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _remoteExecuted = isRemoteExecuted;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "isRemoteExecuted",
+  "problem_notes": [],
+  "see_also": [
+    "isRemoteExecutedJIP",
+    "remoteExec",
+    "remoteExecCall",
+    "canSuspend",
+    "remoteExecutedOwner",
+    "isUIContext",
+    "isGamePaused",
+    "isGameFocused",
+    "remoteExecutedJIPID"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

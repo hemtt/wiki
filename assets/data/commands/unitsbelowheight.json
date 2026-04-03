@@ -1,0 +1,84 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns units in group/array below given Above Terrain Level (ATL) altitude.\n{{Feature|informative|an object's ATL altitude can be found with <sqf inline>_altitude = (getPosATL _obj) select 2;</sqf>.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_allOnGroudUnits = group player unitsBelowHeight 10;</sqf>",
+    "<sqf>_units = allUnits unitsBelowHeight 30;</sqf>"
+  ],
+  "groups": [
+    "Object Detection",
+    "Positions"
+  ],
+  "name": "unitsBelowHeight",
+  "problem_notes": [],
+  "see_also": [
+    "allUnits",
+    "getPosATL",
+    "group"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "units",
+          "height"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "units",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "height above terrain level ([[Position#PositionATL|PositionATL]])",
+          "name": "height",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "height"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "AI group",
+          "name": "group",
+          "type": "Group"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "height above terrain level ([[Position#PositionATL|PositionATL]])",
+          "name": "height",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

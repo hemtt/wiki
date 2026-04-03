@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of all vehicles available to current client. This command returns both empty and crewed vehicles <u>but not soldiers</u>. It will also return \"WeaponHolderSimulated\" of dead bodies (weapon on the ground). Vehicles created with [[createVehicleLocal]] will only be returned on the client that created them.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_vehicles = vehicles;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "name": "vehicles",
+  "problem_notes": [],
+  "see_also": [
+    "allGroups",
+    "allUnits",
+    "units",
+    "entities",
+    "agents",
+    "playableUnits",
+    "switchableUnits",
+    "allPlayers",
+    "allDead",
+    "allDeadMen",
+    "allUnitsUAV",
+    "allCurators",
+    "allObjects",
+    "allMissionObjects",
+    "allSimpleObjects",
+    "allMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

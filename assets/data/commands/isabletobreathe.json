@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "If unit is diving and doesn't have a rebreather, it returns [[false]].\nDiving means the unit's head is underwater. If unit is underwater and has a rebreather, the command returns [[true]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_canBreath = isAbleToBreathe player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "isAbleToBreathe",
+  "problem_notes": [],
+  "see_also": [
+    "underwater"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove all event handlers from the given display.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 46 displayRemoveAllEventHandlers \"KeyDown\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Event Handlers",
+    "Event Handlers"
+  ],
+  "name": "displayRemoveAllEventHandlers",
+  "problem_notes": [],
+  "see_also": [
+    "displayAddEventHandler",
+    "displayRemoveEventHandler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "display",
+          "eventName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "eventName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes [[Eden Editor: Connecting|connection]] between entities.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>remove3DENConnection [\"RandomStart\", get3DENSelected \"Object\", \"marker_0\"];// Remove random start on marker \"marker_0\" from all selected objects.</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "remove3DENConnection",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENConnection",
+    "get3DENConnections"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "from",
+          "to"
+        ]
+      },
+      "ret": {
+        "desc": "[[true]] If the connection was removed",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "connection class from ''Cfg3DEN >> Connections''",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "entities which has a connection",
+              "name": "from",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "EdenEntity"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "connection target",
+              "name": "to",
+              "type": "EdenEntity"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

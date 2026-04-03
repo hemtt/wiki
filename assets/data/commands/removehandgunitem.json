@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes given weapon item, including magazine, from the [[handgunWeapon]]",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeHandgunItem \"muzzle_snds_L\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeHandgunItem",
+  "problem_notes": [],
+  "see_also": [
+    "addHandgunItem",
+    "removeAllHandgunItems",
+    "removePrimaryWeaponItem",
+    "removeSecondaryWeaponItem",
+    "removeBinocularItem"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "config class",
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

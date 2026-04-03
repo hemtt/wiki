@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the incapacitated sub-state of the given unit, when the [[lifeState]] of the unit is \"INCAPACITATED\". Could be one of:\n* \"UNCONSCIOUS\"\n* \"MOVING\"\n* \"SHOOTING\"",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_result = incapacitatedState player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "incapacitatedState",
+  "problem_notes": [],
+  "see_also": [
+    "setUnconscious",
+    "lifeState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "desc": "incapacitated sub-state (see description) or empty string \"\"",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

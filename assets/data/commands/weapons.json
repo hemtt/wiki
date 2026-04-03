@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of names of all unit's weapons.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_wArray = weapons player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "Vehicle Inventory"
+  ],
+  "name": "weapons",
+  "problem_notes": [],
+  "see_also": [
+    "magazines",
+    "weaponsTurret",
+    "assignedVehicleRole",
+    "weaponState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "weapon class names",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

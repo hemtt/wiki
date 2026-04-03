@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the name of the given task.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _taskName = taskName _mytask;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "taskName",
+  "problem_notes": [],
+  "see_also": [
+    "taskType",
+    "createSimpleTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "task"
+      },
+      "ret": {
+        "desc": "task name",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      }
+    }
+  ]
+}

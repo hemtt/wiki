@@ -1,0 +1,23 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Opens MP interface.\n{{Feature|arma3|This command is not present in {{arma3}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>openDSInterface;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "openDSInterface",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

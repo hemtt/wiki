@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a cargo container of a unit's vest.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str vestContainer player; // 2df7d600# 163942: dummyweapon.p3d</sqf>",
+    "<sqf>\nhint str getMagazineCargo vestContainer player;\n/*\n\treturns e.g\n\t[\n\t\t[\n\t\t\t\"30Rnd_65x39_caseless_mag\",\n\t\t\t\"16Rnd_9x21_Mag\",\n\t\t\t\"HandGrenade\",\n\t\t\t\"APERSMine_Range_Mag\",\n\t\t\t\"SmokeShell\",\n\t\t\t\"SmokeShellGreen\",\n\t\t\t\"Chemlight_green\"\n\t\t],[\n\t\t\t2,\n\t\t\t2,\n\t\t\t2,\n\t\t\t3,\n\t\t\t1,\n\t\t\t1,\n\t\t\t2\n\t\t]\n\t]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Containers",
+    "Unit Inventory"
+  ],
+  "name": "vestContainer",
+  "problem_notes": [],
+  "see_also": [
+    "uniformContainer",
+    "backpackContainer",
+    "everyContainer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "cargo container or [[objNull]] if ''unit'' does not wear a vest",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

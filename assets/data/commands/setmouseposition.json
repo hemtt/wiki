@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Moves mouse pointer to specified position on the screen. '''x''' and '''y''' could be any number, but will be clipped so mouse never leaves the screen area.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setMousePosition [0.5, 0.5];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "setMousePosition",
+  "problem_notes": [],
+  "see_also": [
+    "getMousePosition",
+    "ctrlSetMousePosition",
+    "ctrlMousePosition",
+    "ctrlMapCursor",
+    "reversedMouseY"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "x",
+          "y"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "x in screen coordinates",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "y in screen coordinates",
+              "name": "y",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

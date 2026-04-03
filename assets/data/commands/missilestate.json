@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the provided ''guided'' missile's engine, target lock and flight profile states.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>missileState _myMissile params [\"_engineState\", \"_lockState\", \"_flightState\"];</sqf>",
+    "<sqf>\n_myHelicopter addEventHandler [\"Fired\", {\n\tprivate _projectile = _this select 6;\n\t// or params [\"\", \"\", \"\", \"\", \"\", \"\", \"_projectile\"];\n\tsystemChat str missileState _projectile;\n}];\n</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "name": "missileState",
+  "problem_notes": [],
+  "see_also": [
+    "missileTargetPos",
+    "setMissileTargetPos",
+    "setMissileTarget",
+    "missileTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "munition"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "one of \"INIT\", \"THRUST\", \"FLY\" or \"\"",
+              "name": "engineState",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "one of \"MANUAL\", \"LOCKED\", \"LOST\", \"INITIAL\", \"SEEKING\" or \"\"",
+              "name": "lockState",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "one of \"DEFAULT\", \"DIRECT\", \"TOPDOWN\", \"LOALDISTANCE\", \"LOALALTITUDE\", \"OVERFLY\", \"CRUISE\" or \"\" (LOAL stands for \"Lock-On After Launch\")",
+              "name": "flightState",
+              "since": null,
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "missile",
+          "name": "munition",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

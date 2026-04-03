@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets string representation of an object to a custom string.<br>\nWhen a vehicle is created and named in the editor, the name becomes both the variable containing the vehicle object and the string representation of the vehicle object.\nIn scripts an extra step is needed to achieve the same effect - see {{Link|#Example 1}}.\n\n{{Feature|arma3|This does not work with [[Arma 3: Simple Objects|Simple Objects]].}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nprivate _playersCar = vehicle player;\nsystemChat str _playersCar; // displays e.g \"ce06b00# 164274: offroad_01_unarmed_f.p3d\"\n\n_playersCar setVehicleVarName \"MyOffroad\";\nsystemChat str _playersCar;\t// displays \"MyOffroad\"\n\nisNil \"MyOffroad\";\t\t\t// true - the MyOffroad variable is not set\nMyOffroad = _playersCar;\t// now it is\npublicVariable \"MyOffroad\";\t// broadcasts it over the network\n</sqf>",
+    "<sqf>_offroad setVehicleVarName \"\"; // Reset string representation to the default value</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setVehicleVarName",
+  "problem_notes": [],
+  "see_also": [
+    "vehicleVarName",
+    "BIS_fnc_objectVar"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

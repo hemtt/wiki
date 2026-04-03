@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets the position of an object relative to the terrain.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player setPosATL [getPosATL player select 0, (getPosATL player select 1) - 10, getPosATL player select 2];</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "setPosATL",
+  "problem_notes": [],
+  "see_also": [
+    "getPosATL",
+    "getPos",
+    "getPosASL",
+    "setPos",
+    "setPosASL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "pos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "pos",
+          "type": "Position3dATL"
+        }
+      }
+    }
+  ]
+}

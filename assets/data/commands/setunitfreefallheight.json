@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets minimum freefall height AGL per unit, at which the unit assumes HALO pose. Engine default is 100m. Use -1 to reset the height to default.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player setUnitFreefallHeight 1000;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setUnitFreefallHeight",
+  "problem_notes": [],
+  "see_also": [
+    "getUnitFreefallInfo",
+    "getPosASL",
+    "ASLToAGL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "minHeight"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "min freefall height, -1 to set default",
+          "name": "minHeight",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

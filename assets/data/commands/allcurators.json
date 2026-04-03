@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns list of all curator logic units, not the units assigned to the logic.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_allCuratorLogics = allCurators;</sqf>"
+  ],
+  "groups": [
+    "Curator",
+    "Object Detection"
+  ],
+  "name": "allCurators",
+  "problem_notes": [],
+  "see_also": [
+    "allGroups",
+    "allDead",
+    "playableUnits",
+    "switchableUnits",
+    "vehicles",
+    "allUnitsUAV",
+    "allSites"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

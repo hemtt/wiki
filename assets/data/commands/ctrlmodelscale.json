@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns 3D control model scale.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_currentScale = ctrlModelScale _ctrl3D;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object",
+    "GUI Control - Positioning"
+  ],
+  "name": "ctrlModelScale",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlModelDirAndUp",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlSetModelDirAndUp",
+    "ctrlSetModelScale",
+    "ctrlPosition",
+    "ctrlScale",
+    "ctrlSetScale",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "vectorDir",
+    "vectorUp",
+    "setVectorDirAndUp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns ETA to the target in seconds for given artillery unit based on target position and used magazine, -1 if target can't be hit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mortar getArtilleryETA [getPos _target, getArtilleryAmmo [_mortar] select 0];</sqf>",
+    "<sqf>_mortar getArtilleryETA [position _target, currentMagazine _mortar];</sqf>"
+  ],
+  "groups": [
+    "Artillery"
+  ],
+  "name": "getArtilleryETA",
+  "problem_notes": [],
+  "see_also": [
+    "getArtilleryAmmo",
+    "commandArtilleryFire",
+    "doArtilleryFire",
+    "enableEngineArtillery",
+    "getArtilleryComputerSettings",
+    "shownArtilleryComputer",
+    "inRangeOfArtillery"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "targetPosition",
+            "magazineType"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "artillery unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "position of the target",
+              "name": "targetPosition",
+              "type": "Position3dAGLS"
+            }
+          },
+          {
+            "Item": {
+              "desc": "type of magazine used",
+              "name": "magazineType",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

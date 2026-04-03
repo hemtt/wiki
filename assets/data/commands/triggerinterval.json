@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns trigger condition check frequency in seconds. <br><br> \n\n{{Feature | important | The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger interval set up locally on the client that executed the command. See [[createTrigger]] for more info.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_interval = triggerInterval someTrigger;</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "name": "triggerInterval",
+  "problem_notes": [],
+  "see_also": [
+    "setTriggerInterval",
+    "createTrigger",
+    "enableSimulation",
+    "simulationEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "trigger"
+      },
+      "ret": {
+        "desc": "trigger interval in seconds",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "trigger object",
+          "name": "trigger",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

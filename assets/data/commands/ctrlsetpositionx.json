@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets horizontal position (x) of the 2D control. [[ctrlCommit]] is required to complete the operation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_ctrl ctrlSetPositionX 0.5;\n_ctrl ctrlCommit 1;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "ctrlSetPositionX",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetPosition",
+    "ctrlSetPositionY",
+    "ctrlSetPositionW",
+    "ctrlSetPositionH"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "x"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "2D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "horizontal position of the control",
+          "name": "x",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

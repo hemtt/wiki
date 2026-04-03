@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Triggers a {{Link|https://partner.steamgames.com/doc/features/timeline|Steam Timeline}} event within the {{Link|https://store.steampowered.com/gamerecording|Game Recording}} feature. Read [[Arma 3: Steam Game Recording]] for more information and a list of all available event icons.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>steamGameRecordingEvent [\"UnitKilled\", 0, [\"Player1\", \"50\"]]; //\"UnitKilled\" event, happening now, with arguments</sqf>",
+    "<sqf>steamGameRecordingEvent [\"ZeusUI\", 5, [], -5]; //Was in the Zeus UI during the last 5 seconds</sqf>",
+    "<sqf>steamGameRecordingEvent [\"StartGamePhase\", \"ArmaInvaders\"]; //Starting a game phase for [[Arma 3: Invaders]] with a unique ID</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "steamGameRecordingEvent",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Steam",
+    "Game",
+    "Recording"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "parameters"
+      },
+      "ret": {
+        "desc": "event handle (which can be used to edit an event after it has been triggered)",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "parameters",
+          "type": {
+            "ArraySized": [
+              {
+                "desc": "class in [[description.ext]] >> \"SteamGameRecording\" or config \"SteamManagerConfig\" >> \"GameRecording\" or a special utility string",
+                "name": "eventClass",
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": "0 for an instant event, or an amount of seconds this event lasted",
+                "name": "eventDuration",
+                "since": null,
+                "type": "Number"
+              },
+              {
+                "desc": "arguments that can be used to add dynamic info to the event (texts)",
+                "name": "eventArguments",
+                "since": null,
+                "type": {
+                  "ArrayUnsized": {
+                    "value": "String"
+                  }
+                }
+              },
+              {
+                "desc": "amount of seconds relative to the even trigger time",
+                "name": "startOffset",
+                "since": null,
+                "type": "Number"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

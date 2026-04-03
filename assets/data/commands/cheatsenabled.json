@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks whether cheats are enabled (whether the designers' version is running).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_enabled = cheatsEnabled;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "cheatsEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "ArmA:",
+    "Armed",
+    "Assault:",
+    "Cheats",
+    "Arma",
+    "3:",
+    "Cheats"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

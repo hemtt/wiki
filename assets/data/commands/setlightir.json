@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets lightpoint in infrared range.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>myLight setLightIR true; // visible with NVG only!</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "name": "setLightIR",
+  "problem_notes": [],
+  "see_also": [
+    "setLightColor",
+    "setLightAmbient",
+    "setLightBrightness",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightIntensity",
+    "setLightAttenuation",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightFlareMaxDistance",
+    "setLightDayLight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "light",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of class {{hl|\"#lightpoint\"}} or similar",
+          "name": "light",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to make it visible ''only'' with night vision goggles, [[false]] to make it a normal light",
+          "name": "value",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

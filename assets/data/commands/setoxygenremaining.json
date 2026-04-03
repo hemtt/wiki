@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets oxygen remaining. It has no effect when soldier is not diving.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (!isAbleToBreathe player) then\n{\n\tplayer setOxygenRemaining 0; // drowns player\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setOxygenRemaining",
+  "problem_notes": [],
+  "see_also": [
+    "isAbleToBreathe",
+    "getOxygenRemaining"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": {
+            "NumberRange": [
+              0,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

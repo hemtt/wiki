@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if client has Map enabled in [[Description.ext|description.ext]] (''showMap'' param) or force enabled with [[showMap]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (shownMap) then {hint \"You have Map enabled\"};</sqf>"
+  ],
+  "groups": [
+    "Map"
+  ],
+  "name": "shownMap",
+  "problem_notes": [],
+  "see_also": [
+    "showMap",
+    "visibleMap",
+    "forceMap",
+    "shownGPS",
+    "shownWatch",
+    "shownCompass",
+    "shownUAVFeed",
+    "shownHUD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

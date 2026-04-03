@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets the speaker of a person.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>unit1 setSpeaker \"Male02GRE\";</sqf>"
+  ],
+  "groups": [
+    "Unit Identity",
+    "Sounds"
+  ],
+  "name": "setSpeaker",
+  "problem_notes": [],
+  "see_also": [
+    "speaker",
+    "disableConversation",
+    "enableRadio",
+    "enableSentences",
+    "showSubtitles",
+    "setIdentity",
+    "setFace",
+    "hasCustomFace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "person",
+          "speaker"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the used voice type, see [[Arma 3: CfgIdentities#Speakers|{{arma3}} Speakers]]",
+          "name": "speaker",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

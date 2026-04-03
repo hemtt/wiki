@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds a header line of controls according to the HeaderTemplate class. Note that rows and headers are indexed separately.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _array = ctAddHeader _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "name": "ctAddHeader",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "headerIndex",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "createdControls",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Control"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets the [[nameSound]] of a person. By default, when giving orders, the units are addressed by their number.\nWhen nameSound is set, it will be used instead to address the unit. For example instead of \"Two, hold fire!\", one can have \"Miller, hold fire!\".\n\n{{Feature|informative|\nSee {{Link|Arma 3: CfgIdentities#NameSounds}} for common values.<br>\nNote that any word from <sqf inline>configFile >> \"RadioProtocolENG\" >> \"Words\"</sqf> is accepted (e.g {{hl|\"veh_infantry_Sniper_s\"}}).\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>unit1 setNameSound \"dixon\";</sqf>",
+    "<sqf>unit1 setNameSound \"\"; // will reset to default behaviour</sqf>",
+    "<sqf>\n_name = \"Masood\";\nunit1 setNameSound _name;\nunit1 setName _name;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "name": "setNameSound",
+  "problem_notes": [],
+  "see_also": [
+    "nameSound",
+    "name",
+    "setName",
+    "setIdentity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "person",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

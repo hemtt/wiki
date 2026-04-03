@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[enableDynamicSimulationSystem]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str dynamicSimulationSystemEnabled;</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "name": "dynamicSimulationSystemEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "enableDynamicSimulationSystem",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation",
+    "enableSimulation",
+    "simulationEnabled",
+    "enableSimulationGlobal",
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

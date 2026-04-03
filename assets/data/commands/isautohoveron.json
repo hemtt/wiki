@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return [[true]] if vehicle has enabled auto hover. (always returns false if the vehicle can't set auto hover)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isOn = isAutoHoverOn vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "isAutoHoverOn",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Makes sure that a sound can start playing without any delay once it is needed.\nCommand works in {{arma3}} but might not be implemented in earlier {{arma}} installments.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _sounds = getArray (missionConfigFile >> \"CfgSounds\" >> \"sounds\");\nwaitUntil { _sounds findIf { !(preloadSound _x) } == -1 };\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "preloadSound",
+  "problem_notes": [],
+  "see_also": [
+    "preloadTitleRsc"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "soundName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "soundName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A non-existing network object. {{Feature|informative|'''NetObject''' data type was never implemented in {{arma3}} - this command always returns [[false]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Variables"
+  ],
+  "name": "netObjNull",
+  "problem_notes": [],
+  "see_also": [
+    "objNull"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "always returns [[false]]",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

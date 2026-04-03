@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the state of game simulation. Simulation can get paused by pressing {{Controls|Alt|Tab}} or a system dialog opening (e.g. {{Controls|Esc}} menu).\nSimulation will not get paused if {{hl|-noPause}} [[Arma 3: Startup Parameters|startup parameter]] is used.\n{{Feature|informative|[[onEachFrame]] event and {{hl|\"EachFrame\"}} event handler continue to execute when the simulation is paused, which could result in undesired backlog. Use [[isGamePaused]] to skip loop if needed.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nonEachFrame \n{\n\tif (isGamePaused) exitWith {};\n\t// ...do stuff\n};\n</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "isGamePaused",
+  "problem_notes": [],
+  "see_also": [
+    "isGameFocused"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "returns [[true]] if game simulation is paused, [[false]] if not",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

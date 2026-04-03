@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Save the current overlay.\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>saveOverlay _map;</sqf>"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "saveOverlay",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "map"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return workshop-compatible currently loaded mission file (path to mission.pbo, relative to game exe).\n\n{{Feature | Informative |\n* [[missionName]] will return the Workshop user-friendly mission name, whereas [[missionNameSource]] will take the information from [[Mission.sqm|mission.sqm]].\n* pre-v2.02 missions may return an empty string.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"You are playing mission \"\"%1\"\"\", missionNameSource];</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "name": "missionNameSource",
+  "problem_notes": [],
+  "see_also": [
+    "missionName",
+    "worldName",
+    "briefingName",
+    "serverName",
+    "worldSize"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Global",
+  "description": "Creates a headgear item and tries to link it to headgear slot. If slot is occupied with another item, the item in the slot will be replaced.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addHeadgear \"H_HelmetB\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "addHeadgear",
+  "problem_notes": [],
+  "see_also": [
+    "headgear",
+    "removeHeadgear"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

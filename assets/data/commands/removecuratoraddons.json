@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Restrict curator use of given addons.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorModule removeCuratorAddons [addon1, addon2];</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "removeCuratorAddons",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorAddons",
+    "removeAllCuratorAddons",
+    "curatorAddons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "addons"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "addons",
+          "type": {
+            "ArrayUnsized": {
+              "value": "String"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

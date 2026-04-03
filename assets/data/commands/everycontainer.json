@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of all containers (uniforms, vests, backpacks) stored in given crate or vehicle. Used for accessing containers content stored in ammo box or ground holder.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\neveryContainer cursorTarget;\n/*\n\treturns e.g\n\t[\n\t\t[\"V_PlateCarrier1_rgr\",2bc06b00# 163955: dummyweapon.p3d],\n\t\t[\"U_B_CombatUniform_mcam\",2bc07900# 163954: dummyweapon.p3d]\n\t]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "name": "everyContainer",
+  "problem_notes": [],
+  "see_also": [
+    "everyBackpack",
+    "uniformContainer",
+    "vestContainer",
+    "backpackContainer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "desc": "class name of the container",
+                  "name": "class",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "desc": "container object",
+                  "name": "container",
+                  "since": null,
+                  "type": "Object"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle or ammo box",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

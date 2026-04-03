@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the number of engines a helicopter has. {{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_engineCount = numberOfEnginesRTD vehicle player;</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "name": "numberOfEnginesRTD",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "helicopterRTD"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

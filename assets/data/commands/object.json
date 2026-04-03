@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Object]] with given id. Object's id can be checked in mission editor.\n{{Feature|important|This command was removed as of {{arma1}} '''v1.08'''; for later versions and titles, use [[nearestObject]] command family instead.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_object = object 1;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "name": "object",
+  "problem_notes": [],
+  "see_also": [
+    "nearestObjects",
+    "nearObjectsReady",
+    "nearObjects",
+    "nearestObject"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "id"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "id",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

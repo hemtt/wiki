@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes backpack from a unit. (even non-local)",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>removeBackpackGlobal player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeBackpackGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "removeBackpack",
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "soldier",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

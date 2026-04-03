@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets maximum load limit for a uniform/vest/backpack containers, vehicle cargo, supply boxes and weapon holders. In MP this command should be executed on the server and will persist on given container for JIP.\n{{Feature|informative|Cannot be set on a unit, as unit max load value is static config type}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_yaMum setMaxLoad _maxLoad;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "setMaxLoad",
+  "problem_notes": [],
+  "see_also": [
+    "maxLoad",
+    "load",
+    "loadAbs",
+    "loadBackpack",
+    "loadUniform",
+    "loadVest",
+    "getContainerMaxLoad"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "container",
+          "maxLoadValue"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "uniform/vest/backpack container, vehicle cargo, supply box, weapon holder",
+          "name": "container",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "max load limit",
+          "name": "maxLoadValue",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

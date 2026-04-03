@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns forced speed set with [[forceSpeed]] or -1 if not set.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_spd = getForcedSpeed _heli;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "getForcedSpeed",
+  "problem_notes": [],
+  "see_also": [
+    "forceSpeed",
+    "getSpeed",
+    "forceWalk"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

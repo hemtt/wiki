@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current speech volume (set by [[fadeSpeech]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str speechVolume;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "speechVolume",
+  "problem_notes": [],
+  "see_also": [
+    "fadeSpeech",
+    "musicVolume",
+    "soundVolume",
+    "radioVolume",
+    "environmentVolume",
+    "getAudioOptionVolumes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "NumberRange": [
+            0,
+            2
+          ]
+        }
+      }
+    }
+  ]
+}

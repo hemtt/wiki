@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Compiles [[String]] expression into [[Code]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_string = \"a = a + 1\";\n_code = compile _string;\ncall _code;\n</sqf>",
+    "<sqf>\nhint str compile \"a = b\";\n// result: { a = b }\n</sqf>"
+  ],
+  "groups": [
+    "Strings"
+  ],
+  "name": "compile",
+  "problem_notes": [],
+  "see_also": [
+    "call",
+    "spawn",
+    "compileFinal",
+    "compileScript",
+    "parseSimpleArray",
+    "isFinal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "expression"
+      },
+      "ret": {
+        "desc": "compiled expression",
+        "type": "Code"
+      },
+      "right": {
+        "Item": {
+          "desc": "expression to be compiled",
+          "name": "expression",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

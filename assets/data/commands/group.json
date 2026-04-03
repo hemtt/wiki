@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the group a unit is assigned to.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_playerGrp = group player;</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "name": "group",
+  "problem_notes": [],
+  "see_also": [
+    "local",
+    "join",
+    "leader",
+    "units",
+    "allGroups",
+    "groups",
+    "groupID",
+    "setGroupId",
+    "setGroupIdGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "for dead units, the returned group equals [[grpNull]].",
+        "type": "Group"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the index of the selected item of the [[CT_LISTBOX]], [[CT_LISTNBOX]], [[CT_COMBO]] or [[CT_TOOLBOX]]. For [[CT_LISTBOX]] with multi selection enabled use [[lbSelection]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_index = lbCurSel 101;</sqf>",
+    "<sqf>lbCurSel _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbCurSel",
+  "problem_notes": [],
+  "see_also": [
+    "lbIsSelected",
+    "lbSelection",
+    "lbSetCurSel"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "desc": "selected index (row) or -1 if nothing is selected",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "desc": "selected index (row) or -1 if nothing is selected",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

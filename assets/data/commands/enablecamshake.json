@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Allows camera shake effects via [[addCamShake]]. If set to [[false]], then a currently active shake effect will stop immediately.\nBy default, shake effects are enabled, but once they have been disabled by this command, they will have to be enabled first, in order to be visible.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>enableCamShake false;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "enableCamShake",
+  "problem_notes": [],
+  "see_also": [
+    "addCamShake",
+    "setCamShakeDefParams",
+    "setCamShakeParams",
+    "resetCamShake"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "value"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "if [[true]], shake effects are visible",
+          "name": "value",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

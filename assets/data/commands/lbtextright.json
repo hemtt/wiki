@@ -1,0 +1,90 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the shown right text in the item with the given index of the listbox or combobox with id idc of the topmost user [[dialog]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_text = lbTextRight [101, 0];</sqf>",
+    "<sqf>_text = _control lbTextRight 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbTextRight",
+  "problem_notes": [],
+  "see_also": [
+    "lbSetTextRight",
+    "lbAdd",
+    "lbClear",
+    "lbColor",
+    "lbCurSel",
+    "lbData",
+    "lbDelete",
+    "lbIsSelected",
+    "lbPicture",
+    "lbSelection",
+    "lbSetColor",
+    "lbSetCurSel",
+    "lbSetData",
+    "lbSetPicture",
+    "lbSetSelected",
+    "lbSetTooltip",
+    "lbSetValue",
+    "lbSize",
+    "lbSort",
+    "lbSortByValue",
+    "lbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

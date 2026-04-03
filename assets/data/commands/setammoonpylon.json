@@ -1,0 +1,85 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set count of ammo in magazine on pylon (supports pylon name since Arma 3 v1.94)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setAmmoOnPylon [1, 12];</sqf>",
+    "<sqf>vehicle player setAmmoOnPylon [\"pylon1\", 12];</sqf>"
+  ],
+  "groups": [
+    "Vehicle Loadouts"
+  ],
+  "name": "setAmmoOnPylon",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "Loadouts",
+    "getCompatiblePylonMagazines",
+    "getPylonMagazines",
+    "animatePylon",
+    "animateBay",
+    "setPylonsPriority",
+    "setPylonLoadout",
+    "setMagazineTurretAmmo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "pylon",
+            "ammocount"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "pylon index (index starts from 1) or pylon name (see [[getCompatiblePylonMagazines]] Example 4)",
+              "name": "pylon",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "ammo count",
+              "name": "ammocount",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

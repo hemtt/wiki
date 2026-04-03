@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns total time the assets of the given DLC have been used. See [[:Category:Arma 3 DLCs & Expansions|Arma 3 DLCs & Expansions]] for a list of DLCs and ids.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _kartsUsage = getDLCUsageTime 288520;</sqf>"
+  ],
+  "groups": [
+    "DLC"
+  ],
+  "name": "getDLCUsageTime",
+  "problem_notes": [],
+  "see_also": [
+    "getDLCs",
+    "getObjectDLC",
+    "getPersonUsedDLCs",
+    "getMissionDLCs",
+    "getDLCAssetsUsageByName",
+    "getDLCAssetsUsage",
+    "getAssetDLCInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "appId"
+      },
+      "ret": {
+        "desc": "DLC assets usage time in seconds",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "DLC's Steam appId",
+          "name": "appId",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

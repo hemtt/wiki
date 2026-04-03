@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Restrict access to all addons for given curator.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>removeAllCuratorAddons myCurator;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "removeAllCuratorAddons",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorAddons",
+    "removeAllCuratorAddons",
+    "curatorAddons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curatorObj"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

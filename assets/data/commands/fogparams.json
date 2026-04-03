@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[setFog]] (Alt Syntax). Returns extended params for the fog",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _fog = fogParams;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "fogParams",
+  "problem_notes": [],
+  "see_also": [
+    "setFog",
+    "fog",
+    "fogForecast",
+    "rainParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "in [[setFog]] format: [fogValue, fogDecay, fogBase]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      }
+    }
+  ]
+}

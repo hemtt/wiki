@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the select color of given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control tvSetSelectColor [[0, 0], [1,1,1,0.5]];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetSelectColor",
+  "problem_notes": [],
+  "see_also": [
+    "tvSetColor"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            "path",
+            "color"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "path of the item",
+              "name": "path",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

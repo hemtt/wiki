@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Global",
+  "description": "Checks if fireplace is inflamed (burning) or not. To check if a unit is receiving damage from fire, use [[isBurning]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_inflamed = inflamed _fireplaceOne;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "inflamed",
+  "problem_notes": [],
+  "see_also": [
+    "inflame",
+    "isBurning"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "fireplace"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "fireplace",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

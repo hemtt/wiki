@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the type of the given task. A new task returns \"Default\" for the type.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_type = taskType (currentTask player);</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "taskType",
+  "problem_notes": [],
+  "see_also": [
+    "setSimpleTaskType",
+    "taskName",
+    "currentTask",
+    "setSimpleTaskCustomData",
+    "taskCustomData",
+    "Arma",
+    "3:",
+    "Task",
+    "Framework#Task",
+    "Overhaul|Tasks",
+    "Overhaul"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "task"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      }
+    }
+  ]
+}

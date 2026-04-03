@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sorts the ListBox entries by [[lbValue]]. The entries are sorted in ascending order. Also note that this command will mix up the entries randomly if multiple entries have the same value. In {{arma3}} use [[lbSortBy]] to avoid this problem.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lbSortByValue _control;</sqf>",
+    "<sqf>lbSortByValue 101;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbSortByValue",
+  "problem_notes": [],
+  "see_also": [
+    "lbSortBy",
+    "lbSort"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

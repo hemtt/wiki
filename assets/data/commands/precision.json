@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the movement precision of the given entity, how is the entity able to be precise when moving to given target.\n{{Feature|informative|See {{Link|CfgVehicles Config Reference#precision}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// used in formationCDanger.fsm\nif (getPosATL _this distance _dangerPos <= precision _this) then { /* ... */ };\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "precision",
+  "problem_notes": [],
+  "see_also": [
+    "visiblePositionASL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "desc": "accuracy in metres",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

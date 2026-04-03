@@ -1,0 +1,83 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array with the type names of all the unit's uniform magazines.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nmagazinesDetailUniform player;\n/*\n[\n\t\"6.5 mm 30Rnd Sand Mag(30/30)[id/cr:10000003/0]\",\n\t\"Chemlight (Green)(1/1)[id/cr:10000020/0]\"\n]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "magazinesDetailUniform",
+  "problem_notes": [],
+  "see_also": [
+    "magazinesDetail",
+    "magazinesDetailVest",
+    "magazinesDetailBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "unit",
+          "includeEmpty",
+          "includeLoaded"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "unit",
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to include empty magazines",
+              "name": "includeEmpty",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to include magazines loaded in weapons (Since Arma 3 v2.07.148195)",
+              "name": "includeLoaded",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.0"
+      }
+    }
+  ]
+}

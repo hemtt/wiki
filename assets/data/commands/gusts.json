@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the current gusts value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_gustsValue = gusts;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "gusts",
+  "problem_notes": [],
+  "see_also": [
+    "setGusts",
+    "windStr",
+    "wind"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "NumberRange": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  ]
+}

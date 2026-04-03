@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Get the speed for the given speed mode.\n\nSpeedMode can be:\n*\"AUTO\"\n*\"SLOW\"\n*\"NORMAL\"\n*\"FAST\"",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_spd = player getSpeed \"FAST\";</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "getSpeed",
+  "problem_notes": [],
+  "see_also": [
+    "forceWalk",
+    "isWalking",
+    "forceSpeed",
+    "isForcedWalk"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "speedMode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "m/s",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "speedMode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable/disable the artillery engine. This allows the user to use the artillery computer on mortar/artillery, and for AI to use it for indirect fire.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>enableEngineArtillery false;</sqf>"
+  ],
+  "groups": [
+    "Artillery"
+  ],
+  "name": "enableEngineArtillery",
+  "problem_notes": [],
+  "see_also": [
+    "shownArtilleryComputer",
+    "getArtilleryAmmo",
+    "commandArtilleryFire",
+    "doArtilleryFire",
+    "getArtilleryComputerSettings",
+    "getArtilleryETA",
+    "inRangeOfArtillery"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enabled"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enabled",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

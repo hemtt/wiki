@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns average framerate calculated over last 16 frames.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_log diag_fps;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic",
+    "Performance Profiling"
+  ],
+  "name": "diag_fps",
+  "problem_notes": [],
+  "see_also": [
+    "diag_fpsMin",
+    "diag_frameNo",
+    "diag_log",
+    "diag_tickTime",
+    "diag_deltaTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

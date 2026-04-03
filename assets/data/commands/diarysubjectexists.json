@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Local",
+  "description": "Checks whether given subject is present in the [[Diary]] of given player.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_exists = player diarySubjectExists \"subjectName\";</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "diarySubjectExists",
+  "problem_notes": [],
+  "see_also": [
+    "processDiaryLink",
+    "createDiaryLink",
+    "createDiaryRecord",
+    "createDiarySubject",
+    "allDiarySubjects"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "player",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "player",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

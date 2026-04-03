@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Plays music defined in [[Description.ext#CfgMusic|Description.ext's CfgMusic]] or config.cpp. If the ''musicName'' could not be found a message is logged into the .rpt file: {{hl|Music <''musicName''> not found}}.\n* [[Arma 3: CfgMusic]]\n* [[Arma 2: CfgMusic]]\n* [[ArmA: Armed Assault: CfgMusic]]\n* [[Operation Flashpoint: CfgMusic]]\n\n{{Feature|informative|To stop the music, use <sqf inline>playMusic \"\";</sqf>.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>playMusic \"RadioAmbient1\";</sqf>",
+    "<sqf>playMusic [\"RadioAmbient3\", 3]; // start to play from 00:00:03</sqf>",
+    "Play from 00:00:01 to 00:00:05:\n<sqf>\n0 spawn {\n\tplayMusic [\"RadioAmbient5\", 1];\n\tsleep 4;\n\tplayMusic \"\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "playMusic",
+  "problem_notes": [],
+  "see_also": [
+    "getMusicPlayedTime",
+    "playSound",
+    "say",
+    "createSoundSource",
+    "addMusicEventHandler",
+    "fadeMusic",
+    "Arma_3_Utilities#Jukebox|{{arma3}}",
+    "Jukebox",
+    "Utility"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "musicName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "music classname",
+          "name": "musicName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "musicName",
+          "start"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "music classname",
+              "name": "musicName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "start, in seconds. Can be negative.",
+              "name": "start",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

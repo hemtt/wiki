@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Local",
+  "description": "Switches headlights of a vehicle on/off. Note that the vehicle has to be [[Multiplayer Scripting#Locality|local]], for global variant use [[Arma 3: Actions]] \"[[Arma_3_Actions#LightOn|LightOn]]\"/\"[[Arma_3_Actions#LightOff|LightOff]]\"",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>car setPilotLight true;</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "name": "setPilotLight",
+  "problem_notes": [],
+  "see_also": [
+    "isLightOn",
+    "isCollisionLightOn",
+    "setCollisionLight",
+    "isIRLaserOn"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "set"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "set",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

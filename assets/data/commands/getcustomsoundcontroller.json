@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current value set to the controller (see [[setCustomSoundController]]).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getCustomSoundController [vehicle player, \"CustomSoundController1\"];</sqf>",
+    "<sqf>\nprivate _allCustomSoundControllers = [];\nfor \"_i\" from 1 to (getCustomSoundControllerCount vehicle player) do\n{\n\t_allCustomSoundControllers pushBack getCustomSoundController [vehicle player, format [\"CustomSoundController%1\", _i]];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "getCustomSoundController",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Sound",
+    "setCustomSoundController",
+    "getCustomSoundControllerCount",
+    "getSoundController",
+    "getSoundControllerResult",
+    "getAllSoundControllers",
+    "getEnvSoundController",
+    "getAllEnvSoundControllers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "vehicle",
+          "controller"
+        ]
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "a transport type vehicle. Does not work on characters or buildings",
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "name of custom sound controller - needs to be full string e.g \"CustomSoundController1\". It goes from \"CustomSoundController1\" to \"CustomSoundController32\"",
+              "name": "controller",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

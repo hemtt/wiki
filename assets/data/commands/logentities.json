@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a log file containing the list of all game entities in scene.\nThe file is created in the same directory as [[Crash_Files|.rpt file]].\n{{Feature|informative|[[BattlEye]]'s RCON variant of this command is {{hl|#logEntities}} (see also [[Multiplayer Server Commands]]).}}\nFile name example: {{hl|logEntities_4688_12-04-2014_12-19-39.log}}<br>\nFile content example: <spoiler text=\"Show example\">\n<pre>\n====================== Vehicles =======================\n\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:1, Out: 0, NetID:2:3, Pos: [2476.243896][73.782043], N:B_Soldier_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2471.500977][62.477680], N:Snake_random_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2489.192383][73.935181], N:Snake_random_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2487.953857][73.828362], N:Snake_random_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2800.174805][96.234093], N:Rabbit_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2825.378418][2.068635], N:Rabbit_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2888.919434][6.837101], N:Rabbit_F\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:0:0, Pos: [2910.756104][16.089361], N:Rabbit_F\n> Loc:0, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 1, AnyPl:0, Out: 0, NetID:2:0, Pos: [9.000000][9.000000], N:Logic\n\nTotal objects: 9\nStatistics objects: 9\n\nIsLocal: 8\nIsMarkedToDelete: 0\nIsDestroyed: 0\nIsDamageDestroyed: 0\nIsDamageDead: 0\nIsNotSimulated: 9\nIsVisible: 1\nIsAnyPlayer: 1\nIsOutsideMap: 0\n\n=================== Slow vehicles =====================\n\nTotal objects: 214\nStatistics objects: 0\n\nStatic objects are accounted in total object count but not included in statistics\n\nIsLocal: 0\nIsMarkedToDelete: 0\nIsDestroyed: 0\nIsDamageDestroyed: 0\nIsDamageDead: 0\nIsNotSimulated: 0\nIsVisible: 0\nIsAnyPlayer: 0\nIsOutsideMap: 0\n\n=================== Out vehicles ====================\n\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:2:1, Pos: [2476.243896][73.782043], N:Supply40\n> Loc:1, ForDel:0, Dstr:0, DmgDstr:0, DmgDead:0, Sim:1, Inv: 0, AnyPl:0, Out: 0, NetID:2:2, Pos: [2476.243896][73.782043], N:Supply140\n\nTotal objects: 2\nStatistics objects: 2\n\nIsLocal: 2\nIsMarkedToDelete: 0\nIsDestroyed: 0\nIsDamageDestroyed: 0\nIsDamageDead: 0\nIsNotSimulated: 2\nIsVisible: 0\nIsAnyPlayer: 0\nIsOutsideMap: 0\n</pre>\n</spoiler>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>logEntities;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "logEntities",
+  "problem_notes": [],
+  "see_also": [
+    "entities",
+    "nearEntities",
+    "diag_log",
+    "diag_fps",
+    "diag_fpsmin",
+    "diag_frameno",
+    "diag_tickTime",
+    "diag_captureFrame",
+    "exportJIPMessages"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

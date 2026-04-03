@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the new type of Logic object(s). For other objects use [[set3DENObjectType]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[get3DENSelected \"logic\" select 0] set3DENLogicType \"MiscOR_F\";</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "set3DENLogicType",
+  "problem_notes": [],
+  "see_also": [
+    "set3DENObjectType",
+    "get3DENMouseOver",
+    "add3DENConnection",
+    "add3DENEventHandler",
+    "all3DENEntities",
+    "collect3DENHistory",
+    "create3DENComposition",
+    "create3DENEntity",
+    "current3DENOperation",
+    "delete3DENEntities",
+    "do3DENAction",
+    "get3DENActionState",
+    "get3DENAttribute",
+    "get3DENCamera",
+    "get3DENConnections",
+    "get3DENEntityID",
+    "get3DENGrid",
+    "get3DENIconsVisible",
+    "get3DENLinesVisible",
+    "get3DENSelected",
+    "is3DEN",
+    "is3DENMultiplayer",
+    "move3DENCamera",
+    "remove3DENConnection",
+    "remove3DENEventHandler",
+    "removeAll3DENEventHandlers",
+    "set3DENAttributes",
+    "set3DENGrid",
+    "set3DENIconsVisible",
+    "set3DENLinesVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "objects",
+          "classname"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the cfgVehicles class",
+          "name": "classname",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

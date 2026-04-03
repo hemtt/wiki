@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "pi (180 degrees converted to [[Number#Radians|Radians]]).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_radians = 2 * pi; // Result is 6.2830</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "name": "pi",
+  "problem_notes": [],
+  "see_also": [
+    "tan",
+    "cos",
+    "sin"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

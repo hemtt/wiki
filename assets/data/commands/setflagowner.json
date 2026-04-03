@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets flag owner. When owner is set to [[objNull]] or any object other than a unit of class [[Models_%26_Classnames:_CfgVehicles_-_Class_Man|man]] or [[Game_Logic|logic]], flag is returned to the flagpole. A flag owned by a logic has no visual representation.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_flag1 setFlagOwner _soldier1;</sqf>",
+    "To return the flag back to the flag pole:\n<sqf>\n//Method 1: (set owner null)\nflag _flagCarrier setFlagOwner objNull;\n//Method 2: (set the flag mast as the owner)\nflag _flagCarrier setFlagOwner flag _flagCarrier;\n</sqf>"
+  ],
+  "groups": [
+    "Flags",
+    "Object Manipulation"
+  ],
+  "name": "setFlagOwner",
+  "problem_notes": [],
+  "see_also": [
+    "flag",
+    "flagOwner",
+    "setFlagSide",
+    "setFlagTexture",
+    "flagSide",
+    "flagTexture",
+    "forceFlagTexture",
+    "getForcedFlagTexture",
+    ":Category:Flag",
+    "Textures|Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "flag",
+          "owner"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "flag",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "owner",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

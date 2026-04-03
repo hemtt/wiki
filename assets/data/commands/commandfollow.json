@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Local",
+  "description": "Order the given unit(s) to follow another from his own group (via radio).\nIt can also be used to resume unit formation after e.g [[doStop]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_soldier1 commandFollow _soldier2;</sqf>",
+    "<sqf>(units group _leader - [_leader]) commandFollow _leader; // returns all the units (but the leader) to formation</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "commandFollow",
+  "problem_notes": [],
+  "see_also": [
+    "doFollow",
+    "formationLeader",
+    "formLeader",
+    "isFormationLeader",
+    "leader",
+    "selectLeader",
+    "setLeader"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "unitLead"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unitLead",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

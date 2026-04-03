@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Deletes menu entry on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>(findDisplay 313 displayCtrl 120) menuDelete [1]; // removes the second entry from Eden Editor menu strip. Restart Eden Editor to reset the menu.</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuDelete",
+  "problem_notes": [],
+  "see_also": [
+    "menuEnable",
+    "menuExpand",
+    "menuCollapse",
+    "menuSetData",
+    "menuSetValue",
+    "menuSetCheck",
+    "menuSetAction",
+    "menuAdd",
+    "menuHover",
+    "menuValue",
+    "menuURL",
+    "menuText",
+    "menuSort",
+    "menuSize",
+    "menuEnabled",
+    "menuChecked",
+    "menuAction",
+    "menuShortcutText",
+    "menuShortcut",
+    "menuPicture",
+    "menuData",
+    "menuClear",
+    "menuSetPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

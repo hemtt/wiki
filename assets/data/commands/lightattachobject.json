@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Global",
+  "description": "Attach light to given object at given position on object.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>myLight lightAttachObject [myVehicle, [-0.5,-0.25,1]];</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "name": "lightAttachObject",
+  "problem_notes": [],
+  "see_also": [
+    "setLightAmbient",
+    "setLightBrightness",
+    "lightDetachObject",
+    "setLightColor",
+    "setLightIntensity",
+    "setLightAttenuation",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightFlareMaxDistance",
+    "setLightDayLight",
+    "attachObject",
+    "attachTo",
+    "attachedObjects",
+    "attachedTo",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "triggerAttachVehicle",
+    "attachedObject"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "light",
+          [
+            "object",
+            "position"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "light",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "object",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

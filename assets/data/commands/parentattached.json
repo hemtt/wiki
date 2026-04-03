@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Local",
+  "description": "Get the parent of a [[attachChild]] attached child.",
+  "effect_loc": "Unspecified",
+  "examples": [],
+  "groups": [
+    "PhysX"
+  ],
+  "name": "parentAttached",
+  "problem_notes": [],
+  "see_also": [
+    "attachChild",
+    "childAttached"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "child"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "Must be a Transport vehicle like Car/Tank (Maybe helicopter/airplane works?).",
+          "name": "child",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

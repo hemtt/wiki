@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the PiP (Picture-in-Picture) view distance. This has no impact if PiP is disabled (see [[isPiPEnabled]]).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setPiPViewDistance 100;</sqf>",
+    "<sqf>setPiPViewDistance viewDistance;</sqf>",
+    "<sqf>setPiPViewDistance getObjectViewDistance;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "setPiPViewDistance",
+  "problem_notes": [],
+  "see_also": [
+    "getPiPViewDistance",
+    "setViewDistance",
+    "setObjectViewDistance",
+    "viewDistance",
+    "getObjectViewDistance"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "distance"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "distance in meters, minimum value is 100, maximum is [[viewDistance|current view distance]]",
+          "name": "distance",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return animation phase of door on vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_phase = heli doorPhase \"door_L\";</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "name": "doorPhase",
+  "problem_notes": [],
+  "see_also": [
+    "animateDoor",
+    "setFaceAnimation",
+    "animate",
+    "animationPhase",
+    "animateSource",
+    "animationSourcePhase",
+    "animationNames"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "door"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "door",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

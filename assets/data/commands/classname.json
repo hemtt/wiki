@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns short name of location. For config class name, see [[configName]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_shortName = className myLocation;</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "name": "className",
+  "problem_notes": [],
+  "see_also": [
+    "setText",
+    "createLocation",
+    "deleteLocation",
+    "drawLocation",
+    "locationPosition",
+    "locationNull",
+    "nearestLocation",
+    "nearestLocations",
+    "nearestLocationWithDubbing",
+    "name"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "location"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      }
+    }
+  ]
+}

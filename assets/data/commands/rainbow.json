@@ -1,0 +1,25 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current rainbow intensity.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _intensity = rainbow;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "rainbow",
+  "problem_notes": [],
+  "see_also": [
+    "setRainbow"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

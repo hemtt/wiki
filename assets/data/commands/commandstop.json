@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Global",
+  "description": "Order the given unit(s) to stop via radio. A stop command will never finish, the unit(s) will never be ready.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>commandStop _soldier1;</sqf>",
+    "<sqf>commandStop [_soldier1, _soldier2];</sqf>",
+    "<sqf>commandStop (units player);</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "name": "commandStop",
+  "problem_notes": [],
+  "see_also": [
+    "doStop",
+    "stopped",
+    "stop"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "target"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

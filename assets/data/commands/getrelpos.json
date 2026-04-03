@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns position that is given distance and relative direction away from original object. The alternative syntax available from Arma 3 v 2.14, returns the position offset of the attached object. If the animated memory point is used for attachment, the offset is calculated in [[Simulation_vs_Render_Time_Scope#Render_Time_Scope | render scope]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Find position 100 metres away at player's 3 o'clock:\n<sqf>_relpos = player getRelPos [100, 90];</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "getRelPos",
+  "problem_notes": [],
+  "see_also": [
+    "getPos",
+    "getPosASLVisual",
+    "getPosATLVisual",
+    "visiblePositionASL",
+    "visiblePosition",
+    "position",
+    "getPosATL",
+    "getPosASL",
+    "getPosASLW"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "distance",
+            "direction"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Position3dAGL"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "distance from object",
+              "name": "distance",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "direction relative to object's current direction",
+              "name": "direction",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "obj1",
+          "obj2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "parent object",
+          "name": "obj1",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Position3dRelative"
+      },
+      "right": {
+        "Item": {
+          "desc": "attached object",
+          "name": "obj2",
+          "type": "Object"
+        }
+      },
+      "since": {
+        "arma3": "2.14"
+      }
+    }
+  ]
+}

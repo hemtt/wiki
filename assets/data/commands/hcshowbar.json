@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Shows or hides [[High Command|high command]] bar. There must be some groups under HC command to show HC bar.{{Feature|arma3| Since Arma 3 v1.94 this command returns [[Nothing]] as it should}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hcShowBar true;</sqf>",
+    "<sqf>hcShowBar false;</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "name": "hcShowBar",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcAllGroups",
+    "hcGroupParams",
+    "hcLeader",
+    "hcRemoveAllGroups",
+    "hcRemoveGroup",
+    "hcSelected",
+    "hcSelectGroup",
+    "hcSetGroup",
+    "hcShownBar",
+    "onHCGroupSelectionChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "bool"
+      },
+      "ret": {
+        "desc": "(before {{GVI|arma3|1.94|size= 0.75}} this command returned [[Object]] of [[objNull | null]] value)",
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

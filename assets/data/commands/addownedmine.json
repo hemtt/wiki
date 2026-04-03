@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets ownership of a remotely detonatable mine to a unit. If the unit is a player, an action that allows the player to detonate the mine is added to the action menu.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player addOwnedMine _superMine;</sqf>"
+  ],
+  "groups": [
+    "Mines"
+  ],
+  "name": "addOwnedMine",
+  "problem_notes": [],
+  "see_also": [
+    "allMines",
+    "createMine",
+    "detectedMines",
+    "mineActive",
+    "getAllOwnedMines",
+    "removeOwnedMine",
+    "removeAllOwnedMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "mine"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the mine object",
+          "name": "mine",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

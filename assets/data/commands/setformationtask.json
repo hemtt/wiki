@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the current task of the formation member. {{Feature|arma2|This command is not available in {{arma2}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_unit setFormationTask \"MOVE\";</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "setFormationTask",
+  "problem_notes": [],
+  "see_also": [
+    "formationTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "task"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "task",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

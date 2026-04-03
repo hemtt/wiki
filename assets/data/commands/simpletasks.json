@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return all simple tasks assigned to given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_tasks = simpleTasks player;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "simpleTasks",
+  "problem_notes": [],
+  "see_also": [
+    "createSimpleTask",
+    "currentTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Task"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

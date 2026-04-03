@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Global",
+  "description": "Checks how much fuel is left in the gas tank of a vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (fuel vehicle player == 0) then { hint \"The vehicle is out of fuel!\" };</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "fuel",
+  "problem_notes": [],
+  "see_also": [
+    "setFuel",
+    "setFuelCargo",
+    "getFuelCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "0 (empty tank) to 1 (full tank).",
+        "type": {
+          "NumberRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

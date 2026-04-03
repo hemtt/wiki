@@ -1,0 +1,112 @@
+{
+  "argument_loc": "Local",
+  "description": "Immediately applies given animation to the unit. For a smooth transition from the current animation (by connecting animations successively, e.g {{hl|CurrentAnim -> Intermediate1 -> Intermediate2 -> TargetAnim}}), use [[playMove]] or [[playMoveNow]].\n{{Feature|informative|see [[:Category:Moves]] for respective games animations.}}\n\nThis command first resets the unit's animation states (including aiming state, gesture state, etc.) then puts the unit in the first frame of the animation (therefore showing no transition).\nIf an invalid animation is provided, the unit's animations will be reset but no new animation will be played (see {{Link|#Example 3}}).\n\n{{Feature|informative|It is a good practice to always use [[playMoveNow]] after [[switchMove]] to make sure the animation plays correctly when using the first syntax:\n<sqf>\n_unit switchMove \"myMove\";\n_unit playMoveNow \"myMove\";\n</sqf>\nThe alternative syntax does this automatically.\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "Prone:\n<sqf>player switchMove \"AmovPpneMstpSrasWrflDnon\";</sqf>",
+    "Sit player immediately and globally:\n<sqf>[player, \"AmovPsitMstpSlowWrflDnon\"] remoteExec [\"switchMove\"];</sqf>",
+    "Resets unit's animation:\n<sqf>_unit switchMove \"\";</sqf>",
+    "<sqf>\n// Create a dummy agent that copies your moves\nai1 = createAgent [typeOf player, getPosATL player, [], 0, \"NONE\"];\nai1 disableAI \"ALL\";\nonEachFrame\n{\n\tai1 setAnimSpeedCoef getAnimSpeedCoef player;\n\tai1 setVectorDir vectorDir player;\n\tprivate _m = animationState player;\n\tprivate _g = gestureState player;\n\tprivate _i = getUnitMovesInfo player;\n\tprivate _a = getUnitMovesInfo ai1;\n\t\n\tif (animationState ai1 != _m || abs(_i#1 - _a#1) > 0.1) then\n\t{\n\t\tai1 switchMove [_m, _i#0, _i#3, false];\n\t};\n\n\tif ((gestureState ai1 != _g || abs(_i#6 - _a#6) > 0.1) && (_g != \"<none>\" && _g find \"_player\" < 0)) then\n\t{\n\t\tai1 switchGesture [_g, _i#5, _i#8, false];\n\t};\n}\n</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "name": "switchMove",
+  "problem_notes": [],
+  "see_also": [
+    "switchGesture",
+    "playMove",
+    "playMoveNow",
+    "switchAction",
+    "playAction",
+    "playActionNow",
+    "animationState",
+    "getUnitMovesInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "person",
+          "moveName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit",
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "animation state (see [[animationState]])",
+          "name": "moveName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "person",
+          [
+            "moveName",
+            "time",
+            "blendFactor",
+            "resetAim"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit",
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "entry from {{hl|\"CfgMovesMaleSdr\" >> \"states\"}} or {{hl|\"CfgGesturesMale\" >> \"states\"}}",
+              "name": "moveName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 0) normalized time, in range 0..1, where 0 = beginning of the animation, and 1 = end of the animation",
+              "name": "time",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 1) how much to blend the current animation with the new animation, in range 0..1, where 0 = current animation, and 1 = new animation. When 1 is used, the switching is instant (not smooth), similar to the first syntax.",
+              "name": "blendFactor",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default true) whether the aim/head direction should be reset after switching",
+              "name": "resetAim",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

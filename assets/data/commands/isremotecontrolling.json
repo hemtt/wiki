@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns [[true]] if the given player is remote-controlling a unit.\n{{Feature|important|See also [[Remote Control Tutorial]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (isRemoteControlling player) then\n{\n\thint format [\"You are controlling %1\", remoteControlled player];\n}\nelse\n{\n\thint \"Why not remote-control something?\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Remote Control"
+  ],
+  "name": "isRemoteControlling",
+  "problem_notes": [],
+  "see_also": [
+    "remoteControl",
+    "remoteControlled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "desc": "[[true]] if the given player is remote controlling a unit",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "a player",
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current wind strength.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>10 setWindStr (0.5 * windStr);</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "windStr",
+  "problem_notes": [],
+  "see_also": [
+    "setWindStr",
+    "gusts",
+    "setGusts",
+    "setWind",
+    "setWindDir",
+    "setWindForce",
+    "wind",
+    "windDir"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

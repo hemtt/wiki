@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets a guided munition target position.\nThe munition must have {{hl|manualControl}} config entry to use this command.\nThe target position has to be inside the missile's configured targeting cone for the command to work.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>missile1 setMissileTargetPos unitAimPosition tank1;</sqf>",
+    "<sqf>\nprivate _missile = createVehicle [\"M_Scalpel_AT\", player modelToWorld [0,0,100], [], 0, \"CAN_COLLIDE\"];\n_missile setMissileTargetPos (player modelToWorld [0,100,0]);\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Weapons"
+  ],
+  "name": "setMissileTargetPos",
+  "problem_notes": [],
+  "see_also": [
+    "missileTargetPos",
+    "setMissileTarget",
+    "missileTarget",
+    "missileState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "munition",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "munition",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": "Position3dATL"
+        }
+      }
+    }
+  ]
+}

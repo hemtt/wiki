@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attaches the [[Waypoint]] to the provided vehicle [[Object]].\n{{Feature | important | Use this command to associate a transport with {{hl|\"GETIN\"}} waypoint, other types of waypoints might or might not work.\nSee also [[setWaypointType]] to set the waypoint type to \"GETIN\".}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp, 2] waypointAttachVehicle vehicle player;</sqf>",
+    "<sqf>((waypoints player) select 0) waypointAttachVehicle _soldier1;</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "waypointAttachVehicle",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "currentWaypoint",
+    "attachObject",
+    "attachTo",
+    "attachedObjects",
+    "attachedTo",
+    "lightAttachObject",
+    "triggerAttachVehicle",
+    "attachedObject"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "vehicleName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

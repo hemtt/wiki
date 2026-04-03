@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns class name of currently used binocular weapon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_binocs = binocular player; //Rangefinder</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "binocular",
+  "problem_notes": [],
+  "see_also": [
+    "binocularMagazine",
+    "binocularItems",
+    "addBinocularItem",
+    "removeBinocularItem",
+    "removeAllBinocularItems",
+    "headgear",
+    "goggles",
+    "hmd"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

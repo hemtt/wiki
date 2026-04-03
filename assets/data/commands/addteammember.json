@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Local",
+  "description": "Add given member to given team. Effect is local, unless both member and team are local to PC on which command is executed, then effect is global.\n\n<br><br> The same [[Team Member]] can be member of several different [[teams]] at the same time.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_team addTeamMember _teamMember;</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "addTeamMember",
+  "problem_notes": [],
+  "see_also": [
+    "createTeam",
+    "deleteTeam",
+    "forEachMemberTeam",
+    "removeTeamMember",
+    "teamMember",
+    "teamName",
+    "teams",
+    "teamType",
+    "forEachMember",
+    "forEachMemberAgent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "team",
+          "member"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "team",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "member",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

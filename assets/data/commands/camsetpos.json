@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the position of the given camera or seagull (see [[camCreate]]).\nIt is worth mentioning that camera position can also be set with [[setPos]], in which case it would be instant.\nWith [[camSetPos]] it is possible to make smooth position transition in time, defined with [[camCommit]], which is required in this case.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\n_cam camSetPos [2300, 1000, 130];\n_cam camCommit 10;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camSetPos",
+  "problem_notes": [],
+  "see_also": [
+    "camSetRelPos",
+    "setPos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\" or \"seagull\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "camera destination",
+          "name": "position",
+          "type": "Position3dAGL"
+        }
+      }
+    }
+  ]
+}

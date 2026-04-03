@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns root of campaign description.ext entries hierarchy.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_config = campaignConfigFile;</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "name": "campaignConfigFile",
+  "problem_notes": [],
+  "see_also": [
+    "configFile",
+    "missionConfigFile"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Config"
+      }
+    }
+  ]
+}

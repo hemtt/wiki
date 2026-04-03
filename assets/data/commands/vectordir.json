@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Global",
+  "description": "[[File:arma3_object-vectors.jpg|thumb|right|An object with its [[vectorDir]], [[vectorUp]] and [[vectorSide]] (vectors not to scale)]]\nReturns an object's direction vector in world space.\n\n{{Feature|important|The vector is '''not necessarily [[vectorNormalized|normalized]]'''. The [[vectorMagnitude|magnitude]] of the vector depends on the [[getObjectScale|object's scale]].}}\n\nFor an object facing one of the cardinal directions on perfectly flat ground (parallel to the XY-plane of the world space), [[vectorDir]] returns simple values:\n* {{hl|[0, 1, 0]}} if the object is facing directly north\n* {{hl|[1, 0, 0]}} if the object is facing directly east\n* {{hl|[0, -1, 0]}} if the object is facing directly south\n* {{hl|[-1, 0, 0]}} if the object is facing directly west",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_vecDir = vectorDir MyObject;</sqf>"
+  ],
+  "groups": [
+    "Math - Vectors"
+  ],
+  "name": "vectorDir",
+  "problem_notes": [],
+  "see_also": [
+    "vectorModelToWorld",
+    "vectorDirVisual",
+    "vectorSide",
+    "vectorSideVisual",
+    "vectorUp",
+    "setVectorDir",
+    "setVectorUp",
+    "setVectorDirAndUp",
+    "vectorDiff",
+    "vectorAdd",
+    "vectorMultiply",
+    "vectorCrossProduct",
+    "vectorDistance",
+    "vectorMagnitudeSqr",
+    "vectorDistanceSqr",
+    "vectorCos",
+    "vectorMagnitude",
+    "vectorDotProduct",
+    "vectorNormalized",
+    "vectorFromTo",
+    "BIS_fnc_transformVectorDirAndUp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

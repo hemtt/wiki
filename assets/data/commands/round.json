@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Rounds the provided value to the closest integer.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>round 5.25; // returns 5</sqf>",
+    "<sqf>round -5.25; // returns -5</sqf>"
+  ],
+  "groups": [
+    "Math"
+  ],
+  "name": "round",
+  "problem_notes": [],
+  "see_also": [
+    "floor",
+    "ceil",
+    "linearConversion"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "value"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if config entry represents array.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ok = isArray (configFile >> \"CfgVehicles\") // returns false</sqf>"
+  ],
+  "groups": [
+    "Config",
+    "Arrays"
+  ],
+  "name": "isArray",
+  "problem_notes": [],
+  "see_also": [
+    "configFile",
+    "a",
+    "/",
+    "b",
+    "configName",
+    "count",
+    "getArray",
+    "getText",
+    "getNumber",
+    "inheritsFrom",
+    "isClass",
+    "isNumber",
+    "isText",
+    "select"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "config"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    }
+  ]
+}

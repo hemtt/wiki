@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Orders a unit to process command defined by [[FSM]] file (silently). \n\nUnlike with execFSM where ''_this'' is passed to the FSM, the following parameters are passed when using doFSM/commandFSM:\n\n: _leader: leader of subgroup with this command \n: _destination: command destination/position\n: _target: command target \n: _units: list of all persons in subgroup",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_soldierOne doFSM [\"move.fsm\", position player, player];</sqf>",
+    "<sqf>units player doFSM [\"move.fsm\", position player, player];</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "doFSM",
+  "problem_notes": [],
+  "see_also": [
+    "FSM",
+    "FSM_Editor_Manual",
+    "commandFSM",
+    "completedFSM",
+    "execFSM",
+    "getFSMVariable",
+    "setFSMVariable",
+    "unitReady"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "fsmName",
+            "position",
+            "target"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "fsmName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          },
+          {
+            "Item": {
+              "name": "target",
+              "type": "Object"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

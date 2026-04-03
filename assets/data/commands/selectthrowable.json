@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects [[currentThrowable | current throwable]], which will be launched if the user presses {{Controls|G}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player selectThrowable \"SmokeShellGreen\";</sqf>",
+    "<sqf>player selectThrowable \"SmokeShellGreenMuzzle\";</sqf>"
+  ],
+  "groups": [
+    "Weapons",
+    "Unit Inventory"
+  ],
+  "name": "selectThrowable",
+  "problem_notes": [],
+  "see_also": [
+    "throwables",
+    "isThrowable",
+    "currentThrowable",
+    "selectWeapon]][[currentWeapon",
+    "currentMagazine",
+    "currentMuzzle",
+    "BIS_fnc_isThrowable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "throwable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "either the name of the throwable magazine or the name of the throwable muzzle",
+          "name": "throwable",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

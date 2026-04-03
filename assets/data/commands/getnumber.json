@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Extract number from config entry.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_value = getNumber (configFile >> \"CfgVehicles\" >> \"Thing\" >> \"maxSpeed\");</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "name": "getNumber",
+  "problem_notes": [],
+  "see_also": [
+    "configFile",
+    "a",
+    "/",
+    "b",
+    "configName",
+    "count",
+    "getArray",
+    "getText",
+    "inheritsFrom",
+    "isArray",
+    "isClass",
+    "isNumber",
+    "isText",
+    "select"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "config"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    }
+  ]
+}

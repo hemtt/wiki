@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set [[Eden_Editor:_Scenario_Atttributes|scenario attribute]].\nAn attribute is identified by its {{hl|property}} ({{hl|data}} when it is engine-drive attribute) value in config. For the list of all attributes with their properties, see [[Eden_Editor:_Setting_Attributes#Attributes|Setting Attributes]].\n\n{{Feature|important|Attributes are available only within the Eden Editor workspace. They cannot be accessed in scenario preview or exported scenario!}}\n\n{{Feature|important|Changing the value of an attribute will also execute the expression defined in its config.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"Multiplayer\" set3DENMissionAttribute [\"respawn\", 3]; // Set respawn type to 3</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "set3DENMissionAttribute",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENMissionAttribute",
+    "set3DENMissionAttributes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "section",
+          [
+            "class",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "attribute section. See [[Eden_Editor:_Setting_Attributes#Sections_.26_Properties|Sections & Properties]]",
+          "name": "section",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "attribute name",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "new attribute value",
+              "name": "value",
+              "type": "Anything"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

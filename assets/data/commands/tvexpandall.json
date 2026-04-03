@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Local",
+  "description": "Expands all tree items for the given Tree View.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvExpandAll 101;</sqf>",
+    "<sqf>tvExpandAll _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvExpandAll",
+  "problem_notes": [],
+  "see_also": [
+    "tvExpand",
+    "tvCollapse",
+    "tvCollapseAll"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

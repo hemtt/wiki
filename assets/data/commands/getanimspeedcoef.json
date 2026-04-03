@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get coefficient for animation speed.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (getAnimSpeedCoef player > 1) then { hint \"Speedy Gonzales!\" };</sqf>"
+  ],
+  "groups": [
+    "Animations",
+    "Stamina System"
+  ],
+  "name": "getAnimSpeedCoef",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina",
+    "setAnimSpeedCoef"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

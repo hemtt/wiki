@@ -1,0 +1,124 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Draws a laserbeam and a lightpoint at the impact location of the laser.<br>\nThis command has to be executed every frame - see {{Link|Arma 3: Mission Event Handlers#Draw3D}}.<br>\nLasers drawn with this command are subject to the same limitations as weapon attachment lasers. These limitations are defined in the {{hl|CfgIRLaserSettings}} config class.",
+  "effect_loc": "Local",
+  "examples": [
+    "Give the player a laser eye:\n<sqf>\naddMissionEventHandler [\"Draw3D\", {\n\tdrawLaser [\n\t\teyePos player vectorAdd [0, 0, 0.1],\n\t\tgetCameraViewDirection player,\n\t\t[1000, 0, 0], // Bright red\n\t\t[],\n\t\t5,\n\t\t20,\n\t\t-1,\n\t\tfalse\n\t];\n}];\n</sqf>"
+  ],
+  "groups": [
+    "Interaction",
+    "Lights"
+  ],
+  "name": "drawLaser",
+  "problem_notes": [],
+  "see_also": [
+    "drawIcon3D",
+    "drawLine3D",
+    "{{Link|Arma",
+    "3:",
+    "Mission",
+    "Event",
+    "Handlers#Draw3D}}"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "position",
+          "direction",
+          "beamColor",
+          "dotColor",
+          "dotSize",
+          "beamThickness",
+          "beamMaxLength",
+          "isIR"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the laser's origin position",
+              "name": "position",
+              "type": "Position3dASL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "the laser's direction vector",
+              "name": "direction",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Vector3d"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "laser beam color. The values can go way above the usual 0..1 range as they also act as emissivity brightness",
+              "name": "beamColor",
+              "type": "ArrayColor"
+            }
+          },
+          {
+            "Item": {
+              "desc": "impact dot color. Set to <sqf inline>[]</sqf> to use the same value as ''beamColor''.",
+              "name": "dotColor",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "ArrayColor"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "ArrayEmpty"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "impact dot size; if set to 0 the impact dot will not render",
+              "name": "dotSize",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "laser beam's thickness scale; if set to 0, the beam will not render",
+              "name": "beamThickness",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) laser beam's maximum length. {{hl|-1}} means maximum length (defined in {{hl|CfgIRLaserSettings}}), {{hl|0}} means no length at all and the command is ignored",
+              "name": "beamMaxLength",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) whether the laser and impact dot are only visible with Night Vision / Thermal Imaging",
+              "name": "isIR",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

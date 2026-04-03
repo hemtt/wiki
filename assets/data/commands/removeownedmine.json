@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes ownership over a remotely detonatable mine from the unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player removeOwnedMine SuperMine;</sqf>"
+  ],
+  "groups": [
+    "Mines"
+  ],
+  "name": "removeOwnedMine",
+  "problem_notes": [],
+  "see_also": [
+    "allMines",
+    "createMine",
+    "detectedMines",
+    "mineActive",
+    "getAllOwnedMines",
+    "addOwnedMine",
+    "removeAllOwnedMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "mine"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the mine object",
+          "name": "mine",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

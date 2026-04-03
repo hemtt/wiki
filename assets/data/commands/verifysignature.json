@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if file is signed by any key present in game keys folders. On clients, it does not check against the keys accepted by server.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>verifySignature \"@MyAddon\\Addons\\SomeAddon.pbo\";</sqf>",
+    "<sqf>verifySignature \"@MyAddon\\Somefnc.dll\";</sqf>"
+  ],
+  "groups": [
+    "Mods and Addons"
+  ],
+  "name": "verifySignature",
+  "problem_notes": [],
+  "see_also": [
+    "ArmA:",
+    "Addon",
+    "Signatures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "filename"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

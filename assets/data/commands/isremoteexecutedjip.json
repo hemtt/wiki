@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if the code context is being remote executed from the JIP queue by [[remoteExec]] or [[remoteExecCall]] (when JIP param was set). It is a subset of [[isRemoteExecuted]]:\n\n:{{{!}} class=\"wikitable align-center align-left-col-1 align-center-row-1\"\n! rowspan=\"2\" {{!}} command\n! rowspan=\"2\" {{!}} Single Player\n! colspan=\"2\" {{!}} Multiplayer\n{{!}}-\n! Direct remoteExec\n! JIP remoteExec\n{{!}}-\n{{!}} [[isRemoteExecuted]]\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} [[isRemoteExecutedJIP]]\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (isRemoteExecutedJIP) then\n{\n\twaitUntil { sleep 0.1; not isNull player };\n\thint \"Welcome... the battlefield did not wait for you!\";\n}\nelse\n{\n\thint \"You are present and that's good!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "isRemoteExecutedJIP",
+  "problem_notes": [],
+  "see_also": [
+    "isRemoteExecuted",
+    "remoteExec",
+    "remoteExecCall",
+    "canSuspend",
+    "remoteExecutedOwner",
+    "isUIContext",
+    "isGamePaused",
+    "isGameFocused",
+    "remoteExecutedJIPID"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

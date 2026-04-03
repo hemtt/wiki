@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets P bold font of given HTML control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetFontPB \"TahomaB\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control - HTML"
+  ],
+  "name": "ctrlSetFontPB",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFontP"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "controlName",
+          "fontName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "fontName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "argument_loc": "Local",
+  "description": "Forces a unit to fire the given weapon.\n{{Feature|informative|Just like with [[forceWeaponFire]] it is possible to pass remote unit as argument, but this could be unreliable. Considering this command might need to be used in combination with [[selectWeapon]], which takes only [[Multiplayer Scripting#Locality|local]] arguments, it would make sense to execute the [[fire]] command where the unit is [[Multiplayer Scripting#Locality|local]] as well.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_soldier fire \"M16\";</sqf>",
+    "<sqf>_soldier fire \"SmokeShellMuzzle\";</sqf>",
+    "<sqf>_soldier fire [\"SmokeShellMuzzle\", \"SmokeShellMuzzle\", \"SmokeShellRed\"];</sqf>",
+    "<sqf>\nplayer playActionNow \"PutDown\";\nplayer selectWeapon \"DemoChargeMuzzle\";\nplayer fire [\"DemoChargeMuzzle\", \"DemoChargeMuzzle\", \"DemoCharge_Remote_Mag\"];\nplayer setWeaponReloadingTime [player, \"DemoChargeMuzzle\", 0];\n</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Weapons"
+  ],
+  "name": "fire",
+  "problem_notes": [],
+  "see_also": [
+    "BIS_fnc_fire",
+    "doFire",
+    "commandFire",
+    "canFire",
+    "fireAtTarget",
+    "forceWeaponFire",
+    "commandArtilleryFire",
+    "commandSuppressiveFire",
+    "doArtilleryFire",
+    "doSuppressiveFire",
+    "isManualFire",
+    "selectWeapon",
+    "ArmA:_Actions#USEWEAPON|action",
+    "[\"UseWeapon\"]",
+    ":Category:Weapons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "muzzle"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit that is supposed to fire",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the muzzle to be fired",
+          "name": "muzzle",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "muzzle",
+            "mode",
+            "magazine"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "muzzle",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "mode",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "magazine",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

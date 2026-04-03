@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Find the nearest location having a non-empty speech.\n{{Feature|arma3|No locations are dubbed in {{arma3}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_location = nearestLocationWithDubbing player;</sqf>",
+    "<sqf>_location = nearestLocationWithDubbing getMarkerPos \"myMarker\";</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "name": "nearestLocationWithDubbing",
+  "problem_notes": [],
+  "see_also": [
+    "findNearestEnemy",
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearObjects",
+    "nearestLocation",
+    "nearEntities",
+    "nearTargets",
+    "nearSupplies",
+    "nearObjectsReady",
+    "nearRoads",
+    "nearestMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "position"
+      },
+      "ret": {
+        "type": "Location"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

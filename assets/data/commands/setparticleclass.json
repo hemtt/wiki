@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets particle source parameters using existing particle config from {{hl|CfgCloudlets}} class. Use [[setParticleParams]] subsequently if you need to overwrite some values.\n{{Feature | important | If {{hl|CfgCloudlets}} class contains [[Simple_Expression | simple expressions]], they will not be evaluated by this command, which might make the whole class unusable in script.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\n_source01 = \"#particlesource\" createVehicleLocal _pos01;\n_source01 setParticleClass \"ObjectDestructionFire1Smallx\";\n_source01 attachTo [_object,[0,0,0]];\n</sqf>"
+  ],
+  "groups": [
+    "Particles"
+  ],
+  "name": "setParticleClass",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Particle",
+    "Effects",
+    "ParticleArray",
+    "setParticleParams",
+    "setParticleRandom",
+    "setParticleCircle",
+    "setParticleFire",
+    "setDropInterval",
+    "drop"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "source",
+          "className"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "particle source",
+          "name": "source",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "CfgCloudlets class",
+          "name": "className",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if map was forced by using [[forceMap]] command or [[openMap]] command with force option",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_forceMapForced = forcedMap select 0;\n_openMapForced = forcedMap select 1;\n</sqf>"
+  ],
+  "groups": [
+    "Map",
+    "Interaction"
+  ],
+  "name": "forcedMap",
+  "problem_notes": [],
+  "see_also": [
+    "openMap",
+    "forceMap",
+    "showMap",
+    "visibleMap",
+    "shownMap"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "[[true]] if map was forced with [[forceMap]] command",
+              "name": "forceMapForced",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if map was forced with [[openMap]] command.",
+              "name": "openMapForced",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

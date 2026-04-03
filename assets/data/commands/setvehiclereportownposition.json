@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets that the vehicle will share its own position via datalink to the [[Side]] center.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setVehicleReportOwnPosition true;</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "name": "setVehicleReportOwnPosition",
+  "problem_notes": [],
+  "see_also": [
+    "setVehicleRadar",
+    "vehicleReportRemoteTargets",
+    "setVehicleReportRemoteTargets",
+    "vehicleReceiveRemoteTargets",
+    "setVehicleReceiveRemoteTargets",
+    "vehicleReportOwnPosition",
+    "reportRemoteTarget",
+    "confirmSensorTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "report"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "report",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

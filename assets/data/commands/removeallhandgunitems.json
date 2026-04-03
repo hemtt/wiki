@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes all items from [[handgunWeapon]], except magazine.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>removeAllHandgunItems player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeAllHandgunItems",
+  "problem_notes": [],
+  "see_also": [
+    "addHandgunItem",
+    "removeHandgunItem",
+    "removeAllPrimaryWeaponItems",
+    "removeAllSecondaryWeaponItems",
+    "removeAllBinocularItems"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

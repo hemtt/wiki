@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects the item with the given index in the listbox, listnbox, combobox, xcombobox, xlistbox<br>\n{{Feature|important|'''The following only applies to the {{Link|#Syntax 2|Alternative Syntax}} when used with [[CT_LISTBOX]] and [[CT_LISTNBOX]].'''<br>\nTo deselect all entries, use -1: <sqf inline>_ctrl lbSetCurSel -1;</sqf> For listbox of style LB_MULTI use [[lbSetSelected]] instead.<br>\n[[CT_COMBO]] does not allow deselecting entries, it will instead select the first one as it is not a combobox usual behaviour.\nIf you really need to deselect a combobox, see {{Link|#Notes|DreadedEntity's note}}. For the ComboBox you might as well want to explicitly select index 0 to avoid showing ghost row.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lbSetCurSel [101, 0];</sqf>",
+    "<sqf>_control lbSetCurSel 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbSetCurSel",
+  "problem_notes": [],
+  "see_also": [
+    "lbCurSel"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control's IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

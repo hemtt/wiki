@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns grid size based on screen resolution.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_gridBaseHeight = pixelH * pixelGridBase;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "pixelGridBase",
+  "problem_notes": [],
+  "see_also": [
+    "pixelGrid",
+    "pixelGridNoUIScale",
+    "pixelH",
+    "pixelW",
+    "Pixel",
+    "Grid",
+    "System"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "grid size, see [[Arma 3: Pixel Grid System]]",
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove [[:Category:Eden Editor|Eden Editor]] editing layer.\n{{Feature|informative|[[delete3DENEntities]] seems to be more reliable.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _myLayer = -1 add3DENLayer \"Enemy Base\";\nremove3DENLayer _myLayer;\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "remove3DENLayer",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENLayer",
+    "set3DENLayer",
+    "get3DENLayerEntities"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "layerID"
+      },
+      "ret": {
+        "desc": "[[true]] if the layer was removed successfully (i.e., correct layer ID was used)",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "layer ID as returned by [[add3DENLayer]] command",
+          "name": "layerID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

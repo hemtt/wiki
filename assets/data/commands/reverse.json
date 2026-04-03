@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Reverses given array by reference (modifies the original array, just like [[resize]]). The alternative syntax can be used to reverse a ANSI [[String|string]]. If Unicode support is desired, see [[forceUnicode]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_arr = [1,2,3];\nreverse _arr;\nhint str _arr; // [3,2,1]\n</sqf>",
+    "<sqf>\n_wordArr = toArray \"gateman\";\nreverse _wordArr;\nhint toString _wordArr; // nametag\n</sqf>",
+    "<sqf>reverse \"treboR\"; // Returns \"Robert\"</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "name": "reverse",
+  "problem_notes": [],
+  "see_also": [
+    "set",
+    "resize",
+    "select",
+    "in",
+    "find",
+    "toArray",
+    "toString",
+    "forEach",
+    "count",
+    "pushBack",
+    "pushBackUnique",
+    "apply",
+    "append",
+    "sort",
+    "param",
+    "params",
+    "arrayIntersect",
+    "splitString",
+    "joinString",
+    "forceUnicode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "array"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "string"
+      },
+      "ret": {
+        "desc": "reversed string",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "string to be reversed",
+          "name": "string",
+          "type": "String"
+        }
+      },
+      "since": {
+        "arma3": "2.2"
+      }
+    }
+  ]
+}

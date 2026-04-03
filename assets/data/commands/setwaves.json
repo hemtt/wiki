@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the waves value smoothly during the given time (in seconds). A time of zero means there will be an immediate change.<br><br>\n'''NOTE''': This command will have no effect (even though the value of [[waves]] changes) unless {{hl|Manual Override}} option is selected in the editor in the Intel, which is normally off.<br><br>\n[[File:setWaves.jpg|left|600px]]",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>180 setWaves .5;</sqf>",
+    "<sqf>0 setWaves 1;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "setWaves",
+  "problem_notes": [],
+  "see_also": [
+    "waves",
+    "fog",
+    "overcast",
+    "setLightnings"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

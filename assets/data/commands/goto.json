@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Break script flow and go to given label (defined by '''#''' - '''NOT''' to be confused with [[SQF Syntax|SQF]]'s [[a_hash_b|hash sign]]!)\n{{Feature|warning|This command only works in [[SQS Syntax]].}}\n{{Feature|informative|Note that labels are not case sensitive and are searched for from the top of the script, so multiple occurrences of a label will only result in the topmost one ever being found.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>\ngoto \"myLabel\"\nplayer setDamage 1\n\n#myLabel\nhint \"you successfully avoided death!\"\n</sqs>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "goto",
+  "problem_notes": [],
+  "see_also": [
+    "Control_Structures#SQS_syntax_.28deprecated.29|SQS",
+    "Control",
+    "Structures",
+    "SQS",
+    "to",
+    "SQF",
+    "conversion"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "label"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "label",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

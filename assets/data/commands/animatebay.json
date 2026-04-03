@@ -1,0 +1,78 @@
+{
+  "argument_loc": "Global",
+  "description": "Forces animation of bay to given state, -1 for reset to engine handling, can cause weapon inoperative, because weapon is released when bay state == 1.\n{{Feature|informative|\nWhile there is no getter to read the animation phase of the given bay, the [[animationPhase]] command can be used with the individual bay door name from [[animationNames]] as a workaround (See {{Link|#Example 3}}).\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>vehicle player animateBay [1, 0.5];</sqf>",
+    "<sqf>vehicle player animateBay [1, 1, true];</sqf>",
+    "Getter example, here for the UCAV Sentinel:<sqf>\nucav animateBay [1, 1];\n// can be checked with\nucav animationPhase \"weapons_bay_l_1\";\n// or\nucav animationPhase \"weapons_bay_l_2\";\n</sqf>"
+  ],
+  "groups": [
+    "Animations",
+    "Vehicle Loadouts"
+  ],
+  "name": "animateBay",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "Loadouts",
+    "getCompatiblePylonMagazines",
+    "getPylonMagazines",
+    "setAmmoOnPylon",
+    "ammoOnPylon",
+    "animatePylon",
+    "setPylonsPriority",
+    "setPylonLoadout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "bay",
+            "animphase",
+            "instant"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "bay index (index starts from 1 and different from pylon index)",
+              "name": "bay",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "animation phase in range 0..1",
+              "name": "animphase",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) animate immediately",
+              "name": "instant",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

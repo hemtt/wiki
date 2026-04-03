@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Try to convert the provided JSON to game value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_num = jsonToGameValue \"3.14\";\n_arrOfKeyValues = jsonToGameValue \"{ 'key0': false, 'key1': 'value', 'key2', 2 }\";\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "name": "jsonToGameValue",
+  "problem_notes": [],
+  "see_also": [
+    "gameValueToJson",
+    "toString",
+    "str",
+    "parseSimpleArray"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "json"
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "name": "json",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

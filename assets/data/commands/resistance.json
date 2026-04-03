@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Pre-defined variable for the resistance [[Side|side]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (side _unit == resistance) then\n{\n\thint \"This is a resistance unit!\";\n};\n</sqf>",
+    "<sqf>hint format [\"%1\", resistance]; // Returns \"GUER\"</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "resistance",
+  "problem_notes": [],
+  "see_also": [
+    "side",
+    "west",
+    "east",
+    "civilian",
+    "sideEmpty",
+    "sideAmbientLife"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

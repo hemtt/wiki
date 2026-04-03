@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[ctrlMapSetPosition]]. Returns map position in format [x, y, w, h]. If map is inside a Controls Group, the x and y position is relative to the Controls Group top left corner.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ctrlMapPosition _map;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "name": "ctrlMapPosition",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlMapSetPosition",
+    "ctrlCreate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "map"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "position in x",
+              "name": "x",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "position in y",
+              "name": "y",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "width of the map control",
+              "name": "w",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "height of the map control",
+              "name": "h",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "[[CT_MAP|Map control]]",
+          "name": "map",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

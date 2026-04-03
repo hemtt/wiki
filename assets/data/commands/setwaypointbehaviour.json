@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Switches the unit behaviour when the waypoint becomes active.\n<br>\n<br>\nPossible values are:\n* \"UNCHANGED\"\n* \"CARELESS\"\n* \"SAFE\"\n* \"AWARE\"\n* \"COMBAT\"\n* \"STEALTH\"\n\nSee the [[AIBehaviour]] page for details of the effect of this command on AI units.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointBehaviour \"AWARE\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "setWaypointBehaviour",
+  "problem_notes": [],
+  "see_also": [
+    "Mission_Editor:_Waypoints#Behaviour|behaviour",
+    "description",
+    "AIBehaviour",
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

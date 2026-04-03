@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the name of the current briefing/scenario name.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_name = briefingName;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "briefingName",
+  "problem_notes": [],
+  "see_also": [
+    "missionName",
+    "worldName",
+    "serverName",
+    "worldSize"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

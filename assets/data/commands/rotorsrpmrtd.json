@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns rotors RPM. {{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_mh9_main = (rotorsRpmRTD _MH9) select 0;//main rotor\n_mh9_tail = (rotorsRpmRTD _MH9) select 1;//tail rotor\n</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "name": "rotorsRpmRTD",
+  "problem_notes": [],
+  "see_also": [
+    "rotorsForcesRTD",
+    "weightRTD",
+    "wingsForcesRTD",
+    "airDensityRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "RTD_helicopter"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "RTD_helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

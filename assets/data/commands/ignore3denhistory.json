@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Ignores all history steps created by executing the given code.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nignore3DENHistory {\n\tcreate3DENEntity [\"Object\", \"B_Soldier_F\", screenToWorld [0.5, 0.5]]; // no Ctrl+Z available for this operation\n};\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "ignore3DENHistory",
+  "problem_notes": [],
+  "see_also": [
+    "collect3DENHistory",
+    "create3DENEntity",
+    "set3DENAttributes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "code"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "code",
+          "type": "Code"
+        }
+      }
+    }
+  ]
+}

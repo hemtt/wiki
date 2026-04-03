@@ -1,0 +1,203 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the nearest object of given type (or inherited classes) to given position within a sphere. Hardcoded radius is 50 meters.\nUnlike with [[nearestObjects]], where distance is measured in 2D space, [[nearestObject]] will be closest object in 3D space.\n\n{{Feature|informative|\n* in {{ofp}}, only objects of the exact provided class are found.\n* if an object ID is used ({{Link|#Syntax 4}}, see {{Link|#Example 2}}) the search range is unlimited\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_nObject = nearestObject [2345, 6789];\n_nObject = nearestObject [player, \"StreetLamp\"];\n</sqf>",
+    "Return the object with ID 123456:\n<sqf>_nObject = [0,0,0] nearestObject 123456;</sqf>",
+    "<sqf>_nObject = getPos player nearestObject \"StreetLamp\";</sqf>",
+    "Return the nearest object with ([[typeOf]] _nObject == \"#XXXX\") -> #mark, #slop, etc. Unlimited search range:\n<sqf>_nObject = _position nearestObject -1;</sqf>\n\nReturn the nearest object with ([[typeOf]] _nObject != \"\"). Search range is 50m:\n<sqf>_nObject = nearestObject _position;</sqf>",
+    "(See also [[allMissionObjects]]):\n<sqf>\n_blood\t= nearestObject [player, \"#slop\"];\n_step\t= nearestObject [player, \"#mark\"];\n_track\t= nearestObject [player, \"#track\"];\n_crater\t= nearestObject [player, \"#crater\"];\n</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "name": "nearestObject",
+  "problem_notes": [],
+  "see_also": [
+    "nearestObjects",
+    "nearObjectsReady",
+    "nearObjects",
+    "objectFromNetId",
+    "nearEntities",
+    "entities",
+    "object",
+    "nearestBuilding",
+    "nearestTerrainObjects",
+    "nearestMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "position",
+          "type"
+        ]
+      },
+      "ret": {
+        "desc": "nearest object, [[objNull]] otherwise",
+        "type": "Object"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "position to start search at",
+              "name": "position",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position2d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position3d"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "type of object (see [[typeOf]], [[CfgVehicles|class type]])",
+              "name": "type",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Unary": "position"
+      },
+      "ret": {
+        "desc": "nearest object, [[objNull]] otherwise",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "position to start search at",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "position",
+          "typeOrId"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "position to start search at",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "nearest object, [[objNull]] otherwise",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "type of object (see [[typeOf]], [[CfgVehicles|class type]]) or {{GVI|arma3|2.10|size= 0.75}} Visitor id (see [[getObjectID]])",
+          "name": "typeOrId",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "position",
+          "id"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "position to start search at",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "nearest object, [[objNull]] otherwise",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "object Visitor id",
+          "name": "id",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

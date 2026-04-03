@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the waypoint's combat mode setting.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waypointCombatMode [groupOne, 1];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "waypointCombatMode",
+  "problem_notes": [],
+  "see_also": [
+    "Combat",
+    "Modes",
+    "waypoints",
+    "setWaypointCombatMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "desc": "one of \"BLUE\", \"GREEN\", \"WHITE\", \"YELLOW\" and \"RED\" or \"ERROR\"",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

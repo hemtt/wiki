@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Compares type of given value to every type in the given array and if match is found, [[true]] is returned.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_var = [1, 2, 3];\n_var isEqualTypeAny [0, \"\", objNull]; //false\n_var isEqualTypeAny [0, \"\", objNull, []]; //true\n</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "name": "isEqualTypeAny",
+  "problem_notes": [],
+  "see_also": [
+    "isEqualType",
+    "isEqualTypeAll",
+    "isEqualTypeArray",
+    "isEqualTypeParams",
+    "param",
+    "params",
+    "isEqualTo",
+    "typeName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "val",
+          "types"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "val",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "types",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

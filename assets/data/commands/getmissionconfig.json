@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Config]] entry for the given scenario attribute from the 1st tier. The attribute can be config class or config property. If it is defined in multiple places, the command checks them in the following order:\n# External ''[[Description.ext]]'' file\n# [[Eden_Editor:_Scenario_Atttributes|Eden Editor]] scenario attribute\nSo if attribute exists in both places, attribute from [[Description.ext|description.ext]] is used. Previously, scenario attributes were extracted from ''Description.ext'' using [[missionConfigFile]]. That still works, but it ignores attributes set directly in the editor and it should not be used anymore.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_header = getMissionConfig \"Header\";</sqf>\nReturns scenario header config. Replaces the previous approach which would scan only the external ''Description.ext'' file, but ignore the value set in the Eden Editor:\n<sqf>_header = missionConfigFile >> \"Header\"; // Old approach</sqf>"
+  ],
+  "groups": [
+    "Config",
+    "Mission Information"
+  ],
+  "name": "getMissionConfig",
+  "problem_notes": [],
+  "see_also": [
+    "getMissionConfigValue",
+    "missionConfigFile",
+    "BIS_fnc_getParamValue",
+    "Mission_Parameters"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "attribute"
+      },
+      "ret": {
+        "type": "Config"
+      },
+      "right": {
+        "Item": {
+          "desc": "attribute name",
+          "name": "attribute",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the name of the current map. Name is actually class as defined in config (eg Intro). \n{{Feature|warning|This command does not exist outside of {{ofp}}/{{arma0}}. Use [[worldName]] in later titles.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>\n; if testing on Everon, getWorld will return \"eden\"\nhint getWorld\n</sqs>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "name": "getWorld",
+  "problem_notes": [],
+  "see_also": [
+    "worldName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

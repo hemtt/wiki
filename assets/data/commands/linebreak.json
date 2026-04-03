@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a structured text containing a line break.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint composeText [\"First line\", lineBreak, \"Second line\"];</sqf>",
+    "<sqf>hint str (composeText [lineBreak] == parseText \"<br/>\"); // true</sqf>"
+  ],
+  "groups": [
+    "Strings",
+    "Structured Text"
+  ],
+  "name": "lineBreak",
+  "problem_notes": [],
+  "see_also": [
+    "composeText",
+    "parseText",
+    "Structured",
+    "Text",
+    "text",
+    "image",
+    "endl"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "StructuredText"
+      }
+    }
+  ]
+}

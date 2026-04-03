@@ -1,0 +1,87 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts given value from given \"from\" range to wanted \"to\" range. If clipping is set to [[true]], the resulting value is guaranteed to be within \"to\" range no matter what. {{Feature|arma3|Faster alternative to [[BIS_fnc_linearConversion]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// Say given range is 0 to 1 and wanted range is 0 to 100 (percent calculation). Given value 0.55 then will be 55\nlinearConversion [0, 1, 0.55, 0, 100];\n\n// but if given value is 1.1 it will return 110\nlinearConversion [0, 1, 1.1, 0, 100, false];\n\n// or if clipping is true it will return 100\nlinearConversion [0, 1, 1.1, 0, 100, true];\n</sqf>",
+    "<sqf>linearConversion [4, 8, 5, 0, 1, false];</sqf>",
+    "<sqf>\n// Calculate days from 1/1/1970\nfnc_daysFromEpoc = \n{\n\tprivate _year = param [0];\n\tprivate _days = 0;\n\tfor \"_i\" from 1970 to _year - 1 do \n\t{\n\t\t_days = _days + round linearConversion [0, 1, dateToNumber [_i, 12, 31, 23, 59], 0, 365, false];\n\t};\n\t_days + linearConversion [0, 1, dateToNumber _this, 0, 365, false];\n};\n\nhint str (date call fnc_daysFromEpoc);\n</sqf>"
+  ],
+  "groups": [
+    "Math"
+  ],
+  "name": "linearConversion",
+  "problem_notes": [],
+  "see_also": [
+    "round",
+    "floor",
+    "ceil",
+    "vectorLinearConversion",
+    "bezierInterpolation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "minFrom",
+          "maxFrom",
+          "value",
+          "minTo",
+          "maxTo",
+          "clip"
+        ]
+      },
+      "ret": {
+        "desc": "respectful value from \"to\" range",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "start \"from\" range",
+              "name": "minFrom",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "end \"from\" range",
+              "name": "maxFrom",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "given value from \"from\" range",
+              "name": "value",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "start \"to\" range",
+              "name": "minTo",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "end \"to\" range",
+              "name": "maxTo",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) if [[true]], resulting value cannot leave \"to\" range",
+              "name": "clip",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

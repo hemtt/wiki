@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Performs strict comparison between var1 and var2 and returns [[false]] if equal, otherwise true.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _true = 0 isNotEqualTo 1;</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "name": "isNotEqualTo",
+  "problem_notes": [],
+  "see_also": [
+    "isEqualTo",
+    "isNotEqualRef"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "val1",
+          "val2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "val1",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "val2",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

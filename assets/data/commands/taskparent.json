@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the parent task of the specified task.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_parent = taskParent someTask;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "taskParent",
+  "problem_notes": [],
+  "see_also": [
+    "taskChildren"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "task"
+      },
+      "ret": {
+        "type": "Task"
+      },
+      "right": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      }
+    }
+  ]
+}

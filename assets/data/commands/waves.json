@@ -1,0 +1,25 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return waves value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waveIntensity = waves;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "waves",
+  "problem_notes": [],
+  "see_also": [
+    "setWaves"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

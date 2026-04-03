@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Outputs a hint message to the right of the screen (left of the screen in {{ofp}}) with a sound (except in {{arma1}}).\nTo split message in multiple lines either use [[Structured Text]] or {{hl|\\n}} (in lower case).\n\n{{Feature|arma1|{{arma1}} hints are silent. For later titles, see [[hintSilent]].}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\n// outputs the following:\n// Press W to move forward.\n// Press S to move backwards.\nhint \"Press W to move forward.\\nPress S to move backwards.\"\n</sqf>",
+    "<sqf>hint format [\"Hello, %1!\", name player];</sqf>",
+    "<sqf>\nhint str count allPlayers;\nsleep 10;\nhintSilent \"\"; // hides the previous hint display\n</sqf>",
+    "<sqf>hint parseText \"<t size='2.0'>Large text</t>\"; // displays text twice as large as the default one</sqf>",
+    "<sqf>_txt = text \"Red text, right align\";\n_txt setAttributes [\"color\", \"#FF0000\", \"align\", \"right\"];\nhint composeText [_txt];</sqf>"
+  ],
+  "groups": [
+    "Interaction",
+    "Structured Text",
+    "Strings"
+  ],
+  "name": "hint",
+  "problem_notes": [
+    "{{GVI|ofp|1.00}} {{GVI|arma1|1.00}} {{GVI|arma2|1.00}} Hint messages that exceed the screen may lead to crashes.<br>\n{{GVI|arma3|1.00}} The game would not crash but suffer FPS drop / temporary freezing."
+  ],
+  "see_also": [
+    "hintC",
+    "hintCadet",
+    "hintSilent",
+    "diag_log"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "message"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the message to display.",
+          "name": "message",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "StructuredText"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

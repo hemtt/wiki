@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Flattens an array.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>flatten [1, [2], [[3]], [[[4]]]]; // returns [1, 2, 3, 4]</sqf>",
+    "<sqf>flatten getUnitLoadout player;</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "name": "flatten",
+  "problem_notes": [],
+  "see_also": [
+    "arrayIntersect"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "array"
+      },
+      "ret": {
+        "desc": "flattened array",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Anything"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

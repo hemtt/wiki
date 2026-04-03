@@ -1,0 +1,119 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Controls availability of component to given object info panel.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// returns true if specific component \"SensorDisplay\" is enabled on player vehicle's left panel\n_state = [vehicle player, [-1]] infoPanelComponentEnabled [\"VehicleSystemsDisplayManagerComponentLeft\", \"SensorDisplay\"];\n</sqf>",
+    "<sqf>\n// returns true if all \"SensorsDisplayComponent\" components are enabled on player vehicle's left panel, otherwise returns false\n_state = [vehicle player, [-1]] infoPanelComponentEnabled [\"VehicleSystemsDisplayManagerComponentLeft\", \"SensorsDisplayComponent\"];\n</sqf>"
+  ],
+  "groups": [
+    "Custom Panels"
+  ],
+  "name": "infoPanelComponentEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Custom",
+    "Info",
+    "infoPanel",
+    "infoPanels",
+    "setInfoPanel",
+    "infoPanelComponents",
+    "enableInfoPanelComponent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "panelID",
+            "componentClassOrType"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the concerned vehicle",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if component was successfully enabled on the panel, [[false]] otherwise (e.g. component is not available for the object)",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "\"left\" or \"right\" can be used as panel names",
+              "name": "panelID",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "componentClassOrType",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          [
+            "unit",
+            "turretPath"
+          ],
+          [
+            "panelID",
+            "componentClassOrType"
+          ]
+        ]
+      },
+      "left": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the concerned vehicle",
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "turret index",
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "\"left\" or \"right\" can be used as panel names",
+              "name": "panelID",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "componentClassOrType",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

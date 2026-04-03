@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Return the damage value of an object.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>? damage player > 0.1 : player groupChat \"I'm hurt! Medic!\"</sqs>",
+    "<sqf>\nif (damage player > 0.1) then\n{\n\tplayer groupChat \"I'm hurt! Medic!\";\n};\n</sqf>",
+    "<sqf>private _health = (1 - damage player) * 100; // health in % from 0 to 100</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "damage",
+  "problem_notes": [],
+  "see_also": [
+    "setDamage",
+    "setHit",
+    "getHit",
+    "getHitIndex",
+    "setHitIndex",
+    "getHitPointDamage",
+    "setHitPointDamage",
+    "waterDamaged",
+    "Arma",
+    "3:",
+    "Event",
+    "Handlers#HandleDamage|\"HandleDamage\"",
+    "Event",
+    "Handler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "the returned number in range (healthy) 0..1 (dead).",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

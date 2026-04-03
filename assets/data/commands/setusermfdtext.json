@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Stored user text value in MFD, limit is 50, user0...user49",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_vehicle setUserMFDText [0, \"some text\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "setUserMFDText",
+  "problem_notes": [],
+  "see_also": [
+    "getUserMFDText",
+    "setUserMFDValue",
+    "getUserMFDValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "index",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle with MFD",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "value",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current simulation acceleration factor.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_acc = accTime;</sqf>"
+  ],
+  "groups": [
+    "Time"
+  ],
+  "name": "accTime",
+  "problem_notes": [],
+  "see_also": [
+    "setAccTime",
+    "setTimeMultiplier",
+    "timeMultiplier",
+    "useAudioTimeForMoves"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

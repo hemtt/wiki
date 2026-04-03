@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Opens Steam overlay with given YT video. Video URL is the end part of the YT URL, starting with '''watch?v=...'''. If the user has Steam overlay disabled, the command will display appropriate message to the user and return [[false]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// open http://www.youtube.com/watch?v=UBIAbm7Rt78\n_isOpened = openYoutubeVideo \"watch?v=UBIAbm7Rt78\";\n</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "openYoutubeVideo",
+  "problem_notes": [],
+  "see_also": [
+    "openDSInterface",
+    "openMap"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "youTubeUrl"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "for parameters see: https://developers.google.com/youtube/player_parameters",
+          "name": "youTubeUrl",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

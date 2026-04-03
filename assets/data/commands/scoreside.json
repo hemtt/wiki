@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns score for the given [[Side|side]]. MP Only.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_number = scoreSide west;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer",
+    "Sides"
+  ],
+  "name": "scoreSide",
+  "problem_notes": [],
+  "see_also": [
+    "score",
+    "addScore",
+    "addScoreSide",
+    "getPlayerScores"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "side"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      }
+    }
+  ]
+}

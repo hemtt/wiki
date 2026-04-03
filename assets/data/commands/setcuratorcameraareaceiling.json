@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets maximal ([[Position#PositionATL|ATL]]) height to which curator camera can move.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myCurator setCuratorCameraAreaCeiling 50;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "setCuratorCameraAreaCeiling",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3",
+    "Curator",
+    "addCuratorCameraArea",
+    "removeCuratorCameraArea",
+    "removeAllCuratorCameraAreas",
+    "curatorCameraArea"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "height"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[Arma 3 Curator|Curator]] module",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[Position#PositionATL|ATL]], in metres",
+          "name": "height",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}
