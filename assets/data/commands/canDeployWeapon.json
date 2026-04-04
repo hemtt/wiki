@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns [[true]] if a unit's weapon can be deployed.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (canDeployWeapon player) then { hint \"I could rest my weapon here...\" };</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "canDeployWeapon",
+  "name": "canDeployWeapon",
+  "problem_notes": [],
+  "see_also": [
+    "isWeaponDeployed",
+    "isWeaponRested"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "[[true]] if unit's weapon can be deployed",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

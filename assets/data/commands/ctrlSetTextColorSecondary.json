@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the secondary text color of a text control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrlText ctrlSetTextColorSecondary [1, 0.5, 0.1, 0.5];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlSetTextColorSecondary",
+  "name": "ctrlSetTextColorSecondary",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlTextSecondary",
+    "ctrlSetText",
+    "ctrlText",
+    "ctrlSetTextSecondary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "color"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "text control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "color",
+          "type": "ArrayColor"
+        }
+      }
+    }
+  ]
+}

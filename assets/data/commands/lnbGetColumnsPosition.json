@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns relative screen X of ListNBox control columns position [0.1,0.3,0.6...]. Use [[lnbSetColumnsPos]] to set positions.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>lnbGetColumnsPosition _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "id": "lnbGetColumnsPosition",
+  "name": "lnbGetColumnsPosition",
+  "problem_notes": [],
+  "see_also": [
+    "lnbAddArray",
+    "lnbAddColumn",
+    "lnbAddRow",
+    "lnbClear",
+    "lnbColor",
+    "lnbCurSelRow",
+    "lnbData",
+    "lnbDeleteColumn",
+    "lnbDeleteRow",
+    "lnbPicture",
+    "lnbSetColor",
+    "lnbSetColumnsPos",
+    "lnbSetCurSelRow",
+    "lnbSetData",
+    "lnbSetPicture",
+    "lnbSetText",
+    "lnbSetValue",
+    "lnbSize",
+    "lnbText",
+    "lnbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "_ctrl"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "_ctrl",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

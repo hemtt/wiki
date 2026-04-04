@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns display's focused control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _focusedCtrl = focusedCtrl findDisplay 12;</sqf>",
+    "<sqf>private _isFocused = focusedCtrl _display == _ctrl;</sqf>",
+    "<sqf>private _isFocused = focusedCtrl (ctrlParent _ctrl) == _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "focusedCtrl",
+  "name": "focusedCtrl",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFocus",
+    "displayParent",
+    "ctrlParent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "display"
+      },
+      "ret": {
+        "desc": "control which has focus",
+        "type": "Control"
+      },
+      "right": {
+        "Item": {
+          "desc": "parent display",
+          "name": "display",
+          "type": "Display"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Local",
+  "description": "Allows the AI to use IR lasers. Units should be in \"Combat\" [[behaviour]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>group player enableIRLasers true;</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "enableIRLasers",
+  "name": "enableIRLasers",
+  "problem_notes": [],
+  "see_also": [
+    "isIRLaserOn",
+    "enableGunLights",
+    "isLightOn",
+    "isCollisionLightOn",
+    "setPilotLight",
+    "setCollisionLight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitOrGroup",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the unit or the group allowed to use IR lasers",
+          "name": "unitOrGroup",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

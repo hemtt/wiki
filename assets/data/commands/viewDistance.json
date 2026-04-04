@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the rendering distance.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint (\"my view distance is \" + str viewDistance + \" meters\");</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Environment"
+  ],
+  "id": "viewDistance",
+  "name": "viewDistance",
+  "problem_notes": [],
+  "see_also": [
+    "setViewDistance",
+    "setDetailMapBlendPars",
+    "setTerrainGrid",
+    "getObjectViewDistance",
+    "setObjectViewDistance"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

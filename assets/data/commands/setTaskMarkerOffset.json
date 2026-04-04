@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the task marker position in model space.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player setTaskMarkerOffset [0,0.5,1];</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "setTaskMarkerOffset",
+  "name": "setTaskMarkerOffset",
+  "problem_notes": [],
+  "see_also": [
+    "taskMarkerOffset"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": "Position3dRelative"
+        }
+      }
+    }
+  ]
+}

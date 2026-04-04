@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns fatigue of given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (getFatigue player < 0.5) then { player sideChat \"I'm good to go!\" };</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "getFatigue",
+  "name": "getFatigue",
+  "problem_notes": [],
+  "see_also": [
+    "setFatigue",
+    "enableFatigue",
+    "getStamina"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

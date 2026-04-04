@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns model space vector of the object airplane or helicopter [[A3_Targeting_config_reference#class_pilotCamera|pilotCamera]] .",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_pilotCamVector = getPilotCameraDirection vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Pilot Camera"
+  ],
+  "id": "getPilotCameraDirection",
+  "name": "getPilotCameraDirection",
+  "problem_notes": [],
+  "see_also": [
+    "hasPilotCamera",
+    "getPilotCameraPosition",
+    "getPilotCameraRotation",
+    "getPilotCameraTarget",
+    "setPilotCameraDirection",
+    "setPilotCameraRotation",
+    "setPilotCameraTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "relative to the model centre (In a similar fashion to [[Position#PositionRelative|PositionRelative]]). Returns [0,0,0] if object has no [[A3_Targeting_config_reference#class_pilotCamera|pilotCamera]].",
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

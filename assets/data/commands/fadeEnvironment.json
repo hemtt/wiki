@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the master environment volume smoothly within the given time and is different from [[enableEnvironment]] global mute option. The default volume is 1.<br>\nInfluenced sounds, among others, are:\n{{Columns|2|\n* forest sounds (birds, crickets, ...)\n* waves\n* wind\n* rain\n* object sounds (air conditioners, ...)\n* {{GVI|arma3|2.06|size= 0.75}} thunder\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>5 fadeEnvironment 0.1;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "fadeEnvironment",
+  "name": "fadeEnvironment",
+  "problem_notes": [],
+  "see_also": [
+    "environmentVolume",
+    "fadeSpeech",
+    "fadeRadio",
+    "fadeSound",
+    "fadeMusic",
+    "soundVolume",
+    "musicVolume",
+    "radioVolume",
+    "speechVolume",
+    "enableEnvironment",
+    "environmentEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "volume"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "fade interval in seconds",
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "speech volume in range 0..1",
+          "name": "volume",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

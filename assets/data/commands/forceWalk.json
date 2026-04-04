@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Local",
+  "description": "Forces unit to walk even if run or sprint is selected.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player forceWalk true;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "forceWalk",
+  "name": "forceWalk",
+  "problem_notes": [],
+  "see_also": [
+    "isForcedWalk",
+    "isWalking",
+    "forceSpeed",
+    "getSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the unit forced to walk",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "true/false",
+          "name": "value",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

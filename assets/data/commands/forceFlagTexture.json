@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Global",
+  "description": "Forces a flag texture onto a flag carrier (unit, vehicle or flag pole).\nNo flag holder is required. If {{hl|\"\"}} is used as texture, the texture is removed.\nThis will override regularly owned flags.\nThis type of flag texture cannot be retrieved using [[flagTexture]], but [[getForcedFlagTexture]].\n\n{{Feature|important|Forced flag texture is an additional flag texture, which visually overrides original flag texture and therefore is very expensive to simulate, so use the functionality sparingly.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player forceFlagTexture \"\\A3\\Data_F\\Flags\\Flag_red_CO.paa\";</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "id": "forceFlagTexture",
+  "name": "forceFlagTexture",
+  "problem_notes": [],
+  "see_also": [
+    "getForcedFlagTexture",
+    "Arma",
+    "3:",
+    "Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "texture"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle, unit or flag pole",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "texture",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

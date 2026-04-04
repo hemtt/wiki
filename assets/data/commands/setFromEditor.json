@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set if given team member was inserted directly from editor.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_teamMember setFromEditor true;</sqf>"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "setFromEditor",
+  "name": "setFromEditor",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "teamMember",
+          "fromEditor"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "fromEditor",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of bone names and their parents.",
+  "effect_loc": "Unspecified",
+  "examples": [],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getBoneNames",
+  "name": "getBoneNames",
+  "problem_notes": [],
+  "see_also": [
+    "selectionPosition",
+    "selectionNames",
+    "getSelectionBones"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "bone names and bone parents in separate arrays, in format: [[bone1, bone2,...], [parent1, parent2, ....]]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

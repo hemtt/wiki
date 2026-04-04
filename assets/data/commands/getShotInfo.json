@@ -1,0 +1,138 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns various properties for the given shot.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _shotInfo = getShotInfo shot1;</sqf>",
+    "<sqf>private _fuseDistanceLeft = shot1 getShotInfo 1;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getShotInfo",
+  "name": "getShotInfo",
+  "problem_notes": [],
+  "see_also": [
+    "getShotParents",
+    "missileTarget",
+    "triggerAmmo",
+    "getObjectType",
+    "getObjectTextures",
+    "objectParent",
+    "setVelocityTransformation",
+    "getUnitFreefallInfo",
+    "getEntityInfo",
+    "getModelInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "shot"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "how much more shot has to live.",
+              "name": "effectiveTimeToLive",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "how long shot has to travel more to get fused (undebarrel grenade for example).",
+              "name": "fuseDistanceLeft",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "how long before shot fuse explodes (hand grenade for example) {{GVI|arma3|2.20|size= 0.75}} works on mines too.",
+              "name": "timeToExplosion",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "[[true]] if shot ammo was triggered with [[triggerAmmo]].",
+              "name": "triggerIsForced",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if the shot shown as tracer.",
+              "name": "shownTracer",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if the shot is considered in damage events.",
+              "name": "isReal",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if the shot contains submunition and it is triggered.",
+              "name": "isSubmunitionTriggered",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if the shot is already set for deletion but not yet removed from the scene.",
+              "name": "isSetForDeletion",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "the vehicle that produced shot.",
+              "name": "shotParent",
+              "since": {
+                "arma3": "2.22"
+              },
+              "type": "Object"
+            },
+            {
+              "desc": "the person who pulled the trigger.",
+              "name": "shotInstigator",
+              "since": {
+                "arma3": "2.22"
+              },
+              "type": "Object"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "shot projectile",
+          "name": "shot",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "shot",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "shot projectile",
+          "name": "shot",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "depends on the requested property, or [[Nothing]]",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "property index (see main syntax, for example 1 for fuseDistanceLeft)",
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds given number of a magazine to the given turret. Use turret path {{hl|[-1]}} for driver's turret.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_tank addMagazinesTurret [\"20Rnd_120mmSABOT_M1A2\", [0], 10];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "addMagazinesTurret",
+  "name": "addMagazinesTurret",
+  "problem_notes": [],
+  "see_also": [
+    "addMagazineTurret",
+    "addMagazineGlobal",
+    "addMagazine",
+    "loadMagazine",
+    "addMagazines",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "addMagazinePool",
+    "magazinesTurret",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "addMagazineAmmoCargo",
+    "addWeaponTurret",
+    "removeWeaponTurret",
+    "turretLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "magazineName",
+            "turretPath",
+            "quantity"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "magazineName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "desired number of the magazines",
+              "name": "quantity",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

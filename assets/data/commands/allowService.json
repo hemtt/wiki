@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets which type of repair/refuel/rearm service is allowed. The two available types are manual, where the action is displayed to the user, and auto, where the service happens within distance.\nThe engine default is both (manual and auto) for historic reasons.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>ammoTruck allowService 0;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "allowService",
+  "name": "allowService",
+  "problem_notes": [],
+  "see_also": [
+    "allowedService",
+    "needService"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "supply vehicle, i.e. ammo truck",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "0: none, 1: auto, 2: manual, 3: both",
+          "name": "type",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

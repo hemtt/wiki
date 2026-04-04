@@ -8,6 +8,7 @@
   "groups": [
     "Unit Control"
   ],
+  "id": "stopped",
   "name": "stopped",
   "problem_notes": [],
   "see_also": [

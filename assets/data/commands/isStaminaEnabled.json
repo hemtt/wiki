@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Global",
+  "description": "Check if stamina depletion is enabled.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (isStaminaEnabled player) then { hint \"You can get exhausted.\" };</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "isStaminaEnabled",
+  "name": "isStaminaEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

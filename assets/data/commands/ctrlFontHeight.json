@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns control's font size, usually {{hl|sizeEx}} value (see [[ctrlSetFontHeight]]).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ctrlFontHeight _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlFontHeight",
+  "name": "ctrlFontHeight",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlTextHeight",
+    "ctrlTextWidth",
+    "ctrlSetFontHeight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

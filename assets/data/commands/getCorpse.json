@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the corpse associated with given weaponholder. When unit is killed and had a weapon, the weapon is placed inside \"WeaponHolderSimulated\" and dropped together with the unit. This command returns the dead body associated with this weaponholder.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>systemChat str getCorpse cursorObject;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "Object Manipulation"
+  ],
+  "id": "getCorpse",
+  "name": "getCorpse",
+  "problem_notes": [],
+  "see_also": [
+    "getCorpseWeaponholders",
+    "nearSupplies",
+    "allDeadMen"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "weaponholder"
+      },
+      "ret": {
+        "desc": "dead unit",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "weaponholder dropped by the dead unit",
+          "name": "weaponholder",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

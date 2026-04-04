@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds score to the Xbox Live Statistics score for the given unit (or the commander unit of the given vehicle).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player addLiveStats 10;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "addLiveStats",
+  "name": "addLiveStats",
+  "problem_notes": [],
+  "see_also": [
+    "setArmoryPoints",
+    "unlockAchievement",
+    "setStatValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "score"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "score",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

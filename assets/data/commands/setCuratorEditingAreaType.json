@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set whether curator can edit in all editing areas (true) or outside of them (false).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorModule setCuratorEditingAreaType true;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "setCuratorEditingAreaType",
+  "name": "setCuratorEditingAreaType",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorEditingArea",
+    "removeCuratorEditingArea",
+    "removeAllCuratorEditingAreas",
+    "curatorEditingArea"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "bool"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

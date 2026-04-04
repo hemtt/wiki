@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns group's [[High Command|high command]] commander.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_leader = hcLeader groupName;</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "id": "hcLeader",
+  "name": "hcLeader",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcAllGroups",
+    "hcGroupParams",
+    "hcRemoveAllGroups",
+    "hcRemoveGroup",
+    "hcSelected",
+    "hcSelectGroup",
+    "hcSetGroup",
+    "hcShowBar",
+    "hcShownBar",
+    "onHCGroupSelectionChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds a new menu button. Priority is optional.\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "addMenu",
+  "name": "addMenu",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          [
+            "text",
+            "priority"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "priority",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

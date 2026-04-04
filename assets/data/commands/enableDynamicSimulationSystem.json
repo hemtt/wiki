@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables or disables the whole [[Arma 3: Dynamic Simulation]] system",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>enableDynamicSimulationSystem true;</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "id": "enableDynamicSimulationSystem",
+  "name": "enableDynamicSimulationSystem",
+  "problem_notes": [],
+  "see_also": [
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation",
+    "enableSimulation",
+    "simulationEnabled",
+    "enableSimulationGlobal",
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enable"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns direction, which is relative to object's current direction, from given object to another object or position in the range from 0 to 360, the equivalent of [[BIS_fnc_relativeDirTo]].\nTaking the current [[direction]] of the object into account.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_reldir = player getRelDir tank;</sqf>",
+    "<sqf>\n// Set object's direction towards any given position\n_object setDir (getDir _object + (_object getRelDir [_x, _y, _z]))\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getRelDir",
+  "name": "getRelDir",
+  "problem_notes": [],
+  "see_also": [
+    "getDir",
+    "direction",
+    "getDirVisual"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

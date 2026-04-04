@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Same as [[hint]], but without a sound.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>hintSilent format [\"Hello, %1!\", name player];</sqf>",
+    "<sqf>\nhint \"Hello there!\";\nsleep 5;\nhintSilent \"\"; // removes message\n</sqf>"
+  ],
+  "groups": [
+    "Interaction",
+    "Structured Text",
+    "Strings"
+  ],
+  "id": "hintSilent",
+  "name": "hintSilent",
+  "problem_notes": [],
+  "see_also": [
+    "hint",
+    "hintC",
+    "hintCadet"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "text"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "text",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "StructuredText"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

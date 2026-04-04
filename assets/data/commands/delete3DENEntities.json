@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Delete given [[Eden Entity|entities]] in [[:Category:Eden Editor|Eden Editor]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>delete3DENEntities (all3DENEntities select 0); // Removes all objects</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "delete3DENEntities",
+  "name": "delete3DENEntities",
+  "problem_notes": [],
+  "see_also": [
+    "collect3DENHistory",
+    "create3DENComposition",
+    "create3DENEntity",
+    "all3DENEntities"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entities"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "entities",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenEntity"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenID"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the additional value in the row with the given index of a [[CT_LISTBOX]] or [[CT_COMBO]] control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lbSetValue [101, 0, 1];</sqf>",
+    "<sqf>_control lbSetValue [0, 1];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "id": "lbSetValue",
+  "name": "lbSetValue",
+  "problem_notes": [],
+  "see_also": [
+    "lbSortByValue",
+    "lbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index",
+          "value"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "only integer values are supported",
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "index",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "only integer values are supported",
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

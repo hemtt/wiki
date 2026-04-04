@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Saves current 3DEN preferences into .3den.Arma3Profile file.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n\"Preferences\" set3DENMissionAttribute [\"SaveBinarized\", true];\nsave3DENPreferences;\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "save3DENPreferences",
+  "name": "save3DENPreferences",
+  "problem_notes": [],
+  "see_also": [
+    "saveProfileNamespace",
+    "saveMissionProfileNamespace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

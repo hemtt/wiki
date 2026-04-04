@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Associates metadata (number) with the row determined by the index. Returns Nothing.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctSetValue [0, 23];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "id": "ctSetValue",
+  "name": "ctSetValue",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetCurSel",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "index",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

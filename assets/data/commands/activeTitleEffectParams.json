@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns type, effect, speed and map visibility of the given active title effect (see [[allActiveTitleEffects]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n21 cutText [\"Hello World!\", \"PLAIN\", 2];\nhint str activeTitleEffectParams 21; // [\"TXT\", \"PLAIN\", 2, true]\n</sqf>",
+    "<sqf>\ntitleText [\"Hello World!\", \"BLACK\"];\nhint str activeTitleEffectParams -1; // [\"TXT\", \"BLACK\", 1, true]\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "activeTitleEffectParams",
+  "name": "activeTitleEffectParams",
+  "problem_notes": [],
+  "see_also": [
+    "allCutLayers",
+    "cutText",
+    "cutRsc",
+    "cutObj",
+    "cutFadeOut",
+    "titleText",
+    "titleRsc",
+    "titleObj",
+    "titleFadeOut",
+    "allActiveTitleEffects",
+    "Title",
+    "Effect",
+    "Type"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "layer"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "type of effect, can be {{hl|\"OBJ\"}}, {{hl|\"RSC\"}} or {{hl|\"TXT\"}}",
+              "name": "type",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "[[Title Effect Type]] ({{hl|\"PLAIN\"}}, {{hl|\"BLACK OUT\"}} etc)",
+              "name": "effect",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "effect speed multiplier",
+              "name": "speed",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "[[true]] if effect is available over map",
+              "name": "showInMap",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "layer number or -1 (see [[allActiveTitleEffects]])",
+          "name": "layer",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

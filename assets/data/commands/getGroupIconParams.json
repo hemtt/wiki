@@ -1,0 +1,84 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns group icons params used for command bar drawing such as color, text, scale, visibility, waypoint visibility, waypoint color.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_iconParams = getGroupIconParams group player;</sqf>",
+    "<sqf>getGroupIconParams group player params [\"_color\", \"_text\", \"_scale\", \"_visibility\", \"_WPVisibility\", \"_WPColor\"];</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "id": "getGroupIconParams",
+  "name": "getGroupIconParams",
+  "problem_notes": [],
+  "see_also": [
+    "addGroupIcon",
+    "clearGroupIcons",
+    "getGroupIcon",
+    "groupIconSelectable",
+    "groupIconsVisible",
+    "onGroupIconClick",
+    "removeGroupIcon",
+    "setGroupIcon",
+    "setGroupIconParams",
+    "setGroupIconsSelectable",
+    "setGroupIconsVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "icon color",
+              "name": "color",
+              "since": null,
+              "type": "ArrayColor"
+            },
+            {
+              "desc": "icon text",
+              "name": "text",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "icon scale",
+              "name": "scale",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "icon visibility",
+              "name": "visibility",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "waypoint visibility",
+              "name": "WPvisibility",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "waypoint color",
+              "name": "WPcolor",
+              "since": null,
+              "type": "ArrayColor"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

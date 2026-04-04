@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes a page and all its subjects from the [[Diary]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player removeDiarySubject \"myPage\";</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "removeDiarySubject",
+  "name": "removeDiarySubject",
+  "problem_notes": [],
+  "see_also": [
+    "createDiarySubject",
+    "diarySubjectExists",
+    "selectDiarySubject",
+    "removeDiaryRecord",
+    "allDiarySubjects"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "player",
+          "diaryPage"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "player",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "diaryPage",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

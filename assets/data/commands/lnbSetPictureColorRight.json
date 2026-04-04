@@ -1,0 +1,122 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets color of the right picture in a [[CT_LISTNBOX]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control lnbSetPictureColorRight [[0, 0], [1,1,1,0.5]];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "id": "lnbSetPictureColorRight",
+  "name": "lnbSetPictureColorRight",
+  "problem_notes": [],
+  "see_also": [
+    "lnbSetColor",
+    "lnbColorRight",
+    "lnbColor"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          [
+            "row",
+            "column"
+          ],
+          "color"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "index of the row",
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "index of the column",
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            [
+              "row",
+              "column"
+            ],
+            "color"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "index of the row",
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "index of the column",
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

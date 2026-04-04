@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return ANSI content of the (text) clipboard. If Unicode support is desired, see [[forceUnicode]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint copyFromClipboard;</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Strings"
+  ],
+  "id": "copyFromClipboard",
+  "name": "copyFromClipboard",
+  "problem_notes": [],
+  "see_also": [
+    "copyToClipboard",
+    "diag_log",
+    "forceUnicode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

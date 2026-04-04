@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create a new item and try to link it into goggles (glasses) slot.\n{{Feature | informative | This command does '''not''' add NVGs, which are [[hmd]] slot items (see [[linkItem]] instead).}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player addGoggles \"G_Tactical_Clear\";</sqf>",
+    "<sqf>diver addGoggles \"G_Diving\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "addGoggles",
+  "name": "addGoggles",
+  "problem_notes": [],
+  "see_also": [
+    "goggles",
+    "removeGoggles"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

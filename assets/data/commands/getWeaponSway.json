@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current size of weapon sway of a given unit, in [[rad|radians]]. This command may still return a value greater 0 even if sway was effectively set to 0 with <sqf inline>player setCustomAimCoef 0;</sqf>.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_sway = getWeaponSway player;</sqf>"
+  ],
+  "groups": [
+    "Stamina System",
+    "Weapons"
+  ],
+  "id": "getWeaponSway",
+  "name": "getWeaponSway",
+  "problem_notes": [],
+  "see_also": [
+    "weaponInertia",
+    "getCustomAimCoef"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "weapon sway",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Smoothly conduct the changes that were assigned to a camera within the given time. If the time is set to zero, the changes are done immediately. For {{hl|camPrepareXXX}} commands use [[camCommitPrepared]].",
+  "effect_loc": "Local",
+  "examples": [
+    "[[SQS Syntax]]:\n<sqs>\n; create a camera object\n_cam = \"camera\" camCreate [5600,4800,10]\n_cam camSetTarget player\n_cam cameraEffect [\"internal\", \"BACK\"]\n_cam camCommit 0\n\n; smoothly move the camera to its new position in 6 seconds\n_cam camSetPos [5680,4720,20]\n_cam camCommit 6\n@camCommitted _cam\n\n; proceed\n</sqs>",
+    "[[SQF Syntax]]:\n<sqf>\nprivate \"_cam\";\n\n// create a camera object\n_cam = \"camera\" camCreate [position player select 0, position player select 1, 2];\n_cam camSetTarget player;\n_cam cameraEffect [\"internal\", \"BACK\"];\n_cam camCommit 0;\n\n// smoothly move the camera to its new position in 6 seconds\n_cam camSetPos [position player select 0, (position player select 1) + 10, 20];\n_cam camCommit 6;\nwaitUntil { camCommitted _cam; };\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "camCommit",
+  "name": "camCommit",
+  "problem_notes": [],
+  "see_also": [
+    "camCommitted",
+    "camCommitPrepared"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "time"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "time in seconds during which the changes shall be done",
+          "name": "time",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

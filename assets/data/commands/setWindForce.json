@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set max. wind overall wind changes in time. A time of zero means there will be an immediate change. A wind level of zero is minimal changes and a wind level of one means that wind can change rapidly.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>1800 setWindForce 0.5;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setWindForce",
+  "name": "setWindForce",
+  "problem_notes": [],
+  "see_also": [
+    "setWindStr",
+    "setWind"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "wind"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "wind",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

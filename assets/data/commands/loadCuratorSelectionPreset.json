@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Load the given selection preset to the current selection of the curator.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>loadCuratorSelectionPreset 1;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "loadCuratorSelectionPreset",
+  "name": "loadCuratorSelectionPreset",
+  "problem_notes": [],
+  "see_also": [
+    "curatorSelectionPreset",
+    "setCuratorSelectionPreset",
+    "curatorSelected",
+    "setCuratorSelected",
+    "addCuratorSelected",
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "numkey"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the number key under which the selection preset is saved",
+          "name": "numkey",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

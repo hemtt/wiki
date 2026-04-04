@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the URL overlay mode 0, 1, 2 (see [[ctrlSetURLOverlayMode]]) or -1 if something went wrong.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mode = ctrlURLOverlayMode _control; // e.g. 0</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlURLOverlayMode",
+  "name": "ctrlURLOverlayMode",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetURLOverlayMode",
+    "ctrlURL",
+    "isSteamOverlayEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

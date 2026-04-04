@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Create a MP campaign display. The class name must be a mission collection declared in the configs; for example, <sqf inline>configFile >> \"CfgMissions\" >> \"MPMissions\" >> \"Apex\"</sqf><br>\nIf the class does not exist or is not a mission collection, the display will be created empty.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>findDisplay 46 createMPCampaignDisplay \"Apex\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "createMPCampaignDisplay",
+  "name": "createMPCampaignDisplay",
+  "problem_notes": [],
+  "see_also": [
+    "createMissionDisplay",
+    "playMission",
+    "playScriptedMission",
+    "hostMission"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "display",
+          "class"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "mission collection classname",
+          "name": "class",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

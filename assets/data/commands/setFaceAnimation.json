@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets facial animation phase (eye blinking).\n{{Feature|arma3|This command is not functional in {{arma3}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_soldier1 setFaceAnimation 0.5;</sqf>"
+  ],
+  "groups": [
+    "Animations",
+    "Broken Commands"
+  ],
+  "id": "setFaceAnimation",
+  "name": "setFaceAnimation",
+  "problem_notes": [],
+  "see_also": [
+    "setRandomLip",
+    "setMimic",
+    "animate",
+    "animationPhase",
+    "animateDoor"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "blink"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "range 0..1",
+          "name": "blink",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

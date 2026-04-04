@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the variable name that contains a primary editor reference to this object. This is the variable given in the ''Insert Unit dialog / name field'' in the editor. It can be changed using [[setVehicleVarName]].\n\n{{Feature|informative|Respawned unit will have the same vehicleVarName as the corpse left behind, however actual [[missionNamespace]] variable of the same name will only contain respawned unit.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint vehicleVarName player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "vehicleVarName",
+  "name": "vehicleVarName",
+  "problem_notes": [],
+  "see_also": [
+    "setVehicleVarName",
+    "BIS_fnc_objectVar"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "variable name, if none was set, an empty string is returned",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

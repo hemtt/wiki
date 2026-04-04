@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets marker type locally. Marker type is a class name in [[CfgMarkers]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\"MarkerOne\" setMarkerTypeLocal \"Warning\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerTypeLocal",
+  "name": "setMarkerTypeLocal",
+  "problem_notes": [],
+  "see_also": [
+    "CfgMarkers",
+    "setMarkerAlpha",
+    "setMarkerAlphaLocal",
+    "setMarkerBrush",
+    "setMarkerBrushLocal",
+    "setMarkerColor",
+    "setMarkerColorLocal",
+    "setMarkerDir",
+    "setMarkerDirLocal",
+    "setMarkerPos",
+    "setMarkerPosLocal",
+    "setMarkerShape",
+    "setMarkerShapeLocal",
+    "setMarkerSize",
+    "setMarkerSizeLocal",
+    "setMarkerText",
+    "setMarkerTextLocal",
+    "setMarkerType",
+    "markerType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[CfgMarkers]].",
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Orders a unit to process command defined by [[FSM]] file (via the radio).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_soldierOne commandFSM [\"move.fsm\", position player, player];</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "commandFSM",
+  "name": "commandFSM",
+  "problem_notes": [],
+  "see_also": [
+    "FSM",
+    "FSM_Editor_Manual",
+    "execFSM",
+    "completedFSM",
+    "doFSM",
+    "getFSMVariable",
+    "setFSMVariable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          [
+            "fsmFile",
+            "position",
+            "target"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "fsmFile",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          },
+          {
+            "Item": {
+              "name": "target",
+              "type": "Object"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the number of items of type in the weapon pool (used in campaigns to transfer weapons to the next mission).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _amountOfFAKgiven = queryItemsPool \"FirstAidKit\";</sqf>"
+  ],
+  "groups": [
+    "Weapon Pool"
+  ],
+  "id": "queryItemsPool",
+  "name": "queryItemsPool",
+  "problem_notes": [],
+  "see_also": [
+    ":Category:Command",
+    "Group:",
+    "Weapon",
+    "Pool|Command",
+    "Group:",
+    "Weapon",
+    "Pool",
+    "queryWeaponPool"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

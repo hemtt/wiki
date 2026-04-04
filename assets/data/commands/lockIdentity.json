@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Locks the identity of a person. This will disable default identity.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_success = lockIdentity player;</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "id": "lockIdentity",
+  "name": "lockIdentity",
+  "problem_notes": [],
+  "see_also": [
+    "loadIdentity",
+    "setIdentity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "[[true]], if it was applied",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get visibility state of [[:Category:Eden Editor|Eden Editor]] lines.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (get3DENLinesVisible select 0) then { hint \"Lines are visible in the map.\"; };</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENLinesVisible",
+  "name": "get3DENLinesVisible",
+  "problem_notes": [],
+  "see_also": [
+    "set3DENLinesVisible",
+    "set3DENIconsVisible",
+    "get3DENIconsVisible",
+    "set3DENModelsVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "visibility in the map",
+              "name": "showMap",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "visibility in the scene",
+              "name": "showScene",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

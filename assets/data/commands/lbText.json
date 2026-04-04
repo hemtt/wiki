@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the shown text of the item with the given index of the [[CT_LISTBOX]] or [[CT_COMBO]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_text = lbText [101, 0];</sqf>",
+    "<sqf>_text = _control lbText 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "id": "lbText",
+  "name": "lbText",
+  "problem_notes": [],
+  "see_also": [
+    "lbAdd",
+    "lbSetText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

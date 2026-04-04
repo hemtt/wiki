@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Global",
+  "description": "Specifies the entity which will activate the selected trigger.<br>\n*If '''[]''' is given, the trigger is decoupled from the assigned vehicle (example 2).\n*If the activation source is '''\"VEHICLE\"''', '''\"GROUP\"''', '''\"LEADER\"''' or '''\"MEMBER\"''', it is changed to '''\"NONE\"'''. \n*If '''[vehicle]''' is given, the trigger is coupled to the vehicle or its group. \n*When the source is '''\"GROUP\"''', '''\"LEADER\"''' or '''\"MEMBER\"''', it is coupled to the group, otherwise it is coupled to the vehicle and the source is changed to '''\"VEHICLE\"'''.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>trigger triggerAttachVehicle [player];</sqf>",
+    "<sqf>trigger triggerAttachVehicle [];</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "triggerAttachVehicle",
+  "name": "triggerAttachVehicle",
+  "problem_notes": [],
+  "see_also": [
+    "attachObject",
+    "attachTo",
+    "attachedObjects",
+    "attachedTo",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "lightAttachObject",
+    "attachedObject",
+    "triggerAttachedVehicle",
+    "triggerAttachObject",
+    "triggerInterval",
+    "setTriggerInterval"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "triggerName",
+          "objects"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "triggerName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

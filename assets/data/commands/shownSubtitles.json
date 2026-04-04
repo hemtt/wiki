@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[showSubtitles]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _setToShow = shownSubtitles;</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "shownSubtitles",
+  "name": "shownSubtitles",
+  "problem_notes": [],
+  "see_also": [
+    "showSubtitles"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "returns [[true]] if subtitles are set to show",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

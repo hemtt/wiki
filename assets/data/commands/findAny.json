@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the zero-based index of the first element in array A that also exists in array B. If no common elements exist it returns -1.<br>\nSimilar in functionality as [[find#Syntax 1|find's first syntax]], but the second parameter is an array of elements to find.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[0,1,2,3,4] findAny [2,4,6,8]; // returns 2</sqf>",
+    "<sqf>[0,1,2,3,4] findAny [8,6,4,2]; // returns 2</sqf>",
+    "<sqf>[0,1,2,3,4] findAny [5,7,9]; // returns -1</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "id": "findAny",
+  "name": "findAny",
+  "problem_notes": [],
+  "see_also": [
+    "find",
+    "findIf"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "searchIn",
+          "toFind"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "searchIn",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "the index of the first found item",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "toFind",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

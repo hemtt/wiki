@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if Steam overlay is enabled, otherwise [[false]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_overlayEnabled = isSteamOverlayEnabled;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "isSteamOverlayEnabled",
+  "name": "isSteamOverlayEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetURLOverlayMode",
+    "ctrlURLOverlayMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

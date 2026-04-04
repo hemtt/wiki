@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Create and assign item to the correct slot. If there is an item in the targeted slot, it gets replaced. See also [[assignItem]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\nbluforUnit linkItem \"NVGoggles\";\nopforUnit linkItem \"NVGoggles_OPFOR\";\nindependentUnit linkItem \"NVGoggles_INDEP\";\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "linkItem",
+  "name": "linkItem",
+  "problem_notes": [],
+  "see_also": [
+    "unlinkItem",
+    "addItem",
+    "assignItem",
+    "removeItem",
+    "unassignItem",
+    "assignedItems",
+    "removeAllAssignedItems"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

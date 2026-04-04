@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if player has ID card enabled. Obsolete command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"Your ID is %1\", [\"off\", \"on\"] select shownWarrant];</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "shownWarrant",
+  "name": "shownWarrant",
+  "problem_notes": [],
+  "see_also": [
+    "showWarrant"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

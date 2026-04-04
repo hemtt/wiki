@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Loads object's properties from [[Objects.sav]] file in campaign directory (from entry name).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ok = player loadStatus \"playerState\";</sqf>"
+  ],
+  "groups": [
+    "Weapon Pool",
+    "Mission Information"
+  ],
+  "id": "loadStatus",
+  "name": "loadStatus",
+  "problem_notes": [],
+  "see_also": [
+    "saveStatus"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "entryName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if successfull, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "entryName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

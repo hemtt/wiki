@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current scale of given map control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_control = (findDisplay 12) displayCtrl 51; //Arma 3\n_scale = ctrlMapScale _control; //returns number from 1 to 0.001\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "ctrlMapScale",
+  "name": "ctrlMapScale",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlScale",
+    "ctrlSetScale",
+    "ctrlMapDir"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ctrl"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

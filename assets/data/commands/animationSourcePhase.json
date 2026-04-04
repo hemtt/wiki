@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current animation phase of given source. Similar to [[animationPhase]] or [[doorPhase]] but designed to complement [[animateSource]]. This command could be used to obtain relative turret direction and gun elevation on a vehicle (see {{Link|#Example 2}}).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _phase = house animationSourcePhase \"Door_1_source\";</sqf>",
+    "<sqf>\nprivate _mainturretDirection =\tdeg (_marshall animationSourcePhase \"mainturret\"); // relative to Marshall direction\nprivate _maingunElevation =\t\tdeg (_marshall animationSourcePhase \"maingun\");\nprivate _obsturretDirection =\tdeg (_marshall animationSourcePhase \"obsturret\"); // relative to main turret direction\nprivate _obsgunElevation =\t\tdeg (_marshall animationSourcePhase \"obsgun\");\n</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "id": "animationSourcePhase",
+  "name": "animationSourcePhase",
+  "problem_notes": [],
+  "see_also": [
+    "animateSource",
+    "animationNames",
+    "animate",
+    "animationPhase",
+    "animateDoor",
+    "doorPhase"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "source"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "source",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

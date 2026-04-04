@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the {{hl|#lightreflector}}'s cone params.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_light setLightConePars [90, 45, 1];</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "id": "setLightConePars",
+  "name": "setLightConePars",
+  "problem_notes": [],
+  "see_also": [
+    "setLightColor",
+    "setLightAmbient",
+    "setLightBrightness",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightIntensity",
+    "setLightAttenuation",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightFlareMaxDistance",
+    "setLightDayLight",
+    "setLightIR"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "lightReflector",
+          [
+            "outerAngle",
+            "innerAngle",
+            "fadeCoef"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of class {{hl|#lightreflector}}",
+          "name": "lightReflector",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "outerAngle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "innerAngle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "fadeCoef",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

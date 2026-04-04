@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if entity can be attached to a rope end.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ropeAttachEnabled veh1;</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "id": "ropeAttachEnabled",
+  "name": "ropeAttachEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "ropes",
+    "canSlingLoad",
+    "enableRopeAttach",
+    "getSlingLoad",
+    "ropeAttachedObjects",
+    "ropeAttachTo",
+    "ropeDestroy",
+    "ropeLength",
+    "ropeUnwound",
+    "ropeAttachedTo",
+    "ropeCreate",
+    "ropeDetach",
+    "ropeCut",
+    "ropeEndPosition",
+    "ropeUnwind",
+    "setSlingLoad",
+    "slingLoadAssistantShown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "desc": "[[true]] if allowed",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "entity to check",
+          "name": "entity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

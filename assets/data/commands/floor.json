@@ -8,6 +8,7 @@
   "groups": [
     "Math"
   ],
+  "id": "floor",
   "name": "floor",
   "problem_notes": [],
   "see_also": [

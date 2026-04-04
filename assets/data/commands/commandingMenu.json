@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the name of the topmost commanding menu or \"\" if the menu is closed. For action menu visibility check see [[isActionMenuVisible]]. See {{Link|#Notes}} for {{arma2}}/{{arma3}} structure.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nwaitUntil { sleep 0.1; commandingMenu == \"RscStatus\" };\nhint \"Press 4, I'm bleeding !\";\n</sqf>",
+    "<sqf>if (commandingMenu != \"\") then { hint \"Command menu is opened\" };</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "commandingMenu",
+  "name": "commandingMenu",
+  "problem_notes": [],
+  "see_also": [
+    "showCommandingMenu",
+    "isActionMenuVisible",
+    "BIS_fnc_addCommMenuItem",
+    "BIS_fnc_removeCommMenuItem"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

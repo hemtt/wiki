@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Global",
+  "description": "From server machine, change the ownership of an object to a given client. Using command in an unintended way will log a message to .rpt file. To transfer ownership of all AI units in a group properly, use [[setGroupOwner]] instead.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_someObject setOwner 12;</sqf>",
+    "<sqf>_someObject setOwner (owner _playerObject);</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "setOwner",
+  "name": "setOwner",
+  "problem_notes": [
+    "{{Feature|arma3|Since {{arma3}} v1.40, this command should not be used to transfer ownership of units with AI with the exception of [[agents]].}}\n{{Feature|important|'''Prior to {{arma3}} v1.40''' it was not possible to transfer the ownership from a client back to the server.}}"
+  ],
+  "see_also": [
+    "owner",
+    "setGroupOwner",
+    "groupOwner",
+    "didJIPOwner"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "clientID"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object to transfer",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "returns [[true]] if ownership was successfully transferred, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "the [[Multiplayer_Scripting#Machine_network_ID | machine network ID]] of the new [[owner]].",
+          "name": "clientID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Find supplies (weapon holders, ammo crates, fuel feeds, other units) in the sphere with given radius.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_list = player nearSupplies 50;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "nearSupplies",
+  "name": "nearSupplies",
+  "problem_notes": [],
+  "see_also": [
+    "findNearestEnemy",
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearObjects",
+    "nearestLocation",
+    "nearEntities",
+    "nearTargets",
+    "nearestLocationWithDubbing",
+    "nearObjectsReady",
+    "nearRoads",
+    "nearestMines",
+    "getCorpse"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "origin",
+          "radius"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "origin",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "radius",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "origin",
+          [
+            "typeName",
+            "radius"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "origin",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "typeName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "radius",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

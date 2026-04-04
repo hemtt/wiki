@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the secondary text of a text control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrlText ctrlSetTextSecondary \"Hello World!\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlSetTextSecondary",
+  "name": "ctrlSetTextSecondary",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlTextSecondary",
+    "ctrlSetText",
+    "ctrlText",
+    "ctrlSetTextColorSecondary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "text"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "text control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "secondary text",
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove a log record.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nprivate _diaryRecord = player createDiaryRecord [\"Diary\", [\"Subject\", \"Text\"]];\n// ...\nplayer removeDiaryRecord [\"Diary\", _diaryRecord];\n</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "removeDiaryRecord",
+  "name": "removeDiaryRecord",
+  "problem_notes": [],
+  "see_also": [
+    "createDiaryRecord",
+    "removeDiarySubject"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "subject",
+            "diaryRecord"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "subject",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "diaryRecord",
+              "type": "DiaryRecord"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

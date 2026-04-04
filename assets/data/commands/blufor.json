@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[west]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Pre-defined variable for the blufor [[Side|side]].",
   "effect_loc": "Unspecified",
@@ -8,6 +11,7 @@
   "groups": [
     "Sides"
   ],
+  "id": "blufor",
   "name": "blufor",
   "problem_notes": [],
   "see_also": [

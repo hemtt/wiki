@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets flag position on the flag pole. To animate flag use [[BIS_fnc_animateFlag]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_flag1 setFlagAnimationPhase 0.5;</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "id": "setFlagAnimationPhase",
+  "name": "setFlagAnimationPhase",
+  "problem_notes": [],
+  "see_also": [
+    "flagAnimationPhase",
+    "Arma",
+    "3:",
+    "Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "flag",
+          "phase"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "flag pole of the type {{hl|\"FlagCarrier\"}}",
+          "name": "flag",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "flag position on the flag pole according to the given animation phase, where 0 is the bottom of the flag pole, 1 is the top of the flag pole.",
+          "name": "phase",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

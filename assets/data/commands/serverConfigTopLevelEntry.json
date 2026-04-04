@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get top-level entry (i.e. entry directly below config root) of the desired name from the {{Link|Arma 3: Server Config File|server config}}, making it some kind of secured '''''serverConfigFile''''' command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_kickDupes = getNumber serverConfigTopLevelEntry \"kickDuplicate\" != 0;</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "serverConfigTopLevelEntry",
+  "name": "serverConfigTopLevelEntry",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Server",
+    "Config",
+    "File",
+    "configFile",
+    "config",
+    "greater",
+    "greater",
+    "name|config",
+    ">>",
+    "name"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "configEntry"
+      },
+      "ret": {
+        "desc": "requested server config entry or [[configNull]] on error",
+        "type": "Config"
+      },
+      "right": {
+        "Item": {
+          "desc": "any [[Arma 3: Server Config File|server config]] entry but {{hl|password}} and {{hl|passwordAdmin}} which are ignored",
+          "name": "configEntry",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Finish world initialisation before mission is launched.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "[[finishMissionInit]]"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "finishMissionInit",
+  "name": "finishMissionInit",
+  "problem_notes": [],
+  "see_also": [
+    "startLoadingScreen",
+    "endLoadingScreen"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

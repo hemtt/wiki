@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns true if compass is shown.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isShown = shownCuratorCompass;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "shownCuratorCompass",
+  "name": "shownCuratorCompass",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

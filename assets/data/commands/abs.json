@@ -8,6 +8,7 @@
   "groups": [
     "Math"
   ],
+  "id": "abs",
   "name": "abs",
   "problem_notes": [],
   "see_also": [

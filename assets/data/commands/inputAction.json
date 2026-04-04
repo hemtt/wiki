@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the state of input devices mapped to given input action.\n<br>\nFor Arma 3 inputActions and its bindings see: [[{{PAGENAME}}/actions]].\n<br>\nFor earlier Arma editions  see [[:Category:Key Actions]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>inputAction \"leanLeft\";</sqf> Returns 1 if the button mapped to \"leanLeft\" is pressed currently else 0.",
+    "<sqf>\n0 spawn {\n\twaitUntil {inputAction \"reloadMagazine\" > 0};\n\thint \"Reload Key Pressed\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "inputAction",
+  "name": "inputAction",
+  "problem_notes": [],
+  "see_also": [
+    "inputMouse",
+    "inputController",
+    "actionKeys",
+    "actionKeysImages",
+    "actionKeysNames",
+    "actionIDs",
+    "actionParams",
+    "addAction",
+    "setUserActionText",
+    "inGameUISetEventHandler",
+    "showHUD",
+    "removeAction",
+    "removeAllActions",
+    "action"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the action",
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

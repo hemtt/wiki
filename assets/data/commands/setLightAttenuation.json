@@ -1,0 +1,99 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets attenuation of light. Standard method of attenuation (1 / (constant + linear*dist + quadratic*dist*dist)).\n''start'' param represents distance where the attenuation starts to take effects (dist = distance - start).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>myLight setLightAttenuation [2, 4, 4, 0, 9, 10];</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "id": "setLightAttenuation",
+  "name": "setLightAttenuation",
+  "problem_notes": [],
+  "see_also": [
+    "setLightAmbient",
+    "setLightColor",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightBrightness",
+    "setLightIntensity",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightFlareMaxDistance",
+    "setLightDayLight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "light",
+          [
+            "start",
+            "constant",
+            "linear",
+            "quadratic",
+            "hardlimitstart",
+            "hardlimitend"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "light",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "distance with 100% intensity, falloff starts here",
+              "name": "start",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "constant attenuation coef",
+              "name": "constant",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "linear attenuation coef",
+              "name": "linear",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "quadratic attenuation coef",
+              "name": "quadratic",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) max distance hard limit start (start of fading of intensity to 0) in m",
+              "name": "hardlimitstart",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) max distance hard limit end (end of fading of intensity to 0) in m",
+              "name": "hardlimitend",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds a magazine to the turret. Use turret path {{hl|[-1]}} for driver's turret.\n{{Feature|important|Invalid combinations may be created by using this command, for example by adding 20 grenades. In these cases, behaviour is undefined.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_tank addMagazineTurret [\"SmokeLauncherMag\", [0,0]];</sqf>",
+    "<sqf>_tank addMagazineTurret [\"20Rnd_120mmSABOT_M1A2\", [0]];</sqf>",
+    "<sqf>_tank addMagazineTurret [\"20Rnd_120mmSABOT_M1A2\", [0], 10]; // add magazine with 10 rounds</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "addMagazineTurret",
+  "name": "addMagazineTurret",
+  "problem_notes": [],
+  "see_also": [
+    "addMagazinesTurret",
+    "addMagazineGlobal",
+    "addMagazine",
+    "loadMagazine",
+    "addMagazines",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "addMagazinePool",
+    "magazinesTurret",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "addMagazineAmmoCargo",
+    "addWeaponTurret",
+    "removeWeaponTurret",
+    "turretLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "magazineName",
+            "turretPath",
+            "ammoCount"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "magazineName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 0) desired ammo count",
+              "name": "ammoCount",
+              "since": {
+                "arma3": "1.56"
+              },
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

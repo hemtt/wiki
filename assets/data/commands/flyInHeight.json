@@ -1,0 +1,86 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the flying altitude for aircraft relatively to the ground surface. Avoid too low altitudes, as helicopters and planes won't evade trees and obstacles on the ground. The default flying altitude is 100 meters. The minimum height is 20 meters.\n{{Feature|informative|Height measurement is relative to the pilot and can be approximated with <sqf inline>ASLToAGL eyePos driver _aircraft;</sqf>.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_helicopter flyInHeight 40;</sqf>",
+    "<sqf>\n// for altitudes below 10m\n_helicopter flyInHeight 5;\t\t\t// helicopter will land\n_helicopter flyInHeight [5, true];\t// helicopter will hover at 5m altitude\n\n// on a landed helicopter\n_helicopter flyInHeight 50;\t\t\t// helicopter will not move until a waypoint is added\n_helicopter flyInHeight [50, true];\t// helicopter will start to rise immediately\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "flyInHeight",
+  "name": "flyInHeight",
+  "problem_notes": [],
+  "see_also": [
+    "flyInHeightASL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "aircraft",
+          "altitude"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "aircraft",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "flying altitude in meters",
+          "name": "altitude",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "aircraft",
+          [
+            "altitude",
+            "forced"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "aircraft",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "flying altitude in meters",
+              "name": "altitude",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to force altitude in all cases, [[false]] to behave like main syntax",
+              "name": "forced",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.14"
+      }
+    }
+  ]
+}

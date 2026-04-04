@@ -9,6 +9,7 @@
   "groups": [
     "Program Flow"
   ],
+  "id": "assert",
   "name": "assert",
   "problem_notes": [],
   "see_also": [

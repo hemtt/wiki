@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Global",
+  "description": "Hide entity. Can be used on soldiers and vehicles, also on static objects.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>hideObject unitName;</sqf>",
+    "<sqf>objectName hideObject true;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "hideObject",
+  "name": "hideObject",
+  "problem_notes": [],
+  "see_also": [
+    "isObjectHidden",
+    "hideObjectGlobal",
+    "deleteCollection"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "hidden"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]]->hidden; [[false]]->visible",
+          "name": "hidden",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

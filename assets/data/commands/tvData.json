@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns string data from item on given path. IDC means id of parent [[CT_TREE]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tvData [101, [0]];</sqf>",
+    "<sqf>(_display displayCtrl 101) tvData [0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvData",
+  "name": "tvData",
+  "problem_notes": [],
+  "see_also": [
+    "tvSetData"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

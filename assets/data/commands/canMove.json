@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns if the given vehicle is still able to move.\n* This command does not check for the amount of fuel the vehicle has, except for helicopters and airplanes.\n* A helicopter with a damaged tail rotor may return that it cannot move, where a skilled pilot could use it.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (not canMove _tank) then\n{\n\tplayer sideChat \"He's nailed on the ground! Now hurry!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "canMove",
+  "name": "canMove",
+  "problem_notes": [],
+  "see_also": [
+    "canFire",
+    "canStand"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "[[true]] if the vehicle is able to move, [[false]] if not",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

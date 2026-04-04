@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Collapses item on given path and all its children.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuCollapse [0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "id": "menuCollapse",
+  "name": "menuCollapse",
+  "problem_notes": [],
+  "see_also": [
+    "menuExpand"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

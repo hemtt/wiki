@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the value of variable in the variable space of given FSM. The FSM handle is the number returned by the [[execFSM]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_handle getFSMVariable \"_foo\";</sqf>",
+    "<sqf>_handle getFSMVariable [\"_foo\", 123];</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "getFSMVariable",
+  "name": "getFSMVariable",
+  "problem_notes": [],
+  "see_also": [
+    "FSM",
+    "commandFSM",
+    "completedFSM",
+    "doFSM",
+    "execFSM",
+    "setFSMVariable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "FSMhandle",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "FSMhandle",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the variable",
+          "name": "name",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "FSMhandle",
+          [
+            "name",
+            "defaultValue"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "FSMhandle",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the variable",
+              "name": "name",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "value to return if variable is [[nil]]",
+              "name": "defaultValue",
+              "type": "Anything"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

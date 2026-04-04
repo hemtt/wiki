@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if player is forced to walk with [[forceWalk]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_bool = isForcedWalk player;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "isForcedWalk",
+  "name": "isForcedWalk",
+  "problem_notes": [],
+  "see_also": [
+    "forceWalk",
+    "isWalking",
+    "forceSpeed",
+    "getSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

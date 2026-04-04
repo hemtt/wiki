@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns minimal framerate. Calculated from the longest frame over last 16 frames.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_minfps = diag_fpsMin;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic",
+    "Performance Profiling"
+  ],
+  "id": "diag_fpsMin",
+  "name": "diag_fpsMin",
+  "problem_notes": [],
+  "see_also": [
+    "diag_fps",
+    "diag_frameNo",
+    "diag_log",
+    "diag_tickTime",
+    "diag_deltaTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

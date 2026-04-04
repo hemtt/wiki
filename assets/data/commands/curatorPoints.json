@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns number of points that curator have.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_points = curatorPoints myCurator;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "curatorPoints",
+  "name": "curatorPoints",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorPoints"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curatorObj"
+      },
+      "ret": {
+        "type": {
+          "NumberRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

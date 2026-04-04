@@ -1,0 +1,92 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "[[File: A3 diag exportTerrainSVG Example.jpg|thumb|400px|Highly detailed map of [[Stratis]]|right]]\nLike the old [[Arma 3: Cheats#TOPOGRAPHY|TOPOGRAPHY]] cheat code, exports terrain, but in modern SVG format instead of the proprietary EMF format.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_exportTerrainSVG [\"C:\\Users\\USERNAME\\Desktop\\Stratis_Map.svg\", true, true, true, true, true, false]; // replace USERNAME with your username!</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_exportTerrainSVG",
+  "name": "diag_exportTerrainSVG",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Diagnostics",
+    "Exe"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "filePath",
+          "drawLocationNames",
+          "drawGrid",
+          "drawCountlines",
+          "drawTreeObjects",
+          "drawMountainHeightpoints",
+          "simpleRoads"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "path on disk. File name and extension have to be included",
+              "name": "filePath",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "whether or not to draw location names",
+              "name": "drawLocationNames",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "whether or not to draw grid",
+              "name": "drawGrid",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "whether or not to count lines",
+              "name": "drawCountlines",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "whether or not to draw trees",
+              "name": "drawTreeObjects",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "whether or not to draw mountain height spots",
+              "name": "drawMountainHeightpoints",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "simplify roads. Draw roads as one long polyline instead of separate segments. Uses average road width as overall width",
+              "name": "simpleRoads",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

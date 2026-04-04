@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets the person's fatigue, from 0 to 1.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player setFatigue 1;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "setFatigue",
+  "name": "setFatigue",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina",
+    "getFatigue",
+    "enableFatigue",
+    "setStamina",
+    "getStamina",
+    "enableStamina"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "in 0..1 ''available'' fatigue range: 0 is fully energised, 1 is fully exhausted",
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the current state of a [[CT_CHECKBOX]] control. Use {{hl|\"CheckedChanged\"}} control event handler with it.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_myCheckBox cbSetChecked true;</sqf>",
+    "<sqf>\n_disp = findDisplay 46 createDisplay \"RscDisplayEmpty\";\n_chk = _disp ctrlCreate [\"RscCheckBox\", -1];\n_chk cbSetChecked true;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "cbSetChecked",
+  "name": "cbSetChecked",
+  "problem_notes": [],
+  "see_also": [
+    "cbChecked",
+    "ctrlSetChecked",
+    "ctrlChecked"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

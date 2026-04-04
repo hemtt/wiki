@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create a new site. \n{{Feature|warning|This command is considered deprecated and is no longer supported}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Sides"
+  ],
+  "id": "createSite",
+  "name": "createSite",
+  "problem_notes": [],
+  "see_also": [
+    "deleteSite",
+    "allSites"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "type",
+          "pos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "type",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "pos",
+          "type": "Position"
+        }
+      }
+    }
+  ]
+}

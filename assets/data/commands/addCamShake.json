@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates the camera shaking effect, like when you are near an explosion",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>addCamShake [10, 2, 25]; // Shakes the camera for 1 second</sqf>",
+    "<sqf>\nenableCamShake true;\naddCamShake [5, 5, 25];\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "addCamShake",
+  "name": "addCamShake",
+  "problem_notes": [],
+  "see_also": [
+    "enableCamShake",
+    "setCamShakeDefParams",
+    "setCamShakeParams",
+    "resetCamShake"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "power",
+          "duration",
+          "frequency"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "strength of shake (camera movement), practical range is 0 to 20",
+              "name": "power",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "duration in seconds divided by 2",
+              "name": "duration",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "frequency of shake, practical range is 0 to 100",
+              "name": "frequency",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

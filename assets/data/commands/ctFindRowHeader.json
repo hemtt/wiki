@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Local",
+  "description": "Gets index of the closest header above this row.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _index = _control ctFindRowHeader 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "id": "ctFindRowHeader",
+  "name": "ctFindRowHeader",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "rowIndex"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "rowIndex",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

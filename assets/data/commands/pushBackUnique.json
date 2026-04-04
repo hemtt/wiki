@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds element to the back of the given array but only if it is unique to the array. The index of the added element is returned upon success, otherwise -1. This command modifies the original array.\n{{Feature|informative|Adding string elements is '''case sensitive'''.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_arr = [1,2,3];\n_index = _arr pushBackUnique 3;\nhint str [_index, _arr]; // [-1,[1,2,3]]\n</sqf>",
+    "<sqf>\n_arr = [1,2,3];\n_index = _arr pushBackUnique 4;\nhint str [_index, _arr]; // [3,[1,2,3,4]]\n</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "id": "pushBackUnique",
+  "name": "pushBackUnique",
+  "problem_notes": [],
+  "see_also": [
+    "pushBack",
+    "select",
+    "set",
+    "resize",
+    "reverse",
+    "count",
+    "find",
+    "in",
+    "forEach",
+    "deleteAt",
+    "deleteRange",
+    "append",
+    "sort",
+    "arrayIntersect",
+    "apply",
+    "BIS_fnc_arrayPushStack",
+    "BIS_fnc_arrayPush"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "array",
+          "element"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "index of inserted element or -1",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "element",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return a list of all groups created on the following sides [[east]], [[west]], [[resistance]]/[[independent]] and [[civilian]] only. Does not contain groups of [[sideLogic]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>{ leader _x sideChat \"Go ! Go ! Go !\" } forEach allGroups;</sqf>",
+    "All groups with players:\n<sqf>\nprivate _allGroupsWithPlayers = [];\n{ _allGroupsWithPlayers pushBackUnique group _x } forEach allPlayers;\n</sqf>"
+  ],
+  "groups": [
+    "Groups",
+    "Object Detection"
+  ],
+  "id": "allGroups",
+  "name": "allGroups",
+  "problem_notes": [],
+  "see_also": [
+    "group",
+    "groups",
+    "units",
+    "allCurators",
+    "allDead",
+    "playableUnits",
+    "switchableUnits",
+    "vehicles",
+    "allUnitsUAV"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Group"
+          }
+        }
+      }
+    }
+  ]
+}

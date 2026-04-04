@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Global",
+  "description": "Add weapons to the cargo space of vehicles, which can be taken out by infantry units. Ignores available cargo space.\n{{Feature|arma3|In {{arma3}}, arguments for this command must be local ({{Icon|localArgument|32}}). For global variant see [[addWeaponCargoGlobal]].}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_truck addWeaponCargo [\"M16\", 5];</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "addWeaponCargo",
+  "name": "addWeaponCargo",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponCargoGlobal",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "clearMagazineCargo",
+    "clearWeaponCargo",
+    "getWeaponCargo",
+    "addItemCargo",
+    "addItemCargoGlobal",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "addWeaponWithAttachmentsCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicleName",
+          [
+            "weaponName",
+            "count"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle to which add the weapons",
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "weapon name. See [[:Category:Weapons]] for reference about possible values",
+              "name": "weaponName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of weapons to add. {{GVI|arma3|2.14|size= 0.75}} negative count will remove weapons.",
+              "name": "count",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

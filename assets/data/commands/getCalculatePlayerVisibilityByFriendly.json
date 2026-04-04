@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if visibility of [[player]] by friendly units is calculated.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (!getCalculatePlayerVisibilityByFriendly) then\n{\n\tcalculatePlayerVisibilityByFriendly true;\n};\n</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "getCalculatePlayerVisibilityByFriendly",
+  "name": "getCalculatePlayerVisibilityByFriendly",
+  "problem_notes": [],
+  "see_also": [
+    "calculatePlayerVisibilityByFriendly",
+    "knowsAbout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[[true]] if visibility is calculated, [[false]] if not",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

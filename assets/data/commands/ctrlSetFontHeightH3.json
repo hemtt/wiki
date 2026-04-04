@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets H3 font size of given HTML control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetFontHeightH3 0.05;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - HTML"
+  ],
+  "id": "ctrlSetFontHeightH3",
+  "name": "ctrlSetFontHeightH3",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFontH3"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "controlName",
+          "height"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "height",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

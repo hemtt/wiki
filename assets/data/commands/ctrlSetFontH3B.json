@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets H3 bold font of given HTML control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetFontH3B \"TahomaB\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control - HTML"
+  ],
+  "id": "ctrlSetFontH3B",
+  "name": "ctrlSetFontH3B",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFontH1B",
+    "ctrlSetFontH2",
+    "ctrlSetFontH2B",
+    "ctrlSetFontH3",
+    "ctrlSetFontH4",
+    "ctrlSetFontH4B",
+    "ctrlSetFontH5",
+    "ctrlSetFontH5B",
+    "ctrlSetFontH6",
+    "ctrlSetFontH6B"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "controlName",
+          "fontName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "fontName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

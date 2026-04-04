@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes item from soldier's uniform. Can be used with magazines and weapons too.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeItemFromUniform \"FirstAidKit\";</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "removeItemFromUniform",
+  "name": "removeItemFromUniform",
+  "problem_notes": [],
+  "see_also": [
+    "addItemToUniform",
+    "removeItemFromVest",
+    "removeItemFromBackpack",
+    "removeItemFromPrimaryWeapon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

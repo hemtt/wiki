@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Destroys the given marker.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>deleteMarker \"Marker1\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "deleteMarker",
+  "name": "deleteMarker",
+  "problem_notes": [],
+  "see_also": [
+    "createMarker",
+    "deleteMarkerLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

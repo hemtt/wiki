@@ -1,0 +1,86 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Finds the nearest enemy to the specified position. Returns a null object if the object's group does not [[knowsAbout|know about]] any enemies. This command will return nearest object that is known to the unit and is considered enemy. An empty vehicle that is part of enemy group assets (see [[addVehicle]]) can be returned as valid nearest target.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_myNearestEnemy = (units _myGroup select 0) findNearestEnemy player;</sqf>",
+    "<sqf>_myNearestEnemy = player findNearestEnemy player;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "findNearestEnemy",
+  "name": "findNearestEnemy",
+  "problem_notes": [],
+  "see_also": [
+    "targets",
+    "targetsQuery",
+    "nearTargets",
+    "targetsAggregate",
+    "targetKnowledge",
+    "knowsAbout",
+    "reveal",
+    "forgetTarget",
+    "setTargetAge",
+    "getHideFrom",
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearObjects",
+    "nearestLocation",
+    "nearEntities",
+    "nearSupplies",
+    "nearestLocationWithDubbing",
+    "nearObjectsReady",
+    "nearRoads",
+    "nearestMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

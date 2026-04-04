@@ -1,0 +1,87 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a [[Structured Text]] created from the given [[Structured Text|structured]] text and sets [[Structured_Text#Attributes | attributes]] to the given values.\n{{Feature|important|Even though command accepts plain [[String]] too, the argument should be [[Structured Text]] in order for the set attributes to have an effect.\nAdditionally the result of the command should be fed to [[composeText]] (See {{Link|#Example 1}}) or [[formatText]].\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_txt = text \"Red text, right align\";\n_txt setAttributes [\"color\", \"#FF0000\", \"align\", \"right\"];\nhint composeText [_txt];\n</sqf>"
+  ],
+  "groups": [
+    "Strings",
+    "Structured Text"
+  ],
+  "id": "setAttributes",
+  "name": "setAttributes",
+  "problem_notes": [],
+  "see_also": [
+    "composeText",
+    "formatText",
+    "parseText",
+    "text",
+    "ctrlSetStructuredText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "text",
+          [
+            [
+              "nameN",
+              "valueN"
+            ]
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "only passing [[Structured Text]] has any effect",
+          "name": "text",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "StructuredText"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "StructuredText"
+      },
+      "right": {
+        "Array": [
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "desc": "name of the attribute",
+                  "name": "nameN",
+                  "type": "String"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "value of the attribute",
+                  "name": "valueN",
+                  "type": "String"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

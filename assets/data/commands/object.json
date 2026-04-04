@@ -8,6 +8,7 @@
   "groups": [
     "Object Detection"
   ],
+  "id": "object",
   "name": "object",
   "problem_notes": [],
   "see_also": [

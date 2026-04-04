@@ -9,6 +9,7 @@
     "Unit Inventory",
     "Vehicle Inventory"
   ],
+  "id": "magazines",
   "name": "magazines",
   "problem_notes": [],
   "see_also": [

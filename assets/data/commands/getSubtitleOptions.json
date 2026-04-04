@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns subtitles settings.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _subtitleSettings = getSubtitleOptions;</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "getSubtitleOptions",
+  "name": "getSubtitleOptions",
+  "problem_notes": [],
+  "see_also": [
+    "getAudioOptionVolumes",
+    "soundVolume",
+    "musicVolume",
+    "radioVolume",
+    "radioEnabled",
+    "shownSubtitles"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "options in format [subtitlesEnabled, radioSubtitlesEnabled]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Boolean"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes a location to the specified class. Location classes are defined in CfgLocationTypes.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myLocation setType \"RockArea\";</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "id": "setType",
+  "name": "setType",
+  "problem_notes": [],
+  "see_also": [
+    "type"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "location",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

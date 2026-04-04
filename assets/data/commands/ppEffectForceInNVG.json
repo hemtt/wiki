@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Forces use of [[Post Process Effects]] in NVG.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_ppGrain ppEffectForceInNVG true;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "ppEffectForceInNVG",
+  "name": "ppEffectForceInNVG",
+  "problem_notes": [],
+  "see_also": [
+    "Post",
+    "Process",
+    "Effects",
+    "ppEffectEnable",
+    "ppEffectEnabled",
+    "ppEffectDestroy",
+    "ppEffectCreate",
+    "ppEffectCommit",
+    "ppEffectCommitted",
+    "ppEffectAdjust"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ppHandle",
+          "force"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "handle of the post processing returned by [[ppEffectCreate]]",
+          "name": "ppHandle",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "force",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

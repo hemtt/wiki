@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns a list of all DLCs objects the unit is currently using. For example if a unit is inside a vehicle from DLC, it will return the code of that DLC.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_objects = getPersonUsedDLCs player;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "DLC"
+  ],
+  "id": "getPersonUsedDLCs",
+  "name": "getPersonUsedDLCs",
+  "problem_notes": [],
+  "see_also": [
+    "getDLCs",
+    "getObjectDLC",
+    "getMissionDLCs",
+    "getDLCAssetsUsageByName",
+    "getDLCAssetsUsage",
+    "getAssetDLCInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

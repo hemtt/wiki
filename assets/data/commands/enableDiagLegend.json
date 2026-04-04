@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable or disable the legend for diagnostics. '''Internal dev only!'''",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>enableDiagLegend false;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "enableDiagLegend",
+  "name": "enableDiagLegend",
+  "problem_notes": [],
+  "see_also": [
+    "diag_fpsMin",
+    "diag_frameNo",
+    "diag_log",
+    "diag_tickTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enable"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

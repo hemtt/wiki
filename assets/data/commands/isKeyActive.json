@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks whether the given key is active in the current user profile.\n\nSee keys, keysLimit and doneKeys in the [[Description.ext#keys|description.ext]] file of the missions.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_active = isKeyActive \"Mission04Key\";</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "id": "isKeyActive",
+  "name": "isKeyActive",
+  "problem_notes": [],
+  "see_also": [
+    "activateKey",
+    "deActivateKey"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "keyName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "keyName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

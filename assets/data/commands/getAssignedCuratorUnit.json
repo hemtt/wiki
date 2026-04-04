@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns unit assigned to curator logic.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_curatorUnit = getAssignedCuratorUnit (allCurators select 0);\n_curatorUnit joinAs [createGroup civilian, 0];\n</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "getAssignedCuratorUnit",
+  "name": "getAssignedCuratorUnit",
+  "problem_notes": [],
+  "see_also": [
+    "getAssignedCuratorLogic"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curatorObj"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

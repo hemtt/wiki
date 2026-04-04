@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all environmental 3D sound sources ([[Object]]s) like trees and houses in camera vicinity.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _sources = allEnv3DSoundSources;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "allEnv3DSoundSources",
+  "name": "allEnv3DSoundSources",
+  "problem_notes": [],
+  "see_also": [
+    "getAllEnv3DSoundControllers",
+    "getAllEnvSoundControllers",
+    "getEnv3DSoundController",
+    "getEnvSoundController",
+    "selectBestPlaces",
+    "getSoundController",
+    "getSoundControllerResult",
+    "getEnvSoundController",
+    "getAllSoundControllers",
+    "getCustomSoundController",
+    "setCustomSoundController",
+    "getCustomSoundControllerCount",
+    "Arma",
+    "3:",
+    "Sound"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

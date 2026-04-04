@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Lock the driver position of the vehicle. This command must be executed where vehicle is [[Multiplayer Scripting#Locality|local]]. This command will remove user get in action (not get out) but will also stop player getting into vehicle via script commands unlike [[lock]] command",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>vehicleName lockDriver true;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "lockDriver",
+  "name": "lockDriver",
+  "problem_notes": [],
+  "see_also": [
+    "lock",
+    "setVehicleLock",
+    "lockedDriver",
+    "lockCargo",
+    "lockTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "lock"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "lock",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

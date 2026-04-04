@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets a time multiplier for in-game time. The command range is capped at 0.1 - 120 to avoid performance problems.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>setTimeMultiplier 60;</sqf>",
+    "<sqf>setTimeMultiplier 0.5;</sqf>"
+  ],
+  "groups": [
+    "Time",
+    "Mission Information",
+    "Environment"
+  ],
+  "id": "setTimeMultiplier",
+  "name": "setTimeMultiplier",
+  "problem_notes": [],
+  "see_also": [
+    "timeMultiplier",
+    "skipTime",
+    "setAccTime",
+    "accTime",
+    "time",
+    "serverTime",
+    "date",
+    "dayTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "value"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "has to be in range from 0.1 to 120",
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

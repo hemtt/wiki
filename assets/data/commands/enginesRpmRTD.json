@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all engines RPM.{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>enginesRpmRTD RTD_helicopter params [\"_RPMEngine1\",\"_RPMEngine2\"];</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "enginesRpmRTD",
+  "name": "enginesRpmRTD",
+  "problem_notes": [],
+  "see_also": [
+    "isObjectRTD",
+    "enginesTorqueRTD",
+    "enginesIsOnRTD",
+    "airDensityRTD",
+    "weightRTD",
+    "wingsForcesRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "RTD_helicopter"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "RTD_helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

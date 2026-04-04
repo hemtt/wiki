@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds a unit to the list of units available for [[Team_Switch|Team Switch]]. Units marked as [[playableUnits|playable]] in editor are automatically switchable.\nThis command adds non-playable unit into array of [[switchableUnits]] and makes them available for [[teamSwitch]]. '''Singleplayer only!'''",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>addSwitchableUnit bob;</sqf>"
+  ],
+  "groups": [
+    "Team Switch"
+  ],
+  "id": "addSwitchableUnit",
+  "name": "addSwitchableUnit",
+  "problem_notes": [],
+  "see_also": [
+    "teamSwitch",
+    "removeSwitchableUnit",
+    "switchableUnits"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

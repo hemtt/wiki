@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all icons from group.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>clearGroupIcons (group player);</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "id": "clearGroupIcons",
+  "name": "clearGroupIcons",
+  "problem_notes": [],
+  "see_also": [
+    "addGroupIcon",
+    "getGroupIcon",
+    "getGroupIconParams",
+    "groupIconSelectable",
+    "groupIconsVisible",
+    "onGroupIconClick",
+    "removeGroupIcon",
+    "setGroupIcon",
+    "setGroupIconParams",
+    "setGroupIconsSelectable",
+    "setGroupIconsVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

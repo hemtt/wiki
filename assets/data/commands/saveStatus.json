@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Saves object's properties to [[Objects.sav]] file in campaign directory as entry name.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player saveStatus \"playerstate\";</sqf>"
+  ],
+  "groups": [
+    "Weapon Pool",
+    "Mission Information"
+  ],
+  "id": "saveStatus",
+  "name": "saveStatus",
+  "problem_notes": [],
+  "see_also": [
+    "loadStatus",
+    "saveVar"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if successful, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

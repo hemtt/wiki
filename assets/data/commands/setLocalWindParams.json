@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets parameters for helicopter rotor wash.\nIt affects the visual effect of a rotor's downwash, such as blown particles, vegetation wind effect and area size.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setLocalWindParams [10, 5];</sqf>",
+    "\"Disables\" the effects:\n<sqf>setLocalWindParams [0.0001, 0.0001]; // 0 values are ignored by the command</sqf>",
+    "Reset to default:<sqf>setLocalWindParams [1, 1];</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setLocalWindParams",
+  "name": "setLocalWindParams",
+  "problem_notes": [],
+  "see_also": [
+    "setWind",
+    "wind",
+    "setWindStr",
+    "setWindDir",
+    "setWindForce",
+    "windDir",
+    "windStr",
+    "gusts",
+    "setGusts"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "strength",
+          "diameter"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "down-force wind strength",
+              "name": "strength",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "area affected",
+              "name": "diameter",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

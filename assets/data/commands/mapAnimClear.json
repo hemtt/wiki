@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Local",
+  "description": "Clear map animation.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>mapAnimClear;</sqf>"
+  ],
+  "groups": [
+    "Map"
+  ],
+  "id": "mapAnimClear",
+  "name": "mapAnimClear",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimAdd",
+    "mapAnimCommit",
+    "mapAnimDone",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimClear",
+    "ctrlMapAnimCommit",
+    "ctrlMapAnimDone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Opens gear dialog for given unit.\n{{Feature|informative|[[action]] command can also be used:<sqf>player action [\"Gear\", player];</sqf>}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>createGearDialog [player];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "createGearDialog",
+  "name": "createGearDialog",
+  "problem_notes": [],
+  "see_also": [
+    "createDialog",
+    "createDisplay",
+    "action"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "unit",
+          "resource"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "resource",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether the unit is burning.\nThis returns true only if unit is damaged by nearby fire, it does '''not''' check whether a fireplace is burning, use [[inflamed]] command for that.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (isBurning player) then { player groupChat \"I'm burning!!\"; };</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "isBurning",
+  "name": "isBurning",
+  "problem_notes": [],
+  "see_also": [
+    "getBleedingRemaining",
+    "setBleedingRemaining",
+    "isBleeding",
+    "inflamed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

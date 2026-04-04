@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the given group marked for auto-deletion when empty. See [[deleteGroupWhenEmpty]].\n{{Feature|informative|It might take up to a minute for the groups marked for auto-deletion when empty to get deleted when they become empty.}}\n{{Feature|important|This command is only a getter for the deleteWhenEmpty flag in [[createGroup]] command or [[deleteGroupWhenEmpty]] command. All it does is it shows what the flag was set to during group creation. [[true|True]] does not mean the group will be deleted but that it was suggested to the engine that it should be deleted. It is up to the engine how it manages groups. [[false|False]] does not mean that the group will not be deleted '''at all'''. It has no influence on the engine functionality whatsoever. }}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isMarked = isGroupDeletedWhenEmpty _group;</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "isGroupDeletedWhenEmpty",
+  "name": "isGroupDeletedWhenEmpty",
+  "problem_notes": [],
+  "see_also": [
+    "deleteGroup",
+    "deleteGroupWhenEmpty",
+    "createGroup",
+    "group",
+    "setGroupId",
+    "groupID",
+    "units",
+    "groupFromNetId",
+    "netId",
+    "leader",
+    "selectLeader",
+    "join",
+    "createCenter",
+    "createUnit",
+    "createVehicle",
+    "Side"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "desc": "[[true]] the group is marked for auto-deletion when empty",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

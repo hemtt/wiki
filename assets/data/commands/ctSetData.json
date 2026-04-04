@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Local",
+  "description": "Associates metadata (string) with the row determined by the index. Returns Nothing.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_control ctSetData [0, \"Test\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "id": "ctSetData",
+  "name": "ctSetData",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            "index",
+            "data"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the respective control",
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the row index",
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "the data to set",
+              "name": "data",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

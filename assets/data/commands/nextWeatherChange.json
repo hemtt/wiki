@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the remaining time (in seconds) over which the current weather change will occur.\n<br>\nWhen a weather change finishes, the game engine will automatically generate a new random weather change over a realistic time period (minimum of 90 minutes).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_seconds = nextWeatherChange;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "nextWeatherChange",
+  "name": "nextWeatherChange",
+  "problem_notes": [],
+  "see_also": [
+    "fog",
+    "fogForecast",
+    "setFog",
+    "overcast",
+    "setOvercast",
+    "overcastForecast",
+    "forceWeatherChange"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

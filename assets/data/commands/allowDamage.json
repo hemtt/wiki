@@ -1,0 +1,51 @@
+{
+  "alias": [
+    "[[allowDammage]]"
+  ],
+  "argument_loc": "Local",
+  "description": "Enables / disables an entity's ability to receive damage.\nThis command does not prevent the entity from taking scripted damage from commands such as [[setDamage]], [[setHit]], [[setHitIndex]] or [[setHitPointDamage]].\n{{Feature|informative|\nThis command only supports entities ({{hl|Entity}} is a [[Class Inheritance|child class]] of {{hl|Object}}, i.e. all entities are objects, but not all objects are entities).\nConsequently, there are objects that are not affected by this command, for example terrain vegetation such as trees.\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player allowDamage false;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "allowDamage",
+  "name": "allowDamage",
+  "problem_notes": [],
+  "see_also": [
+    "isDamageAllowed",
+    "setDamage",
+    "setHit",
+    "setHitIndex",
+    "setHitPointDamage",
+    "damage"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          "allow"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "allow",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

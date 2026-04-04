@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the text control's height. Supported control [[ctrlType|types]]:\n{{Columns|3|\n* [[CT_STATIC]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_EDIT]]\n* {{GVI|arma3|2.06|size= 0.75}} [[CT_XKEYDESC]]\n* {{GVI|arma3|2.06|size= 0.75}} [[CT_XBUTTON]]\n* {{GVI|arma3|2.06|size= 0.75}} [[CT_SHORTCUTBUTTON]]\n* {{GVI|arma3|2.06|size= 0.75}} [[CT_BUTTON]]\n* {{GVI|arma3|2.06|size= 0.75}} [[CT_ACTIVETEXT]]\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_h = ctrlTextHeight _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlTextHeight",
+  "name": "ctrlTextHeight",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlFontHeight",
+    "ctrlTextWidth",
+    "ctrlSetText",
+    "ctrlType",
+    "Arma:",
+    "GUI",
+    "Configuration"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

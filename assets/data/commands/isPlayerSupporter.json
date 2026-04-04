@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Global",
+  "description": "Get if the provided player has the supporter (VIP) status.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_amIASupporter = isPlayerSupporter player;\n_isHeASupporter = isPlayerSupporter _otherGuy;\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "isPlayerSupporter",
+  "name": "isPlayerSupporter",
+  "problem_notes": [],
+  "see_also": [
+    "getPlayerLevel",
+    "getCurrentPlayerLevel"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "[[true]] if the provided unit is a player and that player is a supporter, [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "the unit of player to check",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

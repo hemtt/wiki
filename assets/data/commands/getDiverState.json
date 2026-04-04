@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] when object is in diver state - e.g when the unit would put diving [[goggles]] on.\n{{Feature|informative|\nDiving [[goggles]] remove blurriness underwater, however when assigned, they do not appear on the face of the unit until the unit steps into the water.\nThis command allows to detect the moment when the goggles are visible.\nIf the unit doesn't have diving goggles assigned, this command would still return [[true]] at appropriate time if the unit steps into the water.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _gogglesOn = getDiverState player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getDiverState",
+  "name": "getDiverState",
+  "problem_notes": [],
+  "see_also": [
+    "goggles",
+    "removeGoggles",
+    "addGoggles"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "[[true]] when diving [[goggles]] are visible",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

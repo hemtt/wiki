@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns width of one pixel for current resolution.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_pixelWidth = pixelW;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "pixelW",
+  "name": "pixelW",
+  "problem_notes": [],
+  "see_also": [
+    "pixelGrid",
+    "pixelGridBase",
+    "pixelGridNoUIScale",
+    "pixelH",
+    "Pixel",
+    "Grid",
+    "System"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "pixel width",
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns list of all curator selected items.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_selectedItems = curatorSelected;</sqf>",
+    "<sqf>curatorSelected params [\"_selObjects\", \"_selGroups\", \"_selWaypoints\", \"_selMarkers\"];</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "curatorSelected",
+  "name": "curatorSelected",
+  "problem_notes": [],
+  "see_also": [
+    "curatorMouseOver",
+    "setCuratorSelected",
+    "addCuratorSelected",
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "objects",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Object"
+                }
+              }
+            },
+            {
+              "desc": null,
+              "name": "groups",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Group"
+                }
+              }
+            },
+            {
+              "desc": null,
+              "name": "waypoints",
+              "since": null,
+              "type": "Waypoint"
+            },
+            {
+              "desc": null,
+              "name": "markers",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "String"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

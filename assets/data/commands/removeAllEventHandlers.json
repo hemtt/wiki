@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all event handlers of given type that were added by [[addEventHandler]] '''and''' resets event handler's creation index to 0.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player removeAllEventHandlers \"Killed\";</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "removeAllEventHandlers",
+  "name": "removeAllEventHandlers",
+  "problem_notes": [],
+  "see_also": [
+    ":Category:Event",
+    "Handlers|Event",
+    "Handler",
+    "List",
+    "removeEventHandler",
+    "addEventHandler",
+    "removeMissionEventHandler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "target",
+          "handlerType"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "target",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.10"
+                    },
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[:Category:Event Handlers|Event Handlers]]",
+          "name": "handlerType",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

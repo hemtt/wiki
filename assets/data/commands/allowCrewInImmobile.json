@@ -1,0 +1,86 @@
+{
+  "argument_loc": "Local",
+  "description": "If [[true]], units will remain in a vehicle with broken tracks/wheels; they will still eject if the vehicle is drowning, about to explode or upside down for a while.\nThe {{Link|#Syntax 2|alternative syntax}} provides the ability to keep the crew in vehicle when it is upside down.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_vehicle allowCrewInImmobile true;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "allowCrewInImmobile",
+  "name": "allowCrewInImmobile",
+  "problem_notes": [],
+  "see_also": [
+    "isAllowedCrewInImmobile",
+    "setUnloadInCombat",
+    "canMove"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "allow"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "allow",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "brokenWheels",
+            "upsideDown"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "do not auto eject when vehicle has broken wheels",
+              "name": "brokenWheels",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "do not auto eject when vehicle is upside down",
+              "name": "upsideDown",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.10"
+      }
+    }
+  ]
+}

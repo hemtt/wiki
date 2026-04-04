@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Requests given leaderboard to download values from global table.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isGettingValues = leaderboardRequestRowsGlobal [\"TT01\", 0, 10];</sqf>"
+  ],
+  "groups": [
+    "Leaderboards"
+  ],
+  "id": "leaderboardRequestRowsGlobal",
+  "name": "leaderboardRequestRowsGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "leaderboardGetRows",
+    "leaderboardInit",
+    "leaderboardRequestRowsFriends",
+    "leaderboardRequestRowsGlobalAroundUser",
+    "leaderboardsRequestUploadScore",
+    "leaderboardsRequestUploadScoreKeepBest",
+    "leaderboardState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "leaderboard",
+          "offset",
+          "rows"
+        ]
+      },
+      "ret": {
+        "desc": "returns [[true]] if request has been started",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the leaderboard",
+              "name": "leaderboard",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "defines how many rows are skipped",
+              "name": "offset",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "defines how many rows are requested",
+              "name": "rows",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables/disables the option for player to set waypoints for UAV in AV terminal.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_uav enableUAVWaypoints false;\nhint str waypointsEnabledUAV _uav; // returns false\n</sqf>"
+  ],
+  "groups": [
+    "Waypoints",
+    "Remote Control"
+  ],
+  "id": "enableUAVWaypoints",
+  "name": "enableUAVWaypoints",
+  "problem_notes": [],
+  "see_also": [
+    "waypointsEnabledUAV",
+    "enableUAVConnectability",
+    "disableUAVConnectability",
+    "isUAVConnected",
+    "isUAVConnectable",
+    "allUnitsUAV",
+    "getConnectedUAV",
+    "connectTerminalToUAV"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "uav",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "uav",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

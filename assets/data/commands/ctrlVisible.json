@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns if a control of the currently active user dialog is shown or not. Read [[Arma: GUI Configuration]] for more information about user dialogs and controls.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_bool = ctrlVisible 100;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlVisible",
+  "name": "ctrlVisible",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlShow",
+    "ctrlShown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "desc": "[[true]] if the control is shown, [[false]] if not",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "control IDC",
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

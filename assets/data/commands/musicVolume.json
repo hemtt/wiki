@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current music volume (set by [[fadeMusic]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str musicVolume;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "musicVolume",
+  "name": "musicVolume",
+  "problem_notes": [],
+  "see_also": [
+    "fadeMusic",
+    "soundVolume",
+    "radioVolume",
+    "speechVolume",
+    "environmentVolume",
+    "getAudioOptionVolumes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "NumberRange": [
+            0,
+            5
+          ]
+        }
+      }
+    }
+  ]
+}

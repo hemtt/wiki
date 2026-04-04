@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets shortcut of given menu strip entry.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrlMenuStrip menuSetShortcut [[0,0], 2048 + 0x16]; // ALT + U</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "id": "menuSetShortcut",
+  "name": "menuSetShortcut",
+  "problem_notes": [],
+  "see_also": [
+    "menuShortcut",
+    "menuShortcutText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "shortcut"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "shortcut",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "shortcut"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "shortcut",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

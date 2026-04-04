@@ -1,0 +1,106 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns unit's knowledge about target.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _allInfo = _soldierOne targetKnowledge _jeepOne;\n_allInfo params [\"_knownByGroup\", \"_knownByUnit\", \"_lastSeen\", \"_lastThreat\", \"_side\", \"_errorMargin\", \"_position\", \"_ignoreTarget\"];\n</sqf>",
+    "<sqf>private _posError = (_soldierOne targetKnowledge _jeepOne) select 5;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "targetKnowledge",
+  "name": "targetKnowledge",
+  "problem_notes": [],
+  "see_also": [
+    "knowsAbout",
+    "targets",
+    "targetsQuery",
+    "nearTargets",
+    "targetsAggregate",
+    "reveal",
+    "forgetTarget",
+    "setTargetAge",
+    "getHideFrom",
+    "ignoreTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "target known by group",
+              "name": "knownByGroup",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "target known by the unit",
+              "name": "knownByUnit",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "last time the target was seen by the unit",
+              "name": "lastSeen",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "last time the target endangered the unit",
+              "name": "lastThreat",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "target side",
+              "name": "side",
+              "since": null,
+              "type": "Side"
+            },
+            {
+              "desc": "position error",
+              "name": "errorMargin",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "target position",
+              "name": "position",
+              "since": null,
+              "type": "Position"
+            },
+            {
+              "desc": "target is ignored ([[ignoreTarget]])",
+              "name": "ignoreTarget",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

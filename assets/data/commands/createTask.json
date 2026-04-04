@@ -1,0 +1,105 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create a new AI task (subtask of parentTask). Type is name of registered task type.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    ""
+  ],
+  "groups": [
+    "Briefing",
+    "Teams"
+  ],
+  "id": "createTask",
+  "name": "createTask",
+  "problem_notes": [],
+  "see_also": [
+    "Tasks",
+    "type",
+    "briefing",
+    "createSimpleTask",
+    "simpleTasks",
+    "currentTask",
+    "currentTasks",
+    "setCurrentTask",
+    "taskState",
+    "setTaskState",
+    "taskResult",
+    "setTaskResult",
+    "taskCompleted",
+    "removeSimpleTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "teamMember",
+          [
+            [
+              "type",
+              "parentTask"
+            ],
+            "priority",
+            [
+              "nameN",
+              "valueN"
+            ]
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "type": "Task"
+      },
+      "right": {
+        "Array": [
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "{{hl|name}} defined in {{hl|CfgTasks}}",
+                  "name": "type",
+                  "type": "String"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "(Optional)",
+                  "name": "parentTask",
+                  "type": "Task"
+                }
+              }
+            ]
+          },
+          {
+            "Item": {
+              "name": "priority",
+              "type": "Number"
+            }
+          },
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "name": "nameN",
+                  "type": "String"
+                }
+              },
+              {
+                "Item": {
+                  "name": "valueN",
+                  "type": "String"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

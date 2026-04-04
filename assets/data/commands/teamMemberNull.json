@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A non-existent [[Team Member]]. To compare non-existent team members use [[isNull]] or [[isEqualTo]]:\n<sqf>\nteamMemberNull == teamMemberNull;\t\t\t// false\nisNull teamMemberNull;\t\t\t\t\t\t// true\nteamMemberNull isEqualTo teamMemberNull;\t// true\n</sqf>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>!isNull teamMemberNull; // false</sqf>",
+    "<sqf>str teamMemberNull; // <NULL - team member></sqf>",
+    "<sqf>\nif (_teamMember isEqualTo teamMemberNull) then\n{\n\thint \"team member is null\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "id": "teamMemberNull",
+  "name": "teamMemberNull",
+  "problem_notes": [],
+  "see_also": [
+    "addTeamMember",
+    "createTeam",
+    "deleteTeam",
+    "forEachMemberTeam",
+    "removeTeamMember",
+    "teamMember",
+    "teamName",
+    "teams",
+    "teamType",
+    "controlNull",
+    "displayNull",
+    "grpNull",
+    "locationNull",
+    "objNull",
+    "taskNull",
+    "scriptNull",
+    "configNull",
+    "typeName",
+    "isNull"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "TeamMember"
+      }
+    }
+  ]
+}

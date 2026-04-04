@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Opens a Steam application, returns false if it was not possible to run the application.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>openSteamApp 553228;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "openSteamApp",
+  "name": "openSteamApp",
+  "problem_notes": [],
+  "see_also": [
+    "getSteamFriendsServers",
+    "openYoutubeVideo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "appID"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "appID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

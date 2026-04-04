@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Local",
+  "description": "Shows or hides a control, or group of controls together with all the controls inside that group of controls.<br>\nRead [[Arma: GUI Configuration]] for more information about user dialogs and controls.<br>\n{{ Feature | Informative | Using [[ctrlShow]] on a [[CT_CONTROLS_GROUP|controls group]] will show or hide all controls within the controls group (including controls that are placed in nested controls groups). }}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>ctrlShow [100, false];</sqf>",
+    "<sqf>_control ctrlShow false;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlShow",
+  "name": "ctrlShow",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlVisible",
+    "ctrlShown",
+    "ctrlEnable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "show"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to show the control, [[false]] to hide it",
+              "name": "show",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "show"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to show the control, [[false]] to hide it",
+          "name": "show",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Local",
+  "description": "Plays the map animation.",
+  "effect_loc": "Local",
+  "examples": [
+    "Center map on player:\n<sqf>\n_ctrl ctrlMapAnimAdd [0, 0.05, player];\nctrlMapAnimCommit _ctrl;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "ctrlMapAnimCommit",
+  "name": "ctrlMapAnimCommit",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimAdd",
+    "mapAnimClear",
+    "mapAnimCommit",
+    "mapAnimDone",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimClear",
+    "ctrlMapAnimDone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "mapControl"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mapControl",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

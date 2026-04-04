@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Shows or hides the watch on the map screen, if enabled for the mission and you possess the item. (default [[true]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>showWatch false;</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "showWatch",
+  "name": "showWatch",
+  "problem_notes": [],
+  "see_also": [
+    "shownWatch",
+    "visibleWatch",
+    "showCompass",
+    "showGPS",
+    "showRadio",
+    "showPad"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "show"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "show",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

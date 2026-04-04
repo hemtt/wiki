@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds magazines with specified ammo count to the cargo space of a vehicle or a container.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_ammobox addMagazineAmmoCargo [\"30Rnd_65x39_caseless_mag\", 2, 5];</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "addMagazineAmmoCargo",
+  "name": "addMagazineAmmoCargo",
+  "problem_notes": [],
+  "see_also": [
+    "magazinesAmmoCargo",
+    "addMagazineCargo",
+    "addMagazineGlobal",
+    "addMagazine",
+    "addMagazines",
+    "addMagazinePool",
+    "addMagazineTurret",
+    "clearMagazineCargo",
+    "addWeaponCargo",
+    "clearWeaponCargo",
+    "clearWeaponCargo",
+    "addWeaponCargoGlobal",
+    "addBackpackCargoGlobal",
+    "addItemCargo",
+    "addItemCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "cargospace",
+          [
+            "magazine",
+            "quantity",
+            "ammocount"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle or container or weaponholder",
+          "name": "cargospace",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "magazine class name",
+              "name": "magazine",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of magazines to add. {{GVI|arma3|2.14|size= 0.75}} a negative value remove magazines",
+              "name": "quantity",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "ammo count in each magazine",
+              "name": "ammocount",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Local",
+  "description": "Set the zoom level ('''F'''ield '''O'''f '''V'''iew) start and end values for automatical zooming. \n<br>\nThe default zoom level is ''{{hl|0.7}}'' where ''{{hl|0}}'' is the nearest and ''{{hl|1}}'' is the most far zoom value.\n {{Feature|warning|This command is '''non-functional'''!}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_cam camSetFovRange [0.1, 0.7];</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Camera Control"
+  ],
+  "id": "camSetFovRange",
+  "name": "camSetFovRange",
+  "problem_notes": [],
+  "see_also": [
+    "camSetFov"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          [
+            "minFovRange",
+            "maxFovRange"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "minFovRange",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "maxFovRange",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

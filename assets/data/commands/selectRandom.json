@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a random element from the given array. Engine solution to [[BIS_fnc_selectRandom]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_randomElement = selectRandom [1,2,3,4,5];</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "id": "selectRandom",
+  "name": "selectRandom",
+  "problem_notes": [],
+  "see_also": [
+    "selectRandomWeighted",
+    "random",
+    "select",
+    "selectMin",
+    "selectMax"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "array"
+      },
+      "ret": {
+        "desc": "random selected value or [[Nothing]] if array is empty",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

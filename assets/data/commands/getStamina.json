@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get current stamina (~ seconds until depletion)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getStamina player;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "getStamina",
+  "name": "getStamina",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina",
+    "setStamina",
+    "setFatigue",
+    "getFatigue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

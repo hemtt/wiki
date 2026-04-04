@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns modDir of the mod that given config class was loaded from.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>configSourceMod (configFile >> \"CfgVehicles\" >> \"Heli_Transport_04_base_F\"); // returns \"heli\"</sqf>",
+    "<sqf>configSourceMod (configFile >> \"CfgVehicles\" >> \"Car\"); // returns \"A3\"</sqf>"
+  ],
+  "groups": [
+    "Mods and Addons"
+  ],
+  "id": "configSourceMod",
+  "name": "configSourceMod",
+  "problem_notes": [],
+  "see_also": [
+    "configFile",
+    "configSourceModList",
+    "modParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "config"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    }
+  ]
+}

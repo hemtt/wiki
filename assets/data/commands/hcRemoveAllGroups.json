@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove all groups from unit's [[High Command|high command]] bar.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hcRemoveAllGroups player;</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "id": "hcRemoveAllGroups",
+  "name": "hcRemoveAllGroups",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcAllGroups",
+    "hcGroupParams",
+    "hcLeader",
+    "hcRemoveGroup",
+    "hcSelected",
+    "hcSelectGroup",
+    "hcSetGroup",
+    "hcShowBar",
+    "hcShownBar",
+    "onHCGroupSelectionChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the render scale of an object relative to the original model.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _objectScale = getObjectScale MyObject;\n\nif (_objectScale == 1) exitWith { systemChat \"Original scale\"; };\n\nif (_objectScale > 1) then\n{\n\tsystemChat \"Scaled up\";\n}\nelse\n{\n\tsystemChat \"Scaled down\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getObjectScale",
+  "name": "getObjectScale",
+  "problem_notes": [],
+  "see_also": [
+    "setObjectScale"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "scale relative to the original model",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "object to return scale of. Can also be a [[nearestTerrainObjects|terrain object]].",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

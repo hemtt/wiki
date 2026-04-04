@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Prepares the camera bank angle.\n{{Feature|warning|This command is '''non-functional'''!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_camera camPrepareBank -0.1;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Camera Control"
+  ],
+  "id": "camPrepareBank",
+  "name": "camPrepareBank",
+  "problem_notes": [],
+  "see_also": [
+    "camPreload",
+    "camCommitPrepared"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "bank"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bank",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

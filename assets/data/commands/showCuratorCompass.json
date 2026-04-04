@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Hides or shows compass in curator interface.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>showCuratorCompass true;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "showCuratorCompass",
+  "name": "showCuratorCompass",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "bool"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

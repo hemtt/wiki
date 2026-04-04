@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the position and direction for the camera used after camera is set on no object (log out view when leaving MP game for example)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setDefaultCamera [[5000, 5000, 200], [1, 1, -1]];</sqf>",
+    "Lift camera 100m up above current player position and point downwards:\n<sqf>setDefaultCamera [ATLToASL (player modelToWorld [0, 0, 100]), [0, 0, -1]];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "setDefaultCamera",
+  "name": "setDefaultCamera",
+  "problem_notes": [],
+  "see_also": [
+    "camCreate",
+    "cameraOn",
+    "cameraView",
+    "cameraEffect",
+    "cameraEffectEnableHUD",
+    "switchCamera",
+    "positionCameraToWorld",
+    "cameraInterest",
+    "setCameraInterest",
+    "getEditorCamera",
+    "mapCenterOnCamera",
+    "preloadCamera",
+    "restartEditorCamera"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "position",
+          "direction"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "position of the camera",
+              "name": "position",
+              "type": "Position3dASL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "direction of the camera",
+              "name": "direction",
+              "type": "Vector3d"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

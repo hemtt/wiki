@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns ammo count of given magazine from given turret (see [[setMagazineTurretAmmo]] for more info)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player magazineTurretAmmo [\"cls\", [0]];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "magazineTurretAmmo",
+  "name": "magazineTurretAmmo",
+  "problem_notes": [],
+  "see_also": [
+    "setMagazineTurretAmmo",
+    "magazinesAllTurrets",
+    "ammoOnPylon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "magazineClass",
+            "turretPath"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "magazineClass",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[-1] for driver turret is supported",
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

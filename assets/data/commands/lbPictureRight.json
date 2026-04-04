@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the right picture name of the item with the given index of the listbox or combobox with id idc of the topmost user [[dialog]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_picture = lbPictureRight [101, 0];</sqf>",
+    "<sqf>_picture = _control lbPictureRight 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "id": "lbPictureRight",
+  "name": "lbPictureRight",
+  "problem_notes": [],
+  "see_also": [
+    "lbAdd",
+    "lbClear",
+    "lbColor",
+    "lbCurSel",
+    "lbData",
+    "lbDelete",
+    "lbIsSelected",
+    "lbSelection",
+    "lbSetColor",
+    "lbSetCurSel",
+    "lbSetData",
+    "lbSetPicture",
+    "lbSetSelected",
+    "lbSetTooltip",
+    "lbSetValue",
+    "lbSize",
+    "lbSort",
+    "lbSortByValue",
+    "lbText",
+    "lbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "idc of control",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

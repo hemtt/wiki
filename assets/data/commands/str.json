@@ -11,6 +11,7 @@
   "groups": [
     "Strings"
   ],
+  "id": "str",
   "name": "str",
   "problem_notes": [
     "Before {{GVI|arma3|1.64|size= 0.75}} this command did not escape a [[String]]'s double quotes {{hl|\"\"}} properly."

@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Local",
+  "description": "Check if map animation is finished.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _isDone = mapAnimDone;</sqf>"
+  ],
+  "groups": [
+    "Map"
+  ],
+  "id": "mapAnimDone",
+  "name": "mapAnimDone",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimAdd",
+    "mapAnimClear",
+    "mapAnimCommit",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimClear",
+    "ctrlMapAnimCommit",
+    "ctrlMapAnimDone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

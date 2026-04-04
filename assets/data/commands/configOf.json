@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns config path of the provided object.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>configOf player; // returns bin\\config.bin/CfgVehicles/B_W_Soldier_TL_F</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "id": "configOf",
+  "name": "configOf",
+  "problem_notes": [],
+  "see_also": [
+    "typeOf"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Config"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

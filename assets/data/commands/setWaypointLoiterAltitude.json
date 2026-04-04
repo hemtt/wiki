@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Assigns loiter altitude to the provided waypoint.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointLoiterAltitude 100;</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "setWaypointLoiterAltitude",
+  "name": "setWaypointLoiterAltitude",
+  "problem_notes": [],
+  "see_also": [
+    "waypointLoiterAltitude"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "loiterAltitude"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "loiterAltitude",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

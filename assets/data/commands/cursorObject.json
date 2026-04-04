@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the object under cursor. This command is quite different from [[cursorTarget]] as it is more precise in determining the boundaries of the pointed at object and can detect a larger variety of objects including map objects and trees.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str [getModelInfo cursorObject, typeOf cursorObject];</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "cursorObject",
+  "name": "cursorObject",
+  "problem_notes": [],
+  "see_also": [
+    "getCursorObjectParams",
+    "cursorTarget",
+    "lineIntersects",
+    "lineIntersectsWith",
+    "lineIntersectsObjs",
+    "lineIntersectsSurfaces",
+    "intersect",
+    "checkVisibility"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Object"
+      }
+    }
+  ]
+}

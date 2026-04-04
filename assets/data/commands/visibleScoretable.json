@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks whether the score table is visible.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_visible = visibleScoretable;</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "visibleScoretable",
+  "name": "visibleScoretable",
+  "problem_notes": [],
+  "see_also": [
+    "showScoretable",
+    "shownScoretable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

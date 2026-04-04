@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the name of a unit's current primary animation. Seems to be forced to lower case in {{arma3}}.\n{{Feature|informative| Up until {{GVI|arma3|2.20}} this command only worked for a man unit, and other units such as animals couldn't use this command. As of {{GVI|arma3|2.22}} animals are supported as well. }}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_state = animationState player;</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "id": "animationState",
+  "name": "animationState",
+  "problem_notes": [],
+  "see_also": [
+    "gestureState",
+    "switchMove",
+    "playMove",
+    "pose",
+    "BIS_fnc_ambientAnimGetParams",
+    "getUnitMovesInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

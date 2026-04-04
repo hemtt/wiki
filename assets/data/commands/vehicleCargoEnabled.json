@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if the vehicle has enabled transporting other vehicles or not.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Blackfish (Vehicle Transport) with given variable name blackfish\n<sqf>_canTransportVehicles = vehicleCargoEnabled blackfish; //returns true</sqf>"
+  ],
+  "groups": [
+    "Vehicle in Vehicle Transport"
+  ],
+  "id": "vehicleCargoEnabled",
+  "name": "vehicleCargoEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport|",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport",
+    "canVehicleCargo",
+    "setVehicleCargo",
+    "enableVehicleCargo",
+    "getVehicleCargo",
+    "isVehicleCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "returns true if the vehicle has enabled transporting other vehicles, and false if the vehicle has not enabled transporting other vehicles",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

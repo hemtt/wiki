@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Global",
+  "description": "Count how many objects in the array are of given type. This command also works with parent classes like \"Air\", \"Tank\", and \"Car\". For a full class reference see [[CfgVehicles|Classes]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_count = \"Tank\" countType list _triggerOne;</sqf>",
+    "<sqf>_count = \"B_medic_F\" countType units player;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "countType",
+  "name": "countType",
+  "problem_notes": [],
+  "see_also": [
+    "count",
+    "isKindOf",
+    "typeOf",
+    "countFriendly",
+    "countEnemy",
+    "countSide",
+    "countUnknown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "type",
+          "objects"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "class type",
+          "name": "type",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

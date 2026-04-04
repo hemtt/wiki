@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Types text to the system radio channel. The text will be visible only on the PC where command was executed. If you need the message to show on all computers, you have to execute it globally (see [[remoteExec]]). Use [[clearRadio]] to clear chat history",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>systemChat \"Hello world!\";</sqf>",
+    "[[File:xChat.jpg|right]]\n<sqf>\ndriver vehicle player sideChat \"sideChat\";\ndriver vehicle player globalChat \"globalChat\";\ndriver vehicle player groupChat \"groupChat\";\nvehicle player vehicleChat \"vehicleChat\";\ndriver vehicle player commandChat \"commandChat\";\ndriver vehicle player customChat [1, \"customChat\"];\nsystemChat \"systemChat\";\n</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "systemChat",
+  "name": "systemChat",
+  "problem_notes": [],
+  "see_also": [
+    "globalChat",
+    "groupChat",
+    "vehicleChat",
+    "commandChat",
+    "customChat",
+    "sideChat",
+    "directSay",
+    "clearRadio"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "text"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "message to transmit",
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

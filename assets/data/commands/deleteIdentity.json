@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Deletes an identity created with [[saveIdentity]] from the campaign's progress file.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_deleted = deleteIdentity \"playerIdentity\";</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "id": "deleteIdentity",
+  "name": "deleteIdentity",
+  "problem_notes": [],
+  "see_also": [
+    "saveIdentity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "identityName"
+      },
+      "ret": {
+        "desc": "[[true]] if the identity was deleted successfully, [[false]] if not",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the saved identity",
+          "name": "identityName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

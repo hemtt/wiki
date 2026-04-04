@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks for intersection of terrain between two ASL positions. Returns [[true]] if intersects with terrain.\nFor AGL variant, see [[terrainIntersect]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_intersects = terrainIntersectASL [getPosASL player, getPosASL chopper];</sqf>",
+    "<sqf>_intersects = terrainIntersectASL [eyePos player, eyePos enemy1];</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "id": "terrainIntersectASL",
+  "name": "terrainIntersectASL",
+  "problem_notes": [],
+  "see_also": [
+    "terrainIntersectAtASL",
+    "lineIntersectsSurfaces",
+    "intersect",
+    "lineIntersects",
+    "lineIntersectsWith",
+    "terrainIntersect",
+    "lineIntersectsObjs",
+    "checkVisibility"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "start",
+          "end"
+        ]
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "start position",
+              "name": "start",
+              "type": "Position3dASL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "end position",
+              "name": "end",
+              "type": "Position3dASL"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

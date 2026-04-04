@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Exports landscape as XYZ file.\n{{Feature|warning|Not available in Retail Version!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>exportLandscapeXYZ \"myLandscape.txt\";</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "exportLandscapeXYZ",
+  "name": "exportLandscapeXYZ",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "filename"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

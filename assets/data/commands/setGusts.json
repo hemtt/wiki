@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the gusts value smoothly during the given time (in seconds). A time of zero means there will be an immediate change.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>60 setGusts 0.75;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setGusts",
+  "name": "setGusts",
+  "problem_notes": [],
+  "see_also": [
+    "gusts",
+    "wind",
+    "setWind"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": {
+            "NumberRange": [
+              0,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

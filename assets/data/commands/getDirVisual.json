@@ -1,0 +1,109 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns object's heading in the range from 0 to 360 in render time scope.\n{{Feature|arma3|The alternative syntax gets heading from one object or position to another object or position in render time scope, and should be used instead of [[BIS_fnc_dirTo]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_dir = getDirVisual player;</sqf>",
+    "<sqf>_azimuth = player getDirVisual tank;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Render Time Scope"
+  ],
+  "id": "getDirVisual",
+  "name": "getDirVisual",
+  "problem_notes": [],
+  "see_also": [
+    "getDir",
+    "direction"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "pos1",
+          "pos2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "from where",
+          "name": "pos1",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "to where",
+          "name": "pos2",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "since": {
+        "arma3": "2.12"
+      }
+    }
+  ]
+}

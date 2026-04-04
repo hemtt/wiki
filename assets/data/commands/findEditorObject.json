@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return object that matches the provided reference. \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "findEditorObject",
+  "name": "findEditorObject",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

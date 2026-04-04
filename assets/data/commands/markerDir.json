@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Get marker direction.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mPos = markerDir \"markerOne\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "markerDir",
+  "name": "markerDir",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerDir",
+    "setMarkerDirLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

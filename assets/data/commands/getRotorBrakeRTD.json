@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if rotor break is on.\n{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isOn = getRotorBrakeRTD _heli;</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "getRotorBrakeRTD",
+  "name": "getRotorBrakeRTD",
+  "problem_notes": [],
+  "see_also": [
+    "setRotorBrakeRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "helicopter"
+      },
+      "ret": {
+        "desc": "[[true]] if on, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

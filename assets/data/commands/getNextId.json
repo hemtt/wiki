@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Generate a new random-based UUID version 4 string as described in {{Link|https://tools.ietf.org/html/rfc4122#section-4.4}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_uuid = getNextId; // e.g 5806a469-d1b2-404c-b0ac-8e51d0f533e4</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "getNextId",
+  "name": "getNextId",
+  "problem_notes": [],
+  "see_also": [
+    "random",
+    "BIS_fnc_randomNum"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "argument_loc": "Local",
+  "description": "Disable switching to next waypoint (current waypoint will never complete while lockwp is used). Sometimes used during cut-scenes.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_groupOne lockWP true;</sqf>",
+    "<sqf>_Soldier lockWP true;</sqf>",
+    "<sqf>_MyTank lockWP false;</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "lockWP",
+  "name": "lockWP",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "groupName",
+          "lock"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "groupName",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "lock",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

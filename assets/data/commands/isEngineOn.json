@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns [[true]] if engine is on, [[false]] if it is off.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_carEngineIsOn = isEngineOn _carOne;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "isEngineOn",
+  "name": "isEngineOn",
+  "problem_notes": [],
+  "see_also": [
+    "engineOn",
+    "setCollisionLight",
+    "isLightOn",
+    "isCollisionLightOn"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

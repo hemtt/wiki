@@ -1,0 +1,92 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets new action into menu entry on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuSetAction [[0, 1], \"systemChat 'Hello World!'\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "id": "menuSetAction",
+  "name": "menuSetAction",
+  "problem_notes": [],
+  "see_also": [
+    "menuAction"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "action"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "expression that should be executed when entry is clicked",
+              "name": "action",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "action"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "expression that should be executed when entry is clicked",
+              "name": "action",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

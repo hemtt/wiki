@@ -1,0 +1,84 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Control what the unit(s) is/are glancing at (target or [[Position]]). If target is used, it will get revealed fully.\n\nHow frequently the unit(s) is/are glancing there depends on behaviour.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_someSoldier glanceAt _otherSoldier;</sqf>",
+    "<sqf>[_someSoldier, _otherSoldier] glanceAt markerPos \"markerOne\";</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "glanceAt",
+  "name": "glanceAt",
+  "problem_notes": [],
+  "see_also": [
+    "lookAt",
+    "commandWatch",
+    "doWatch"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit(s)",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit(s)",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

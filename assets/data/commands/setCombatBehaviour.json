@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets an individual unit entity behaviour (main syntax) or a group entity behaviour (alternative syntax). The group in this case is a [[Group]] entity and not a simple collection of units. To retrieve unit or group behaviour see [[combatBehaviour]]. The behaviour is one of: \n* \"CARELESS\"\n* \"SAFE\"\n* \"AWARE\"\n* \"COMBAT\"\n* \"STEALTH\"\n{{Feature|informative|See [[AI Behaviour]] for details of the effect of this command on AI units. Group behaviour usually is \"CARELESS\" or \"SAFE\"}}\n\n<spoiler text=\"Comparison of Behaviour commands\">\n{| class=\"wikitable\" style=\"text-align: center\"\n! Command\n! Applies To",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>unit1 setCombatBehaviour \"SAFE\";</sqf>",
+    "<sqf>group1 setCombatBehaviour \"CARELESS\";</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour",
+    "Groups"
+  ],
+  "id": "setCombatBehaviour",
+  "name": "setCombatBehaviour",
+  "problem_notes": [],
+  "see_also": [
+    "AIBehaviour",
+    "combatBehaviour",
+    "behaviour",
+    "setBehaviour",
+    "setBehaviourStrong",
+    "setWaypointBehaviour",
+    "combatMode",
+    "setCombatMode",
+    "skill",
+    "setSkill"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "behaviour"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "AI unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see description",
+          "name": "behaviour",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "behaviour"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "AI group",
+          "name": "group",
+          "type": "Group"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see description",
+          "name": "behaviour",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

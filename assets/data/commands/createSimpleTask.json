@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Global",
+  "description": "Creates a new [[Task]] and adds it to the Diary.\n{{Feature|Arma3|Using the '''[[Arma 3: Task Framework]]''' instead is recommended}}\n{{Feature|informative|When task is added as a child, it appears as subcategory to the parent task in the Tasks menu and can be parent to another child task. However this is cosmetic appearance as each task has own id and can be referenced directly via diary link.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_currentTask = player createSimpleTask [\"NewTask\"];</sqf>",
+    "<sqf>_childTask = player createSimpleTask [\"ChildTask\", _currentTask];</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "createSimpleTask",
+  "name": "createSimpleTask",
+  "problem_notes": [],
+  "see_also": [
+    "simpleTasks",
+    "removeSimpleTask",
+    "setSimpleTaskDescription",
+    "setSimpleTaskDestination",
+    "setTaskState",
+    "setTaskResult",
+    "taskState",
+    "Tasks",
+    "Briefing"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "name",
+            "parentTask"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to add this new task",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "the new task",
+        "type": "Task"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "name",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, [[taskNull]]) - The new task will be a sub task of the parent task",
+              "name": "parentTask",
+              "type": "Task"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

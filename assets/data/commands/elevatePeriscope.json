@@ -1,0 +1,100 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Elevates periscope of a vehicle. Vehicles in Arma 3 which are compatible with this tech are Strider, remote laser designators, the robot arm on Eddie, etc.\nPlease note that SDV submarine has a different periscope, which is just an animated selection and could be raised and lowered with [[animate]] command.\n{{Feature|informative|\n* a user can immediately override any elevation in progress by using assigned keyboard keys. To block user input see the ''blockUserInput'' parameter.\n* a [[Arma 3: Event Handlers#PeriscopeElevationChanged|PeriscopeElevationChanged]] entity event handler is also provided.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_eddie elevatePeriscope [[0], 0.75, 0.1];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Animations"
+  ],
+  "id": "elevatePeriscope",
+  "name": "elevatePeriscope",
+  "problem_notes": [],
+  "see_also": [
+    "periscopeElevation",
+    "animate",
+    "Arma",
+    "3:",
+    "Event",
+    "Handlers#PeriscopeElevationChanged|PeriscopeElevationChanged",
+    "Event",
+    "Handler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "turret",
+            "elevation",
+            "speed",
+            "blockUserInput"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle with periscope tech",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "turret on which periscope is located",
+              "name": "turret",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "elevation range 0..1",
+              "name": "elevation",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) config anim speed multiplier, 2 - twice as fast, 0.5 - twice as slow, etc. -1 - default config speed. If [[true]] is used as param, the change in elevation is almost instant",
+              "name": "speed",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Boolean"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to disable user ability to control periscope with keyboard. The change is persistent unless set to [[false]] again",
+              "name": "blockUserInput",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

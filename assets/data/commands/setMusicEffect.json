@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines a music track played on activation. If another track is playing already, this will stop it and start the new track.\n\nTrack is a subclass name of CfgMusic. In addition, \"$STOP$\" (stops the current music track) or use <sqf inline>playMusic \"\"</sqf>.\nWhen used in a trigger, the track starts on activation but does not automatically stop on deactivation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_trigger setMusicEffect \"Track1\";</sqf>",
+    "<sqf>[_group1,1] setMusicEffect \"$STOP$\";</sqf>"
+  ],
+  "groups": [
+    "Sounds",
+    "Triggers",
+    "Waypoints"
+  ],
+  "id": "setMusicEffect",
+  "name": "setMusicEffect",
+  "problem_notes": [],
+  "see_also": [
+    "createTrigger",
+    "setSoundEffect",
+    "setTitleEffect"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "trigger",
+          "track"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "track",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "track"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "track",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

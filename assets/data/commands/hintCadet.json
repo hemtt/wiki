@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Shows a text hint only when in [[cadetMode]].\n\nThe text can contain several lines. \\n is used to indicate the end of a line.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>hintCadet \"Press W to move forward\";</sqf>"
+  ],
+  "groups": [
+    "Interaction",
+    "Difficulty"
+  ],
+  "id": "hintCadet",
+  "name": "hintCadet",
+  "problem_notes": [],
+  "see_also": [
+    "hint",
+    "hintC",
+    "hintSilent",
+    "cadetMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "text"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

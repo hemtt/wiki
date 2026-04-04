@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the [[Multiplayer_Scripting#Machine_network_ID | machine network ID]] of the client executing the command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _myNetworkId = clientOwner;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "clientOwner",
+  "name": "clientOwner",
+  "problem_notes": [],
+  "see_also": [
+    "owner",
+    "groupOwner",
+    "onPlayerConnected",
+    "onPlayerDisconnected",
+    "getClientState",
+    "getClientStateNumber",
+    "admin",
+    "remoteExecutedOwner"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

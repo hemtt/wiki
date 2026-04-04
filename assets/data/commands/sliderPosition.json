@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current thumb position of [[CT_SLIDER]] or [[CT_XSLIDER]] with given idc of topmost user [[dialog]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_slidepos1 = sliderPosition 105;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "sliderPosition",
+  "name": "sliderPosition",
+  "problem_notes": [],
+  "see_also": [
+    "sliderSetPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

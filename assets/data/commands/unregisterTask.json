@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Unregisters a task type from given agent. The task type is the name given in {{hl|CfgTasks}} classes in {{hl|name}} property. Also available from [[registeredTasks]] array.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>teamMember _agent unregisterTask ((registeredTasks _agent) select 0);</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "unregisterTask",
+  "name": "unregisterTask",
+  "problem_notes": [],
+  "see_also": [
+    "registerTask",
+    "registeredTasks",
+    "sendTask",
+    "createTask",
+    "currentTasks",
+    "taskCompleted"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "teamMember",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[teamMember]] [[agent]]",
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the task",
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

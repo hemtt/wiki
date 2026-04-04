@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns how much the unit is exposed to fire damage.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _fireDamage = getBurningValue player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getBurningValue",
+  "name": "getBurningValue",
+  "problem_notes": [],
+  "see_also": [
+    "inflame",
+    "inflamed",
+    "damage"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

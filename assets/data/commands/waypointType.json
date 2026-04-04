@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the waypoint type.\n{{Feature|informative|See {{Link|Waypoints#Waypoint Types}} for more information.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _type = waypointType [groupOne, 1];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "waypointType",
+  "name": "waypointType",
+  "problem_notes": [],
+  "see_also": [
+    "Mission",
+    "Editor:",
+    "Waypoints#Select",
+    "Type|waypoints",
+    "description",
+    "Waypoints",
+    "waypoints",
+    "setWaypointType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "desc": "returns {{hl|\"\"}} if the waypoint doesn't exist.",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

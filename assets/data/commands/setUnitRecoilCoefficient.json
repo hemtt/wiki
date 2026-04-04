@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Proportionaly increase/decrease unit's recoil. Drives muzzle up with every shot when supplied positive number and down when negative. 0 cancels recoil.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player setUnitRecoilCoefficient 10;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setUnitRecoilCoefficient",
+  "name": "setUnitRecoilCoefficient",
+  "problem_notes": [],
+  "see_also": [
+    "unitRecoilCoefficient"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "coefficient"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "coefficient",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns texture of the [[Multiplayer Scripting#Locality|local]] instance of the flag. A getter for [[setFlagTexture]]. It will not return flag textures applied using [[forceFlagTexture]], use [[getForcedFlagTexture]] for that.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_flagTexture = flagTexture _flag1;</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "id": "flagTexture",
+  "name": "flagTexture",
+  "problem_notes": [],
+  "see_also": [
+    "setFlagTexture",
+    "Arma",
+    "3:",
+    "Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "flagCarrier"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle, unit or flag pole",
+          "name": "flagCarrier",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Debugging output.\n{{Feature|warning|This command is non-functional in the retail version}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Broken Commands"
+  ],
+  "id": "textLogFormat",
+  "name": "textLogFormat",
+  "problem_notes": [],
+  "see_also": [
+    "diag_log",
+    "BIS_fnc_log",
+    "BIS_fnc_logFormat"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "format",
+          "arg1",
+          "arg2",
+          "argN"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "format",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "arg1",
+              "type": "Anything"
+            }
+          },
+          {
+            "Item": {
+              "name": "arg2",
+              "type": "Anything"
+            }
+          },
+          {
+            "Item": {
+              "name": "argN",
+              "type": "Anything"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets physics collision flags for PhysX and geometry LODs. Roadway LOD interactions remain.<br>\nFor example, if collision is disabled for a house, it is now possible to walk through its walls but still possible to walk on its floors.\n{{Feature|informative|Use the [[allLODs]] command to check if an object has a roadway LOD (normally, if an object is intended to be walkable, it does have a roadway LOD).}}",
+  "effect_loc": "Local",
+  "examples": [],
+  "groups": [
+    "PhysX"
+  ],
+  "id": "setPhysicsCollisionFlag",
+  "name": "setPhysicsCollisionFlag",
+  "problem_notes": [],
+  "see_also": [
+    "hideObject",
+    "isObjectHidden",
+    "getPhysicsCollisionFlag",
+    "disableCollisionWith",
+    "enableCollisionWith"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to enable collision, [[false]] to disable it",
+          "name": "value",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the diameter of bounding sphere of the object of given classname in meters. If you need to estimate the size of the object more precisely, use [[boundingBox]] or [[boundingBoxReal]].\n{{Feature | important | At least one object of the given classname has to be present in the current mission otherwise zero will be returned.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_dimension = sizeOf \"M1Abrams\"; // Returns 10.7833</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "sizeOf",
+  "name": "sizeOf",
+  "problem_notes": [],
+  "see_also": [
+    "boundingBox",
+    "boundingBoxReal",
+    "boundingCenter"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "classname"
+      },
+      "ret": {
+        "desc": "size returned is usually bigger than the biggest size of the object along any of the axes. For example if object is 10 x 4 x 5 the [[sizeOf]] value returned expected to be around 10.",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "classname",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

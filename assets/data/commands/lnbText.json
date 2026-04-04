@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the shown text in the item with the given position of the given 2D listbox.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_text = _ctrl lnbText [0,0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "id": "lnbText",
+  "name": "lnbText",
+  "problem_notes": [],
+  "see_also": [
+    "lnbAddArray",
+    "lnbAddColumn",
+    "lnbAddRow",
+    "lnbClear",
+    "lnbColor",
+    "lnbCurSelRow",
+    "lnbData",
+    "lnbDeleteColumn",
+    "lnbDeleteRow",
+    "lnbGetColumnsPosition",
+    "lnbPicture",
+    "lnbSetColor",
+    "lnbSetColumnsPos",
+    "lnbSetCurSelRow",
+    "lnbSetData",
+    "lnbSetPicture",
+    "lnbSetText",
+    "lnbSetValue",
+    "lnbSize",
+    "lnbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "row",
+            "column"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "row",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "column",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

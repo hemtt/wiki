@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggle visibility of [[:Category:Eden Editor|Eden Editor]] lines.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>set3DENLinesVisible [false, false];// Hide all lines</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "set3DENLinesVisible",
+  "name": "set3DENLinesVisible",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENLinesVisible",
+    "set3DENIconsVisible",
+    "get3DENIconsVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "showMap",
+          "showScene"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "visibility in the map",
+              "name": "showMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "visibility in the scene",
+              "name": "showScene",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Commit [[Post Process Effects|post process effect]] in given time.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"colorCorrection\" ppEffectCommit 3;</sqf>",
+    "<sqf>_hndl ppEffectCommit 3;</sqf>",
+    "<sqf>[_hndl1, _hndl2] ppEffectCommit 3;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "ppEffectCommit",
+  "name": "ppEffectCommit",
+  "problem_notes": [],
+  "see_also": [
+    "Post",
+    "Process",
+    "Effects",
+    "ppEffectForceInNVG",
+    "ppEffectEnable",
+    "ppEffectEnabled",
+    "ppEffectDestroy",
+    "ppEffectCreate",
+    "ppEffectCommitted",
+    "ppEffectAdjust"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "effect",
+          "commit"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "name of the effect",
+          "name": "effect",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "duration",
+          "name": "commit",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "handle",
+          "commit"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "handle of the effect",
+          "name": "handle",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "duration",
+          "name": "commit",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "handles",
+          "commit"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "list of handles",
+          "name": "handles",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "duration",
+          "name": "commit",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

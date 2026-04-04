@@ -9,6 +9,7 @@
   "groups": [
     "Program Flow"
   ],
+  "id": "sleep",
   "name": "sleep",
   "problem_notes": [],
   "see_also": [

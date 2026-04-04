@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Global",
+  "description": "Check if the entity has enabled simulation. \n\n{{Feature | important | The entity could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the entity simulation set up locally on the client that executed the command.\nSee [[enableSimulation]] for more info.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>simulationEnabled player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "simulationEnabled",
+  "name": "simulationEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "enableSimulation",
+    "enableSimulationGlobal",
+    "enableDynamicSimulationSystem",
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

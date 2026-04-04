@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes an icon for an editor object. \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "removeDrawIcon",
+  "name": "removeDrawIcon",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          [
+            "object",
+            "string identifier"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "object",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "name": "string identifier",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

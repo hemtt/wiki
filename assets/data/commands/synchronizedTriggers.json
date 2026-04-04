@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the list of triggers synchronized with a given waypoint.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>synchronizedTriggers _someWaypoint;</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "synchronizedTriggers",
+  "name": "synchronizedTriggers",
+  "problem_notes": [],
+  "see_also": [
+    "synchronizeObjectsAdd",
+    "synchronizeObjectsRemove",
+    "synchronizedWaypoints"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "desc": "Trigger objects",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

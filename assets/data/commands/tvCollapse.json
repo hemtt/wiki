@@ -1,0 +1,89 @@
+{
+  "argument_loc": "Local",
+  "description": "Collapses tree item pointed to by the path. IDC means id of parent Tree View.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvCollapse [101, [0]];</sqf>",
+    "<sqf>_ctrl tvCollapse [0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvCollapse",
+  "name": "tvCollapse",
+  "problem_notes": [],
+  "see_also": [
+    "tvCollapseAll",
+    "tvAdd",
+    "tvClear",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[] will collapse the whole tree and it will disappear",
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[] will collapse the whole tree and it will disappear",
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

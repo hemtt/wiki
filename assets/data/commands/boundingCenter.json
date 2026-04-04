@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the position of the original (loaded) center of an object in model coordinates. Despite its name, it has nothing to do with [[boundingBox]] or [[boundingBoxReal]], it returns offset where {{hl|[0, 0, 0]}} was [[Object Builder]] / [[Oxygen 2]] when model was created.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_center = boundingCenter TruckOne;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "boundingCenter",
+  "name": "boundingCenter",
+  "problem_notes": [],
+  "see_also": [
+    "boundingBox",
+    "sizeOf",
+    "boundingBoxReal",
+    "getPosWorld",
+    "setPosWorld",
+    "aimPos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Position3dRelative"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

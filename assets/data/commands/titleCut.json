@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Displays text on screen.\n{{Feature|obsolete|[[cutText]] should be used instead.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>titleCut [\"Hello, how are you?\",\"Plain Down\",3];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "titleCut",
+  "name": "titleCut",
+  "problem_notes": [],
+  "see_also": [
+    "cutText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "text",
+          "type",
+          "speed"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "text to be displayed on screen",
+              "name": "text",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "can be one of [[Title Effect Type]]s",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 1)",
+              "name": "speed",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

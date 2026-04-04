@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds a specified vehicle for use by a specified AI led group.\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_grp addVehicle _vehicle;</sqf>",
+    "Using on crewed vehicle:\n<sqf>group tank addVehicle tank;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "addVehicle",
+  "name": "addVehicle",
+  "problem_notes": [],
+  "see_also": [
+    "leaveVehicle",
+    "unassignVehicle",
+    "createVehicleCrew",
+    "assignedVehicles",
+    "assignedGroup",
+    "fullCrew"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "groupName",
+          "vehicleName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "groupName",
+          "type": "Group"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

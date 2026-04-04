@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a structured text by parsing the given XML description. Do not use [[parseText]] when displaying a localized text from [[Stringtable.xml]].<br>\nA detailed explanation of all formatting possibilities can be found at [[Structured Text]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _Stxt = parseText \"First line<img image='data\\isniper.paa'/><br/>Second line\";</sqf>",
+    "<sqf>hintSilent parseText format[\"<t size='1.25' font='Zeppelin33' color='#ff0000'>%1 lives remaining.</t>\", 12];</sqf>",
+    "<sqf>private _clickableLink = parseText \"<a href='http://arma3.com'>A3</a>\";</sqf>"
+  ],
+  "groups": [
+    "Strings",
+    "Structured Text"
+  ],
+  "id": "parseText",
+  "name": "parseText",
+  "problem_notes": [],
+  "see_also": [
+    "Structured",
+    "Text",
+    "composeText",
+    "text",
+    "localize",
+    "ctrlSetStructuredText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "text"
+      },
+      "ret": {
+        "type": "StructuredText"
+      },
+      "right": {
+        "Item": {
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

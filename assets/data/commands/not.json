@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[! a]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "[[not]] a is exactly the same as [[! a]].",
   "effect_loc": "Unspecified",
@@ -9,6 +12,7 @@
     "Math",
     "Variables"
   ],
+  "id": "not",
   "name": "not",
   "problem_notes": [],
   "see_also": [

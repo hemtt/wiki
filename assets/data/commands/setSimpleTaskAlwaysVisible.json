@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets task's visibility.",
+  "effect_loc": "Local",
+  "examples": [
+    "[[currentTask]] [[player]] [[setSimpleTaskAlwaysVisible]] [[true]];"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "setSimpleTaskAlwaysVisible",
+  "name": "setSimpleTaskAlwaysVisible",
+  "problem_notes": [],
+  "see_also": [
+    "taskAlwaysVisible",
+    "createSimpleTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "taskID",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "taskID",
+          "type": "Task"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] for always visible, [[false]] for fade out",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

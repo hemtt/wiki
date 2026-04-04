@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Starts gathering [[Arma 3: Dynamic Simulation]] diagnostic data.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>diag_dynamicSimulationStart;</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation",
+    "Diagnostic"
+  ],
+  "id": "diag_dynamicSimulationStart",
+  "name": "diag_dynamicSimulationStart",
+  "problem_notes": [],
+  "see_also": [
+    "diag_dynamicSimulationEnd",
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Global",
+  "description": "Return whether a group's leader can issue attack commands to soldiers under his command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (not attackEnabled _soldier) then { _soldier setCombatMode \"Careless\" };</sqf>"
+  ],
+  "groups": [
+    "Groups",
+    "Unit Control"
+  ],
+  "id": "attackEnabled",
+  "name": "attackEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "enableAttack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

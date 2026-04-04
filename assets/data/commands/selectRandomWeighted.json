@@ -1,0 +1,87 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a random element from the given array according to assigned weights. Engine solution to [[BIS_fnc_selectRandomWeighted]]. A few notes:\n* Negative weights are not supported\n* If an item's weight is 0, the item is ignored\n* The weights don't have to total to 1 \n* If numbers of items and weights do not match, the shortest array is used\n* A single array Syntax is slightly faster than Alt Syntax",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _randomWeightedElement = selectRandomWeighted [1,0.1,2,0.2,3,1.3,4,2.4,5,7.5];</sqf>",
+    "<sqf>private _randomWeightedElement = [1,2,3,4,5] selectRandomWeighted [0.1,0.2,1.3,2.4,7.5];</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "id": "selectRandomWeighted",
+  "name": "selectRandomWeighted",
+  "problem_notes": [],
+  "see_also": [
+    "random",
+    "select",
+    "selectRandom",
+    "selectMin",
+    "selectMax"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "valuesAndWeights"
+      },
+      "ret": {
+        "desc": "random weighted value or [[Nothing]] if array is empty or all weights are 0",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "name": "valuesAndWeights",
+          "type": {
+            "ArraySized": [
+              {
+                "desc": "weighted value",
+                "name": "valueN",
+                "since": null,
+                "type": "Anything"
+              },
+              {
+                "desc": "values relative weight",
+                "name": "weightN",
+                "since": null,
+                "type": "Number"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "values",
+          "weights"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "values",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "random weighted value or [[Nothing]] if any of arrays is empty or all weights are 0",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "name": "weights",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

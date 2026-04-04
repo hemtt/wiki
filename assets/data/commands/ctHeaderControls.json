@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns array of controls on the header with the given index.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_array = _control ctHeaderControls 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "id": "ctHeaderControls",
+  "name": "ctHeaderControls",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Control"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

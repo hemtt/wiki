@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets how to handle opening of URL, default browser or Steam overlay. Possible values:\n* 0 - default browser\n* 1 - Steam overlay if enabled, otherwise default browser \n* 2 - Steam overlay, shows error message box if disabled (the box has a button to continue with default browser)\n\n{{Feature|informative|Toggling Steam overlay in Steam options will require game restart for the changes to take effect.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetURLOverlayMode 1;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlSetURLOverlayMode",
+  "name": "ctrlSetURLOverlayMode",
+  "problem_notes": [],
+  "see_also": [
+    "isSteamOverlayEnabled",
+    "ctrlURLOverlayMode",
+    "ctrlURL",
+    "menuSetURL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "control that contain url opening action",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "overlay mode, see description",
+          "name": "mode",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

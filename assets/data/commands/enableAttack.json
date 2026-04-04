@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Local",
+  "description": "Set if leader can issue attack commands to the soldiers in his group.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_group1 enableAttack true;</sqf>"
+  ],
+  "groups": [
+    "Groups",
+    "Unit Control"
+  ],
+  "id": "enableAttack",
+  "name": "enableAttack",
+  "problem_notes": [],
+  "see_also": [
+    "attackEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "group",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

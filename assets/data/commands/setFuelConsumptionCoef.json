@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the fuel consumption coefficient, which is a multiplier of the [[CfgVehicles_Config_Reference#fuelConsumptionRate|fuel consumption rate]] in config. It doesn't affect fuel leakage or refueling.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>myTank setFuelConsumptionCoef 10; // consume 10x more fuel than default</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setFuelConsumptionCoef",
+  "name": "setFuelConsumptionCoef",
+  "problem_notes": [],
+  "see_also": [
+    "getFuelConsumptionCoef"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "coef"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "Values larger than 1 increase fuel consumption, and values between 0 and 1 decrease fuel consumption. 0 disables fuel consumption",
+          "name": "coef",
+          "type": {
+            "NumberRange": [
+              0,
+              1000
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

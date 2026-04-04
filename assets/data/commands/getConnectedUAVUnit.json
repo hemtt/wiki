@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns UAV/UGV AI unit, which player is controlling. To return UAV vehicle, see [[getConnectedUAV]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _playersDrone = getConnectedUAVUnit player;</sqf>"
+  ],
+  "groups": [
+    "Remote Control"
+  ],
+  "id": "getConnectedUAVUnit",
+  "name": "getConnectedUAVUnit",
+  "problem_notes": [],
+  "see_also": [
+    "getConnectedUAV",
+    "isUAVConnected"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "desc": "UAV unit (AI driver or AI gunner) or [[objNull]] otherwise including if the connected person is remote",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "unit controlling the UAV/UGV",
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

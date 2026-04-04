@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable ID card. {{Feature|warning|Obsolete command.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>showWarrant true;</sqf>"
+  ],
+  "groups": [
+    "Interaction",
+    "Broken Commands"
+  ],
+  "id": "showWarrant",
+  "name": "showWarrant",
+  "problem_notes": [],
+  "see_also": [
+    "showCompass",
+    "showGPS",
+    "showMap",
+    "showWatch"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "show"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "(default [[false]])",
+          "name": "show",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

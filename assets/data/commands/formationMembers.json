@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return list of units (drivers) in the formation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_drivers = formationMembers _person;</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "formationMembers",
+  "name": "formationMembers",
+  "problem_notes": [],
+  "see_also": [
+    "formation",
+    "setFormation",
+    "driver"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

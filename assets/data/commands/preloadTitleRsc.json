@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Resource title - preload data. The resource can be defined in the [[Description.ext]] file.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ok = preloadTitleRsc [\"BIS\", \"PLAIN\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "preloadTitleRsc",
+  "name": "preloadTitleRsc",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "name",
+          "type",
+          "speed",
+          "showInMap"
+        ]
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "defined in [[Description.ext]] for the mission",
+              "name": "name",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "e.g \"PLAIN\"",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) ignored",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "showInMap",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

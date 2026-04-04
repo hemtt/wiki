@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets given music track event handler. Will overwrite other music event handlers.\n{{Feature|obsolete|Use [[addMusicEventHandler]] instead as it can stack music event handlers.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ehID = setMusicEventHandler [\"MusicStart\", \"hint str _this\"];</sqf>",
+    "<sqf>_ehID = setMusicEventHandler [\"MusicStop\", \"hint str _this\"];</sqf>"
+  ],
+  "groups": [
+    "Event Handlers",
+    "Sounds"
+  ],
+  "id": "setMusicEventHandler",
+  "name": "setMusicEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "addMusicEventHandler",
+    "removeMusicEventHandler",
+    "playMusic",
+    "removeAllMusicEventHandlers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "function"
+        ]
+      },
+      "ret": {
+        "desc": "id of the event handler",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "\"MusicStart\" or \"MusicStop\"",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "script to be executed. Passes params array 0: class name of the sound in [[Description.ext#Music|CfgMusic]], 1: event handler id",
+              "name": "function",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

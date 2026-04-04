@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the rainbow value smoothly during the given time (in seconds). A time of zero means there will be an immediate change.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>360 setRainbow 1;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setRainbow",
+  "name": "setRainbow",
+  "problem_notes": [],
+  "see_also": [
+    "rainbow"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

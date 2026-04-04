@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the state of controller inputs. The controller is a standard XBOX controller which is selected with Windows XBOX controller scheme. The input can be:\n{{Columns|4|\n* XBOX_A 0\n* XBOX_B 1\n* XBOX_X 2\n* XBOX_Y 3\n* XBOX_Up 4\n* XBOX_Down 5\n* XBOX_Left 6\n* XBOX_Right 7\n* XBOX_Start 8\n* XBOX_Back 9\n* XBOX_LeftBumper 10\n* XBOX_RightBumper 11\n* XBOX_LeftTrigger 12\n* XBOX_RightTrigger 13\n* XBOX_LeftThumb 14\n* XBOX_RightThumb 15\n* XBOX_LeftThumbXRight 16\n* XBOX_LeftThumbYUp 17\n* XBOX_RightThumbXRight 18\n* XBOX_RightThumbYUp 19\n* XBOX_LeftThumbXLeft 20\n* XBOX_LeftThumbYDown 21\n* XBOX_RightThumbXLeft 22\n* XBOX_RightThumbYDown 23\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "State of the fire trigger:\n<sqf>onEachFrame { hintSilent str inputController 13 };</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "inputController",
+  "name": "inputController",
+  "problem_notes": [],
+  "see_also": [
+    "inputMouse",
+    "inputAction",
+    "actionKeys",
+    "actionKeysImages",
+    "actionKeysNames",
+    "actionIDs",
+    "actionParams",
+    "addAction",
+    "setUserActionText",
+    "inGameUISetEventHandler",
+    "showHUD",
+    "removeAction",
+    "removeAllActions",
+    "action"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "input"
+      },
+      "ret": {
+        "desc": "value of the controller input 0...1. When input is -1, return is 1 if controller is available, 0 - if controller is unavailable",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "controller input 0...31 (see description) or -1 for controller detection.",
+          "name": "input",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

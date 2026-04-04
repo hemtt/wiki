@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Connects the client to the provided server.\n{{Feature|informative|\n* only works on the [[Arma 3: Main Menu|Main Menu]].\n* must be executed from [[isUIContext | UI context]], such as ''onButtonDown'' or similar events (see [[User Interface Event Handlers]]).\n}}\n\n{{Feature|GVI|arma3|2.20|\nIf port is 0, the IP will be resolved as a SRV DNS Record.<br>\n[\"domain.com\", 0, \"password\"] will be resolved as \"_arma3._udp.domain.com\".<br>\nOnly the first found record will be used, there is no support for multiple records with priority/weights.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>connectToServer [\"192.168.0.2\", 2302, \"test\"];</sqf>",
+    "<sqf>connectToServer [\"publicserver.mydomain.com\", 2302, \"\"];</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "connectToServer",
+  "name": "connectToServer",
+  "problem_notes": [],
+  "see_also": [
+    "serverCommand",
+    "getSteamFriendsServers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "ip",
+          "port",
+          "password"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "IP in {{Link|https://en.wikipedia.org/wiki/IPv4}} format or {{GVI|arma3|2.20|size= 0.75}} domain name",
+              "name": "ip",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "port",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "\"\" if no password",
+              "name": "password",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

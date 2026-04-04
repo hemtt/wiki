@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Global",
+  "description": "Remove all magazines from the given vehicle's magazine cargo space.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>clearMagazineCargo _truck;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "clearMagazineCargo",
+  "name": "clearMagazineCargo",
+  "problem_notes": [],
+  "see_also": [
+    "clearMagazineCargoGlobal",
+    "addMagazineCargo",
+    "addWeaponCargo",
+    "clearWeaponCargo",
+    "clearWeaponCargoGlobal",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearItemCargo",
+    "clearItemCargoGlobal",
+    "addMagazineAmmoCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicleName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

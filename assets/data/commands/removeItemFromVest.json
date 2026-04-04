@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes item from soldier's vest.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeItemFromVest \"itemWatch\";</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "removeItemFromVest",
+  "name": "removeItemFromVest",
+  "problem_notes": [],
+  "see_also": [
+    "addItemToVest",
+    "removeItemFromUniform",
+    "removeItemFromBackpack",
+    "removeItemFromPrimaryWeapon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

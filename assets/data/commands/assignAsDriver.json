@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Global",
+  "description": "Assign a unit as driver of a vehicle. Used together with [[orderGetIn]] to order subordinate units to get in as driver of a specific vehicle. Before usage of this command a subordinate unit has not got the option to get into the driver place of the vehicle.\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n_soldier1 assignAsDriver _tank;\n[_soldier1] orderGetIn true;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "assignAsDriver",
+  "name": "assignAsDriver",
+  "problem_notes": [],
+  "see_also": [
+    "assignAsCommander",
+    "assignAsGunner",
+    "assignAsCargo",
+    "assignAsTurret",
+    "assignAsCargoIndex",
+    "moveInCargo",
+    "moveInCommander",
+    "moveInDriver",
+    "moveInGunner",
+    "moveInTurret",
+    "assignedVehicleRole",
+    "assignedVehicle",
+    "unassignVehicle",
+    "leaveVehicle",
+    "fullCrew"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "vehicleName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

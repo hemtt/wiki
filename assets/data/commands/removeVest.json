@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes vest from unit.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>removeVest player;</sqf>"
+  ],
+  "groups": [
+    "Containers",
+    "Unit Inventory"
+  ],
+  "id": "removeVest",
+  "name": "removeVest",
+  "problem_notes": [],
+  "see_also": [
+    "addVest",
+    "vest",
+    "removeUniform",
+    "removeBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

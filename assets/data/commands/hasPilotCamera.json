@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns true if the object airplane or helicopter has a [[A3_Targeting_config_reference#class_pilotCamera|pilotCamera]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hasPilotCamera vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Pilot Camera"
+  ],
+  "id": "hasPilotCamera",
+  "name": "hasPilotCamera",
+  "problem_notes": [],
+  "see_also": [
+    "getPilotCameraPosition",
+    "getPilotCameraDirection",
+    "getPilotCameraRotation",
+    "getPilotCameraTarget",
+    "setPilotCameraDirection",
+    "setPilotCameraRotation",
+    "setPilotCameraTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

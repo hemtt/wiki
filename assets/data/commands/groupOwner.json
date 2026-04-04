@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the [[Multiplayer_Scripting#Machine_network_ID | machine network ID]] of the client to which the group is local. This command only works when called from the server. When called from a client, it always returns 0.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_clientID = groupOwner _someGroup;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "groupOwner",
+  "name": "groupOwner",
+  "problem_notes": [],
+  "see_also": [
+    "owner",
+    "setOwner",
+    "setGroupOwner",
+    "local",
+    "group",
+    "didJIPOwner",
+    "remoteExecutedOwner"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

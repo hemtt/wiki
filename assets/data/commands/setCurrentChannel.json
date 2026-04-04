@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets given channel as current chat channel. Scripted way of selecting desired channel on the UI.\nThe given channel may be disabled (see [[enableChannel]]), this is why this command returns boolean, [[true]] on success or [[false]] on failure. \n{{{!}} class=\"wikitable align-center\"\n! colspan=\"13\" {{!}} [[Channel IDs|channel ID]] number correspondence\n{{!}}-\n{{!}} {{n/a}}\n{{!}} Global\n{{!}} Side\n{{!}} Command\n{{!}} Group\n{{!}} Vehicle\n{{!}} Direct\n{{!}} Custom1\n{{!}} rowspan=\"2\" {{!}} ..\n{{!}} Custom10\n{{!}} {{GVI|arma3|2.22|size= 0.75}} Custom11\n{{!}} rowspan=\"2\" {{!}} ..\n{{!}} Custom50\n{{!}}-\n{{!}} -1\n{{!}} 0\n{{!}} 1\n{{!}} 2\n{{!}} 3\n{{!}} 4\n{{!}} 5\n{{!}} 6\n{{!}} 15\n{{!}} 26\n{{!}} 65\n{{!}}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_isDirectSelected = setCurrentChannel 5; // sets Direct channel as current active</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "setCurrentChannel",
+  "name": "setCurrentChannel",
+  "problem_notes": [],
+  "see_also": [
+    "getPlayerChannel",
+    "currentChannel",
+    "enableChannel",
+    "channelEnabled",
+    "radioChannelCreate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "channelID"
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[Channel IDs|channel ID]]",
+          "name": "channelID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

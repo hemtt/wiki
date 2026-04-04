@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds magazine to a unit regardless of locality. This command can also be used to add magazine to a vehicle, like a static gun, for example.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addMagazineGlobal \"30Rnd_65x39_caseless_mag\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "addMagazineGlobal",
+  "name": "addMagazineGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "addMagazine",
+    "addMagazines",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "addMagazinePool",
+    "addMagazineTurret",
+    "addMagazineAmmoCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "magazineName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "magazineName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

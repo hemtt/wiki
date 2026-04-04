@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all vehicles added to the given [[Group]] with [[addVehicle]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_vehicles = assignedVehicles group player;</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "assignedVehicles",
+  "name": "assignedVehicles",
+  "problem_notes": [],
+  "see_also": [
+    "assignedVehicle",
+    "assignedGroup",
+    "addVehicle",
+    "assignAsDriver",
+    "assignAsCargo",
+    "assignAsCommander",
+    "assignAsGunner",
+    "assignAsTurret",
+    "assignAsCargoIndex",
+    "unassignVehicle",
+    "leaveVehicle",
+    "fullCrew"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

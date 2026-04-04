@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts position from [[Position#PositionASL|PositionASL]] to [[Position#PositionAGL|PositionAGL]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_playerPosAGL = ASLToAGL getPosASL player;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "ASLToAGL",
+  "name": "ASLToAGL",
+  "problem_notes": [],
+  "see_also": [
+    "AGLToASL",
+    "ASLToATL",
+    "ATLToASL",
+    "getPos",
+    "getPosATL",
+    "getPosASL",
+    "setUnitFreefallHeight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "posASL"
+      },
+      "ret": {
+        "type": "Position3dAGL"
+      },
+      "right": {
+        "Item": {
+          "desc": "position to convert",
+          "name": "posASL",
+          "type": "Position3dASL"
+        }
+      }
+    }
+  ]
+}

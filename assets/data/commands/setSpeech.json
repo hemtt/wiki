@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Add speech to location.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_location setSpeech \"SomeSpeech\";</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "id": "setSpeech",
+  "name": "setSpeech",
+  "problem_notes": [],
+  "see_also": [
+    "nearestLocationWithDubbing"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "location",
+          "speech"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "speech",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

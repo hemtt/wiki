@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the name of a unit's handgun (an empty string if there is none).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint handgunWeapon player; //\"hgun_P07_F\"</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "handgunWeapon",
+  "name": "handgunWeapon",
+  "problem_notes": [],
+  "see_also": [
+    "handgunMagazine",
+    "handgunItems",
+    "addHandgunItem",
+    "removeHandgunItem",
+    "removeAllHandgunItems",
+    "primaryWeapon",
+    "secondaryWeapon",
+    "currentWeapon",
+    "weapons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

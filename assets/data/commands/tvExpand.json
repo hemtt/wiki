@@ -1,0 +1,89 @@
+{
+  "argument_loc": "Local",
+  "description": "Expands tree item pointed to by the path. IDC means id of parent Tree View.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvExpand [101, [0]];</sqf>",
+    "<sqf>_ctrl tvExpand [1];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvExpand",
+  "name": "tvExpand",
+  "problem_notes": [],
+  "see_also": [
+    "tvExpandAll",
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[] will expand the whole tree if it was collapsed previously with []",
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[] will expand the whole tree if it was collapsed previously with []",
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

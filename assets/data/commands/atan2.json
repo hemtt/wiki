@@ -10,6 +10,7 @@
   "groups": [
     "Math - Geometry"
   ],
+  "id": "atan2",
   "name": "atan2",
   "problem_notes": [],
   "see_also": [

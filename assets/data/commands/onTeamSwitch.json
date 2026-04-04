@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines an action performed when the team switch is finished.\nCommandset receives the following special variables: ''_from'' object previous unit, ''_to'' object current unit.\nConsecutive use of onTeamSwitch command will overwrite previously set commandset. \n{{Feature|important| This command is deprecated. Since '''Arma 3''' ''v1.57'' a stackable version of this EH is available: [[Arma 3: Mission Event Handlers#TeamSwitch|TeamSwitch]]}}\n<br>\n{{Feature|informative|When player switches and leaves behind AI unit, you need to enable \"TeamSwitch\" AI on it (with&nbsp;<sqf inline>onTeamSwitch { _from enableAI \"TeamSwitch\" };</sqf>) so that the unit continues with [[waypoints]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>onTeamSwitch { [_from, _to] execVM \"myTeamSwitchScript.sqf\"; };</sqf>"
+  ],
+  "groups": [
+    "Team Switch",
+    "Event Handlers"
+  ],
+  "id": "onTeamSwitch",
+  "name": "onTeamSwitch",
+  "problem_notes": [],
+  "see_also": [
+    "Team",
+    "Switch",
+    "enableTeamSwitch",
+    "onBriefingTeamSwitch",
+    "teamSwitch",
+    "teamSwitchEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "commandset"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "commandset",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

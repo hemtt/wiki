@@ -9,6 +9,7 @@
     "Program Flow",
     "Broken Commands"
   ],
+  "id": "halt",
   "name": "halt",
   "problem_notes": [],
   "see_also": [

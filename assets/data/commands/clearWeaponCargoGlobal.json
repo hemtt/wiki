@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes all weapons from the vehicle cargo space. MP synchronized.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>clearWeaponCargoGlobal jeepOne;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "clearWeaponCargoGlobal",
+  "name": "clearWeaponCargoGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "clearWeaponCargo",
+    "addWeaponCargo",
+    "clearMagazineCargo",
+    "clearMagazineCargoGlobal",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearItemCargo",
+    "clearItemCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

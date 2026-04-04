@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines an action performed after the preload screen finished. Preload event occurs after briefing screen on mission start.\n{{Feature | important | This event handler also fires on client after user closes the main map. }}\n{{Feature|arma3|\n* Since {{arma3}} v1.58 a stackable version of this EH is available: [[Arma 3: Mission Event Handlers#PreloadFinished|PreloadFinished]]\n* Before that, the [[BIS_fnc_addStackedEventHandler]] and [[BIS_fnc_removeStackedEventHandler]] functions should be used instead.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>onPreloadFinished {TAG_ReceivingScreenDone = true};</sqf>",
+    "<sqf>\n// removes the event immediately after the first run again\nonPreloadFinished { TAG_ReceivingScreenDone = true; onPreloadFinished \"\" };\n</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "onPreloadFinished",
+  "name": "onPreloadFinished",
+  "problem_notes": [],
+  "see_also": [
+    "onPreloadStarted"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "command"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "command",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

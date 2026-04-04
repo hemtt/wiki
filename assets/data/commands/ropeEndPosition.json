@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns start and end positions for the given [[ropeCreate | rope]]. If command fails, empty array {{hl|[]}} is returned.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_ends = ropeEndPosition (ropes heli1 select 0);\n_start = _ends select 0;\n_end = _ends select 1;\n</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "id": "ropeEndPosition",
+  "name": "ropeEndPosition",
+  "problem_notes": [],
+  "see_also": [
+    "ropes",
+    "canSlingLoad",
+    "enableRopeAttach",
+    "getSlingLoad",
+    "ropeAttachedObjects",
+    "ropeAttachTo",
+    "ropeDestroy",
+    "ropeLength",
+    "ropeUnwound",
+    "ropeAttachedTo",
+    "ropeCreate",
+    "ropeDetach",
+    "ropeAttachEnabled",
+    "ropeCut",
+    "ropeUnwind",
+    "setSlingLoad",
+    "slingLoadAssistantShown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "rope"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "startPos",
+              "since": null,
+              "type": "Position3dAGL"
+            },
+            {
+              "desc": null,
+              "name": "endPos",
+              "since": null,
+              "type": "Position3dAGL"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "rope object",
+          "name": "rope",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

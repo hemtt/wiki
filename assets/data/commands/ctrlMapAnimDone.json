@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Local",
+  "description": "Checks whether the map animation has finished.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_isDone = ctrlMapAnimDone _ctrlMap;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "ctrlMapAnimDone",
+  "name": "ctrlMapAnimDone",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimAdd",
+    "mapAnimClear",
+    "mapAnimCommit",
+    "mapAnimDone",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimClear",
+    "ctrlMapAnimCommit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "controlName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

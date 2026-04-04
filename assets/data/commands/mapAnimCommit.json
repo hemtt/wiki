@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Local",
+  "description": "Play map animation.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>mapAnimCommit;</sqf>"
+  ],
+  "groups": [
+    "Map"
+  ],
+  "id": "mapAnimCommit",
+  "name": "mapAnimCommit",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimAdd",
+    "mapAnimClear",
+    "mapAnimDone",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimClear",
+    "ctrlMapAnimCommit",
+    "ctrlMapAnimDone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

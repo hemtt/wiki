@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current scale of the control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_scale = ctrlScale _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "ctrlScale",
+  "name": "ctrlScale",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetScale",
+    "ctrlModelScale",
+    "ctrlSetModelScale"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

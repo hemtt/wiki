@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a new empty [[HashMap]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _myHashMap = createHashMap;</sqf>"
+  ],
+  "groups": [
+    "HashMap"
+  ],
+  "id": "createHashMap",
+  "name": "createHashMap",
+  "problem_notes": [],
+  "see_also": [
+    "createHashMapFromArray"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "HashMapUnknown"
+      }
+    }
+  ]
+}

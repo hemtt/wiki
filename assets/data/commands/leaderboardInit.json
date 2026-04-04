@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Initialize the leaderboard structure for board with given name. Returns true if board is already initialized.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>leaderboardInit \"TT01\";</sqf>"
+  ],
+  "groups": [
+    "Leaderboards"
+  ],
+  "id": "leaderboardInit",
+  "name": "leaderboardInit",
+  "problem_notes": [],
+  "see_also": [
+    "leaderboardDeInit",
+    "leaderboardGetRows",
+    "leaderboardRequestRowsFriends",
+    "leaderboardRequestRowsGlobal",
+    "leaderboardRequestRowsGlobalAroundUser",
+    "leaderboardsRequestUploadScore",
+    "leaderboardsRequestUploadScoreKeepBest",
+    "leaderboardState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "boardName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "boardName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

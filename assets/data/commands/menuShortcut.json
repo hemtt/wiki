@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns shortcut related to menu entry on given path in form of a bitflag. To get the shortcut text use [[menuShortcutText]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuShortcut [0, 1];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "id": "menuShortcut",
+  "name": "menuShortcut",
+  "problem_notes": [],
+  "see_also": [
+    "menuShortcutText",
+    "menuSetURL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

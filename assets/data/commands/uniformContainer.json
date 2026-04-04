@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a cargo container of a unit's uniform.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str uniformContainer player; //2df7dd00# 163941: dummyweapon.p3d</sqf>",
+    "<sqf>\nhint str getMagazineCargo uniformContainer player;\n/*\n\treturns e.g\n\t[\n\t\t[\"30Rnd_65x39_caseless_mag\"],\n\t\t[3]\n\t]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Containers",
+    "Unit Inventory"
+  ],
+  "id": "uniformContainer",
+  "name": "uniformContainer",
+  "problem_notes": [],
+  "see_also": [
+    "vestContainer",
+    "backpackContainer",
+    "everyContainer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "cargo container, [[objNull]] if ''unit'' does not wear any uniform/clothing",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

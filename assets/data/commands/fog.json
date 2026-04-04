@@ -8,6 +8,7 @@
   "groups": [
     "Environment"
   ],
+  "id": "fog",
   "name": "fog",
   "problem_notes": [],
   "see_also": [

@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets '''unit's''' combat mode (engagement rules). For AI group combat mode see [[setCombatMode]]. Mode may be one of the following: \n* {{hl|\"BLUE\"}} : Never fire, keep formation\n* {{hl|\"GREEN\"}} : Hold fire, keep formation\n* {{hl|\"WHITE\"}} : Hold fire, engage at will/loose formation\n* {{hl|\"YELLOW\"}} : Fire at will, keep formation\n* {{hl|\"RED\"}} : Fire at will, engage at will/loose formation\nSee [[Combat Modes]] for more information on combat modes.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_unit setUnitCombatMode \"YELLOW\";</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "setUnitCombatMode",
+  "name": "setUnitCombatMode",
+  "problem_notes": [],
+  "see_also": [
+    "unitCombatMode",
+    "setCombatMode",
+    "combatMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

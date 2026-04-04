@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a [[Team]] and names it.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_team = createTeam [\"USMC_Team\", \"Fire Team Red\"];</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "id": "createTeam",
+  "name": "createTeam",
+  "problem_notes": [],
+  "see_also": [
+    "addTeamMember",
+    "removeTeamMember"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "name"
+        ]
+      },
+      "ret": {
+        "type": "TeamMember"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "name",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

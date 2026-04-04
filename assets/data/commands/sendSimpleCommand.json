@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sends a simple command to the vehicle's driver / gunner (air vehicles ignore it). See also [[vehicleMoveInfo]].{{Feature | important | Doesn't seem to work if AI driver is alone, needs another unit in the vehicle (could be another AI or player) that is set as [[setEffectiveCommander]]. If driver is [[effectiveCommander]] it will refuse any drive commands.}}\n{{Feature|arma3|Due to some sort of a bug when vehicle is ordered turning (\"LEFT\" or \"RIGHT\"), it locks the vehicle ability to respond to any other commands properly. Always use \"STOPTURNING\" to cancel turning before issuing other move commands}}\n{{{!}} class=\"valign-top\"\n! style=\"width: 33%\" {{!}} Gunner commands\n! style=\"width: 33%\" {{!}} Driver Move commands\n! Driver Turn commands\n{{!}}-\n{{!}}\n* {{hl|\"FIRE\"}}\n* {{hl|\"CEASE FIRE\"}}\n* {{hl|\"MANUAL FIRE\"}}\n* {{hl|\"CANCEL MANUAL FIRE\"}}\n* {{hl|\"KEY FIRE\"}}\n{{!}}\n* {{hl|\"FORWARD\"}} - move forward\n* {{hl|\"FAST\"}} - move forward, fast\n* {{hl|\"SLOW\"}} - move forward, slow\n* {{hl|\"STOP\"}} - stop moving forward or backward\n* {{hl|\"BACK\"}} - move backward\n* {{hl|\"KEY UP\"}}\n* {{hl|\"KEY DOWN\"}}\n* {{hl|\"KEY FAST\"}}\n* {{hl|\"KEY SLOW\"}}\n{{!}}\n* {{hl|\"LEFT\"}} - turn left, while moving or not\n* {{hl|\"RIGHT\"}} - turn right, while moving or not\n* {{GVI|arma3|1.78|size= 0.75}} {{hl|\"STOPTURNING\"}} cancel turning (special case, normally would be called by the engine when LEFT or RIGHT turn key is released by the player)\n{{!}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player sendSimpleCommand \"STOP\";</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "sendSimpleCommand",
+  "name": "sendSimpleCommand",
+  "problem_notes": [],
+  "see_also": [
+    "vehicleMoveInfo",
+    "useAISteeringComponent",
+    "effectiveCommander",
+    "setEffectiveCommander",
+    "enableAI",
+    "disableAI",
+    "enableAIFeature",
+    "enableSentences"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicleName",
+          "command"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "command",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

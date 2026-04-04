@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets mission date and time. Players joining after mission start will get the current server [[date]] including the year.\n{{Feature|important|\nWhile the game creates February 29th in a leap year, it removes December 31st.<br>\nFor example, <sqf inline>setDate [1980,12,31,12,0]</sqf> will result in the game jumping to [1981,1,1,12,0] as 1980 is a leap year.\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setDate [1986, 2, 25, 16, 0]; // 4:00pm February 25, 1986</sqf>",
+    "<sqf>\n// Set the real date:\nif (isServer) then\n{\n\twaitUntil { time > 0 };\n\t[systemTime select [0, 5]] remoteExec [\"setDate\"];\n};\n</sqf>",
+    "Using [[setDate]] with an incorrect (like negative or exceeding) value will still work properly:\n<sqf>\nprivate _date = date;\n_date set [3, 25];\t// set hour to 25\nsetDate _date;\t\t// date = next day 1am\n</sqf>"
+  ],
+  "groups": [
+    "Mission Information",
+    "Environment"
+  ],
+  "id": "setDate",
+  "name": "setDate",
+  "problem_notes": [],
+  "see_also": [
+    "date",
+    "skipTime",
+    "numberToDate",
+    "dateToNumber"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "date"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "date",
+          "type": "ArrayDate"
+        }
+      }
+    }
+  ]
+}

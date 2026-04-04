@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Global",
+  "description": "Create new item and store it to soldier's backpack. The item can also be a weapon or a magazine.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addItemToBackpack \"arifle_MXM_Hamr_pointer_F\";</sqf>",
+    "<sqf>player addItemToBackpack \"itemGPS\";</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "addItemToBackpack",
+  "name": "addItemToBackpack",
+  "problem_notes": [],
+  "see_also": [
+    "addItemToUniform",
+    "addItemToVest",
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

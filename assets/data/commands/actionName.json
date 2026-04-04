@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns localized name of action.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>actionName \"ReloadMagazine\"; // returns \"Reload\"</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "actionName",
+  "name": "actionName",
+  "problem_notes": [],
+  "see_also": [
+    "inputAction/actions",
+    "playAction",
+    "playActionNow"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "action"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "action",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

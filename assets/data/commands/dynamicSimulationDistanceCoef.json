@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[setDynamicSimulationDistanceCoef]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str dynamicSimulationDistanceCoef \"IsMoving\";</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "id": "dynamicSimulationDistanceCoef",
+  "name": "dynamicSimulationDistanceCoef",
+  "problem_notes": [],
+  "see_also": [
+    "enableDynamicSimulationSystem",
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation",
+    "enableSimulation",
+    "simulationEnabled",
+    "enableSimulationGlobal",
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "class"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[setDynamicSimulationDistanceCoef]]",
+          "name": "class",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

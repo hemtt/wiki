@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets individual unit's [[Combat Modes|combat mode]]. For more information see [[setUnitCombatMode]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>unitCombatMode _unit;</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "unitCombatMode",
+  "name": "unitCombatMode",
+  "problem_notes": [],
+  "see_also": [
+    "setUnitCombatMode",
+    "setCombatMode",
+    "combatMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

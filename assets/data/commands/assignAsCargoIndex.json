@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Assigns the character to a specific cargo / passenger index of the given vehicle.\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player assignAsCargoIndex [myHelicopter, 1];</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "assignAsCargoIndex",
+  "name": "assignAsCargoIndex",
+  "problem_notes": [],
+  "see_also": [
+    "assignAsCargo",
+    "assignAsDriver",
+    "assignAsCommander",
+    "assignAsGunner",
+    "assignAsTurret",
+    "getCargoIndex",
+    "assignedVehicleRole",
+    "unassignVehicle",
+    "fullCrew"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "character",
+          [
+            "vehicle",
+            "index"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "character to assign",
+          "name": "character",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "vehicle to assign to",
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "cargo / passenger index",
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

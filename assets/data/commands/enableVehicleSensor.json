@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Global",
+  "description": "Enable/disable given sensor",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>vehicle player enableVehicleSensor [\"PassiveRadarSensorComponent\", false]; // disables passive radar</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "id": "enableVehicleSensor",
+  "name": "enableVehicleSensor",
+  "problem_notes": [],
+  "see_also": [
+    "listVehicleSensors",
+    "isVehicleSensorEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "componentName",
+            "enabled"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the component's name (can either be its \"real name\" or its className)",
+              "name": "componentName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "component status",
+              "name": "enabled",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

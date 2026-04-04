@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets URL property of the given control subject to {{hl|allowedHTMLLoadURIs[]}} whitelisting in [[CfgCommands]] config. Supported controls are:\n* {{hl|CT_BUTTON}}\n* {{hl|CT_SHORTCUTBUTTON}} \n* {{hl|CT_ACTIVETEXT}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetURL \"http://arma3.com/\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlSetURL",
+  "name": "ctrlSetURL",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlURL",
+    "menuSetURL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "URL"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "URL",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

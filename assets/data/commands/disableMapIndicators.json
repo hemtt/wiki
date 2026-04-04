@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Command allows suppressing visualization of FRIENDLY, ENEMY, MINES and/or PING map indicators from difficulty setting EXTENDED MAP CONTENT.",
+  "effect_loc": "Local",
+  "examples": [
+    "Disable visualization of friendly and enemy units:\n<sqf>disableMapIndicators [true, true, false, false];</sqf>"
+  ],
+  "groups": [
+    "Difficulty"
+  ],
+  "id": "disableMapIndicators",
+  "name": "disableMapIndicators",
+  "problem_notes": [],
+  "see_also": [
+    "difficultyOption"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "disableFriendly",
+          "disableEnemy",
+          "disableMines",
+          "disablePing"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "[[true]] to disable visualization of friendly units",
+              "name": "disableFriendly",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to disable visualization of enemy units",
+              "name": "disableEnemy",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to disable visualization of mines",
+              "name": "disableMines",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to disable visualization of all tactical pings",
+              "name": "disablePing",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

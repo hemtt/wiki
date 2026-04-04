@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set effectivity of wings. {{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    ""
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "setWingForceScaleRTD",
+  "name": "setWingForceScaleRTD",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "helicopterRTD",
+          [
+            "leftHorizontal",
+            "rightHorizontal",
+            "vertical"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "leftHorizontal",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "rightHorizontal",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "vertical",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

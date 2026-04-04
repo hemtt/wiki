@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[setTerrainGrid]], returns the current terrain grid.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_terrainGrid = getTerrainGrid;</sqf>",
+    "<sqf>\nif (getTerrainGrid < 50) then\n{\n\thint \"Grass is enabled\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Environment"
+  ],
+  "id": "getTerrainGrid",
+  "name": "getTerrainGrid",
+  "problem_notes": [],
+  "see_also": [
+    "setTerrainGrid",
+    "viewDistance",
+    "diag_getTerrainGrid"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "terrain grid value",
+        "type": "Number"
+      }
+    }
+  ]
+}

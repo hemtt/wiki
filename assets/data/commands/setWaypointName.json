@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the waypoint name.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp,2] setWaypointName \"myName\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "setWaypointName",
+  "name": "setWaypointName",
+  "problem_notes": [],
+  "see_also": [
+    "addWaypoint",
+    "waypointName",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointLoiterRadius",
+    "setWaypointLoiterType",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

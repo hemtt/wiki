@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns absolute [[safeZoneW]] including all monitors.<br>\n[[File:UI_12-3.jpg|600px]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_szW = safeZoneWAbs;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "safeZoneWAbs",
+  "name": "safeZoneWAbs",
+  "problem_notes": [],
+  "see_also": [
+    "safeZoneXAbs",
+    "SafeZone",
+    "safeZoneH",
+    "safeZoneX",
+    "safeZoneY",
+    "safeZoneW"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "screen width including multiple monitors in screen measurement units",
+        "type": "Number"
+      }
+    }
+  ]
+}

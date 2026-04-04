@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Local",
+  "description": "Unassigns and deletes all linked items from inventory.\nThe commands operates on [[assignedItems]] array, which does not include goggles or headgear but includes binoculars, which is a weapon.<br>\nUse [[removeGoggles]] and [[removeHeadgear]] for those.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>removeAllAssignedItems player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "removeAllAssignedItems",
+  "name": "removeAllAssignedItems",
+  "problem_notes": [],
+  "see_also": [
+    "assignedItems",
+    "linkItem",
+    "unlinkItem",
+    "assignItem",
+    "unassignItem",
+    "addItem",
+    "removeItem",
+    "removeAllContainers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "unit",
+          "allItems",
+          "includeBinocs"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "soldier",
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to include all slot items, [[false]] exclude goggles and headgear",
+              "name": "allItems",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to include binoculars (which is a weapon), [[false]] to exclude it",
+              "name": "includeBinocs",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.14"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of all simple objects that belong to the listed class names. If the array of types is empty [], all simple objects are returned including those without class name.\n{{Feature|informative|\n* There is no inheritance in simple objects, so only exact class match is allowed.\n* ''className'' is not case sensitive.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _boxesAndChairs = allSimpleObjects [\"Box_NATO_Equip_F\", \"Land_CampingChair_V2_F\"];</sqf>",
+    "<sqf>private _allSimpleObjects = allSimpleObjects [];</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "allSimpleObjects",
+  "name": "allSimpleObjects",
+  "problem_notes": [],
+  "see_also": [
+    "createSimpleObject",
+    "isSimpleObject",
+    "nearestObjects",
+    "nearObjectsReady",
+    "nearObjects",
+    "nearestObject",
+    "createVehicle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "classes"
+      },
+      "ret": {
+        "desc": "all [[createSimpleObject|simple objects]]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "classnames array. Use {{hl|[]}} to return all simple objects",
+          "name": "classes",
+          "type": {
+            "ArrayUnsized": {
+              "value": "String"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

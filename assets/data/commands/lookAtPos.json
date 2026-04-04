@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Point the camera and center the map on the position.\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 12 displayCtrl 51 lookAtPos [0,0,0];</sqf>"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "lookAtPos",
+  "name": "lookAtPos",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": "Position"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Local",
+  "description": "Creates new items and stores them in given container.\nWorks with [[Arma 3: CfgWeapons Items|items]], [[Arma 3: CfgWeapons_Weapons|weapons]], [[Arma 3: CfgMagazines|magazines]], [[Arma 3: CfgWeapons Equipment|equipment]] and [[Arma 3: Characters And Gear Encoding Guide#Facewear configuration|glasses]] but not backpacks.\nIn the latter case use [[addBackpackCargo]] instead. For the global variant, see [[addItemCargoGlobal]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>supplyBox addItemCargo [\"optic_ARCO\", 10];</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "addItemCargo",
+  "name": "addItemCargo",
+  "problem_notes": [],
+  "see_also": [
+    "addItemCargoGlobal",
+    "clearItemCargo",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "addWeaponCargo",
+    "addWeaponCargoGlobal",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "box",
+          [
+            "item",
+            "count"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "box",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "item",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of items to add; {{GVI|arma3|2.14|size= 0.75}} a negative value removes items",
+              "name": "count",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

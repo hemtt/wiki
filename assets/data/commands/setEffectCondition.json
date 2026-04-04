@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "The statement is executed when the trigger or waypoint is activated and the effects are launched depending on the result.\n\n*If the result is a [[Boolean|boolean]] and [[true]], the effect is launched.\n*If the result is an [[object]], the effect is launched if the result is the player or the player vehicle.\n*If the result is an [[Array|array]], the effect is launched if the result contains the player or the player vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_triggerObj setEffectCondition \"thisList\";</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "setEffectCondition",
+  "name": "setEffectCondition",
+  "problem_notes": [],
+  "see_also": [
+    "createTrigger"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "trigger",
+          "statement"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "statement",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "statement"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[Waypoint]]",
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "statement",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

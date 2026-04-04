@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the content of given files. If you plan to [[compile]] said string, be aware that the file should not contain comments or [[compile]] will throw an error. If there are comments, use [[preprocessFile]]/[[preprocessFileLineNumbers]] instead.\n{{Feature|warning|If the file is not prepared using UTF-8 encoding and contains some characters [[toArray|with codes]] > 127, they might convert incorrectly.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_contents = loadFile \"wantedString.txt\";</sqf>",
+    "<sqf>_contents = compile loadFile \"myFunction.sqf\"; // will compile string into code</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "id": "loadFile",
+  "name": "loadFile",
+  "problem_notes": [],
+  "see_also": [
+    "fileExists",
+    "preprocessFile",
+    "preprocessFileLineNumbers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "fileName"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "fileName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns true if the computer has an interface (a real player). False for a dedicated server or for a headless client.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isHC = !(hasInterface || isDedicated);</sqf>",
+    "<sqf>_isHC = !hasInterface && !isDedicated;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "hasInterface",
+  "name": "hasInterface",
+  "problem_notes": [],
+  "see_also": [
+    "isDedicated",
+    "isServer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

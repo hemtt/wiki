@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the [[Structured Text]] which will be displayed in [[DialogControls-Text#CT_STRUCTURED_TEXT.3D13|structured text control]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetStructuredText parseText \"First line<img image=data\\isniper.paa /><br />Second line\"</sqf>",
+    "To adjust text vertically, add extra line above with blank space (&amp;#160;) and set its size accordingly:\n<sqf>\nwith uiNamespace do {\n\tbutton = findDisplay 46 ctrlCreate [\"RscShortcutButton\", -1];\n\tbutton ctrlSetPosition [0,0,0.3,0.1];\n\tbutton ctrlCommit 0;\n\tbutton ctrlSetStructuredText parseText \n\t\"<t size='0.5'>&#160;</t><br/><t size='1' align='center'>Button Text&#160;&#160;</t>\";\n};\n</sqf>",
+    "There is a bug with {{hl|valign}} that requires adding 1 extra trailing space per line to the displayed text in order to keep it centered horizontally:\n<sqf>\ndisableSerialization;\nprivate _ctrl = findDisplay 46 ctrlCreate [\"RscStructuredText\", -1];\n_ctrl ctrlSetPosition [0, 0, 0.5, 0.5];\n_ctrl ctrlSetBackgroundColor [0, 0, 0, 1];\n_ctrl ctrlCommit 0;\nprivate _lineHeight = getNumber (configFile >> \"RscStructuredText\" >> \"size\");\nprivate _linesTotal = (ctrlPosition _ctrl select 2) / _lineHeight;\nprivate _trailingSpace = \"\";\nfor \"_i\" from 1 to _linesTotal do { _trailingSpace = _trailingSpace + \" \" };\n_ctrl ctrlSetStructuredText parseText format [\"<t size='%1'><t size='1' align='center' valign='middle'>%2%3</t> </t>\", _linesTotal, \"------ Centered Text ------\", _trailingSpace];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control",
+    "Structured Text"
+  ],
+  "id": "ctrlSetStructuredText",
+  "name": "ctrlSetStructuredText",
+  "problem_notes": [
+    "Using this command will modify the provided ''structuredText'' - a way to circumvent this issue is to [[parseText]] in-line. See [[#Notes|Notes]]."
+  ],
+  "see_also": [
+    "Structured",
+    "Text",
+    "composeText",
+    "parseText",
+    "text"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "structuredText"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "structuredText",
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}

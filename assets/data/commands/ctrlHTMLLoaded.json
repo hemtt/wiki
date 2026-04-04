@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] when HTML content was successfully loaded.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_control htmlLoad \"test.html\";\nif (!ctrlHTMLLoaded _control) then {\n\thint \"Loading test.html failed!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - HTML"
+  ],
+  "id": "ctrlHTMLLoaded",
+  "name": "ctrlHTMLLoaded",
+  "problem_notes": [],
+  "see_also": [
+    "htmlLoad",
+    "Arma:",
+    "GUI",
+    "Configuration"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

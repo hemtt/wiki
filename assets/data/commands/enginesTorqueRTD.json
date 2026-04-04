@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Torque produced by engines in '''N·m''' (Newton &times; meter).\n{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_UH80_E1 = (enginesTorqueRTD _UH80) select 0; // engine 1 Torque\n_UH80_E2 = (enginesTorqueRTD _UH80) select 1; // engine 2 Torque\n</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "enginesTorqueRTD",
+  "name": "enginesTorqueRTD",
+  "problem_notes": [],
+  "see_also": [
+    "isObjectRTD",
+    "enginesIsOnRTD",
+    "enginesRpmRTD",
+    "weightRTD",
+    "airDensityRTD",
+    "wingsForcesRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "RTD_helicopter"
+      },
+      "ret": {
+        "desc": "torque per engine",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "RTD_helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

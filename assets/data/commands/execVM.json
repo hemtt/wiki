@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Global",
+  "description": "Compiles and adds an [[SQF Syntax|SQF]] [[Script Handle|script]] to the [[Scheduler|scheduler]] queue and returns script handle (see also {{Link|#Example 4}}).\nThe script does not execute immediately upon running [[execVM]] command but with some delay depending on the VM's scripts queue and engine load.\n\n{{Feature|informative|\n* If the same script is to be executed more than one time, declaring it as a [[Arma 3: Functions Library|Function]] is recommended to avoid recompiling and wasting performance with every execution.\n* The script is searched for in the following directories in that order:\n** mission directory\n** campaign scripts directory\n** global scripts directory.\n* To see what VM scripts are currently in the scheduler, use [[diag_activeSQFScripts]] command.\n}}\n\n{{Feature|important|\n* The {{hl|.sqf}} file extension is not mandatory but is strongly recommended as using non-standard extensions may cause problems during binarisation\n* If the script file is not prepared using UTF-8 encoding and contains some characters [[toArray|with codes]] > 127, they might convert incorrectly.\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>execVM \"test.sqf\";</sqf>",
+    "<sqf>\n_handle = player execVM \"test.sqf\";\nwaitUntil { scriptDone _handle };\n</sqf>\nThe following is also possible in {{arma3}}:\n<sqf>\nprivate _handle = execVM \"123.sqf\";\nwaitUntil { isNull _handle };\n</sqf>",
+    "<sqf>[player, 0.75] execVM \"setDamage.sqf\";</sqf>\nsetDamage.sqf:\n<sqf>\nparams [\"_unit\", \"_damage\"];\n_unit setDamage _damage;\n</sqf>",
+    "[[execVM]] equivalence:\n<sqf>\nprivate _handle = _args execVM \"someFile.sqf\";\n// is practically identical to\nprivate _handle = _args spawn compile preprocessFileLineNumbers \"someFile.sqf\";\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "id": "execVM",
+  "name": "execVM",
+  "problem_notes": [],
+  "see_also": [
+    "call",
+    "spawn",
+    "exec",
+    "execFSM",
+    "scriptDone",
+    "scriptNull",
+    "terminate",
+    "sleep",
+    "uiSleep",
+    "waitUntil",
+    "canSuspend",
+    "diag_activeScripts",
+    "diag_activeSQFScripts",
+    "SQF",
+    "Syntax",
+    "Control",
+    "Structures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "arguments",
+          "filename"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "arguments accessible as {{hl|[[Magic Variables#this|_this]]}} in the script",
+          "name": "arguments",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "type": "ScriptHandle"
+      },
+      "right": {
+        "Item": {
+          "desc": "path to the [[SQF Syntax|SQF]] script file",
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "filename"
+      },
+      "ret": {
+        "type": "ScriptHandle"
+      },
+      "right": {
+        "Item": {
+          "desc": "path to the [[SQF Syntax|SQF]] script file",
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

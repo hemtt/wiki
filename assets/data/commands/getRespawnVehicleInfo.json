@@ -1,0 +1,159 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns various properties for the respawning vehicle (see [[Vehicle Respawn]]). All properties are synched over the network and should be the same on every client including [[JIP]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _vehInfo = getRespawnVehicleInfo veh1;</sqf>",
+    "<sqf>private _isRespawning = veh1 getRespawnVehicleInfo 10;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "getRespawnVehicleInfo",
+  "name": "getRespawnVehicleInfo",
+  "problem_notes": [],
+  "see_also": [
+    "Vehicle",
+    "Respawn",
+    "respawnVehicle]],",
+    "playerRespawnTime]],",
+    "getEntityInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "how long the vehicle will be in respawn queue after death. -1 - 'missionRespawnDelay' value is used.",
+              "name": "respawnDelay",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "how many times left for the vehicle to respawn. -1 - indefinite, 0 - no more respawns",
+              "name": "respawnCount",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "if [[true]] then the old wreck will be deleted when vehicle respawns.",
+              "name": "deleteOldWreck",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "if [[true]] the wreck will be transfered to the server and vehicle will respawn on server.",
+              "name": "respawnOnServer",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "if [[true]] vehicle will not be forced to the ground and if can fly and has pilot will be spawned flying.",
+              "name": "respawnFlying",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "pilot/driver unit that will be placed into the new vehicle.",
+              "name": "respawnUnit",
+              "since": null,
+              "type": "Object"
+            },
+            {
+              "desc": "individual respawn mode for this vehicle. Any mode other than 2,3 or -1 means disabled respawn. -1 - use 'missionRespawnMode'",
+              "name": "respawnMode",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "what side markers to use for respawn. For example if 'respawnSide' set to [[east]] the markers with names 'respawn_vehicle_eastXXX' and 'respawn_eastXXX' will be used.",
+              "name": "respawnSide",
+              "since": null,
+              "type": "Side"
+            },
+            {
+              "desc": "align respawned vehicle with respawn marker direction or with wreck direction if no marker found or \"INSTANT\" mode is used. Otherwise, direction is random.",
+              "name": "useRespawnMarkerDir",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if vehicle is respawnable (all conditions for respawn are ok)",
+              "name": "canRespawn",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if vehicle is currently in the respawn queue awaiting respawn.",
+              "name": "isRespawning",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "Chosen vehicle respawn marker, when vehicle respawns it will use the marker params. The respawn marker is processed instantly uppon vehicle's death.",
+              "name": "respawnMarkerName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "how long left before the respawn. -1 after vehicle has respawned or has respawn disabled.",
+              "name": "respawnTimeRemaining",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "global mission vehicle respawn delay. script command > mission param > 3DEN param",
+              "name": "missionRespawnDelay",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "global mission vehicle respawn mode. script command > mission param > 3DEN param",
+              "name": "missionRespawnMode",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "transport",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transport",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "depends on the requested property, or [[Nothing]]",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "property index (see main syntax, for example 10 for isRespawning)",
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

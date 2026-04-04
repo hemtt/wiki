@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the position on the unit other units can aim at in render scope. See also [[aimPos]], [[unitAimPosition]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>unitAimPositionVisual player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Render Time Scope"
+  ],
+  "id": "unitAimPositionVisual",
+  "name": "unitAimPositionVisual",
+  "problem_notes": [],
+  "see_also": [
+    "unitAimPosition",
+    "aimPos",
+    "eyePos",
+    "getPosASL",
+    "weaponDirection"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "position",
+        "type": "Position3dAGL"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns 'shadow' property of the control (see [[ctrlSetShadow]]).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_shadow = ctrlShadow _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlShadow",
+  "name": "ctrlShadow",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetShadow",
+    "ctrlCreate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

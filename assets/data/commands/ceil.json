@@ -9,6 +9,7 @@
   "groups": [
     "Math"
   ],
+  "id": "ceil",
   "name": "ceil",
   "problem_notes": [],
   "see_also": [

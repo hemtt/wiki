@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Opens a Steam page of the app with given appId. Only works for known appId (game + linked DLCs)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "[[openDLCPage]] 288520"
+  ],
+  "groups": [
+    "DLC"
+  ],
+  "id": "openDLCPage",
+  "name": "openDLCPage",
+  "problem_notes": [],
+  "see_also": [
+    "isDLCAvailable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "dlcID"
+      },
+      "ret": {
+        "desc": "result",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "dlcID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

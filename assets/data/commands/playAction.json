@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Local",
+  "description": "When used on a person, a smooth transition to the given action will be initiated.<br>\nFor {{arma3}} actions see: [[playAction/actions]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>soldierOne playAction \"SitDown\";</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Animations"
+  ],
+  "id": "playAction",
+  "name": "playAction",
+  "problem_notes": [],
+  "see_also": [
+    "playActionNow",
+    "switchAction",
+    "playMove",
+    "playMoveNow",
+    "switchMove"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "soldier",
+          "action"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "soldier",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "action",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

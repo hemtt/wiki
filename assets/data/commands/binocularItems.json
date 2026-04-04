@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns array with all items assigned to the [[binocular]] weapon except magazines. Use [[binocularMagazine]] command for the latter. This command is used for infantry weapons only.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>binocularItems player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "binocularItems",
+  "name": "binocularItems",
+  "problem_notes": [],
+  "see_also": [
+    "addBinocularItem",
+    "removeBinocularItem",
+    "removeAllBinocularItems",
+    "binocularMagazine",
+    "weaponAccessories",
+    "weaponAccessoriesCargo",
+    "primaryWeaponItems",
+    "secondaryWeaponItems",
+    "handgunItems",
+    "weaponsItems",
+    "weaponsItemsCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "silencer",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "laserpointer or flashlight",
+              "name": "pointer",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": null,
+              "name": "optic",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": null,
+              "name": "bipod",
+              "since": null,
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

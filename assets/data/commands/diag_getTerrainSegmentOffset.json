@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the terrain segment. It is basically the same as:\n<sqf>\n_worldPos params [\"_x\", \"_y\"];\n[floor (_x / diag_getTerrainGrid), floor (_y / diag_getTerrainGrid)];\n</sqf>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _segmentOffset = diag_getTerrainSegmentOffset getPosWorld player;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_getTerrainSegmentOffset",
+  "name": "diag_getTerrainSegmentOffset",
+  "problem_notes": [],
+  "see_also": [
+    "diag_getTerrainHeight",
+    "diag_getTerrainGrid"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "worldPos"
+      },
+      "ret": {
+        "desc": "[x,y] of terrain segment (integer, basically pixel coordinates in heightmap)",
+        "type": "Position2d"
+      },
+      "right": {
+        "Item": {
+          "desc": "world coordinates",
+          "name": "worldPos",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

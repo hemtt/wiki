@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array with all [[taskCompleted | uncompleted]] tasks for the given agent.\n[[getVariable]] could be used on [[Task]] to get the following special local variables from the task:\n* {{hl|\"_this\"}} [[Team Member]] - the [[teamMember]] [[agent]] the task is assigned to\n* {{hl|\"_taskType\"}} [[String]] - the name of the task (see [[registeredTasks]])\n* {{hl|\"_thisCreated\"}} [[Number]] - 1 or 0\n* {{hl|\"_thisRunning\"}} [[Number]] - 1 or 0\n* {{hl|\"_totalCreated\"}} [[Number]] - total number of tasks\n* {{hl|\"_totalRunning\"}} [[Number]] - total number of running tasks\n* {{hl|\"_task\"}}[[Task]] - often null",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>currentTasks teamMember _agent;</sqf>"
+  ],
+  "groups": [
+    "Briefing",
+    "Teams"
+  ],
+  "id": "currentTasks",
+  "name": "currentTasks",
+  "problem_notes": [],
+  "see_also": [
+    "taskCompleted",
+    "registerTask",
+    "registeredTasks",
+    "unregisterTask",
+    "sendTask",
+    "createTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "teamMember"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Task"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "[[teamMember]] [[agent]]",
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

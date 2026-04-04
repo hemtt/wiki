@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Global",
+  "description": "Converts position from object model space to world space in render time scope. For the [[Position#PositionAGL|PositionAGL]] version see [[modelToWorldVisual]].\n{{Feature|important|\nFor [[setObjectScale|scaled objects]], the relative position will first be [[vectorMultiply|multiplied]] by the object scale.<br>\nFor example, if the object's scale is 2, <sqf inline>_obj modelToWorldVisualWorld [0,1,0]</sqf> will be offset '''2 meters''' from the model center (<sqf inline>[0,0,0]</sqf>).\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player modelToWorldVisualWorld [0,1,0];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Render Time Scope"
+  ],
+  "id": "modelToWorldVisualWorld",
+  "name": "modelToWorldVisualWorld",
+  "problem_notes": [],
+  "see_also": [
+    "modelToWorldWorld",
+    "modelToWorldVisual",
+    "getPosWorldVisual"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "modelPos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "translated world position (see [[getPosWorld]])",
+        "type": "Position3dASL"
+      },
+      "right": {
+        "Item": {
+          "desc": "[x,y,z] offset relative to the model centre",
+          "name": "modelPos",
+          "type": "Position3dRelative"
+        }
+      }
+    }
+  ]
+}

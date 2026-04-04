@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the provided control's style. See {{Link|Arma: GUI Configuration#Control Styles}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _ctrlStyle = ctrlStyle _myControl;\n\nprivate _bitFlags = _ctrlStyle call BIS_fnc_bitflagsToArray;\nif (2 in _bitFlags) then\n{\n\thint \"This control has centered text!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlStyle",
+  "name": "ctrlStyle",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlType",
+    "BIS_fnc_bitflagsToArray"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "desc": "see {{Link|Arma: GUI Configuration#Control Styles}}",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

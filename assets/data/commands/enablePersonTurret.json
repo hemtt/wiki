@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables or disables firing from a vehicle cargo position. To get the turret path use [[assignedVehicleRole]] or [[getCargoIndex]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>heli enablePersonTurret [[1], true];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "enablePersonTurret",
+  "name": "enablePersonTurret",
+  "problem_notes": [],
+  "see_also": [
+    "assignedVehicleRole",
+    "allTurrets",
+    "moveInTurret",
+    "turretUnit",
+    "assignAsTurret",
+    "getCargoIndex",
+    "moveInCargo",
+    "assignAsCargoIndex",
+    "emptyPositions"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "turretPath",
+            "enable"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "name": "enable",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

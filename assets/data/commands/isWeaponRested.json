@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns true if weapon is currently rested.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_rest = isWeaponRested player;</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "isWeaponRested",
+  "name": "isWeaponRested",
+  "problem_notes": [],
+  "see_also": [
+    "isWeaponDeployed",
+    "canDeployWeapon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

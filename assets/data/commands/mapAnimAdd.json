@@ -1,0 +1,85 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Add next frame to map animation.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nmapAnimAdd [1, 0.1, markerPos \"anim1\"];\nmapAnimCommit;\n</sqf>",
+    "<sqf>\nmapAnimAdd [3, 0.01, player];\nmapAnimCommit;\n</sqf>"
+  ],
+  "groups": [
+    "Map"
+  ],
+  "id": "mapAnimAdd",
+  "name": "mapAnimAdd",
+  "problem_notes": [],
+  "see_also": [
+    "mapAnimClear",
+    "mapAnimCommit",
+    "mapAnimDone",
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimClear",
+    "ctrlMapAnimCommit",
+    "ctrlMapAnimDone"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "time",
+          "zoom",
+          "position"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "animation duration in seconds",
+              "name": "time",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "range from 0.01 (max. zoom) to 1 (zoomed out)",
+              "name": "zoom",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position2d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position3d"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

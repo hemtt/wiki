@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[opfor]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Pre-defined variable for the eastern [[Side|side]].",
   "effect_loc": "Unspecified",
@@ -9,6 +12,7 @@
   "groups": [
     "Sides"
   ],
+  "id": "east",
   "name": "east",
   "problem_notes": [],
   "see_also": [

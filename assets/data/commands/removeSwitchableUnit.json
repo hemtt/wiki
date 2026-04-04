@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove a unit from the list of units available for [[Team Switch]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>removeSwitchableUnit _unit1;</sqf>"
+  ],
+  "groups": [
+    "Team Switch",
+    "Multiplayer"
+  ],
+  "id": "removeSwitchableUnit",
+  "name": "removeSwitchableUnit",
+  "problem_notes": [],
+  "see_also": [
+    "Team",
+    "Switch",
+    "addSwitchableUnit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

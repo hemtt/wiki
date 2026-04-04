@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes a range of array elements from the given array. Modifies the original array, just like [[resize]] or [[set]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_arr = [1,2,3,4,5,6];\n_arr deleteRange [1,4];\nhint str _arr; // [1,6]\n</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "id": "deleteRange",
+  "name": "deleteRange",
+  "problem_notes": [],
+  "see_also": [
+    "deleteAt",
+    "set",
+    "resize",
+    "select",
+    "in",
+    "find",
+    "toArray",
+    "toString",
+    "forEach",
+    "count",
+    "pushBack",
+    "pushBackUnique",
+    "apply",
+    "append",
+    "sort",
+    "param",
+    "params",
+    "arrayIntersect",
+    "splitString",
+    "joinString"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "array",
+          [
+            "from",
+            "count"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "array index to start selection from.",
+              "name": "from",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of array elements to remove. If the selected range exceeds source array boundaries, selection will be made up to the end of the array.",
+              "name": "count",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

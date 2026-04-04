@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts world coordinates into map screen coordinates. This command is identical to [[posWorldToScreen]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_screenCoord = _control ctrlMapWorldToScreen _worldCoord;</sqf>",
+    "<sqf>_screenCoord = _control ctrlMapWorldToScreen position player;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "ctrlMapWorldToScreen",
+  "name": "ctrlMapWorldToScreen",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlMapScreenToWorld",
+    "posWorldToScreen"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "map control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "screen coordinates in format [x, y]",
+        "type": "Position2d"
+      },
+      "right": {
+        "Item": {
+          "desc": "world position",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

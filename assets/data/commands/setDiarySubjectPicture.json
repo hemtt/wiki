@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets a picture to be displayed on the right of the [[Diary]] subject. The picture can also be set during custom [[Diary]] subject [[createDiarySubject | creation]], but this command also allows to change icon for the fixed subjects, like \"Tasks\", \"Diary\", \"Units\", \"Players\" and \"Statistics\".",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player setDiarySubjectPicture [\"Diary\", \"\\A3\\ui_f\\data\\map\\markers\\nato\\o_mech_inf.paa\"];</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "setDiarySubjectPicture",
+  "name": "setDiarySubjectPicture",
+  "problem_notes": [],
+  "see_also": [
+    "createDiarySubject",
+    "removeDiarySubject",
+    "selectDiarySubject",
+    "diarySubjectExists",
+    "allDiarySubjects",
+    "Diary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "subject",
+            "picture"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "diary subject (see [[Diary]])",
+              "name": "subject",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "icon path",
+              "name": "picture",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

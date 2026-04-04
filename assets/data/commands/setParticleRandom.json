@@ -1,0 +1,133 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets randomization of particle source parameters. Correspondence between CfgCloudlets class param names and command array of params:\n<sqf>\nparticleSource setParticleRandom\n[\n\tlifeTimeVar,\n\tpositionVar,\n\tmoveVelocityVar,\n\trotationVelocityVar,\n\tsizeVar,\n\tcolorVar,\n\trandomDirectionPeriodVar,\n\trandomDirectionIntensityVar,\n\tangleVar,\n\tbounceOnSurfaceVar\n];\n</sqf>",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_particleSource setParticleRandom [0, [0.1, 0.1, 0.1], [0, 0, 0.5], 0, 0.1, [0, 0, 0, 0], 0, 0, 45, 0];</sqf>"
+  ],
+  "groups": [
+    "Particles"
+  ],
+  "id": "setParticleRandom",
+  "name": "setParticleRandom",
+  "problem_notes": [],
+  "see_also": [
+    "ParticleArray",
+    "setParticleCircle",
+    "setParticleParams",
+    "ParticleTemplates",
+    "setParticleClass",
+    "particlesQuality",
+    "setParticleFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "particleSource",
+          [
+            "lifeTime",
+            "position",
+            "moveVelocity",
+            "rotationVelocity",
+            "size",
+            "color",
+            "directionPeriod",
+            "directionIntensity",
+            "angle",
+            "bounceOnSurface"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "particleSource",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "lifeTime",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in format [randomX, randomY, randomZ]",
+              "name": "position",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "in format [randomX, randomY, randomZ]",
+              "name": "moveVelocity",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "rotationVelocity",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "size",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          },
+          {
+            "Item": {
+              "name": "directionPeriod",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "directionIntensity",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "angle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "bounceOnSurface",
+              "since": {
+                "arma3": "0.74"
+              },
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

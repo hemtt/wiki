@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets [[effectiveCommander]] of the given vehicle. Effective commander is the person who commands the vehicle, i.e. gives commands to the driver.\nEvery time a person gets in or out of a vehicle, effective commander eligibility is recalculated by the engine based on the current [[crew]].\nUse this command to force desired effective commander.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>vehicle player setEffectiveCommander player;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "setEffectiveCommander",
+  "name": "setEffectiveCommander",
+  "problem_notes": [],
+  "see_also": [
+    "effectiveCommander",
+    "commander",
+    "vehicleMoveInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "person"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

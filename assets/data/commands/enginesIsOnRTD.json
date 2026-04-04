@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns which engines are producing some work.\n{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_enginesTaru = enginesIsOnRTD _taru; // returns [true, true]</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "enginesIsOnRTD",
+  "name": "enginesIsOnRTD",
+  "problem_notes": [],
+  "see_also": [
+    "isObjectRTD",
+    "enginesRpmRTD",
+    "enginesTorqueRTD",
+    "wingsForcesRTD",
+    "engineOn"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "RTD_helicopter"
+      },
+      "ret": {
+        "desc": "value for each engine",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Boolean"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "RTD_helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

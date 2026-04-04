@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the status of autosave request, made when [[saveGame]] command is executed. When request is made, the command immediately returns [[true]]. The engine then handles the saving and when it is done, the command returns [[false]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n0 spawn\n{\n\tsaveGame;\n\twaitUntil { !isSaving };\n\tsystemChat \"Game Saving Is Done!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "id": "isSaving",
+  "name": "isSaving",
+  "problem_notes": [],
+  "see_also": [
+    "saveGame",
+    "enableSaving",
+    "loadGame",
+    "savingEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[[true]] autosave request is made, [[false]] autosave request is processed",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

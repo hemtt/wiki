@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if given object is [[createSimpleObject|simple object]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isSimple = isSimpleObject _obj1;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "isSimpleObject",
+  "name": "isSimpleObject",
+  "problem_notes": [],
+  "see_also": [
+    "createSimpleObject",
+    "allSimpleObjects",
+    "nearestObjects",
+    "nearObjectsReady",
+    "nearObjects",
+    "nearestObject"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

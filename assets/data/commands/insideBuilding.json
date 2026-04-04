@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns how much a man is inside a building. The value is the same as normally returned by weapons/ammo sound controller \"interior\".\nIt is possible to modify an individual object to use sound interior with [[enableAudioFeature]].\n\n{{Feature|informative|\nThe sound is considered internal when the corresponding surface sound name starts with \"int_\".\nAn object placed inside a building that does not have model {{hl|CfgSurfaces}}' {{sic|[[Config Properties Megalist#soundEviron|soundEviron]]}} parameter named this way would generate external sound inside the building, and [[insideBuilding]] on top of this object would return 0.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _isFullyInside = insideBuilding player == 1;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "insideBuilding",
+  "name": "insideBuilding",
+  "problem_notes": [],
+  "see_also": [
+    "buildingPos",
+    "buildingExit",
+    "enableAudioFeature",
+    "BIS_fnc_buildingPositions"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "man"
+      },
+      "ret": {
+        "desc": "in range 0..1, where 0 is outside, 1 is inside",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "entity of class Man",
+          "name": "man",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

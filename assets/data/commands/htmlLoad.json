@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Load [[HTML File Format|HTML]] from file or URI using given control. File path is relative to current mission dir or an absolute path (with drive letter etc.).\nThe command is subject to restrictions, imposed by [[CfgCommands]] class.\n{{Feature|arma3|Since {{GVI|arma3|2.10|size= 0.75}} the 'title' attribute is supported within &lt;img&gt; and &lt;a&gt; html tags}}\n{{Feature|important|For unknown reasons, URL's length is limited to 255 characters.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control htmlLoad \"briefing.html\";</sqf>",
+    "<sqf>_control htmlLoad \"http://www.bistudio.com/newsfeed/arma3_news.php?build=main&language=English\";</sqf>",
+    "Display news item:\n<sqf>\n0 spawn {\n\tdisableSerialization;\n\tprivate _html = findDisplay 46 createDisplay \"RscCredits\" ctrlCreate [\"RscHTML\", -1];\n\t_html ctrlSetBackgroundColor [0,0,0,0.8];\n\t_html ctrlSetPosition [safeZoneX, safeZoneY, safeZoneW, safeZoneH];\n\t_html ctrlCommit 0;\n\t_html htmlLoad \"http://www.bistudio.com/newsfeed/arma3_news.php?build=main&language=English\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "htmlLoad",
+  "name": "htmlLoad",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlHTMLLoaded",
+    "loadFile",
+    "preprocessFile",
+    "preprocessFileLineNumbers",
+    "HTML",
+    "File",
+    "Format"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "filename"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "local file name or remote file URL",
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

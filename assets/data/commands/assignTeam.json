@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "{{{!}} class=\"wikitable float-right align-center\"\n! Team\n! Value\n{{!}}-\n{{!}} White\n{{!}} \"MAIN\"\n{{!}}-\n{{!}} Red\n{{!}} \"RED\"\n{{!}}-\n{{!}} Green\n{{!}} \"GREEN\"\n{{!}}-\n{{!}} Blue\n{{!}} \"BLUE\"\n{{!}}-\n{{!}} Yellow\n{{!}} \"YELLOW\"\n{{!}}}\nAssigns the unit (in case of a vehicle, its commander) to the given team. Team is an option in group control (unit management) menu that allows to split player group in teams and then give bulk order to separate teams.\nIn order to operate properly, the command requires specific conditions:\n* the command requires [[player]] to be fully initialised\n* the unit getting assigned must be either player himself or a unit in player's group\nThe colour of the assigned team for a unit is seen on the group management UI as well as squad radar.\n\n\n{{Feature|important|In older versions of the game ({{arma2}}?) the effect of this command is '''local''' {{Icon|localEffect|32}}.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_soldier2 assignTeam \"RED\";</sqf>",
+    "In a unit's init script in the editor [[spawn]] should be used, otherwise a {{Link|https://en.wikipedia.org/wiki/Race_condition|race condition}} may be experienced:\n<sqf>this spawn { _this assignTeam \"RED\" };</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "assignTeam",
+  "name": "assignTeam",
+  "problem_notes": [],
+  "see_also": [
+    "assignedTeam",
+    "dissolveTeam",
+    "unassignTeam"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "team"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "team",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

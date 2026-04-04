@@ -1,0 +1,109 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the selection state of the given row of the given listbox of style LB_MULTI.\nThe command has to be called for every row which is needed to be selected in multi-selection listbox. Use negative index -1 to select/deselect all rows (since {{GVI|arma3|2.12}}).\nFor single selection listbox use [[lbSetCurSel]] instead.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control lbSetSelected [0, true];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "id": "lbSetSelected",
+  "name": "lbSetSelected",
+  "problem_notes": [],
+  "see_also": [
+    "lbAdd",
+    "lbClear",
+    "lbColor",
+    "lbCurSel",
+    "lbData",
+    "lbDelete",
+    "lbIsSelected",
+    "lbPicture",
+    "lbSelection",
+    "lbSetColor",
+    "lbSetCurSel",
+    "lbSetData",
+    "lbSetPicture",
+    "lbSetTooltip",
+    "lbSetValue",
+    "lbSize",
+    "lbSort",
+    "lbSortByValue",
+    "lbText",
+    "lbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "index",
+            "selected",
+            "forceEH"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "index",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "desc": null,
+                        "since": {
+                          "arma3": "2.12"
+                        },
+                        "type": {
+                          "ArrayUnsized": {
+                            "value": "Number"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "selected",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) will force [[User_Interface_Event_Handlers#onLBSelChanged | lbSelChanged]] EH to fire",
+              "name": "forceEH",
+              "since": {
+                "arma3": "2.12"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

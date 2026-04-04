@@ -1,0 +1,92 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable/disable environmental effects: ambient life and/or ambient sound.\n\n{{Feature|informative|This command has to be executed after mission start: be sure to use e.g <sqf inline>sleep 0.1;</sqf> for it to take effect.}}\nInfluenced sounds among others are:\n{{Columns|2|\n* bird sounds\n* insect sounds\n* waves\n* wind\n* rain\n* sounds produced by air conditioners and similar\n}}\n* {{GVI|arma3|2.06|size= 0.75}} thunder (an already started sound will not be cut but future ones will be prevented)",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>enableEnvironment false; // identical to enableEnvironment [false, false]</sqf>",
+    "<sqf>\nenableEnvironment [false, true];\nenableEnvironment [false, true, 0.5]; // since {{arma3}} v2.12\n</sqf>"
+  ],
+  "groups": [
+    "Environment",
+    "Sounds"
+  ],
+  "id": "enableEnvironment",
+  "name": "enableEnvironment",
+  "problem_notes": [],
+  "see_also": [
+    "environmentEnabled",
+    "fadeEnvironment",
+    "environmentVolume",
+    "initAmbientLife",
+    "sideAmbientLife",
+    "getAllEnvSoundControllers",
+    "getEnvSoundController",
+    "setSoundEffect",
+    "Arma",
+    "3:",
+    "Animals:",
+    "Ambient",
+    "System"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enable"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[false]] to disable ambient life and ambient sounds, [[true]] to re-enable it",
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "ambientLife",
+          "ambientSound",
+          "windyCoef"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "enable/disable ambient life (bees, rabbits, birds, snakes, fish)",
+              "name": "ambientLife",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "enable/disable ambient sounds (cicadas, owls, etc)",
+              "name": "ambientSound",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 1) howling wind at heights, range 0..1",
+              "name": "windyCoef",
+              "since": {
+                "arma3": "2.12"
+              },
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

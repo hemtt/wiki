@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the orientation of the given camera in the direction of the given vector. Needs [[camCommit]]. Since {{GVI|arma3|0.50}}, only the second syntax with a [[Vector3D]] is available.",
+  "effect_loc": "Local",
+  "examples": [
+    "Since {{arma3}}:\n<sqf>\nprivate _pos1 = player modelToWorld [0, 5, 5];\nprivate _pos2 = player modelToWorld [0, 50, 50];\n\nprivate _cam = \"camera\" camCreate _pos1;\n_cam cameraEffect [\"INTERNAL\", \"BACK\"];\n\n_cam camSetPos _pos2;\n_cam camSetDir (_pos2 vectorFromTo _pos1);\n_cam camCommit 5;\nwaitUntil { camCommitted _cam };\n\n_cam camSetPos _pos1;\n_cam camCommit 5;\n</sqf>",
+    "Before {{arma3}}:\n<sqf>\nprivate _pos1 = player modelToWorld [0, 5, 5];\nprivate _pos2 = player modelToWorld [0, 50, 50];\n\nprivate _cam = \"camera\" camCreate _pos1;\n_cam cameraEffect [\"INTERNAL\", \"BACK\"];\n\n_cam camSetPos _pos2;\n_cam camSetDir 180;\n_cam camCommit 5;\nwaitUntil { camCommitted _cam };\n\n_cam camSetPos _pos1;\n_cam camCommit 5;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "camSetDir",
+  "name": "camSetDir",
+  "problem_notes": [],
+  "see_also": [
+    "direction",
+    "setDir",
+    "camSetTarget",
+    "getCameraViewDirection"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "azimuth"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "camera azimuth",
+          "name": "azimuth",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "direction"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "direction of camera. Must be a valid vector.",
+          "name": "direction",
+          "type": "Vector3d"
+        }
+      },
+      "since": {
+        "arma3": "0.50"
+      }
+    }
+  ]
+}

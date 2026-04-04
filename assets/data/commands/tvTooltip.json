@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Local",
+  "description": "Gets the tooltip text associated with the specified tree view path.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_text = tvTooltip [101, [0,2]];</sqf>",
+    "<sqf>_text = _treeCtrl tvTooltip [0,2];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvTooltip",
+  "name": "tvTooltip",
+  "problem_notes": [],
+  "see_also": [
+    "tvSetTooltip",
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "desc": "tooltip text",
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "IDC of the tree view control",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "tooltip text",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

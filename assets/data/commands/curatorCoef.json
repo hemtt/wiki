@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current coeficient setting.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorModule curatorCoef \"Place\";</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "curatorCoef",
+  "name": "curatorCoef",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "action"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "action",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

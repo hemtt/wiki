@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Global",
+  "description": "Unassigns existing item and tries to put it into inventory. If there is no space in inventory the item simply disappears. See also [[unlinkItem]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n_bluforUnit unassignItem \"NVGoggles\";\n_bluforUnit removeItem \"NVGoggles\";\n_opforUnit unassignItem \"NVGoggles_OPFOR\";\n_opforUnit removeItem \"NVGoggles_OPFOR\";\n_independentUnit unassignItem \"NVGoggles_INDEP\";\n_independentUnit removeItem \"NVGoggles_INDEP\";\n</sqf>",
+    "<sqf>\n{\n\t_x unassignItem hmd _x; // unassign (not remove) NVGs from all units\n} forEach allUnits;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "unassignItem",
+  "name": "unassignItem",
+  "problem_notes": [],
+  "see_also": [
+    "assignItem",
+    "addItem",
+    "removeItem",
+    "linkItem",
+    "unlinkItem",
+    "assignedItems",
+    "removeAllAssignedItems"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

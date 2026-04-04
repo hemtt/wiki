@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns current aperture parameters.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _apertureParams = apertureParams;</sqf>"
+  ],
+  "groups": [
+    "Camera Control",
+    "Lights"
+  ],
+  "id": "apertureParams",
+  "name": "apertureParams",
+  "problem_notes": [],
+  "see_also": [
+    "setApertureNew",
+    "setAperture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "current aperture",
+              "name": "aperture",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "whether aperture was forced by [[setAperture]]",
+              "name": "isForced",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "engine-estimated scene aperture",
+              "name": "estimatedAperture",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "engine-estimated luminance",
+              "name": "estimatedLuminance",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "minimal custom aperture, see [[setApertureNew]]",
+              "name": "minCustom",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "standard custom aperture, see [[setApertureNew]]",
+              "name": "stdCustom",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "maximal custom aperture, see [[setApertureNew]]",
+              "name": "maxCustom",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "custom luminance, see [[setApertureNew]]",
+              "name": "customLuminance",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "whether custom values were forced",
+              "name": "isCustomForced",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "blinding intensity of the light",
+              "name": "blinding",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

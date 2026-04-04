@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Clean up the content of radio protocol history.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nfor \"_i\" from 3 to 1 step -1 do\n{\n\tsystemChat format [\"The chat history will disappear in %1\", _i];\n\tsleep 1;\n};\n\nclearRadio;\t\t\t// removes previous messages\nenableRadio false;\t// disables the chat\n</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "clearRadio",
+  "name": "clearRadio",
+  "problem_notes": [],
+  "see_also": [
+    "enableRadio"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

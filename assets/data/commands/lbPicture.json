@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the picture name of the item with the given index of the listbox or combobox with id idc of the topmost user [[dialog]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_picture = lbPicture [101, 0];</sqf>",
+    "<sqf>_picture = _control lbPicture 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "id": "lbPicture",
+  "name": "lbPicture",
+  "problem_notes": [],
+  "see_also": [
+    "lbSetPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "idc of control",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

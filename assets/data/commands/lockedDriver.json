@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check whether driver position of the vehicle turret is locked.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_driverLocked = lockedDriver vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "lockedDriver",
+  "name": "lockedDriver",
+  "problem_notes": [],
+  "see_also": [
+    "vehicle",
+    "driver"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

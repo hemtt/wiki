@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if given soldier's weapon is lowered. {{Feature | important | This command will '''always''' return [[false]] if player is sprinting, even without a weapon. Alternatively, the weapon raised state could be obtained via [[animationState]] command {{hl|...slow...}} vs {{hl|...sras...}}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>isWeaponLowered = weaponLowered player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Weapons"
+  ],
+  "id": "weaponLowered",
+  "name": "weaponLowered",
+  "problem_notes": [],
+  "see_also": [
+    "stance",
+    "unitPos",
+    "animationState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

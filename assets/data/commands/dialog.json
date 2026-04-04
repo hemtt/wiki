@@ -8,6 +8,7 @@
   "groups": [
     "GUI Control"
   ],
+  "id": "dialog",
   "name": "dialog",
   "problem_notes": [],
   "see_also": [

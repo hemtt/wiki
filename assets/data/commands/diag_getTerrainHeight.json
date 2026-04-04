@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns terrain height at the specified location.\n{{Feature|informative|Unlike [[getTerrainHeightASL]] which  returns the exact position's height, this commands returns the apex of the terrain polygon.}}\n{{Feature|obsolete|This command is subject to be removed and replaced with: [[getTerrainHeight]]|arma3|2.10}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _h = diag_getTerrainHeight position player;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_getTerrainHeight",
+  "name": "diag_getTerrainHeight",
+  "problem_notes": [],
+  "see_also": [
+    "diag_setTerrainHeight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "positionWorld"
+      },
+      "ret": {
+        "desc": "terrain height",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "position in world coordinates either in [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]",
+          "name": "positionWorld",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

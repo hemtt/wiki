@@ -1,0 +1,24 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Resets the animations system cache, so that animation makers can test their animations without restarting the game. A '''mission restart''' is required for the changes to be applied.",
+  "effect_loc": "Unspecified",
+  "examples": [],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_resetAnims",
+  "name": "diag_resetAnims",
+  "problem_notes": [],
+  "see_also": [
+    "diag_resetShapes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

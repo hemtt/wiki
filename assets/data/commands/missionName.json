@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return currently loaded mission file (path to mission.pbo, relative to game exe).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"You are playing mission \"\"%1\"\"\", missionName];</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "id": "missionName",
+  "name": "missionName",
+  "problem_notes": [],
+  "see_also": [
+    "missionNameSource",
+    "worldName",
+    "briefingName",
+    "serverName",
+    "worldSize"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

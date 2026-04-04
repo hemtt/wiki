@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes given weapon item, including magazine, from the [[primaryWeapon]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removePrimaryWeaponItem \"acc_flashlight\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "removePrimaryWeaponItem",
+  "name": "removePrimaryWeaponItem",
+  "problem_notes": [],
+  "see_also": [
+    "addPrimaryWeaponItem",
+    "removeAllPrimaryWeaponItems",
+    "removeSecondaryWeaponItem",
+    "removeHandgunItem",
+    "removeBinocularItem"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

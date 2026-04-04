@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns mission end type and how it was ended or an empty array [] is mission was not ended.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _endInfo = missionEnd;</sqf>",
+    "<sqf>missionEnd params [\"_endType\", \"_failMission\", \"_isFailed\"];</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "id": "missionEnd",
+  "name": "missionEnd",
+  "problem_notes": [],
+  "see_also": [
+    "endMission",
+    "failMission",
+    "forceEnd"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "the ending that was passed to [[failMission]] or [[endMission]]",
+              "name": "endType",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "[[true]] if the mission ended via [[failMission]], [[false]] if via [[endMission]]",
+              "name": "failMission",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "engine idea of how mission ended. For example if mission ended via [[failMission]] but the type of ending was not \"Killed\", ''isFailed'' is [[false]]",
+              "name": "isFailed",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

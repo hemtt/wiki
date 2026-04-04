@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets text color of given control. As of Arma 3 v1.40 this command can also be used to change fill-color of a [[CT_PROGRESS]] control.\n\n{{Feature|informative|Also try [[ctrlSetForegroundColor]], if this command doesn't have the desired effect.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetTextColor [1, 0, 0, 1];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlSetTextColor",
+  "name": "ctrlSetTextColor",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetForegroundColor",
+    "ctrlTextColor",
+    "ctrlSetText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "color"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "color",
+          "type": "ArrayColor"
+        }
+      }
+    }
+  ]
+}

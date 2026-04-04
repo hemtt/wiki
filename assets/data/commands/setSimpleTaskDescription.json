@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attach descriptions to the simple task.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myTask setSimpleTaskDescription [\"Today you have to kill Spongebob\", \"Kill Spongebob\", \"There he is!\"];</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "setSimpleTaskDescription",
+  "name": "setSimpleTaskDescription",
+  "problem_notes": [],
+  "see_also": [
+    "taskDescription",
+    "Tasks",
+    "createSimpleTask",
+    "removeSimpleTask",
+    "setSimpleTaskDestination",
+    "setTaskState",
+    "setTaskResult",
+    "taskState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "task",
+          [
+            "description",
+            "descriptionShort",
+            "descriptionHUD"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "task description",
+              "name": "description",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "task title",
+              "name": "descriptionShort",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "task waypoint description",
+              "name": "descriptionHUD",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

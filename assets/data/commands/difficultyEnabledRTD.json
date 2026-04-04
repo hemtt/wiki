@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if Advanced Flight Model is enabled.\nForcing of rotorlib simulation could be done with mission param [[Description.ext#forceRotorLibSimulation|forceRotorLibSimulation]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_rtdOn = difficultyEnabledRTD;</sqf>"
+  ],
+  "groups": [
+    "RTD",
+    "Difficulty"
+  ],
+  "id": "difficultyEnabledRTD",
+  "name": "difficultyEnabledRTD",
+  "problem_notes": [],
+  "see_also": [
+    "difficultyEnabled",
+    "isObjectRTD",
+    "Description.ext#forceRotorLibSimulation|forceRotorLibSimulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

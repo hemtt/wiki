@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[a or b|a || b]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Returns [[true]] if one or both conditions are [[true]]. In case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used. That means that if left operand is [[true]], evaluation of the right side is skipped completely.",
   "effect_loc": "Unspecified",
@@ -10,6 +13,7 @@
     "Math",
     "Variables"
   ],
+  "id": "or",
   "name": "or",
   "problem_notes": [],
   "see_also": [

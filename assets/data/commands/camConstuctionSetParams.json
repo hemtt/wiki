@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets construction camera parameters. To work with \"camconstruct\" object.\n{{Feature|important|Beware: {{sic|camCon'''stu'''ctionSetParams|camConstRuctionSetParams}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_camera camConstuctionSetParams [getPos player, 50, 20];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "camConstuctionSetParams",
+  "name": "camConstuctionSetParams",
+  "problem_notes": [],
+  "see_also": [
+    "camCreate",
+    "cameraEffect"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          [
+            "position",
+            "radius",
+            "maxAboveLand"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          },
+          {
+            "Item": {
+              "name": "radius",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "maxAboveLand",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

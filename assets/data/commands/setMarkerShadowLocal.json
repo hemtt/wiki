@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the shadow property of given marker.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_myMarker setMarkerShadowLocal true; // enable shadow</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerShadowLocal",
+  "name": "setMarkerShadowLocal",
+  "problem_notes": [
+    "[[setMarkerType]] will reset the shadow value to the one defined in marker type."
+  ],
+  "see_also": [
+    "markerShadow",
+    "setMarkerShadow"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "marker",
+          "shadowState"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the marker",
+          "name": "marker",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to enable the shadow, [[false]] to disable it",
+          "name": "shadowState",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

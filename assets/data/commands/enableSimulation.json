@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Global",
+  "description": "Enables / disables simulation for the given entity, e.g its animation and physics; it will still be able to take damage and report enemies.\nThis command will affect entity simulation only [[local|locally]].\nFor a global and JIP enabled alternative, see [[enableSimulationGlobal]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player enableSimulation false;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "enableSimulation",
+  "name": "enableSimulation",
+  "problem_notes": [],
+  "see_also": [
+    "enableSimulationGlobal",
+    "simulationEnabled",
+    "enableDynamicSimulationSystem",
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

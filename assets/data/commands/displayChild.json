@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns child display of the given display.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_display = displayChild findDisplay 313; // display #46</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "displayChild",
+  "name": "displayChild",
+  "problem_notes": [],
+  "see_also": [
+    "displayParent",
+    "findDisplay",
+    "displayCtrl",
+    "createDisplay",
+    "createDialog",
+    "dialog",
+    "displayNull",
+    "ctrlCreate",
+    "controlNull",
+    "ctrlParent",
+    "ctrlParentControlsGroup",
+    "focusedCtrl"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "display"
+      },
+      "ret": {
+        "type": "Display"
+      },
+      "right": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      }
+    }
+  ]
+}

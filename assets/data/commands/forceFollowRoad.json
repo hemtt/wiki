@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Forces the vehicle to stay on road.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>car forceFollowRoad true;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "forceFollowRoad",
+  "name": "forceFollowRoad",
+  "problem_notes": [],
+  "see_also": [
+    "setConvoySeparation",
+    "limitSpeed",
+    "setDriveOnPath",
+    "useAISteeringComponent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "true: Force on road, false: default behaviour",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

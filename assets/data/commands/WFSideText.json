@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the [[localize|unlocalized]] text value of a side or an object's/group's side.\n\n{{{!}} class=\"wikitable\"\n! Side\n{{!}} [[east]]&nbsp;/&nbsp;[[opfor]]\n{{!}} [[west]]&nbsp;/&nbsp;[[blufor]]\n{{!}} [[resistance]]&nbsp;/&nbsp;[[independent]]\n{{!}} [[civilian]]\n{{!}} [[sideUnknown]]\n{{!}} [[sideEnemy]]\n{{!}} [[sideFriendly]]\n{{!}} [[sideLogic]]\n{{!}} [[sideEmpty]]\n{{!}} [[sideAmbientLife]]\n{{!}}- style=\"text-align: center\"\n! Result\n{{!}} \"East\"\n{{!}} \"West\"\n{{!}} \"Resistance\"\n{{!}} \"Civilian\"\n{{!}} colspan=\"6\" {{!}} \"Unknown\"\n{{!}}}\n\n{{Feature|informative|''WF'' stands for '''Warfare''', an [[Warfare 1 - Editing Guide|{{arma1}}]]/[[Warfare 2 Manual|{{arma2}}]] official game mode.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>WFSideText player;</sqf>",
+    "<sqf>WFSideText group player;</sqf>",
+    "<sqf>WFSideText west;</sqf>"
+  ],
+  "groups": [
+    "Sides",
+    "Localization"
+  ],
+  "id": "WFSideText",
+  "name": "WFSideText",
+  "problem_notes": [],
+  "see_also": [
+    "side",
+    "localize",
+    "isLocalized"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "value"
+      },
+      "ret": {
+        "desc": "unlocalized side text value",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Side"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

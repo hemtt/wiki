@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns amount of remaining oxygen.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_oxygen = getOxygenRemaining player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getOxygenRemaining",
+  "name": "getOxygenRemaining",
+  "problem_notes": [],
+  "see_also": [
+    "setOxygenRemaining"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

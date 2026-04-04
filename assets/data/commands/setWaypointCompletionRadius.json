@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "The completion radius allows units to call the waypoint completed once they are inside of the given circle. If the given radius is less than unit’s or vehicle’s configured 'precision' then the latter is used. For example tank precision is 10m, if the given radius is 5m, the final radius will be 10m. For units in [[player]]’s group there is an additional multiplier x5 to the configured precision. Units that are [[fleeing]] and are not in [[player]]'s [[Group]] will ignore the completion radius and would not be able to complete by proximity until they stop fleeing.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[grp, 2] setWaypointCompletionRadius 30;</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "setWaypointCompletionRadius",
+  "name": "setWaypointCompletionRadius",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "radius"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "radius",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

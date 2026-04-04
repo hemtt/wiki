@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Reads and processes the content of the specified file. Preprocessor is C-like, supports comments using {{hl|//}} or {{hl|/*}} and {{hl|*/}} and [[PreProcessor Commands]].\nDue to the hard-drive access this command executes and the lack of caching this command should not be used in time-critical script loops.\n{{Feature|warning|If the file you are loading is not prepared using UTF-8 encoding and contains some characters [[toArray | with codes]] > 127, they might convert incorrectly.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_content = preprocessFile \"myFunction.sqf\";</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "preprocessFile",
+  "name": "preprocessFile",
+  "problem_notes": [],
+  "see_also": [
+    "fileExists",
+    "preprocessFileLineNumbers",
+    "loadFile",
+    "Function",
+    "SQF",
+    "Syntax",
+    "call",
+    "spawn",
+    "execVM",
+    "PreProcessor",
+    "Commands"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "fileName"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "path to the file and name of the file",
+          "name": "fileName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

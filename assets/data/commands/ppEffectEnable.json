@@ -1,0 +1,107 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable / disable [[Post Process Effects]]\n{{Feature | important | If effect fails to get enabled (can check it with [[ppEffectEnabled]]) try adding a little [[sleep]] in front of it. }}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"colorCorrections\" ppEffectEnable true;</sqf>",
+    "<sqf>_hndl ppEffectEnable true;</sqf>",
+    "<sqf>[_hndl1, _hndl2] ppEffectEnable true;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "ppEffectEnable",
+  "name": "ppEffectEnable",
+  "problem_notes": [],
+  "see_also": [
+    "Post",
+    "Process",
+    "Effects",
+    "ppEffectForceInNVG",
+    "ppEffectDestroy",
+    "ppEffectCreate",
+    "ppEffectEnabled",
+    "ppEffectCommit",
+    "ppEffectCommitted",
+    "ppEffectAdjust"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "effect",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "name of the effect",
+          "name": "effect",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "effect",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "handle of the effect",
+          "name": "effect",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "effectArray",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "array of effect handles",
+          "name": "effectArray",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

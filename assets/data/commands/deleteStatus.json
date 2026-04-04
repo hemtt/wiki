@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Deletes a status created with [[saveStatus]] from the campaign's progress file.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_deleted = deleteStatus \"playerStatus\";</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "deleteStatus",
+  "name": "deleteStatus",
+  "problem_notes": [],
+  "see_also": [
+    "saveStatus",
+    "deleteIdentity",
+    "saveIdentity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "statusName"
+      },
+      "ret": {
+        "desc": "[[true]] if the status was deleted successfully, [[false]] if not",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the saved status",
+          "name": "statusName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

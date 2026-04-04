@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets group speed mode. If unit is passed as param, unit's group is used. Mode may be one of: \n* '''\"UNCHANGED\"''' (unchanged)\n* '''\"LIMITED\"''' (half speed)\n* '''\"NORMAL\"''' (full speed, maintain formation)\n* '''\"FULL\"''' (do not wait for any other units in formation)",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_groupOne setSpeedMode \"LIMITED\";</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "setSpeedMode",
+  "name": "setSpeedMode",
+  "problem_notes": [],
+  "see_also": [
+    "speedMode]],",
+    "getSpeed]],",
+    "forceSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "groupName",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "groupName",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

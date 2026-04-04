@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Global",
+  "description": "Enables or disables transport NV (Night Vision). To disable TI (Thermal Imaging) use [[disableTIEquipment]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>myTank disableNVGEquipment true;</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "disableNVGEquipment",
+  "name": "disableNVGEquipment",
+  "problem_notes": [],
+  "see_also": [
+    "equipmentDisabled",
+    "disableTIEquipment"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

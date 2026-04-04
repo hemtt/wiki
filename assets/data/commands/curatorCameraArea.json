@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all curator camera areas.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_camArea = curatorCameraArea myCurator; // [[8052,[4027.36,4024.89,0],250]]</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "curatorCameraArea",
+  "name": "curatorCameraArea",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorCameraArea",
+    "removeCuratorCameraArea",
+    "removeAllCuratorCameraAreas"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curatorObj"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "cameraAreaID",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "position",
+              "since": null,
+              "type": "Position"
+            },
+            {
+              "desc": null,
+              "name": "radius",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@
   "groups": [
     "Unit Inventory"
   ],
+  "id": "items",
   "name": "items",
   "problem_notes": [],
   "see_also": [

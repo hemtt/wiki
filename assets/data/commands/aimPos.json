@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the position of the object other units can aim to.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_aimPos = aimPos player;</sqf>",
+    "'''''aimPosVisual''''' equivalent:<sqf>private _aimPosVisual = AGLToASL unitAimPositionVisual player;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "aimPos",
+  "name": "aimPos",
+  "problem_notes": [],
+  "see_also": [
+    "eyePos",
+    "getPosASL",
+    "weaponDirection",
+    "unitAimPosition",
+    "unitAimPositionVisual"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Position3dASL"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

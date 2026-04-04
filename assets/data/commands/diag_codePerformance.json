@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attempts to run given code with given arguments given number of cycles in unscheduled environment and returns average time it took to run the code as well as actual number of executions performed.\nThe command will return as soon as possible if the tested code is slow and the duration of the command exceeds 1 second.\nEngine alternative to [[BIS_fnc_codePerformance]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _result = diag_codePerformance [{ private _a = 123; }, 0, 10000];</sqf>"
+  ],
+  "groups": [
+    "Diagnostic",
+    "Performance Profiling"
+  ],
+  "id": "diag_codePerformance",
+  "name": "diag_codePerformance",
+  "problem_notes": [],
+  "see_also": [
+    "diag_log",
+    "BIS_fnc_codePerformance",
+    "Code",
+    "Optimisation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "code",
+          "arguments",
+          "cycles"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "average duration of 1 execution in milliseconds",
+              "name": "duration",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "actual number of cycles executed",
+              "name": "cycles",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "code to compare performance",
+              "name": "code",
+              "type": "Code"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[nil]]) arguments to pass to the code in _this variable. Default: [[nil]]",
+              "name": "arguments",
+              "type": "Anything"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 100000) wanted number of cycles to run the given code. > 1000 is recommended",
+              "name": "cycles",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable Map (default [[true]]).\n{{Feature|informative|\nIn {{arma2}} and later this command no longer works, the map now being an inventory item (\"ItemMap\" class name).\n<sqf>\nunitName removeWeapon \"ItemMap\";\nunitName addWeapon \"ItemMap\";\n</sqf>\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>showMap false;</sqf>"
+  ],
+  "groups": [
+    "Map"
+  ],
+  "id": "showMap",
+  "name": "showMap",
+  "problem_notes": [],
+  "see_also": [
+    "showCompass",
+    "showGPS",
+    "showRadio",
+    "showWatch",
+    "showPad",
+    "shownMap"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "show"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "show",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

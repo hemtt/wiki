@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Allows curator placing and working with modules outside of edit areas.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorModule allowCuratorLogicIgnoreAreas true;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "allowCuratorLogicIgnoreAreas",
+  "name": "allowCuratorLogicIgnoreAreas",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorEditingArea",
+    "removeCuratorEditingArea",
+    "removeAllCuratorEditingAreas",
+    "curatorEditingArea"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "allow"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "allow",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

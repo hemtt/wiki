@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the value set with [[setTimeMultiplier]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_multiplier = timeMultiplier;</sqf>"
+  ],
+  "groups": [
+    "Time",
+    "Mission Information",
+    "Environment"
+  ],
+  "id": "timeMultiplier",
+  "name": "timeMultiplier",
+  "problem_notes": [],
+  "see_also": [
+    "setTimeMultiplier",
+    "skipTime",
+    "setAccTime",
+    "accTime",
+    "time",
+    "serverTime",
+    "date",
+    "dayTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "current time multiplier",
+        "type": "Number"
+      }
+    }
+  ]
+}

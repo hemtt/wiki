@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[enableSentences]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (sentencesEnabled) then\n{\n\thint \"sentences are enabled; changing that now\";\n\tenableSentences false;\n};\n</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "sentencesEnabled",
+  "name": "sentencesEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "enableSentences"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "returns [[true]] if sentences are enabled",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns max load value of given uniform, vest or backpack container. For other types of containers, use [[maxLoad]] command",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _maxLoadUniform\t\t= getContainerMaxLoad uniform player;\nprivate _maxLoadVest\t\t= getContainerMaxLoad vest player;\nprivate _maxLoadBackpack\t= getContainerMaxLoad backpack player;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "getContainerMaxLoad",
+  "name": "getContainerMaxLoad",
+  "problem_notes": [],
+  "see_also": [
+    "load",
+    "loadAbs",
+    "loadUniform",
+    "loadBackpack",
+    "loadVest",
+    "getMass",
+    "weightRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "containerClass"
+      },
+      "ret": {
+        "desc": "load value, -1 if not available.",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "uniform, vest or backpack class",
+          "name": "containerClass",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

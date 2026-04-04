@@ -9,6 +9,7 @@
   "groups": [
     "Arrays"
   ],
+  "id": "flatten",
   "name": "flatten",
   "problem_notes": [],
   "see_also": [

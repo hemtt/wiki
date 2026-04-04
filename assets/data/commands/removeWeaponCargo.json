@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove weapon from the vehicle cargo space.\n{{Feature|warning|This is unofficial documentation. All Information here is as it exists in the Engine. It might not reflect the reality.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>rearmTruckOne removeWeaponCargo [19, 1];</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "removeWeaponCargo",
+  "name": "removeWeaponCargo",
+  "problem_notes": [],
+  "see_also": [
+    "removeWeaponAttachmentCargo",
+    "weaponAccessoriesCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "weaponID",
+            "creatorID"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle or ammo box",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "weaponID",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "creatorID",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

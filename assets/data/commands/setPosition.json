@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the position of a location.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myLocation setPosition getPosATL player;</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "id": "setPosition",
+  "name": "setPosition",
+  "problem_notes": [],
+  "see_also": [
+    "locationPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "location",
+          "pos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "pos",
+          "type": "Position"
+        }
+      }
+    }
+  ]
+}

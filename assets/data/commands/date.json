@@ -9,6 +9,7 @@
   "groups": [
     "Environment"
   ],
+  "id": "date",
   "name": "date",
   "problem_notes": [],
   "see_also": [

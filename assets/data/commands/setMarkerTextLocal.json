@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the text label of an existing marker.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\"Marker1\" setMarkerTextLocal \"You are here.\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerTextLocal",
+  "name": "setMarkerTextLocal",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerBrush",
+    "setMarkerColor",
+    "setMarkerDir",
+    "setMarkerPos",
+    "setMarkerShape",
+    "setMarkerSize",
+    "setMarkerType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "text"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

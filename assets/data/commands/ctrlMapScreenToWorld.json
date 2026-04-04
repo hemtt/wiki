@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts map screen coordinates into world coordinates. Unlike [[posScreenToWorld]], this command returns world position is format [x, y], otherwise it is identical to [[posScreenToWorld]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_worldCoord = _control ctrlMapScreenToWorld _ScreenCoord;</sqf>",
+    "<sqf>_worldCoord = _control ctrlMapScreenToWorld [_x, _y];</sqf>",
+    "<sqf>_worldCoord = findDisplay 12 displayCtrl 51 ctrlMapScreenToWorld [0.5, 0.5];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "ctrlMapScreenToWorld",
+  "name": "ctrlMapScreenToWorld",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlMapWorldToScreen",
+    "posScreenToWorld",
+    "posWorldToScreen",
+    "findDisplay",
+    "displayCtrl"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "x",
+            "y"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "map control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "world coordinates",
+        "type": "Position2d"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "screen X",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "screen Y",
+              "name": "y",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

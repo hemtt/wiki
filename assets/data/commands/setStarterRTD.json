@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggle the starter for the given helicopter engine(s) on or off. \n* engine index 0: engine #1\n* engine index 1: engine #2\n* engine index 2: engine #3\n* engine index -1: all engines",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setStarterRTD [true, -1];</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "setStarterRTD",
+  "name": "setStarterRTD",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "helicopterRTD",
+          [
+            "enable",
+            "engineIndex"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "on or off",
+              "name": "enable",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "engine index",
+              "name": "engineIndex",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

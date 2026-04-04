@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Save variable value into the campaign space.\nThis variable is available to all following missions in the campaign.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>saveVar \"varOne\";</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "saveVar",
+  "name": "saveVar",
+  "problem_notes": [],
+  "see_also": [
+    "isNil",
+    "missionNamespace",
+    "saveStatus"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "varname"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "varname",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

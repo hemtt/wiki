@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the angular velocity of the object in model space as a 3D vector. The units are in Rad/s and rotations are clockwise.\n{{Feature|important|Angular velocity is limited to a range of +-1000 Rad/s.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>myHeli setAngularVelocityModelSpace [0,0,1]; // will cause the helicopter to spin around its main rotor shaft</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setAngularVelocityModelSpace",
+  "name": "setAngularVelocityModelSpace",
+  "problem_notes": [],
+  "see_also": [
+    "setVelocity",
+    "setAngularVelocity",
+    "angularVelocity",
+    "angularVelocityModelSpace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "vector"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "angular velocity of the object in model space",
+          "name": "vector",
+          "type": "Vector3d"
+        }
+      }
+    }
+  ]
+}

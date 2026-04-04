@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Global",
+  "description": "Add magazines to the cargo space of vehicles, which can be taken out by infantry units. Once the magazine cargo space is filled up, any further addMagazineCargo commands are ignored.\n{{Feature|arma3|In {{arma3}}, arguments for this command must be local ({{Icon|localArgument|32}}). For the global variant see [[addMagazineCargoGlobal]].}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_truck addMagazineCargo [\"M16\", 5];</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "addMagazineCargo",
+  "name": "addMagazineCargo",
+  "problem_notes": [],
+  "see_also": [
+    "addMagazineCargoGlobal",
+    "addMagazine",
+    "addMagazineGlobal",
+    "addMagazines",
+    "addMagazinePool",
+    "addMagazineTurret",
+    "clearMagazineCargo",
+    "addWeaponCargo",
+    "clearWeaponCargo",
+    "getMagazineCargo",
+    "addItemCargo",
+    "addItemCargoGlobal",
+    "addMagazineAmmoCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicleName",
+          [
+            "magazineName",
+            "count"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle to add the magazines to",
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "magazine name. See [[:Category:Weapons]] for reference about possible values.",
+              "name": "magazineName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of magazines to add. {{GVI|arma3|2.14|size= 0.75}} negative count will remove magazines.",
+              "name": "count",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

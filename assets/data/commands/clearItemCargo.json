@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all items from ammo box (or any general weapon holder container).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>clearItemCargo myBox;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "clearItemCargo",
+  "name": "clearItemCargo",
+  "problem_notes": [],
+  "see_also": [
+    "clearItemCargoGlobal",
+    "addItemCargo",
+    "clearMagazineCargo",
+    "clearMagazineCargoGlobal",
+    "clearWeaponCargo",
+    "clearWeaponCargoGlobal",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "box"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "box",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

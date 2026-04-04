@@ -1,0 +1,80 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns array with all [[Diary]] subjects available to the given person. See [[Diary]] for the explanation on the available subjects and their structure.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>allDiarySubjects player;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "allDiarySubjects",
+  "name": "allDiarySubjects",
+  "problem_notes": [],
+  "see_also": [
+    "createDiarySubject",
+    "removeDiarySubject",
+    "diarySubjectExists",
+    "selectDiarySubject",
+    "setDiarySubjectPicture",
+    "allDiaryRecords",
+    "Diary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "internal subject reference",
+              "name": "name",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "visible name",
+              "name": "displayName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "subject icon",
+              "name": "picture",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "number of records in this subject",
+              "name": "countRecords",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "whether or not the records could be added",
+              "name": "isReadOnly",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if subject is currently selected",
+              "name": "isSelected",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "unit",
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

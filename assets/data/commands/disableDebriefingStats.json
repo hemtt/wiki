@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Disable debriefing score table.\n{{Feature|warning|This command is broken.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>disableDebriefingStats;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Briefing"
+  ],
+  "id": "disableDebriefingStats",
+  "name": "disableDebriefingStats",
+  "problem_notes": [],
+  "see_also": [
+    "enableDebriefingStats"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

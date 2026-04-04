@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets simul cloud cover. This command does not affect overcast value.<br /><br />\n\nThis command was not implemented up until {{GVI|arma3|2.18}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>simulSetHumidity 1;</sqf>",
+    "When combined with [[setOvercast]] 1 this command will also start random strength rain.<sqf>\nskipTime -24;\n86400 setOvercast 1;\nskipTime 24;\nsimulSetHumidity 1;\n</sqf>Creates rainy looking weather, followed by thunder in about 10 seconds and rain in about 20."
+  ],
+  "groups": [
+    "Environment",
+    "Broken Commands"
+  ],
+  "id": "simulSetHumidity",
+  "name": "simulSetHumidity",
+  "problem_notes": [],
+  "see_also": [
+    "overcast",
+    "setOvercast"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "humidity"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "0 (min): clear sky, 1 (max): heavy cloud cover",
+          "name": "humidity",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

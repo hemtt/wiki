@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Global",
+  "description": "Return current level of damage in range 0..1 for a specific Hit Point (specified by its config class).\nIf you need to get damage of a selection instead of hit point, use [[getHit]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player getHitPointDamage \"hitEngine\";</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getHitPointDamage",
+  "name": "getHitPointDamage",
+  "problem_notes": [],
+  "see_also": [
+    "setHitPointDamage",
+    "getAllHitPointsDamage",
+    "setHit",
+    "getHit",
+    "setDamage",
+    "damage",
+    "getHitIndex",
+    "setHitIndex"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "hitPointName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle to be queried",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "before {{GVI|arma3|1.94|size= 0.75}}, [[Nothing]] was returned when an invalid ''selection'' was provided (now returns {{hl|0}})",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the Hit Point class",
+          "name": "hitPointName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

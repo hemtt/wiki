@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns unique index of an [[Eden Entity]]. This number remains the same even after saving and loading the scenario. ´\n\n{{Feature|informative|Since {{GVI|arma3|2.22}} this command also returns the IDs of [[Eden Entity|Eden Entities]] of type Object, Trigger, Group and Logic during [[is3DENPreview|preview]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myID = get3DENEntityID player;</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENEntityID",
+  "name": "get3DENEntityID",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENEntity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "desc": "[[Eden ID]] If ID is not available, -1 is returned",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "entity",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenEntity"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenID"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "argument_loc": "Local",
+  "description": "Changes the mass of a PhysX object. When using the alternative syntax the mass change is gradual during the given time. A time of zero means immediate change.{{Feature | important | When main syntax is used on [[Multiplayer Scripting#Locality|local]] vehicle, the change is global. When alternative syntax is used with time transition on [[Multiplayer Scripting#Locality|local]] vehicle, the gradual mass change doesn't happen on remote clients, only final mass is applied after the given time. If you need gradual change on remote clients too, [[remoteExec | remote execute]] [[setMass]] globally. }}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>myObject setMass [10, 0.5];</sqf>",
+    "<sqf>myObject setMass 10;</sqf>"
+  ],
+  "groups": [
+    "PhysX"
+  ],
+  "id": "setMass",
+  "name": "setMass",
+  "problem_notes": [],
+  "see_also": [
+    "getMass",
+    "setCenterOfMass",
+    "getCenterOfMass"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "myObject",
+          "mass"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "myObject",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mass",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "myObject",
+          [
+            "mass",
+            "time"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "myObject",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "mass",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "time",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

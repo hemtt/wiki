@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Shifts an editor object to the end of the objects array. This means,that the object will be drawn last (after all other objects). \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "moveObjectToEnd",
+  "name": "moveObjectToEnd",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "object"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

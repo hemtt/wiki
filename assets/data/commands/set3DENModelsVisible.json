@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables or disables trigger area visibility.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>set3DENModelsVisible [true, true];</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "set3DENModelsVisible",
+  "name": "set3DENModelsVisible",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENLinesVisible",
+    "get3DENIconsVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "map",
+          "scene"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "map",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "name": "scene",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

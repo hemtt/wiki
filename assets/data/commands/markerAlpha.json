@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Gets the marker alpha. See [[setMarkerAlpha]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>AlphaMarker = markerAlpha \"myMarker\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "markerAlpha",
+  "name": "markerAlpha",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerAlpha",
+    "setMarkerAlphaLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

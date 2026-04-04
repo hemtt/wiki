@@ -12,6 +12,7 @@
   "groups": [
     "Sides"
   ],
+  "id": "side",
   "name": "side",
   "problem_notes": [],
   "see_also": [

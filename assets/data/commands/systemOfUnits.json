@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the currently selected system of units.\n* 0: Metric\n* 1: Mixed (ground vehicles use Metric / air vehicles use Imperial)\n* 2: Imperial",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_system = systemOfUnits;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "systemOfUnits",
+  "name": "systemOfUnits",
+  "problem_notes": [],
+  "see_also": [
+    "BIS_fnc_convertUnits",
+    "setSystemOfUnits"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns unit's backpack",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _myBackpack = unitBackpack player;</sqf>",
+    "<sqf>clearMagazineCargo unitBackpack player;</sqf>",
+    "<sqf>player action [\"gear\", unitBackpack player];</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "unitBackpack",
+  "name": "unitBackpack",
+  "problem_notes": [],
+  "see_also": [
+    "backpackContainer",
+    "firstBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

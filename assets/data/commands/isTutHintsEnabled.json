@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the status of TUTORIAL HINTS setting in UI (OPTIONS >> GAME >> GENERAL >> TUTORIAL HINTS).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str isTutHintsEnabled;</sqf>"
+  ],
+  "groups": [
+    "Difficulty"
+  ],
+  "id": "isTutHintsEnabled",
+  "name": "isTutHintsEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "isInstructorFigureEnabled",
+    "isStreamFriendlyUIEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

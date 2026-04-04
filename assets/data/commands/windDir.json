@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current wind azimuth.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (windDir < 45 || windDir > 315) then {\n\thint \"I feel a southern wind\"; // wind going from South to North\n};\n</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "windDir",
+  "name": "windDir",
+  "problem_notes": [],
+  "see_also": [
+    "wind",
+    "setWindDir",
+    "setWindStr",
+    "setWindForce"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "azimuth",
+        "type": "Number"
+      }
+    }
+  ]
+}

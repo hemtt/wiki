@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the conduction of the last camCommit call already finished.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "SQS:\n<sqs>\n; create a camera object\n_cam = \"camera\" camCreate [5600,4800,10]\n_cam camSetTarget player\n_cam cameraEffect [\"internal\", \"BACK\"]\n_cam camCommit 0\n\n; smoothly move the camera to its new position in 6 seconds\n_cam camSetPos [5680,4720,20]\n_cam camCommit 6\n@camCommitted _cam\n\n; proceed\n</sqs>",
+    "SQF:\n<sqf>\n_cam = \"camera\" camCreate [0, 0, 0];\n_cam camSetTarget player;\n_cam camSetRelPos [0, -5, 10];\n_cam cameraEffect [\"internal\", \"back\"];\n_cam camCommit 0;\n\nwaitUntil { camCommitted _cam };\n\n_cam camSetTarget player;\n_cam camSetRelPos [90, 25, 10];\n_cam cameraEffect [\"internal\", \"back\"];\n_cam camCommit 5;\n\nwaitUntil {camCommitted _cam};\n\n_cam camSetTarget player;\n_cam camSetRelPos [-90, -5, 10];\n_cam cameraEffect [\"internal\", \"back\"];\n_cam camCommit 5;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "camCommitted",
+  "name": "camCommitted",
+  "problem_notes": [],
+  "see_also": [
+    "camCommit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "camera"
+      },
+      "ret": {
+        "desc": "true if the last camCommit already finished, false if not",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

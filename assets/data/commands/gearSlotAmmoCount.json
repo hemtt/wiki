@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns ammo count of assigned magazine.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _ammoCount = gearSlotAmmoCount _control;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "GUI Control"
+  ],
+  "id": "gearSlotAmmoCount",
+  "name": "gearSlotAmmoCount",
+  "problem_notes": [],
+  "see_also": [
+    "gearSlotData",
+    "gearIDCAmmoCount"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "{{hl|CT_ITEMSLOT 103}}",
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

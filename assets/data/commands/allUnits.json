@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a list of all units, '''except agents, dead units or units waiting for respawn''', outside and inside vehicles that were created on the following sides [[east]], [[west]], [[independent]] and [[civilian]].\n{{Feature|arma3|To get all units of given side, use {{hl|[[units]] [[Side]]}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>{ _x setDamage 0.5; _x groupChat \"Braaains\"; } forEach allUnits;</sqf>",
+    "<sqf>allUnits apply { diag_log _x; };</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "allUnits",
+  "name": "allUnits",
+  "problem_notes": [],
+  "see_also": [
+    "allGroups",
+    "groups",
+    "units",
+    "vehicles",
+    "entities",
+    "agents",
+    "playableUnits",
+    "switchableUnits",
+    "allPlayers",
+    "allDead",
+    "allDeadMen",
+    "allUnitsUAV",
+    "allCurators",
+    "allObjects",
+    "allMissionObjects",
+    "allSimpleObjects",
+    "allMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

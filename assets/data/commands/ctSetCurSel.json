@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Local",
+  "description": "Selects the line with the given index. Will take only rows, but not headers into account. -1 deselects all. Returns Nothing.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_control ctSetCurSel 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "id": "ctSetCurSel",
+  "name": "ctSetCurSel",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

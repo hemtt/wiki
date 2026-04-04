@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Local",
+  "description": "Set amount of ammo resources in cargo space of a rearm vehicle. Ammo resource is used to resupply vehicles that take ammo. Soldiers use individual magazines instead.\n\nThe <u>actual</u> '''quantity''' to work with is determined by the model's class in [[CfgVehicles]]",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_ammoTruck1 setAmmoCargo 0.5;</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "setAmmoCargo",
+  "name": "setAmmoCargo",
+  "problem_notes": [],
+  "see_also": [
+    "getAmmoCargo",
+    "setFuelCargo",
+    "setRepairCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicleName",
+          "ammoCargo"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "ammoCargo",
+          "type": {
+            "NumberRange": [
+              0,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

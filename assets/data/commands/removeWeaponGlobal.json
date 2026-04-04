@@ -1,0 +1,93 @@
+{
+  "argument_loc": "Global",
+  "description": "Remove a weapon from a unit. An attempt to remove a weapon, which is not in unit's possession, is simply ignored.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n{\n\t_x removeWeaponGlobal \"Laserdesignator\";\n} forEach allUnits;\n</sqf>",
+    "<sqf>\n{\n\tif (typeOf _x == \"O_Heli_Attack_02_black_F\") then {\n\t\t_x removeWeaponGlobal \"rockets_Skyfire\";\n\t};\n} forEach vehicles;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "Vehicle Inventory"
+  ],
+  "id": "removeWeaponGlobal",
+  "name": "removeWeaponGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponGlobal",
+    "removeWeapon",
+    "removeMagazine",
+    "removeMagazineGlobal",
+    "removeAllWeapons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "weapon"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit or vehicle",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "weapon class name",
+          "name": "weapon",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "weapon",
+            "autoselect"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit or vehicle",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "weapon class name",
+              "name": "weapon",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to abort weapon autoselection when removing primary weapon.",
+              "name": "autoselect",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.20"
+      }
+    }
+  ]
+}

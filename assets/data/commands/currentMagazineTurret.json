@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the name of the type of the currently using magazine on specified turret. Use turret path [-1] for driver's turret. Note that a turret is not loaded until unit enters it, so this command will return \"\".",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_magazine = MBT_Kuma currentMagazineTurret [0];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "currentMagazineTurret",
+  "name": "currentMagazineTurret",
+  "problem_notes": [],
+  "see_also": [
+    "currentMagazineDetailTurret",
+    "currentWeaponTurret",
+    "addWeaponTurret",
+    "removeWeaponTurret",
+    "turretLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "turretPath"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "turretPath",
+          "type": "TurretPath"
+        }
+      }
+    }
+  ]
+}

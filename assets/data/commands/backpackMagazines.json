@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get array with all magazines from backpack of the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nbackpackMagazines player;\n// returns e.g\n/*\n[\n\t\"Titan AT Missile(1/1)[id/cr:16/0](2x)\"\n]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Containers",
+    "Unit Inventory"
+  ],
+  "id": "backpackMagazines",
+  "name": "backpackMagazines",
+  "problem_notes": [],
+  "see_also": [
+    "uniformMagazines",
+    "vestMagazines",
+    "soldierMagazines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

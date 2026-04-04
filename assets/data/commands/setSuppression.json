@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the given suppression value for the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>unit_1 setSuppression 1;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setSuppression",
+  "name": "setSuppression",
+  "problem_notes": [],
+  "see_also": [
+    "getSuppression",
+    "suppressFor"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": {
+            "NumberRange": [
+              0,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

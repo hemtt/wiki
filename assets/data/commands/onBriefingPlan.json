@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Select a sound declared in the [[Description.ext#Sound|Description.ext]] of the mission to be played the first time the [[Briefing.html#Plan|Plan tab]] is selected in the [[Briefing.html|briefing]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>onBriefingPlan \"PlanVoiceOver\";</sqf>"
+  ],
+  "groups": [
+    "Event Handlers",
+    "Sounds",
+    "Briefing"
+  ],
+  "id": "onBriefingPlan",
+  "name": "onBriefingPlan",
+  "problem_notes": [],
+  "see_also": [
+    "Description.ext#Sounds|CfgSounds"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "soundName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "soundName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

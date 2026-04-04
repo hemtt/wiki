@@ -1,0 +1,141 @@
+{
+  "argument_loc": "Global",
+  "description": "[[File:setUserActionText.jpg|right|350px]] Changes user added action (see [[addAction]]) menu item text. <br><br>",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\n_id = player addAction [\"Hello\", \"\"];\nplayer setUserActionText [_id, \"Good Bye\"];\n</sqf>",
+    "<sqf>\n_id = billboard addAction [\"Some Action\", {}];\nbillboard setUserActionText [\n\t_id, \n\t\"Some Action\", \n\t\"<t color='#ff0000'>Background-----------------</t><br>Multiline<br>Multiline<br>Multiline<br>. . .\", \n\t\"<t color='#00ff00'>-----------------Foreground</t>\"\n];\n</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "setUserActionText",
+  "name": "setUserActionText",
+  "problem_notes": [],
+  "see_also": [
+    "actionIDs",
+    "actionParams",
+    "addAction",
+    "inGameUISetEventHandler",
+    "showHUD",
+    "inputAction",
+    "removeAction",
+    "removeAllActions",
+    "action"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "actionIndex",
+            "textMenu",
+            "textWindowBackground",
+            "textWindowForeground"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object the action is added to",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "action id returned by [[addAction]]",
+              "name": "actionIndex",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "text title shown in scroll action menu",
+              "name": "textMenu",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "StructuredText"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default \"\") background text",
+              "name": "textWindowBackground",
+              "since": {
+                "arma3": "1.62"
+              },
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "StructuredText"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default \"\") foreground text",
+              "name": "textWindowForeground",
+              "since": {
+                "arma3": "1.62"
+              },
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "StructuredText"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

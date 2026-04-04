@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the level of the currently logged client.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (getCurrentPlayerLevel > 9) then\n{\n\thint \"Wow, you're good!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "getCurrentPlayerLevel",
+  "name": "getCurrentPlayerLevel",
+  "problem_notes": [],
+  "see_also": [
+    "getPlayerLevel",
+    "isPlayerSupporter"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "the current player's level, or -1 if servers are unreachable",
+        "type": "Number"
+      }
+    }
+  ]
+}

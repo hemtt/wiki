@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Unlocks the given achievement. The achievements are listed in CfgAchievements, however none of the currently listed achievements is used in Arma 3, hence the command always returns [[false]].<br><br>\n\n{{Feature|important|\nThis command is obsolete and was used in the experimental (unreleased) {{arma2}} Xbox 360 version as stated\n{{Link|https://forums.bohemia.net/forums/topic/187873-unlockachievment-command/?tab{{=}}comments#comment-2978436|here}}.\n}}\n{{Feature|arma3|To unlock a [[Arma 3: Stat Names|Steam Achievement]] for {{arma3}}, see [[setStatValue]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isUnlocked = unlockAchievement \"Hunter\";</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "System"
+  ],
+  "id": "unlockAchievement",
+  "name": "unlockAchievement",
+  "problem_notes": [],
+  "see_also": [
+    "setStatValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "desc": "[[true]] if achievement was unlocked",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "achievement name",
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

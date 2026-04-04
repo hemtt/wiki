@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the time since latest server (re)start in seconds.\n{{Feature|important|The time returned is different to the time returned by [[time]] and [[diag_tickTime]] commands on server.}}\n{{Feature|informative|\nKnown issues before {{GVI|arma3|1.86|size= 0.75}}:\nboth server and clients showed the same value when synced, but the only time it was not synced was on the server, right after server restart and only for the first 300 seconds. Client-side it was synced from the start.\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>hint format [\"Synced server time : %1\", serverTime];</sqf>"
+  ],
+  "groups": [
+    "Time",
+    "Mission Information",
+    "Multiplayer"
+  ],
+  "id": "serverTime",
+  "name": "serverTime",
+  "problem_notes": [],
+  "see_also": [
+    "time",
+    "diag_tickTime",
+    "date",
+    "missionStart",
+    "estimatedTimeLeft",
+    "estimatedEndServerTime",
+    "systemTime",
+    "systemTimeUTC"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects the given weapon on the specified turret. Use turret path [-1] for the driver's turret.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>MBT_Kuma selectWeaponTurret [\"LMG_coax\",[0]];</sqf>",
+    "<sqf>Kamysh selectWeaponTurret [\"missiles_titan\", [0], \"missiles_titan\", \"topdown\"];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "selectWeaponTurret",
+  "name": "selectWeaponTurret",
+  "problem_notes": [],
+  "see_also": [
+    "removeWeaponTurret",
+    "weaponState",
+    "turretLocal",
+    "addMagazineTurret",
+    "magazinesTurret",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "currentMagazineDetailTurret",
+    "currentMagazineTurret",
+    "currentWeaponTurret",
+    "addWeaponTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "weapon",
+            "turretPath",
+            "muzzle",
+            "firemode"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "weapon class name or (since {{GVI|arma3|1.64|size= 0.75}}) muzzle class name",
+              "name": "weapon",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) muzzle name",
+              "name": "muzzle",
+              "since": {
+                "arma3": "2.8"
+              },
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) firemode name",
+              "name": "firemode",
+              "since": {
+                "arma3": "2.8"
+              },
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

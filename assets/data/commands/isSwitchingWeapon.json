@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns wether or not the unit is in the process of switching weapon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>isSwitchingWeapon player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "isSwitchingWeapon",
+  "name": "isSwitchingWeapon",
+  "problem_notes": [],
+  "see_also": [
+    "primaryWeaponMagazine",
+    "primaryWeaponItems",
+    "addPrimaryWeaponItem",
+    "removePrimaryWeaponItem",
+    "removeAllPrimaryWeaponItems",
+    "secondaryWeapon",
+    "handgunWeapon",
+    "currentWeapon",
+    "weapons",
+    "primaryWeapon",
+    "setUnitLoadout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "[[true]] if the unit is switching weapon.",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

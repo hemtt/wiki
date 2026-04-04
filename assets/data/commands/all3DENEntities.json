@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of all currently placed [[Eden Entity|Eden Editor entities]].\n{{Feature|Eden Editor|This information is only available in [[:Category:Eden Editor|Eden Editor]]. If used during mission, it will return {{hl|[[],[],[],[],[],[],[],[-999]]}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>systemChat str all3DENEntities;</sqf>",
+    "<sqf>all3DENEntities params [\"_objects\", \"_groups\", \"_triggers\", \"_systems\", \"_waypoints\", \"_markers\", \"_layers\", \"_comments\"];</sqf>",
+    "<sqf>\n// select all Eden entities\nset3DENSelected all3DENEntities;\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "all3DENEntities",
+  "name": "all3DENEntities",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENMouseOver",
+    "delete3DENEntities",
+    "get3DENEntityID",
+    "get3DENSelected"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "ArrayEdenEntities"
+      }
+    }
+  ]
+}

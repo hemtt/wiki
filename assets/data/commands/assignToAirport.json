@@ -1,0 +1,83 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Assigns a plane to an airport ID or object.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>plane1 assignToAirport 0;</sqf>",
+    "<sqf>plane1 assignToAirport carrier1;</sqf>"
+  ],
+  "groups": [
+    "Roads and Airports"
+  ],
+  "id": "assignToAirport",
+  "name": "assignToAirport",
+  "problem_notes": [
+    "{{Feature|warning|This command is not implemented in '''{{arma1}}''', use [[landAt]] instead.}}"
+  ],
+  "see_also": [
+    "airportSide",
+    "setAirportSide",
+    "land",
+    "landAt",
+    "allAirports",
+    "Arma:",
+    "Airport",
+    "IDs"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "plane",
+          "id"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "plane",
+          "name": "plane",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "airport id",
+          "name": "id",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "plane",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "plane",
+          "name": "plane",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "airport object. For example an aircraft carrier, see [[Arma 3: Dynamic Airport Configuration]]",
+          "name": "target",
+          "type": "Object"
+        }
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether there is water at given position. In Arma 3, it also detects pond objects, but only if they are loaded in memory (normally only true if the objects are within the [[setObjectViewDistance|object view distance]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _result = surfaceIsWater [1000, 3000];</sqf>",
+    "<sqf>_isWater = surfaceIsWater position player;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "surfaceIsWater",
+  "name": "surfaceIsWater",
+  "problem_notes": [],
+  "see_also": [
+    "surfaceType",
+    "surfaceNormal",
+    "nearRoads",
+    "roadsConnectedTo",
+    "roadAt",
+    "isOnRoad"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "position"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "when using [[Position#Introduction|Position3D]] Z will be ignored",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

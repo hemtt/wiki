@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return a list of dead units including agents. Dead unit might be inside vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>{ deleteVehicle _x } forEach allDeadMen;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "allDeadMen",
+  "name": "allDeadMen",
+  "problem_notes": [],
+  "see_also": [
+    "allDead",
+    "allUnits",
+    "allGroups",
+    "playableUnits",
+    "switchableUnits",
+    "units",
+    "vehicles",
+    "allCurators",
+    "getCorpse"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

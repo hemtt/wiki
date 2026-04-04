@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the current [[owner]] of supplied [[Object]] Joined In Progress. Returns [[false]] on clients.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ownerDidJip = didJIPOwner tank;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "didJIPOwner",
+  "name": "didJIPOwner",
+  "problem_notes": [],
+  "see_also": [
+    "didJIP",
+    "owner",
+    "setOwner",
+    "groupOwner",
+    "remoteExecutedOwner",
+    "exportJIPMessages"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

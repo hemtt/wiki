@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Set custom aim precision coefficient for weapon sway",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player setCustomAimCoef 3;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "setCustomAimCoef",
+  "name": "setCustomAimCoef",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina",
+    "getCustomAimCoef",
+    "getWeaponSway"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "coef"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "coef",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

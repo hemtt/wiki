@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Send the variable value to the server - same limitations regarding variable type as [[publicVariable#Description|publicVariable]].\n{{Feature|arma3|In {{arma3}} it is possible to broadcast the [[nil]] value.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>publicVariableServer \"CTFscoreOne\";</sqf>"
+  ],
+  "groups": [
+    "Multiplayer",
+    "Variables"
+  ],
+  "id": "publicVariableServer",
+  "name": "publicVariableServer",
+  "problem_notes": [],
+  "see_also": [
+    "publicVariable",
+    "publicVariableClient",
+    "addPublicVariableEventHandler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "varName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "varName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

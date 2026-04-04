@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[getDammage|getDammage<sup>sic</sup>]]"
+  ],
   "argument_loc": "Global",
   "description": "Return the damage value of an object.",
   "effect_loc": "Unspecified",
@@ -10,6 +13,7 @@
   "groups": [
     "Object Manipulation"
   ],
+  "id": "damage",
   "name": "damage",
   "problem_notes": [],
   "see_also": [

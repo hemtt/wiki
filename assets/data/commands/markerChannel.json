@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the channel to which a marker belongs.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>markerChannel \"marker_1\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "markerChannel",
+  "name": "markerChannel",
+  "problem_notes": [],
+  "see_also": [
+    "createMarker",
+    "Channel",
+    "IDs"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "marker"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "marker",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

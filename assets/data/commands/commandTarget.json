@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Local",
+  "description": "Order the given unit(s) to target the given target (via the radio). Command given to the player, puts a red square with words Target and Distance on player's HUD at target location. If player in vehicle and has radar facilities, it also adds target marker to the radar.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_ESoldier1 commandTarget _WSoldier1;</sqf>",
+    "<sqf>player commandTarget [ted, bill];</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "commandTarget",
+  "name": "commandTarget",
+  "problem_notes": [],
+  "see_also": [
+    "assignedTarget",
+    "doTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "ArrayUnsized": {
+                        "value": "Object"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

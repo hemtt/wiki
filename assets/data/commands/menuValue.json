@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current value set in menu entry on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    ""
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "id": "menuValue",
+  "name": "menuValue",
+  "problem_notes": [],
+  "see_also": [
+    "menuEnable",
+    "menuExpand",
+    "menuCollapse",
+    "menuSetData",
+    "menuSetValue",
+    "menuSetCheck",
+    "menuSetAction",
+    "menuDelete",
+    "menuAdd",
+    "menuHover",
+    "menuURL",
+    "menuText",
+    "menuSort",
+    "menuSize",
+    "menuEnabled",
+    "menuChecked",
+    "menuAction",
+    "menuShortcutText",
+    "menuShortcut",
+    "menuPicture",
+    "menuData",
+    "menuClear",
+    "menuSetPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

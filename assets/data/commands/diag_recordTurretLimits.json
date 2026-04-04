@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Start recording tool for creating turret aiming limits.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_recordTurretLimits true;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_recordTurretLimits",
+  "name": "diag_recordTurretLimits",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "section"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "section",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

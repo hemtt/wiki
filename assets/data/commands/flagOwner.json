@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the global owner of a flag. A getter for [[setFlagOwner]]. Note that owner of a flag is [[Object]] rather than [[Number]], as how it is usually with other [[owner]] commands",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_person = flagOwner _flagOne;</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "id": "flagOwner",
+  "name": "flagOwner",
+  "problem_notes": [],
+  "see_also": [
+    "setFlagOwner",
+    ":Category:Flag",
+    "Textures|Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "flag"
+      },
+      "ret": {
+        "desc": "the person or vehicle that owns the flag is returned. If used on anything else than a flag, the returned value is [[objNull]]. If the flag is on its pole, the return value is NULL. If the flagowner is dead, the return value is the name of the soldier model",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "flag",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

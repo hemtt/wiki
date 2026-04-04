@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes all magazines from the vehicle cargo space. MP synchronized.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>clearMagazineCargoGlobal jeepOne;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "clearMagazineCargoGlobal",
+  "name": "clearMagazineCargoGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "clearMagazineCargo",
+    "addMagazineCargoGlobal",
+    "clearWeaponCargo",
+    "clearWeaponCargoGlobal",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearItemCargo",
+    "clearItemCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle or ammo box",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

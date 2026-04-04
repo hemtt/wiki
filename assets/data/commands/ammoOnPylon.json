@@ -1,0 +1,90 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns ammo count on given pylon (or [[false]] on failure).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _ammoCount = (vehicle player) ammoOnPylon \"pylon1\";</sqf>",
+    "<sqf>hint str (vehicle player ammoOnPylon \"pylonCenter\");</sqf>"
+  ],
+  "groups": [
+    "Vehicle Loadouts"
+  ],
+  "id": "ammoOnPylon",
+  "name": "ammoOnPylon",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "Loadouts",
+    "setAmmoOnPylon",
+    "getCompatiblePylonMagazines",
+    "getPylonMagazines",
+    "animatePylon",
+    "animateBay",
+    "setPylonsPriority",
+    "setPylonLoadout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "pylon"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[false]] on failure",
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "OneOf": [
+                {
+                  "desc": null,
+                  "since": null,
+                  "type": "Number"
+                },
+                {
+                  "desc": null,
+                  "since": null,
+                  "type": "Boolean"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "pylon's name or index",
+          "name": "pylon",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

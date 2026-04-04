@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Get array with items from ammo box (or any general weapon holder container).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str itemCargo vestContainer player;</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "itemCargo",
+  "name": "itemCargo",
+  "problem_notes": [],
+  "see_also": [
+    "getItemCargo",
+    "addItemCargo",
+    "addItemCargoGlobal",
+    "clearItemCargo",
+    "clearItemCargoGlobal",
+    "weaponCargo",
+    "magazineCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "[\"ItemType1\",\"ItemType2\",\"ItemType3\"...]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle or ammo box",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

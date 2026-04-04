@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "The Friendly side - friendly to all, see [[Side Relations]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (side player == sideFriendly) then { hint \"I feel friendly today!\"; };</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "id": "sideFriendly",
+  "name": "sideFriendly",
+  "problem_notes": [],
+  "see_also": [
+    "Side",
+    "side",
+    "west",
+    "east",
+    "resistance",
+    "civilian",
+    "sideLogic",
+    "sideUnknown",
+    "sideEnemy",
+    "playerSide",
+    "sideEmpty",
+    "sideAmbientLife",
+    "Side",
+    "Relations"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

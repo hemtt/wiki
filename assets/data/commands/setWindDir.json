@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the wind direction smoothly.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>60 setWindDir 180;</sqf>",
+    "<sqf>setWindDir [1, -15];</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setWindDir",
+  "name": "setWindDir",
+  "problem_notes": [],
+  "see_also": [
+    "windDir"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transition time in seconds. {{hl|0}} will cause the change to be immediate",
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "azimuth",
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "direction"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "flat wind direction and strength",
+          "name": "direction",
+          "type": "Position2d"
+        }
+      }
+    }
+  ]
+}

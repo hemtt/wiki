@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the classname of one or more given Eden Editor [[Eden Editor: Object|objects]]. For Logic objects use [[set3DENLogicType]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[get3DENMouseOver select 1] set3DENObjectType \"B_crew_F\"; // turns object under cursor into a blufor crewman</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "set3DENObjectType",
+  "name": "set3DENObjectType",
+  "problem_notes": [],
+  "see_also": [
+    "set3DENLogicType",
+    "get3DENMouseOver",
+    "add3DENConnection",
+    "add3DENEventHandler",
+    "all3DENEntities",
+    "collect3DENHistory",
+    "create3DENComposition",
+    "create3DENEntity",
+    "current3DENOperation",
+    "delete3DENEntities",
+    "do3DENAction",
+    "get3DENActionState",
+    "get3DENAttribute",
+    "get3DENCamera",
+    "get3DENConnections",
+    "get3DENEntityID",
+    "get3DENGrid",
+    "get3DENIconsVisible",
+    "get3DENLinesVisible",
+    "get3DENSelected",
+    "is3DEN",
+    "is3DENMultiplayer",
+    "move3DENCamera",
+    "remove3DENConnection",
+    "remove3DENEventHandler",
+    "removeAll3DENEventHandlers",
+    "set3DENAttributes",
+    "set3DENGrid",
+    "set3DENIconsVisible",
+    "set3DENLinesVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "objects",
+          "classname"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the cfgVehicles class",
+          "name": "classname",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

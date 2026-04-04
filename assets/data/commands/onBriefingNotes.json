@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Select a sound declared in the [[Description.ext#CfgSounds|Description.ext]] of the mission to be played the first time the [[Briefing.html#Notes|Notes tab]] is selected in the [[Briefing.html|briefing]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>onBriefingNotes \"NotesVoiceOver\";</sqf>"
+  ],
+  "groups": [
+    "Sounds",
+    "Briefing",
+    "Event Handlers"
+  ],
+  "id": "onBriefingNotes",
+  "name": "onBriefingNotes",
+  "problem_notes": [],
+  "see_also": [
+    "playSound",
+    "{{Link|Description.ext#CfgSounds}}"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "soundName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "soundName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

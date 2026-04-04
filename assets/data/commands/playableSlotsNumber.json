@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the number of available slots in mission per [[Side|side]] (both empty and taken). <br>In singleplayer mission, it returns number of playable units per side.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_maxBluforPlayers = playableSlotsNumber blufor;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "playableSlotsNumber",
+  "name": "playableSlotsNumber",
+  "problem_notes": [],
+  "see_also": [
+    "playersNumber",
+    "playableUnits",
+    "switchableUnits"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "side"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      }
+    }
+  ]
+}

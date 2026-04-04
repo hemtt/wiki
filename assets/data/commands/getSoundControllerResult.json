@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the calculated value of [[simple expression]] defined in config. Config could be any config entry, even [[missionConfigFile | mission config]] entry. It is more important that the vehicle is a transport and not any object. If the expression contains sound controllers, the controller values will be taken from the given vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_result = (vehicle player) getSoundControllerResult (configFile >> \"cfgVehicles\" >> typeOf (vehicle player) >> \"sounds\" >> \"idle_ext\" >> \"volume\");</sqf>",
+    "<sqf>\n// mission config entry to reverse rain strength:\n// myExpression = \"rain factor [1,0]\";\n_result = \"PaperCar\" createVehicleLocal position player getSoundControllerResult (missionConfigFile >> \"myExpression\");\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "getSoundControllerResult",
+  "name": "getSoundControllerResult",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Sound",
+    "getSoundController",
+    "getEnvSoundController",
+    "getAllEnvSoundControllers",
+    "getAllSoundControllers",
+    "getCustomSoundController",
+    "setCustomSoundController",
+    "getCustomSoundControllerCount"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "config"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transport vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "path to config entry containing the expression",
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    }
+  ]
+}

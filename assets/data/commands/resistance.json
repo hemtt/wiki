@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[independent]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Pre-defined variable for the resistance [[Side|side]].",
   "effect_loc": "Unspecified",
@@ -9,6 +12,7 @@
   "groups": [
     "Sides"
   ],
+  "id": "resistance",
   "name": "resistance",
   "problem_notes": [],
   "see_also": [

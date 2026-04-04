@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable/disable option to transport other vehicles (if configured) or be transported.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_vehicle enableVehicleCargo true;</sqf>"
+  ],
+  "groups": [
+    "Vehicle in Vehicle Transport"
+  ],
+  "id": "enableVehicleCargo",
+  "name": "enableVehicleCargo",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport|",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport",
+    "canVehicleCargo",
+    "setVehicleCargo",
+    "getVehicleCargo",
+    "isVehicleCargo",
+    "vehicleCargoEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

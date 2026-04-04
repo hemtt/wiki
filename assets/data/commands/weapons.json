@@ -9,6 +9,7 @@
     "Unit Inventory",
     "Vehicle Inventory"
   ],
+  "id": "weapons",
   "name": "weapons",
   "problem_notes": [],
   "see_also": [

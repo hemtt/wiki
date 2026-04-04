@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Local",
+  "description": "Cancels the effects of [[disableCollisionWith]]. The collision is always enabled for both objects in the arguments, i.e. vehicle1 with vehicle2 and vehicle2 with vehicle1\n{{Feature|warning|Each object can contain only 1 reference to the object it disabled collision with. This command sets this reference to null. Therefore the command might not work as expected when trying to enable collisions with some objects but not other.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>[_veh1, _veh2] remoteExecCall [\"enableCollisionWith\", 0, _veh1];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "enableCollisionWith",
+  "name": "enableCollisionWith",
+  "problem_notes": [],
+  "see_also": [
+    "collisionDisabledWith",
+    "disableCollisionWith"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle1",
+          "vehicle2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle1",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle2",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

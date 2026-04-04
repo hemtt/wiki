@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns object type as a number:\n* 1 - Primary - Normal object placed in Visitor, part of landscape\n* 2 - Network - Road placed in Visitor, part of landscape\n* 4 - Temporary - Temporary object (like tracks)\n* 8 - TypeVehicle - Some entity added by game\n* 16 - TypeTempVehicle - Temporary entity\n* 32 - LandDecal - Land decal",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_objType = getObjectType player;</sqf>",
+    "<sqf>_objType = getObjectType cursorObject;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getObjectType",
+  "name": "getObjectType",
+  "problem_notes": [],
+  "see_also": [
+    "allObjects",
+    "getObjectFOV",
+    "cursorObject",
+    "cursorTarget",
+    "createSimpleObject",
+    "allMissionObjects",
+    "setObjectViewDistance",
+    "getObjectViewDistance",
+    "objectParent",
+    "object"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "object type",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

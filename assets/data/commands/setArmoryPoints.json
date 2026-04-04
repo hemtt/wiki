@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Stores passed number into [USERNAME].ArmaXProfile file, where it assigns it as a value to ''armoryPoints'' entry. If entry doesn't exist, it is created.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setArmoryPoints (armoryPoints + 20);</sqf>",
+    "<sqf>setArmoryPoints 3.14;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "setArmoryPoints",
+  "name": "setArmoryPoints",
+  "problem_notes": [],
+  "see_also": [
+    "armoryPoints"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "points"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "points",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

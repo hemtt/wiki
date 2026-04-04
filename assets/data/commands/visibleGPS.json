@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the player has GPS receiver (minimap) opened and visible.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (visibleGPS) then {hint \"GPS is visible\"};</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "visibleGPS",
+  "name": "visibleGPS",
+  "problem_notes": [],
+  "see_also": [
+    "openGPS",
+    "showGPS",
+    "shownGPS",
+    "visibleWatch",
+    "visibleCompass"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

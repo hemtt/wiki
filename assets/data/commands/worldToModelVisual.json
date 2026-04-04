@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts position from world space to object model space in [[Simulation vs Render Time Scope|render time scope]].\n{{Feature|important|For [[setObjectScale|scaled objects]], the relative position will be [[vectorMultiply|divided]] by the object scale.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_relPos = myObject worldToModelVisual [0,0,0];</sqf>",
+    "<sqf>_relPos = player worldToModelVisual position car;</sqf>",
+    "<sqf>_relPos = car worldToModelVisual [12000, 5000];</sqf>",
+    "<sqf>_relPos = unit worldToModelVisual position tank;</sqf>"
+  ],
+  "groups": [
+    "Positions",
+    "Render Time Scope"
+  ],
+  "id": "worldToModelVisual",
+  "name": "worldToModelVisual",
+  "problem_notes": [],
+  "see_also": [
+    "worldToModel",
+    "vectorWorldToModelVisual",
+    "modelToWorldVisual",
+    "modelToWorld"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "worldPosition"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Position3dRelative"
+      },
+      "right": {
+        "Item": {
+          "name": "worldPosition",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

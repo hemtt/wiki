@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Local",
+  "description": "Ceases the using of the vehicle by a group and unassigns vehicle from the group.\nIf the argument is a single unit, the vehicle will be unassigned from unit's group.\nAfter vehicle is unassigned from the group, each individual crew member then unassigned from the vehicle.<br>\n<br>\nIn short the command could be hypothetically presented as:<br>\n<sqf>leaveVehicle = un-addVehicle + unassignVehicle forEach crew</sqf>\n\nHowever, to make it more reliable, it is best to move unit out of the vehicle manually with [[moveOut]] and force unassign the vehicle with [[unassignVehicle]].\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_unit leaveVehicle _vehicle;</sqf>",
+    "<sqf>_grp leaveVehicle _vehicle;</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Groups"
+  ],
+  "id": "leaveVehicle",
+  "name": "leaveVehicle",
+  "problem_notes": [],
+  "see_also": [
+    "addVehicle",
+    "assignAsCargo",
+    "assignAsCommander",
+    "assignAsDriver",
+    "assignAsGunner",
+    "assignedVehicle",
+    "unassignVehicle",
+    "doGetOut",
+    "commandGetOut",
+    "createVehicleCrew",
+    "assignedVehicles",
+    "assignedGroup",
+    "fullCrew"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "vehicle"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object's [[Group]] is used",
+          "name": "group",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

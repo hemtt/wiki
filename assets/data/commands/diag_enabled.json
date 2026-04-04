@@ -8,6 +8,7 @@
   "groups": [
     "Diagnostic"
   ],
+  "id": "diag_enabled",
   "name": "diag_enabled",
   "problem_notes": [],
   "see_also": [

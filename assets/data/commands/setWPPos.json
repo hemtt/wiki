@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets waypoint position.\n{{Feature|informative|This command is identical to <sqf inline>setWaypointPosition [pos, -1]</sqf> (see [[setWaypointPosition]] description for more information).}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_groupOne, 1] setWPPos markerPos \"MarkerOne\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "setWPPos",
+  "name": "setWPPos",
+  "problem_notes": [],
+  "see_also": [
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypoints",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "pos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "pos",
+          "type": "Position3dAGL"
+        }
+      }
+    }
+  ]
+}

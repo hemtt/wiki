@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns force produced by rotors.\n{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_rotorForces = rotorsForcesRTD _taru; // Returns [[-465.981,351.941,45960.5],[-469.079,397.451,46933.3]]</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "rotorsForcesRTD",
+  "name": "rotorsForcesRTD",
+  "problem_notes": [],
+  "see_also": [
+    "rotorsRpmRTD",
+    "weightRTD",
+    "wingsForcesRTD",
+    "airDensityRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "helicopter"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArrayUnsized": {
+                "value": "Number"
+              }
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

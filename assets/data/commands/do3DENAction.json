@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Performs given [[Eden Editor: Actions|Eden Editor action]].\n{{Feature|warning|\nPrior to {{GVI|arma3|2.12|size= 0.75}} it was possible to use this command outside of [[:Category:Eden Editor|Eden Editor]].<br>\nFor example <sqf inline>do3DENAction \"MissionSave\";</sqf> would wipe the [[mission.sqm]] without a way to restore it when executed accidentally during preview.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>do3DENAction \"MissionSave\";</sqf>",
+    "<sqf>\n// Since 2.22\nprivate _par = createHashMap;\n_par set [\"name\", \"testfile\"];\n_par set [\"folder\", \"subfolder\"];\n_par set [\"content\", \"R3voing\"];\n\ndo3DENAction [\"CreateTextFile\", _par];\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "do3DENAction",
+  "name": "do3DENAction",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENActionState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "action"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[Eden Editor: Actions]]",
+          "name": "action",
+          "type": "String"
+        }
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "action",
+          "argument"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "see [[Eden Editor: Actions]]",
+              "name": "action",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "depends on the used [[Eden Editor: Actions|action]]",
+              "name": "argument",
+              "type": "Anything"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

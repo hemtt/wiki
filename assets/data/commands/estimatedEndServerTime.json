@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Estimated end of MP game in seconds converted to [[serverTime]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Estimated minutes left: \n<sqf>_min = ceil (estimatedEndServerTime - serverTime) / 60;</sqf>"
+  ],
+  "groups": [
+    "Time",
+    "Mission Information",
+    "Multiplayer"
+  ],
+  "id": "estimatedEndServerTime",
+  "name": "estimatedEndServerTime",
+  "problem_notes": [],
+  "see_also": [
+    "estimatedTimeLeft",
+    "serverTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "seconds left",
+        "type": "Number"
+      }
+    }
+  ]
+}

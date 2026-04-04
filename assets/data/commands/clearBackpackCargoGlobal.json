@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes all backpacks from the vehicle cargo space. MP synchronized.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>clearBackpackCargoGlobal jeepOne;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "clearBackpackCargoGlobal",
+  "name": "clearBackpackCargoGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack",
+    "clearMagazineCargo",
+    "clearMagazineCargoGlobal",
+    "clearWeaponCargo",
+    "clearWeaponCargoGlobal",
+    "clearItemCargo",
+    "clearItemCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

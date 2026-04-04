@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns control's foreground color.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ctrlForegroundColor _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlForegroundColor",
+  "name": "ctrlForegroundColor",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetForegroundColor",
+    "ctrlText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "ArrayColor"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

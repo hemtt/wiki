@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set ambient traffic speed in a rectangle (in kilometers per hour). {{Feature|arma3|This command does nothing in {{arma3}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setTrafficSpeed [50, _xMin, _xMax, _zMin, _zMax];</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setTrafficSpeed",
+  "name": "setTrafficSpeed",
+  "problem_notes": [],
+  "see_also": [
+    "enableTraffic",
+    "setTrafficDensity",
+    "setTrafficDistance",
+    "setTrafficGap"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "speed",
+          "xMin",
+          "xMax",
+          "zMin",
+          "zMax"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "traffic speed (in kilometers per hour)",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "western border of the affected rectangle",
+              "name": "xMin",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "eastern border of the affected rectangle",
+              "name": "xMax",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "southern border of the affected rectangle",
+              "name": "zMin",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "northern border of the affected rectangle",
+              "name": "zMax",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

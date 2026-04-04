@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the data set in given index of the [[CT_LISTBOX]] or [[CT_COMBO]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_data = lbData [101, 0];</sqf>",
+    "<sqf>_data = _control lbData 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "id": "lbData",
+  "name": "lbData",
+  "problem_notes": [],
+  "see_also": [
+    "lbSetData"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control's IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

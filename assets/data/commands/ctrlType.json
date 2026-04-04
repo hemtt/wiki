@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns number representing the type of control, which is also defined by ''type'' property in config. For more information see [[Arma: GUI Configuration]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_type = ctrlType _rscEdit; // 2</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlType",
+  "name": "ctrlType",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlCreate",
+    "Arma:",
+    "GUI",
+    "Configuration"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

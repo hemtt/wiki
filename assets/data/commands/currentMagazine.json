@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns class name of currently loaded vehicle's / unit's magazine.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_magazineClass = currentMagazine player;//Example: \"30Rnd_545x39_AK\"</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "Vehicle Inventory"
+  ],
+  "id": "currentMagazine",
+  "name": "currentMagazine",
+  "problem_notes": [],
+  "see_also": [
+    "magazines",
+    "currentMagazineDetail",
+    "currentWeapon",
+    "currentMuzzle",
+    "currentThrowable",
+    "currentVisionMode",
+    "currentWeaponMode",
+    "currentZeroing",
+    "magazinesTurret",
+    "weaponsTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "unit or vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

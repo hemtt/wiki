@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns empty side, for example static buildings in [[:Category:Eden Editor|Eden Editor]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_sideEmpty = sideEmpty;</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "id": "sideEmpty",
+  "name": "sideEmpty",
+  "problem_notes": [],
+  "see_also": [
+    "side",
+    "west",
+    "blufor",
+    "east",
+    "opfor",
+    "resistance",
+    "independent",
+    "civilian",
+    "sideLogic",
+    "sideFriendly",
+    "sideEnemy",
+    "sideUnknown",
+    "playerSide",
+    "sideAmbientLife"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A non-existent [[Object]]. To compare non-existent objects use [[isNull]] or [[isEqualTo]]:\n<sqf>\nobjNull == objNull;\t\t\t// false\nisNull objNull;\t\t\t\t// true\nobjNull isEqualTo objNull;\t// true\n</sqf>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player == player; // false if player is null</sqf>",
+    "<sqf>isNull player; // true if player is null</sqf>",
+    "<sqf>str objNull // <NULL-object></sqf>",
+    "<sqf>position objNull // [0,0,0]</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "objNull",
+  "name": "objNull",
+  "problem_notes": [],
+  "see_also": [
+    "controlNull",
+    "displayNull",
+    "grpNull",
+    "locationNull",
+    "taskNull",
+    "teamMemberNull",
+    "scriptNull",
+    "configNull",
+    "typeName",
+    "isNull"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Object"
+      }
+    }
+  ]
+}

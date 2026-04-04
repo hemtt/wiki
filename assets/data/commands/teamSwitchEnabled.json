@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if [[Team Switch]] is currently enabled.\nTeam Switch is enabled by default.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isTeamSwitchEnabled = teamSwitchEnabled;</sqf>"
+  ],
+  "groups": [
+    "Team Switch"
+  ],
+  "id": "teamSwitchEnabled",
+  "name": "teamSwitchEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "Team",
+    "Switch",
+    "enableTeamSwitch",
+    "onBriefingTeamSwitch",
+    "onTeamSwitch",
+    "teamSwitch"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

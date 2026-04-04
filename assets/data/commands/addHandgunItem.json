@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds weapon item, including magazine, directly to the [[handgunWeapon]]. This is used for infantry weapons.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addHandgunItem \"muzzle_snds_L\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "addHandgunItem",
+  "name": "addHandgunItem",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponItem",
+    "removeHandgunItem",
+    "removeAllHandgunItems",
+    "addPrimaryWeaponItem",
+    "addSecondaryWeaponItem",
+    "addBinocularItem",
+    "weaponsItems",
+    "handgunItems",
+    "primaryWeaponItems",
+    "secondaryWeaponItems",
+    "binocularItems"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

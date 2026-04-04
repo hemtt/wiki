@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Global",
+  "description": "A [[Multiplayer Scripting#Locality|global]] equivalent of  [[setGroupId]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\ngroup player setGroupIdGlobal [\"PAPA BEAR\"];\nhint groupId group player; // \"PAPA BEAR\"\n</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "setGroupIdGlobal",
+  "name": "setGroupIdGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "setGroupId",
+    "groupId",
+    "group"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          [
+            "format",
+            "keywordN"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "group",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "format template (e.g \"%keyword1 - %keyword2 / %keyword4 (%keyword3)\")",
+              "name": "format",
+              "type": "String"
+            }
+          },
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "desc": "keyword value",
+                  "name": "keywordN",
+                  "type": "String"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

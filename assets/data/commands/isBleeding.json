@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether the unit is bleeding.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (isBleeding player) then { player groupChat \"I'm bleeding!!\"; };</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "isBleeding",
+  "name": "isBleeding",
+  "problem_notes": [],
+  "see_also": [
+    "getBleedingRemaining",
+    "isBurning",
+    "setBleedingRemaining"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

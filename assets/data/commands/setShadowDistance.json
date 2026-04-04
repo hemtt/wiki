@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the shadows rendering distance.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setShadowDistance 200;</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Environment"
+  ],
+  "id": "setShadowDistance",
+  "name": "setShadowDistance",
+  "problem_notes": [],
+  "see_also": [
+    "getShadowDistance",
+    "isPipEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "value"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

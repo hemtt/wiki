@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts vector direction from world to model space.\n{{Feature|important|For [[setObjectScale|scaled objects]], the resulting vector's [[vectorMagnitude|magnitude]] will be [[vectorMultiply|divided]] by the object scale.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Convert world space vector [0,-10,4] to model space of object _airplane: \n<sqf>_airplane vectorWorldToModel [0,-10,4];</sqf>"
+  ],
+  "groups": [
+    "Math - Vectors"
+  ],
+  "id": "vectorWorldToModel",
+  "name": "vectorWorldToModel",
+  "problem_notes": [],
+  "see_also": [
+    "addForce",
+    "worldToModel",
+    "addTorque",
+    "vectorModelToWorld",
+    "vectorModelToWorldVisual",
+    "vectorWorldToModelVisual",
+    "matrixMultiply",
+    "matrixTranspose"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "worldDir"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "vector direction in model space in format [x,y,z]",
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "desc": "vector direction in world space in format [x,y,z]",
+          "name": "worldDir",
+          "type": "Vector3d"
+        }
+      }
+    }
+  ]
+}

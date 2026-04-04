@@ -8,6 +8,7 @@
   "groups": [
     "Teams"
   ],
+  "id": "agent",
   "name": "agent",
   "problem_notes": [],
   "see_also": [

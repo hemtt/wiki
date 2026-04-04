@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Synchronizes Simul Weather with {{arma}} weather, generates all keyframes.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>simulWeatherSync;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "simulWeatherSync",
+  "name": "simulWeatherSync",
+  "problem_notes": [],
+  "see_also": [
+    "forceWeatherChange"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

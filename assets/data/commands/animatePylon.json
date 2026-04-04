@@ -1,0 +1,97 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Force animation of pylon to given state, -1 for reset to engine handling, can cause weapon inoperative, because weapon is released  when pylon state == 1.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player animatePylon [1, 0.5];</sqf>",
+    "<sqf>vehicle player animatePylon [\"pylon1\", 0.5];</sqf>",
+    "<sqf>vehicle player animatePylon [\"pylon1\", 1, true];</sqf>"
+  ],
+  "groups": [
+    "Animations",
+    "Vehicle Loadouts"
+  ],
+  "id": "animatePylon",
+  "name": "animatePylon",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "Loadouts",
+    "getCompatiblePylonMagazines",
+    "getPylonMagazines",
+    "setAmmoOnPylon",
+    "animateBay",
+    "setPylonsPriority",
+    "setPylonLoadout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "pylon",
+            "animphase",
+            "instant"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "pylon index (index starts from 1) or pylon name (see {{Link|getCompatiblePylonMagazines#Example 3}})",
+              "name": "pylon",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "desc": null,
+                        "since": {
+                          "arma3": "1.94"
+                        },
+                        "type": "String"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "animation phase in range 0..1",
+              "name": "animphase",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) animate immediately",
+              "name": "instant",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the wind strength smoothly during the given time (in seconds). A time of zero means there will be an immediate change.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>60 setWindStr 0.8; // set the wind strength to 0.8 gradually over the next 60 seconds</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setWindStr",
+  "name": "setWindStr",
+  "problem_notes": [],
+  "see_also": [
+    "setWind",
+    "setWindForce"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "new value in range 0..1",
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

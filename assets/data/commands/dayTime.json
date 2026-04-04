@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current in-game time in hours. For a formatted version of time, see [[BIS_fnc_timeToString]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>dayTime; // returns 16.5 given it is 16:30 (4.30pm) in game</sqf>",
+    "Get hour, minute, seconds:\n<sqf>\nprivate _daytime = dayTime; // assuming dayTime returns 1.66046\nprivate _hours = floor _daytime;\t\t\t\t\t\t\t\t\t\t\t//  1\nprivate _minutes = floor ((_daytime - _hours) * 60);\t\t\t\t\t\t// 39\nprivate _seconds = floor ((((_daytime - _hours) * 60) - _minutes) * 60);\t// 37\n</sqf>"
+  ],
+  "groups": [
+    "Environment",
+    "Mission Information",
+    "Time"
+  ],
+  "id": "dayTime",
+  "name": "dayTime",
+  "problem_notes": [],
+  "see_also": [
+    "date",
+    "dateToNumber",
+    "BIS_fnc_timeToString",
+    "time",
+    "skipTime",
+    "systemTime",
+    "systemTimeUTC"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "day time using a 24 hour clock, using fractions of hours - range [0..24]",
+        "type": "Number"
+      }
+    }
+  ]
+}

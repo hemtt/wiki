@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Global",
+  "description": "Global variant of [[addItemCargo]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>supplyBox addItemCargoGlobal [\"optic_Arco\", 10];</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "addItemCargoGlobal",
+  "name": "addItemCargoGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "addItemCargo",
+    "clearItemCargoGlobal",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "addWeaponCargo",
+    "addWeaponCargoGlobal",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "box",
+          [
+            "item",
+            "count"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "box",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "item",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of items to add. {{GVI|arma3|2.14|size= 0.75}} negative count will remove items.",
+              "name": "count",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

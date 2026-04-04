@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set current or permanent wind vector.\n{{Feature | important | The effect is global only if it is executed on the server. Wind set locally will sync back to server value in a while.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>setWind [10, 10, true];</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setWind",
+  "name": "setWind",
+  "problem_notes": [],
+  "see_also": [
+    "wind",
+    "setWindDir",
+    "gusts",
+    "setGusts"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "x",
+          "y",
+          "forced"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "easterly component (in m/s, positive = to the east)",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "northerly component (in m/s, positive = to the north)",
+              "name": "y",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) set to [[true]] to lock the wind to constantly blows in set direction",
+              "name": "forced",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

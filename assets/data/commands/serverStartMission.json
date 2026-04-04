@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Start the provided mission (if it exists) on a dedicated server.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (!isServer) exitWith {};\n\nif (isDedicated) then\n{\n\tserverStartMission \"TestMission.Malden\";\n}\nelse // hasInterface\n{\n\thint \"You must choose a mission now.\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "serverStartMission",
+  "name": "serverStartMission",
+  "problem_notes": [],
+  "see_also": [
+    "playMission",
+    "playScriptedMission"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "missionName"
+      },
+      "ret": {
+        "desc": "[[true]] if the mission could be started on a dedicated server, [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "mission name with terrain extension",
+          "name": "missionName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

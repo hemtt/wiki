@@ -9,6 +9,7 @@
     "Diagnostic",
     "Broken Commands"
   ],
+  "id": "echo",
   "name": "echo",
   "problem_notes": [],
   "see_also": [

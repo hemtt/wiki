@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns value of the given stat.<br>\nA list of possible StatNames can be found here: [[Arma 3: Stat Names]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getStatValue \"ExpWarlockDown\"; // Checks if the \"Warlock Down\" Achivement was already aquired</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "getStatValue",
+  "name": "getStatValue",
+  "problem_notes": [],
+  "see_also": [
+    "setStatValue",
+    "Arma",
+    "3:",
+    "Stat",
+    "Names"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "desc": "(can return [[Nothing]])",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

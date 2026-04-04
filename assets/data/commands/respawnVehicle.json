@@ -1,0 +1,158 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets vehicle as respawnable in MP game (see [[Vehicle Respawn]]). The vehicle will be spawned at the locality and coordinates it was prior to destruction.\nIf respawn type is set to base respawn (type 3) and vehicle respawn marker is provided (respawn_vehicle_SIDEXXX), vehicle will spawn on the marker. The command must be executed where vehicle is [[local]]. If the vehicle is in respawn queue, as long as the vehicle is [[local]] it should be possible to update params of the respawning vehicle, i.e change delay, disable respawn, etc.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>car respawnVehicle [5, 3]; // 'car' will respawn at the predefined marker for the side after 5 seconds. The unit will respawn 3 times.</sqf>",
+    "<sqf>car respawnVehicle [30]; // 'car' will respawn at the predefined marker for the side after 30 seconds. The unit will respawn an unlimited number of times.</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "respawnVehicle",
+  "name": "respawnVehicle",
+  "problem_notes": [],
+  "see_also": [
+    "Vehicle",
+    "Respawn",
+    "getRespawnVehicleInfo",
+    "playerRespawnTime",
+    "setPlayerRespawnTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "respawnDelay",
+            "respawnCount",
+            "deleteOldWreck",
+            "respawnOnServer",
+            "respawnFlying",
+            "respawnUnit",
+            "respawnMode",
+            "respawnSide",
+            "useRespawnMarkerDir"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transport",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "(Optional since 2.18, default -1) delay in seconds between respawns. (-1 to use 3DEN vehicle respawn delay or ''respawnVehicleDelay'' from [[Description.ext|description.ext]])",
+              "name": "respawnDelay",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default unlimited respawns) how many times to respawn vehicle in total. (since 2.18 -1 unlimited respawns, 0 stop respawning)",
+              "name": "respawnCount",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) - deletes old wreck automatically after vehicle respawns",
+              "name": "deleteOldWreck",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) - wreck is always transferred to the server and the new vehicle always respawns on server",
+              "name": "respawnOnServer",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) - by default all vehicles placed on the ground, [[true]] overrides this",
+              "name": "respawnFlying",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[objNull]]) - unit that would be put in the driver seat after vehicle respawns",
+              "name": "respawnUnit",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) - overrides vehicle respawn mode. Available modes are: 2 or \"INSTANT\" and 3 or \"BASE\". -1 use [[Description.ext|description.ext]] value.",
+              "name": "respawnMode",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default typical vehicle [[side]]) - sets respawn side for the purpouse of selecting respawn marker",
+              "name": "respawnSide",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Side"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) - respawn vehicle matches respawn marker direction or the old wreck direction. [[false]] - random direction.",
+              "name": "useRespawnMarkerDir",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

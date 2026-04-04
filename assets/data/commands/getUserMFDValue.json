@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of user text variables used in MFD.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getUserMFDValue vehicle player; // user0 in MFD will return 1</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "getUserMFDValue",
+  "name": "getUserMFDValue",
+  "problem_notes": [],
+  "see_also": [
+    "setUserMFDValue",
+    "setUserMFDText",
+    "getUserMFDText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "a vehicle with MFD",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if file patching is enabled otherwise [[false]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_state = isFilePatchingEnabled;</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Diagnostic"
+  ],
+  "id": "isFilePatchingEnabled",
+  "name": "isFilePatchingEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Startup",
+    "Parameters#Developer_Options|-filePatching"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

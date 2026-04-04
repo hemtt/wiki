@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the life state of the given unit.\n{{{!}} class=\"wikitable\"\n! {{arma2}}\n! {{arma3}}\n{{!}}-\n{{!}}\n* \"ALIVE\"\n* \"DEAD\"\n* \"DEAD-RESPAWN\"\n* \"DEAD-SWITCHING\"\n* \"ASLEEP\"\n* \"UNCONSCIOUS\"\n{{!}}\n* \"HEALTHY\"\n* \"DEAD\"\n* \"DEAD-RESPAWN\"\n* \"DEAD-SWITCHING\"\n* \"INCAPACITATED\"\n* \"INJURED\"\n{{!}}}\n\n{{Feature | arma3 | In {{arma3}}, [[lifeState]] seems to change to \"INJURED\" when <sqf inline>damage aliveUnit >= 0.1</sqf> (0.1 seeming to be the value defined in config under {{sic|\"InjuredTreshold\"|Threshold}}). When the state is \"INCAPACITATED\", a sub-state is available via [[incapacitatedState]] command.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _lifeState = lifeState player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "lifeState",
+  "name": "lifeState",
+  "problem_notes": [],
+  "see_also": [
+    "setUnconscious",
+    "incapacitatedState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

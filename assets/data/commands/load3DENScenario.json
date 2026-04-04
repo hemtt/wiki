@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Load the provided scenario or an empty scenario in the provided world.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>load3DENScenario \"MyMission.VR\";</sqf>",
+    "<sqf>load3DENScenario \"Stratis\";</sqf>",
+    "<sqf>\n//For a scenario located at ...\\Arma 3 - Other Profiles\\<PROFILENAME>\\missions\\subfolder\\myMission.VR\n//full path needs to be provided without leading \\\nload3DENScenario \"missions\\subfolder\\myMission.VR\";\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "load3DENScenario",
+  "name": "load3DENScenario",
+  "problem_notes": [],
+  "see_also": [
+    "is3DENPreview"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "scenarioOrWorld"
+      },
+      "ret": {
+        "desc": "[[true]] on success, [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "scenario name or world name",
+          "name": "scenarioOrWorld",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

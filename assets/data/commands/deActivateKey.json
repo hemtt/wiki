@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Deactivates the given keyname for the current user profile. The keys are used to unlock missions or campaigns.\n\nSee keys, keysLimit and doneKeys in the [[Description.ext#keys|description.ext]] file of the missions.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>deActivateKey \"Mission04Key\";</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "id": "deActivateKey",
+  "name": "deActivateKey",
+  "problem_notes": [],
+  "see_also": [
+    "isKeyActive",
+    "activateKey"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "keyname"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "keyname",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

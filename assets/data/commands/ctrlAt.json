@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the control at the specified coordinates.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _ctrl = _myDisplay ctrlAt [0.5, 0.5];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlAt",
+  "name": "ctrlAt",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlCreate",
+    "ctrlSetPosition",
+    "ctrlCommit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "display",
+          [
+            "x",
+            "y"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the display to check",
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "desc": "the control at the specified coordinates, [[controlNull]] if none",
+        "type": "Control"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "position (0 = left, 1 = right)",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "position (0 = top, 1 = bottom)",
+              "name": "y",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns provided rope's segments.<br>\n{{GVI|arma3|2.12|size= 0.75}} use [[objectParent]] to return the rope parent from a rope segment.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _segments = ropeSegments _myRope;</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "id": "ropeSegments",
+  "name": "ropeSegments",
+  "problem_notes": [],
+  "see_also": [
+    "ropeCreate",
+    "ropeLength",
+    "ropeCut",
+    "ropeEndPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "rope"
+      },
+      "ret": {
+        "desc": "the rope's segments",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "rope",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

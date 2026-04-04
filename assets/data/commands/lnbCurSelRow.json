@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the index of the selected row id 2D listbox.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lnbCurSelRow _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "id": "lnbCurSelRow",
+  "name": "lnbCurSelRow",
+  "problem_notes": [],
+  "see_also": [
+    "lnbAddArray",
+    "lnbAddColumn",
+    "lnbAddRow",
+    "lnbClear",
+    "lnbColor",
+    "lnbData",
+    "lnbDeleteColumn",
+    "lnbDeleteRow",
+    "lnbGetColumnsPosition",
+    "lnbPicture",
+    "lnbSetColor",
+    "lnbSetColumnsPos",
+    "lnbSetCurSelRow",
+    "lnbSetData",
+    "lnbSetPicture",
+    "lnbSetText",
+    "lnbSetValue",
+    "lnbSize",
+    "lnbText",
+    "lnbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "ctrl"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

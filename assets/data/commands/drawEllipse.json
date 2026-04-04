@@ -1,0 +1,129 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "[[File:drawEllipse.jpg|250px|right]] Draws an ellipse on the map. Just like with marker or trigger area, negative ''a'' and ''b'' will result in hexagon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nfindDisplay 12 displayCtrl 51 ctrlAddEventHandler [\"Draw\", \n{\n\t_this select 0 drawEllipse [\n\t\tplayer, 10, 10, 0, [1, 0, 0, 1], \"\"\n\t];\n\t_this select 0 drawEllipse [\n\t\tplayer, -10, -10, 0, [1, 1, 1, 1], \"#(rgb,8,8,3)color(1,0.6,0,1)\"\n\t];\n\t_this select 0 drawEllipse [\n\t\tplayer, -10, -10, 90, [0, 0, 1, 1], \"\"\n\t];\n}];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "drawEllipse",
+  "name": "drawEllipse",
+  "problem_notes": [],
+  "see_also": [
+    "drawArrow",
+    "drawIcon",
+    "drawLine",
+    "drawRectangle",
+    "drawPolygon",
+    "drawTriangle",
+    "drawXPolygon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          [
+            "centre",
+            "a",
+            "b",
+            "angle",
+            "color",
+            "fill",
+            "alignWithMap"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "ellipse's centre",
+              "name": "centre",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position2d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position3d"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "horizontal (x) radius",
+              "name": "a",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "vertical (y) radius",
+              "name": "b",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "angle of rotation in degrees",
+              "name": "angle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "line color",
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          },
+          {
+            "Item": {
+              "desc": "fill texture file or [[Procedural Textures]]. Note that the file texture will not rotate with rectangle, use [[drawIcon]] for that. If fill texture is not empty, set line color to white [1,1,1,1]",
+              "name": "fill",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) - when [[false]] the shape will not follow map rotation.",
+              "name": "alignWithMap",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

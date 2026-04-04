@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current animation phase of given source. Similar to [[animationSourcePhase]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _phase = _control3D ctrlAnimationPhaseModel \"Close\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object"
+  ],
+  "id": "ctrlAnimationPhaseModel",
+  "name": "ctrlAnimationPhaseModel",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlAnimateModel",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "displayCtrl",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "source"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "source",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

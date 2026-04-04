@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[atan]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Returns the '''arcus tangens'''.<br><br>[[File:atan.jpg|200px]]",
   "effect_loc": "Unspecified",
@@ -8,6 +11,7 @@
   "groups": [
     "Math - Geometry"
   ],
+  "id": "atg",
   "name": "atg",
   "problem_notes": [],
   "see_also": [

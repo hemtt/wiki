@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Joins ''array'' into [[String]] with provided ''separator''. Array can be of mixed types, all elements will be converted to [[String]] prior to joining, but the fastest operation is on the array of [[String]]s.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_str = \"- This, is a sample string.\" splitString \"-,. \"; // [\"This\",\"is\",\"a\",\"sample\",\"string\"]\n_str joinString \" \"; // \"This is a sample string\"\n</sqf>",
+    "<sqf>[\"This\",\"is\",\"sparta\"] joinString \" ~ \"; // \"This ~ is ~ sparta\"</sqf>",
+    "<sqf>[\"1\",2,text \"3\"] joinString \"\"; // \"123\"</sqf>",
+    "<sqf>\"Japa is the best!\" splitString \"\" joinString \" \"; // \"J a p a   i s   t h e   b e s t !\"</sqf>",
+    "Remove all \\r\\n from file:\n<sqf>loadFile \"somefile.txt\" splitString toString [13,10] joinString \" \"</sqf>"
+  ],
+  "groups": [
+    "Strings"
+  ],
+  "id": "joinString",
+  "name": "joinString",
+  "problem_notes": [],
+  "see_also": [
+    "splitString",
+    "set",
+    "resize",
+    "reverse",
+    "select",
+    "in",
+    "find",
+    "toArray",
+    "forEach",
+    "count",
+    "deleteAt",
+    "deleteRange",
+    "append",
+    "sort",
+    "param",
+    "params",
+    "arrayIntersect",
+    "toString",
+    "endl]],",
+    "{{Link|http://www.utf8-chartable.de/|Unicode",
+    "Character",
+    "Table}}"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "array",
+          "separator"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "separator used to join array elements.",
+          "name": "separator",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

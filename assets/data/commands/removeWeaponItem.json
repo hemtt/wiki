@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes magazine from the specified muzzle.\nIt is possible to remove magazine directly from 'Throw' muzzle provided it is configured with <syntaxhighlight lang=\"cpp\" inline>keepInInventory = 0;</syntaxhighlight>.\n{{Feature|informative|To add such magazine, see [[addWeaponItem]].}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeWeaponItem [\"arifle_MX_GL_ACO_F\", \"1Rnd_HE_Grenade_shell\"];</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "removeWeaponItem",
+  "name": "removeWeaponItem",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponItem",
+    "addPrimaryWeaponItem",
+    "addSecondaryWeaponItem",
+    "addHandgunItem",
+    "addBinocularItem",
+    "weaponsItems",
+    "handgunItems",
+    "primaryWeaponItems",
+    "secondaryWeaponItems",
+    "binocularItems",
+    "removePrimaryWeaponItem",
+    "removeSecondaryWeaponItem",
+    "removeHandgunItem",
+    "removeBinocularItem"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "muzzle",
+            "magazine"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the muzzle to add magazine to",
+              "name": "muzzle",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "class name of the magazine to remove",
+              "name": "magazine",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

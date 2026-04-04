@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an object's rendered [[Position#PositionASL|ASL position]] (z value above sea level) in render time scope.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_playerRenderedPosASL = visiblePositionASL player;</sqf>"
+  ],
+  "groups": [
+    "Positions",
+    "Render Time Scope"
+  ],
+  "id": "visiblePositionASL",
+  "name": "visiblePositionASL",
+  "problem_notes": [],
+  "see_also": [
+    "getPosVisual",
+    "getPosASLVisual",
+    "getPosATLVisual",
+    "getPosWorldVisual",
+    "visiblePosition",
+    "position",
+    "getPos",
+    "getPosATL",
+    "getPosASL",
+    "getPosASLW"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Position3dASL"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the object",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

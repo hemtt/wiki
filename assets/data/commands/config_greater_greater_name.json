@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Config | config]] entry with given name (alias of [[a / b]], slightly faster but with [[Operators#Order of Precedence|lower precedence]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>configFile >> \"CfgVehicles\";</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "id": "config_greater_greater_name",
+  "name": ">>",
+  "problem_notes": [],
+  "see_also": [
+    "configFile",
+    "a",
+    "/",
+    "b",
+    "configName",
+    "count",
+    "getText",
+    "isArray",
+    "isClass",
+    "isNumber",
+    "isText",
+    "select",
+    "configClasses"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "config",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "config",
+          "type": "Config"
+        }
+      },
+      "ret": {
+        "desc": "config entry",
+        "type": "Config"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

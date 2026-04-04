@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns control's text color",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ctrlTextColor _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlTextColor",
+  "name": "ctrlTextColor",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetTextColor",
+    "ctrlText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "desc": "text color",
+        "type": "ArrayColor"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

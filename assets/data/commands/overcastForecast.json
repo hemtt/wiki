@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the overcast forecast.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_forecast = overcastForecast;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "overcastForecast",
+  "name": "overcastForecast",
+  "problem_notes": [],
+  "see_also": [
+    "overcast",
+    "rain",
+    "fog"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

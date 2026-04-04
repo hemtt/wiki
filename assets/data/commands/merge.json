@@ -11,6 +11,7 @@
   "groups": [
     "HashMap"
   ],
+  "id": "merge",
   "name": "merge",
   "problem_notes": [],
   "see_also": [

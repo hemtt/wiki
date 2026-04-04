@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a list of all controls in the provided display or controls group, including \"sub\"-controls from other [[CT_CONTROLS_GROUP]]s.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_allCtrls = allControls findDisplay 46;</sqf>",
+    "<sqf>_allSubCtrls = allControls _myControlsGroup;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "allControls",
+  "name": "allControls",
+  "problem_notes": [],
+  "see_also": [
+    "allDisplays",
+    "controlsGroupCtrl",
+    "ctrlCreate",
+    "allVariables",
+    "allCurators",
+    "allGroups",
+    "allDead",
+    "allDeadMen"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "display"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Control"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "controlsGroup"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Control"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "[[CT_CONTROLS_GROUP]]",
+          "name": "controlsGroup",
+          "type": "Control"
+        }
+      },
+      "since": {
+        "arma3": "2.4"
+      }
+    }
+  ]
+}

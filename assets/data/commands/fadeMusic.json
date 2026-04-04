@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the current music volume to the given value smoothly within the given time. {{Feature|informative|The player's in-game setting is not changed by this command: {{hl|Final Volume {{=}} Client Setting * Scripted Volume}}.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>5 fadeMusic 0; // fade current music volume to 0 in 5 sec</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "fadeMusic",
+  "name": "fadeMusic",
+  "problem_notes": [],
+  "see_also": [
+    "fadeSound",
+    "fadeRadio",
+    "fadeSpeech",
+    "fadeEnvironment",
+    "environmentVolume",
+    "musicVolume",
+    "soundVolume",
+    "radioVolume"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "volume"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "fade interval in seconds",
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "music volume",
+          "name": "volume",
+          "type": {
+            "NumberRange": [
+              0,
+              5
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

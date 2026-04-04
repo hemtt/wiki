@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Enables/Disables random lip. When enabled, the unit continuously moves its lips as if it is talking.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player setRandomLip true;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setRandomLip",
+  "name": "setRandomLip",
+  "problem_notes": [],
+  "see_also": [
+    "say",
+    "setMimic",
+    "setFaceAnimation",
+    "setFace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "bool"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

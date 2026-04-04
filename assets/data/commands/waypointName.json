@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the waypoint name.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_wpName = waypointName [_grp, 2];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "waypointName",
+  "name": "waypointName",
+  "problem_notes": [],
+  "see_also": [
+    "setWaypointName",
+    "waypointPosition",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

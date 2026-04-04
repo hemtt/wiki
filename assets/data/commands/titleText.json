@@ -1,0 +1,83 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Displays text across the screen. If used along with [[cutText]] two different texts (in different type styles) can be shown at once.\nThe text can be displayed on multiple lines by using \"\\n\" new line characters (see {{Link|#Example 3}}).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>titleText [\"Show this text\", \"PLAIN\"];</sqf>",
+    "<sqf>titleText [\"Your message\", \"BLACK\", 2];</sqf>",
+    "<sqf>titleText [\"line1\\nline2\\nline3\", \"PLAIN\"];</sqf>",
+    "<sqf>titleText [\"<t color='#ff0000' size='5'>RED ALERT!</t><br/>***********\", \"PLAIN\", -1, true, true];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "titleText",
+  "name": "titleText",
+  "problem_notes": [],
+  "see_also": [
+    "titleFadeOut",
+    "cutText",
+    "cutObj",
+    "allActiveTitleEffects",
+    "activeTitleEffectParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "text",
+          "type",
+          "speed",
+          "showInMap",
+          "isStructuredText"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "text to be displayed",
+              "name": "text",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\". See [[Title Effect Type]]s for more information about these values.",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) time in seconds to fade in resource",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to hide the text when the map is opened",
+              "name": "showInMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to switch support for [[Structured Text]] formatting - see {{Link|#Example 4}}",
+              "name": "isStructuredText",
+              "since": {
+                "arma3": "1.74"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

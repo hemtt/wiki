@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns true if the DLC (CDLC included) is marked as available on Steam.\nOfficial and Creator DLC appIds can be found on [[:Category:Arma 3: DLCs & Expansions|Arma 3: DLCs & Expansions]] and [[:Category:Arma 3: CDLCs|Arma 3: CDLCs]] pages.\n{{Feature|important|This command will return [[true]] if the DLC is owned, even if it is '''not''' installed!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _karts = 288520;\nisDLCAvailable _karts; // returns true\n</sqf>"
+  ],
+  "groups": [
+    "DLC"
+  ],
+  "id": "isDLCAvailable",
+  "name": "isDLCAvailable",
+  "problem_notes": [],
+  "see_also": [
+    "getDLCs",
+    "getObjectDLC",
+    "getPersonUsedDLCs",
+    "getMissionDLCs"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "appId"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "appId",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

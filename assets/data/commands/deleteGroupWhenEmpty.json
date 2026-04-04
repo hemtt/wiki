@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Local",
+  "description": "Marks given group for auto-deletion when group is empty.\n[[true]] will mark the group for auto-deletion once empty, [[false]] will simply unmark the group that was marked previously.\n{{Feature|important|This command does '''not''' prevent group deletion (through e.g [[deleteGroup]] or any engine group management).}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_group deleteGroupWhenEmpty true;</sqf>",
+    "Executed on the server:\n<sqf>\nif (local _group) then\n{\n\t_group deleteGroupWhenEmpty true;\n}\nelse // group is local to a client\n{\n\t[_group, true] remoteExec [\"deleteGroupWhenEmpty\", groupOwner _group];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "deleteGroupWhenEmpty",
+  "name": "deleteGroupWhenEmpty",
+  "problem_notes": [],
+  "see_also": [
+    "deleteGroup",
+    "isGroupDeletedWhenEmpty",
+    "createGroup",
+    "group",
+    "setGroupId",
+    "groupID",
+    "units",
+    "groupFromNetId",
+    "netId",
+    "leader",
+    "selectLeader",
+    "join",
+    "createCenter",
+    "createUnit",
+    "createVehicle",
+    "Side"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "delete"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to mark for auto-deletion on empty group, [[false]] to not use this auto-deletion system",
+          "name": "delete",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

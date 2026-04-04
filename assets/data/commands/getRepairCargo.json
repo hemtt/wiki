@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the amount (1 is full) of repair resources in the cargo space of a repair vehicle. {{Feature|informative|Since Arma 3 v1.96 the return value for vehicles that are not configured to have ability to repair other vehicles is -1. (Prior to that the value was negative infinity)}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>value = getRepairCargo vehicleName;</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "getRepairCargo",
+  "name": "getRepairCargo",
+  "problem_notes": [],
+  "see_also": [
+    "setRepairCargo",
+    "getAmmoCargo",
+    "getFuelCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "repair cargo value, -1 if repair cargo is not supported, 0 if the vehicle is ![[alive]] or [[isNull]]",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

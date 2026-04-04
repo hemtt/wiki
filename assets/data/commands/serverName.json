@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns name of the hosting server in MP, \"\" in SP.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"Welcome to the %1 server!\", serverName];</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "serverName",
+  "name": "serverName",
+  "problem_notes": [],
+  "see_also": [
+    "worldName",
+    "briefingName",
+    "missionName",
+    "worldSize"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "String"
+      }
+    }
+  ]
+}

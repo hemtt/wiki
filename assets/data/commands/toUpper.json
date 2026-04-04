@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts the supplied Unicode string to all uppercase characters. If the string doesn't have characters with [[toArray|codes]] > 255, use [[toUpperANSI]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint toUpper \"AaBb1\"; // returns \"AABB1\"</sqf>"
+  ],
+  "groups": [
+    "Strings"
+  ],
+  "id": "toUpper",
+  "name": "toUpper",
+  "problem_notes": [],
+  "see_also": [
+    "toString",
+    "toArray",
+    "toLower",
+    "toFixed",
+    "toLowerANSI",
+    "toUpperANSI"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "string"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "string",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

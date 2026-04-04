@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Create new item and store it to soldier's vest. The item can also be a weapon or a magazine.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player addItemToVest \"itemGPS\";</sqf>",
+    "<sqf>player addItemToVest \"hgun_Rook40_F\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "addItemToVest",
+  "name": "addItemToVest",
+  "problem_notes": [],
+  "see_also": [
+    "removeItemFromVest",
+    "addItemToBackpack",
+    "addItemToUniform"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the provided entity's layer ID.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"Entity %1 is in layer %2\", typeOf _entity, get3DENLayer _entity];</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENLayer",
+  "name": "get3DENLayer",
+  "problem_notes": [],
+  "see_also": [
+    "create3DENEntity",
+    "getMissionLayerEntities",
+    "set3DENLayer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "edenEntity"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "edenEntity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

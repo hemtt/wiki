@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the provided Thermal Imaging parameter's value.\n{{Feature|important|The settings are '''not''' saved in savegame and must be reapplied after loading.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nsetTIParameter [\"OutputRangeStart\", 0];\nsetTIParameter [\"OutputRangeWidth\", 1];\n</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "setTIParameter",
+  "name": "setTIParameter",
+  "problem_notes": [],
+  "see_also": [
+    "getTIParameters",
+    "setCamUseTI",
+    "disableTIEquipment"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "paramName",
+          "newValue"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the parameter name. See [[getTIParameters]] for a list of possible values",
+              "name": "paramName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "the set number",
+              "name": "newValue",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets limits of [[CT_SLIDER]] or [[CT_XSLIDER]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>sliderSetRange [101, 0, 100];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "sliderSetRange",
+  "name": "sliderSetRange",
+  "problem_notes": [],
+  "see_also": [
+    "sliderPosition",
+    "sliderRange",
+    "sliderSetPosition",
+    "sliderSetSpeed",
+    "sliderSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "min",
+          "max"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "idc of the control",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "minimal value",
+              "name": "min",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "maximum value",
+              "name": "max",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "min",
+            "max"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "minimal value",
+              "name": "min",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "maximum value",
+              "name": "max",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

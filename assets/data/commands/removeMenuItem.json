@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes a previously added menu item. \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "id": "removeMenuItem",
+  "name": "removeMenuItem",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "index of menu item to delete",
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets vertical position (y) of a 2D control. [[ctrlCommit]] is required to complete the operation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_ctrl ctrlSetPositionY 0.5;\n_ctrl ctrlCommit 1;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "ctrlSetPositionY",
+  "name": "ctrlSetPositionY",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetPosition",
+    "ctrlSetPositionX",
+    "ctrlSetPositionW",
+    "ctrlSetPositionH"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "y"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "2D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "vertical position of the control",
+          "name": "y",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Initiates the loading action on given weapon of the turret of a transport. So the new magazine is not available instantly, yet according to the reloadTime.<br>\nThe turret has to be manned. One can also change the magazine if its respective weapon is not selected.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player loadMagazine [[0], \"m256\", \"20Rnd_120mmHE_M1A2\"];</sqf>"
+  ],
+  "groups": [
+    "Weapons",
+    "Turrets"
+  ],
+  "id": "loadMagazine",
+  "name": "loadMagazine",
+  "problem_notes": [],
+  "see_also": [
+    "magazinesTurret",
+    "addMagazineTurret",
+    "reload",
+    "weaponState",
+    "setWeaponReloadingTime",
+    "weapons",
+    "magazines",
+    "Arma",
+    "3:",
+    "Actions#SwitchMagazine|SwitchMagazine"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "transport",
+          [
+            "turretPath",
+            "weaponName",
+            "magazineName"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "transport",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "name": "weaponName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "magazineName",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

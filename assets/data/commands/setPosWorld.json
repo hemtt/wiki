@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets position of an object based on the model's centre position (see [[getPosWorld]]).",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_obj setPosWorld getPosWorld _obj;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "setPosWorld",
+  "name": "setPosWorld",
+  "problem_notes": [],
+  "see_also": [
+    "getPosWorld",
+    "setPos",
+    "setPosATL",
+    "setPosASL",
+    "setPosASLW",
+    "setMarkerPos",
+    "setVehiclePosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": "Position3dASL"
+        }
+      }
+    }
+  ]
+}

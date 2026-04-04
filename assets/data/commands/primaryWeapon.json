@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns name of unit's primary weapon. This command will also return a weapon class name if the weapon is not used by the player, for example, it is on the unit's back. Use [[currentWeapon]] to get the weapon the unit is using.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_pWeap = primaryWeapon player;</sqf>",
+    "<sqf>hint primaryWeapon player; // \"arifle_MX_ACO_pointer_F\"</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "primaryWeapon",
+  "name": "primaryWeapon",
+  "problem_notes": [],
+  "see_also": [
+    "primaryWeaponMagazine",
+    "primaryWeaponItems",
+    "addPrimaryWeaponItem",
+    "removePrimaryWeaponItem",
+    "removeAllPrimaryWeaponItems",
+    "secondaryWeapon",
+    "handgunWeapon",
+    "currentWeapon",
+    "weapons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "weapon class name or \"\" if no primary weapon",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

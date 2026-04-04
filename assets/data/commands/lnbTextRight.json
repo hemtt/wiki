@@ -1,0 +1,100 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[CT_LISTNBOX]]'s right aligned cell text.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_text = _control lnbTextRight [0, 0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "id": "lnbTextRight",
+  "name": "lnbTextRight",
+  "problem_notes": [],
+  "see_also": [
+    "lnbSetTextRight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          [
+            "row",
+            "column"
+          ]
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "index of the row",
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "index of the column",
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            "row",
+            "column"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "index of the row",
+              "name": "row",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "index of the column",
+              "name": "column",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

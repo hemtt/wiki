@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes all special items from the unit.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>removeAllItems unitName;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "removeAllItems",
+  "name": "removeAllItems",
+  "problem_notes": [],
+  "see_also": [
+    "removeAllWeapons",
+    "removeMagazines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

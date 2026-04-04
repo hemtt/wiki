@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] when playing a game in '''solo multiplayer''' (for example Apex coop campaign PLAY SOLO option).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_state = isMultiplayerSolo;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "isMultiplayerSolo",
+  "name": "isMultiplayerSolo",
+  "problem_notes": [],
+  "see_also": [
+    "isMultiplayer",
+    "isDedicated",
+    "hasInterface",
+    "isServer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

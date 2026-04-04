@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current percentage of mass from items stored in a uniform relative to the maximum capacity of the uniform.<br>\nIt is equivalent to this formula:\n<sqf>private _loadUniform = massOfAllItemsInUniform / getContainerMaxLoad uniform player;</sqf>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _weight = loadUniform player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "loadUniform",
+  "name": "loadUniform",
+  "problem_notes": [],
+  "see_also": [
+    "load",
+    "loadAbs",
+    "loadBackpack",
+    "loadVest",
+    "getMass",
+    "weightRTD",
+    "getContainerMaxLoad"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

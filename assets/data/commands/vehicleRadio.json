@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Global",
+  "description": "Sends the audio message to the vehicle radio channel. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol. The transmission will play only on the PC where command was executed. If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]).\n{{Feature|informative|When transmitting unit gets killed, transmission will be interrupted. However when receiving unit gets killed, the transmission continues to play.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_soldierOne vehicleRadio \"messageOne\";</sqf>",
+    "<sqf>player vehicleRadio configName selectRandom (\"true\" configClasses (configFile >> \"CfgRadio\"));</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Sounds"
+  ],
+  "id": "vehicleRadio",
+  "name": "vehicleRadio",
+  "problem_notes": [],
+  "see_also": [
+    "sideRadio",
+    "groupRadio",
+    "customRadio",
+    "vehicleChat",
+    "globalRadio",
+    "directSay",
+    "commandRadio"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "radioName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to transmit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "class name from CfgRadio",
+          "name": "radioName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

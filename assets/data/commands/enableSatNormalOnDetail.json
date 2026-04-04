@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables/Disables satellite normal map or detail maps.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>enableSatNormalOnDetail true;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "enableSatNormalOnDetail",
+  "name": "enableSatNormalOnDetail",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "state"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns number of frame currently displayed.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_currFrameNo = diag_frameNo;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic",
+    "Performance Profiling"
+  ],
+  "id": "diag_frameNo",
+  "name": "diag_frameNo",
+  "problem_notes": [],
+  "see_also": [
+    "diag_fps",
+    "diag_fpsMin",
+    "diag_log",
+    "diag_tickTime",
+    "diag_deltaTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

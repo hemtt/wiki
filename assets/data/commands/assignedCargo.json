@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the list of soldiers assigned to the given vehicle as a cargo.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_list = assignedCargo _vehicleName;</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Object Manipulation"
+  ],
+  "id": "assignedCargo",
+  "name": "assignedCargo",
+  "problem_notes": [],
+  "see_also": [
+    "assignAsCargo",
+    "assignAsGunner",
+    "assignAsCommander",
+    "assignAsDriver",
+    "moveInCargo",
+    "moveInGunner",
+    "moveInCommander",
+    "moveInDriver",
+    "assignAsTurret",
+    "gunner",
+    "commander",
+    "driver",
+    "moveInTurret",
+    "assignedGunner",
+    "assignedCommander",
+    "assignedDriver"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

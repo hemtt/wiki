@@ -9,6 +9,7 @@
     "Diagnostic",
     "Performance Profiling"
   ],
+  "id": "diag_fps",
   "name": "diag_fps",
   "problem_notes": [],
   "see_also": [

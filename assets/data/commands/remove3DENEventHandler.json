@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes Eden Editor event handler of given type and ID.\n<br><br>\nSee the list of all [[Arma_3:_Event_Handlers:_Eden_Editor|Eden Editor Event Handlers]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\neh = add3DENEventHandler [\"onUndo\",{systemChat \"Zip...\"}];\nremove3DENEventHandler [\"onUndo\",eh];\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor",
+    "Event Handlers"
+  ],
+  "id": "remove3DENEventHandler",
+  "name": "remove3DENEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENEventHandler",
+    "removeAll3DENEventHandlers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "id"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of event handler",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "ID of event handler, returned by [[add3DENEventHandler]]",
+              "name": "id",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

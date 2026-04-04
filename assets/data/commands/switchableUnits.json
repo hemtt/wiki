@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a list of playable units available for switching to\n* Command is relative to the client on which it is executed and will only show playable units for the same [[side]] as [[player]]'s [[group]] + [[player]] himself\n* In singleplayer where playable units from all sides will be accessible via this command\n* Dead and player-controlled units are automatically removed from the resulting array\n* In order to get all ''playable'' units regardless of their [[side]], see the [[playableUnits]] command",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_availableUnits = switchableUnits;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer",
+    "Team Switch",
+    "Object Detection"
+  ],
+  "id": "switchableUnits",
+  "name": "switchableUnits",
+  "problem_notes": [],
+  "see_also": [
+    "Team",
+    "Switch",
+    "playableUnits",
+    "allPlayers",
+    "teamSwitch"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

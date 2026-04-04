@@ -11,6 +11,7 @@
   "groups": [
     "Diagnostic"
   ],
+  "id": "diag_log",
   "name": "diag_log",
   "problem_notes": [],
   "see_also": [

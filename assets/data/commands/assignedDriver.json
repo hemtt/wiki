@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the soldier assigned to the given vehicle as a driver.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_driver = assignedDriver vehicleName;</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Object Manipulation"
+  ],
+  "id": "assignedDriver",
+  "name": "assignedDriver",
+  "problem_notes": [],
+  "see_also": [
+    "assignAsDriver",
+    "assignAsGunner",
+    "assignAsTurret",
+    "assignAsCommander",
+    "moveInDriver",
+    "moveInGunner",
+    "moveInTurret",
+    "moveInCommander",
+    "driver",
+    "gunner",
+    "moveInCargo",
+    "commander",
+    "assignAsCargo",
+    "assignedGunner",
+    "assignedCargo",
+    "assignedCommander"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

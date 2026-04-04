@@ -9,6 +9,7 @@
     "Diagnostic",
     "Performance Profiling"
   ],
+  "id": "diag_scope",
   "name": "diag_scope",
   "problem_notes": [],
   "see_also": [

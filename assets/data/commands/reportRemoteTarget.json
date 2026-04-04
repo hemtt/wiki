@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Local",
+  "description": "Shares the target vehicle via datalink to the [[Side]] center for a given time.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>blufor reportRemoteTarget [vehicle player, 60];</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "id": "reportRemoteTarget",
+  "name": "reportRemoteTarget",
+  "problem_notes": [],
+  "see_also": [
+    "setVehicleRadar",
+    "vehicleReportRemoteTargets",
+    "setVehicleReportRemoteTargets",
+    "vehicleReceiveRemoteTargets",
+    "setVehicleReceiveRemoteTargets",
+    "vehicleReportOwnPosition",
+    "setVehicleReportOwnPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "side",
+          [
+            "target",
+            "time"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "target",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "name": "time",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

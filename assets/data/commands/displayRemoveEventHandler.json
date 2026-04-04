@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove a given event handler from the given display.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 46 displayRemoveEventHandler [\"keyDown\",5];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Event Handlers",
+    "Event Handlers"
+  ],
+  "id": "displayRemoveEventHandler",
+  "name": "displayRemoveEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "disableSerialization",
+    "Display",
+    "displayAddEventHandler",
+    "displayRemoveAllEventHandlers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "display",
+          [
+            "handlerType",
+            "id"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "type of the event handler",
+              "name": "handlerType",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "index of the event handler",
+              "name": "id",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

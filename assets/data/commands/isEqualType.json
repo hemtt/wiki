@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Compares two values' types. A much faster alternative to <sqf inline>typeName a == typeName b</sqf>.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _var = [1,2,3];\n_var isEqualType 0; // false\n_var isEqualType []; // true\n</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "isEqualType",
+  "name": "isEqualType",
+  "problem_notes": [],
+  "see_also": [
+    "isEqualTypeAll",
+    "isEqualTypeArray",
+    "isEqualTypeAny",
+    "isEqualTypeParams",
+    "param",
+    "params",
+    "isEqualTo",
+    "typeName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "val1",
+          "val2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "val1",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "val2",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

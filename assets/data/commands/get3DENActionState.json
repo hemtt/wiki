@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns state of given [[Eden Editor: Actions|Eden Editor action]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (get3DENActionState \"ToggleMap\" == 1) then {systemChat \"Editor map is open!\"};</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENActionState",
+  "name": "get3DENActionState",
+  "problem_notes": [],
+  "see_also": [
+    "do3DENAction"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "action"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[Eden Editor: Actions]]",
+          "name": "action",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

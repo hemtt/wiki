@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the waypoint's loiter radius.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_radius = waypointLoiterRadius [groupOne, 1];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "waypointLoiterRadius",
+  "name": "waypointLoiterRadius",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "setWaypointCompletionRadius",
+    "setWaypointPosition",
+    "setWaypointTimeout",
+    "setWaypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "currentWaypoint"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@
   "groups": [
     "Unit Inventory"
   ],
+  "id": "ammo",
   "name": "ammo",
   "problem_notes": [],
   "see_also": [

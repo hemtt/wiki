@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes selection in [[:Category:Eden Editor|Eden Editor]] to what is inside entities array. {{Feature|warning|This command will trigger the 3DEN event handler '''\"OnSelectionChange\"'''. Do not use it inside this event handler!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>set3DENSelected [0,5,3,6,7,12];</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "set3DENSelected",
+  "name": "set3DENSelected",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENMouseOver",
+    "all3DENEntities",
+    "collect3DENHistory",
+    "get3DENEntityID",
+    "get3DENSelected",
+    "set3DENObjectType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entities"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "entities",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenEntity"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenID"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

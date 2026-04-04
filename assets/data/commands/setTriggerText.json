@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets the text label attached to the trigger object. This is used for example as a radio slot label for radio activated triggers.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>trigger setTriggerText \"Call for support\";</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "setTriggerText",
+  "name": "setTriggerText",
+  "problem_notes": [],
+  "see_also": [
+    "triggerText",
+    "createTrigger",
+    "setTriggerActivation",
+    "setTriggerArea",
+    "setTriggerStatements",
+    "setTriggerTimeout",
+    "setTriggerType",
+    "triggerInterval",
+    "setTriggerInterval",
+    "enableSimulation",
+    "simulationEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "trigger",
+          "text"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

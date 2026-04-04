@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return list of datalink targets and time for which they will be/were known.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>listRemoteTargets opfor;</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "id": "listRemoteTargets",
+  "name": "listRemoteTargets",
+  "problem_notes": [],
+  "see_also": [
+    "listVehicleSensors",
+    "enableVehicleSensor",
+    "isVehicleRadarOn",
+    "isVehicleSensorEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "side"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "desc": null,
+                  "name": "remoteTarget",
+                  "since": null,
+                  "type": "Object"
+                },
+                {
+                  "desc": null,
+                  "name": "lastDetected",
+                  "since": null,
+                  "type": "Number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      }
+    }
+  ]
+}

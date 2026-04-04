@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks whether the given FSM is completed. The FSM handle is the number returned by the [[execFSM]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_completed = completedFSM _fsmHandle;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "completedFSM",
+  "name": "completedFSM",
+  "problem_notes": [],
+  "see_also": [
+    "FSM",
+    "commandFSM",
+    "doFSM",
+    "execFSM",
+    "getFSMVariable",
+    "setFSMVariable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "fsmHandle"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "fsmHandle",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

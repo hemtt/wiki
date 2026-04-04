@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes item from soldier's backpack.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeItemFromBackpack \"itemGPS\";</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "removeItemFromBackpack",
+  "name": "removeItemFromBackpack",
+  "problem_notes": [],
+  "see_also": [
+    "removeItemFromUniform",
+    "removeItemFromVest",
+    "removeItemFromPrimaryWeapon",
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

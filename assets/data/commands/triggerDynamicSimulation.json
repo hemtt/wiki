@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Controls the ability of given unit to activate entities with disabled [[Arma 3: Dynamic Simulation]]. If [[false]] dynamically disabled entities will not be activated by this unit's presence. This command has the same effect as the [[:Category:Eden Editor|Eden Editor]] attribute ''Wake-Up Dynamic Simulation''.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player triggerDynamicSimulation false;</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "id": "triggerDynamicSimulation",
+  "name": "triggerDynamicSimulation",
+  "problem_notes": [],
+  "see_also": [
+    "enableDynamicSimulationSystem",
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef",
+    "canTriggerDynamicSimulation",
+    "enableSimulation",
+    "simulationEnabled",
+    "enableSimulationGlobal",
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "trigger"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "trigger",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets the object position above sea surface. The pos array uses the [[Position#PositionASLW|PositionASLW]] format.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_diver setPosASLW [(position _diver) select 0, (position _diver) select 1, -10];</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "setPosASLW",
+  "name": "setPosASLW",
+  "problem_notes": [],
+  "see_also": [
+    "getPosASLW",
+    "setPosASL",
+    "setPosATL",
+    "setPos",
+    "setPosWorld"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "pos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "pos",
+          "type": "Position3dASLW"
+        }
+      }
+    }
+  ]
+}

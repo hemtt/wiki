@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns if the given soldier is able to stand up. It only checks for the unit's legs and not its alive/dead status - it can return [[true]] for a dead unit.\n{{Feature|arma3|Since {{arma3}} v1.60 and the introduction of limping, this command always returns [[true]] for humans.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "[[SQS Syntax|SQS]]:\n<sqs>? (not canStand player) : player groupChat \"My legs! They hit my legs!\"</sqs>",
+    "<sqf>\nif (not canStand player) then\n{\n\tplayer groupChat \"My legs! They hit my legs!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "canStand",
+  "name": "canStand",
+  "problem_notes": [],
+  "see_also": [
+    "canMove",
+    "canFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "[[true]] if the unit is human and is still able to stand up, [[false]] otherwise.",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

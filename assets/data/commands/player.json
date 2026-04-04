@@ -8,6 +8,7 @@
   "groups": [
     "Object Manipulation"
   ],
+  "id": "player",
   "name": "player",
   "problem_notes": [
     "In multiplayer, the command is not initialised in functions called by initline or init eventhandlers."

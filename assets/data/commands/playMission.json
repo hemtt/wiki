@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "The mission is launched (from the main menu).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>playMission [\"XOutrage\", \"x05Negotiator.Noe\"];</sqf>",
+    "<sqf>playMission [\"\", configFile >> \"CfgMissions\" >> \"Missions\" >> \"Armory1\"];</sqf>",
+    "<sqf>playMission [\"\", \"\\A3\\Missions_F_Bootcamp\\Scenarios\\Arsenal.VR\"];</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "playMission",
+  "name": "playMission",
+  "problem_notes": [],
+  "see_also": [
+    "hostMission",
+    "playScriptedMission",
+    "createMissionDisplay",
+    "createMPCampaignDisplay"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "campaign",
+          "mission",
+          "skipBriefing"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "directory of Campaign, if empty a single mission is launched",
+              "name": "campaign",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "directory if a string",
+              "name": "mission",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Config"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional) If true, the intro and briefing are skipped.",
+              "name": "skipBriefing",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

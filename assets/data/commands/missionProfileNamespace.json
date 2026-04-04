@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "This namespace has the same lifetime as [[profileNamespace]] but is also connected to the mission it is saved from. See [[saveMissionProfileNamespace]] for more details.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _currentMissionProfileNamespace = missionProfileNamespace;</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "Variables"
+  ],
+  "id": "missionProfileNamespace",
+  "name": "missionProfileNamespace",
+  "problem_notes": [],
+  "see_also": [
+    "missionNamespace",
+    "profileNamespace",
+    "saveMissionProfileNamespace",
+    "isMissionProfileNamespaceLoaded"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "namespace",
+        "type": "Namespace"
+      }
+    }
+  ]
+}

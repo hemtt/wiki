@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Local",
+  "description": "Takes array of row indices as a parameter and removes rows with those indices. Indices of remaining rows will be recomputed.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_control ctRemoveRows [0, 1, 2];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "id": "ctRemoveRows",
+  "name": "ctRemoveRows",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            "indexN"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "name": "indexN",
+                  "type": "Number"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

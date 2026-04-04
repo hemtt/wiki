@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the current server instance's settings from {{Link|Arma 3: Server Config File|server config}}.\n{{Feature|informative|Player-hosted (non-dedicated) servers have fewer entries as they do not use a server config file.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _serverInfo = getServerInfo;\n\n// example result:\n/*\n[\n\t[\"admins\", [\"01234\", \"56789\"]],\n\t[\"autoSelectMission\", false],\n\t[\"battlEye\", false],\n\t[\"disconnectTimeout\", 0],\n\t[\"estimateTimeLeft\", 15],\n\t[\"forcedDifficulty\", \"Wolf\"],\n\t[\"hasPasswordAdmin\", true],\n\t[\"hostname\", \"Test Server\"],\n\t[\"isLocked\", false],\n\t[\"maxDesync\", 90000],\n\t[\"maxPacketLoss\", 2000],\n\t[\"maxPing\", 8000],\n\t[\"maxPlayers\", 64],\n\t[\"missionHeader\", [[\"fileName\", \"DbgZeus4P.VR\"], [\"name\", \"DbgConsole4PZeus\"], [\"description\", \"\"], [\"fileSize\", \"7461\"], [\"steamId\", \"0\"], [\"fileCRC\", \"99816a4\"]]],\n\t[\"motd\", []],\n\t[\"overrideHazeQuality\", 0],\n\t[\"password\", \"\"],\n\t[\"persistent\", true],\n\t[\"randomMissionOrder\", false],\n\t[\"requiredBuild\", 0],\n\t[\"verifySignatures\", 0],\n\t[\"zeusCompositionScriptLevel\", 2]\n]\n*/\n</sqf>",
+    "<sqf>\nif (!isServer) exitWith {};\n\nif (getServerInfo get \"password\" != \"\") then\n{\n\t[\"Welcome, I see you had the password ready!\"] remoteExec [\"hint\"];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "getServerInfo",
+  "name": "getServerInfo",
+  "problem_notes": [],
+  "see_also": [
+    "admin",
+    "allUsers",
+    "estimatedTimeLeft"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "HashMapUnknown"
+      }
+    }
+  ]
+}

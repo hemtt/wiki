@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the forecast fog value. A value of 0 means no fog, 1 means maximum fog.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_level = fogForecast;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "fogForecast",
+  "name": "fogForecast",
+  "problem_notes": [],
+  "see_also": [
+    "fogParams",
+    "fog",
+    "setFog",
+    "nextWeatherChange"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

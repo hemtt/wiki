@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[a && b]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Returns [[true]] only if both conditions are [[true]].\nIn case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used - if left operand is [[false]], evaluation of the right side is ignored.",
   "effect_loc": "Unspecified",
@@ -10,6 +13,7 @@
     "Variables",
     "Math"
   ],
+  "id": "and",
   "name": "and",
   "problem_notes": [],
   "see_also": [

@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets 3D control model scale",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrl3D ctrlSetModelScale 1.5;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object",
+    "GUI Control - Positioning"
+  ],
+  "id": "ctrlSetModelScale",
+  "name": "ctrlSetModelScale",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlModelDirAndUp",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlSetModelDirAndUp",
+    "ctrlModelScale",
+    "ctrlPosition",
+    "ctrlScale",
+    "ctrlSetScale",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "vectorDir",
+    "vectorUp",
+    "setVectorDirAndUp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "scale"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "scale",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

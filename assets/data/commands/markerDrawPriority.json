@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns marker draw priority.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>markerDrawPriority \"MarkerOne\"</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "markerDrawPriority",
+  "name": "markerDrawPriority",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerDrawPriority",
+    "setMarkerType",
+    "setMarkerTypeLocal",
+    "markerType",
+    "setMarkerAlphaLocal",
+    "setMarkerBrush",
+    "setMarkerColor",
+    "setMarkerDir",
+    "setMarkerPos",
+    "setMarkerShape",
+    "setMarkerSize",
+    "setMarkerText",
+    "createMarker",
+    "CfgMarkers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "desc": "draw priority",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

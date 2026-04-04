@@ -8,6 +8,7 @@
   "groups": [
     "Diagnostic"
   ],
+  "id": "diag_toggle",
   "name": "diag_toggle",
   "problem_notes": [],
   "see_also": [

@@ -12,6 +12,7 @@
     "Unit Control",
     "Weapons"
   ],
+  "id": "fire",
   "name": "fire",
   "problem_notes": [],
   "see_also": [

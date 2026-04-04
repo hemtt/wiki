@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the object position height above water surface (waves and pond objects included).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_pos = getPosASLW _diver;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "getPosASLW",
+  "name": "getPosASLW",
+  "problem_notes": [],
+  "see_also": [
+    "setPosASLW",
+    "position",
+    "getPos",
+    "getPosATL",
+    "getPosASL",
+    "visiblePosition",
+    "visiblePositionASL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "obj"
+      },
+      "ret": {
+        "type": "Position3dASLW"
+      },
+      "right": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the custom radio channel's label.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>5 radioChannelSetLabel \"Q-dance Radio\";</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Custom Radio and Chat"
+  ],
+  "id": "radioChannelSetLabel",
+  "name": "radioChannelSetLabel",
+  "problem_notes": [],
+  "see_also": [
+    "radioChannelAdd",
+    "radioChannelCreate",
+    "radioChannelRemove",
+    "radioChannelSetCallSign"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "customChannelID",
+          "label"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[Channel IDs|custom channel ID]] returned by [[radioChannelCreate]] command",
+          "name": "customChannelID",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "label",
+          "name": "label",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

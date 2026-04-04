@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns currently selected user chat channel on the UI (selected with {{Controls|<}} and {{Controls|>}} in multiplayer).\n{{{!}} class=\"wikitable align-center\"\n! colspan=\"13\" {{!}} [[Channel IDs|channel ID]] number correspondence\n{{!}}-\n{{!}} {{n/a}}\n{{!}} Global\n{{!}} Side\n{{!}} Command\n{{!}} Group\n{{!}} Vehicle\n{{!}} Direct\n{{!}} Custom1\n{{!}} rowspan=\"2\" {{!}} ..\n{{!}} Custom10\n{{!}} {{GVI|arma3|2.22|size= 0.75}} Custom11\n{{!}} rowspan=\"2\" {{!}} ..\n{{!}} Custom50\n{{!}}-\n{{!}} -1\n{{!}} 0\n{{!}} 1\n{{!}} 2\n{{!}} 3\n{{!}} 4\n{{!}} 5\n{{!}} 6\n{{!}} 15\n{{!}} 26\n{{!}} 65\n{{!}}}\n\nFor Custom Radio, see [[radioChannelCreate]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_selected = currentChannel; // 3 for the Group channel</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "currentChannel",
+  "name": "currentChannel",
+  "problem_notes": [],
+  "see_also": [
+    "setCurrentChannel",
+    "getPlayerChannel",
+    "enableChannel",
+    "channelEnabled",
+    "radioChannelCreate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "channel ID (see [[BIS_fnc_channelNumToRadioChannelID]], [[BIS_fnc_radioChannelIDToChannelNum]])",
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -1,4 +1,7 @@
 {
+  "alias": [
+    "[[a % b]]"
+  ],
   "argument_loc": "Unspecified",
   "description": "Remainder of a divided by b.",
   "effect_loc": "Unspecified",
@@ -8,6 +11,7 @@
   "groups": [
     "Math"
   ],
+  "id": "mod",
   "name": "mod",
   "problem_notes": [],
   "see_also": [

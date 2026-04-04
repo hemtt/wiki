@@ -1,0 +1,134 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of all components available to given object info panel.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// returns array of all components configured for _helicopter pilot seat\nprivate _componentsData = [_helicopter, [-1]] infoPanelComponents \"left\";\n</sqf>"
+  ],
+  "groups": [
+    "Custom Panels"
+  ],
+  "id": "infoPanelComponents",
+  "name": "infoPanelComponents",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Custom",
+    "Info",
+    "infoPanel",
+    "infoPanels",
+    "setInfoPanel",
+    "enableInfoPanelComponent",
+    "infoPanelComponentEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "panelID"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the concerned vehicle",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "component classname as defined in object/vehicle config",
+              "name": "className",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "componentType - component type",
+              "name": "componentType",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "boolean flag that shows if component is currently accessible (lack of required item can make it temporarily inaccessible)",
+              "name": "isAccessible",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "\"left\" or \"right\" can be used as panel names",
+          "name": "panelID",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          [
+            "unit",
+            "turretPath"
+          ],
+          "panelID"
+        ]
+      },
+      "left": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the concerned vehicle",
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "turret index",
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "component classname as defined in object/vehicle config",
+              "name": "className",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "componentType - component type",
+              "name": "componentType",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "boolean flag that shows if component is currently accessible (lack of required item can make it temporarily inaccessible)",
+              "name": "isAccessible",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "\"left\" or \"right\" can be used as panel names",
+          "name": "panelID",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

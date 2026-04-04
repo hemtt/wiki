@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the set PiP (Picture-in-Picture) view distance (that can be set by [[setPiPViewDistance]]).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _pipViewDistance = getPiPViewDistance;</sqf>",
+    "<sqf>private _pipViewDistanceRatio = getPiPViewDistance / viewDistance;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "getPiPViewDistance",
+  "name": "getPiPViewDistance",
+  "problem_notes": [],
+  "see_also": [
+    "setPiPViewDistance",
+    "setViewDistance",
+    "setObjectViewDistance",
+    "viewDistance",
+    "getObjectViewDistance"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

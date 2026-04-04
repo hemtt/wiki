@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the list of objects in the given selection preset. Only [[Object]] is supported in selection presets, unlike [[curatorSelected]] which also returns the selected [[Group]], [[Waypoint]], and Marker [[String]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>1 setCuratorSelectionPreset [object1, object2];</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "setCuratorSelectionPreset",
+  "name": "setCuratorSelectionPreset",
+  "problem_notes": [],
+  "see_also": [
+    "curatorSelectionPreset",
+    "loadCuratorSelectionPreset",
+    "curatorSelected",
+    "setCuratorSelected",
+    "addCuratorSelected",
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "numkey",
+          "objects"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "number key under which the selection preset is saved",
+          "name": "numkey",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "objects to save to the selection preset",
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

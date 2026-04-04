@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Dumps the bytecode as {{arma3}} sees it, in a diff friendly way. Useful for testing custom [[SQF Bytecode|SQFC]] compilers.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_SQFCDebugDump [\"P:/test.sqfc\", \"P:/dump\"];</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_SQFCDebugDump",
+  "name": "diag_SQFCDebugDump",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "sourcePath",
+          "targetPath"
+        ]
+      },
+      "ret": {
+        "desc": "compiled expression (If parsing was successful)",
+        "type": "Code"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "Path to file on drive that should be read",
+              "name": "sourcePath",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "Path to file on drive to output to",
+              "name": "targetPath",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

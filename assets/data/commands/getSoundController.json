@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns value of the given sound controller.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player getSoundController \"rpm\"; //600</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "getSoundController",
+  "name": "getSoundController",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Sound",
+    "getAllSoundControllers",
+    "getSoundControllerResult",
+    "getEnvSoundController",
+    "getAllEnvSoundControllers",
+    "getCustomSoundController",
+    "setCustomSoundController",
+    "getCustomSoundControllerCount"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "controller"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "must be a vehicle (does not work on soldiers)",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of sound controller, for example \"rpm\" or \"thrust\".",
+          "name": "controller",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

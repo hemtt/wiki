@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the provided control model's [[vectorSide]] in 3D-[[Arma: GUI Configuration|Dialogs]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _vectorSide = ctrlModelVectorSide _control3D;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object"
+  ],
+  "id": "ctrlModelVectorSide",
+  "name": "ctrlModelVectorSide",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlModelDirAndUp",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlSetModelDirAndUp",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlSetModelScale",
+    "ctrlModelScale",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "displayCtrl"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "desc": "[[vectorSide]] of the model or empty array if ''control'' is null",
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

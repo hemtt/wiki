@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects {{hl|length}} characters of edit control from the {{hl|start}} position and places cursor at the end of selection.\n{{Feature|informative|To only move the cursor, set ''length'' to 0. To select text from right to left, use negative ''length'' (See [[ctrlTextSelection]] for more info)}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetTextSelection [5, 10];</sqf>",
+    "<sqf>\ndisableSerialization;\nprivate _ctrl = findDisplay 46 createDisplay \"RscDisplayEmpty\" ctrlCreate [\"RscEditMulti\", -1];\n_ctrl ctrlSetPosition [0,0,0.5,0.3];\n_ctrl ctrlCommit 0;\n_ctrl ctrlSetText \"Hello World\";\n_ctrl ctrlSetTextSelection [6, 5]; // selects World\nctrlSetFocus _ctrl;\n</sqf>",
+    "Select text from right to left:\n<sqf>_control ctrlSetTextSelection [5, -4];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlSetTextSelection",
+  "name": "ctrlSetTextSelection",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlTextSelection",
+    "ctrlSetText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "start",
+            "length"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "selection start position",
+              "name": "start",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "length of characters to select (0 to only move the cursor). Negative length will select text from right to left (see example 3)",
+              "name": "length",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

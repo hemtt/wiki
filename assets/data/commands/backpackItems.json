@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get array with all items (of any kind, even weapons) in backpack of the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>backpackItems player; // returns e.g [\"hgun_P07_F\", \"Titan_AT\"]</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "backpackItems",
+  "name": "backpackItems",
+  "problem_notes": [],
+  "see_also": [
+    "uniformItems",
+    "vestItems",
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

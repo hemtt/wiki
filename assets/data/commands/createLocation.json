@@ -1,0 +1,119 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a location of the specified class and dimensions at the specified position.\nClasses are defined in {{hl|CfgLocationTypes}}; for possible location types see [[Location#Location Types|Location Types]].<br>\nThe alternative syntax allows to convert a non-editable (built-in) terrain location into an editable one, with the following restrictions:\n* it cannot be deleted (but can be [[setType]] to \"Invisible\" to hide it)\n* it cannot be moved",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_location = createLocation [\"NameVillage\", [4035,2151,10], 100, 100];</sqf>",
+    "<sqf>\n_location = createLocation [\"NameVillage\", [4035,2151,10], 30, 30];\n_location setText \"Player town\";\n</sqf>",
+    "<sqf>\nprivate _terrainLocation = nearestLocation [player, \"nameCity\"];\t// assuming it returns a built-in location\n_terrainLocation setType \"Invisible\";\t\t\t\t\t\t\t\t// does not do anything\nprivate _editableLocation = createLocation [_terrainLocation];\t\t// does the conversion\n_editableLocation setType \"Invisible\";\t\t\t\t\t\t\t\t// hides the location\n</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "id": "createLocation",
+  "name": "createLocation",
+  "problem_notes": [],
+  "see_also": [
+    "setText",
+    "nearestLocation",
+    "nearestLocations",
+    "locationPosition",
+    "nearestLocationWithDubbing",
+    "setRectangular",
+    "rectangular",
+    "size"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "className",
+          "position",
+          "sizeX",
+          "sizeY"
+        ]
+      },
+      "ret": {
+        "type": "Location"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "className",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position2d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position3d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "in meters",
+              "name": "sizeX",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in meters",
+              "name": "sizeY",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "location"
+        ]
+      },
+      "ret": {
+        "desc": "a script-editable location",
+        "type": "Location"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "a terrain's location. If a scripted location is provided, it is simply returned",
+              "name": "location",
+              "type": "Location"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.10"
+      }
+    }
+  ]
+}

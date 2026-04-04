@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the parent control of a given child control. If the control is not part of a [[CT_CONTROLS_GROUP]] control then [[controlNull]] is returned. To return parent [[Display]] of the control use [[ctrlParent]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_ctrlCombo = _ctrl controlsGroupCtrl 100; // control\nctrlParentControlsGroup _ctrlCombo; // parent control group (_ctrl)\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlParentControlsGroup",
+  "name": "ctrlParentControlsGroup",
+  "problem_notes": [],
+  "see_also": [
+    "controlsGroupCtrl",
+    "ctrlParent",
+    "displayParent",
+    "allControls",
+    "allDisplays"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ctrl"
+      },
+      "ret": {
+        "type": "Control"
+      },
+      "right": {
+        "Item": {
+          "desc": "child control",
+          "name": "ctrl",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

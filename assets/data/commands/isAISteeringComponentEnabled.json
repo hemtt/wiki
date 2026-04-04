@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns whether the [[useAISteeringComponent|AI steering component]] feature is enabled for the specified vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>isAISteeringComponentEnabled myTank;</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "isAISteeringComponentEnabled",
+  "name": "isAISteeringComponentEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "useAISteeringComponent",
+    "isUsingAISteeringComponent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "[[true]] if AI steering component is supported by the vehicle (i.e. defined in config) and enabled, [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

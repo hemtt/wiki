@@ -8,6 +8,7 @@
   "groups": [
     "Program Flow"
   ],
+  "id": "goto",
   "name": "goto",
   "problem_notes": [],
   "see_also": [

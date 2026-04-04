@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the unit's table of scores (infantry kills, soft vehicle kills, armor kills, air kills, deaths, total score) '''in multiplayer''' or an empty array in singleplayer.\n{{Feature|important|This command does not work (returns empty array) if the unit's side has been changed (e.g <sqf inline>[player] joinSilent createGroup east</sqf>).}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ngetPlayerScores BIS_player1;\t// e.g [4, 0, 3, 1, 2, 16]\n\t\t\t\t\t\t\t\t// or in SP: []\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "getPlayerScores",
+  "name": "getPlayerScores",
+  "problem_notes": [],
+  "see_also": [
+    "score",
+    "addScore",
+    "scoreSide",
+    "addScoreSide",
+    "addPlayerScores"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "number of infantry units killed",
+              "name": "killsInfantry",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "number of soft vehicles killed",
+              "name": "killsSoft",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "number of armored vehicles killed",
+              "name": "killsArmor",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "number of air vehicles killed",
+              "name": "killsAir",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "total score",
+              "name": "score",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

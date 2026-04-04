@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Global",
+  "description": "Gets the angular velocity of the object in world space as a 3D vector. The units are in Rad/s (radians per second) and rotations are clockwise.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>angularVelocity myHeli; // [0.01, 0.03, 0.95]</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "angularVelocity",
+  "name": "angularVelocity",
+  "problem_notes": [],
+  "see_also": [
+    "velocity",
+    "setAngularVelocity",
+    "angularVelocityModelSpace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "obj"
+      },
+      "ret": {
+        "desc": "angular velocity of the object in world space ([0,0,0] if angular velocity is not supported by the object)",
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}
