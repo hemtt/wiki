@@ -57,8 +57,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]])",
+              "default": "false",
+              "desc": "",
               "name": "preserveElevation",
+              "optional": true,
               "type": "Boolean"
             }
           }

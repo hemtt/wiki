@@ -26,18 +26,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "position in text selection started",
               "name": "start",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "number of the highlighted characters (this number could be negative, see description)",
               "name": "length",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "selected text",
               "name": "selectedText",
               "since": null,

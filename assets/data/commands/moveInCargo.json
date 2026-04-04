@@ -85,8 +85,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) try to move ''unit'' into the first free ''vehicle'' cargo seat if ''cargoIndex'' is already occupied",
+              "default": "true",
+              "desc": "try to move ''unit'' into the first free ''vehicle'' cargo seat if ''cargoIndex'' is already occupied",
               "name": "canReassign",
+              "optional": true,
               "since": {
                 "arma3": "2.8"
               },

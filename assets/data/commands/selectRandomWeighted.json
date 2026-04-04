@@ -35,12 +35,14 @@
           "type": {
             "ArraySized": [
               {
+                "default": null,
                 "desc": "weighted value",
                 "name": "valueN",
                 "since": null,
                 "type": "Anything"
               },
               {
+                "default": null,
                 "desc": "values relative weight",
                 "name": "weightN",
                 "since": null,

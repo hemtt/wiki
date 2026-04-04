@@ -27,6 +27,7 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "vertical",
               "since": null,
@@ -38,6 +39,7 @@
               }
             },
             {
+              "default": null,
               "desc": null,
               "name": "horizontal",
               "since": null,

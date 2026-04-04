@@ -28,18 +28,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "fire mode's display name",
               "name": "fireMode",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "used ammo display name (not class name)",
               "name": "ammo",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "always 0",
               "name": "zero",
               "since": null,

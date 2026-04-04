@@ -67,8 +67,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) animate immediately",
+              "default": "false",
+              "desc": "animate immediately",
               "name": "instant",
+              "optional": true,
               "type": "Boolean"
             }
           }

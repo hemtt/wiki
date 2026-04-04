@@ -30,18 +30,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "ambientLife",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "ambientSound",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "see [[enableEnvironment]]",
               "name": "windyCoef",
               "since": {

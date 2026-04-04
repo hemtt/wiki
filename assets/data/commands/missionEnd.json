@@ -25,18 +25,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "the ending that was passed to [[failMission]] or [[endMission]]",
               "name": "endType",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "[[true]] if the mission ended via [[failMission]], [[false]] if via [[endMission]]",
               "name": "failMission",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "engine idea of how mission ended. For example if mission ended via [[failMission]] but the type of ending was not \"Killed\", ''isFailed'' is [[false]]",
               "name": "isFailed",
               "since": null,

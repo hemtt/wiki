@@ -53,8 +53,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 0) slider step",
+              "default": "0",
+              "desc": "slider step",
               "name": "step",
+              "optional": true,
               "type": "Number"
             }
           }
@@ -99,8 +101,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 0) slider step",
+              "default": "0",
+              "desc": "slider step",
               "name": "step",
+              "optional": true,
               "type": "Number"
             }
           }

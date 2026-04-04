@@ -54,8 +54,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]])",
+              "default": "true",
+              "desc": "",
               "name": "removeCrew",
+              "optional": true,
               "type": "Boolean"
             }
           }

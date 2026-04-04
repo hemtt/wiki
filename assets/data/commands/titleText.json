@@ -54,22 +54,28 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default -1) time in seconds to fade in resource",
+              "default": "-1",
+              "desc": "time in seconds to fade in resource",
               "name": "speed",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) [[false]] to hide the text when the map is opened",
+              "default": "true",
+              "desc": "[[false]] to hide the text when the map is opened",
               "name": "showInMap",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to switch support for [[Structured Text]] formatting - see {{Link|#Example 4}}",
+              "default": "false",
+              "desc": "[[true]] to switch support for [[Structured Text]] formatting - see {{Link|#Example 4}}",
               "name": "isStructuredText",
+              "optional": true,
               "since": {
                 "arma3": "1.74"
               },

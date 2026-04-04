@@ -22,6 +22,7 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "the library disclaimer",
               "name": "text",
               "since": null,

@@ -28,6 +28,7 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "objects",
               "since": null,
@@ -38,6 +39,7 @@
               }
             },
             {
+              "default": null,
               "desc": null,
               "name": "groups",
               "since": null,
@@ -48,12 +50,14 @@
               }
             },
             {
+              "default": null,
               "desc": null,
               "name": "waypoints",
               "since": null,
               "type": "Waypoint"
             },
             {
+              "default": null,
               "desc": null,
               "name": "markers",
               "since": null,

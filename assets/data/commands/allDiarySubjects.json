@@ -30,36 +30,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "internal subject reference",
               "name": "name",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "visible name",
               "name": "displayName",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "subject icon",
               "name": "picture",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "number of records in this subject",
               "name": "countRecords",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "whether or not the records could be added",
               "name": "isReadOnly",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "[[true]] if subject is currently selected",
               "name": "isSelected",
               "since": null,

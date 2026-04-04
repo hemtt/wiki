@@ -121,8 +121,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default placing point of the model (see [[getModelInfo]])) custom center [x, y, z] to which transformation would be applied in model coordinates",
+              "default": "placing point of the model (see [[getmodelinfo",
+              "desc": ") custom center [x, y, z] to which transformation would be applied in model coordinates",
               "name": "customCenter",
+              "optional": true,
               "since": {
                 "arma3": "2.8"
               },

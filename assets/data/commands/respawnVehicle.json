@@ -52,22 +52,28 @@
         "Array": [
           {
             "Item": {
-              "desc": "(Optional since 2.18, default -1) delay in seconds between respawns. (-1 to use 3DEN vehicle respawn delay or ''respawnVehicleDelay'' from [[Description.ext|description.ext]])",
+              "default": "-1",
+              "desc": "delay in seconds between respawns. (-1 to use 3DEN vehicle respawn delay or ''respawnVehicleDelay'' from [[Description.ext|description.ext]])",
               "name": "respawnDelay",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default unlimited respawns) how many times to respawn vehicle in total. (since 2.18 -1 unlimited respawns, 0 stop respawning)",
+              "default": "unlimited respawns",
+              "desc": "how many times to respawn vehicle in total. (since 2.18 -1 unlimited respawns, 0 stop respawning)",
               "name": "respawnCount",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) - deletes old wreck automatically after vehicle respawns",
+              "default": "false",
+              "desc": "- deletes old wreck automatically after vehicle respawns",
               "name": "deleteOldWreck",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },
@@ -76,8 +82,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) - wreck is always transferred to the server and the new vehicle always respawns on server",
+              "default": "false",
+              "desc": "- wreck is always transferred to the server and the new vehicle always respawns on server",
               "name": "respawnOnServer",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },
@@ -86,8 +94,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) - by default all vehicles placed on the ground, [[true]] overrides this",
+              "default": "false",
+              "desc": "- by default all vehicles placed on the ground, [[true]] overrides this",
               "name": "respawnFlying",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },
@@ -96,8 +106,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[objNull]]) - unit that would be put in the driver seat after vehicle respawns",
+              "default": "objnull",
+              "desc": "- unit that would be put in the driver seat after vehicle respawns",
               "name": "respawnUnit",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },
@@ -106,8 +118,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default -1) - overrides vehicle respawn mode. Available modes are: 2 or \"INSTANT\" and 3 or \"BASE\". -1 use [[Description.ext|description.ext]] value.",
+              "default": "-1",
+              "desc": "- overrides vehicle respawn mode. Available modes are: 2 or \"INSTANT\" and 3 or \"BASE\". -1 use [[Description.ext|description.ext]] value.",
               "name": "respawnMode",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },
@@ -133,8 +147,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default typical vehicle [[side]]) - sets respawn side for the purpouse of selecting respawn marker",
+              "default": "typical vehicle [[side",
+              "desc": "- sets respawn side for the purpouse of selecting respawn marker",
               "name": "respawnSide",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },
@@ -143,8 +159,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) - respawn vehicle matches respawn marker direction or the old wreck direction. [[false]] - random direction.",
+              "default": "false",
+              "desc": "- respawn vehicle matches respawn marker direction or the old wreck direction. [[false]] - random direction.",
               "name": "useRespawnMarkerDir",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },

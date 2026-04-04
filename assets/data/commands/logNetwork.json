@@ -41,6 +41,7 @@
             "Item": {
               "desc": "(Optional) ????",
               "name": "filter",
+              "optional": true,
               "type": {
                 "ArrayUnsized": {
                   "value": "String"

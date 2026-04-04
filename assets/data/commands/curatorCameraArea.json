@@ -29,18 +29,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "cameraAreaID",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "position",
               "since": null,
               "type": "Position"
             },
             {
+              "default": null,
               "desc": null,
               "name": "radius",
               "since": null,

@@ -37,30 +37,35 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "from 0 to -angle in degrees (left)",
               "name": "minTurn",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "from 0 to +angle in degrees (right)",
               "name": "maxTurn",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "from 0 to -angle in degrees (down)",
               "name": "minElev",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "from 0 to +angle in degrees (up)",
               "name": "maxElev",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "if custom limits were applied",
               "name": "overridden",
               "since": null,

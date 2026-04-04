@@ -70,57 +70,73 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show vehicle, soldier and weapon info",
+              "default": "true",
+              "desc": "show vehicle, soldier and weapon info",
               "name": "info",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show vehicle radar",
+              "default": "true",
+              "desc": "show vehicle radar",
               "name": "radar",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show vehicle compass",
+              "default": "true",
+              "desc": "show vehicle compass",
               "name": "compass",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show tank direction indicator. Not present in vanilla {{arma3}}",
+              "default": "true",
+              "desc": "show tank direction indicator. Not present in vanilla {{arma3}}",
               "name": "direction",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show commanding menu (HC related menus)",
+              "default": "true",
+              "desc": "show commanding menu (HC related menus)",
               "name": "menu",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show group info bar (Squad leader info bar)",
+              "default": "true",
+              "desc": "show group info bar (Squad leader info bar)",
               "name": "group",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show HUD weapon cursors (connected with scripted HUD)",
+              "default": "true",
+              "desc": "show HUD weapon cursors (connected with scripted HUD)",
               "name": "cursors",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show [[Arma 3: Custom Info]]",
+              "default": "true",
+              "desc": "show [[Arma 3: Custom Info]]",
               "name": "panels",
+              "optional": true,
               "since": {
                 "arma3": "1.70"
               },
@@ -129,15 +145,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) show \"x killed by y\" [[systemChat]] messages",
+              "default": "true",
+              "desc": "show \"x killed by y\" [[systemChat]] messages",
               "name": "kills",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) show icons drawn with [[drawIcon3D]] even when the HUD is hidden",
+              "default": "false",
+              "desc": "show icons drawn with [[drawIcon3D]] even when the HUD is hidden",
               "name": "showIcon3D",
+              "optional": true,
               "since": {
                 "arma3": "2.4"
               },

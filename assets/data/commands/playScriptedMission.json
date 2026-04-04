@@ -49,6 +49,7 @@
             "Item": {
               "desc": "(Optional)",
               "name": "config",
+              "optional": true,
               "type": "Config"
             }
           },
@@ -56,6 +57,7 @@
             "Item": {
               "desc": "(Optional)",
               "name": "ignoreChildWindow",
+              "optional": true,
               "type": "Boolean"
             }
           }

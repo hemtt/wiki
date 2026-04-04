@@ -26,18 +26,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "trigger area X size / 2",
               "name": "a",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "trigger area Y size / 2",
               "name": "b",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "angle",
               "since": null,
@@ -49,12 +52,14 @@
               }
             },
             {
+              "default": null,
               "desc": null,
               "name": "isRectangle",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "trigger area Z size / 2 (since {{arma3}} v1.60)",
               "name": "c",
               "since": null,

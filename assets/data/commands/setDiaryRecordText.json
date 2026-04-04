@@ -82,6 +82,7 @@
                 "Item": {
                   "desc": "(Optional) icon to show next to the title. \"\" to remove.",
                   "name": "icon",
+                  "optional": true,
                   "since": {
                     "arma3": "2.10"
                   },

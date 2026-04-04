@@ -29,12 +29,14 @@
             "value": {
               "ArraySized": [
                 {
+                  "default": null,
                   "desc": "class name of the container",
                   "name": "class",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "container object",
                   "name": "container",
                   "since": null,

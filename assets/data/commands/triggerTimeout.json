@@ -25,24 +25,28 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "min",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "mid",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "max",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "interruptible",
               "since": null,

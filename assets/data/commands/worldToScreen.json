@@ -27,12 +27,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "x",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "y",
               "since": null,
@@ -84,12 +86,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "x",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "y",
               "since": null,

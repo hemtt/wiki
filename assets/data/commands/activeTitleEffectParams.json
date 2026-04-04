@@ -37,24 +37,28 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "type of effect, can be {{hl|\"OBJ\"}}, {{hl|\"RSC\"}} or {{hl|\"TXT\"}}",
               "name": "type",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "[[Title Effect Type]] ({{hl|\"PLAIN\"}}, {{hl|\"BLACK OUT\"}} etc)",
               "name": "effect",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "effect speed multiplier",
               "name": "speed",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "[[true]] if effect is available over map",
               "name": "showInMap",
               "since": null,

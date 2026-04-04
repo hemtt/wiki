@@ -69,8 +69,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 0) desired ammo count",
+              "default": "0",
+              "desc": "desired ammo count",
               "name": "ammoCount",
+              "optional": true,
               "since": {
                 "arma3": "1.56"
               },

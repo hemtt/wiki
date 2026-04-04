@@ -29,30 +29,35 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "",
               "since": null,
               "type": {
                 "ArraySized": [
                   {
+                    "default": null,
                     "desc": "function or file name",
                     "name": "name",
                     "since": null,
                     "type": "String"
                   },
                   {
+                    "default": null,
                     "desc": null,
                     "name": "fileName",
                     "since": null,
                     "type": "String"
                   },
                   {
+                    "default": null,
                     "desc": null,
                     "name": "isRunning",
                     "since": null,
                     "type": "Boolean"
                   },
                   {
+                    "default": null,
                     "desc": "line currently executing",
                     "name": "currentLine",
                     "since": null,

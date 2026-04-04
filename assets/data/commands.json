@@ -22067,11 +22067,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Returns array of [[Boolean]]s corresponding to the visibility of various HUD elements (see extended [[showHUD]]).",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Interaction"
+      ],
       "id": "shownHUD",
       "name": "shownHUD",
       "status": "Failed"
@@ -23637,11 +23639,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Removes an item with given [[Tree View Path]] from Tree View.\n{{Feature|important|The paths of other items on the same branch after delete operation are updated accordingly; therefore, when deleting multiple entries, start with the one with the highest index and proceed in reverse order.}}",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "GUI Control - Tree View"
+      ],
       "id": "tvDelete",
       "name": "tvDelete",
       "status": "Failed"
@@ -23692,21 +23696,25 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Returns array of paths to selected items.",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "GUI Control - Tree View"
+      ],
       "id": "tvSelection",
       "name": "tvSelection",
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
+      "description": "Sets text color on given Tree View Item",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "GUI Control - Tree View"
+      ],
       "id": "tvSetColor",
       "name": "tvSetColor",
       "status": "Failed"
@@ -23865,11 +23873,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Sorts all children of given path. Value of [[CT_TREE|Tree View]] entries is used for sorting. [[tvSetValue]] can be used to set the value for a given path.",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "GUI Control - Tree View"
+      ],
       "id": "tvSortByValue",
       "name": "tvSortByValue",
       "status": "Failed"
@@ -25274,7 +25284,7 @@
   ],
   "failed": 545,
   "passed": 2148,
-  "timestamp": 1775277634,
+  "timestamp": 1775285021,
   "total": 2708,
   "version": "1.0"
 }

@@ -89,8 +89,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) - [[true]] = include empty magazines (behaviour as the primary syntax, but consistent), [[false]] = exclude empty magazines",
+              "default": "true",
+              "desc": "- [[true]] = include empty magazines (behaviour as the primary syntax, but consistent), [[false]] = exclude empty magazines",
               "name": "includeEmpty",
+              "optional": true,
               "type": "Boolean"
             }
           }

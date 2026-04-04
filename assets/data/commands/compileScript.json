@@ -43,15 +43,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) compile final, see [[compileFinal]]",
+              "default": "false",
+              "desc": "compile final, see [[compileFinal]]",
               "name": "final",
+              "optional": true,
               "type": "Boolean"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default \"\") value added at the beginning of the file",
+              "default": "\"\"",
+              "desc": "value added at the beginning of the file",
               "name": "prefixHeader",
+              "optional": true,
               "type": "String"
             }
           }

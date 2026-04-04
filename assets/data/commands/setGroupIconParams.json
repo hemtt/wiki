@@ -48,36 +48,42 @@
           "type": {
             "ArraySized": [
               {
+                "default": null,
                 "desc": null,
                 "name": "color",
                 "since": null,
                 "type": "ArrayColor"
               },
               {
+                "default": null,
                 "desc": null,
                 "name": "text",
                 "since": null,
                 "type": "String"
               },
               {
+                "default": null,
                 "desc": null,
                 "name": "scale",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": null,
                 "name": "visibility",
                 "since": null,
                 "type": "Boolean"
               },
               {
+                "default": null,
                 "desc": null,
                 "name": "WPvisibility",
                 "since": null,
                 "type": "Boolean"
               },
               {
+                "default": null,
                 "desc": null,
                 "name": "WPcolor",
                 "since": null,

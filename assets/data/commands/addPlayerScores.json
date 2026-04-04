@@ -43,30 +43,35 @@
           "type": {
             "ArraySized": [
               {
+                "default": null,
                 "desc": "number of infantry units killed",
                 "name": "killsInfantry",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": "number of soft vehicles killed",
                 "name": "killsSoft",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": "number of armored vehicles killed",
                 "name": "killsArmor",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": "number of air vehicles killed",
                 "name": "killsAir",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": "total score",
                 "name": "score",
                 "since": null,

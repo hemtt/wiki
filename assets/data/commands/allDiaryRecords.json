@@ -37,54 +37,63 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "record id",
               "name": "id",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "record title",
               "name": "title",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "record text",
               "name": "text",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "record icon",
               "name": "icon",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "record task",
               "name": "task",
               "since": null,
               "type": "Task"
             },
             {
+              "default": null,
               "desc": "record task state",
               "name": "taskState",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "[[true]] if tile is shown",
               "name": "showTitle",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "date",
               "since": null,
               "type": "ArrayDate"
             },
             {
+              "default": null,
               "desc": "record reference",
               "name": "record",
               "since": null,

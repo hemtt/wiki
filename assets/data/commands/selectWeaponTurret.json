@@ -68,6 +68,7 @@
             "Item": {
               "desc": "(Optional) muzzle name",
               "name": "muzzle",
+              "optional": true,
               "since": {
                 "arma3": "2.8"
               },
@@ -78,6 +79,7 @@
             "Item": {
               "desc": "(Optional) firemode name",
               "name": "firemode",
+              "optional": true,
               "since": {
                 "arma3": "2.8"
               },

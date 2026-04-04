@@ -84,22 +84,28 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 0) normalized time, in range 0..1, where 0 = beginning of the animation, and 1 = end of the animation",
+              "default": "0",
+              "desc": "normalized time, in range 0..1, where 0 = beginning of the animation, and 1 = end of the animation",
               "name": "time",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default 1) how much to blend the current animation with the new animation, in range 0..1, where 0 = current animation, and 1 = new animation. When 1 is used, the switching is instant (not smooth), similar to the first syntax.",
+              "default": "1",
+              "desc": "how much to blend the current animation with the new animation, in range 0..1, where 0 = current animation, and 1 = new animation. When 1 is used, the switching is instant (not smooth), similar to the first syntax.",
               "name": "blendFactor",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default true) whether the aim/head direction should be reset after switching",
+              "default": "true",
+              "desc": "whether the aim/head direction should be reset after switching",
               "name": "resetAim",
+              "optional": true,
               "type": "Boolean"
             }
           }

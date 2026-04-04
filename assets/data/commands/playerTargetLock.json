@@ -23,18 +23,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "the locked object",
               "name": "target",
               "since": null,
               "type": "Object"
             },
             {
+              "default": null,
               "desc": "in range 0..1 where 1 is fully locked",
               "name": "lockValue",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "used weapon's {{hl|CfgWeapons}} config",
               "name": "config",
               "since": null,

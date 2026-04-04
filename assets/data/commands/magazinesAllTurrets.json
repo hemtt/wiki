@@ -42,30 +42,35 @@
             "value": {
               "ArraySized": [
                 {
+                  "default": null,
                   "desc": "magazine class name",
                   "name": "className",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": null,
                   "name": "turretPath",
                   "since": null,
                   "type": "TurretPath"
                 },
                 {
+                  "default": null,
                   "desc": "how many rounds left in the magazine",
                   "name": "ammoCount",
                   "since": null,
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "id of the magazine object. The number starts at 10,000,000. This gives it about 6,700,000 possible ids before the number starts losing precision and cannot be used in scripts.",
                   "name": "id",
                   "since": null,
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "[[owner]] / [[clientOwner]] of the PC that created the object",
                   "name": "creator",
                   "since": null,
@@ -97,30 +102,35 @@
             "value": {
               "ArraySized": [
                 {
+                  "default": null,
                   "desc": "magazine class name",
                   "name": "className",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": null,
                   "name": "turretPath",
                   "since": null,
                   "type": "TurretPath"
                 },
                 {
+                  "default": null,
                   "desc": "how many rounds left in the magazine",
                   "name": "ammoCount",
                   "since": null,
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "id of the magazine object. The number starts at 10,000,000. This gives it about 6,700,000 possible ids before the number starts losing precision and cannot be used in scripts.",
                   "name": "id",
                   "since": null,
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "[[owner]] / [[clientOwner]] of the PC that created the object",
                   "name": "creator",
                   "since": null,

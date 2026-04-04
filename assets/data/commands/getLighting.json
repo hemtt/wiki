@@ -27,24 +27,28 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "ambientLightColor",
               "since": null,
               "type": "ArrayColor"
             },
             {
+              "default": null,
               "desc": null,
               "name": "ambientLightBrightness",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "lightDirection",
               "since": null,
               "type": "Vector3d"
             },
             {
+              "default": null,
               "desc": null,
               "name": "starsVisibility",
               "since": null,

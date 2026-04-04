@@ -71,6 +71,7 @@
                 "Item": {
                   "desc": "(Optional)",
                   "name": "parentTask",
+                  "optional": true,
                   "type": "Task"
                 }
               }

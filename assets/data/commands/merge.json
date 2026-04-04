@@ -76,8 +76,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) if [[true]], keys from ''hashMap1'' that also exist in ''hashMap2'' are overwritten. When set to [[true]], merging is faster",
+              "default": "false",
+              "desc": "if [[true]], keys from ''hashMap1'' that also exist in ''hashMap2'' are overwritten. When set to [[true]], merging is faster",
               "name": "overwriteExisting",
+              "optional": true,
               "type": "Boolean"
             }
           }

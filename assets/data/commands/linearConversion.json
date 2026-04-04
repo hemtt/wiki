@@ -76,8 +76,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) if [[true]], resulting value cannot leave \"to\" range",
+              "default": "false",
+              "desc": "if [[true]], resulting value cannot leave \"to\" range",
               "name": "clip",
+              "optional": true,
               "type": "Boolean"
             }
           }

@@ -36,7 +36,6 @@
       },
       "right": {
         "Item": {
-          "desc": "color in format",
           "name": "color",
           "type": "ArrayColor"
         }

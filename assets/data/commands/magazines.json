@@ -68,8 +68,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to include empty magazines",
+              "default": "false",
+              "desc": "[[true]] to include empty magazines",
               "name": "includeEmpty",
+              "optional": true,
               "type": "Boolean"
             }
           }

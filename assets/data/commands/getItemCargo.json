@@ -28,6 +28,7 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "Item class names",
               "name": "classes",
               "since": null,
@@ -38,6 +39,7 @@
               }
             },
             {
+              "default": null,
               "desc": "Item counts",
               "name": "counts",
               "since": null,

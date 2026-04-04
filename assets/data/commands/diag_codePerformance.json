@@ -32,12 +32,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "average duration of 1 execution in milliseconds",
               "name": "duration",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "actual number of cycles executed",
               "name": "cycles",
               "since": null,
@@ -57,15 +59,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[nil]]) arguments to pass to the code in _this variable. Default: [[nil]]",
+              "default": "nil",
+              "desc": "arguments to pass to the code in _this variable. Default: [[nil]]",
               "name": "arguments",
+              "optional": true,
               "type": "Anything"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default 100000) wanted number of cycles to run the given code. > 1000 is recommended",
+              "default": "100000",
+              "desc": "wanted number of cycles to run the given code. > 1000 is recommended",
               "name": "cycles",
+              "optional": true,
               "type": "Number"
             }
           }

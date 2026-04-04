@@ -75,8 +75,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) if [[false]], control will wait for [[ctrlCommit]] input for result to apply",
+              "default": "true",
+              "desc": "if [[false]], control will wait for [[ctrlCommit]] input for result to apply",
               "name": "now",
+              "optional": true,
               "since": {
                 "arma3": "1.78"
               },

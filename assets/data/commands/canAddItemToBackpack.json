@@ -96,8 +96,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to ignore 'soldierMaxLoad' param, container [[maxLoad]] is still counted.",
+              "default": "false",
+              "desc": "[[true]] to ignore 'soldierMaxLoad' param, container [[maxLoad]] is still counted.",
               "name": "ignoreSoldierMaxLoad",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },

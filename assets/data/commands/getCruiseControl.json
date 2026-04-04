@@ -28,12 +28,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "defined speed limit",
               "name": "speedLimit",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "[[true]] if cruise control is enabled, [[false]] if only speed was limited",
               "name": "cruiseControlActive",
               "since": null,

@@ -106,15 +106,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default -1) laser beam's maximum length. {{hl|-1}} means maximum length (defined in {{hl|CfgIRLaserSettings}}), {{hl|0}} means no length at all and the command is ignored",
+              "default": "-1",
+              "desc": "laser beam's maximum length. {{hl|-1}} means maximum length (defined in {{hl|CfgIRLaserSettings}}), {{hl|0}} means no length at all and the command is ignored",
               "name": "beamMaxLength",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) whether the laser and impact dot are only visible with Night Vision / Thermal Imaging",
+              "default": "true",
+              "desc": "whether the laser and impact dot are only visible with Night Vision / Thermal Imaging",
               "name": "isIR",
+              "optional": true,
               "type": "Boolean"
             }
           }

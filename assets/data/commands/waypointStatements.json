@@ -25,12 +25,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "condition",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "statement",
               "since": null,

@@ -41,48 +41,56 @@
             "value": {
               "ArraySized": [
                 {
+                  "default": null,
                   "desc": "internal weapon index (changes frequently) used with \"SwitchWeapon\" and \"UseWeapon\" [[action]]s",
                   "name": "weaponIndex",
                   "since": null,
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "[[true]] if this weapon is currently selected",
                   "name": "isSelected",
                   "since": null,
                   "type": "Boolean"
                 },
                 {
+                  "default": null,
                   "desc": "weapon name",
                   "name": "weaponName",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "muzzle name",
                   "name": "muzzleName",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "firemode that is set for this 'weaponIndex'",
                   "name": "firemode",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "name of the loaded magazine or \"\"",
                   "name": "magazineName",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "magazine ammo count or -1",
                   "name": "ammoCount",
                   "since": null,
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "[[true]] if this muzzle is considered primary by the engine (Since Arma 3 2.14)",
                   "name": "isPrimary",
                   "since": null,
@@ -104,8 +112,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to return loaded weapons only",
+              "default": "false",
+              "desc": "[[true]] to return loaded weapons only",
               "name": "onlyLoaded",
+              "optional": true,
               "type": "Boolean"
             }
           }

@@ -62,8 +62,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [0,0]) X and Y offsets of the icon in format [offsetX, offsetY, (offsetX3d), (offsetY3d)]",
+              "default": "[0,0]",
+              "desc": "X and Y offsets of the icon in format [offsetX, offsetY, (offsetX3d), (offsetY3d)]",
               "name": "offset",
+              "optional": true,
               "type": {
                 "ArrayUnsized": {
                   "value": "Number"

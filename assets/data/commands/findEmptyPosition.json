@@ -80,6 +80,7 @@
             "Item": {
               "desc": "(Optional) classname of a vehicle to accommodate",
               "name": "vehicleType",
+              "optional": true,
               "type": "String"
             }
           }

@@ -82,8 +82,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default \"\") background text",
+              "default": "\"\"",
+              "desc": "background text",
               "name": "textWindowBackground",
+              "optional": true,
               "since": {
                 "arma3": "1.62"
               },
@@ -109,8 +111,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default \"\") foreground text",
+              "default": "\"\"",
+              "desc": "foreground text",
               "name": "textWindowForeground",
+              "optional": true,
               "since": {
                 "arma3": "1.62"
               },

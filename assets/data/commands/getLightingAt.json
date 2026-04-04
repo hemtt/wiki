@@ -28,24 +28,28 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "ambientLightColor",
               "since": null,
               "type": "ArrayColor"
             },
             {
+              "default": null,
               "desc": null,
               "name": "ambientLightBrightness",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "dynamicLightColor",
               "since": null,
               "type": "ArrayColor"
             },
             {
+              "default": null,
               "desc": null,
               "name": "dynamicLightBrightness",
               "since": null,

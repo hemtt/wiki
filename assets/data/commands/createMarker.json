@@ -75,8 +75,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default -1) the marker channel - see [[Channel IDs]] (for multiplayer)",
+              "default": "-1",
+              "desc": "the marker channel - see [[Channel IDs]] (for multiplayer)",
               "name": "channel",
+              "optional": true,
               "since": {
                 "arma3": "2.2"
               },
@@ -85,8 +87,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[objNull]]) the marker creator (for multiplayer)",
+              "default": "objnull",
+              "desc": "the marker creator (for multiplayer)",
               "name": "creator",
+              "optional": true,
               "since": {
                 "arma3": "2.2"
               },

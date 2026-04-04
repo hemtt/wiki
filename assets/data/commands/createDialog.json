@@ -61,8 +61,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) if [[true]], dialog will be rendered on top of displays",
+              "default": "false",
+              "desc": "if [[true]], dialog will be rendered on top of displays",
               "name": "forceOnTop",
+              "optional": true,
               "type": "Boolean"
             }
           }

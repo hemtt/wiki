@@ -24,60 +24,70 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "current aperture",
               "name": "aperture",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "whether aperture was forced by [[setAperture]]",
               "name": "isForced",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "engine-estimated scene aperture",
               "name": "estimatedAperture",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "engine-estimated luminance",
               "name": "estimatedLuminance",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "minimal custom aperture, see [[setApertureNew]]",
               "name": "minCustom",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "standard custom aperture, see [[setApertureNew]]",
               "name": "stdCustom",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "maximal custom aperture, see [[setApertureNew]]",
               "name": "maxCustom",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "custom luminance, see [[setApertureNew]]",
               "name": "customLuminance",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "whether custom values were forced",
               "name": "isCustomForced",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "blinding intensity of the light",
               "name": "blinding",
               "since": null,

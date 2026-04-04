@@ -40,12 +40,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "startPos",
               "since": null,
               "type": "Position3dAGL"
             },
             {
+              "default": null,
               "desc": null,
               "name": "endPos",
               "since": null,

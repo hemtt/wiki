@@ -109,8 +109,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 3)",
+              "default": "3",
+              "desc": "",
               "name": "width",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },

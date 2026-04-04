@@ -32,12 +32,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "state of vehicle forward/backward movement (see description)",
               "name": "moveInfo",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "state of vehicle left/right turning (see description)",
               "name": "turnInfo",
               "since": null,

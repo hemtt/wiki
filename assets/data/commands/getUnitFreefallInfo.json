@@ -26,18 +26,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "[[true]] if unit is falling",
               "name": "isFalling",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "[[true]] if unit is in freefall pose",
               "name": "isInFreefallPose",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "current minimum freefall height (see [[setUnitFreefallHeight]])",
               "name": "minFreefallHeight",
               "since": null,

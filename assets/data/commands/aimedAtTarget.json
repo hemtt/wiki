@@ -56,6 +56,7 @@
             "Item": {
               "desc": "(Optional) if not provided, checks all weapons; if provided, checks that weapon only",
               "name": "weapon",
+              "optional": true,
               "type": "String"
             }
           }

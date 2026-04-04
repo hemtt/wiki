@@ -36,18 +36,21 @@
           "type": {
             "ArraySized": [
               {
+                "default": null,
                 "desc": "class in [[description.ext]] >> \"SteamGameRecording\" or config \"SteamManagerConfig\" >> \"GameRecording\" or a special utility string",
                 "name": "eventClass",
                 "since": null,
                 "type": "String"
               },
               {
+                "default": null,
                 "desc": "0 for an instant event, or an amount of seconds this event lasted",
                 "name": "eventDuration",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": "arguments that can be used to add dynamic info to the event (texts)",
                 "name": "eventArguments",
                 "since": null,
@@ -58,6 +61,7 @@
                 }
               },
               {
+                "default": null,
                 "desc": "amount of seconds relative to the even trigger time",
                 "name": "startOffset",
                 "since": null,

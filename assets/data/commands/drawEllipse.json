@@ -114,8 +114,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) - when [[false]] the shape will not follow map rotation.",
+              "default": "true",
+              "desc": "- when [[false]] the shape will not follow map rotation.",
               "name": "alignWithMap",
+              "optional": true,
               "since": {
                 "arma3": "2.18"
               },

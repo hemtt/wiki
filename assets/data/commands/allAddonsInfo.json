@@ -24,24 +24,28 @@
             "value": {
               "ArraySized": [
                 {
+                  "default": null,
                   "desc": "addon prefix",
                   "name": "prefix",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "addon revision version",
                   "name": "version",
                   "since": null,
                   "type": "String"
                 },
                 {
+                  "default": null,
                   "desc": "[[true]] if patching is enabled and this addon is being patched",
                   "name": "isPatched",
                   "since": null,
                   "type": "Boolean"
                 },
                 {
+                  "default": null,
                   "desc": "index of mod in [[getLoadedModsInfo]] array. -1 if not found.",
                   "name": "modIndex",
                   "since": {
@@ -50,6 +54,7 @@
                   "type": "Number"
                 },
                 {
+                  "default": null,
                   "desc": "hash of the addon PBO file. \"\" if hashing fails.",
                   "name": "hash",
                   "since": {

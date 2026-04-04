@@ -82,6 +82,7 @@
             "Item": {
               "desc": "(Optional) max distance hard limit start (start of fading of intensity to 0) in m",
               "name": "hardlimitstart",
+              "optional": true,
               "type": "Number"
             }
           },
@@ -89,6 +90,7 @@
             "Item": {
               "desc": "(Optional) max distance hard limit end (end of fading of intensity to 0) in m",
               "name": "hardlimitend",
+              "optional": true,
               "type": "Number"
             }
           }

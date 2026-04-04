@@ -25,24 +25,28 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "position in x",
               "name": "x",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "position in y",
               "name": "y",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "width of the map control",
               "name": "w",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "height of the map control",
               "name": "h",
               "since": null,

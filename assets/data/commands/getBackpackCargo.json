@@ -44,6 +44,7 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "Backpack class names",
               "name": "classes",
               "since": null,
@@ -54,6 +55,7 @@
               }
             },
             {
+              "default": null,
               "desc": "Backpack counts",
               "name": "counts",
               "since": null,

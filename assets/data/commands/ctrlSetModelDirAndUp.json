@@ -52,12 +52,14 @@
           "type": {
             "ArraySized": [
               {
+                "default": null,
                 "desc": "see [[vectorDir]]",
                 "name": "vectorDir",
                 "since": null,
                 "type": "Vector3d"
               },
               {
+                "default": null,
                 "desc": "see [[vectorUp]]",
                 "name": "vectorUp",
                 "since": null,

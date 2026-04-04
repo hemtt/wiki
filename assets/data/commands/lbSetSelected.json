@@ -94,8 +94,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) will force [[User_Interface_Event_Handlers#onLBSelChanged | lbSelChanged]] EH to fire",
+              "default": "false",
+              "desc": "will force [[User_Interface_Event_Handlers#onLBSelChanged | lbSelChanged]] EH to fire",
               "name": "forceEH",
+              "optional": true,
               "since": {
                 "arma3": "2.12"
               },

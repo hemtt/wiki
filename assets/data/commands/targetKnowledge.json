@@ -43,48 +43,56 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "target known by group",
               "name": "knownByGroup",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "target known by the unit",
               "name": "knownByUnit",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "last time the target was seen by the unit",
               "name": "lastSeen",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "last time the target endangered the unit",
               "name": "lastThreat",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "target side",
               "name": "side",
               "since": null,
               "type": "Side"
             },
             {
+              "default": null,
               "desc": "position error",
               "name": "errorMargin",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "target position",
               "name": "position",
               "since": null,
               "type": "Position"
             },
             {
+              "default": null,
               "desc": "target is ignored ([[ignoreTarget]])",
               "name": "ignoreTarget",
               "since": {

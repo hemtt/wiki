@@ -60,8 +60,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default {{hl|\"\"}}) icon to display next to the subject. Can be set later with [[setDiarySubjectPicture]]. Similar to [[lbSetPictureRight]].",
+              "default": "{{hl|\"\"}}",
+              "desc": "icon to display next to the subject. Can be set later with [[setDiarySubjectPicture]]. Similar to [[lbSetPictureRight]].",
               "name": "picture",
+              "optional": true,
               "type": "String"
             }
           }

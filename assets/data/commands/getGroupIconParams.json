@@ -35,36 +35,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "icon color",
               "name": "color",
               "since": null,
               "type": "ArrayColor"
             },
             {
+              "default": null,
               "desc": "icon text",
               "name": "text",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "icon scale",
               "name": "scale",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "icon visibility",
               "name": "visibility",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "waypoint visibility",
               "name": "WPvisibility",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "waypoint color",
               "name": "WPcolor",
               "since": null,

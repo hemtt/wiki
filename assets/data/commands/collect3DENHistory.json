@@ -80,15 +80,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default \"Batch Change\" ([[isLocalized|localized]])) - tooltip of the entry",
+              "default": "\"batch change\" ([[islocalized|localized",
+              "desc": ") - tooltip of the entry",
               "name": "tooltip",
+              "optional": true,
               "type": "String"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default \"a3\\3den\\data\\cfg3den\\history\\multipleoperations_ca.paa\") - path to the icon that is displayed left of the ''text''. Must not start with a {{hl|\\}}!",
+              "default": "\"a3\\3den\\data\\cfg3den\\history\\multipleoperations_ca.paa\"",
+              "desc": "- path to the icon that is displayed left of the ''text''. Must not start with a {{hl|\\}}!",
               "name": "icon",
+              "optional": true,
               "type": "String"
             }
           }

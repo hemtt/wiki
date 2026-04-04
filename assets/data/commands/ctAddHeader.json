@@ -41,12 +41,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "headerIndex",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "createdControls",
               "since": null,

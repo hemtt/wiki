@@ -59,8 +59,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) when [[true]] and phase is either 0 or 1, door will change phase instantaneously",
+              "default": "false",
+              "desc": "when [[true]] and phase is either 0 or 1, door will change phase instantaneously",
               "name": "instant",
+              "optional": true,
               "type": "Boolean"
             }
           }

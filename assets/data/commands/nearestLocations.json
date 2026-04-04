@@ -88,6 +88,7 @@
             "Item": {
               "desc": "(Optional) results will be sorted from the distance to given ''sortPosition'' (nearest to farthest still)",
               "name": "sortPosition",
+              "optional": true,
               "type": {
                 "ArrayUnsized": {
                   "value": {

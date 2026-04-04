@@ -60,6 +60,7 @@
                 "Item": {
                   "desc": "(Optional) parameters based on selected effect",
                   "name": "optionalParamN",
+                  "optional": true,
                   "type": "Number"
                 }
               }

@@ -72,6 +72,7 @@
             "Item": {
               "desc": "(Optional) [[true]] will add or subtract given length from current rope length, [[false]] will resize the rope to the given length",
               "name": "relative",
+              "optional": true,
               "type": "Boolean"
             }
           }

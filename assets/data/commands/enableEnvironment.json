@@ -74,8 +74,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 1) howling wind at heights, range 0..1",
+              "default": "1",
+              "desc": "howling wind at heights, range 0..1",
               "name": "windyCoef",
+              "optional": true,
               "since": {
                 "arma3": "2.12"
               },

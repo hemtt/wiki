@@ -43,15 +43,19 @@
         "Array": [
           {
             "Item": {
-              "desc": "(Optional since {{GVI|arma3|2.22|size= 0.75}}, default \"\" (system font)) [[FXY_File_Format#Available_Fonts|font type]]",
+              "default": "\"\" (system font",
+              "desc": ") [[FXY_File_Format#Available_Fonts|font type]]",
               "name": "font",
+              "optional": true,
               "type": "String"
             }
           },
           {
             "Item": {
-              "desc": "(Optional since {{GVI|arma3|2.22|size= 0.75}}, default -1 (system font size)) font size",
+              "default": "-1 (system font size",
+              "desc": ") font size",
               "name": "size",
+              "optional": true,
               "type": "Number"
             }
           }

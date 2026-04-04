@@ -64,8 +64,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default {{hl|\"\"}}) fill texture file or [[Procedural Textures]]. See note in description for more info.",
+              "default": "{{hl|\"\"}}",
+              "desc": "fill texture file or [[Procedural Textures]]. See note in description for more info.",
               "name": "fill",
+              "optional": true,
               "type": "String"
             }
           }

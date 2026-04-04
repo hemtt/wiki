@@ -69,6 +69,7 @@
             "Item": {
               "desc": "(Optional) If true, the intro and briefing are skipped.",
               "name": "skipBriefing",
+              "optional": true,
               "type": "Boolean"
             }
           }

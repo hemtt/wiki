@@ -42,12 +42,14 @@
           "type": {
             "ArraySized": [
               {
+                "default": null,
                 "desc": null,
                 "name": "distance",
                 "since": null,
                 "type": "Number"
               },
               {
+                "default": null,
                 "desc": "sets the camera focus blur",
                 "name": "blur",
                 "since": null,

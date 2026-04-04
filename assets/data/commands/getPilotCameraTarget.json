@@ -30,18 +30,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "returns whether the camera is in a tracking mode",
               "name": "isTracking",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "returns the position of the tracked area or object",
               "name": "targetPosition",
               "since": null,
               "type": "Position3dASL"
             },
             {
+              "default": null,
               "desc": "returns the tracked object, [[objNull]] if camera is only tracking an area",
               "name": "targetObject",
               "since": null,

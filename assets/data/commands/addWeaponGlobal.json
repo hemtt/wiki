@@ -77,8 +77,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]]) [[false]] to abort weapon autoselection if no weapon was selected.",
+              "default": "true",
+              "desc": "[[false]] to abort weapon autoselection if no weapon was selected.",
               "name": "autoselect",
+              "optional": true,
               "type": "String"
             }
           }

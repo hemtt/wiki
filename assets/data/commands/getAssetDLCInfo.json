@@ -32,36 +32,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "the asset belongs to a DLC",
               "name": "isDlc",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "isOwned",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "isInstalled",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "isAvailable",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "actual steam item ID or \"0\" for none or \"-1\" for unknown",
               "name": "appID",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "actual DLC name or \"\"",
               "name": "DLCName",
               "since": null,
@@ -106,36 +112,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "the asset belongs to a DLC",
               "name": "isDlc",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "isOwned",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "isInstalled",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": null,
               "name": "isAvailable",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "actual steam item ID or \"0\" for none or \"-1\" for unknown",
               "name": "appID",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "actual DLC name or \"\"",
               "name": "DLCName",
               "since": null,
@@ -155,8 +167,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default <sqf inline>configFile >> \"CfgVehicles\"</sqf>) config in which to search",
+              "default": "<sqf inline>configfile >> \"cfgvehicles\"</sqf>",
+              "desc": "config in which to search",
               "name": "config",
+              "optional": true,
               "type": "Config"
             }
           }

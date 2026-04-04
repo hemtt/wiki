@@ -41,8 +41,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) path is relative to the user directory, otherwise it is relative to the mission directory",
+              "default": "false",
+              "desc": "path is relative to the user directory, otherwise it is relative to the mission directory",
               "name": "userdir",
+              "optional": true,
               "type": "Boolean"
             }
           }

@@ -44,6 +44,7 @@
             "Item": {
               "desc": "(Optional) file extension to filter results, for example {{hl|\".paa\"}}",
               "name": "fileExtension",
+              "optional": true,
               "type": "String"
             }
           }

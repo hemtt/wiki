@@ -139,6 +139,7 @@
             "Item": {
               "desc": "(Optional) (Helicopter type only) time to wait after touch down in \"GetIn\"/\"GetOut\" mode before taking off to the next waypoint. Default: -1.",
               "name": "waitTime",
+              "optional": true,
               "since": {
                 "arma3": "2.20"
               },
@@ -149,6 +150,7 @@
             "Item": {
               "desc": "(Optional) when true, the given land position will be adjusted to the nearest surface underneath. Default: [[false]].",
               "name": "putOnSurface",
+              "optional": true,
               "since": {
                 "arma3": "2.20"
               },
@@ -169,30 +171,35 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "one of the following: \"None\", \"Land\", \"GetIn\", \"GetOut\" or \"\".",
               "name": "landMode",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "one of the following: \"Found\", \"NotFound\", \"NotReady\" or \"\".",
               "name": "landResult",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "land position or [0,0,0].",
               "name": "landPosition",
               "since": null,
               "type": "Position3dWorld"
             },
             {
+              "default": null,
               "desc": "(Helicopter type only) before heli is landed - wait time set for \"GetIn\"/\"GetOut\" mode, after heli is landed - remaining time before take off to the next waypoint or -1.",
               "name": "waitTime",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "one of the following: \"FAR\", \"BRAKE\", \"NEAR\", \"ALIGN\", \"REACHED\", \"LOITER\", \"FOLLOW\" or \"\".",
               "name": "autopilotState",
               "since": null,

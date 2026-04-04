@@ -69,8 +69,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to skip animation",
+              "default": "false",
+              "desc": "[[true]] to skip animation",
               "name": "instant",
+              "optional": true,
               "since": {
                 "arma3": "1.96"
               },
@@ -126,6 +128,7 @@
                 "Item": {
                   "desc": "(Optional) optional amount of ammo in magazine",
                   "name": "ammoCount",
+                  "optional": true,
                   "type": "Number"
                 }
               },
@@ -133,6 +136,7 @@
                 "Item": {
                   "desc": "(Optional) optional target muzzle to add magazine to",
                   "name": "muzzleName",
+                  "optional": true,
                   "type": "String"
                 }
               }
@@ -140,8 +144,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to skip animation",
+              "default": "false",
+              "desc": "[[true]] to skip animation",
               "name": "instant",
+              "optional": true,
               "since": {
                 "arma3": "1.96"
               },

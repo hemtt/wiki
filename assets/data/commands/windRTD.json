@@ -23,12 +23,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "windStrength",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": null,
               "name": "windDirection",
               "since": null,

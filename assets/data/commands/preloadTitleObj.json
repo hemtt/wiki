@@ -46,15 +46,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default -1)",
+              "default": "-1",
+              "desc": "",
               "name": "speed",
+              "optional": true,
               "type": "Number"
             }
           },
           {
             "Item": {
-              "desc": "(Optional, default [[true]])",
+              "default": "true",
+              "desc": "",
               "name": "showInMap",
+              "optional": true,
               "type": "Boolean"
             }
           }

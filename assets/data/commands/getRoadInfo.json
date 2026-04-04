@@ -28,60 +28,70 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "road segment type, could be {{hl|\"HIDE\"}}, {{hl|\"ROAD\"}}, {{hl|\"MAIN ROAD\"}}, {{hl|\"TRACK\"}}, {{hl|\"TRAIL\"}} (see [[nearestTerrainObjects]])",
               "name": "mapType",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "road segment width",
               "name": "width",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "when [[true]] road is for pedestrian use only",
               "name": "isPedestrian",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "road segment surface texture",
               "name": "texture",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "road segment surface texture",
               "name": "textureEnd",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "road segment surface material",
               "name": "material",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "start of the road segment",
               "name": "begPos",
               "since": null,
               "type": "Position3dASL"
             },
             {
+              "default": null,
               "desc": "finish of the road segment",
               "name": "endPos",
               "since": null,
               "type": "Position3dASL"
             },
             {
+              "default": null,
               "desc": "when [[true]] road segment is a bridge",
               "name": "isBridge",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "config value of `AIpathOffset`",
               "name": "AIpathOffset",
               "since": {

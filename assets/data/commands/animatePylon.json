@@ -87,6 +87,7 @@
             "Item": {
               "desc": "(Optional) animate immediately",
               "name": "instant",
+              "optional": true,
               "type": "Boolean"
             }
           }

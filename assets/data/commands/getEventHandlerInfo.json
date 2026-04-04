@@ -73,18 +73,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "event handler exists",
               "name": "exists",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "will be executed last (relevant if last event handler modifies default engine behaviour)",
               "name": "isLast",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "total number of event handlers added to the same event",
               "name": "total",
               "since": null,
@@ -123,18 +126,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "event handler exists",
               "name": "exists",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "will be executed last (relevant if last event handler modifies default engine behaviour)",
               "name": "isLast",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "total number of event handlers added to the same event",
               "name": "total",
               "since": null,

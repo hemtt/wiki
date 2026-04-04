@@ -70,18 +70,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "data sent back from extension. It is up to extension maker what it is.",
               "name": "result",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "integer return from extension method. It is up to extension maker to define it.",
               "name": "returnCode",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "error code in case of command error (see description). 0 means no errors.",
               "name": "errorCode",
               "since": null,

@@ -25,12 +25,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "1/2 width of marker",
               "name": "a_axis",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "1/2 height of marker",
               "name": "b_axis",
               "since": null,

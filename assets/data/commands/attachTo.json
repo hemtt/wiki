@@ -86,6 +86,7 @@
             "Item": {
               "desc": "(Optional) the position relative to ''object2s position",
               "name": "offset",
+              "optional": true,
               "type": "Position3dRelative"
             }
           },
@@ -93,6 +94,7 @@
             "Item": {
               "desc": "(Optional) see {{Link|ArmA: Armed Assault: Selection Translations|Selection Translations}} for czech selections names",
               "name": "memPoint",
+              "optional": true,
               "type": "String"
             }
           },
@@ -100,6 +102,7 @@
             "Item": {
               "desc": "(Optional) follows the memory point's rotation (if attached to one)",
               "name": "followBoneRotation",
+              "optional": true,
               "since": {
                 "arma3": "2.2"
               },

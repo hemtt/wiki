@@ -85,8 +85,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default -1) trigger area Z size / 2, in meters. -1 for infinite height",
+              "default": "-1",
+              "desc": "trigger area Z size / 2, in meters. -1 for infinite height",
               "name": "c",
+              "optional": true,
               "since": {
                 "arma3": "1.60"
               },

@@ -50,8 +50,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[false]]: descending / [[true]]: ascending",
+              "default": "false",
+              "desc": "[[false]]: descending / [[true]]: ascending",
               "name": "reversed",
+              "optional": true,
               "type": "Boolean"
             }
           }
@@ -87,8 +89,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[false]]: descending / [[true]]: ascending",
+              "default": "false",
+              "desc": "[[false]]: descending / [[true]]: ascending",
               "name": "reversed",
+              "optional": true,
               "type": "Boolean"
             }
           }

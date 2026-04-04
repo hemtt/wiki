@@ -75,6 +75,7 @@
             "Item": {
               "desc": "(Optional) Must be set to [[true]] in case of custom",
               "name": "isCustom",
+              "optional": true,
               "type": "Boolean"
             }
           }

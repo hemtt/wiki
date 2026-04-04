@@ -76,8 +76,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 0) the time interval in seconds of game time between condition checks, this is equivalent to using a \"sleep\" after the condition.",
+              "default": "0",
+              "desc": "the time interval in seconds of game time between condition checks, this is equivalent to using a \"sleep\" after the condition.",
               "name": "interval",
+              "optional": true,
               "type": "Number"
             }
           }

@@ -58,8 +58,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[objNull]]) second object to exclude from calculations",
+              "default": "objnull",
+              "desc": "second object to exclude from calculations",
               "name": "ignore2",
+              "optional": true,
               "since": {
                 "arma3": "1.62"
               },

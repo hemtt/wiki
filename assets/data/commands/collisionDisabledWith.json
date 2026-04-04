@@ -25,12 +25,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "the object, ''obj'' has collision disabled with, or [[objNull]]",
               "name": "other",
               "since": null,
               "type": "Object"
             },
             {
+              "default": null,
               "desc": "[[true]] if ''other'' has also disabled collision with ''obj'', [[false]] otherwise",
               "name": "mutual",
               "since": null,

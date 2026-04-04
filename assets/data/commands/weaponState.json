@@ -32,36 +32,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "weapon",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "muzzle",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "firemode",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "magazine",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "ammoCount",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "current ammo round reload phase (see [[weaponReloadingTime]])",
               "name": "roundReloadPhase",
               "since": {
@@ -75,6 +81,7 @@
               }
             },
             {
+              "default": null,
               "desc": "current magazine reload phase, 0 - reload complete. &gt; 0 - reload in progress",
               "name": "magazineReloadPhase",
               "since": {
@@ -111,36 +118,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "weapon",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "muzzle",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "firemode",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "magazine",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "ammoCount",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "current ammo round reload phase (see [[weaponReloadingTime]])",
               "name": "roundReloadPhase",
               "since": {
@@ -149,6 +162,7 @@
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "current magazine reload phase from 1 to 0, 0 - reload complete. &gt; 0 - reload in progress",
               "name": "magazineReloadPhase",
               "since": {
@@ -175,8 +189,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default {{hl|\"\"}}) weapon or muzzle name",
+              "default": "{{hl|\"\"}}",
+              "desc": "weapon or muzzle name",
               "name": "weapon",
+              "optional": true,
               "since": {
                 "arma3": "1.70"
               },
@@ -185,8 +201,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default {{hl|\"\"}}) muzzle name",
+              "default": "{{hl|\"\"}}",
+              "desc": "muzzle name",
               "name": "muzzle",
+              "optional": true,
               "since": {
                 "arma3": "2.8"
               },
@@ -195,8 +213,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default {{hl|\"\"}}) firemode name",
+              "default": "{{hl|\"\"}}",
+              "desc": "firemode name",
               "name": "firemode",
+              "optional": true,
               "since": {
                 "arma3": "2.8"
               },
@@ -223,36 +243,42 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": null,
               "name": "weapon",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "muzzle",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "firemode",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "magazine",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": null,
               "name": "ammoCount",
               "since": null,
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "current ammo round reload phase (see [[weaponReloadingTime]])",
               "name": "roundReloadPhase",
               "since": {
@@ -261,6 +287,7 @@
               "type": "Number"
             },
             {
+              "default": null,
               "desc": "current magazine reload phase from 1 to 0, 0 - reload complete. &gt; 0 - reload in progress",
               "name": "magazineReloadPhase",
               "since": {

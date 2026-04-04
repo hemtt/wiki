@@ -42,18 +42,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "component classname as defined in object/vehicle config",
               "name": "className",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "componentType - component type",
               "name": "componentType",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "boolean flag that shows if component is currently accessible (lack of required item can make it temporarily inaccessible)",
               "name": "isAccessible",
               "since": null,
@@ -102,18 +105,21 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "component classname as defined in object/vehicle config",
               "name": "className",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "componentType - component type",
               "name": "componentType",
               "since": null,
               "type": "String"
             },
             {
+              "default": null,
               "desc": "boolean flag that shows if component is currently accessible (lack of required item can make it temporarily inaccessible)",
               "name": "isAccessible",
               "since": null,

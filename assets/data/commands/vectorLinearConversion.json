@@ -75,8 +75,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) if [[true]], range value will be clipped to stay within \"from\" - \"to\" range",
+              "default": "false",
+              "desc": "if [[true]], range value will be clipped to stay within \"from\" - \"to\" range",
               "name": "clip",
+              "optional": true,
               "type": "Boolean"
             }
           }

@@ -45,8 +45,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default 1)",
+              "default": "1",
+              "desc": "",
               "name": "speed",
+              "optional": true,
               "type": "Number"
             }
           }

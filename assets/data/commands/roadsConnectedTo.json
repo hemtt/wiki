@@ -68,8 +68,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) when [[true]], performs a more thorough search on top of base behaviour, slower but returns pedestrian and other missing road segments",
+              "default": "false",
+              "desc": "when [[true]], performs a more thorough search on top of base behaviour, slower but returns pedestrian and other missing road segments",
               "name": "extended",
+              "optional": true,
               "type": "Boolean"
             }
           }

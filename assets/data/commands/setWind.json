@@ -48,8 +48,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) set to [[true]] to lock the wind to constantly blows in set direction",
+              "default": "false",
+              "desc": "set to [[true]] to lock the wind to constantly blows in set direction",
               "name": "forced",
+              "optional": true,
               "type": "Boolean"
             }
           }

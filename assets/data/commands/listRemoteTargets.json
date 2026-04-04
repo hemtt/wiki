@@ -29,12 +29,14 @@
             "value": {
               "ArraySized": [
                 {
+                  "default": null,
                   "desc": null,
                   "name": "remoteTarget",
                   "since": null,
                   "type": "Object"
                 },
                 {
+                  "default": null,
                   "desc": null,
                   "name": "lastDetected",
                   "since": null,

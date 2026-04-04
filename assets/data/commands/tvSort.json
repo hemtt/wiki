@@ -51,8 +51,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to reverse sort it",
+              "default": "false",
+              "desc": "[[true]] to reverse sort it",
               "name": "reversed",
+              "optional": true,
               "type": "Boolean"
             }
           }
@@ -88,8 +90,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to reverse sort it",
+              "default": "false",
+              "desc": "[[true]] to reverse sort it",
               "name": "reversed",
+              "optional": true,
               "type": "Boolean"
             }
           }

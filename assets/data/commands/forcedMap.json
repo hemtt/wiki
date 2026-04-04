@@ -27,12 +27,14 @@
         "type": {
           "ArraySized": [
             {
+              "default": null,
               "desc": "[[true]] if map was forced with [[forceMap]] command",
               "name": "forceMapForced",
               "since": null,
               "type": "Boolean"
             },
             {
+              "default": null,
               "desc": "[[true]] if map was forced with [[openMap]] command.",
               "name": "openMapForced",
               "since": null,

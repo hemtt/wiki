@@ -67,8 +67,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to create a local instance only",
+              "default": "false",
+              "desc": "[[true]] to create a local instance only",
               "name": "local",
+              "optional": true,
               "since": {
                 "arma3": "1.96"
               },
@@ -108,8 +110,10 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]]) [[true]] to create a local instance only",
+              "default": "false",
+              "desc": "[[true]] to create a local instance only",
               "name": "local",
+              "optional": true,
               "since": {
                 "arma3": "1.96"
               },
