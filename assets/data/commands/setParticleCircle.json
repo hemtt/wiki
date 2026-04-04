@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Global",
+  "description": "Updates particle source, creates particles in circle with given radius. Velocity is transformed and added to total velocity. The random particle positioning is calculated in relation to the nearest surface. Since Arma 3 2.22, this could be overridden (will also override onSurface = true).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_myParticleSource setParticleCircle [3, [0,0,5]];</sqf>",
+    "<sqf>_myParticleSource setParticleCircle [3, [0,0,5], true];</sqf>"
+  ],
+  "groups": [
+    "Particles"
+  ],
+  "id": "setParticleCircle",
+  "name": "setParticleCircle",
+  "problem_notes": [],
+  "see_also": [
+    "setParticleParams",
+    "setParticleRandom",
+    "ParticleTemplates",
+    "setParticleClass",
+    "particlesQuality",
+    "setParticleFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "particleSource",
+          [
+            "circleRadius",
+            "circleVelocity",
+            "ignoreSurfaces"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "particleSource",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the radius (x,y plain) in which particles are generated",
+              "name": "circleRadius",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "direction and speed of particles movement",
+              "name": "circleVelocity",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to calculate particle position relative to the source position. Default: [[false]]",
+              "name": "ignoreSurfaces",
+              "optional": true,
+              "since": {
+                "arma3": "2.22"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "alias": [
+    "[[mod]]"
+  ],
+  "argument_loc": "Unspecified",
+  "description": "Remainder of ''a'' divided by ''b''.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>4.5 % 3 // result is 1.5</sqf>"
+  ],
+  "groups": [
+    "Math"
+  ],
+  "id": "a_%25_b",
+  "name": "%",
+  "problem_notes": [],
+  "see_also": [
+    "mod",
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "a",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

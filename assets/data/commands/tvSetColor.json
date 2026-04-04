@@ -1,0 +1,107 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets text color on given Tree View Item",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tvSetColor [101, [0,0], [1,0,0,1]];</sqf>",
+    "<sqf>_ctrl tvSetColor [[0,0], [1,0,0,1]];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvSetColor",
+  "name": "tvSetColor",
+  "problem_notes": [],
+  "see_also": [
+    "tvDelete",
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "color"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "TreeViewPath"
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColorRgba"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "color"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "TreeViewPath"
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColorRgba"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Global",
+  "description": "Checks if a turret is [[Multiplayer Scripting#Locality|local]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isLocal = vehicle player turretLocal [0];</sqf>",
+    "<sqf>if (heli turretLocal [1]) then { heli setVehicleAmmo 1 };</sqf>",
+    "<sqf>if (isNil { heli turretLocal [5] }) then { hint \"Turret 5 is non-existent\" };</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "turretLocal",
+  "name": "turretLocal",
+  "problem_notes": [],
+  "see_also": [
+    "turretOwner",
+    "setVehicleAmmo",
+    "setVehicleAmmoDef",
+    "removeWeaponTurret",
+    "addWeaponTurret",
+    "addMagazineTurret",
+    "magazinesTurret",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "currentMagazineDetailTurret",
+    "currentMagazineTurret",
+    "currentWeaponTurret",
+    "selectWeaponTurret",
+    "turretUnit",
+    "allTurrets"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "turretPath"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "supports [-1] for driver turret",
+          "name": "turretPath",
+          "type": "TurretPath"
+        }
+      }
+    }
+  ]
+}

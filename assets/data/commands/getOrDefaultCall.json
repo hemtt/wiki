@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Retrieves a value from the [[HashMap]] for the given 'key', executes given 'code' if key was not found and returns result.\nAdditionally sets key to the code result value if ''set'' is true.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_hashmap getOrDefaultCall [123, { systemChat \"The key 123 does not exist and will be created and assigned 345\"; 345 }, true];</sqf>"
+  ],
+  "groups": [
+    "HashMap"
+  ],
+  "id": "getOrDefaultCall",
+  "name": "getOrDefaultCall",
+  "problem_notes": [],
+  "see_also": [
+    "getOrDefault",
+    "HashMap",
+    "get"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "hashMap",
+          [
+            "key",
+            "code",
+            "set"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "hashMap",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "case-sensitive key",
+              "name": "key",
+              "type": "HashMapKey"
+            }
+          },
+          {
+            "Item": {
+              "default": "nil",
+              "desc": "code to execute if the key does not exist",
+              "name": "code",
+              "optional": true,
+              "type": "Code"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "if [[true]] and value does not exist in the provided hash map, the result of the ''code'' execution is added to the hash map",
+              "name": "set",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of paths to selected items.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _selection = tvSelection _ctrlTV;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvSelection",
+  "name": "tvSelection",
+  "problem_notes": [],
+  "see_also": [
+    "tvSetSelected",
+    "tvIsSelected"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": "TreeViewPath"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

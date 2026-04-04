@@ -1,0 +1,81 @@
+{
+  "alias": [
+    "[[a and b]]"
+  ],
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] only if both conditions are [[true]].\nIn case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used - if left operand is [[false]], evaluation of the right side is ignored.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _allEnemiesKilled = true;\nif (alive player && _allEnemiesKilled) then\n{\n\thint \"you win !\";\n};\n</sqf>",
+    "<sqf>\nif ((count _array > 0) && { (_array select 0) == player }) then // an error would be thrown without lazy evaluation\n{\n\thint \"It works!\";\n};\n</sqf>",
+    "<sqf>\nif ((alive player) && { player setDamage 0.5; true }) then // valid AS LONG AS the code block returns a Boolean\n{\n\thint \"It works!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Variables",
+    "Math"
+  ],
+  "id": "a_%26%26_b",
+  "name": "&&",
+  "problem_notes": [],
+  "see_also": [
+    "and",
+    "or",
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "booleanA",
+          "booleanB"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "booleanA",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "booleanB",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "boolean",
+          "code"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "boolean",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "code that once executed returns a [[Boolean]]. The code is not evaluated if boolean is [[false]].",
+          "name": "code",
+          "type": "Code"
+        }
+      },
+      "since": {
+        "arma2oa": "1.62"
+      }
+    }
+  ]
+}

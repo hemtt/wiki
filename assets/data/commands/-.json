@@ -1,0 +1,101 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Subtracts numbers or arrays from each another, negates a number. For arrays also see [[deleteAt]] and [[deleteRange]].\n{{Feature|arma3|In Arma 3 it is possible to subtract nested arrays.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_result = 10 - 7; // result is 3</sqf>",
+    "<sqf>\n_numA = 4;\n_numB = -_numA; // result is -4\n_numB = -_numB; // result is  4\n</sqf>",
+    "<sqf>_result = [1, 2, 2, player, \"String\"] - [2, player, player, \"String\"]; // _result is [1]</sqf>",
+    "<sqf>_result = [0, [0], [[0]]] - [0]; // [[0], [[0]]]</sqf>",
+    "<sqf>\n_result = [0, [0], [[0]]] - [[0]];\t\t// [0, [[0]]]\t- Since {{arma3}}\n_result = [0, [0], [[0]]] - [[[0]]];\t// [0, [0]]\t\t- Since {{arma3}}\n</sqf>"
+  ],
+  "groups": [
+    "Math",
+    "Arrays"
+  ],
+  "id": "-",
+  "name": "-",
+  "problem_notes": [],
+  "see_also": [
+    "Array",
+    "Operators",
+    "deleteAt",
+    "deleteRange"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "numberA",
+          "numberB"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "numberA",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "numberB",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "numberA"
+      },
+      "ret": {
+        "desc": "the negative of ''numberA''",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "numberA",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "arrayA",
+          "arrayB"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "arrayA",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Anything"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "arrayB",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects an element from an [[Array]], same as [[select]] command for arrays, but has [[Order of Precedence|higher precedence]].\n{{Feature|informative|'''#''' has higher precedence than all binary operators, but it has lower precedence than unary operators (see {{Link|#Example 3}}).}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[1, 2, 3, 4] # 2;\t\t\t// result is 3</sqf>",
+    "<sqf>getPosASL player # 2;\t\t// result is Z component of player's position</sqf>",
+    "<sqf>\n// 'getPosASL' is unary; '#' and '+' are binary; precedence is: 'getPosASL' > '#' > '+'\ngetPosASL player # 2 + 1; // equivalent to (getPosASL player # 2) + 1, not (getPosASL player)#(2+1)\n</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "a_hash_b",
+  "name": "#",
+  "problem_notes": [],
+  "see_also": [
+    "select",
+    "selectRandom",
+    "selectRandomWeighted",
+    "set",
+    "resize",
+    "reverse",
+    "in",
+    "find",
+    "toArray",
+    "toString",
+    "forEach",
+    "count",
+    "deleteAt",
+    "deleteRange",
+    "append",
+    "sort",
+    "param",
+    "params",
+    "splitString",
+    "joinString",
+    "pushBack",
+    "pushBackUnique",
+    "apply"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "array",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

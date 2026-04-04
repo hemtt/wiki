@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a location's size.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_locSize = size myLocation;</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "id": "size",
+  "name": "size",
+  "problem_notes": [],
+  "see_also": [
+    "setSize"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "location"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "horizontal distance in meters",
+              "name": "x",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "vertical distance in meters",
+              "name": "y",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      }
+    }
+  ]
+}

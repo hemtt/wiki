@@ -1,0 +1,171 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Add two [[Number]]s, concatenate two [[Array]]s or two [[String]]s, or create a copy of an Array or [[HashMap]].\n\n{{Feature|warning|[[Array]] copy methods {{hl|ARRAY + []}} and {{hl|+ ARRAY}} have different behaviours:\n* {{hl|ARRAY + []}} creates copy of the 1st dimension, but preserves references in other dimensions ({{Link|https://en.wikipedia.org/wiki/Object_copying#Shallow_copy|shallow copy}}).\n* {{hl|+ ARRAY}} clones every element, so if the array is multi-dimensional, the created copy contains no references ({{Link|https://en.wikipedia.org/wiki/Object_copying#Deep_copy|deep copy}}).\nSee [[#Example_6|Example 6]].\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf notrim>\n 5 +  3\t// returns  8\n-5 + -3\t// returns -8\n</sqf>",
+    "<sqf>\n+  2\t// returns  2\n+ -7\t// returns -7\n</sqf>",
+    "<sqf>\n_arrayA = [1,2,3];\n_arrayB = [3,4,5];\n_arrayAB = _arrayA + _arrayB; // _arrayAB = [1,2,3,3,4,5]\n// _arrayA and _arrayB remain unchanged\n</sqf>",
+    "<sqf>_result = \"Hello\" + \" \" + \"there\"; // \"Hello there\"</sqf>",
+    "<sqf>\n_arrayA = [1,2,3];\n_arrayB = + _arrayA;\n_arrayB set [0, 99]; // _arrayA = [1,2,3], _arrayB = [99,2,3]\n</sqf>",
+    "Shallow copy with {{hl|ARRAY + []}}:\n<sqf>\nprivate _subArray = [1, 2, 3];\nprivate _array1 = [_subArray, 1, 2, 3];\nprivate _array2 = _array1 + [];\n_array2 select 0 set [0, \"oops\"];\nhint str _subArray; // [\"oops\", 2, 3]\n</sqf>\n\nDeep copy with {{hl|+ ARRAY}}:\n<sqf>\nprivate _subArray = [1, 2, 3];\nprivate _array1 = [_subArray, 1, 2, 3];\nprivate _array2 = + _array1;\n_array2 select 0 set [0, \"oops\"];\nhint str _subArray; // [1, 2, 3]\n</sqf>"
+  ],
+  "groups": [
+    "Math",
+    "Arrays",
+    "HashMap",
+    "Strings"
+  ],
+  "id": "%2B",
+  "name": "+",
+  "problem_notes": [],
+  "see_also": [
+    "Operators",
+    "pushBack",
+    "append",
+    "merge"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "numberA",
+          "numberB"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "numberA",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "desc": "the sum of ''numberA'' and ''numberB''",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "numberB",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "number"
+      },
+      "ret": {
+        "desc": "the value of the parameter ''number''",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "number",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "arrayA",
+          "arrayB"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "arrayA",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "a new array filled with ''arrayA'' and ''arrayB'' elements, in that order",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Anything"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "arrayB",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "stringA",
+          "stringB"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "stringA",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "desc": "a string concatenating ''stringA'' and ''stringB''",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "stringB",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "array"
+      },
+      "ret": {
+        "desc": "a new instance of the provided array filled with same elements ({{Link|https://en.wikipedia.org/wiki/Object_copying#Deep_copy|deep copy}})",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Anything"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "hashMap"
+      },
+      "ret": {
+        "desc": "a new instance of the provided [[HashMap]] filled with the same key-value pairs ({{Link|https://en.wikipedia.org/wiki/Object_copying#Deep_copy|deep copy}})",
+        "type": "HashMapUnknown"
+      },
+      "right": {
+        "Item": {
+          "name": "hashMap",
+          "type": "HashMapUnknown"
+        }
+      },
+      "since": {
+        "arma3": "2.4"
+      }
+    }
+  ]
+}

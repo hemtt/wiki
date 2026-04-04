@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Retrieves a value out of a [[HashMap]] after looking it up by its key. When the HashMap doesn't contain the key, the default value is returned",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _myValue = _myHashMap getOrDefault [\"a\", \"Not Found!\"];</sqf>",
+    "<sqf>private _myValue = _hashMap getOrDefault [\"a\", \"Not Found!\", true]; // will add default value to the hash map if it does not exist</sqf>",
+    "<sqf>\nprivate _array = _hashmap getOrDefault [_key, [], true]; // a new array will be created if it doesn't exist\n_array pushBack _item; // _item will be added to the array (the one in the hashmap is updated by reference)\n</sqf>"
+  ],
+  "groups": [
+    "HashMap"
+  ],
+  "id": "getOrDefault",
+  "name": "getOrDefault",
+  "problem_notes": [],
+  "see_also": [
+    "getOrDefaultCall",
+    "HashMap",
+    "get"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "hashMap",
+          [
+            "key",
+            "defaultValue",
+            "setDefault"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "hashMap",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "case sensitive key",
+              "name": "key",
+              "type": "HashMapKey"
+            }
+          },
+          {
+            "Item": {
+              "default": "nil",
+              "desc": "",
+              "name": "defaultValue",
+              "optional": true,
+              "type": "Anything"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "if set to [[true]] and value does not exist in provided hash map, ''defaultValue'' will be added to the hash map",
+              "name": "setDefault",
+              "optional": true,
+              "since": {
+                "arma3": "2.4"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

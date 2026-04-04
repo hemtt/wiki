@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if '''a''' is less than or equal to '''b''', else returns [[false]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (fuel truck1 <= 0) then { hint \"Truck1 has no fuel left.\" };</sqf>"
+  ],
+  "groups": [
+    "Math",
+    "Variables"
+  ],
+  "id": "a_less%3D_b",
+  "name": "<=",
+  "problem_notes": [],
+  "see_also": [
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "a",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

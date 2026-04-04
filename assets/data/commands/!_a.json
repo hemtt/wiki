@@ -1,0 +1,39 @@
+{
+  "alias": [
+    "[[not]]"
+  ],
+  "argument_loc": "Unspecified",
+  "description": "Returns the negation of a Boolean expression. This means {{hl|[[true]]}} becomes {{hl|[[false]]}} and vice versa.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "The code\n<sqf>\nprivate _isAlive = alive player;\nif (!_isAlive) then\n{\n\thint \"The player is dead!\";\n};\n</sqf>\nis the same as\n<sqf>\nprivate _isAlive = alive player;\nif (not _isAlive) then\n{\n\thint \"The player is dead!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Variables",
+    "Math"
+  ],
+  "id": "!_a",
+  "name": "!",
+  "problem_notes": [],
+  "see_also": [
+    "not",
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "a"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "a",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "alias": [
+    "[[or]]"
+  ],
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if one or both conditions are [[true]]. In case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used. That means that if left operand is [[true]], evaluation of the right side is skipped completely.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (OBJ1 || _enemycount == 0) then { hint \"you win !\" };</sqf>",
+    "<sqf>\nif (count _array == 0 || { (_array select 0) != player }) then\n{\n\thint \"It works! Without lazy evaluation it would throw an error if array was empty.\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Math",
+    "Variables"
+  ],
+  "id": "a_or_b",
+  "name": "||",
+  "problem_notes": [],
+  "see_also": [
+    "or",
+    "and",
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "a",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "b",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "a",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "code that returns [[Boolean]]. It is not evaluated if ''a'' returns [[true]]",
+          "name": "b",
+          "type": "Code"
+        }
+      },
+      "since": {
+        "arma2oa": "1.62"
+      }
+    }
+  ]
+}

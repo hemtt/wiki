@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get array with backpacks from ammo box (or any general weapon holder container).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str backpackCargo vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "id": "backpackCargo",
+  "name": "backpackCargo",
+  "problem_notes": [],
+  "see_also": [
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpack",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "box"
+      },
+      "ret": {
+        "desc": "class names [\"BackpackType1\", \"BackpackType1\", \"BackpackType2\", ...]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "box",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of [[Boolean]]s corresponding to the visibility of various HUD elements (see extended [[showHUD]]).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_hudStatus = shownHUD;</sqf>",
+    "<sqf>shownHUD params [\"_hud\", \"_info\", \"_radar\", \"_compass\", \"_direction\", \"_menu\", \"_group\", \"_cursors\", \"_panels\", \"_kills\", \"_icon3d\"];</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "shownHUD",
+  "name": "shownHUD",
+  "problem_notes": [],
+  "see_also": [
+    "showHUD",
+    "shownMap",
+    "visibleMap",
+    "forceMap",
+    "shownGPS",
+    "shownWatch",
+    "shownCompass",
+    "shownUAVFeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "show scripted HUD such as weapon crosshair, action menu and overlays created with [[cutRsc]] and [[titleRsc]]. Same as [[showHUD]]'s first syntax",
+              "name": "hud",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show vehicle, soldier and weapon info",
+              "name": "info",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show vehicle radar",
+              "name": "radar",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show vehicle compass",
+              "name": "compass",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show tank direction indicator. Not present in vanilla {{arma3}}",
+              "name": "direction",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show commanding menu (HC related menus)",
+              "name": "menu",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show group info bar (Squad leader info bar)",
+              "name": "group",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show HUD weapon cursors (connected with scripted HUD)",
+              "name": "cursors",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show [[Arma 3: Custom Info]]",
+              "name": "panels",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "true",
+              "desc": "show \"x killed by y\" [[systemChat]] messages",
+              "name": "kills",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": "false",
+              "desc": "show icons drawn with [[drawIcon3D]] even when the HUD is hidden",
+              "name": "icon3d",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "{{Feature|afm}}Returns weight of RTD helicopter.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_taruWeight = weightRTD taru// Returns [7000,300,1990.56,0,0]</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "weightRTD",
+  "name": "weightRTD",
+  "problem_notes": [],
+  "see_also": [
+    "setCustomWeightRTD",
+    "isObjectRTD",
+    "load",
+    "getMass"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "helicopter"
+      },
+      "ret": {
+        "desc": "weights in kilograms",
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "weight of the fuselage",
+              "name": "fuselage",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "weight of the crew",
+              "name": "crew",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "weight of the fuel",
+              "name": "fuel",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "weight set with [[setCustomWeightRTD]]",
+              "name": "custom",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "weight of the weapons",
+              "name": "weapons",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sorts all children of given path. Value of [[CT_TREE|Tree View]] entries is used for sorting. [[tvSetValue]] can be used to set the value for a given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>control tvSortByValue [[0], false];</sqf>",
+    "<sqf>tvSortByValue [102, [0], false];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "id": "tvSortByValue",
+  "name": "tvSortByValue",
+  "problem_notes": [],
+  "see_also": [
+    "lbSortBy",
+    "lnbSortBy",
+    "tvSortAll",
+    "tvSort",
+    "tvSortByValueAll"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "ascending"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the parent item to sort",
+              "name": "path",
+              "type": "TreeViewPath"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "[[true]] to sort ascending, else descending",
+              "name": "ascending",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "ascending"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control idc",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "the parent item to sort",
+              "name": "path",
+              "type": "TreeViewPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to sort ascending, else descending. Default: [[false]]",
+              "name": "ascending",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

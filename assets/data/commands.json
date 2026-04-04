@@ -8,17 +8,7 @@
       ],
       "id": "!_a",
       "name": "!",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command !"
-      ],
-      "groups": [],
-      "id": "!_a",
-      "name": "!_a",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Selects an element from an [[Array]], same as [[select]] command for arrays, but has [[Order of Precedence|higher precedence]].\n{{Feature|informative|'''#''' has higher precedence than all binary operators, but it has lower precedence than unary operators (see {{Link|#Example 3}}).}}",
@@ -27,7 +17,7 @@
       ],
       "id": "a_hash_b",
       "name": "#",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Remainder of ''a'' divided by ''b''.",
@@ -36,17 +26,7 @@
       ],
       "id": "a_%25_b",
       "name": "%",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command +"
-      ],
-      "groups": [],
-      "id": "%2B",
-      "name": "%2B",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] only if both conditions are [[true]].\nIn case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used - if left operand is [[false]], evaluation of the right side is ignored.",
@@ -56,16 +36,16 @@
       ],
       "id": "a_%26%26_b",
       "name": "&&",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the value of ''a'' multiplied by ''b''.",
       "groups": [
         "Math"
       ],
-      "id": "a_*_b",
+      "id": "a_%2A_b",
       "name": "*",
-      "status": "Failed"
+      "status": "Unknown"
     },
     {
       "description": "Add two [[Number]]s, concatenate two [[Array]]s or two [[String]]s, or create a copy of an Array or [[HashMap]].\n\n{{Feature|warning|[[Array]] copy methods {{hl|ARRAY + []}} and {{hl|+ ARRAY}} have different behaviours:\n* {{hl|ARRAY + []}} creates copy of the 1st dimension, but preserves references in other dimensions ({{Link|https://en.wikipedia.org/wiki/Object_copying#Shallow_copy|shallow copy}}).\n* {{hl|+ ARRAY}} clones every element, so if the array is multi-dimensional, the created copy contains no references ({{Link|https://en.wikipedia.org/wiki/Object_copying#Deep_copy|deep copy}}).\nSee [[#Example_6|Example 6]].\n}}",
@@ -77,29 +57,26 @@
       ],
       "id": "%2B",
       "name": "+",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Subtracts numbers or arrays from each another, negates a number. For arrays also see [[deleteAt]] and [[deleteRange]].\n{{Feature|arma3|In Arma 3 it is possible to subtract nested arrays.}}",
-      "errors": [
-        "Missing return type for command -"
-      ],
       "groups": [
         "Math",
         "Arrays"
       ],
       "id": "-",
       "name": "-",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "See [[switch]]",
       "groups": [
         "Program Flow"
       ],
-      "id": "a_:_b",
+      "id": "a_%3A_b",
       "name": ":",
-      "status": "Failed"
+      "status": "Unknown"
     },
     {
       "description": "Returns if ''a'' is lesser than ''b''.",
@@ -109,7 +86,7 @@
       ],
       "id": "a_less_b",
       "name": "<",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if '''a''' is less than or equal to '''b''', else returns [[false]].",
@@ -129,7 +106,7 @@
       ],
       "id": "a_less%3D_b",
       "name": "<=",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if '''a''' is greater than '''b''', else returns [[false]].",
@@ -139,7 +116,7 @@
       ],
       "id": "a_greater_b",
       "name": ">",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns if ''a'' is greater than or equal to ''b''.",
@@ -149,7 +126,7 @@
       ],
       "id": "a_greater%3D_b",
       "name": ">=",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns if ''a'' is greater than or equal to ''b''.",
@@ -252,12 +229,12 @@
       ],
       "id": "a_%5E_b",
       "name": "^",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
       "errors": [
-        "Missing return type for command !="
+        "Failed to parse parameter for command '!=': 'a:\n<table class=\"wikitable\">\n<tr>\n<th>Introduced in</th>\n<th>Possible Type</th>\n</tr>\n<tr>\n<td rowspan=\"5\">{{GVI|ofp|1.00}}</td>\n<td>Number</td>\n</tr>\n<tr><td>Side</td></tr>\n<tr><td>String</td></tr>\n<tr><td>Object</td></tr>\n<tr><td>Group</td></tr>\n<tr>\n<td rowspan=\"4\">{{GVI|arma1|1.00}}</td>\n<td>Structured Text</td>\n</tr>\n<tr><td>Config</td></tr>\n<tr><td>Display</td></tr>\n<tr><td>Control</td></tr>\n<tr>\n<td rowspan=\"1\">{{GVI|arma1|1.08}}</td>\n<td>Location</td>\n</tr>\n<tr>\n<td rowspan=\"3\">{{GVI|arma3|2.00}}</td>\n<td>Diary Record</td>\n</tr>\n<tr><td>Namespace</td></tr>\n<tr><td>Boolean</td></tr>\n</table>'"
       ],
       "groups": [],
       "id": "a_!%3D_b",
@@ -267,27 +244,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Missing return type for command %"
-      ],
-      "groups": [],
-      "id": "a_%25_b",
-      "name": "a_%25_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command &&"
-      ],
-      "groups": [],
-      "id": "a_%26%26_b",
-      "name": "a_%26%26_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command =="
+        "Failed to parse parameter for command '==': 'a:\n{{{!}} class=\"wikitable\"\n! Introduced in\n! colspan=\"5\" {{!}} {{GVI|ofp|1.00}}\n! colspan=\"4\" {{!}} {{GVI|arma1|1.00}}\n! {{GVI|arma1|1.08}}\n! colspan=\"3\" {{!}} {{GVI|arma3|2.00}}\n{{!}}-\n! Possible Type\n{{!}} [[Number]]\n{{!}} [[Side]]\n{{!}} [[String]]\n{{!}} [[Object]]\n{{!}} [[Group]]\n{{!}} [[Structured Text]]\n{{!}} [[Config]]\n{{!}} [[Display]]\n{{!}} [[Control]]\n{{!}} [[Location]]\n{{!}} [[Diary Record]]\n{{!}} [[Namespace]]\n{{!}} [[Boolean]]\n{{!}}}'"
       ],
       "groups": [],
       "id": "a_%3D%3D_b",
@@ -297,111 +254,11 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Missing return type for command ="
+        "Exceeded maximum recursion depth while parsing Value"
       ],
       "groups": [],
       "id": "a_%3D_b",
       "name": "a_%3D_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command ^"
-      ],
-      "groups": [],
-      "id": "a_%5E_b",
-      "name": "a_%5E_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command *"
-      ],
-      "groups": [],
-      "id": "a_*_b",
-      "name": "a_*_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command /"
-      ],
-      "groups": [],
-      "id": "a_/_b",
-      "name": "a_/_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command :"
-      ],
-      "groups": [],
-      "id": "a_:_b",
-      "name": "a_:_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command >="
-      ],
-      "groups": [],
-      "id": "a_greater%3D_b",
-      "name": "a_greater%3D_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command >"
-      ],
-      "groups": [],
-      "id": "a_greater_b",
-      "name": "a_greater_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command #"
-      ],
-      "groups": [],
-      "id": "a_hash_b",
-      "name": "a_hash_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command <="
-      ],
-      "groups": [],
-      "id": "a_less%3D_b",
-      "name": "a_less%3D_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command <"
-      ],
-      "groups": [],
-      "id": "a_less_b",
-      "name": "a_less_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command ||"
-      ],
-      "groups": [],
-      "id": "a_or_b",
-      "name": "a_or_b",
       "status": "Failed"
     },
     {
@@ -659,15 +516,12 @@
     },
     {
       "description": "Allow curator use of given addon.",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Curator"
       ],
       "id": "addCuratorAddons",
       "name": "addCuratorAddons",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Adds or changes curator camera area (depends on if ID is already used).",
@@ -2239,15 +2093,12 @@
     },
     {
       "description": "Get array with backpacks from ammo box (or any general weapon holder container).",
-      "errors": [
-        "Unknown simple type: array"
-      ],
       "groups": [
         "Containers"
       ],
       "id": "backpackCargo",
       "name": "backpackCargo",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns a cargo container of a unit's backpack.",
@@ -4047,7 +3898,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Unknown simple type: hashmapkey"
+        "Failed to parse parameter for command 'createHashMapFromArray': 'values: [[Array]] of [[Anything]]\n{{Feature|informative|Size of ''keys'' and size of ''values'' arrays do not need to be equal. Missing values will be filled with [[nil]].}}'"
       ],
       "groups": [],
       "id": "createHashMapFromArray",
@@ -6099,16 +5950,13 @@
     },
     {
       "description": "Removes array element at the given index and returns removed element (modifies the original array, just like [[resize]] or [[set]]).\n{{Feature|informative| For the main [[Array]] variant, if the index is a negative [[Number]], no error will appear, making it ideal for using with [[find]] (see {{Link|#Example 2}}) or [[findIf]] (see {{Link|#Example 3}}).}}",
-      "errors": [
-        "Unknown simple type: hashmapkey"
-      ],
       "groups": [
         "Arrays",
         "HashMap"
       ],
       "id": "deleteAt",
       "name": "deleteAt",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "In a nutshell, this command removes gaming [[Side]] (see [[createCenter]]). If a side has >0 [[Group]]s it cannot be deleted. Center can only be created for: [[east]], [[west]], [[resistance]], [[civilian]] and [[sideLogic]], therefore only centers from the mentioned sides can be deleted.<br><br>\n'''Old description:''' Destroys the AI center of the given side.",
@@ -8956,7 +8804,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Unknown simple type: hashmapkey"
+        "Exceeded maximum recursion depth while parsing Value"
       ],
       "groups": [],
       "id": "get",
@@ -10218,27 +10066,21 @@
     },
     {
       "description": "Retrieves a value out of a [[HashMap]] after looking it up by its key. When the HashMap doesn't contain the key, the default value is returned",
-      "errors": [
-        "Unknown simple type: hashmapkey"
-      ],
       "groups": [
         "HashMap"
       ],
       "id": "getOrDefault",
       "name": "getOrDefault",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Retrieves a value from the [[HashMap]] for the given 'key', executes given 'code' if key was not found and returns result.\nAdditionally sets key to the code result value if ''set'' is true.",
-      "errors": [
-        "Unknown simple type: hashmapkey"
-      ],
       "groups": [
         "HashMap"
       ],
       "id": "getOrDefaultCall",
       "name": "getOrDefaultCall",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns amount of remaining oxygen.",
@@ -11822,7 +11664,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Unknown simple type: hashmapkey"
+        "Failed to parse parameter for command 'insert': 'keysAndValues: [[Array]] - in format depending on ''splitArrays value:\n* [[true]] - {{hl|[[key1, key2, ...], [value1, value2, ...]]}}\n* [[false]] - {{hl|[[key1, value1], [key2, value2], ...]}} (same as {{Link|#Syntax 3}}, see {{Link|#Example 3}} for the correct format)'"
       ],
       "groups": [],
       "id": "insert",
@@ -17175,15 +17017,12 @@
     },
     {
       "description": "Removes all magazines from the given turret or from all turrets. Use turret path [-1] for driver's turret or [] for all turrets.",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Turrets"
       ],
       "id": "removeAllMagazinesTurret",
       "name": "removeAllMagazinesTurret",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Removes all mission event handlers of the given type which were added by [[addMissionEventHandler]].\n\n{{Feature | important | Prior to {{GVI|arma3|2.08}} this command would also reset the Event Handler creation index to 0.}}",
@@ -18667,16 +18506,13 @@
     },
     {
       "description": "Changes the element at the given zero-based index of the [[Array|array]]. \n\n{{Feature|informative|If the index is out of bounds, the array will [[resize]] to incorporate the index as its last value, padding with [[nil]] as necessary (see {{Link|#Example 4}}). }}",
-      "errors": [
-        "Unknown simple type: hashmapkey"
-      ],
       "groups": [
         "Arrays",
         "HashMap"
       ],
       "id": "set",
       "name": "set",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -20418,15 +20254,12 @@
     },
     {
       "description": "Updates particle source, creates particles in circle with given radius. Velocity is transformed and added to total velocity. The random particle positioning is calculated in relation to the nearest surface. Since Arma 3 2.22, this could be overridden (will also override onSurface = true).",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Particles"
       ],
       "id": "setParticleCircle",
       "name": "setParticleCircle",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets particle source parameters using existing particle config from {{hl|CfgCloudlets}} class. Use [[setParticleParams]] subsequently if you need to overwrite some values.\n{{Feature | important | If {{hl|CfgCloudlets}} class contains [[Simple_Expression | simple expressions]], they will not be evaluated by this command, which might make the whole class unusable in script.}}",
@@ -22086,15 +21919,12 @@
     },
     {
       "description": "Returns array of [[Boolean]]s corresponding to the visibility of various HUD elements (see extended [[showHUD]]).",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Interaction"
       ],
       "id": "shownHUD",
       "name": "shownHUD",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Checks if client has Map enabled in [[Description.ext|description.ext]] (''showMap'' param) or force enabled with [[showMap]] command.",
@@ -22331,15 +22161,12 @@
     },
     {
       "description": "Returns a location's size.",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Locations"
       ],
       "id": "size",
       "name": "size",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the diameter of bounding sphere of the object of given classname in meters. If you need to estimate the size of the object more precisely, use [[boundingBox]] or [[boundingBoxReal]].\n{{Feature | important | At least one object of the given classname has to be present in the current mission otherwise zero will be returned.}}",
@@ -23569,15 +23396,12 @@
     },
     {
       "description": "Checks if a turret is [[Multiplayer Scripting#Locality|local]].",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Turrets"
       ],
       "id": "turretLocal",
       "name": "turretLocal",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns id of the turret's [[owner]]. Returns 0 on non-server and SP.",
@@ -23662,15 +23486,12 @@
     },
     {
       "description": "Removes an item with given [[Tree View Path]] from Tree View.\n{{Feature|important|The paths of other items on the same branch after delete operation are updated accordingly; therefore, when deleting multiple entries, start with the one with the highest index and proceed in reverse order.}}",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "GUI Control - Tree View"
       ],
       "id": "tvDelete",
       "name": "tvDelete",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Expands tree item pointed to by the path. IDC means id of parent Tree View.",
@@ -23719,27 +23540,21 @@
     },
     {
       "description": "Returns array of paths to selected items.",
-      "errors": [
-        "Unknown simple type: array"
-      ],
       "groups": [
         "GUI Control - Tree View"
       ],
       "id": "tvSelection",
       "name": "tvSelection",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets text color on given Tree View Item",
-      "errors": [
-        "Unknown simple type: array"
-      ],
       "groups": [
         "GUI Control - Tree View"
       ],
       "id": "tvSetColor",
       "name": "tvSetColor",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets cursor to given item on given path. IDC means id of parent Tree View. To deselect all items use [-1] for the path param (''available since Arma 3 v1.56'')",
@@ -23896,15 +23711,12 @@
     },
     {
       "description": "Sorts all children of given path. Value of [[CT_TREE|Tree View]] entries is used for sorting. [[tvSetValue]] can be used to set the value for a given path.",
-      "errors": [
-        "Unknown simple type: array"
-      ],
       "groups": [
         "GUI Control - Tree View"
       ],
       "id": "tvSortByValue",
       "name": "tvSortByValue",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sorts all children, including trees deriving from given path.  Value of [[CT_TREE|Tree View]] entries is used for sorting.",
@@ -24314,15 +24126,12 @@
     },
     {
       "description": "Adds two arrays of numbers. Replaces [[BIS_fnc_vectorAdd]].<br>\n{{Feature|GVI|arma3|2.14|Since {{GVI|arma3|2.14|size= 0.75}} any count of numbers is valid, if one array is larger than the other, the remaining elements are inserted without change.<br>\nBefore {{GVI|arma3|2.14|size= 0.75}}, the first argument had to be vector 3D, or {{GVI|arma3|2.00|size= 0.75}} 2D (Which still returned 3D result, with z coordinate defaulted to 0)}}",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "Math - Vectors"
       ],
       "id": "vectorAdd",
       "name": "vectorAdd",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -24337,7 +24146,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Unknown simple type: array"
+        "Failed to parse parameter for command 'vectorCrossProduct': 'return: [[Array]] -  vector [x, y, z]\n<br><br>\n[[File:crossProduct.jpg|300px]]'"
       ],
       "groups": [],
       "id": "vectorCrossProduct",
@@ -25166,15 +24975,12 @@
     },
     {
       "description": "{{Feature|afm}}Returns weight of RTD helicopter.",
-      "errors": [
-        "Unknown simple type: array"
-      ],
       "groups": [
         "RTD"
       ],
       "id": "weightRTD",
       "name": "weightRTD",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "West (BLUFOR) [[Side|side]].",
@@ -25305,12 +25111,12 @@
       ],
       "id": "a_or_b",
       "name": "||",
-      "status": "Failed"
+      "status": "Passed"
     }
   ],
-  "failed": 545,
-  "passed": 2148,
-  "timestamp": 1775290206,
-  "total": 2708,
+  "failed": 513,
+  "passed": 2179,
+  "timestamp": 1775290979,
+  "total": 2694,
   "version": "1.0"
 }

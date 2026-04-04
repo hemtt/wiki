@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Allow curator use of given addon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorObj addCuratorAddons [\"A3_Armor_F_AMV\",\"A3_Armor_F_Panther\"];</sqf>",
+    "<sqf>curatorObj addCuratorAddons [\"A3_Modules_F_Curator_Lightning\"];</sqf>",
+    "Addons can be stacked:\n<sqf>\ncuratorObj addCuratorAddons [\"A3_Armor_F_AMV\",\"A3_Armor_F_Panther\"];\ncuratorObj addCuratorAddons [\"A3_Modules_F_Curator_Lightning\"];\ndiag_log curatorAddons curatorObj;\n</sqf>\n<br>\n<sqf>\n[\n\t\"A3_Armor_F_AMV\",\n\t\"A3_Armor_F_Panther\",\n\t\"A3_Modules_F_Curator_Lightning\"\n]\n</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "addCuratorAddons",
+  "name": "addCuratorAddons",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "removeCuratorAddons",
+    "removeAllCuratorAddons",
+    "curatorAddons"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "addons"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "CfgPatches class names",
+          "name": "addons",
+          "type": {
+            "ArrayUnsized": {
+              "value": "String"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

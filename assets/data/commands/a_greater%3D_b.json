@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if ''a'' is greater than or equal to ''b''.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (fuel truck1 >= 0.5) then { hint \"Truck1 has at least half a tank of fuel left.\" };</sqf>"
+  ],
+  "groups": [
+    "Math",
+    "Variables"
+  ],
+  "id": "a_greater%3D_b",
+  "name": ">=",
+  "problem_notes": [],
+  "see_also": [
+    "Operators",
+    "a",
+    "less=",
+    "b|&lt;=",
+    "a",
+    "greater",
+    "b|&gt;",
+    "a",
+    "==",
+    "b|==",
+    "a",
+    "!=",
+    "b|!="
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "a",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

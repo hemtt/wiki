@@ -1,0 +1,123 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Changes the element at the given zero-based index of the [[Array|array]]. \n\n{{Feature|informative|If the index is out of bounds, the array will [[resize]] to incorporate the index as its last value, padding with [[nil]] as necessary (see {{Link|#Example 4}}). }}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_arrayOne set [0, \"Hello\"];</sqf>",
+    "Append \"Bye\" as last element to {{hl|_arrayTwo}}:\n<sqf>_arrayTwo set [count _arrayTwo, \"Bye\"];</sqf>",
+    "Replace the last element of {{hl|_arrayThree}} with 23:\n<sqf>_arrayThree set [(count _arrayThree) - 1, 23];</sqf>",
+    "Using [[set]] with an index that is out of bounds:\n<sqf>\nprivate _array = [\"A\"];\n_array set [2, \"C\"]; // _array is now [\"A\", nil, \"C\"]\n_array set [1, \"B\"]; // _array is now [\"A\", \"B\", \"C\"]\n</sqf>",
+    "<sqf>\nprivate _myHashMap = createHashMap;\n_myHashMap set [\"key\", \"value1\", true]; // \"key\" value is set to \"value1\"\n_myHashMap set [\"key\", \"value2\", true]; // \"key\" value is still \"value1\" as \"key\" already exists in the hashmap\n</sqf>"
+  ],
+  "groups": [
+    "Arrays",
+    "HashMap"
+  ],
+  "id": "set",
+  "name": "set",
+  "problem_notes": [],
+  "see_also": [
+    "resize",
+    "reverse",
+    "select",
+    "deleteAt",
+    "deleteRange"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "array",
+          [
+            "index",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "0-based array index. {{GVI|arma3|2.12|size= 0.75}} negative index can be used to select from the end of the array, i.e. -1 means last array element.",
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "value",
+              "type": "Anything"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "hashMap",
+          [
+            "key",
+            "value",
+            "insertOnly"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "hashMap",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "desc": "[[false]] if the key is new to the hashmap, [[true]] if a value got overwritten",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "key",
+              "type": "HashMapKey"
+            }
+          },
+          {
+            "Item": {
+              "name": "value",
+              "type": "Anything"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "if set to [[true]], set the value only if the key does not exist already",
+              "name": "insertOnly",
+              "optional": true,
+              "since": {
+                "arma3": "2.8"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.2"
+      }
+    }
+  ]
+}

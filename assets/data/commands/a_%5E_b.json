@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "''a'' raised to the power of ''b''",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>5 ^ 2 // 5², result is 25</sqf>"
+  ],
+  "groups": [
+    "Math"
+  ],
+  "id": "a_%5E_b",
+  "name": "^",
+  "problem_notes": [],
+  "see_also": [
+    "Math",
+    "Commands",
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "a",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "b",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}
