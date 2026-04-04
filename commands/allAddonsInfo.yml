@@ -9,23 +9,28 @@ syntax:
       value: !ArraySized
       - name: prefix
         type: String
+        default: null
         desc: addon prefix
         since: null
       - name: version
         type: String
+        default: null
         desc: addon revision version
         since: null
       - name: isPatched
         type: Boolean
+        default: null
         desc: '[[true]] if patching is enabled and this addon is being patched'
         since: null
       - name: modIndex
         type: Number
+        default: null
         desc: index of mod in [[getLoadedModsInfo]] array. -1 if not found.
         since:
           arma3: '2.14'
       - name: hash
         type: String
+        default: null
         desc: hash of the addon PBO file. "" if hashing fails.
         since:
           arma3: '2.14'

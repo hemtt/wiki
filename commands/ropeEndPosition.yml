@@ -8,10 +8,12 @@ syntax:
     type: !ArraySized
     - name: startPos
       type: Position3dAGL
+      default: null
       desc: null
       since: null
     - name: endPos
       type: Position3dAGL
+      default: null
       desc: null
       since: null
   right: !Item

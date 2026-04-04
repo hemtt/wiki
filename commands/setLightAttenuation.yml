@@ -39,10 +39,12 @@ syntax:
     name: hardlimitstart
     desc: (Optional) max distance hard limit start (start of fading of intensity to 0) in m
     type: Number
+    optional: true
   - !Item
     name: hardlimitend
     desc: (Optional) max distance hard limit end (end of fading of intensity to 0) in m
     type: Number
+    optional: true
 argument_loc: Local
 effect_loc: Local
 since: {}

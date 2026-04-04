@@ -33,7 +33,7 @@ syntax:
         since: null
   - !Item
     name: textWindowBackground
-    desc: (Optional, default "") background text
+    desc: background text
     type: !ArrayUnsized
       value: !OneOf
       - type: String
@@ -42,11 +42,13 @@ syntax:
       - type: StructuredText
         desc: null
         since: null
+    optional: true
+    default: '""'
     since:
       arma3: '1.62'
   - !Item
     name: textWindowForeground
-    desc: (Optional, default "") foreground text
+    desc: foreground text
     type: !ArrayUnsized
       value: !OneOf
       - type: String
@@ -55,6 +57,8 @@ syntax:
       - type: StructuredText
         desc: null
         since: null
+    optional: true
+    default: '""'
     since:
       arma3: '1.62'
 argument_loc: Global

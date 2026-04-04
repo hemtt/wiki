@@ -11,18 +11,22 @@ syntax:
     type: !ArraySized
     - name: ambientLightColor
       type: ArrayColor
+      default: null
       desc: null
       since: null
     - name: ambientLightBrightness
       type: Number
+      default: null
       desc: null
       since: null
     - name: dynamicLightColor
       type: ArrayColor
+      default: null
       desc: null
       since: null
     - name: dynamicLightBrightness
       type: Number
+      default: null
       desc: null
       since: null
   right: !Item

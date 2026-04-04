@@ -12,34 +12,42 @@ syntax:
       value: !ArraySized
       - name: weaponIndex
         type: Number
+        default: null
         desc: internal weapon index (changes frequently) used with "SwitchWeapon" and "UseWeapon" [[action]]s
         since: null
       - name: isSelected
         type: Boolean
+        default: null
         desc: '[[true]] if this weapon is currently selected'
         since: null
       - name: weaponName
         type: String
+        default: null
         desc: weapon name
         since: null
       - name: muzzleName
         type: String
+        default: null
         desc: muzzle name
         since: null
       - name: firemode
         type: String
+        default: null
         desc: firemode that is set for this 'weaponIndex'
         since: null
       - name: magazineName
         type: String
+        default: null
         desc: name of the loaded magazine or ""
         since: null
       - name: ammoCount
         type: Number
+        default: null
         desc: magazine ammo count or -1
         since: null
       - name: isPrimary
         type: Boolean
+        default: null
         desc: '[[true]] if this muzzle is considered primary by the engine (Since Arma 3 2.14)'
         since: null
   left: !Item
@@ -53,8 +61,10 @@ syntax:
     type: String
   - !Item
     name: onlyLoaded
-    desc: (Optional, default [[false]]) [[true]] to return loaded weapons only
+    desc: '[[true]] to return loaded weapons only'
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

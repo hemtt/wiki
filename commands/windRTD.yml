@@ -10,10 +10,12 @@ syntax:
     type: !ArraySized
     - name: windStrength
       type: Number
+      default: null
       desc: null
       since: null
     - name: windDirection
       type: Number
+      default: null
       desc: null
       since: null
 argument_loc: Unspecified

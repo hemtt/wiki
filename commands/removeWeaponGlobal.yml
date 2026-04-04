@@ -34,8 +34,10 @@ syntax:
     type: String
   - !Item
     name: autoselect
-    desc: (Optional, default [[true]]) [[false]] to abort weapon autoselection when removing primary weapon.
+    desc: '[[false]] to abort weapon autoselection when removing primary weapon.'
     type: String
+    optional: true
+    default: 'true'
   since:
     arma3: '2.20'
 argument_loc: Global

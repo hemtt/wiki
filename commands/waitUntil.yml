@@ -33,8 +33,10 @@ syntax:
     type: Number
   - !Item
     name: interval
-    desc: (Optional, default 0) the time interval in seconds of game time between condition checks, this is equivalent to using a "sleep" after the condition.
+    desc: the time interval in seconds of game time between condition checks, this is equivalent to using a "sleep" after the condition.
     type: Number
+    optional: true
+    default: '0'
   since:
     arma3: '2.22'
 - call: !Unary scriptHandle

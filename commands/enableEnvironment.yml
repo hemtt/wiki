@@ -41,8 +41,10 @@ syntax:
     type: Boolean
   - !Item
     name: windyCoef
-    desc: (Optional, default 1) howling wind at heights, range 0..1
+    desc: howling wind at heights, range 0..1
     type: Number
+    optional: true
+    default: '1'
     since:
       arma3: '2.12'
   since:

@@ -24,8 +24,10 @@ syntax:
     type: TurretPath
   - !Item
     name: ammoCount
-    desc: (Optional, default 0) desired ammo count
+    desc: desired ammo count
     type: Number
+    optional: true
+    default: '0'
     since:
       arma3: '1.56'
 argument_loc: Local

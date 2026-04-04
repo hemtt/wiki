@@ -36,8 +36,10 @@ syntax:
     type: Vector3d
   - !Item
     name: clip
-    desc: (Optional, default [[false]]) if [[true]], range value will be clipped to stay within "from" - "to" range
+    desc: if [[true]], range value will be clipped to stay within "from" - "to" range
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

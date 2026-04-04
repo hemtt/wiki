@@ -35,6 +35,7 @@ syntax:
     name: instant
     desc: (Optional) animate immediately
     type: Boolean
+    optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

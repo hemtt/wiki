@@ -29,6 +29,7 @@ syntax:
     name: skipBriefing
     desc: (Optional) If true, the intro and briefing are skipped.
     type: Boolean
+    optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

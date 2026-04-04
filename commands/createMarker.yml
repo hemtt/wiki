@@ -49,14 +49,18 @@ syntax:
         since: null
   - !Item
     name: channel
-    desc: (Optional, default -1) the marker channel - see [[Channel IDs]] (for multiplayer)
+    desc: the marker channel - see [[Channel IDs]] (for multiplayer)
     type: Number
+    optional: true
+    default: '-1'
     since:
       arma3: '2.2'
   - !Item
     name: creator
-    desc: (Optional, default [[objNull]]) the marker creator (for multiplayer)
+    desc: the marker creator (for multiplayer)
     type: Object
+    optional: true
+    default: objnull
     since:
       arma3: '2.2'
 argument_loc: Unspecified

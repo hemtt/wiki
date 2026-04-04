@@ -1,0 +1,78 @@
+name: shownHUD
+desc: Returns array of [[Boolean]]s corresponding to the visibility of various HUD elements (see extended [[showHUD]]).
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: !ArraySized
+    - name: hud
+      type: Boolean
+      default: null
+      desc: show scripted HUD such as weapon crosshair, action menu and overlays created with [[cutRsc]] and [[titleRsc]]. Same as [[showHUD]]'s first syntax
+      since: null
+    - name: info
+      type: Boolean
+      default: 'true'
+      desc: show vehicle, soldier and weapon info
+      since: null
+    - name: radar
+      type: Boolean
+      default: 'true'
+      desc: show vehicle radar
+      since: null
+    - name: compass
+      type: Boolean
+      default: 'true'
+      desc: show vehicle compass
+      since: null
+    - name: direction
+      type: Boolean
+      default: 'true'
+      desc: show tank direction indicator. Not present in vanilla {{arma3}}
+      since: null
+    - name: menu
+      type: Boolean
+      default: 'true'
+      desc: show commanding menu (HC related menus)
+      since: null
+    - name: group
+      type: Boolean
+      default: 'true'
+      desc: show group info bar (Squad leader info bar)
+      since: null
+    - name: cursors
+      type: Boolean
+      default: 'true'
+      desc: show HUD weapon cursors (connected with scripted HUD)
+      since: null
+    - name: panels
+      type: Boolean
+      default: 'true'
+      desc: 'show [[Arma 3: Custom Info]]'
+      since: null
+    - name: kills
+      type: Boolean
+      default: 'true'
+      desc: show "x killed by y" [[systemChat]] messages
+      since: null
+    - name: icon3d
+      type: Boolean
+      default: 'false'
+      desc: show icons drawn with [[drawIcon3D]] even when the HUD is hidden
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_hudStatus = shownHUD;</sqf>
+- <sqf>shownHUD params ["_hud", "_info", "_radar", "_compass", "_direction", "_menu", "_group", "_cursors", "_panels", "_kills", "_icon3d"];</sqf>
+see_also:
+- showHUD
+- shownMap
+- visibleMap
+- forceMap
+- shownGPS
+- shownWatch
+- shownCompass
+- shownUAVFeed

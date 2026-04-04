@@ -8,26 +8,32 @@ syntax:
     type: !ArraySized
     - name: isDlc
       type: Boolean
+      default: null
       desc: the asset belongs to a DLC
       since: null
     - name: isOwned
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: isInstalled
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: isAvailable
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: appID
       type: String
+      default: null
       desc: actual steam item ID or "0" for none or "-1" for unknown
       since: null
     - name: DLCName
       type: String
+      default: null
       desc: actual DLC name or ""
       since: null
   right: !Item
@@ -48,26 +54,32 @@ syntax:
     type: !ArraySized
     - name: isDlc
       type: Boolean
+      default: null
       desc: the asset belongs to a DLC
       since: null
     - name: isOwned
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: isInstalled
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: isAvailable
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: appID
       type: String
+      default: null
       desc: actual steam item ID or "0" for none or "-1" for unknown
       since: null
     - name: DLCName
       type: String
+      default: null
       desc: actual DLC name or ""
       since: null
   right: !Array
@@ -77,8 +89,10 @@ syntax:
     type: String
   - !Item
     name: config
-    desc: (Optional, default <sqf inline>configFile >> "CfgVehicles"</sqf>) config in which to search
+    desc: config in which to search
     type: Config
+    optional: true
+    default: <sqf inline>configfile >> "cfgvehicles"</sqf>
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

@@ -81,8 +81,10 @@ syntax:
     type: Number
   - !Item
     name: customCenter
-    desc: (Optional, default placing point of the model (see [[getModelInfo]])) custom center [x, y, z] to which transformation would be applied in model coordinates
+    desc: ) custom center [x, y, z] to which transformation would be applied in model coordinates
     type: Position3dRelative
+    optional: true
+    default: placing point of the model (see [[getmodelinfo
     since:
       arma3: '2.8'
 argument_loc: Local

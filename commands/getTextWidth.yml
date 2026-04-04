@@ -19,12 +19,16 @@ syntax:
   right: !Array
   - !Item
     name: font
-    desc: (Optional since {{GVI|arma3|2.22|size= 0.75}}, default "" (system font)) [[FXY_File_Format#Available_Fonts|font type]]
+    desc: ) [[FXY_File_Format#Available_Fonts|font type]]
     type: String
+    optional: true
+    default: '"" (system font'
   - !Item
     name: size
-    desc: (Optional since {{GVI|arma3|2.22|size= 0.75}}, default -1 (system font size)) font size
+    desc: ) font size
     type: Number
+    optional: true
+    default: -1 (system font size
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

@@ -9,10 +9,12 @@ syntax:
     type: !ArraySized
     - name: forceMapForced
       type: Boolean
+      default: null
       desc: '[[true]] if map was forced with [[forceMap]] command'
       since: null
     - name: openMapForced
       type: Boolean
+      default: null
       desc: '[[true]] if map was forced with [[openMap]] command.'
       since: null
 argument_loc: Unspecified

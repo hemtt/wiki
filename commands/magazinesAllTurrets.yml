@@ -9,22 +9,27 @@ syntax:
       value: !ArraySized
       - name: className
         type: String
+        default: null
         desc: magazine class name
         since: null
       - name: turretPath
         type: TurretPath
+        default: null
         desc: null
         since: null
       - name: ammoCount
         type: Number
+        default: null
         desc: how many rounds left in the magazine
         since: null
       - name: id
         type: Number
+        default: null
         desc: id of the magazine object. The number starts at 10,000,000. This gives it about 6,700,000 possible ids before the number starts losing precision and cannot be used in scripts.
         since: null
       - name: creator
         type: Number
+        default: null
         desc: '[[owner]] / [[clientOwner]] of the PC that created the object'
         since: null
   right: !Item
@@ -39,22 +44,27 @@ syntax:
       value: !ArraySized
       - name: className
         type: String
+        default: null
         desc: magazine class name
         since: null
       - name: turretPath
         type: TurretPath
+        default: null
         desc: null
         since: null
       - name: ammoCount
         type: Number
+        default: null
         desc: how many rounds left in the magazine
         since: null
       - name: id
         type: Number
+        default: null
         desc: id of the magazine object. The number starts at 10,000,000. This gives it about 6,700,000 possible ids before the number starts losing precision and cannot be used in scripts.
         since: null
       - name: creator
         type: Number
+        default: null
         desc: '[[owner]] / [[clientOwner]] of the PC that created the object'
         since: null
   right: !Array

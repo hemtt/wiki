@@ -16,10 +16,12 @@ syntax:
     type: !ArraySized
     - name: distance
       type: Number
+      default: null
       desc: null
       since: null
     - name: blur
       type: Number
+      default: null
       desc: sets the camera focus blur
       since: null
 argument_loc: Unspecified

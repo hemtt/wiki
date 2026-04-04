@@ -24,16 +24,22 @@ syntax:
     type: String
   - !Item
     name: speed
-    desc: (Optional, default -1) time in seconds to fade in resource
+    desc: time in seconds to fade in resource
     type: Number
+    optional: true
+    default: '-1'
   - !Item
     name: showInMap
-    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    desc: '[[false]] to hide the text when the map is opened'
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: isStructuredText
-    desc: (Optional, default [[false]]) [[true]] to switch support for [[Structured Text]] formatting - see {{Link|#Example 4}}
+    desc: '[[true]] to switch support for [[Structured Text]] formatting - see {{Link|#Example 4}}'
     type: Boolean
+    optional: true
+    default: 'false'
     since:
       arma3: '1.74'
 argument_loc: Unspecified

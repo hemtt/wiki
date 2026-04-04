@@ -31,8 +31,10 @@ syntax:
     type: Object
   - !Item
     name: extended
-    desc: (Optional, default [[false]]) when [[true]], performs a more thorough search on top of base behaviour, slower but returns pedestrian and other missing road segments
+    desc: when [[true]], performs a more thorough search on top of base behaviour, slower but returns pedestrian and other missing road segments
     type: Boolean
+    optional: true
+    default: 'false'
   since:
     arma3: '2.0'
 argument_loc: Unspecified

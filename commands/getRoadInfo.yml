@@ -13,42 +13,52 @@ syntax:
     type: !ArraySized
     - name: mapType
       type: String
+      default: null
       desc: road segment type, could be {{hl|"HIDE"}}, {{hl|"ROAD"}}, {{hl|"MAIN ROAD"}}, {{hl|"TRACK"}}, {{hl|"TRAIL"}} (see [[nearestTerrainObjects]])
       since: null
     - name: width
       type: Number
+      default: null
       desc: road segment width
       since: null
     - name: isPedestrian
       type: Boolean
+      default: null
       desc: when [[true]] road is for pedestrian use only
       since: null
     - name: texture
       type: String
+      default: null
       desc: road segment surface texture
       since: null
     - name: textureEnd
       type: String
+      default: null
       desc: road segment surface texture
       since: null
     - name: material
       type: String
+      default: null
       desc: road segment surface material
       since: null
     - name: begPos
       type: Position3dASL
+      default: null
       desc: start of the road segment
       since: null
     - name: endPos
       type: Position3dASL
+      default: null
       desc: finish of the road segment
       since: null
     - name: isBridge
       type: Boolean
+      default: null
       desc: when [[true]] road segment is a bridge
       since: null
     - name: AIpathOffset
       type: Number
+      default: null
       desc: config value of `AIpathOffset`
       since:
         arma3: '2.12'

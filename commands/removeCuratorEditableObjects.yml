@@ -20,8 +20,10 @@ syntax:
       value: Object
   - !Item
     name: removeCrew
-    desc: (Optional, default [[true]])
+    desc: ''
     type: Boolean
+    optional: true
+    default: 'true'
 argument_loc: Unspecified
 effect_loc: Unspecified
 server_exec: true

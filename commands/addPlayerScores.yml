@@ -17,22 +17,27 @@ syntax:
     type: !ArraySized
     - name: killsInfantry
       type: Number
+      default: null
       desc: number of infantry units killed
       since: null
     - name: killsSoft
       type: Number
+      default: null
       desc: number of soft vehicles killed
       since: null
     - name: killsArmor
       type: Number
+      default: null
       desc: number of armored vehicles killed
       since: null
     - name: killsAir
       type: Number
+      default: null
       desc: number of air vehicles killed
       since: null
     - name: score
       type: Number
+      default: null
       desc: total score
       since: null
 argument_loc: Unspecified

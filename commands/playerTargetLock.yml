@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: target
       type: Object
+      default: null
       desc: the locked object
       since: null
     - name: lockValue
       type: Number
+      default: null
       desc: in range 0..1 where 1 is fully locked
       since: null
     - name: config
       type: Config
+      default: null
       desc: used weapon's {{hl|CfgWeapons}} config
       since: null
 argument_loc: Unspecified

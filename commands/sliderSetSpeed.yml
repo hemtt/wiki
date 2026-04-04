@@ -25,8 +25,10 @@ syntax:
     type: Number
   - !Item
     name: step
-    desc: (Optional, default 0) slider step
+    desc: slider step
     type: Number
+    optional: true
+    default: '0'
 - call: !Binary
   - control
   - - line
@@ -48,8 +50,10 @@ syntax:
     type: Number
   - !Item
     name: step
-    desc: (Optional, default 0) slider step
+    desc: slider step
     type: Number
+    optional: true
+    default: '0'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

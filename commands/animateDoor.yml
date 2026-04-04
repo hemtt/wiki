@@ -22,8 +22,10 @@ syntax:
     type: Number
   - !Item
     name: instant
-    desc: (Optional, default [[false]]) when [[true]] and phase is either 0 or 1, door will change phase instantaneously
+    desc: when [[true]] and phase is either 0 or 1, door will change phase instantaneously
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Global
 effect_loc: Global
 since: {}

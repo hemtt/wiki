@@ -10,22 +10,27 @@ syntax:
     type: !ArraySized
     - name: minTurn
       type: Number
+      default: null
       desc: from 0 to -angle in degrees (left)
       since: null
     - name: maxTurn
       type: Number
+      default: null
       desc: from 0 to +angle in degrees (right)
       since: null
     - name: minElev
       type: Number
+      default: null
       desc: from 0 to -angle in degrees (down)
       since: null
     - name: maxElev
       type: Number
+      default: null
       desc: from 0 to +angle in degrees (up)
       since: null
     - name: overridden
       type: Boolean
+      default: null
       desc: if custom limits were applied
       since: null
   left: !Item

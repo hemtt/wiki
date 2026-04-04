@@ -38,8 +38,10 @@ syntax:
     type: Boolean
   - !Item
     name: c
-    desc: (Optional, default -1) trigger area Z size / 2, in meters. -1 for infinite height
+    desc: trigger area Z size / 2, in meters. -1 for infinite height
     type: Number
+    optional: true
+    default: '-1'
     since:
       arma3: '1.60'
 argument_loc: Global

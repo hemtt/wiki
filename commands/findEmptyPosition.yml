@@ -42,6 +42,7 @@ syntax:
     name: vehicleType
     desc: (Optional) classname of a vehicle to accommodate
     type: String
+    optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

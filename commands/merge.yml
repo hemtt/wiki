@@ -33,8 +33,10 @@ syntax:
     type: HashMapUnknown
   - !Item
     name: overwriteExisting
-    desc: (Optional, default [[false]]) if [[true]], keys from ''hashMap1'' that also exist in ''hashMap2'' are overwritten. When set to [[true]], merging is faster
+    desc: if [[true]], keys from ''hashMap1'' that also exist in ''hashMap2'' are overwritten. When set to [[true]], merging is faster
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

@@ -27,8 +27,10 @@ syntax:
     type: String
   - !Item
     name: forceOnTop
-    desc: (Optional, default [[false]]) if [[true]], dialog will be rendered on top of displays
+    desc: if [[true]], dialog will be rendered on top of displays
     type: Boolean
+    optional: true
+    default: 'false'
   since:
     arma3: '2.8'
 argument_loc: Unspecified

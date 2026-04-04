@@ -22,6 +22,7 @@ syntax:
     name: onGround
     desc: (Optional) [[true]] to check if deployed on ground, [[false]] to check if deployed on object. Omitted - same as main syntax.
     type: Boolean
+    optional: true
   since:
     arma3: '2.6'
 argument_loc: Global

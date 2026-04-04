@@ -8,62 +8,77 @@ syntax:
     type: !ArraySized
     - name: respawnDelay
       type: Number
+      default: null
       desc: how long the vehicle will be in respawn queue after death. -1 - 'missionRespawnDelay' value is used.
       since: null
     - name: respawnCount
       type: Number
+      default: null
       desc: how many times left for the vehicle to respawn. -1 - indefinite, 0 - no more respawns
       since: null
     - name: deleteOldWreck
       type: Boolean
+      default: null
       desc: if [[true]] then the old wreck will be deleted when vehicle respawns.
       since: null
     - name: respawnOnServer
       type: Boolean
+      default: null
       desc: if [[true]] the wreck will be transfered to the server and vehicle will respawn on server.
       since: null
     - name: respawnFlying
       type: Boolean
+      default: null
       desc: if [[true]] vehicle will not be forced to the ground and if can fly and has pilot will be spawned flying.
       since: null
     - name: respawnUnit
       type: Object
+      default: null
       desc: pilot/driver unit that will be placed into the new vehicle.
       since: null
     - name: respawnMode
       type: Number
+      default: null
       desc: individual respawn mode for this vehicle. Any mode other than 2,3 or -1 means disabled respawn. -1 - use 'missionRespawnMode'
       since: null
     - name: respawnSide
       type: Side
+      default: null
       desc: what side markers to use for respawn. For example if 'respawnSide' set to [[east]] the markers with names 'respawn_vehicle_eastXXX' and 'respawn_eastXXX' will be used.
       since: null
     - name: useRespawnMarkerDir
       type: Boolean
+      default: null
       desc: align respawned vehicle with respawn marker direction or with wreck direction if no marker found or "INSTANT" mode is used. Otherwise, direction is random.
       since: null
     - name: canRespawn
       type: Boolean
+      default: null
       desc: '[[true]] if vehicle is respawnable (all conditions for respawn are ok)'
       since: null
     - name: isRespawning
       type: Boolean
+      default: null
       desc: '[[true]] if vehicle is currently in the respawn queue awaiting respawn.'
       since: null
     - name: respawnMarkerName
       type: String
+      default: null
       desc: Chosen vehicle respawn marker, when vehicle respawns it will use the marker params. The respawn marker is processed instantly uppon vehicle's death.
       since: null
     - name: respawnTimeRemaining
       type: Number
+      default: null
       desc: how long left before the respawn. -1 after vehicle has respawned or has respawn disabled.
       since: null
     - name: missionRespawnDelay
       type: Number
+      default: null
       desc: global mission vehicle respawn delay. script command > mission param > 3DEN param
       since: null
     - name: missionRespawnMode
       type: Number
+      default: null
       desc: global mission vehicle respawn mode. script command > mission param > 3DEN param
       since: null
   right: !Item

@@ -10,14 +10,17 @@ syntax:
     type: !ArraySized
     - name: className
       type: String
+      default: null
       desc: component classname as defined in object/vehicle config
       since: null
     - name: componentType
       type: String
+      default: null
       desc: componentType - component type
       since: null
     - name: isAccessible
       type: Boolean
+      default: null
       desc: boolean flag that shows if component is currently accessible (lack of required item can make it temporarily inaccessible)
       since: null
   left: !Item
@@ -36,14 +39,17 @@ syntax:
     type: !ArraySized
     - name: className
       type: String
+      default: null
       desc: component classname as defined in object/vehicle config
       since: null
     - name: componentType
       type: String
+      default: null
       desc: componentType - component type
       since: null
     - name: isAccessible
       type: Boolean
+      default: null
       desc: boolean flag that shows if component is currently accessible (lack of required item can make it temporarily inaccessible)
       since: null
   left: !Array

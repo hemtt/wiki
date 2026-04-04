@@ -10,10 +10,12 @@ syntax:
     type: !ArraySized
     - name: thenCode
       type: Code
+      default: null
       desc: null
       since: null
     - name: elseCode
       type: Code
+      default: null
       desc: null
       since: null
   left: !Item

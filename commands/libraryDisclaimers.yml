@@ -8,6 +8,7 @@ syntax:
     type: !ArraySized
     - name: text
       type: String
+      default: null
       desc: the library disclaimer
       since: null
 argument_loc: Unspecified

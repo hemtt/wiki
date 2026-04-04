@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: by
       type: String
+      default: null
       desc: See [[setTriggerActivation]]
       since: null
     - name: type
       type: String
+      default: null
       desc: See [[setTriggerActivation]]
       since: null
     - name: repeating
       type: Boolean
+      default: null
       desc: null
       since: null
   right: !Item

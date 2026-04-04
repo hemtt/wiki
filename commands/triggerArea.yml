@@ -10,24 +10,29 @@ syntax:
     type: !ArraySized
     - name: a
       type: Number
+      default: null
       desc: trigger area X size / 2
       since: null
     - name: b
       type: Number
+      default: null
       desc: trigger area Y size / 2
       since: null
     - name: angle
       type: !NumberRange
       - 0
       - 360
+      default: null
       desc: null
       since: null
     - name: isRectangle
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: c
       type: Number
+      default: null
       desc: trigger area Z size / 2 (since {{arma3}} v1.60)
       since: null
   right: !Item

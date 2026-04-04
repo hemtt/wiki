@@ -8,18 +8,22 @@ syntax:
     type: !ArraySized
     - name: type
       type: String
+      default: null
       desc: type of effect, can be {{hl|"OBJ"}}, {{hl|"RSC"}} or {{hl|"TXT"}}
       since: null
     - name: effect
       type: String
+      default: null
       desc: '[[Title Effect Type]] ({{hl|"PLAIN"}}, {{hl|"BLACK OUT"}} etc)'
       since: null
     - name: speed
       type: Number
+      default: null
       desc: effect speed multiplier
       since: null
     - name: showInMap
       type: Boolean
+      default: null
       desc: '[[true]] if effect is available over map'
       since: null
   right: !Item

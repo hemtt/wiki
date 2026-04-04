@@ -24,12 +24,16 @@ syntax:
     type: Object
   - !Item
     name: includeEmpty
-    desc: (Optional, default [[false]]) [[true]] to include empty magazines
+    desc: '[[true]] to include empty magazines'
     type: Boolean
+    optional: true
+    default: 'false'
   - !Item
     name: includeLoaded
-    desc: (Optional, default [[false]]) [[true]] to include magazines loaded in weapons (Since Arma 3 v2.07.148195)
+    desc: '[[true]] to include magazines loaded in weapons (Since Arma 3 v2.07.148195)'
     type: Boolean
+    optional: true
+    default: 'false'
   since:
     arma3: '2.0'
 argument_loc: Unspecified

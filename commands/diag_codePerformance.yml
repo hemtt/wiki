@@ -16,10 +16,12 @@ syntax:
     type: !ArraySized
     - name: duration
       type: Number
+      default: null
       desc: average duration of 1 execution in milliseconds
       since: null
     - name: cycles
       type: Number
+      default: null
       desc: actual number of cycles executed
       since: null
   right: !Array
@@ -29,12 +31,16 @@ syntax:
     type: Code
   - !Item
     name: arguments
-    desc: '(Optional, default [[nil]]) arguments to pass to the code in _this variable. Default: [[nil]]'
+    desc: 'arguments to pass to the code in _this variable. Default: [[nil]]'
     type: Anything
+    optional: true
+    default: nil
   - !Item
     name: cycles
-    desc: (Optional, default 100000) wanted number of cycles to run the given code. > 1000 is recommended
+    desc: wanted number of cycles to run the given code. > 1000 is recommended
     type: Number
+    optional: true
+    default: '100000'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

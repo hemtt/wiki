@@ -47,6 +47,7 @@ syntax:
     name: isCustom
     desc: (Optional) Must be set to [[true]] in case of custom
     type: Boolean
+    optional: true
 argument_loc: Local
 effect_loc: Global
 since: {}

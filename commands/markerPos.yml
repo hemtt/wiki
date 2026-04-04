@@ -24,8 +24,10 @@ syntax:
     type: String
   - !Item
     name: preserveElevation
-    desc: (Optional, default [[false]])
+    desc: ''
     type: Boolean
+    optional: true
+    default: 'false'
   since:
     arma3: '1.94'
 argument_loc: Unspecified

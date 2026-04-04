@@ -8,18 +8,22 @@ syntax:
     type: !ArraySized
     - name: ambientLightColor
       type: ArrayColor
+      default: null
       desc: null
       since: null
     - name: ambientLightBrightness
       type: Number
+      default: null
       desc: null
       since: null
     - name: lightDirection
       type: Vector3d
+      default: null
       desc: null
       since: null
     - name: starsVisibility
       type: Number
+      default: null
       desc: null
       since: null
 argument_loc: Unspecified

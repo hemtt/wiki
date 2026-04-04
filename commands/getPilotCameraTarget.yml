@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: isTracking
       type: Boolean
+      default: null
       desc: returns whether the camera is in a tracking mode
       since: null
     - name: targetPosition
       type: Position3dASL
+      default: null
       desc: returns the position of the tracked area or object
       since: null
     - name: targetObject
       type: Object
+      default: null
       desc: returns the tracked object, [[objNull]] if camera is only tracking an area
       since: null
   right: !Item

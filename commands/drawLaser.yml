@@ -53,12 +53,16 @@ syntax:
     type: Number
   - !Item
     name: beamMaxLength
-    desc: (Optional, default -1) laser beam's maximum length. {{hl|-1}} means maximum length (defined in {{hl|CfgIRLaserSettings}}), {{hl|0}} means no length at all and the command is ignored
+    desc: laser beam's maximum length. {{hl|-1}} means maximum length (defined in {{hl|CfgIRLaserSettings}}), {{hl|0}} means no length at all and the command is ignored
     type: Number
+    optional: true
+    default: '-1'
   - !Item
     name: isIR
-    desc: (Optional, default [[true]]) whether the laser and impact dot are only visible with Night Vision / Thermal Imaging
+    desc: whether the laser and impact dot are only visible with Night Vision / Thermal Imaging
     type: Boolean
+    optional: true
+    default: 'true'
 argument_loc: Unspecified
 effect_loc: Local
 since: {}

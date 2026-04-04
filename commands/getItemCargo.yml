@@ -9,11 +9,13 @@ syntax:
     - name: classes
       type: !ArrayUnsized
         value: String
+      default: null
       desc: Item class names
       since: null
     - name: counts
       type: !ArrayUnsized
         value: Number
+      default: null
       desc: Item counts
       since: null
   right: !Item

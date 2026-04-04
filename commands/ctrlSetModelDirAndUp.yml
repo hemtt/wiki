@@ -17,10 +17,12 @@ syntax:
     type: !ArraySized
     - name: vectorDir
       type: Vector3d
+      default: null
       desc: see [[vectorDir]]
       since: null
     - name: vectorUp
       type: Vector3d
+      default: null
       desc: see [[vectorUp]]
       since: null
 argument_loc: Unspecified

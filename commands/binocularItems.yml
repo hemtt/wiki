@@ -8,18 +8,22 @@ syntax:
     type: !ArraySized
     - name: silencer
       type: String
+      default: null
       desc: null
       since: null
     - name: pointer
       type: String
+      default: null
       desc: laserpointer or flashlight
       since: null
     - name: optic
       type: String
+      default: null
       desc: null
       since: null
     - name: bipod
       type: String
+      default: null
       desc: null
       since: null
   right: !Item

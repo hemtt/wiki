@@ -26,6 +26,7 @@ syntax:
       name: parentTask
       desc: (Optional)
       type: Task
+      optional: true
   - !Item
     name: priority
     type: Number

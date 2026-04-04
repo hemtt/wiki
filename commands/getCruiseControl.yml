@@ -9,10 +9,12 @@ syntax:
     type: !ArraySized
     - name: speedLimit
       type: Number
+      default: null
       desc: defined speed limit
       since: null
     - name: cruiseControlActive
       type: Boolean
+      default: null
       desc: '[[true]] if cruise control is enabled, [[false]] if only speed was limited'
       since: null
   right: !Item

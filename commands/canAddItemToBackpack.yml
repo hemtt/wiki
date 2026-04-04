@@ -40,8 +40,10 @@ syntax:
     type: Number
   - !Item
     name: ignoreSoldierMaxLoad
-    desc: (Optional, default [[false]]) [[true]] to ignore 'soldierMaxLoad' param, container [[maxLoad]] is still counted.
+    desc: '[[true]] to ignore ''soldierMaxLoad'' param, container [[maxLoad]] is still counted.'
     type: Boolean
+    optional: true
+    default: 'false'
     since:
       arma3: '2.18'
   since:

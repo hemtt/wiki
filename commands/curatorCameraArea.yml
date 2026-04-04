@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: cameraAreaID
       type: Number
+      default: null
       desc: null
       since: null
     - name: position
       type: Position
+      default: null
       desc: null
       since: null
     - name: radius
       type: Number
+      default: null
       desc: null
       since: null
   right: !Item

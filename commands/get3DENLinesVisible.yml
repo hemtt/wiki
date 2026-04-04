@@ -8,10 +8,12 @@ syntax:
     type: !ArraySized
     - name: showMap
       type: Boolean
+      default: null
       desc: visibility in the map
       since: null
     - name: showScene
       type: Boolean
+      default: null
       desc: visibility in the scene
       since: null
 argument_loc: Unspecified

@@ -10,38 +10,47 @@ syntax:
     type: !ArraySized
     - name: id
       type: Number
+      default: null
       desc: record id
       since: null
     - name: title
       type: String
+      default: null
       desc: record title
       since: null
     - name: text
       type: String
+      default: null
       desc: record text
       since: null
     - name: icon
       type: String
+      default: null
       desc: record icon
       since: null
     - name: task
       type: Task
+      default: null
       desc: record task
       since: null
     - name: taskState
       type: String
+      default: null
       desc: record task state
       since: null
     - name: showTitle
       type: Boolean
+      default: null
       desc: '[[true]] if tile is shown'
       since: null
     - name: date
       type: ArrayDate
+      default: null
       desc: null
       since: null
     - name: record
       type: DiaryRecord
+      default: null
       desc: record reference
       since: null
   left: !Item

@@ -54,8 +54,10 @@ syntax:
     type: String
   - !Item
     name: alignWithMap
-    desc: (Optional, default [[true]]) - when [[false]] the shape will not follow map rotation.
+    desc: '- when [[false]] the shape will not follow map rotation.'
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '2.18'
 argument_loc: Unspecified

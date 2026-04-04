@@ -40,8 +40,10 @@ syntax:
     - 1
   - !Item
     name: now
-    desc: (Optional, default [[true]]) if [[false]], control will wait for [[ctrlCommit]] input for result to apply
+    desc: if [[false]], control will wait for [[ctrlCommit]] input for result to apply
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '1.78'
 argument_loc: Local

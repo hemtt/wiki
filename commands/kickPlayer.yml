@@ -18,6 +18,7 @@ syntax:
     name: kickMessage
     desc: (Optional) shown as disconnect message on the kicked client
     type: String
+    optional: true
 argument_loc: Global
 effect_loc: Unspecified
 server_exec: true

@@ -9,14 +9,17 @@ syntax:
     type: !ArraySized
     - name: ambientLife
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: ambientSound
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: windyCoef
       type: Number
+      default: null
       desc: see [[enableEnvironment]]
       since:
         arma3: '2.12'

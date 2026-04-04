@@ -18,12 +18,16 @@ syntax:
     type: String
   - !Item
     name: final
-    desc: (Optional, default [[false]]) compile final, see [[compileFinal]]
+    desc: compile final, see [[compileFinal]]
     type: Boolean
+    optional: true
+    default: 'false'
   - !Item
     name: prefixHeader
-    desc: (Optional, default "") value added at the beginning of the file
+    desc: value added at the beginning of the file
     type: String
+    optional: true
+    default: '""'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

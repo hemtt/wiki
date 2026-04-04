@@ -33,7 +33,7 @@ syntax:
     type: Number
   - !Item
     name: speed
-    desc: (Optional, default -1) config anim speed multiplier, 2 - twice as fast, 0.5 - twice as slow, etc. -1 - default config speed. If [[true]] is used as param, the change in elevation is almost instant
+    desc: config anim speed multiplier, 2 - twice as fast, 0.5 - twice as slow, etc. -1 - default config speed. If [[true]] is used as param, the change in elevation is almost instant
     type: !ArrayUnsized
       value: !OneOf
       - type: Number
@@ -42,10 +42,14 @@ syntax:
       - type: Boolean
         desc: null
         since: null
+    optional: true
+    default: '-1'
   - !Item
     name: blockUserInput
-    desc: (Optional, default [[false]]) [[true]] to disable user ability to control periscope with keyboard. The change is persistent unless set to [[false]] again
+    desc: '[[true]] to disable user ability to control periscope with keyboard. The change is persistent unless set to [[false]] again'
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

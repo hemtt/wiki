@@ -58,6 +58,7 @@ syntax:
       name: optionalParamN
       desc: (Optional) parameters based on selected effect
       type: Number
+      optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

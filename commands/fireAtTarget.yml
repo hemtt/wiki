@@ -24,6 +24,7 @@ syntax:
     name: weaponMuzzleName
     desc: (Optional) weapon muzzle classname, optional parameter
     type: String
+    optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

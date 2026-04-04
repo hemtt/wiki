@@ -22,8 +22,10 @@ syntax:
     type: Number
   - !Item
     name: forced
-    desc: (Optional, default [[false]]) set to [[true]] to lock the wind to constantly blows in set direction
+    desc: set to [[true]] to lock the wind to constantly blows in set direction
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Unspecified
 effect_loc: Global
 since: {}

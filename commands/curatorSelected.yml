@@ -9,20 +9,24 @@ syntax:
     - name: objects
       type: !ArrayUnsized
         value: Object
+      default: null
       desc: null
       since: null
     - name: groups
       type: !ArrayUnsized
         value: Group
+      default: null
       desc: null
       since: null
     - name: waypoints
       type: Waypoint
+      default: null
       desc: null
       since: null
     - name: markers
       type: !ArrayUnsized
         value: String
+      default: null
       desc: null
       since: null
 argument_loc: Unspecified

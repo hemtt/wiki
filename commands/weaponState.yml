@@ -16,28 +16,34 @@ syntax:
     type: !ArraySized
     - name: weapon
       type: String
+      default: null
       desc: null
       since: null
     - name: muzzle
       type: String
+      default: null
       desc: null
       since: null
     - name: firemode
       type: String
+      default: null
       desc: null
       since: null
     - name: magazine
       type: String
+      default: null
       desc: null
       since: null
     - name: ammoCount
       type: Number
+      default: null
       desc: null
       since: null
     - name: roundReloadPhase
       type: !NumberRange
       - 0
       - 1
+      default: null
       desc: current ammo round reload phase (see [[weaponReloadingTime]])
       since:
         arma3: '2.6'
@@ -45,6 +51,7 @@ syntax:
       type: !NumberRange
       - 0
       - 1
+      default: null
       desc: current magazine reload phase, 0 - reload complete. &gt; 0 - reload in progress
       since:
         arma3: '2.6'
@@ -61,31 +68,38 @@ syntax:
     type: !ArraySized
     - name: weapon
       type: String
+      default: null
       desc: null
       since: null
     - name: muzzle
       type: String
+      default: null
       desc: null
       since: null
     - name: firemode
       type: String
+      default: null
       desc: null
       since: null
     - name: magazine
       type: String
+      default: null
       desc: null
       since: null
     - name: ammoCount
       type: Number
+      default: null
       desc: null
       since: null
     - name: roundReloadPhase
       type: Number
+      default: null
       desc: current ammo round reload phase (see [[weaponReloadingTime]])
       since:
         arma3: '2.6'
     - name: magazineReloadPhase
       type: Number
+      default: null
       desc: current magazine reload phase from 1 to 0, 0 - reload complete. &gt; 0 - reload in progress
       since:
         arma3: '2.6'
@@ -98,20 +112,26 @@ syntax:
     type: TurretPath
   - !Item
     name: weapon
-    desc: (Optional, default {{hl|""}}) weapon or muzzle name
+    desc: weapon or muzzle name
     type: String
+    optional: true
+    default: '{{hl|""}}'
     since:
       arma3: '1.70'
   - !Item
     name: muzzle
-    desc: (Optional, default {{hl|""}}) muzzle name
+    desc: muzzle name
     type: String
+    optional: true
+    default: '{{hl|""}}'
     since:
       arma3: '2.8'
   - !Item
     name: firemode
-    desc: (Optional, default {{hl|""}}) firemode name
+    desc: firemode name
     type: String
+    optional: true
+    default: '{{hl|""}}'
     since:
       arma3: '2.8'
 - call: !Binary
@@ -121,31 +141,38 @@ syntax:
     type: !ArraySized
     - name: weapon
       type: String
+      default: null
       desc: null
       since: null
     - name: muzzle
       type: String
+      default: null
       desc: null
       since: null
     - name: firemode
       type: String
+      default: null
       desc: null
       since: null
     - name: magazine
       type: String
+      default: null
       desc: null
       since: null
     - name: ammoCount
       type: Number
+      default: null
       desc: null
       since: null
     - name: roundReloadPhase
       type: Number
+      default: null
       desc: current ammo round reload phase (see [[weaponReloadingTime]])
       since:
         arma3: '2.6'
     - name: magazineReloadPhase
       type: Number
+      default: null
       desc: current magazine reload phase from 1 to 0, 0 - reload complete. &gt; 0 - reload in progress
       since:
         arma3: '2.6'

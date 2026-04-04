@@ -34,8 +34,10 @@ syntax:
     type: Boolean
   - !Item
     name: forceEH
-    desc: (Optional, default [[false]]) will force [[User_Interface_Event_Handlers#onLBSelChanged | lbSelChanged]] EH to fire
+    desc: will force [[User_Interface_Event_Handlers#onLBSelChanged | lbSelChanged]] EH to fire
     type: Boolean
+    optional: true
+    default: 'false'
     since:
       arma3: '2.12'
 argument_loc: Unspecified

@@ -21,12 +21,14 @@ syntax:
       type: !NumberRange
       - 0
       - 1
+      default: null
       desc: null
       since: null
     - name: horizontal
       type: !NumberRange
       - 0
       - 1
+      default: null
       desc: null
       since: null
   right: !Item

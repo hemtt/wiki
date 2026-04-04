@@ -10,42 +10,51 @@ syntax:
     type: !ArraySized
     - name: name
       type: String
+      default: null
       desc: product name
       since: null
     - name: nameShort
       type: String
+      default: null
       desc: product short name
       since: null
     - name: version
       type: Number
+      default: null
       desc: product version number
       since: null
     - name: buildNumber
       type: Number
+      default: null
       desc: product build number
       since: null
     - name: buildType
       type: String
+      default: null
       desc: build type, can be {{hl|"Stable"}}, {{hl|"Development"}}, {{hl|"Diag"}} or {{hl|"Profile"}}
       since:
         arma3: '1.0'
     - name: isModded
       type: Boolean
+      default: null
       desc: is the product running with mods ([[true]]) or vanilla ([[false]])
       since:
         arma3: '1.0'
     - name: platform
       type: String
+      default: null
       desc: can be {{hl|"Windows"}}, {{hl|"Linux"}} or {{hl|"OSX"}}
       since:
         arma3: '1.0'
     - name: architecture
       type: String
+      default: null
       desc: '{{hl|"x64"}} for 64bit or {{hl|"x86"}} for 32bit'
       since:
         arma3: '1.68'
     - name: steamBranchName
       type: String
+      default: null
       desc: '{{hl|""}} (for default/public branch), {{hl|"profiling"}} or {{hl|"development"}}'
       since:
         arma3: '2.20'

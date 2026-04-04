@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: isFalling
       type: Boolean
+      default: null
       desc: '[[true]] if unit is falling'
       since: null
     - name: isInFreefallPose
       type: Boolean
+      default: null
       desc: '[[true]] if unit is in freefall pose'
       since: null
     - name: minFreefallHeight
       type: Number
+      default: null
       desc: current minimum freefall height (see [[setUnitFreefallHeight]])
       since: null
   right: !Item

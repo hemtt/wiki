@@ -8,11 +8,13 @@ syntax:
     type: !ArraySized
     - name: headerIndex
       type: Number
+      default: null
       desc: null
       since: null
     - name: createdControls
       type: !ArrayUnsized
         value: Control
+      default: null
       desc: null
       since: null
   right: !Item

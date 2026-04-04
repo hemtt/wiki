@@ -40,8 +40,10 @@ syntax:
     type: String
   - !Item
     name: ignore2
-    desc: (Optional, default [[objNull]]) second object to exclude from calculations
+    desc: second object to exclude from calculations
     type: Object
+    optional: true
+    default: objnull
     since:
       arma3: '1.62'
   right: !Array

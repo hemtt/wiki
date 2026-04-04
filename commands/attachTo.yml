@@ -40,14 +40,17 @@ syntax:
     name: offset
     desc: (Optional) the position relative to ''object2s position
     type: Position3dRelative
+    optional: true
   - !Item
     name: memPoint
     desc: '(Optional) see {{Link|ArmA: Armed Assault: Selection Translations|Selection Translations}} for czech selections names'
     type: String
+    optional: true
   - !Item
     name: followBoneRotation
     desc: (Optional) follows the memory point's rotation (if attached to one)
     type: Boolean
+    optional: true
     since:
       arma3: '2.2'
 argument_loc: Global

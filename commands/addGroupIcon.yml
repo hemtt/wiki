@@ -23,9 +23,11 @@ syntax:
     type: String
   - !Item
     name: offset
-    desc: (Optional, default [0,0]) X and Y offsets of the icon in format [offsetX, offsetY, (offsetX3d), (offsetY3d)]
+    desc: X and Y offsets of the icon in format [offsetX, offsetY, (offsetX3d), (offsetY3d)]
     type: !ArrayUnsized
       value: Number
+    optional: true
+    default: '[0,0]'
 argument_loc: Global
 effect_loc: Local
 since: {}

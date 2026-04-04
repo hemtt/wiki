@@ -24,16 +24,22 @@ syntax:
     type: String
   - !Item
     name: speed
-    desc: (Optional, default -1) time in seconds to fade in resource
+    desc: time in seconds to fade in resource
     type: Number
+    optional: true
+    default: '-1'
   - !Item
     name: showInMap
-    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    desc: '[[false]] to hide the text when the map is opened'
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: drawOverHUD
-    desc: (Optional, default [[true]]) [[false]] to show the object under in-game HUD
+    desc: '[[false]] to show the object under in-game HUD'
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '2.16'
 - call: !Binary
@@ -60,16 +66,22 @@ syntax:
     type: String
   - !Item
     name: speed
-    desc: (Optional, default -1) time in seconds to fade in resource
+    desc: time in seconds to fade in resource
     type: Number
+    optional: true
+    default: '-1'
   - !Item
     name: showInMap
-    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    desc: '[[false]] to hide the text when the map is opened'
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: drawOverHUD
-    desc: (Optional, default [[true]]) [[false]] to show the object under in-game HUD
+    desc: '[[false]] to show the object under in-game HUD'
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '2.16'
 - call: !Binary
@@ -97,16 +109,22 @@ syntax:
     type: String
   - !Item
     name: speed
-    desc: (Optional, default -1) time in seconds to fade in resource
+    desc: time in seconds to fade in resource
     type: Number
+    optional: true
+    default: '-1'
   - !Item
     name: showInMap
-    desc: (Optional, default [[true]]) [[false]] to hide the text when the map is opened
+    desc: '[[false]] to hide the text when the map is opened'
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: drawOverHUD
-    desc: (Optional, default [[true]]) [[false]] to show the object under in-game HUD
+    desc: '[[false]] to show the object under in-game HUD'
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '2.16'
   since:

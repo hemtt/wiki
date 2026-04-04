@@ -26,12 +26,14 @@ syntax:
     name: muzzle
     desc: (Optional) muzzle name
     type: String
+    optional: true
     since:
       arma3: '2.8'
   - !Item
     name: firemode
     desc: (Optional) firemode name
     type: String
+    optional: true
     since:
       arma3: '2.8'
 argument_loc: Unspecified

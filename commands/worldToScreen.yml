@@ -13,10 +13,12 @@ syntax:
     type: !ArraySized
     - name: x
       type: Number
+      default: null
       desc: null
       since: null
     - name: y
       type: Number
+      default: null
       desc: null
       since: null
     desc: screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.
@@ -37,10 +39,12 @@ syntax:
     type: !ArraySized
     - name: x
       type: Number
+      default: null
       desc: null
       since: null
     - name: y
       type: Number
+      default: null
       desc: null
       since: null
     desc: screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.

@@ -12,19 +12,23 @@ syntax:
     type: !ArraySized
     - name: eventClass
       type: String
+      default: null
       desc: class in [[description.ext]] >> "SteamGameRecording" or config "SteamManagerConfig" >> "GameRecording" or a special utility string
       since: null
     - name: eventDuration
       type: Number
+      default: null
       desc: 0 for an instant event, or an amount of seconds this event lasted
       since: null
     - name: eventArguments
       type: !ArrayUnsized
         value: String
+      default: null
       desc: arguments that can be used to add dynamic info to the event (texts)
       since: null
     - name: startOffset
       type: Number
+      default: null
       desc: amount of seconds relative to the even trigger time
       since: null
 argument_loc: Unspecified

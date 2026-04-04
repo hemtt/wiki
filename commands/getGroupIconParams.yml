@@ -8,26 +8,32 @@ syntax:
     type: !ArraySized
     - name: color
       type: ArrayColor
+      default: null
       desc: icon color
       since: null
     - name: text
       type: String
+      default: null
       desc: icon text
       since: null
     - name: scale
       type: Number
+      default: null
       desc: icon scale
       since: null
     - name: visibility
       type: Boolean
+      default: null
       desc: icon visibility
       since: null
     - name: WPvisibility
       type: Boolean
+      default: null
       desc: waypoint visibility
       since: null
     - name: WPcolor
       type: ArrayColor
+      default: null
       desc: waypoint color
       since: null
   right: !Item

@@ -22,8 +22,10 @@ syntax:
     type: ArrayColor
   - !Item
     name: width
-    desc: (Optional, default 3)
+    desc: ''
     type: Number
+    optional: true
+    default: '3'
     since:
       arma3: '2.18'
 argument_loc: Unspecified

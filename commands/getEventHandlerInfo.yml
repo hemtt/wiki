@@ -11,14 +11,17 @@ syntax:
     type: !ArraySized
     - name: exists
       type: Boolean
+      default: null
       desc: event handler exists
       since: null
     - name: isLast
       type: Boolean
+      default: null
       desc: will be executed last (relevant if last event handler modifies default engine behaviour)
       since: null
     - name: total
       type: Number
+      default: null
       desc: total number of event handlers added to the same event
       since: null
   left: !Item
@@ -54,14 +57,17 @@ syntax:
     type: !ArraySized
     - name: exists
       type: Boolean
+      default: null
       desc: event handler exists
       since: null
     - name: isLast
       type: Boolean
+      default: null
       desc: will be executed last (relevant if last event handler modifies default engine behaviour)
       since: null
     - name: total
       type: Number
+      default: null
       desc: total number of event handlers added to the same event
       since: null
   right: !Array

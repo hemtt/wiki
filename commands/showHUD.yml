@@ -38,46 +38,66 @@ syntax:
     type: Boolean
   - !Item
     name: info
-    desc: (Optional, default [[true]]) show vehicle, soldier and weapon info
+    desc: show vehicle, soldier and weapon info
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: radar
-    desc: (Optional, default [[true]]) show vehicle radar
+    desc: show vehicle radar
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: compass
-    desc: (Optional, default [[true]]) show vehicle compass
+    desc: show vehicle compass
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: direction
-    desc: (Optional, default [[true]]) show tank direction indicator. Not present in vanilla {{arma3}}
+    desc: show tank direction indicator. Not present in vanilla {{arma3}}
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: menu
-    desc: (Optional, default [[true]]) show commanding menu (HC related menus)
+    desc: show commanding menu (HC related menus)
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: group
-    desc: (Optional, default [[true]]) show group info bar (Squad leader info bar)
+    desc: show group info bar (Squad leader info bar)
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: cursors
-    desc: (Optional, default [[true]]) show HUD weapon cursors (connected with scripted HUD)
+    desc: show HUD weapon cursors (connected with scripted HUD)
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: panels
-    desc: '(Optional, default [[true]]) show [[Arma 3: Custom Info]]'
+    desc: 'show [[Arma 3: Custom Info]]'
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '1.70'
   - !Item
     name: kills
-    desc: (Optional, default [[true]]) show "x killed by y" [[systemChat]] messages
+    desc: show "x killed by y" [[systemChat]] messages
     type: Boolean
+    optional: true
+    default: 'true'
   - !Item
     name: showIcon3D
-    desc: (Optional, default [[false]]) show icons drawn with [[drawIcon3D]] even when the HUD is hidden
+    desc: show icons drawn with [[drawIcon3D]] even when the HUD is hidden
     type: Boolean
+    optional: true
+    default: 'false'
     since:
       arma3: '2.4'
 argument_loc: Unspecified

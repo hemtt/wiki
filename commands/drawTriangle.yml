@@ -29,8 +29,10 @@ syntax:
     type: ArrayColor
   - !Item
     name: fill
-    desc: (Optional, default {{hl|""}}) fill texture file or [[Procedural Textures]]. See note in description for more info.
+    desc: fill texture file or [[Procedural Textures]]. See note in description for more info.
     type: String
+    optional: true
+    default: '{{hl|""}}'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

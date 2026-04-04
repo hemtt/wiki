@@ -10,20 +10,25 @@ syntax:
       type: !ArraySized
       - name: name
         type: String
+        default: null
         desc: function or file name
         since: null
       - name: fileName
         type: String
+        default: null
         desc: null
         since: null
       - name: isRunning
         type: Boolean
+        default: null
         desc: null
         since: null
       - name: currentLine
         type: Number
+        default: null
         desc: line currently executing
         since: null
+      default: null
       desc: null
       since: null
 argument_loc: Unspecified

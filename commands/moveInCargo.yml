@@ -37,8 +37,10 @@ syntax:
     type: Number
   - !Item
     name: canReassign
-    desc: (Optional, default [[true]]) try to move ''unit'' into the first free ''vehicle'' cargo seat if ''cargoIndex'' is already occupied
+    desc: try to move ''unit'' into the first free ''vehicle'' cargo seat if ''cargoIndex'' is already occupied
     type: Boolean
+    optional: true
+    default: 'true'
     since:
       arma3: '2.8'
 argument_loc: Local

@@ -1,12 +1,12 @@
-name: tvSort
-desc: Sorts all children of given path. Text of [[CT_TREE|Tree View]] entries is used for sorting.
+name: tvSortByValue
+desc: Sorts all children of given path. Value of [[CT_TREE|Tree View]] entries is used for sorting. [[tvSetValue]] can be used to set the value for a given path.
 groups:
 - GUI Control - Tree View
 syntax:
 - call: !Binary
   - control
   - - path
-    - reversed
+    - ascending
   ret:
     type: Nothing
   left: !Item
@@ -18,15 +18,15 @@ syntax:
     desc: the parent item to sort
     type: Path
   - !Item
-    name: reversed
-    desc: '[[true]] to reverse sort it'
+    name: ascending
+    desc: '[[true]] to sort ascending, else descending'
     type: Boolean
     optional: true
     default: 'false'
 - call: !Unary
   - idc
   - path
-  - reversed
+  - ascending
   ret:
     type: Nothing
   right: !Array
@@ -39,20 +39,19 @@ syntax:
     desc: the parent item to sort
     type: Path
   - !Item
-    name: reversed
-    desc: '[[true]] to reverse sort it'
+    name: ascending
+    desc: '(Optional) [[true]] to sort ascending, else descending. Default: [[false]]'
     type: Boolean
     optional: true
-    default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}
 examples:
-- <sqf>control tvSort [[0], true];</sqf>
-- <sqf>tvSort [102, [0], true];</sqf>
+- <sqf>control tvSortByValue [[0], false];</sqf>
+- <sqf>tvSortByValue [102, [0], false];</sqf>
 see_also:
 - lbSortBy
 - lnbSortBy
 - tvSortAll
-- tvSortByValue
+- tvSort
 - tvSortByValueAll

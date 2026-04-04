@@ -9,10 +9,12 @@ syntax:
       value: !ArraySized
       - name: remoteTarget
         type: Object
+        default: null
         desc: null
         since: null
       - name: lastDetected
         type: Number
+        default: null
         desc: null
         since: null
   right: !Item

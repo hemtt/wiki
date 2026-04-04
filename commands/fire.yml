@@ -40,6 +40,7 @@ syntax:
     name: magazine
     desc: (Optional)
     type: String
+    optional: true
 argument_loc: Local
 effect_loc: Global
 since: {}

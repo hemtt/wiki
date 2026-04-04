@@ -8,26 +8,32 @@ syntax:
     type: !ArraySized
     - name: name
       type: String
+      default: null
       desc: internal subject reference
       since: null
     - name: displayName
       type: String
+      default: null
       desc: visible name
       since: null
     - name: picture
       type: String
+      default: null
       desc: subject icon
       since: null
     - name: countRecords
       type: Number
+      default: null
       desc: number of records in this subject
       since: null
     - name: isReadOnly
       type: Boolean
+      default: null
       desc: whether or not the records could be added
       since: null
     - name: isSelected
       type: Boolean
+      default: null
       desc: '[[true]] if subject is currently selected'
       since: null
   right: !Item

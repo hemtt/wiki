@@ -12,10 +12,12 @@ syntax:
     type: !ArraySized
     - name: valueN
       type: Anything
+      default: null
       desc: weighted value
       since: null
     - name: weightN
       type: Number
+      default: null
       desc: values relative weight
       since: null
 - call: !Binary

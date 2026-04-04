@@ -53,10 +53,12 @@ syntax:
     name: angle
     desc: (Optional)
     type: Number
+    optional: true
   - !Item
     name: bounceOnSurface
     desc: (Optional)
     type: Number
+    optional: true
     since:
       arma3: '0.74'
 argument_loc: Global

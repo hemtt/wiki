@@ -70,12 +70,14 @@ syntax:
     name: waitTime
     desc: '(Optional) (Helicopter type only) time to wait after touch down in "GetIn"/"GetOut" mode before taking off to the next waypoint. Default: -1.'
     type: Number
+    optional: true
     since:
       arma3: '2.20'
   - !Item
     name: putOnSurface
     desc: '(Optional) when true, the given land position will be adjusted to the nearest surface underneath. Default: [[false]].'
     type: Boolean
+    optional: true
     since:
       arma3: '2.20'
   since:
@@ -85,22 +87,27 @@ syntax:
     type: !ArraySized
     - name: landMode
       type: String
+      default: null
       desc: 'one of the following: "None", "Land", "GetIn", "GetOut" or "".'
       since: null
     - name: landResult
       type: String
+      default: null
       desc: 'one of the following: "Found", "NotFound", "NotReady" or "".'
       since: null
     - name: landPosition
       type: Position3dWorld
+      default: null
       desc: land position or [0,0,0].
       since: null
     - name: waitTime
       type: Number
+      default: null
       desc: (Helicopter type only) before heli is landed - wait time set for "GetIn"/"GetOut" mode, after heli is landed - remaining time before take off to the next waypoint or -1.
       since: null
     - name: autopilotState
       type: String
+      default: null
       desc: 'one of the following: "FAR", "BRAKE", "NEAR", "ALIGN", "REACHED", "LOITER", "FOLLOW" or "".'
       since: null
   right: !Item

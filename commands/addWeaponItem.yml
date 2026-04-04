@@ -24,8 +24,10 @@ syntax:
     type: String
   - !Item
     name: instant
-    desc: (Optional, default [[false]]) [[true]] to skip animation
+    desc: '[[true]] to skip animation'
     type: Boolean
+    optional: true
+    default: 'false'
     since:
       arma3: '1.96'
 - call: !Binary
@@ -54,14 +56,18 @@ syntax:
       name: ammoCount
       desc: (Optional) optional amount of ammo in magazine
       type: Number
+      optional: true
     - !Item
       name: muzzleName
       desc: (Optional) optional target muzzle to add magazine to
       type: String
+      optional: true
   - !Item
     name: instant
-    desc: (Optional, default [[false]]) [[true]] to skip animation
+    desc: '[[true]] to skip animation'
     type: Boolean
+    optional: true
+    default: 'false'
     since:
       arma3: '1.96'
 argument_loc: Local

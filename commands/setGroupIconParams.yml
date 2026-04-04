@@ -16,26 +16,32 @@ syntax:
     type: !ArraySized
     - name: color
       type: ArrayColor
+      default: null
       desc: null
       since: null
     - name: text
       type: String
+      default: null
       desc: null
       since: null
     - name: scale
       type: Number
+      default: null
       desc: null
       since: null
     - name: visibility
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: WPvisibility
       type: Boolean
+      default: null
       desc: null
       since: null
     - name: WPcolor
       type: ArrayColor
+      default: null
       desc: null
       since: null
 argument_loc: Global

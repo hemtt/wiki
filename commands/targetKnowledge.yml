@@ -10,34 +10,42 @@ syntax:
     type: !ArraySized
     - name: knownByGroup
       type: Boolean
+      default: null
       desc: target known by group
       since: null
     - name: knownByUnit
       type: Boolean
+      default: null
       desc: target known by the unit
       since: null
     - name: lastSeen
       type: Number
+      default: null
       desc: last time the target was seen by the unit
       since: null
     - name: lastThreat
       type: Number
+      default: null
       desc: last time the target endangered the unit
       since: null
     - name: side
       type: Side
+      default: null
       desc: target side
       since: null
     - name: errorMargin
       type: Number
+      default: null
       desc: position error
       since: null
     - name: position
       type: Position
+      default: null
       desc: target position
       since: null
     - name: ignoreTarget
       type: Boolean
+      default: null
       desc: target is ignored ([[ignoreTarget]])
       since:
         arma3: '2.18'

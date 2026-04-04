@@ -9,10 +9,12 @@ syntax:
       value: !ArraySized
       - name: class
         type: String
+        default: null
         desc: class name of the container
         since: null
       - name: container
         type: Object
+        default: null
         desc: container object
         since: null
   right: !Item

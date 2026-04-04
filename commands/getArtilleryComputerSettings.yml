@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: fireMode
       type: String
+      default: null
       desc: fire mode's display name
       since: null
     - name: ammo
       type: String
+      default: null
       desc: used ammo display name (not class name)
       since: null
     - name: zero
       type: Number
+      default: null
       desc: always 0
       since: null
 argument_loc: Unspecified

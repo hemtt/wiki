@@ -8,10 +8,12 @@ syntax:
     type: !ArraySized
     - name: a_axis
       type: Number
+      default: null
       desc: 1/2 width of marker
       since: null
     - name: b_axis
       type: Number
+      default: null
       desc: 1/2 height of marker
       since: null
   right: !Item

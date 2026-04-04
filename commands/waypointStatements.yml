@@ -8,10 +8,12 @@ syntax:
     type: !ArraySized
     - name: condition
       type: String
+      default: null
       desc: null
       since: null
     - name: statement
       type: String
+      default: null
       desc: null
       since: null
   right: !Item

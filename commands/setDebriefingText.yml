@@ -58,10 +58,12 @@ syntax:
     name: picture
     desc: (Optional) title picture
     type: String
+    optional: true
   - !Item
     name: background
     desc: (Optional) background picture
     type: String
+    optional: true
   since:
     arma3: '2.6'
 argument_loc: Unspecified

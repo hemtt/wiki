@@ -21,12 +21,16 @@ syntax:
     type: String
   - !Item
     name: speed
-    desc: (Optional, default -1)
+    desc: ''
     type: Number
+    optional: true
+    default: '-1'
   - !Item
     name: showInMap
-    desc: (Optional, default [[true]])
+    desc: ''
     type: Boolean
+    optional: true
+    default: 'true'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

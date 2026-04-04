@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: min
       type: Number
+      default: null
       desc: null
       since: null
     - name: mid
       type: Number
+      default: null
       desc: null
       since: null
     - name: max
       type: Number
+      default: null
       desc: null
       since: null
   right: !Item

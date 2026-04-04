@@ -24,6 +24,7 @@ syntax:
     name: enable
     desc: (Optional, getter if not provided) [[true]] enable, [[false]], disable
     type: Boolean
+    optional: true
 - call: !Binary
   - object
   - - feature
@@ -43,6 +44,7 @@ syntax:
     name: enable
     desc: (Optional, getter if not provided) [[true]] enable, [[false]], disable
     type: Boolean
+    optional: true
   since:
     arma3: '2.14'
 argument_loc: Global

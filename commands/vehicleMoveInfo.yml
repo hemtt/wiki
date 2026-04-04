@@ -9,10 +9,12 @@ syntax:
     type: !ArraySized
     - name: moveInfo
       type: String
+      default: null
       desc: state of vehicle forward/backward movement (see description)
       since: null
     - name: turnInfo
       type: String
+      default: null
       desc: state of vehicle left/right turning (see description)
       since: null
   right: !Item

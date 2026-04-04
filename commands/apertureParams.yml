@@ -9,42 +9,52 @@ syntax:
     type: !ArraySized
     - name: aperture
       type: Number
+      default: null
       desc: current aperture
       since: null
     - name: isForced
       type: Boolean
+      default: null
       desc: whether aperture was forced by [[setAperture]]
       since: null
     - name: estimatedAperture
       type: Number
+      default: null
       desc: engine-estimated scene aperture
       since: null
     - name: estimatedLuminance
       type: Number
+      default: null
       desc: engine-estimated luminance
       since: null
     - name: minCustom
       type: Number
+      default: null
       desc: minimal custom aperture, see [[setApertureNew]]
       since: null
     - name: stdCustom
       type: Number
+      default: null
       desc: standard custom aperture, see [[setApertureNew]]
       since: null
     - name: maxCustom
       type: Number
+      default: null
       desc: maximal custom aperture, see [[setApertureNew]]
       since: null
     - name: customLuminance
       type: Number
+      default: null
       desc: custom luminance, see [[setApertureNew]]
       since: null
     - name: isCustomForced
       type: Boolean
+      default: null
       desc: whether custom values were forced
       since: null
     - name: blinding
       type: Number
+      default: null
       desc: blinding intensity of the light
       since: null
 argument_loc: Local

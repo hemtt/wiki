@@ -25,6 +25,7 @@ syntax:
     name: weapon
     desc: (Optional) if not provided, checks all weapons; if provided, checks that weapon only
     type: String
+    optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

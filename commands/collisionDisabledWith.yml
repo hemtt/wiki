@@ -8,10 +8,12 @@ syntax:
     type: !ArraySized
     - name: other
       type: Object
+      default: null
       desc: the object, ''obj'' has collision disabled with, or [[objNull]]
       since: null
     - name: mutual
       type: Boolean
+      default: null
       desc: '[[true]] if ''''other'''' has also disabled collision with ''''obj'''', [[false]] otherwise'
       since: null
   right: !Item

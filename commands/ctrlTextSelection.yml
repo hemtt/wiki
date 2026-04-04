@@ -8,14 +8,17 @@ syntax:
     type: !ArraySized
     - name: start
       type: Number
+      default: null
       desc: position in text selection started
       since: null
     - name: length
       type: Number
+      default: null
       desc: number of the highlighted characters (this number could be negative, see description)
       since: null
     - name: selectedText
       type: String
+      default: null
       desc: selected text
       since: null
   right: !Item

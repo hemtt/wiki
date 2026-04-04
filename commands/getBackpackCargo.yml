@@ -9,11 +9,13 @@ syntax:
     - name: classes
       type: !ArrayUnsized
         value: String
+      default: null
       desc: Backpack class names
       since: null
     - name: counts
       type: !ArrayUnsized
         value: Number
+      default: null
       desc: Backpack counts
       since: null
   right: !Item

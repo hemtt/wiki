@@ -9,11 +9,13 @@ syntax:
     - name: staticAirports
       type: !ArrayUnsized
         value: Number
+      default: null
       desc: static airports IDs
       since: null
     - name: dynamicAirports
       type: !ArrayUnsized
         value: Object
+      default: null
       desc: dynamic airports objects (such as "DynamicAirport_01_F" found on aircraft carrier)
       since: null
 argument_loc: Unspecified

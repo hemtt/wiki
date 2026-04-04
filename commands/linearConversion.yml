@@ -36,8 +36,10 @@ syntax:
     type: Number
   - !Item
     name: clip
-    desc: (Optional, default [[false]]) if [[true]], resulting value cannot leave "to" range
+    desc: if [[true]], resulting value cannot leave "to" range
     type: Boolean
+    optional: true
+    default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}
