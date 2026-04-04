@@ -162,6 +162,10 @@ pub fn try_optional(source: &str) -> Option<(Option<String>, String)> {
                 source[default_end + 1..].trim().to_string(),
             ));
         }
+        // If no default, find closing ) and skip past it
+        if let Some(close_paren) = source_lower.find(')') {
+            return Some((None, source[close_paren + 1..].trim().to_string()));
+        }
         return Some((None, source.trim().to_string()));
     }
     None
@@ -195,6 +199,31 @@ mod tests {
             Some("any other value returns [[NaN]]")
         );
         assert_eq!(param_item.typ, Value::NumberRange(-1, 1));
+    }
+
+    #[test]
+    fn or() {
+        let line = "return: [[String]] or [[Number]] - A string or number.";
+        let (param_item, errors) =
+            ParamItem::parse("test", line).expect("Failed to parse simple line with or");
+        assert!(errors.is_empty());
+        assert_eq!(param_item.name, "return");
+        assert_eq!(param_item.desc.as_deref(), Some("A string or number."));
+        assert_eq!(
+            param_item.typ,
+            Value::OneOf(vec![
+                OneOfValue {
+                    typ: Value::String,
+                    desc: None,
+                    since: None,
+                },
+                OneOfValue {
+                    typ: Value::Number,
+                    desc: None,
+                    since: None,
+                }
+            ])
+        );
     }
 
     #[test]

@@ -23,22 +23,36 @@ impl ValueParser for Value {
             .map(|(block, since)| Self::parse(block, depth + 1).map(|typ| (typ, since)))
             .collect::<Result<Vec<(Self, Option<Since>)>, String>>()
             .map(|types| {
+                // Only wrap in ArrayUnsized if source contains "array" context
+                let is_array_context =
+                    source.to_lowercase().contains("[[array]]") || source.contains(" of ");
+
                 if types.len() == 1 {
-                    Self::ArrayUnsized {
-                        value: Box::new(types.into_iter().next().expect("Just checked length").0),
+                    let single_type = types.into_iter().next().expect("Just checked length").0;
+                    if is_array_context {
+                        Self::ArrayUnsized {
+                            value: Box::new(single_type),
+                        }
+                    } else {
+                        single_type
                     }
                 } else {
-                    Self::ArrayUnsized {
-                        value: Box::new(Self::OneOf(
-                            types
-                                .iter()
-                                .map(|t| OneOfValue {
-                                    typ: t.0.clone(),
-                                    desc: None,
-                                    since: t.1.clone(),
-                                })
-                                .collect(),
-                        )),
+                    let one_of = Self::OneOf(
+                        types
+                            .iter()
+                            .map(|t| OneOfValue {
+                                typ: t.0.clone(),
+                                desc: None,
+                                since: t.1.clone(),
+                            })
+                            .collect(),
+                    );
+                    if is_array_context {
+                        Self::ArrayUnsized {
+                            value: Box::new(one_of),
+                        }
+                    } else {
+                        one_of
                     }
                 }
             })
@@ -69,6 +83,7 @@ fn try_simple_type(source: &str) -> Result<Option<Value>, String> {
         "for type" | "fortype" => Some(Value::ForType),
         "group" => Some(Value::Group),
         "hashmap" => Some(Value::HashMapUnknown),
+        "hashmapkey" | "hashmap key" => Some(Value::HashMapKey),
         "if type" | "iftype" => Some(Value::IfType),
         "location" => Some(Value::Location),
         "namespace" => Some(Value::Namespace),
@@ -268,7 +283,7 @@ mod tests {
         assert_eq!(try_simple_type("  [[String]]  "), Ok(Some(Value::String)));
         assert_eq!(
             try_simple_type("[[UnknownType]]"),
-            Err("Unknown simple type: [[UnknownType]]".to_string())
+            Err("Unknown simple type: unknowntype".to_string())
         );
     }
 
@@ -325,20 +340,18 @@ mod tests {
         assert_eq!(blocks, vec![("[[Number]]", None), ("[[String]]", None)]);
         assert_eq!(
             Value::parse(source, 0).expect("parsed"),
-            Value::ArrayUnsized {
-                value: Box::new(Value::OneOf(vec![
-                    OneOfValue {
-                        typ: Value::Number,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::String,
-                        desc: None,
-                        since: None
-                    },
-                ]))
-            }
+            Value::OneOf(vec![
+                OneOfValue {
+                    typ: Value::Number,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::String,
+                    desc: None,
+                    since: None
+                },
+            ])
         );
 
         let source = "[[Number]], [[Boolean]] or [[String]]";
@@ -353,25 +366,23 @@ mod tests {
         );
         assert_eq!(
             Value::parse(source, 0).expect("parsed"),
-            Value::ArrayUnsized {
-                value: Box::new(Value::OneOf(vec![
-                    OneOfValue {
-                        typ: Value::Number,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::Boolean,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::String,
-                        desc: None,
-                        since: None
-                    },
-                ]))
-            }
+            Value::OneOf(vec![
+                OneOfValue {
+                    typ: Value::Number,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::Boolean,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::String,
+                    desc: None,
+                    since: None
+                },
+            ])
         );
 
         let source = "[[Object]], [[Position#PositionAGL|PositionAGL]] or [[Position#Introduction|Position2D]]";
@@ -386,25 +397,23 @@ mod tests {
         );
         assert_eq!(
             Value::parse(source, 0).expect("parsed"),
-            Value::ArrayUnsized {
-                value: Box::new(Value::OneOf(vec![
-                    OneOfValue {
-                        typ: Value::Object,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::Position3dAGL,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::Position2d,
-                        desc: None,
-                        since: None
-                    },
-                ]))
-            }
+            Value::OneOf(vec![
+                OneOfValue {
+                    typ: Value::Object,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::Position3dAGL,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::Position2d,
+                    desc: None,
+                    since: None
+                },
+            ])
         );
 
         let source = "[[Number]], [[Boolean]], or [[String]]";
@@ -419,25 +428,23 @@ mod tests {
         );
         assert_eq!(
             Value::parse(source, 0).expect("parsed"),
-            Value::ArrayUnsized {
-                value: Box::new(Value::OneOf(vec![
-                    OneOfValue {
-                        typ: Value::Number,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::Boolean,
-                        desc: None,
-                        since: None
-                    },
-                    OneOfValue {
-                        typ: Value::String,
-                        desc: None,
-                        since: None
-                    },
-                ]))
-            }
+            Value::OneOf(vec![
+                OneOfValue {
+                    typ: Value::Number,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::Boolean,
+                    desc: None,
+                    since: None
+                },
+                OneOfValue {
+                    typ: Value::String,
+                    desc: None,
+                    since: None
+                },
+            ])
         );
 
         let source = "[[String]] or [[Array]] of [[Number]]s";

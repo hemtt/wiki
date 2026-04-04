@@ -5,7 +5,7 @@
 @case (typeof value === 'object') {
 @switch (true) {
     @case ('ArraySized' in value) {
-        <app-type type="Array"></app-type>
+        <app-type type="ArraySized"></app-type>
         <div class="gap-2 ml-4 grid grid-cols-[max-content_1fr]">
         @for (item of value.ArraySized; track item) {
             <div>#{{ $index }} {{item.name}}</div>
@@ -24,10 +24,10 @@
         </div>
     }
     @case ('ArrayUnsized' in value) {
-        <app-type type="Array"></app-type> of <app-value [value]="value.ArrayUnsized.value"></app-value>
+        <app-type type="ArrayUnsized"></app-type> of <app-value [value]="value.ArrayUnsized.value"></app-value>
     }
     @case ('OneOf' in value) {
-        any:
+        one of:
         <div class="flex flex-col ml-2">
         @for (option of value.OneOf; track option) {
             <app-value [value]="option.type"></app-value>

@@ -1,13 +1,13 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DatePipe } from '@angular/common';
+import { DatePipe, DecimalPipe } from '@angular/common';
 import { CommandService, Command, FilterOptions } from '../../services/command.service';
 import { CommandCardComponent } from '../command-card/command-card.component';
 
 @Component({
     selector: 'app-command-viewer',
     standalone: true,
-    imports: [FormsModule, DatePipe, CommandCardComponent],
+    imports: [FormsModule, DatePipe, DecimalPipe, CommandCardComponent],
     templateUrl: './command-viewer.component.html',
 })
 export class CommandViewerComponent implements OnInit {

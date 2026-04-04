@@ -4,8 +4,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <h1 class="text-4xl font-bold">HEMTT Wiki</h1>
             <p class="text-blue-100 mt-2">Arma 3 Command Reference Parser</p>
-            <p class="text-sm text-blue-200 mt-1">Comprehensive command viewer with filtering and search capabilities
-            </p>
 
             <p class="text-sm text-blue-200 mt-1">Last updated: {{ timestamp() | date : 'short' }}</p>
         </div>
@@ -34,7 +32,7 @@
         @if (!loading() && commands().length > 0) {
         <div class="bg-white rounded-lg shadow-md p-6 mb-8">
             <!-- Progress bar -->
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Parse Progress</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Parse Progress - {{ progress() | number: '1.0-2' }}%</h2>
             <div class="w-full bg-gray-200 rounded-full mb-4">
                 <div class="bg-blue-600 h-2.5 rounded-full" [style.width.%]="progress()"></div>
             </div>

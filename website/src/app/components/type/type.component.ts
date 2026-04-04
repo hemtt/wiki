@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { Value } from 'src/bindings/Value';
 
 @Component({
     selector: 'app-type',
     standalone: true,
     template: `
-    <a target="_blank" [href]="'https://community.bistudio.com/wiki/' + getLink" class="relative group text-violet-600">
+    <a target="_blank" [href]="'https://community.bistudio.com/wiki/' + getLink" class="z-0 hover:z-50 relative group text-violet-600">
         <span class="italic">{{ display }}</span>
         @if (getHint()) {
         <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2
@@ -55,6 +54,8 @@ export class TypeComponent {
                 return 'Turret Path';
             case 'TreeViewPath':
                 return 'Tree View Path';
+            case 'HashMapKey':
+                return 'HashMap Key';
             default:
                 return this.type;
         }
@@ -99,9 +100,9 @@ export class TypeComponent {
     getHint(): string {
         switch (this.type) {
             case 'ArraySized':
-                return 'An array with a fixed size. The size is determined by the number of elements in the "Array" field.';
+                return 'An array with specified set of elements. Each element typically has a name, type, and optional description.';
             case 'ArrayUnsized':
-                return 'An array with an unspecified size. The type of the elements is defined in the "value" field.';
+                return 'An array with an unspecified size.';
             case 'ArrayColor':
                 return 'An array representing a color, typically in RGB format (e.g., [255, 0, 0] for red).';
             case 'ArrayColorRgb':
@@ -141,6 +142,23 @@ export class TypeComponent {
                 `;
             case 'TreeViewPath':
                 return 'A path in a tree view structure, represented as an array of numbers indicating the hierarchy. <img src="assets/treeview.jpg" alt="Tree View Example" class="mt-2 rounded">';
+            case 'HashMapKey':
+                return `A virtual compound type containing all the possible types that can be used as keys in a HashMap.
+                <div class="flex flex-col gap-2 mt-2">
+                    <p><span class="text-violet-200 italic">HashMapKey</span> can be any of the following types:</p>
+                    <ul class="list-disc list-inside">
+                        <li class="text-orange-300">Number</li>
+                        <li class="text-orange-300">Boolean</li>
+                        <li class="text-orange-300">String</li>
+                        <li class="text-orange-300">Code</li>
+                        <li class="text-orange-300">Side</li>
+                        <li class="text-orange-300">Config</li>
+                        <li class="text-orange-300">Namespace</li>
+                        <li class="text-orange-300">NaN</li>
+                        <li class="text-orange-300">Array</li>
+                    </ul>
+                </div>
+                `;
 
             case 'Control':
                 return 'A user interface control element, such as a button or slider.';
