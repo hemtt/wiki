@@ -15,7 +15,7 @@
         "Missing return type for command +"
       ],
       "groups": [],
-      "name": "%2B",
+      "name": "+",
       "status": "Failed"
     },
     {
@@ -108,7 +108,7 @@
         "Missing return type for command !="
       ],
       "groups": [],
-      "name": "a_!%3D_b",
+      "name": "a_!=_b",
       "status": "Failed"
     },
     {
@@ -117,7 +117,7 @@
         "Missing return type for command %"
       ],
       "groups": [],
-      "name": "a_%25_b",
+      "name": "a_%_b",
       "status": "Failed"
     },
     {
@@ -126,34 +126,7 @@
         "Missing return type for command &&"
       ],
       "groups": [],
-      "name": "a_%26%26_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command =="
-      ],
-      "groups": [],
-      "name": "a_%3D%3D_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command ="
-      ],
-      "groups": [],
-      "name": "a_%3D_b",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Missing return type for command ^"
-      ],
-      "groups": [],
-      "name": "a_%5E_b",
+      "name": "a_&&_b",
       "status": "Failed"
     },
     {
@@ -186,10 +159,37 @@
     {
       "description": "No documentation available",
       "errors": [
+        "Missing return type for command =="
+      ],
+      "groups": [],
+      "name": "a_==_b",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Missing return type for command ="
+      ],
+      "groups": [],
+      "name": "a_=_b",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Missing return type for command ^"
+      ],
+      "groups": [],
+      "name": "a_^_b",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
         "Missing return type for command >="
       ],
       "groups": [],
-      "name": "a_greater%3D_b",
+      "name": "a_greater=_b",
       "status": "Failed"
     },
     {
@@ -216,7 +216,7 @@
         "Missing return type for command <="
       ],
       "groups": [],
-      "name": "a_less%3D_b",
+      "name": "a_less=_b",
       "status": "Failed"
     },
     {
@@ -22429,7 +22429,7 @@
       "status": "Passed"
     }
   ],
-  "timestamp": 1775270806,
+  "timestamp": 1775272235,
   "total": 2693,
   "version": "1.0"
 }
