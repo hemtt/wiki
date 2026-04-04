@@ -26,7 +26,7 @@ async fn main() -> io::Result<()> {
     generator::generate_metadata(&commands, &report, OUTPUT_DIR)?;
 
     println!("✅ Metadata generated successfully!");
-    println!("📁 Output directory: {}", OUTPUT_DIR);
+    println!("📁 Output directory: {OUTPUT_DIR}");
 
     Ok(())
 }

@@ -37,7 +37,7 @@ fn generate_commands_file(
         .map(|cmd| {
             let status = get_command_status(cmd.name(), report);
             let mut cmd_json = json!({
-                "name": cmd.name(),
+                "name": urlencoding::decode(cmd.name()).map_or_else(|_| cmd.name().to_string(), |s| s.to_string()),
                 "description": cmd.description(),
                 "groups": cmd.groups(),
                 "status": status.as_str(),
@@ -60,7 +60,7 @@ fn generate_commands_file(
             .any(|c| c["name"].as_str() == Some(cmd_name))
         {
             let cmd_json = json!({
-                "name": cmd_name,
+                "name": urlencoding::decode(cmd_name).map_or_else(|_| cmd_name.clone(), |s| s.to_string()),
                 "description": "No documentation available",
                 "groups": [],
                 "status": "Failed",

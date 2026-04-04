@@ -129,7 +129,7 @@ impl CommandParser for Command {
                         // if value.contains("Broken Commands") {
                         //     break;
                         // }
-                    } else if key.starts_with('s') {
+                    } else if key.starts_with('s') && key != "sortKey" {
                         // // ==== Special Cases ====
                         // if command.name() == "local" && syntax_counter == 2 {
                         //     // syntax 2 is not a regular command, and deprecated
@@ -160,6 +160,8 @@ impl CommandParser for Command {
                         command.add_syntax(syntax);
                     } else if key.starts_with('x') {
                         command.add_example(value.trim().trim_start_matches('\n').to_string());
+                    } else if key == "sortKey" {
+                        // ignore
                     } else {
                         println!("Unknown key: {key}");
                         return Err(format!("Unknown key in command '{name}': {key}"));
