@@ -99,6 +99,7 @@ pub enum Value {
     Waypoint,
     WhileType,
     WithType,
+    ParticleArray,
 
     Unknown,
 
@@ -134,6 +135,7 @@ impl std::fmt::Display for Value {
             Self::ArrayColorRgba => write!(f, "Array Color RGBA"),
             Self::ArrayEdenEntities => write!(f, "Array Eden Entities"),
             Self::ArrayEmpty => write!(f, "Array Empty"),
+            Self::ParticleArray => write!(f, "Particle Array"),
             Self::Boolean => write!(f, "Boolean"),
             Self::Code => write!(f, "Code"),
             Self::Config => write!(f, "Config"),

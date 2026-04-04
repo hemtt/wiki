@@ -78,7 +78,8 @@ pub fn load_commands(dir: &str) -> std::io::Result<Vec<(String, Command)>> {
                     .expect("Failed to get file name")
                     .to_string_lossy()
                     .replace('*', "%2A")
-                    .replace(':', "%3A").clone(),
+                    .replace(':', "%3A")
+                    .clone(),
                 cmd,
             )),
             Err(e) => {

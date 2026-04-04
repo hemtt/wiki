@@ -36,11 +36,26 @@ pub fn try_simple_line(source: &str) -> Result<Option<ParamItem>, String> {
     let Some((name_part, type_and_description)) = source.split_once(": ") else {
         return Ok(None);
     };
+
+    // Try to split on " - " for description
     let (type_part, desc) =
         if let Some((type_part, description_part)) = type_and_description.split_once(" - ") {
             (type_part, Some(description_part.trim().to_string()))
         } else {
-            (type_and_description, None)
+            // If no dash, try to extract type from beginning (things in [[ ]])
+            // and treat the rest as description
+            let trimmed = type_and_description.trim();
+            trimmed.find("]]").map_or((trimmed, None), |end_bracket| {
+                let potential_type = &trimmed[..end_bracket + 2];
+                let potential_desc = trimmed[end_bracket + 2..].trim();
+
+                // Verify this is a valid type by trying to parse it
+                if Value::parse(potential_type, 0).is_ok() && !potential_desc.is_empty() {
+                    (potential_type, Some(potential_desc.to_string()))
+                } else {
+                    (trimmed, None)
+                }
+            })
         };
     let typ = Value::parse(type_part.trim(), 0)?;
     let name = name_part.trim().to_string();
@@ -65,9 +80,11 @@ pub fn try_array_with(source: &str) -> Result<Option<ParamItem>, String> {
     if !source.contains('\n') {
         return Ok(None);
     }
+
     let Some((name_part, type_and_description)) = source.split_once(": ") else {
         return Ok(None);
     };
+
     let mut lines = type_and_description.lines();
     let first_line = lines.next().expect("first line").trim();
     let (first_line, wrap_arrays) = if first_line.starts_with("[[Array]] of ") {
@@ -97,22 +114,87 @@ pub fn try_array_with(source: &str) -> Result<Option<ParamItem>, String> {
         return Err(format!("Failed to parse array with parameters: '{args}'"));
     };
     let mut params = Vec::new();
-    for line in lines {
-        let line = line.trim().trim_start_matches('*').trim().to_string();
-        // detect index, eg: 0 - {name}: [[Type]] - Description
-        let line = if let Some((index, rest)) = line.split_once(" - ") {
-            if index.trim().chars().all(|c| c.is_ascii_digit()) {
-                rest.trim().to_string()
+    let mut in_columns = false;
+    let mut lines_vec: Vec<&str> = lines.collect();
+    let mut i = 0;
+
+    while i < lines_vec.len() {
+        let line = lines_vec[i].trim();
+
+        // Handle {{Columns|...| opening
+        if line.contains("{{Columns|") {
+            in_columns = true;
+            i += 1;
+            continue;
+        }
+
+        // Handle }} closing
+        if line == "}}" {
+            if !in_columns {
+                return Err("Unexpected closing '}}' without matching '{{Columns|'".to_string());
+            }
+            in_columns = false;
+            i += 1;
+            continue;
+        }
+
+        // Parse parameter lines (starting with *)
+        if line.starts_with('*') && !line.starts_with("**") {
+            let line_stripped = line.trim_start_matches('*').trim();
+
+            // Check if this is a nested array_with pattern
+            if line_stripped.contains("[[Array]] with") {
+                // Collect this line and all following ** lines
+                let mut nested_source = line_stripped.to_string();
+                let mut nested_i = i + 1;
+
+                while nested_i < lines_vec.len() {
+                    let next_line = lines_vec[nested_i].trim();
+                    if next_line.starts_with("**") {
+                        nested_source.push('\n');
+                        // Convert ** to * for nested parsing
+                        nested_source.push('*');
+                        nested_source.push_str(next_line.trim_start_matches("**").trim());
+                        nested_i += 1;
+                    } else {
+                        break;
+                    }
+                }
+
+                i = nested_i;
+
+                // Try to parse as array_with
+                if let Ok(Some(item)) = try_array_with(&nested_source) {
+                    params.push(item);
+                } else {
+                    return Err(format!(
+                        "Failed to parse nested array with element line: '{line_stripped}'"
+                    ));
+                }
             } else {
-                line
+                // Regular simple line
+                let line_str = line_stripped.to_string();
+                // detect index, eg: 0 - {name}: [[Type]] - Description
+                let line_str = if let Some((index, rest)) = line_str.split_once(" - ") {
+                    if index.trim().chars().all(|c| c.is_ascii_digit()) {
+                        rest.trim().to_string()
+                    } else {
+                        line_str
+                    }
+                } else {
+                    line_str
+                };
+                if let Ok(Some(item)) = try_simple_line(&line_str) {
+                    params.push(item);
+                } else {
+                    return Err(format!(
+                        "Failed to parse array with element line: '{line_str}'"
+                    ));
+                }
+                i += 1;
             }
         } else {
-            line
-        };
-        if let Ok(Some(item)) = try_simple_line(&line) {
-            params.push(item);
-        } else {
-            return Err(format!("Failed to parse array with element line: '{line}'"));
+            i += 1;
         }
     }
     let (default, optional, desc) = desc.map_or((None, false, None), |desc| {
@@ -476,6 +558,39 @@ mod tests {
     }
 
     #[test]
+    fn array_with_columns() {
+        let line = "return: [[Array]] with [rainDropTexture, texDropCount, minRainDensity, effectRadius, windCoef, dropSpeed, rndSpeed, rndDir, dropWidth, dropHeight, dropColor, lumSunFront, lumSunBack, refractCoef, refractSaturation, snow, dropColorStrong]
+{{Columns|4|
+* rainDropTexture: [[String]]
+* texDropCount: [[Number]]
+* minRainDensity: [[Number]]
+* effectRadius: [[Number]]
+* windCoef: [[Number]]
+* dropSpeed: [[Number]]
+* rndSpeed: [[Number]]
+* rndDir: [[Number]]
+* dropWidth: [[Number]]
+* dropHeight: [[Number]]
+* dropColor: [[Color|Color (RGBA)]]
+* lumSunFront: [[Number]]
+* lumSunBack: [[Number]]
+* refractCoef: [[Number]]
+* refractSaturation: [[Number]]
+* snow: [[Boolean]]
+* dropColorStrong: [[Boolean]]
+}}";
+        let (param_item, errors) =
+            ParamItem::parse("test", line).expect("Failed to parse array with columns line");
+        assert!(errors.is_empty());
+        let Value::ArraySized(items) = param_item.typ else {
+            panic!("Expected ArraySized");
+        };
+        assert_eq!(items.len(), 17);
+        assert_eq!(items[0].name, "rainDropTexture");
+        assert_eq!(items[13].name, "refractCoef");
+    }
+
+    #[test]
     fn array_with_default() {
         let line = "args: [[Array]] with [setIsSanta, setIsGhost]
 * setIsSanta: [[Boolean]] - (Optional, default [[false]]) Set to [[true]] to make the entity a Santa.
@@ -501,6 +616,72 @@ mod tests {
                     since: None,
                 },
             ])
+        );
+    }
+
+    #[test]
+    fn array_with_nested_array_with() {
+        let line = "return: [[Array]] of [[Array]]s with [magazineName, muzzleName, id, ammoCount]
+* magazineName: [[String]]
+* muzzleName: [[String]]
+* id: [[Array]] with [itemWorldID, creatorID]
+** itemWorldID: [[Number]] - unique ID of the item in the world
+** creatorID: [[Number]] - unique ID of the player who created the item
+* ammoCount: [[Number]] magazine ammo";
+        let (param_item, errors) = ParamItem::parse("test", line)
+            .expect("Failed to parse nested array with array with line");
+        assert!(errors.is_empty());
+        assert_eq!(
+            param_item.typ,
+            Value::ArrayUnsized {
+                value: Box::new(Value::ArraySized(vec![
+                    ArraySizedElement {
+                        name: "magazineName".to_string(),
+                        typ: Value::String,
+                        default: None,
+                        desc: None,
+                        since: None,
+                    },
+                    ArraySizedElement {
+                        name: "muzzleName".to_string(),
+                        typ: Value::String,
+                        default: None,
+                        desc: None,
+                        since: None,
+                    },
+                    ArraySizedElement {
+                        name: "id".to_string(),
+                        typ: Value::ArraySized(vec![
+                            ArraySizedElement {
+                                name: "itemWorldID".to_string(),
+                                typ: Value::Number,
+                                default: None,
+                                desc: Some("unique ID of the item in the world".to_string()),
+                                since: None,
+                            },
+                            ArraySizedElement {
+                                name: "creatorID".to_string(),
+                                typ: Value::Number,
+                                default: None,
+                                desc: Some(
+                                    "unique ID of the player who created the item".to_string()
+                                ),
+                                since: None,
+                            },
+                        ]),
+                        default: None,
+                        desc: None,
+                        since: None,
+                    },
+                    ArraySizedElement {
+                        name: "ammoCount".to_string(),
+                        typ: Value::Number,
+                        default: None,
+                        desc: Some("magazine ammo".to_string()),
+                        since: None,
+                    },
+                ]))
+            }
         );
     }
 

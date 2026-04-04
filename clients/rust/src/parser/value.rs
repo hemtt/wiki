@@ -124,6 +124,7 @@ fn try_simple_type(source: &str) -> Result<Option<Value>, String> {
         "waypoint" => Some(Value::Waypoint),
         "while type" | "whiletype" => Some(Value::WhileType),
         "with type" | "withtype" => Some(Value::WithType),
+        "particlearray" | "particle array" => Some(Value::ParticleArray),
         _ => {
             // make sure source only has a single instance of [[ and ]]
             let open_brackets = source.matches("[[").count();
@@ -156,21 +157,26 @@ fn try_number_range(source: &str) -> Result<Option<Value>, String> {
     let Some((start_str, end_str)) = remainder.split_once("..") else {
         return Err(format!("Invalid number range format: '{source}'"));
     };
-    let start: i32 = start_str.trim().parse().map_err(|e| {
+    let start: f32 = start_str.trim().parse().map_err(|e| {
         format!(
             "Failed to parse start of number range '{}': {}",
             start_str.trim(),
             e
         )
     })?;
-    let end: i32 = end_str.trim().parse().map_err(|e| {
+    let end: f32 = end_str.trim().parse().map_err(|e| {
         format!(
             "Failed to parse end of number range '{}': {}",
             end_str.trim(),
             e
         )
     })?;
-    Ok(Some(Value::NumberRange(start, end)))
+    #[allow(clippy::cast_possible_truncation)]
+    // TODO: float that supports hash?
+    Ok(Some(Value::NumberRange(
+        start.floor() as i32,
+        end.ceil() as i32,
+    )))
 }
 
 /// Attempts to parse an array of simple types from a source string.
@@ -298,6 +304,10 @@ mod tests {
             Ok(Some(Value::NumberRange(0, 10)))
         );
         assert_eq!(try_number_range("[[Number]] between 0 and 10"), Ok(None));
+        assert_eq!(
+            try_number_range("[[Number]] in range 0.1 .. 120"),
+            Ok(Some(Value::NumberRange(0, 120))) // Note: floats get ceiled or floored to integers
+        );
     }
 
     #[test]
