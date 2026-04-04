@@ -19,7 +19,7 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: checked
     type: Boolean
@@ -35,7 +35,7 @@ syntax:
   right: !Array
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: checked
     type: Boolean

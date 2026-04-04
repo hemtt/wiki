@@ -15,7 +15,7 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: text
     type: String
@@ -33,7 +33,7 @@ syntax:
   - !Item
     name: path
     desc: path where the items should be added
-    type: Path
+    type: TreeViewPath
   - !Item
     name: text
     desc: displayed name for the entry

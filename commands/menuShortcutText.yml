@@ -17,7 +17,7 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
 - call: !Binary
   - control
   - path
@@ -28,7 +28,7 @@ syntax:
     type: Control
   right: !Item
     name: path
-    type: Path
+    type: TreeViewPath
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

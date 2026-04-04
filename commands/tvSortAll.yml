@@ -16,7 +16,7 @@ syntax:
   - !Item
     name: path
     desc: path to start sorting from
-    type: Path
+    type: TreeViewPath
   - !Item
     name: reversed
     desc: '[[true]] to reverse sort it.'

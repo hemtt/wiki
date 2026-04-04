@@ -15,7 +15,7 @@ syntax:
   right: !Array
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: selected
     type: Boolean

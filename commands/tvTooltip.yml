@@ -16,7 +16,7 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
 - call: !Binary
   - ctrl
   - path
@@ -28,7 +28,7 @@ syntax:
     type: Control
   right: !Item
     name: path
-    type: Path
+    type: TreeViewPath
 argument_loc: Local
 effect_loc: Local
 since: {}

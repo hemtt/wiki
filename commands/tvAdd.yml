@@ -17,7 +17,7 @@ syntax:
   - !Item
     name: pathParent
     desc: parent item or [] if no parent exists
-    type: Path
+    type: TreeViewPath
   - !Item
     name: text
     type: String
@@ -35,7 +35,7 @@ syntax:
   - !Item
     name: pathParent
     desc: parent item or [] if no parent exists
-    type: Path
+    type: TreeViewPath
   - !Item
     name: text
     type: String

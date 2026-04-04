@@ -16,7 +16,7 @@ syntax:
   - !Item
     name: path
     desc: the parent item to sort
-    type: Path
+    type: TreeViewPath
   - !Item
     name: ascending
     desc: '[[true]] to sort ascending, else descending'
@@ -37,7 +37,7 @@ syntax:
   - !Item
     name: path
     desc: the parent item to sort
-    type: Path
+    type: TreeViewPath
   - !Item
     name: ascending
     desc: '(Optional) [[true]] to sort ascending, else descending. Default: [[false]]'

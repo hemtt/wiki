@@ -5,14 +5,14 @@ groups:
 syntax:
 - call: !Unary idc
   ret:
-    type: Path
+    type: TreeViewPath
     desc: selected item
   right: !Item
     name: idc
     type: Number
 - call: !Unary control
   ret:
-    type: Path
+    type: TreeViewPath
     desc: selected item
   right: !Item
     name: control

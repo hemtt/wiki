@@ -15,7 +15,7 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: value
     type: Number
@@ -31,7 +31,7 @@ syntax:
   right: !Array
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: value
     type: Number

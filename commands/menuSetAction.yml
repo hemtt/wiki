@@ -15,7 +15,7 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: action
     desc: expression that should be executed when entry is clicked
@@ -32,7 +32,7 @@ syntax:
   right: !Array
   - !Item
     name: path
-    type: Path
+    type: TreeViewPath
   - !Item
     name: action
     desc: expression that should be executed when entry is clicked

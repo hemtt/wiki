@@ -15,7 +15,7 @@ syntax:
   - !Item
     name: path
     desc: '[] will collapse the whole tree and it will disappear'
-    type: Path
+    type: TreeViewPath
 - call: !Binary
   - control
   - path
@@ -27,7 +27,7 @@ syntax:
   right: !Item
     name: path
     desc: '[] will collapse the whole tree and it will disappear'
-    type: Path
+    type: TreeViewPath
 argument_loc: Local
 effect_loc: Local
 since: {}
