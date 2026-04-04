@@ -2,7 +2,8 @@ use serde::{Deserialize, Serialize};
 
 use super::{Arg, ArraySizedElement, Call, Since, Value};
 
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, ts_rs::TS)]
+#[ts(export)]
 pub enum Param {
     Item(ParamItem),
     Array(Vec<Self>),
@@ -86,6 +87,12 @@ impl Param {
                                 .map(std::string::ToString::to_string),
                             Self::Array(_) | Self::Infinite(_) => None,
                         },
+                        default: match item {
+                            Self::Item(param_item) => {
+                                param_item.default().map(std::string::ToString::to_string)
+                            }
+                            Self::Array(_) | Self::Infinite(_) => None,
+                        },
                         since: match item {
                             Self::Item(param_item) => param_item.since().cloned(),
                             Self::Array(_) | Self::Infinite(_) => None,
@@ -110,8 +117,19 @@ impl Param {
                                         Self::Item(param_item) => param_item.name().to_string(),
                                         Self::Array(_) | Self::Infinite(_) => String::new(),
                                     },
+                                    default: match item {
+                                        Self::Item(param_item) => param_item
+                                            .default()
+                                            .map(std::string::ToString::to_string),
+                                        Self::Array(_) | Self::Infinite(_) => None,
+                                    },
                                     typ: item.as_value(),
-                                    desc: None,
+                                    desc: match item {
+                                        Self::Item(param_item) => param_item
+                                            .description()
+                                            .map(std::string::ToString::to_string),
+                                        Self::Array(_) | Self::Infinite(_) => None,
+                                    },
                                     since: match item {
                                         Self::Item(param_item) => param_item.since().cloned(),
                                         Self::Array(_) | Self::Infinite(_) => None,
@@ -126,7 +144,8 @@ impl Param {
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, ts_rs::TS)]
+#[ts(export)]
 pub struct ParamItem {
     pub name: String,
     #[serde(default, alias = "description")]

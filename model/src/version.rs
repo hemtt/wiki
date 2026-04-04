@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Copy, Hash, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, Hash, PartialEq, Eq, ts_rs::TS)]
+#[ts(export)]
 pub struct Version {
     major: u8,
     minor: u8,

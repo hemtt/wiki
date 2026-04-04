@@ -2,6 +2,8 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(untagged)]
+#[derive(ts_rs::TS)]
+#[ts(export)]
 pub enum Arg {
     Item(String),
     Array(Vec<Self>),
@@ -21,7 +23,8 @@ impl Arg {
     }
 }
 
-#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub enum Call {
     Nular,
     Unary(Arg),

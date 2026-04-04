@@ -1,9 +1,9 @@
 <div class="min-h-screen bg-gray-50">
     <!-- Header with back button -->
     <div class="bg-white border-b border-gray-200 sticky top-0">
-        <div class="max-w-4xl mx-auto px-4 py-4">
+        <div class="max-w-4xl mx-auto py-4">
             <button (click)="goBack()"
-                class="mb-4 px-4 py-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition">
+                class="mb-4 py-2 text-blue-400 hover:text-blue-800 rounded transition">
                 ← Back to Commands
             </button>
 
@@ -74,20 +74,22 @@
             <p class="text-gray-700">{{ fullCommand()?.description || 'No description available.' }}</p>
         </section>
 
+        @if (commandArgumentLoc() != 'Unspecified' || commandEffectLoc() != 'Unspecified') {
         <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-            @if (commandArgumentLoc()) {
+            @if (commandArgumentLoc() != 'Unspecified') {
             <div class="p-4 bg-gray-100 rounded">
-                <h3 class="font-semibold text-gray-900 mb-2">Argument Locality</h3>
+                <h4 class="font-semibold text-gray-900 mb-2">Argument Locality</h4>
                 <p class="text-gray-700 font-mono text-sm">{{ commandArgumentLoc() }}</p>
             </div>
             }
-            @if (commandEffectLoc()) {
+            @if (commandEffectLoc() != 'Unspecified') {
             <div class="p-4 bg-gray-100 rounded">
-                <h3 class="font-semibold text-gray-900 mb-2">Effect Locality</h3>
+                <h4 class="font-semibold text-gray-900 mb-2">Effect Locality</h4>
                 <p class="text-gray-700 font-mono text-sm">{{ commandEffectLoc() }}</p>
             </div>
             }
         </section>
+        }
 
         <!-- Groups -->
         @if (commandGroups().length > 0) {
@@ -111,7 +113,9 @@
                 @for (syn of commandSyntax(); track syn) {
                 <div class="mb-8 bg-blue-50 p-6 rounded-lg">
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Syntax #{{ commandSyntax().indexOf(syn) + 1 }}</h3>
-                    <app-syntax-viewer [command]="fullCommand()" [syntax]="syn"></app-syntax-viewer>
+                    @if (fullCommand()) {
+                    <app-syntax-viewer [command]="fullCommand()!" [syntax]="syn"></app-syntax-viewer>
+                    }
                 </div>
                 }
             </div>

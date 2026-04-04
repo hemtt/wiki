@@ -2,7 +2,8 @@ use serde::{Deserialize, Serialize};
 
 use super::Version;
 
-#[derive(Clone, Default, Hash, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Default, Hash, Debug, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct Since {
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]

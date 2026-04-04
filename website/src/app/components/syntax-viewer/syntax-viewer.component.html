@@ -7,11 +7,11 @@
         <div class="font-bold text-sm text-gray-700 uppercase tracking-widest">Parameters</div>
         <div class="gap-2 ml-2 grid grid-cols-[max-content_1fr]">
             @for (param of syntaxInfo.parameters; track param.name) {
-            <div class="w-1/5">
+            <div>
                 <span class="text-gray-700 font-medium">{{ param.name }}</span>
             </div>
             <div class="flex flex-col">
-                <span class="text-violet-600 italic">{{ param.type }}</span>
+                <app-type [type]="param.type"></app-type>
                 @if (param.desc) {
                 <span class="col-span-full text-gray-600">{{ param.desc }}</span>
                 }
@@ -21,11 +21,12 @@
     </div>
     }
 
-    @if (syntaxInfo.returnType) {
+    @if (syntax.ret) {
     <div class="flex flex-col gap-3">
         <div class="font-bold text-sm text-gray-700 uppercase tracking-widest">Return Value</div>
-        <div class="font-mono text-sm text-emerald-600 font-medium px-3 py-2 bg-green-50 rounded-sm">{{
-            syntaxInfo.returnType }}</div>
+        <div class="font-mono text-sm text-emerald-600 font-medium px-3 py-2 bg-green-50 rounded-sm">
+            <app-return-type [return]="syntax.ret"></app-return-type>
+        </div>
     </div>
     }
 </div>

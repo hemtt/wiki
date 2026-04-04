@@ -1,0 +1,35 @@
+@switch (true) {
+@case (typeof value === 'string') {
+<app-type [type]="value"></app-type>
+}
+@case (typeof value === 'object') {
+@switch (true) {
+    @case ('ArraySized' in value) {
+        <app-type type="Array"></app-type>
+        <div class="gap-2 ml-4 grid grid-cols-[max-content_1fr]">
+        @for (item of value.ArraySized; track item) {
+            <div>#{{ $index }} {{item.name}}</div>
+            <div class="flex flex-col gap-1">
+                <div class="flex flex-row">
+                    <app-value [value]="item.type"></app-value>
+                    @if (item.default) {
+                    <div class="text-orange-800 ml-2">(default: {{ item.default }})</div>
+                    }
+                </div>
+                @if (item.desc) {
+                <div class="text-gray-600 text-sm mt-1">{{ item.desc }}</div>
+                }
+            </div>
+        }
+        </div>
+    }
+    @case ('ArrayUnsized' in value) {
+        <app-type type="Array"></app-type> of <app-value [value]="value.ArrayUnsized.value"></app-value>
+    }
+    @default {
+        <app-type [type]="getType"></app-type>
+        <div class="text-gray-600">The type {{ getType }} is not supported for rich display yet, consider contributing to the wiki!</div>
+    }
+}
+}
+}

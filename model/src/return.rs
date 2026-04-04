@@ -2,7 +2,8 @@ use serde::{Deserialize, Serialize};
 
 use crate::Value;
 
-#[derive(Clone, Debug, Serialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, PartialEq, Eq, ts_rs::TS)]
+#[ts(export)]
 pub struct Return {
     #[serde(rename = "type")]
     pub typ: Value,

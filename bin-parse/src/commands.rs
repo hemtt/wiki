@@ -219,7 +219,7 @@ pub async fn command(
             < 60 * 60 * SKIP_IF_LESS_THAN
         {
             (std::env::var("CI").is_err(), false)
-        } else {
+        } else if !std::env::args().any(|arg| arg == "--nohead") {
             let res = match client.bi_head(&url).send().await {
                 Ok(res) => res,
                 Err(e) => {
@@ -251,8 +251,10 @@ pub async fn command(
                 ));
             }
             (last_modified <= modified.into(), download_newer)
+        } else {
+            (false, false)
         }
-    } else {
+    } else if !std::env::args().any(|arg| arg == "--nohead") {
         let res = match client.bi_head(&url).send().await {
             Ok(res) => res,
             Err(e) => {
@@ -278,6 +280,8 @@ pub async fn command(
             true
         };
         (false, download_newer)
+    } else {
+        (false, false)
     };
 
     let raw_url = format!("{url}?action=raw");

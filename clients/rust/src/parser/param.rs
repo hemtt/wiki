@@ -44,12 +44,19 @@ pub fn try_simple_line(source: &str) -> Result<Option<ParamItem>, String> {
         };
     let typ = Value::parse(type_part.trim(), 0)?;
     let name = name_part.trim().to_string();
+    let (default, optional, desc) = desc.map_or((None, false, None), |desc| {
+        if let Some((default, desc)) = try_optional(&desc) {
+            (default, true, Some(desc))
+        } else {
+            (None, false, Some(desc))
+        }
+    });
     Ok(Some(ParamItem {
         name,
         typ,
         desc,
-        default: None,
-        optional: false,
+        default,
+        optional,
         since,
     }))
 }
@@ -108,6 +115,13 @@ pub fn try_array_with(source: &str) -> Result<Option<ParamItem>, String> {
             return Err(format!("Failed to parse array with element line: '{line}'"));
         }
     }
+    let (default, optional, desc) = desc.map_or((None, false, None), |desc| {
+        if let Some((default, desc)) = try_optional(&desc) {
+            (default, true, Some(desc))
+        } else {
+            (None, false, Some(desc))
+        }
+    });
     let param = Param::build_from_arg(&arg, &params)?;
     Ok(Some(ParamItem {
         name: name_part.trim().to_string(),
@@ -119,8 +133,8 @@ pub fn try_array_with(source: &str) -> Result<Option<ParamItem>, String> {
             param.as_value()
         },
         desc,
-        default: None,
-        optional: false,
+        default,
+        optional,
         since: None,
     }))
 }
@@ -130,19 +144,25 @@ pub fn try_array_with(source: &str) -> Result<Option<ParamItem>, String> {
 ///
 /// # Examples
 /// The item's class name.                      -> None
-/// (Optional, default 5) The number of items.  -> Some(Some(Number(5)))
-/// (Optional) The name of the item.            -> Some(None)
-pub fn try_optional(source: &str) -> Option<Option<String>> {
-    let source = source.trim().to_lowercase();
-    if source.starts_with("(optional") {
-        if let Some(default_start) = source.find("default ") {
-            let default_end = source[default_start..]
+/// (Optional, default 5) The number of items.  -> Some((Some(Number(5)), "The number of items."))
+/// (Optional) The name of the item.            -> Some((None, "The name of the item."))
+pub fn try_optional(source: &str) -> Option<(Option<String>, String)> {
+    let source_lower = source.trim().to_lowercase();
+    if source_lower.starts_with("(optional") {
+        if let Some(default_start) = source_lower.find("default ") {
+            let default_end = source_lower[default_start..]
                 .find(')')
-                .map_or(source.len(), |i| default_start + i);
-            let default_str = source[default_start + 8..default_end].trim();
-            return Some(Some(default_str.to_string()));
+                .map_or(source_lower.len(), |i| default_start + i);
+            let default_str = source_lower[default_start + 8..default_end]
+                .trim()
+                .trim_start_matches("[[")
+                .trim_end_matches("]]");
+            return Some((
+                Some(default_str.to_string()),
+                source[default_end + 1..].trim().to_string(),
+            ));
         }
-        return Some(None);
+        return Some((None, source.trim().to_string()));
     }
     None
 }
@@ -258,13 +278,16 @@ mod tests {
         let line_with_default = "(Optional, default 10) The number of items.";
         let optional_value =
             try_optional(line_with_default).expect("Failed to parse optional with default");
-        assert_eq!(optional_value, Some("10".to_string()));
+        assert_eq!(
+            optional_value,
+            (Some("10".to_string()), "The number of items.".to_string())
+        );
         // Further assertions on optional_value can be added here
 
         let line_without_default = "(Optional) The name of the item.";
         let optional_value =
             try_optional(line_without_default).expect("Failed to parse optional without default");
-        assert_eq!(optional_value, None);
+        assert_eq!(optional_value, (None, "The name of the item.".to_string()));
 
         let non_optional_line = "The item's class name.";
         let optional_value = try_optional(non_optional_line);
@@ -290,12 +313,14 @@ mod tests {
                 ArraySizedElement {
                     name: "condition".to_string(),
                     typ: Value::String,
+                    default: None,
                     desc: None,
                     since: None,
                 },
                 ArraySizedElement {
                     name: "statement".to_string(),
                     typ: Value::String,
+                    default: None,
                     desc: None,
                     since: None,
                 },
@@ -315,18 +340,21 @@ mod tests {
                 ArraySizedElement {
                     name: "ambientLife".to_string(),
                     typ: Value::Boolean,
+                    default: None,
                     desc: None,
                     since: None,
                 },
                 ArraySizedElement {
                     name: "ambientSound".to_string(),
                     typ: Value::Boolean,
+                    default: None,
                     desc: None,
                     since: None,
                 },
                 ArraySizedElement {
                     name: "windyCoef".to_string(),
                     typ: Value::Number,
+                    default: None,
                     desc: Some("see [[enableEnvironment]]".to_string()),
                     since: Some(Since::arma3("2.12")),
                 },
@@ -345,12 +373,14 @@ mod tests {
                 ArraySizedElement {
                     name: "isMan".to_string(),
                     typ: Value::Boolean,
+                    default: None,
                     desc: Some("[[true]] if the entity is a man".to_string()),
                     since: None,
                 },
                 ArraySizedElement {
                     name: "isAnimal".to_string(),
                     typ: Value::Boolean,
+                    default: None,
                     desc: Some("[[true]] if the entity is an animal".to_string()),
                     since: None,
                 },
@@ -373,18 +403,21 @@ mod tests {
                     ArraySizedElement {
                         name: "prefix".to_string(),
                         typ: Value::String,
+                        default: None,
                         desc: Some("addon prefix".to_string()),
                         since: None,
                     },
                     ArraySizedElement {
                         name: "version".to_string(),
                         typ: Value::String,
+                        default: None,
                         desc: Some("addon revision version".to_string()),
                         since: None,
                     },
                     ArraySizedElement {
                         name: "isPatched".to_string(),
                         typ: Value::Boolean,
+                        default: None,
                         desc: Some(
                             "[[true]] if patching is enabled and this addon is being patched"
                                 .to_string()
@@ -394,6 +427,7 @@ mod tests {
                     ArraySizedElement {
                         name: "modIndex".to_string(),
                         typ: Value::Number,
+                        default: None,
                         desc: Some(
                             "index of mod in [[getLoadedModsInfo]] array. -1 if not found."
                                 .to_string()
@@ -403,11 +437,41 @@ mod tests {
                     ArraySizedElement {
                         name: "hash".to_string(),
                         typ: Value::String,
+                        default: None,
                         desc: Some("hash of the addon PBO file.".to_string()),
                         since: Some(Since::arma3("2.14")),
                     },
                 ]))
             }
+        );
+    }
+
+    #[test]
+    fn array_with_default() {
+        let line = "args: [[Array]] with [setIsSanta, setIsGhost]
+* setIsSanta: [[Boolean]] - (Optional, default [[false]]) Set to [[true]] to make the entity a Santa.
+* setIsGhost: [[Boolean]] - (Optional, default [[false]]) Set to [[true]] to make the entity a ghost.";
+        let (param_item, errors) =
+            ParamItem::parse("test", line).expect("Failed to parse array with indexed line");
+        assert!(errors.is_empty());
+        assert_eq!(
+            param_item.typ,
+            Value::ArraySized(vec![
+                ArraySizedElement {
+                    name: "setIsSanta".to_string(),
+                    typ: Value::Boolean,
+                    default: Some("false".to_string()),
+                    desc: Some("Set to [[true]] to make the entity a Santa.".to_string()),
+                    since: None,
+                },
+                ArraySizedElement {
+                    name: "setIsGhost".to_string(),
+                    typ: Value::Boolean,
+                    default: Some("false".to_string()),
+                    desc: Some("Set to [[true]] to make the entity a ghost.".to_string()),
+                    since: None,
+                },
+            ])
         );
     }
 

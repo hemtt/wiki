@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Copy, Clone, Default, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Copy, Clone, Default, Debug, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub enum Locality {
     #[default]
     Unspecified,

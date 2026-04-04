@@ -4,7 +4,8 @@ use crate::Branch;
 
 use super::{Locality, Since, Syntax};
 
-#[derive(Clone, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, Default, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct Command {
     name: String,
     #[serde(alias = "description")]

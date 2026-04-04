@@ -1,6 +1,8 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Syntax } from 'src/bindings/Syntax';
+import { Locality } from 'src/bindings/Locality';
 
 export interface Command {
     name: string;
@@ -14,10 +16,10 @@ export interface Command {
 export interface FullCommand extends Command {
     examples: string[];
     alias?: string[];
-    syntax: any[];
+    syntax: Syntax[];
     see_also: string[];
-    argument_loc: string;
-    effect_loc: string;
+    argument_loc: Locality;
+    effect_loc: Locality;
     problem_notes: string[];
 }
 

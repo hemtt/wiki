@@ -2,7 +2,8 @@ use serde::{Deserialize, Serialize};
 
 use super::{Call, Locality, Param, Return, Since};
 
-#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct Syntax {
     pub call: Call,
     pub ret: Return,

@@ -2,30 +2,35 @@ use serde::{Deserialize, Serialize};
 
 use super::Since;
 
-#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct ArraySizedElement {
     pub name: String,
     #[serde(rename = "type")]
     pub typ: Value,
+    pub default: Option<String>,
     pub desc: Option<String>,
     pub since: Option<Since>,
 }
 
-#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct NumberEnumValue {
     pub value: i32,
     pub desc: Option<String>,
     pub since: Option<Since>,
 }
 
-#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct StringEnumValue {
     pub value: String,
     pub desc: Option<String>,
     pub since: Option<Since>,
 }
 
-#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub struct OneOfValue {
     #[serde(rename = "type")]
     pub typ: Value,
@@ -33,7 +38,8 @@ pub struct OneOfValue {
     pub since: Option<Since>,
 }
 
-#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Clone, Debug, Hash, PartialEq, Eq, Serialize, Deserialize, ts_rs::TS)]
+#[ts(export)]
 pub enum Value {
     Anything,
     ArraySized(Vec<ArraySizedElement>),
