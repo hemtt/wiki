@@ -1,0 +1,31 @@
+<div class="flex flex-col gap-5">
+    <div class="font-mono text-base font-medium text-gray-900 bg-gray-50 px-4 py-3.5 rounded-md leading-relaxed tracking-wider"
+        [innerHTML]="syntaxInfo.signature"></div>
+
+    @if (syntaxInfo.parameters.length > 0) {
+    <div class="flex flex-col gap-3">
+        <div class="font-bold text-sm text-gray-700 uppercase tracking-widest">Parameters</div>
+        <div class="gap-2 ml-2 grid grid-cols-[max-content_1fr]">
+            @for (param of syntaxInfo.parameters; track param.name) {
+            <div class="w-1/5">
+                <span class="text-gray-700 font-medium">{{ param.name }}</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-violet-600 italic">{{ param.type }}</span>
+                @if (param.desc) {
+                <span class="col-span-full text-gray-600">{{ param.desc }}</span>
+                }
+            </div>
+            }
+        </div>
+    </div>
+    }
+
+    @if (syntaxInfo.returnType) {
+    <div class="flex flex-col gap-3">
+        <div class="font-bold text-sm text-gray-700 uppercase tracking-widest">Return Value</div>
+        <div class="font-mono text-sm text-emerald-600 font-medium px-3 py-2 bg-green-50 rounded-sm">{{
+            syntaxInfo.returnType }}</div>
+    </div>
+    }
+</div>
