@@ -8,7 +8,6 @@ import { SyntaxViewerComponent } from '../syntax-viewer/syntax-viewer.component'
   standalone: true,
   imports: [RouterLink, SyntaxViewerComponent],
   templateUrl: './command-detail.component.html',
-  styleUrls: ['./command-detail.component.css'],
 })
 export class CommandDetailComponent implements OnInit {
   basicCommand = signal<Command | null>(null);
@@ -20,7 +19,14 @@ export class CommandDetailComponent implements OnInit {
   commandErrors = computed(() => this.fullCommand()?.errors ?? this.basicCommand()?.errors ?? []);
   commandGroups = computed(() => this.fullCommand()?.groups ?? []);
   commandSyntax = computed(() => this.fullCommand()?.syntax ?? []);
-  commandExamples = computed(() => this.fullCommand()?.examples ?? []);
+  commandExamples = computed(() => {
+    return (this.fullCommand()?.examples ?? []).map(example => {
+        example = example.replaceAll("<sqf", "<div class=\"bg-blue-100 font-mono whitespace-pre-wrap p-2 rounded\"").replaceAll("</sqf>", "</div>");
+        // Remove leading newlines
+        example = example.replaceAll(/>\s*\n/g, '>');
+        return example;
+    });
+  });
   commandProblemNotes = computed(() => this.fullCommand()?.problem_notes ?? []);
   commandSeeAlso = computed(() => this.fullCommand()?.see_also ?? []);
   commandArgumentLoc = computed(() => this.fullCommand()?.argument_loc ?? '');
@@ -63,7 +69,7 @@ export class CommandDetailComponent implements OnInit {
 
     const commands = this.commandService.commands();
     const found = commands.find(
-      (c) => c.name.toLowerCase() === name.toLowerCase(),
+      (c) => c.id === name,
     );
 
     if (!found) {
@@ -76,7 +82,7 @@ export class CommandDetailComponent implements OnInit {
 
     // If command is passed, load full details
     if (found.status === 'Passed') {
-      this.commandService.loadCommandDetails(found.name).subscribe({
+      this.commandService.loadCommandDetails(found.id).subscribe({
         next: (fullCmd) => {
           this.fullCommand.set(fullCmd);
           this.loading.set(false);

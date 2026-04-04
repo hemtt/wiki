@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 interface ParamInfo {
     name: string;
     type: string;
+    desc?: string;
 }
 
 interface SyntaxInfo {
@@ -14,105 +15,7 @@ interface SyntaxInfo {
 @Component({
     selector: 'app-syntax-viewer',
     standalone: true,
-    template: `
-    <div class="syntax-section">
-      <div class="syntax-signature" [innerHTML]="syntaxInfo.signature"></div>
-
-      @if (syntaxInfo.parameters.length > 0) {
-        <div class="parameters-section">
-          <div class="section-label">Parameters:</div>
-          <div class="parameters-list">
-            @for (param of syntaxInfo.parameters; track param.name) {
-              <div class="parameter-row">
-                <span class="param-name">{{ param.name }}</span>
-                <span class="param-type">{{ param.type }}</span>
-              </div>
-            }
-          </div>
-        </div>
-      }
-
-      @if (syntaxInfo.returnType) {
-        <div class="return-section">
-          <div class="section-label">Return Value:</div>
-          <div class="return-type">{{ syntaxInfo.returnType }}</div>
-        </div>
-      }
-    </div>
-  `,
-    styles: [`
-    .syntax-section {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .syntax-signature {
-      font-family: 'Monaco', 'Courier New', monospace;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #1f2937;
-      background: #f9fafb;
-      padding: 0.875rem 1rem;
-      border-left: 4px solid #3b82f6;
-      border-radius: 0.375rem;
-      line-height: 1.6;
-      letter-spacing: 0.5px;
-    }
-
-    .parameters-section,
-    .return-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .section-label {
-      font-weight: 700;
-      font-size: 0.875rem;
-      color: #374151;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .parameters-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-left: 0.5rem;
-    }
-
-    .parameter-row {
-      display: grid;
-      grid-template-columns: max-content 1fr;
-      gap: 1rem;
-      align-items: baseline;
-      font-family: 'Monaco', 'Courier New', monospace;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .param-name {
-      color: #374151;
-      font-weight: 500;
-    }
-
-    .param-type {
-      color: #7c3aed;
-      font-style: italic;
-    }
-
-    .return-type {
-      font-family: 'Monaco', 'Courier New', monospace;
-      font-size: 0.95rem;
-      color: #059669;
-      font-weight: 500;
-      padding: 0.5rem 0.75rem;
-      background: #f0fdf4;
-      border-left: 3px solid #10b981;
-      border-radius: 0.25rem;
-    }
-  `],
+    templateUrl: './syntax-viewer.component.html',
 })
 export class SyntaxViewerComponent {
     @Input() command: any;
@@ -144,9 +47,6 @@ export class SyntaxViewerComponent {
     }
 
     private buildSignature(command: any, syntax: any): string {
-
-        console.log('Parsing syntax:', syntax);
-
         if (syntax.call.Binary) {
             return `${this.buildSignatureArg(syntax.left)} <span class="text-orange-700">${command.name}</span> ${this.buildSignatureArg(syntax.right)}`;
         } else if (syntax.call.Nulary) {
@@ -213,6 +113,7 @@ export class SyntaxViewerComponent {
                     return {
                         name: item.Item.name || `${defaultName} ${index + 1}`,
                         type: item.Item.type || this.inferType(item) || 'Unknown',
+                        desc: item.Item.desc || undefined,
                     };
                 }
                 return { name: `${defaultName} ${index + 1}`, type: 'Unknown' };
@@ -247,8 +148,6 @@ export class SyntaxViewerComponent {
 
     private formatType(value: any): string {
         if (!value) return '';
-
-        console.log('Formatting type for value:', value);
 
         if (typeof value === 'string') {
             return value;

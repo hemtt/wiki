@@ -52,7 +52,7 @@ pub fn load_report(path: &str) -> std::io::Result<Report> {
     Ok(report)
 }
 
-pub fn load_commands(dir: &str) -> std::io::Result<Vec<Command>> {
+pub fn load_commands(dir: &str) -> std::io::Result<Vec<(String, Command)>> {
     let mut commands = Vec::new();
     let entries = fs_err::read_dir(dir)?;
 
@@ -73,14 +73,20 @@ pub fn load_commands(dir: &str) -> std::io::Result<Vec<Command>> {
         }
 
         match load_single_command(&path) {
-            Ok(cmd) => commands.push(cmd),
+            Ok(cmd) => commands.push((
+                path.file_stem()
+                    .expect("Failed to get file name")
+                    .to_string_lossy()
+                    .to_string(),
+                cmd,
+            )),
             Err(e) => {
                 eprintln!("Warning: Failed to load {filename}: {e}");
             }
         }
     }
 
-    commands.sort_by(|a, b| a.name().cmp(b.name()));
+    commands.sort_by(|a, b| a.1.name().cmp(b.1.name()));
     Ok(commands)
 }
 

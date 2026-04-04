@@ -3,7 +3,7 @@ use serde_json::json;
 use std::io;
 
 pub fn generate_metadata(
-    commands: &[Command],
+    commands: &[(String, Command)],
     report: &Report,
     output_dir: &str,
 ) -> io::Result<()> {
@@ -28,16 +28,17 @@ pub fn generate_metadata(
 }
 
 fn generate_commands_file(
-    commands: &[Command],
+    commands: &[(String, Command)],
     report: &Report,
     output_dir: &str,
 ) -> io::Result<()> {
     let mut commands_data: Vec<serde_json::Value> = commands
         .iter()
-        .map(|cmd| {
-            let status = get_command_status(cmd.name(), report);
+        .map(|(filename, cmd)| {
+            let status = get_command_status(filename, report);
             let mut cmd_json = json!({
-                "name": urlencoding::decode(cmd.name()).map_or_else(|_| cmd.name().to_string(), |s| s.to_string()),
+                "name": cmd.name(),
+                "id": filename, // Use filename as ID for linking to individual page
                 "description": cmd.description(),
                 "groups": cmd.groups(),
                 "status": status.as_str(),
@@ -60,7 +61,8 @@ fn generate_commands_file(
             .any(|c| c["name"].as_str() == Some(cmd_name))
         {
             let cmd_json = json!({
-                "name": urlencoding::decode(cmd_name).map_or_else(|_| cmd_name.clone(), |s| s.to_string()),
+                "name": cmd_name,
+                "id": cmd_name,
                 "description": "No documentation available",
                 "groups": [],
                 "status": "Failed",
@@ -86,6 +88,8 @@ fn generate_commands_file(
         "timestamp": now,
         "version": "1.0",
         "commands": commands_data,
+        "passed": report.passed_commands.len(),
+        "failed": report.failed_commands.len(),
         "total": commands_data.len()
     });
 
@@ -95,12 +99,12 @@ fn generate_commands_file(
 }
 
 fn generate_individual_commands(
-    commands: &[Command],
+    commands: &[(String, Command)],
     report: &Report,
     output_dir: &str,
 ) -> io::Result<()> {
-    for cmd in commands {
-        let status = get_command_status(cmd.name(), report);
+    for (filename, cmd) in commands {
+        let status = get_command_status(filename, report);
 
         // Only generate individual files for passed commands
         if status != CommandStatus::Passed {
@@ -109,6 +113,7 @@ fn generate_individual_commands(
 
         let mut cmd_json = json!({
             "name": cmd.name(),
+            "id": filename,
             "description": cmd.description(),
             "groups": cmd.groups(),
             "status": status.as_str(),
@@ -125,7 +130,11 @@ fn generate_individual_commands(
             cmd_json["errors"] = json!(errors);
         }
 
-        let filename = format!("{}.json", cmd.name().replace(' ', "_").to_lowercase());
+        if !cmd.alias().is_empty() {
+            cmd_json["alias"] = json!(cmd.alias());
+        }
+
+        let filename = format!("{filename}.json");
         let path = format!("{output_dir}/commands/{filename}");
         fs_err::write(&path, serde_json::to_string_pretty(&cmd_json)?)?;
     }
@@ -133,11 +142,11 @@ fn generate_individual_commands(
     Ok(())
 }
 
-fn generate_filters_file(commands: &[Command]) -> io::Result<()> {
+fn generate_filters_file(commands: &[(String, Command)]) -> io::Result<()> {
     let mut groups = std::collections::BTreeSet::new();
     let mut statuses = std::collections::BTreeSet::new();
 
-    for cmd in commands {
+    for (_, cmd) in commands {
         for group in cmd.groups() {
             groups.insert(group.clone());
         }

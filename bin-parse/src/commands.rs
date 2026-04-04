@@ -125,7 +125,7 @@ pub async fn commands(client: &Client, report: Report, args: &[String]) -> Repor
         if std::env::args().any(|arg| arg == "--interactive") {
             1
         } else {
-            12
+            24
         },
     ));
     let mut handles = Vec::new();
@@ -198,11 +198,11 @@ pub async fn command(
     url: String,
     retry: bool,
 ) -> Result<(bool, Vec<ParseError>), String> {
-    let mut dist_path = Path::new("./dist/commands").join(urlencoding::encode(&name).to_string());
+    let mut dist_path = Path::new("./dist/commands").join(&name);
     dist_path.set_extension("yml");
 
     let temp = std::env::temp_dir().join("arma3-wiki-fetch/commands");
-    let path = temp.join(urlencoding::encode(&name).to_string());
+    let path = temp.join(&name);
 
     let (skip, download_newer) = if retry {
         pg.println(format!("Retrying {name}, skipping cache check"));

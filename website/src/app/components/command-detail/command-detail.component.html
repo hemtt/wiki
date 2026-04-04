@@ -24,6 +24,9 @@
             <div class="flex items-start justify-between gap-4">
                 <div>
                     <h1 class="text-4xl font-bold text-gray-900">{{ basicCommand()!.name }}</h1>
+                    <a [href]="'https://community.bistudio.com/wiki/' + basicCommand()!.id" target="_blank" class="hover:text-blue-800 hover:underline text-sm text-blue-400">
+                        View on Arma 3 Wiki
+                    </a>
                 </div>
                 <span [class]="getStatusClasses()">{{ basicCommand()!.status }}</span>
             </div>
@@ -53,9 +56,37 @@
         </section>
         }
 
+        @if (fullCommand()?.alias) {
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Aliases</h2>
+            <div class="flex flex-wrap gap-2">
+                @for (alias of fullCommand()!.alias!; track alias) {
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                    {{ alias.replaceAll("[[", "").replaceAll("]]", "") }}
+                </span>
+                }
+            </div>
+        </section>
+        }
+
         <section class="mb-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-4">Description</h2>
             <p class="text-gray-700">{{ fullCommand()?.description || 'No description available.' }}</p>
+        </section>
+
+        <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            @if (commandArgumentLoc()) {
+            <div class="p-4 bg-gray-100 rounded">
+                <h3 class="font-semibold text-gray-900 mb-2">Argument Locality</h3>
+                <p class="text-gray-700 font-mono text-sm">{{ commandArgumentLoc() }}</p>
+            </div>
+            }
+            @if (commandEffectLoc()) {
+            <div class="p-4 bg-gray-100 rounded">
+                <h3 class="font-semibold text-gray-900 mb-2">Effect Locality</h3>
+                <p class="text-gray-700 font-mono text-sm">{{ commandEffectLoc() }}</p>
+            </div>
+            }
         </section>
 
         <!-- Groups -->
@@ -74,12 +105,14 @@
 
         <!-- Syntax -->
         @if (commandSyntax().length > 0) {
-        <section class="mb-8">
+        <section>
             <h2 class="text-xl font-semibold text-gray-900 mb-4">Syntax</h2>
             <div class="space-y-4">
                 @for (syn of commandSyntax(); track syn) {
-                <h3 class="text-lg font-semibold text-gray-900">Syntax #{{ commandSyntax().indexOf(syn) + 1 }}</h3>
-                <app-syntax-viewer [command]="fullCommand()" [syntax]="syn"></app-syntax-viewer>
+                <div class="mb-8 bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Syntax #{{ commandSyntax().indexOf(syn) + 1 }}</h3>
+                    <app-syntax-viewer [command]="fullCommand()" [syntax]="syn"></app-syntax-viewer>
+                </div>
                 }
             </div>
         </section>
@@ -91,10 +124,8 @@
             <h2 class="text-xl font-semibold text-gray-900 mb-4">Examples</h2>
             <div class="space-y-3">
                 @for (example of commandExamples(); track example) {
-                <div
-                    class="p-4 bg-blue-50 border border-blue-200 rounded font-mono text-sm whitespace-pre-wrap overflow-x-auto">
-                    {{ example }}
-                </div>
+                <div class="p-4 bg-blue-50 border border-blue-200 rounded text-sm whitespace-pre-wrap overflow-x-auto"
+                    [innerHTML]="example"></div>
                 }
             </div>
         </section>
@@ -129,22 +160,6 @@
             </div>
         </section>
         }
-
-        <!-- Additional Details -->
-        <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-            @if (commandArgumentLoc()) {
-            <div class="p-4 bg-gray-100 rounded">
-                <h3 class="font-semibold text-gray-900 mb-2">Argument Location</h3>
-                <p class="text-gray-700 font-mono text-sm">{{ commandArgumentLoc() }}</p>
-            </div>
-            }
-            @if (commandEffectLoc()) {
-            <div class="p-4 bg-gray-100 rounded">
-                <h3 class="font-semibold text-gray-900 mb-2">Effect Location</h3>
-                <p class="text-gray-700 font-mono text-sm">{{ commandEffectLoc() }}</p>
-            </div>
-            }
-        </section>
     </div>
     }
 </div>
