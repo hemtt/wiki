@@ -10,6 +10,10 @@ mod github;
 
 #[tokio::main]
 async fn main() {
+    rustls::crypto::aws_lc_rs::default_provider()
+        .install_default()
+        .expect("Failed to install rustls crypto provider");
+
     let tmp = std::env::temp_dir().join("arma3-wiki-fetch");
     let report_path = tmp.join("report.json");
     let github = GitHub::new().expect("Failed to create GitHub client");
