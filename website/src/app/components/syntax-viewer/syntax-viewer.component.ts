@@ -4,10 +4,12 @@ import { Param } from 'src/bindings/Param';
 import { Syntax } from 'src/bindings/Syntax';
 import { ReturnTypeComponent } from "../return-type/return-type.component";
 import { TypeComponent } from '../type/type.component';
+import { Value } from 'src/bindings/Value';
+import { ValueComponent } from '../value/value.component';
 
 interface ParamInfo {
     name: string;
-    type: string;
+    type: Value;
     desc?: string;
 }
 
@@ -20,7 +22,7 @@ interface SyntaxInfo {
     selector: 'app-syntax-viewer',
     standalone: true,
     templateUrl: './syntax-viewer.component.html',
-    imports: [ReturnTypeComponent, TypeComponent],
+    imports: [ReturnTypeComponent, ValueComponent],
 })
 export class SyntaxViewerComponent {
     @Input() command!: FullCommand;
@@ -67,7 +69,7 @@ export class SyntaxViewerComponent {
             return arg.Item.name;
         }
         if ('Array' in arg && arg.Array) {
-            let items = arg.Array.map((item: Param) => this.formatType(item)).join(', ');
+            let items = arg.Array.map((item: Param) => this.buildSignatureArg(item)).join(', ');
             return `[${items}]`;
         }
         return `{ Unknown }`;
@@ -108,9 +110,7 @@ export class SyntaxViewerComponent {
         // Look for Item with name and type
         if ('Item' in obj) {
             const item = obj.Item;
-            const name = item.name || defaultName;
-            const type = this.formatType(item.type) || 'Unknown';
-            return [{ name, type, desc: item.desc || undefined }];
+            return [{ name: item.name, type: item.type, desc: item.desc || undefined }];
         }
         
         // Look for Array
@@ -120,7 +120,7 @@ export class SyntaxViewerComponent {
                     const itemData = item.Item;
                     return {
                         name: itemData.name || `${defaultName} ${index + 1}`,
-                        type: this.formatType(itemData.type) || 'Unknown',
+                        type: itemData.type,
                         desc: itemData.desc || undefined,
                     };
                 }
@@ -136,7 +136,7 @@ export class SyntaxViewerComponent {
                     const itemData = item.Item;
                     return {
                         name: itemData.name || `${defaultName} ${index + 1}`,
-                        type: this.formatType(itemData.type) || 'Unknown',
+                        type: itemData.type,
                         desc: itemData.desc || undefined,
                     };
                 }
@@ -147,50 +147,6 @@ export class SyntaxViewerComponent {
 
         console.warn('Unable to extract parameter info from object:', obj);
         return [];
-    }
-
-    private formatType(value: any): string {
-        if (!value) return '';
-
-        if (typeof value === 'string') {
-            return value;
-        }
-
-        if (typeof value === 'object') {
-            if (value.Binary && Array.isArray(value.Binary)) {
-                return value.Binary[0];
-            }
-            if (value.Item && value.Item.name) {
-                return value.Item.name;
-            }
-            if (value.ArrayUnsized) {
-                return `Array<${this.formatType(value.ArrayUnsized.value)}>`;
-            }
-            if (value.ArraySized) {
-                let items: string[] = [];
-                value.ArraySized.forEach((item: any) => {
-                    
-                });
-                return `Array<${items.join(', ')}>`;
-            }
-            if (value.type) {
-                return value.type;
-            }
-        }
-
-        return '';
-    }
-
-    private inferType(obj: any): string {
-        if (!obj || typeof obj !== 'object') {
-            return typeof obj;
-        }
-
-        if (obj.Binary) return 'Value';
-        if (obj.Item) return 'Object';
-        if (obj.type) return obj.type;
-
-        return 'Unknown';
     }
 }
 

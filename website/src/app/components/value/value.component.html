@@ -26,6 +26,17 @@
     @case ('ArrayUnsized' in value) {
         <app-type type="Array"></app-type> of <app-value [value]="value.ArrayUnsized.value"></app-value>
     }
+    @case ('OneOf' in value) {
+        any:
+        <div class="flex flex-col ml-2">
+        @for (option of value.OneOf; track option) {
+            <app-value [value]="option.type"></app-value>
+            @if (option.desc) {
+                <div class="text-gray-600 text-sm mt-1">{{ option.desc }}</div>
+            }
+        }
+        </div>
+    }
     @default {
         <app-type [type]="getType"></app-type>
         <div class="text-gray-600">The type {{ getType }} is not supported for rich display yet, consider contributing to the wiki!</div>
