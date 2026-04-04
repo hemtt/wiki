@@ -1,0 +1,47 @@
+name: weightRTD
+desc: '{{Feature|afm}}Returns weight of RTD helicopter.'
+groups:
+- RTD
+syntax:
+- call: !Unary helicopter
+  ret:
+    type: !ArraySized
+    - name: fuselage
+      type: Number
+      default: null
+      desc: weight of the fuselage
+      since: null
+    - name: crew
+      type: Number
+      default: null
+      desc: weight of the crew
+      since: null
+    - name: fuel
+      type: Number
+      default: null
+      desc: weight of the fuel
+      since: null
+    - name: custom
+      type: Number
+      default: null
+      desc: weight set with [[setCustomWeightRTD]]
+      since: null
+    - name: weapons
+      type: Number
+      default: null
+      desc: weight of the weapons
+      since: null
+    desc: weights in kilograms
+  right: !Item
+    name: helicopter
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_taruWeight = weightRTD taru// Returns [7000,300,1990.56,0,0]</sqf>
+see_also:
+- setCustomWeightRTD
+- isObjectRTD
+- load
+- getMass

@@ -5,14 +5,13 @@ groups:
 syntax:
 - call: !Unary parent
   ret:
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Nothing
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Nothing
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   right: !Item
     name: parent
     desc: The parent object that another object is attached to. Must be a Transport vehicle like Car/Tank (Maybe helicopter/airplane works?).

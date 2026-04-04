@@ -13,25 +13,23 @@ syntax:
   left: !Item
     name: vector1
     desc: 3D or {{GVI|arma3|2.00|size= 0.75}} 2D vector (z coordinate is defaulted to 0)
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Vector3d
-        desc: null
-        since: null
-      - type: Vector2d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Vector3d
+      desc: null
+      since: null
+    - type: Vector2d
+      desc: null
+      since: null
   right: !Item
     name: vector2
     desc: 3D or {{GVI|arma3|2.00|size= 0.75}} 2D vector (z coordinate is defaulted to 0)
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Vector3d
-        desc: null
-        since: null
-      - type: Vector2d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Vector3d
+      desc: null
+      since: null
+    - type: Vector2d
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

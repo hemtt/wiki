@@ -23,14 +23,13 @@ syntax:
   right: !Item
     name: target
     desc: actual target or position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position3dASL
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position3dASL
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Global
 since: {}

@@ -11,15 +11,14 @@ syntax:
     type: Nothing
   left: !Item
     name: thing
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Location
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since:
-          arma3: '1.2'
+    type: !OneOf
+    - type: Location
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since:
+        arma3: '1.2'
   right: !Item
     name: name
     type: String

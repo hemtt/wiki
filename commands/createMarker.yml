@@ -36,17 +36,16 @@ syntax:
   - !Item
     name: position
     desc: In case of an object, the object's model [0,0,0] is used.
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3dAGL
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3dAGL
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   - !Item
     name: channel
     desc: the marker channel - see [[Channel IDs]] (for multiplayer)

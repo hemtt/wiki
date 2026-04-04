@@ -48,35 +48,34 @@ syntax:
     type: Boolean
   right: !Item
     name: entity
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Control
-        desc: null
-        since: null
-      - type: Display
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
-      - type: Location
-        desc: null
-        since: null
-      - type: Task
-        desc: null
-        since: null
-      - type: ScriptHandle
-        desc: null
-        since: null
-      - type: Config
-        desc: null
-        since: null
-      - type: DiaryRecord
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Control
+      desc: null
+      since: null
+    - type: Display
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
+    - type: Location
+      desc: null
+      since: null
+    - type: Task
+      desc: null
+      since: null
+    - type: ScriptHandle
+      desc: null
+      since: null
+    - type: Config
+      desc: null
+      since: null
+    - type: DiaryRecord
+      desc: null
+      since: null
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

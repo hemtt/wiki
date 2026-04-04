@@ -32,7 +32,7 @@ syntax:
       type: String
     - !Item
       name: icon
-      desc: (Optional) icon to show next to the title. "" to remove.
+      desc: icon to show next to the title. "" to remove.
       type: String
       optional: true
       since:

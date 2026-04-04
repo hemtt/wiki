@@ -17,14 +17,13 @@ syntax:
   left: !Item
     name: text
     desc: only passing [[Structured Text]] has any effect
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: StructuredText
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: StructuredText
+      desc: null
+      since: null
   right: !Array
   - !Infinite
     - !Item

@@ -13,14 +13,13 @@ syntax:
   right: !Item
     name: command
     desc: script
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: Code
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: Code
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

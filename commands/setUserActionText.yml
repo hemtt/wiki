@@ -23,25 +23,23 @@ syntax:
   - !Item
     name: textMenu
     desc: text title shown in scroll action menu
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: StructuredText
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: StructuredText
+      desc: null
+      since: null
   - !Item
     name: textWindowBackground
     desc: background text
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: StructuredText
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: StructuredText
+      desc: null
+      since: null
     optional: true
     default: '""'
     since:
@@ -49,14 +47,13 @@ syntax:
   - !Item
     name: textWindowForeground
     desc: foreground text
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: StructuredText
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: StructuredText
+      desc: null
+      since: null
     optional: true
     default: '""'
     since:

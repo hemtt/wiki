@@ -26,17 +26,16 @@ syntax:
   - !Item
     name: centre
     desc: ellipse's centre
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
   - !Item
     name: a
     desc: horizontal (x) radius

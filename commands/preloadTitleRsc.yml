@@ -21,12 +21,12 @@ syntax:
     type: String
   - !Item
     name: speed
-    desc: (Optional) ignored
+    desc: ignored
     type: Number
     optional: true
   - !Item
     name: showInMap
-    desc: (Optional)
+    desc: ''
     type: Boolean
     optional: true
 argument_loc: Unspecified

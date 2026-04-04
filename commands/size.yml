@@ -1,0 +1,28 @@
+name: size
+desc: Returns a location's size.
+groups:
+- Locations
+syntax:
+- call: !Unary location
+  ret:
+    type: !ArraySized
+    - name: x
+      type: Number
+      default: null
+      desc: horizontal distance in meters
+      since: null
+    - name: y
+      type: Number
+      default: null
+      desc: vertical distance in meters
+      since: null
+  right: !Item
+    name: location
+    type: Location
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_locSize = size myLocation;</sqf>
+see_also:
+- setSize

@@ -14,7 +14,7 @@ syntax:
     type: String
   - !Item
     name: resource
-    desc: (Optional)
+    desc: ''
     type: String
     optional: true
 argument_loc: Unspecified

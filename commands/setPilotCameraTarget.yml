@@ -13,14 +13,13 @@ syntax:
     type: Object
   right: !Item
     name: target
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position3dASL
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position3dASL
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Unspecified
 since: {}

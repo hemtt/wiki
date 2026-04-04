@@ -7,14 +7,13 @@ syntax:
   - unit
   - item
   ret:
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Nothing
-        desc: null
-        since: null
-      - type: Boolean
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Nothing
+      desc: null
+      since: null
+    - type: Boolean
+      desc: null
+      since: null
     desc: false is returned if item can not be added
   left: !Item
     name: unit

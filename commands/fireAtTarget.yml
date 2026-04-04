@@ -22,7 +22,7 @@ syntax:
     type: Object
   - !Item
     name: weaponMuzzleName
-    desc: (Optional) weapon muzzle classname, optional parameter
+    desc: weapon muzzle classname, optional parameter
     type: String
     optional: true
 argument_loc: Unspecified

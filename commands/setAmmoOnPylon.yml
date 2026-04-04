@@ -16,14 +16,13 @@ syntax:
   - !Item
     name: pylon
     desc: pylon index (index starts from 1) or pylon name (see [[getCompatiblePylonMagazines]] Example 4)
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Number
-        desc: null
-        since: null
-      - type: String
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: String
+      desc: null
+      since: null
   - !Item
     name: ammocount
     desc: ammo count

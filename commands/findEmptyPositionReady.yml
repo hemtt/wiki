@@ -16,14 +16,13 @@ syntax:
   left: !Item
     name: center
     desc: search area center position in format [x,y] or [x,y,z] in which case z is ignored
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
   right: !Array
   - !Item
     name: radius

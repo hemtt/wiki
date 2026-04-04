@@ -19,7 +19,7 @@ syntax:
     type: String
   - !Item
     name: filter
-    desc: (Optional) ????
+    desc: ????
     type: !ArrayUnsized
       value: String
     optional: true

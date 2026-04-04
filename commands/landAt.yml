@@ -53,29 +53,28 @@ syntax:
   - !Item
     name: position
     desc: a helipad object of helipad type (can be an invisible helipad) or [[PositionWorld]] to land at.
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position3dWorld
-        desc: null
-        since:
-          arma3: '2.20'
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position3dWorld
+      desc: null
+      since:
+        arma3: '2.20'
   - !Item
     name: mode
     desc: one of "None", "Get In", "Get Out", "Land" and since {{GVI|arma3|2.20|size= 0.75}} also "GetIn", "GetOut".
     type: String
   - !Item
     name: waitTime
-    desc: '(Optional) (Helicopter type only) time to wait after touch down in "GetIn"/"GetOut" mode before taking off to the next waypoint. Default: -1.'
+    desc: '(Helicopter type only) time to wait after touch down in "GetIn"/"GetOut" mode before taking off to the next waypoint. Default: -1.'
     type: Number
     optional: true
     since:
       arma3: '2.20'
   - !Item
     name: putOnSurface
-    desc: '(Optional) when true, the given land position will be adjusted to the nearest surface underneath. Default: [[false]].'
+    desc: 'when true, the given land position will be adjusted to the nearest surface underneath. Default: [[false]].'
     type: Boolean
     optional: true
     since:

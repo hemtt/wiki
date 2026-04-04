@@ -32,17 +32,17 @@ syntax:
     type: Number
   - !Item
     name: minDist
-    desc: (Optional)
+    desc: ''
     type: Number
     optional: true
   - !Item
     name: visibilityPosition
-    desc: (Optional) used to select cover that unit can see in that direction from
+    desc: used to select cover that unit can see in that direction from
     type: Position
     optional: true
   - !Item
     name: ignoreObject
-    desc: (Optional) ignore this object in visibility check
+    desc: ignore this object in visibility check
     type: Object
     optional: true
 argument_loc: Unspecified

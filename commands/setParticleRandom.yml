@@ -51,12 +51,12 @@ syntax:
     type: Number
   - !Item
     name: angle
-    desc: (Optional)
+    desc: ''
     type: Number
     optional: true
   - !Item
     name: bounceOnSurface
-    desc: (Optional)
+    desc: ''
     type: Number
     optional: true
     since:

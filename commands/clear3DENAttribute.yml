@@ -14,14 +14,13 @@ syntax:
     desc: '[[true]] on success'
   left: !Item
     name: entity
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: EdenEntity
-        desc: null
-        since: null
-      - type: EdenID
-        desc: null
-        since: null
+    type: !OneOf
+    - type: EdenEntity
+      desc: null
+      since: null
+    - type: EdenID
+      desc: null
+      since: null
   right: !Item
     name: attribute
     desc: attribute property

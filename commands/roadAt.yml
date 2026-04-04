@@ -10,15 +10,14 @@ syntax:
   right: !Item
     name: position
     desc: array, in which case Z will be automatically deduced as the height of the road surface
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since:
-          arma3: '2.0'
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since:
+        arma3: '2.0'
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

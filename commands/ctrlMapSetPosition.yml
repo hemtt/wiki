@@ -20,22 +20,22 @@ syntax:
   right: !Array
   - !Item
     name: x
-    desc: (Optional) Left top x of map control
+    desc: Left top x of map control
     type: Number
     optional: true
   - !Item
     name: y
-    desc: (Optional) Left top y of map control
+    desc: Left top y of map control
     type: Number
     optional: true
   - !Item
     name: w
-    desc: (Optional) Width of map control
+    desc: Width of map control
     type: Number
     optional: true
   - !Item
     name: h
-    desc: (Optional) Height of map control
+    desc: Height of map control
     type: Number
     optional: true
 argument_loc: Unspecified

@@ -21,14 +21,13 @@ syntax:
     type: Nothing
   left: !Item
     name: target
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
   right: !Item
     name: enable
     type: Boolean

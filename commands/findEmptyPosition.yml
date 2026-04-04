@@ -21,14 +21,13 @@ syntax:
   left: !Item
     name: center
     desc: search area center position in format [x,y] or [x,y,z] in which case z is ignored
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
   right: !Array
   - !Item
     name: areaRadius
@@ -40,7 +39,7 @@ syntax:
     type: Number
   - !Item
     name: vehicleType
-    desc: (Optional) classname of a vehicle to accommodate
+    desc: classname of a vehicle to accommodate
     type: String
     optional: true
 argument_loc: Unspecified

@@ -10,24 +10,22 @@ syntax:
     type: Nothing
   left: !Item
     name: group
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
   right: !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3dATL
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3dATL
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Global
 since: {}

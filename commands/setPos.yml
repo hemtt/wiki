@@ -19,14 +19,13 @@ syntax:
   right: !Item
     name: pos
     desc: if [[Position#Introduction|Position2D]], Z will be set to 0
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position3dAGL
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position3dAGL
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
 argument_loc: Global
 effect_loc: Global
 since: {}

@@ -17,14 +17,13 @@ syntax:
   right: !Item
     name: position
     desc: world position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position3dAGL
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position3dAGL
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

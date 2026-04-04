@@ -10,18 +10,17 @@ syntax:
     type: Boolean
   left: !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position3d
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since:
-          arma3: '2.14'
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position3d
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since:
+        arma3: '2.14'
+    - type: Group
+      desc: null
+      since: null
   right: !Item
     name: polygon
     desc: 'positions in format: [position1, position2...., positionN]'

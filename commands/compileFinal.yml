@@ -7,28 +7,26 @@ groups:
 syntax:
 - call: !Unary expression
   ret:
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Code
-        desc: null
-        since: null
-      - type: HashMapUnknown
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Code
+      desc: null
+      since: null
+    - type: HashMapUnknown
+      desc: null
+      since: null
   right: !Item
     name: expression
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: Code
-        desc: null
-        since:
-          arma3: '2.14'
-      - type: HashMapUnknown
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: Code
+      desc: null
+      since:
+        arma3: '2.14'
+    - type: HashMapUnknown
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

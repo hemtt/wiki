@@ -19,14 +19,13 @@ syntax:
   right: !Item
     name: message
     desc: the message to display.
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: StructuredText
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: StructuredText
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Local
 since: {}

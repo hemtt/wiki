@@ -9,14 +9,13 @@ syntax:
       value: Waypoint
   right: !Item
     name: groupName
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Group
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Group
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

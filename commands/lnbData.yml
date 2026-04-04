@@ -12,14 +12,13 @@ syntax:
   right: !Array
   - !Item
     name: idc
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Number
-        desc: null
-        since: null
-      - type: Control
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: Control
+      desc: null
+      since: null
   - !Array
     - !Item
       name: row

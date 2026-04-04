@@ -27,20 +27,19 @@ syntax:
   left: !Item
     name: oper
     desc: subject to which event handler is assigned
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
-      - type: Control
-        desc: null
-        since: null
-      - type: Display
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
+    - type: Control
+      desc: null
+      since: null
+    - type: Display
+      desc: null
+      since: null
   right: !Array
   - !Item
     name: type

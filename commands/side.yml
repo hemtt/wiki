@@ -19,17 +19,16 @@ syntax:
     type: Side
   right: !Item
     name: target
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
-      - type: Location
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
+    - type: Location
+      desc: null
+      since: null
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

@@ -22,7 +22,7 @@ syntax:
     type: String
   - !Item
     name: enable
-    desc: (Optional, getter if not provided) [[true]] enable, [[false]], disable
+    desc: '[[true]] enable, [[false]], disable'
     type: Boolean
     optional: true
 - call: !Binary
@@ -42,7 +42,7 @@ syntax:
     type: String
   - !Item
     name: enable
-    desc: (Optional, getter if not provided) [[true]] enable, [[false]], disable
+    desc: '[[true]] enable, [[false]], disable'
     type: Boolean
     optional: true
   since:

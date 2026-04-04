@@ -27,7 +27,7 @@ syntax:
     type: Number
   - !Item
     name: relative
-    desc: (Optional) [[true]] will add or subtract given length from current rope length, [[false]] will resize the rope to the given length
+    desc: '[[true]] will add or subtract given length from current rope length, [[false]] will resize the rope to the given length'
     type: Boolean
     optional: true
 argument_loc: Local

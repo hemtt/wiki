@@ -11,14 +11,13 @@ syntax:
     type: Nothing
   left: !Item
     name: unitOrGroup
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
   right: !Item
     name: cowardice
     desc: 1 is maximum cowardice and 0 minimum. A value of 0 will disable fleeing all together

@@ -24,12 +24,12 @@ syntax:
     type: Object
   - !Item
     name: timeLeft
-    desc: '(Optional) ''timeToExplosion'' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.'
+    desc: '''timeToExplosion'' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.'
     type: Number
     optional: true
   - !Item
     name: distanceLeft
-    desc: '(Optional) ''fuseDistanceLeft'' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.'
+    desc: '''fuseDistanceLeft'' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.'
     type: Number
     optional: true
   since:

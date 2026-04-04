@@ -24,14 +24,13 @@ syntax:
     desc: screen position in [[SafeZone]]. Returns an empty array {{hl|[]}} if not on-screen.
   right: !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3dAGL
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3dAGL
+      desc: null
+      since: null
 - call: !Binary
   - camera
   - position
@@ -54,14 +53,13 @@ syntax:
     type: Object
   right: !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3dAGL
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3dAGL
+      desc: null
+      since: null
   since:
     arma3: '2.18'
 argument_loc: Unspecified

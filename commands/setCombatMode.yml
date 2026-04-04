@@ -12,14 +12,13 @@ syntax:
   left: !Item
     name: group
     desc: if the argument is unit [[Object]], unit's current group is used.
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Group
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Group
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   right: !Item
     name: mode
     desc: see description

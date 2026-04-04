@@ -40,7 +40,7 @@ syntax:
     type: TreeViewPath
   - !Item
     name: ascending
-    desc: '(Optional) [[true]] to sort ascending, else descending. Default: [[false]]'
+    desc: '[[true]] to sort ascending, else descending. Default: [[false]]'
     type: Boolean
     optional: true
 argument_loc: Unspecified

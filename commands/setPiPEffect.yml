@@ -56,7 +56,7 @@ syntax:
   - !Infinite
     - !Item
       name: optionalParamN
-      desc: (Optional) parameters based on selected effect
+      desc: parameters based on selected effect
       type: Number
       optional: true
 argument_loc: Unspecified

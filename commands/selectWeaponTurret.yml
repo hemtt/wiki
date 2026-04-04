@@ -24,14 +24,14 @@ syntax:
     type: TurretPath
   - !Item
     name: muzzle
-    desc: (Optional) muzzle name
+    desc: muzzle name
     type: String
     optional: true
     since:
       arma3: '2.8'
   - !Item
     name: firemode
-    desc: (Optional) firemode name
+    desc: firemode name
     type: String
     optional: true
     since:

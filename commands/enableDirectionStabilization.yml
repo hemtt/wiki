@@ -20,7 +20,7 @@ syntax:
     type: Boolean
   - !Item
     name: turretPath
-    desc: (Optional)
+    desc: ''
     type: TurretPath
     optional: true
 argument_loc: Unspecified

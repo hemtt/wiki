@@ -13,14 +13,13 @@ syntax:
   right: !Item
     name: positionWorld
     desc: position in world coordinates either in [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

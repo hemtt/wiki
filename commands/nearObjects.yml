@@ -11,17 +11,16 @@ syntax:
       value: Object
   left: !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   right: !Item
     name: radius
     type: Number
@@ -34,17 +33,16 @@ syntax:
       value: Object
   left: !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position3dAGL
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position3dAGL
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   right: !Array
   - !Item
     name: typeName

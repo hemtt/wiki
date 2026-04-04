@@ -20,17 +20,16 @@ syntax:
   - !Item
     name: position
     desc: position to start search at
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
   - !Item
     name: type
     desc: type of object (see [[typeOf]], [[CfgVehicles|class type]])
@@ -42,14 +41,13 @@ syntax:
   right: !Item
     name: position
     desc: position to start search at
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
 - call: !Binary
   - position
   - typeOrId
@@ -59,14 +57,13 @@ syntax:
   left: !Item
     name: position
     desc: position to start search at
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position3d
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position3d
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
   right: !Item
     name: typeOrId
     desc: type of object (see [[typeOf]], [[CfgVehicles|class type]]) or {{GVI|arma3|2.10|size= 0.75}} Visitor id (see [[getObjectID]])
@@ -80,14 +77,13 @@ syntax:
   left: !Item
     name: position
     desc: position to start search at
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
   right: !Item
     name: id
     desc: object Visitor id

@@ -35,17 +35,16 @@ syntax:
     desc: the Z value is terrain level [[Position#PositionAGL|Above Ground Level]], either 0 over land or [[getTerrainHeightASL]] (negative value) over water
   left: !Item
     name: origin
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
   right: !Array
   - !Item
     name: distance

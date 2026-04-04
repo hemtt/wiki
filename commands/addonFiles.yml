@@ -18,7 +18,7 @@ syntax:
     type: String
   - !Item
     name: fileExtension
-    desc: (Optional) file extension to filter results, for example {{hl|".paa"}}
+    desc: file extension to filter results, for example {{hl|".paa"}}
     type: String
     optional: true
 argument_loc: Unspecified

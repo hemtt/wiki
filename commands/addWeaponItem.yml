@@ -54,12 +54,12 @@ syntax:
       type: String
     - !Item
       name: ammoCount
-      desc: (Optional) optional amount of ammo in magazine
+      desc: optional amount of ammo in magazine
       type: Number
       optional: true
     - !Item
       name: muzzleName
-      desc: (Optional) optional target muzzle to add magazine to
+      desc: optional target muzzle to add magazine to
       type: String
       optional: true
   - !Item

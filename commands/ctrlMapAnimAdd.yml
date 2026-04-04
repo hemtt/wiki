@@ -27,17 +27,16 @@ syntax:
     type: Number
   - !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Local
 since: {}

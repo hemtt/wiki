@@ -24,7 +24,7 @@ syntax:
     type: String
   - !Item
     name: parentTask
-    desc: (Optional, [[taskNull]]) - The new task will be a sub task of the parent task
+    desc: '- The new task will be a sub task of the parent task'
     type: Task
     optional: true
 argument_loc: Global

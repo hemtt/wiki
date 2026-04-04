@@ -24,7 +24,7 @@ syntax:
       type: String
     - !Item
       name: parentTask
-      desc: (Optional)
+      desc: ''
       type: Task
       optional: true
   - !Item

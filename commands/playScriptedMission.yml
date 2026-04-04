@@ -21,12 +21,12 @@ syntax:
     type: Code
   - !Item
     name: config
-    desc: (Optional)
+    desc: ''
     type: Config
     optional: true
   - !Item
     name: ignoreChildWindow
-    desc: (Optional)
+    desc: ''
     type: Boolean
     optional: true
 argument_loc: Unspecified

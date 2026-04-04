@@ -28,14 +28,13 @@ syntax:
     type: String
   - !Item
     name: position
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Position3dAGL
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Position3dAGL
+      desc: null
+      since: null
   - !Item
     name: markers
     desc: marker name(s)

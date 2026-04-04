@@ -37,17 +37,16 @@ syntax:
   left: !Item
     name: who
     desc: if a unit, unit's [[group]] is considered; if a vehicle, vehicle commander's [[group]] is used.
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
-      - type: Side
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
+    - type: Side
+      desc: null
+      since: null
   right: !Item
     name: target
     type: Object

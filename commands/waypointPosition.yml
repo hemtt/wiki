@@ -13,14 +13,13 @@ syntax:
   right: !Array
   - !Item
     name: groupOrUnit
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Group
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Group
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   - !Item
     name: index
     type: Number

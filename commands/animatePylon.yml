@@ -18,22 +18,21 @@ syntax:
   - !Item
     name: pylon
     desc: pylon index (index starts from 1) or pylon name (see {{Link|getCompatiblePylonMagazines#Example 3}})
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Number
-        desc: null
-        since: null
-      - type: String
-        desc: null
-        since:
-          arma3: '1.94'
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: String
+      desc: null
+      since:
+        arma3: '1.94'
   - !Item
     name: animphase
     desc: animation phase in range 0..1
     type: Number
   - !Item
     name: instant
-    desc: (Optional) animate immediately
+    desc: animate immediately
     type: Boolean
     optional: true
 argument_loc: Unspecified

@@ -15,14 +15,13 @@ syntax:
   left: !Item
     name: toWhom
     desc: which receives revealing information
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
   right: !Item
     name: target
     desc: which is revealed
@@ -36,14 +35,13 @@ syntax:
   left: !Item
     name: toWhom
     desc: which receives revealing information
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
   right: !Array
   - !Item
     name: target

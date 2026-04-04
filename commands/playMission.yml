@@ -17,17 +17,16 @@ syntax:
   - !Item
     name: mission
     desc: directory if a string
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: Config
-        desc: null
-        since: null
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: Config
+      desc: null
+      since: null
   - !Item
     name: skipBriefing
-    desc: (Optional) If true, the intro and briefing are skipped.
+    desc: If true, the intro and briefing are skipped.
     type: Boolean
     optional: true
 argument_loc: Unspecified

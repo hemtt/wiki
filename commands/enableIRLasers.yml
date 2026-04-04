@@ -11,14 +11,13 @@ syntax:
   left: !Item
     name: unitOrGroup
     desc: the unit or the group allowed to use IR lasers
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
   right: !Item
     name: value
     type: Boolean

@@ -39,14 +39,13 @@ syntax:
   right: !Item
     name: asset
     desc: object reference or path to the model
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: String
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: String
+      desc: null
+      since: null
 - call: !Unary
   - class
   - config

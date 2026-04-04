@@ -15,14 +15,13 @@ syntax:
       value: Object
   right: !Item
     name: group
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Object
+      desc: null
+      since: null
+    - type: Group
+      desc: null
+      since: null
 argument_loc: Global
 effect_loc: Global
 since: {}

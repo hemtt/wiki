@@ -16,17 +16,16 @@ syntax:
   right: !Array
   - !Item
     name: centre
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
   - !Item
     name: locationTypes
     desc: list of [[Location#Location Types|location type]] names, e.g "NameCity"; {{GVI|arma3|2.14|size= 0.75}} passing empty array [] will return all available locations within the radius
@@ -38,18 +37,17 @@ syntax:
     type: Number
   - !Item
     name: sortPosition
-    desc: (Optional) results will be sorted from the distance to given ''sortPosition'' (nearest to farthest still)
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Position2d
-        desc: null
-        since: null
-      - type: Position3d
-        desc: null
-        since: null
-      - type: Object
-        desc: null
-        since: null
+    desc: results will be sorted from the distance to given ''sortPosition'' (nearest to farthest still)
+    type: !OneOf
+    - type: Position2d
+      desc: null
+      since: null
+    - type: Position3d
+      desc: null
+      since: null
+    - type: Object
+      desc: null
+      since: null
     optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
