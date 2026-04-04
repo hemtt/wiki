@@ -37,22 +37,18 @@
           "desc": "search area center position in format [x,y] or [x,y,z] in which case z is ignored",
           "name": "center",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
               }
-            }
+            ]
           }
         }
       },
@@ -78,7 +74,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) classname of a vehicle to accommodate",
+              "desc": "classname of a vehicle to accommodate",
               "name": "vehicleType",
               "optional": true,
               "type": "String"

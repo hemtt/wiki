@@ -40,7 +40,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional, getter if not provided) [[true]] enable, [[false]], disable",
+              "desc": "[[true]] enable, [[false]], disable",
               "name": "enable",
               "optional": true,
               "type": "Boolean"
@@ -80,7 +80,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional, getter if not provided) [[true]] enable, [[false]], disable",
+              "desc": "[[true]] enable, [[false]], disable",
               "name": "enable",
               "optional": true,
               "type": "Boolean"

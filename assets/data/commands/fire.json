@@ -95,7 +95,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional)",
+              "desc": "",
               "name": "magazine",
               "optional": true,
               "type": "String"

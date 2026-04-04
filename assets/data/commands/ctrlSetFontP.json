@@ -38,22 +38,18 @@
         "Item": {
           "name": "fontOrSize",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Number"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Number"
               }
-            }
+            ]
           }
         }
       }

@@ -36,22 +36,18 @@
           "desc": "group itself or unit in a group",
           "name": "group",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Group"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
               }
-            }
+            ]
           }
         }
       },

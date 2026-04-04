@@ -31,22 +31,18 @@
           "desc": "when using [[Position#Introduction|Position3D]], Z is ignored",
           "name": "position",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
               }
-            }
+            ]
           }
         }
       }

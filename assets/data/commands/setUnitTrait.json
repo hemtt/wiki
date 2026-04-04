@@ -52,28 +52,24 @@
               "desc": "value (see above)",
               "name": "value",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Boolean"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Boolean"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
                   }
-                }
+                ]
               }
             }
           },
           {
             "Item": {
-              "desc": "(Optional) Must be set to [[true]] in case of custom",
+              "desc": "Must be set to [[true]] in case of custom",
               "name": "isCustom",
               "optional": true,
               "type": "Boolean"

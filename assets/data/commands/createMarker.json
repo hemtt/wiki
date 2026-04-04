@@ -49,27 +49,23 @@
               "desc": "In case of an object, the object's model [0,0,0] is used.",
               "name": "position",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position2d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position3dAGL"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
                   }
-                }
+                ]
               }
             }
           },

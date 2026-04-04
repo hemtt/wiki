@@ -33,22 +33,18 @@
           "desc": "the unit or the group allowed to use IR lasers",
           "name": "unitOrGroup",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Group"
               }
-            }
+            ]
           }
         }
       },

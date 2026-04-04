@@ -54,22 +54,18 @@
             "Item": {
               "name": "idc",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Control"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Control"
                   }
-                }
+                ]
               }
             }
           },

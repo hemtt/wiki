@@ -42,29 +42,25 @@
         "Item": {
           "name": "type",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.2"
-                    },
-                    "type": "Side"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Group"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.2"
+                },
+                "type": "Side"
               }
-            }
+            ]
           }
         }
       }

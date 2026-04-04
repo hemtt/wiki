@@ -33,24 +33,20 @@
         "Item": {
           "name": "thing",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Location"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "1.2"
-                    },
-                    "type": "Object"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Location"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "1.2"
+                },
+                "type": "Object"
               }
-            }
+            ]
           }
         }
       },

@@ -53,22 +53,18 @@
               "desc": "pylon index (index starts from 1) or pylon name (see [[getCompatiblePylonMagazines]] Example 4)",
               "name": "pylon",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "String"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
                   }
-                }
+                ]
               }
             }
           },

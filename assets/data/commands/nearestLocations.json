@@ -42,27 +42,23 @@
             "Item": {
               "name": "centre",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position2d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position3d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
                   }
-                }
+                ]
               }
             }
           },
@@ -86,31 +82,27 @@
           },
           {
             "Item": {
-              "desc": "(Optional) results will be sorted from the distance to given ''sortPosition'' (nearest to farthest still)",
+              "desc": "results will be sorted from the distance to given ''sortPosition'' (nearest to farthest still)",
               "name": "sortPosition",
               "optional": true,
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position2d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position3d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
                   }
-                }
+                ]
               }
             }
           }

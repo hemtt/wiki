@@ -126,22 +126,18 @@
                 "arma3": "2.18"
               },
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "String"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
                   }
-                }
+                ]
               }
             }
           },

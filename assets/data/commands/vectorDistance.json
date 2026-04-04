@@ -48,22 +48,18 @@
           "desc": "(since {{GVI|arma3|2.00}}, z coordinate is defaulted to 0)",
           "name": "point1",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       },
@@ -75,22 +71,18 @@
           "desc": "(since {{GVI|arma3|2.00}}, z coordinate is defaulted to 0)",
           "name": "point2",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       }

@@ -69,22 +69,18 @@
               "name": "speed",
               "optional": true,
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Boolean"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Boolean"
                   }
-                }
+                ]
               }
             }
           },

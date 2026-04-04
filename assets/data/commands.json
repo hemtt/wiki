@@ -658,11 +658,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Allow curator use of given addon.",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Curator"
+      ],
       "id": "addCuratorAddons",
       "name": "addCuratorAddons",
       "status": "Failed"
@@ -2236,11 +2238,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Get array with backpacks from ammo box (or any general weapon holder container).",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "Containers"
+      ],
       "id": "backpackCargo",
       "name": "backpackCargo",
       "status": "Failed"
@@ -6094,11 +6098,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Removes array element at the given index and returns removed element (modifies the original array, just like [[resize]] or [[set]]).\n{{Feature|informative| For the main [[Array]] variant, if the index is a negative [[Number]], no error will appear, making it ideal for using with [[find]] (see {{Link|#Example 2}}) or [[findIf]] (see {{Link|#Example 3}}).}}",
       "errors": [
         "Unknown simple type: hashmapkey"
       ],
-      "groups": [],
+      "groups": [
+        "Arrays",
+        "HashMap"
+      ],
       "id": "deleteAt",
       "name": "deleteAt",
       "status": "Failed"
@@ -10210,21 +10217,25 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
+      "description": "Retrieves a value out of a [[HashMap]] after looking it up by its key. When the HashMap doesn't contain the key, the default value is returned",
       "errors": [
         "Unknown simple type: hashmapkey"
       ],
-      "groups": [],
+      "groups": [
+        "HashMap"
+      ],
       "id": "getOrDefault",
       "name": "getOrDefault",
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
+      "description": "Retrieves a value from the [[HashMap]] for the given 'key', executes given 'code' if key was not found and returns result.\nAdditionally sets key to the code result value if ''set'' is true.",
       "errors": [
         "Unknown simple type: hashmapkey"
       ],
-      "groups": [],
+      "groups": [
+        "HashMap"
+      ],
       "id": "getOrDefaultCall",
       "name": "getOrDefaultCall",
       "status": "Failed"
@@ -17163,11 +17174,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Removes all magazines from the given turret or from all turrets. Use turret path [-1] for driver's turret or [] for all turrets.",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Turrets"
+      ],
       "id": "removeAllMagazinesTurret",
       "name": "removeAllMagazinesTurret",
       "status": "Failed"
@@ -18653,11 +18666,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Changes the element at the given zero-based index of the [[Array|array]]. \n\n{{Feature|informative|If the index is out of bounds, the array will [[resize]] to incorporate the index as its last value, padding with [[nil]] as necessary (see {{Link|#Example 4}}). }}",
       "errors": [
         "Unknown simple type: hashmapkey"
       ],
-      "groups": [],
+      "groups": [
+        "Arrays",
+        "HashMap"
+      ],
       "id": "set",
       "name": "set",
       "status": "Failed"
@@ -20401,11 +20417,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Updates particle source, creates particles in circle with given radius. Velocity is transformed and added to total velocity. The random particle positioning is calculated in relation to the nearest surface. Since Arma 3 2.22, this could be overridden (will also override onSurface = true).",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Particles"
+      ],
       "id": "setParticleCircle",
       "name": "setParticleCircle",
       "status": "Failed"
@@ -22312,11 +22330,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Returns a location's size.",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Locations"
+      ],
       "id": "size",
       "name": "size",
       "status": "Failed"
@@ -23548,11 +23568,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Checks if a turret is [[Multiplayer Scripting#Locality|local]].",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Turrets"
+      ],
       "id": "turretLocal",
       "name": "turretLocal",
       "status": "Failed"
@@ -24291,11 +24313,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
+      "description": "Adds two arrays of numbers. Replaces [[BIS_fnc_vectorAdd]].<br>\n{{Feature|GVI|arma3|2.14|Since {{GVI|arma3|2.14|size= 0.75}} any count of numbers is valid, if one array is larger than the other, the remaining elements are inserted without change.<br>\nBefore {{GVI|arma3|2.14|size= 0.75}}, the first argument had to be vector 3D, or {{GVI|arma3|2.00|size= 0.75}} 2D (Which still returned 3D result, with z coordinate defaulted to 0)}}",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Math - Vectors"
+      ],
       "id": "vectorAdd",
       "name": "vectorAdd",
       "status": "Failed"
@@ -25141,11 +25165,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "{{Feature|afm}}Returns weight of RTD helicopter.",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "RTD"
+      ],
       "id": "weightRTD",
       "name": "weightRTD",
       "status": "Failed"
@@ -25284,7 +25310,7 @@
   ],
   "failed": 545,
   "passed": 2148,
-  "timestamp": 1775287787,
+  "timestamp": 1775290206,
   "total": 2708,
   "version": "1.0"
 }

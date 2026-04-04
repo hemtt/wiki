@@ -62,7 +62,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) weapon muzzle classname, optional parameter",
+              "desc": "weapon muzzle classname, optional parameter",
               "name": "weaponMuzzleName",
               "optional": true,
               "type": "String"

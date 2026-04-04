@@ -65,7 +65,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional)",
+              "desc": "",
               "name": "minDist",
               "optional": true,
               "type": "Number"
@@ -73,7 +73,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) used to select cover that unit can see in that direction from",
+              "desc": "used to select cover that unit can see in that direction from",
               "name": "visibilityPosition",
               "optional": true,
               "type": "Position"
@@ -81,7 +81,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) ignore this object in visibility check",
+              "desc": "ignore this object in visibility check",
               "name": "ignoreObject",
               "optional": true,
               "type": "Object"

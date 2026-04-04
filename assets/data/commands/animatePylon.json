@@ -55,24 +55,20 @@
               "desc": "pylon index (index starts from 1) or pylon name (see {{Link|getCompatiblePylonMagazines#Example 3}})",
               "name": "pylon",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": {
-                          "arma3": "1.94"
-                        },
-                        "type": "String"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "1.94"
+                    },
+                    "type": "String"
                   }
-                }
+                ]
               }
             }
           },
@@ -85,7 +81,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) animate immediately",
+              "desc": "animate immediately",
               "name": "instant",
               "optional": true,
               "type": "Boolean"

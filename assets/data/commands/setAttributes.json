@@ -38,22 +38,18 @@
           "desc": "only passing [[Structured Text]] has any effect",
           "name": "text",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "StructuredText"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "StructuredText"
               }
-            }
+            ]
           }
         }
       },

@@ -56,7 +56,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional, [[taskNull]]) - The new task will be a sub task of the parent task",
+              "desc": "- The new task will be a sub task of the parent task",
               "name": "parentTask",
               "optional": true,
               "type": "Task"

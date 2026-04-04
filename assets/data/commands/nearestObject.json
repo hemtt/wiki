@@ -47,27 +47,23 @@
               "desc": "position to start search at",
               "name": "position",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position2d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position3d"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
                   }
-                }
+                ]
               }
             }
           },
@@ -94,22 +90,18 @@
           "desc": "position to start search at",
           "name": "position",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
               }
-            }
+            ]
           }
         }
       }
@@ -126,22 +118,18 @@
           "desc": "position to start search at",
           "name": "position",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       },
@@ -169,22 +157,18 @@
           "desc": "position to start search at",
           "name": "position",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
               }
-            }
+            ]
           }
         }
       },

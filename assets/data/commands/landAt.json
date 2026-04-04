@@ -107,24 +107,20 @@
               "desc": "a helipad object of helipad type (can be an invisible helipad) or [[PositionWorld]] to land at.",
               "name": "position",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      },
-                      {
-                        "desc": null,
-                        "since": {
-                          "arma3": "2.20"
-                        },
-                        "type": "Position3dWorld"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.20"
+                    },
+                    "type": "Position3dWorld"
                   }
-                }
+                ]
               }
             }
           },
@@ -137,7 +133,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) (Helicopter type only) time to wait after touch down in \"GetIn\"/\"GetOut\" mode before taking off to the next waypoint. Default: -1.",
+              "desc": "(Helicopter type only) time to wait after touch down in \"GetIn\"/\"GetOut\" mode before taking off to the next waypoint. Default: -1.",
               "name": "waitTime",
               "optional": true,
               "since": {
@@ -148,7 +144,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) when true, the given land position will be adjusted to the nearest surface underneath. Default: [[false]].",
+              "desc": "when true, the given land position will be adjusted to the nearest surface underneath. Default: [[false]].",
               "name": "putOnSurface",
               "optional": true,
               "since": {

@@ -29,22 +29,18 @@
           "desc": "position in world coordinates either in [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]",
           "name": "positionWorld",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3d"
               }
-            }
+            ]
           }
         }
       }

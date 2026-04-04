@@ -59,7 +59,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) 'timeToExplosion' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.",
+              "desc": "'timeToExplosion' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.",
               "name": "timeLeft",
               "optional": true,
               "type": "Number"
@@ -67,7 +67,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) 'fuseDistanceLeft' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.",
+              "desc": "'fuseDistanceLeft' (see [[getShotInfo]]). Can only be set to <= relevant config value. Default: -1 - ignore.",
               "name": "distanceLeft",
               "optional": true,
               "type": "Number"

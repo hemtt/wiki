@@ -38,24 +38,20 @@
         "Item": {
           "name": "value",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "1.50"
-                    },
-                    "type": "Boolean"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "1.50"
+                },
+                "type": "Boolean"
               }
-            }
+            ]
           }
         }
       }

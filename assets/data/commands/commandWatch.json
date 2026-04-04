@@ -60,22 +60,18 @@
         "Item": {
           "name": "target",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
               }
-            }
+            ]
           }
         }
       }

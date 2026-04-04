@@ -126,7 +126,7 @@
               },
               {
                 "Item": {
-                  "desc": "(Optional) optional amount of ammo in magazine",
+                  "desc": "optional amount of ammo in magazine",
                   "name": "ammoCount",
                   "optional": true,
                   "type": "Number"
@@ -134,7 +134,7 @@
               },
               {
                 "Item": {
-                  "desc": "(Optional) optional target muzzle to add magazine to",
+                  "desc": "optional target muzzle to add magazine to",
                   "name": "muzzleName",
                   "optional": true,
                   "type": "String"

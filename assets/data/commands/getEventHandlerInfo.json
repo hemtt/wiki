@@ -40,32 +40,28 @@
           "desc": "subject to which event handler is assigned",
           "name": "oper",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Control"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Display"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Group"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Control"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Display"
               }
-            }
+            ]
           }
         }
       },

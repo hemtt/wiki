@@ -45,24 +45,20 @@
             "Item": {
               "name": "selection",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": {
-                          "arma3": "2.10"
-                        },
-                        "type": "String"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.10"
+                    },
+                    "type": "String"
                   }
-                }
+                ]
               }
             }
           },

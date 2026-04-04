@@ -32,29 +32,25 @@
         "Item": {
           "name": "target",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.22"
-                    },
-                    "type": "Control"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Display"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.22"
+                },
+                "type": "Control"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Display"
               }
-            }
+            ]
           }
         }
       }

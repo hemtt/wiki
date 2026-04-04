@@ -32,27 +32,23 @@
         "Item": {
           "name": "param1",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3dAGL"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3dAGL"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       },
@@ -64,27 +60,23 @@
         "Item": {
           "name": "param2",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3dAGL"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3dAGL"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       }
@@ -100,27 +92,23 @@
         "Item": {
           "name": "location1",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Location"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Location"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       },
@@ -132,27 +120,23 @@
         "Item": {
           "name": "location2",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Location"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Location"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       }

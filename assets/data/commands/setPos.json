@@ -42,22 +42,18 @@
           "desc": "if [[Position#Introduction|Position2D]], Z will be set to 0",
           "name": "pos",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3dAGL"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3dAGL"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       }

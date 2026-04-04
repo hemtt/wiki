@@ -44,7 +44,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) ignored",
+              "desc": "ignored",
               "name": "speed",
               "optional": true,
               "type": "Number"
@@ -52,7 +52,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional)",
+              "desc": "",
               "name": "showInMap",
               "optional": true,
               "type": "Boolean"

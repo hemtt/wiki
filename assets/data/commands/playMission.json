@@ -46,28 +46,24 @@
               "desc": "directory if a string",
               "name": "mission",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "String"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Config"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Config"
                   }
-                }
+                ]
               }
             }
           },
           {
             "Item": {
-              "desc": "(Optional) If true, the intro and briefing are skipped.",
+              "desc": "If true, the intro and briefing are skipped.",
               "name": "skipBriefing",
               "optional": true,
               "type": "Boolean"

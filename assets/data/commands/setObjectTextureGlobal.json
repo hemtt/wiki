@@ -48,24 +48,20 @@
               "desc": "index of the selection. It is defined in the [[CfgVehicles Config Reference#hiddenSelections|hiddenSelections]] array in the vehicle's config (starting with 0). If a string is given, it referes to a hiddenSelection name or clan selection instead of an index.",
               "name": "selection",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": {
-                          "arma3": "2.10"
-                        },
-                        "type": "String"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.10"
+                    },
+                    "type": "String"
                   }
-                }
+                ]
               }
             }
           },

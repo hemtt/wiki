@@ -33,22 +33,18 @@
         "Item": {
           "name": "commandset",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Code"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Code"
               }
-            }
+            ]
           }
         }
       }

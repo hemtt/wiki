@@ -36,24 +36,20 @@
           "desc": "array, in which case Z will be automatically deduced as the height of the road surface",
           "name": "position",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.0"
-                    },
-                    "type": "Position2d"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.0"
+                },
+                "type": "Position2d"
               }
-            }
+            ]
           }
         }
       }

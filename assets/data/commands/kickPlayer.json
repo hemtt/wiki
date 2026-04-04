@@ -39,7 +39,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) shown as disconnect message on the kicked client",
+              "desc": "shown as disconnect message on the kicked client",
               "name": "kickMessage",
               "optional": true,
               "type": "String"

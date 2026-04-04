@@ -47,7 +47,7 @@
         "Array": [
           {
             "Item": {
-              "desc": "(Optional) Left top x of map control",
+              "desc": "Left top x of map control",
               "name": "x",
               "optional": true,
               "type": "Number"
@@ -55,7 +55,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) Left top y of map control",
+              "desc": "Left top y of map control",
               "name": "y",
               "optional": true,
               "type": "Number"
@@ -63,7 +63,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) Width of map control",
+              "desc": "Width of map control",
               "name": "w",
               "optional": true,
               "type": "Number"
@@ -71,7 +71,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) Height of map control",
+              "desc": "Height of map control",
               "name": "h",
               "optional": true,
               "type": "Number"

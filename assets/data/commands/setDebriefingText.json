@@ -108,7 +108,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) title picture",
+              "desc": "title picture",
               "name": "picture",
               "optional": true,
               "type": "String"
@@ -116,7 +116,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional) background picture",
+              "desc": "background picture",
               "name": "background",
               "optional": true,
               "type": "String"

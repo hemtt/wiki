@@ -71,22 +71,18 @@
               "desc": "impact dot color. Set to <sqf inline>[]</sqf> to use the same value as ''beamColor''.",
               "name": "dotColor",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "ArrayColorRgb"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "ArrayEmpty"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "ArrayColorRgb"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "ArrayEmpty"
                   }
-                }
+                ]
               }
             }
           },

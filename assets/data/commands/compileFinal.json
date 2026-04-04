@@ -28,51 +28,43 @@
       },
       "ret": {
         "type": {
-          "ArrayUnsized": {
-            "value": {
-              "OneOf": [
-                {
-                  "desc": null,
-                  "since": null,
-                  "type": "Code"
-                },
-                {
-                  "desc": null,
-                  "since": null,
-                  "type": "HashMapUnknown"
-                }
-              ]
+          "OneOf": [
+            {
+              "desc": null,
+              "since": null,
+              "type": "Code"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "type": "HashMapUnknown"
             }
-          }
+          ]
         }
       },
       "right": {
         "Item": {
           "name": "expression",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.14"
-                    },
-                    "type": "Code"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "HashMapUnknown"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.14"
+                },
+                "type": "Code"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "HashMapUnknown"
               }
-            }
+            ]
           }
         }
       }

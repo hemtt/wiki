@@ -61,22 +61,18 @@
               "desc": "text title shown in scroll action menu",
               "name": "textMenu",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "String"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "StructuredText"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "StructuredText"
                   }
-                }
+                ]
               }
             }
           },
@@ -90,22 +86,18 @@
                 "arma3": "1.62"
               },
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "String"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "StructuredText"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "StructuredText"
                   }
-                }
+                ]
               }
             }
           },
@@ -119,22 +111,18 @@
                 "arma3": "1.62"
               },
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "String"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "StructuredText"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "StructuredText"
                   }
-                }
+                ]
               }
             }
           }

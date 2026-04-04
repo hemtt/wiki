@@ -28,22 +28,18 @@
         "Item": {
           "name": "entity",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "EdenEntity"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "EdenID"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "EdenEntity"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "EdenID"
               }
-            }
+            ]
           }
         }
       }

@@ -40,22 +40,18 @@
         "Item": {
           "name": "code",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Code"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Code"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
               }
-            }
+            ]
           }
         }
       }

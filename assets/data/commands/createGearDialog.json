@@ -38,7 +38,7 @@
           },
           {
             "Item": {
-              "desc": "(Optional)",
+              "desc": "",
               "name": "resource",
               "optional": true,
               "type": "String"

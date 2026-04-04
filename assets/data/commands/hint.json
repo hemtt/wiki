@@ -39,22 +39,18 @@
           "desc": "the message to display.",
           "name": "message",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "StructuredText"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "StructuredText"
               }
-            }
+            ]
           }
         }
       }

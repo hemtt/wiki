@@ -78,22 +78,18 @@
             "Item": {
               "name": "targetOrPosition",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
                   }
-                }
+                ]
               }
             }
           }

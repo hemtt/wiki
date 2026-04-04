@@ -39,56 +39,52 @@
         "Item": {
           "name": "namespace",
           "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Namespace"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Task"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Location"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "TeamMember"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.2"
-                    },
-                    "type": "Control"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.2"
-                    },
-                    "type": "Display"
-                  }
-                ]
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Namespace"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Group"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Task"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Location"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "TeamMember"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.2"
+                },
+                "type": "Control"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.2"
+                },
+                "type": "Display"
               }
-            }
+            ]
           }
         }
       }

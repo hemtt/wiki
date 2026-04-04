@@ -68,27 +68,23 @@
             "Item": {
               "name": "position",
               "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position2d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Position3d"
-                      },
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Object"
-                      }
-                    ]
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
                   }
-                }
+                ]
               }
             }
           }
