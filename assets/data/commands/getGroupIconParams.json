@@ -39,7 +39,7 @@
               "desc": "icon color",
               "name": "color",
               "since": null,
-              "type": "ArrayColor"
+              "type": "ArrayColorRgb"
             },
             {
               "default": null,
@@ -74,7 +74,7 @@
               "desc": "waypoint color",
               "name": "WPcolor",
               "since": null,
-              "type": "ArrayColor"
+              "type": "ArrayColorRgb"
             }
           ]
         }

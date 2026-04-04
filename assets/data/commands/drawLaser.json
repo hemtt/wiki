@@ -63,7 +63,7 @@
             "Item": {
               "desc": "laser beam color. The values can go way above the usual 0..1 range as they also act as emissivity brightness",
               "name": "beamColor",
-              "type": "ArrayColor"
+              "type": "ArrayColorRgb"
             }
           },
           {
@@ -77,7 +77,7 @@
                       {
                         "desc": null,
                         "since": null,
-                        "type": "ArrayColor"
+                        "type": "ArrayColorRgb"
                       },
                       {
                         "desc": null,

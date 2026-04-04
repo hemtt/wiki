@@ -55,7 +55,7 @@
             "Item": {
               "desc": "[] will collapse the whole tree and it will disappear",
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           }
         ]
@@ -81,7 +81,7 @@
         "Item": {
           "desc": "[] will collapse the whole tree and it will disappear",
           "name": "path",
-          "type": "Path"
+          "type": "TreeViewPath"
         }
       }
     }

@@ -60,7 +60,7 @@
             "Item": {
               "desc": "parent item or [] if no parent exists",
               "name": "pathParent",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {
@@ -98,7 +98,7 @@
             "Item": {
               "desc": "parent item or [] if no parent exists",
               "name": "pathParent",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {

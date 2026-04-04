@@ -31,7 +31,7 @@
               "desc": null,
               "name": "ambientLightColor",
               "since": null,
-              "type": "ArrayColor"
+              "type": "ArrayColorRgb"
             },
             {
               "default": null,

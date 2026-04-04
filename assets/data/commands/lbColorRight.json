@@ -48,7 +48,7 @@
         ]
       },
       "ret": {
-        "type": "ArrayColor"
+        "type": "ArrayColorRgba"
       },
       "right": {
         "Array": [
@@ -82,7 +82,7 @@
         }
       },
       "ret": {
-        "type": "ArrayColor"
+        "type": "ArrayColorRgba"
       },
       "right": {
         "Item": {

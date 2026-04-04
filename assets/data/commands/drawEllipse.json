@@ -102,7 +102,7 @@
             "Item": {
               "desc": "line color",
               "name": "color",
-              "type": "ArrayColor"
+              "type": "ArrayColorRgba"
             }
           },
           {

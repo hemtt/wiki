@@ -55,7 +55,7 @@
             "Item": {
               "desc": "[] will expand the whole tree if it was collapsed previously with []",
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           }
         ]
@@ -81,7 +81,7 @@
         "Item": {
           "desc": "[] will expand the whole tree if it was collapsed previously with []",
           "name": "path",
-          "type": "Path"
+          "type": "TreeViewPath"
         }
       }
     }

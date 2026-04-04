@@ -44,7 +44,7 @@
       "right": {
         "Item": {
           "name": "color",
-          "type": "ArrayColor"
+          "type": "ArrayColorRgb"
         }
       }
     }

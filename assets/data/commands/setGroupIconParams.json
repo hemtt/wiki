@@ -52,7 +52,7 @@
                 "desc": null,
                 "name": "color",
                 "since": null,
-                "type": "ArrayColor"
+                "type": "ArrayColorRgba"
               },
               {
                 "default": null,
@@ -87,7 +87,7 @@
                 "desc": null,
                 "name": "WPcolor",
                 "since": null,
-                "type": "ArrayColor"
+                "type": "ArrayColorRgba"
               }
             ]
           }

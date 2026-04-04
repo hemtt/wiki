@@ -43,7 +43,7 @@
             "Item": {
               "desc": "path to start sorting from",
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {

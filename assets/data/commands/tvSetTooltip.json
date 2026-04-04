@@ -57,7 +57,7 @@
           {
             "Item": {
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {
@@ -93,7 +93,7 @@
           {
             "Item": {
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {

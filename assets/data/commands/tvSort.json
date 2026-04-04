@@ -46,7 +46,7 @@
             "Item": {
               "desc": "the parent item to sort",
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {
@@ -85,7 +85,7 @@
             "Item": {
               "desc": "the parent item to sort",
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {

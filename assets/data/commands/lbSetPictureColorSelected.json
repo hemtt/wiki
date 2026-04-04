@@ -68,7 +68,7 @@
           {
             "Item": {
               "name": "color",
-              "type": "ArrayColor"
+              "type": "ArrayColorRgba"
             }
           }
         ]
@@ -104,7 +104,7 @@
           {
             "Item": {
               "name": "color",
-              "type": "ArrayColor"
+              "type": "ArrayColorRgba"
             }
           }
         ]

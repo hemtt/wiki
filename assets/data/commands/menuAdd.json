@@ -38,7 +38,7 @@
           {
             "Item": {
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {
@@ -76,7 +76,7 @@
             "Item": {
               "desc": "path where the items should be added",
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {

@@ -22,7 +22,7 @@
         "Unary": "control"
       },
       "ret": {
-        "type": "ArrayColor"
+        "type": "ArrayColorRgba"
       },
       "right": {
         "Item": {

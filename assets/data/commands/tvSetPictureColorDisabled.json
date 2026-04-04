@@ -64,13 +64,13 @@
           {
             "Item": {
               "name": "path",
-              "type": "Path"
+              "type": "TreeViewPath"
             }
           },
           {
             "Item": {
               "name": "color",
-              "type": "ArrayColor"
+              "type": "ArrayColorRgba"
             }
           }
         ]

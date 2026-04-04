@@ -58,7 +58,7 @@
           {
             "Item": {
               "name": "color",
-              "type": "ArrayColor"
+              "type": "ArrayColorRgba"
             }
           }
         ]

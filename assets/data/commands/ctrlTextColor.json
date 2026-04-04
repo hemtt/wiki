@@ -23,7 +23,7 @@
       },
       "ret": {
         "desc": "text color",
-        "type": "ArrayColor"
+        "type": "ArrayColorRgba"
       },
       "right": {
         "Item": {
