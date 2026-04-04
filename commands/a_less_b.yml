@@ -1,0 +1,25 @@
+name: <
+desc: Returns if ''a'' is lesser than ''b''.
+groups:
+- Math
+- Variables
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Boolean
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_test = 1 < 2; // true</sqf>
+- <sqf>_test = 2 < 1; // false</sqf>
+see_also:
+- Operators

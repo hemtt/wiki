@@ -1,0 +1,25 @@
+name: ^
+desc: '''''a'''' raised to the power of ''''b'''''
+groups:
+- Math
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>5 ^ 2 // 5², result is 25</sqf>
+see_also:
+- Math
+- Commands
+- Operators

@@ -1,0 +1,36 @@
+name: '>='
+desc: Returns if ''a'' is greater than or equal to ''b''.
+groups:
+- Math
+- Variables
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Boolean
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>if (fuel truck1 >= 0.5) then { hint "Truck1 has at least half a tank of fuel left." };</sqf>
+see_also:
+- Operators
+- a
+- less=
+- b|&lt;=
+- a
+- greater
+- b|&gt;
+- a
+- ==
+- b|==
+- a
+- '!='
+- b|!=

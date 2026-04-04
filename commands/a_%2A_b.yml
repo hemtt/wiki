@@ -1,0 +1,23 @@
+name: '*'
+desc: Returns the value of ''a'' multiplied by ''b''.
+groups:
+- Math
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_percentage = 0.5 * 100;</sqf>
+see_also:
+- Operators

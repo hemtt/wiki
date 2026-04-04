@@ -1,0 +1,26 @@
+name: '%'
+desc: Remainder of ''a'' divided by ''b''.
+alias:
+- '[[mod]]'
+groups:
+- Math
+syntax:
+- call: !Binary
+  - a
+  - b
+  ret:
+    type: Number
+  left: !Item
+    name: a
+    type: Number
+  right: !Item
+    name: b
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>4.5 % 3 // result is 1.5</sqf>
+see_also:
+- mod
+- Operators
