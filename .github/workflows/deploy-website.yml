@@ -72,9 +72,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist-website
-          # Replace with your custom domain or remove for default github.io domain
-          # cname: hemtt-wiki.example.com
 
       - name: Create summary
         run: |
