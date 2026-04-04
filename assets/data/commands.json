@@ -1,6 +1,15 @@
 {
   "commands": [
     {
+      "description": "Returns the negation of a Boolean expression. This means {{hl|[[true]]}} becomes {{hl|[[false]]}} and vice versa.",
+      "groups": [
+        "Variables",
+        "Math"
+      ],
+      "name": "!",
+      "status": "Unknown"
+    },
+    {
       "description": "No documentation available",
       "errors": [
         "Missing return type for command !"
@@ -8,6 +17,50 @@
       "groups": [],
       "name": "!_a",
       "status": "Failed"
+    },
+    {
+      "description": "Selects an element from an [[Array]], same as [[select]] command for arrays, but has [[Order of Precedence|higher precedence]].\n{{Feature|informative|'''#''' has higher precedence than all binary operators, but it has lower precedence than unary operators (see {{Link|#Example 3}}).}}",
+      "groups": [
+        "Variables"
+      ],
+      "name": "#",
+      "status": "Unknown"
+    },
+    {
+      "description": "Remainder of ''a'' divided by ''b''.",
+      "groups": [
+        "Math"
+      ],
+      "name": "%",
+      "status": "Unknown"
+    },
+    {
+      "description": "Returns [[true]] only if both conditions are [[true]].\nIn case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used - if left operand is [[false]], evaluation of the right side is ignored.",
+      "groups": [
+        "Variables",
+        "Math"
+      ],
+      "name": "&&",
+      "status": "Unknown"
+    },
+    {
+      "description": "Returns the value of ''a'' multiplied by ''b''.",
+      "groups": [
+        "Math"
+      ],
+      "name": "*",
+      "status": "Unknown"
+    },
+    {
+      "description": "Add two [[Number]]s, concatenate two [[Array]]s or two [[String]]s, or create a copy of an Array or [[HashMap]].\n\n{{Feature|warning|[[Array]] copy methods {{hl|ARRAY + []}} and {{hl|+ ARRAY}} have different behaviours:\n* {{hl|ARRAY + []}} creates copy of the 1st dimension, but preserves references in other dimensions ({{Link|https://en.wikipedia.org/wiki/Object_copying#Shallow_copy|shallow copy}}).\n* {{hl|+ ARRAY}} clones every element, so if the array is multi-dimensional, the created copy contains no references ({{Link|https://en.wikipedia.org/wiki/Object_copying#Deep_copy|deep copy}}).\nSee [[#Example_6|Example 6]].\n}}",
+      "groups": [
+        "Math",
+        "Arrays",
+        "HashMap",
+        "Strings"
+      ],
+      "name": "+",
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -19,13 +72,69 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
+      "description": "Subtracts numbers or arrays from each another, negates a number. For arrays also see [[deleteAt]] and [[deleteRange]].\n{{Feature|arma3|In Arma 3 it is possible to subtract nested arrays.}}",
       "errors": [
         "Missing return type for command -"
       ],
-      "groups": [],
+      "groups": [
+        "Math",
+        "Arrays"
+      ],
       "name": "-",
       "status": "Failed"
+    },
+    {
+      "description": "Returns the quotient of two numbers. If the divisor is 0 a ''Division by zero'' error is shown but the script does not stop and the result of such division is assumed to be 0.<br><br>\nAlternative syntax returns the [[Config]] entry with the given name (alias for [[config greater greater name|>>]], slightly slower but with [[Operators#Order of Precedence|higher precedence]]).",
+      "groups": [
+        "Math",
+        "Config"
+      ],
+      "name": "/",
+      "status": "Unknown"
+    },
+    {
+      "description": "See [[switch]]",
+      "groups": [
+        "Program Flow"
+      ],
+      "name": ":",
+      "status": "Unknown"
+    },
+    {
+      "description": "Returns if ''a'' is lesser than ''b''.",
+      "groups": [
+        "Math",
+        "Variables"
+      ],
+      "name": "<",
+      "status": "Unknown"
+    },
+    {
+      "description": "Returns [[true]] if '''a''' is less than or equal to '''b''', else returns [[false]].",
+      "groups": [
+        "Math",
+        "Variables"
+      ],
+      "name": "<=",
+      "status": "Unknown"
+    },
+    {
+      "description": "Returns [[true]] if '''a''' is greater than '''b''', else returns [[false]].",
+      "groups": [
+        "Math",
+        "Variables"
+      ],
+      "name": ">",
+      "status": "Unknown"
+    },
+    {
+      "description": "Returns if ''a'' is greater than or equal to ''b''.",
+      "groups": [
+        "Math",
+        "Variables"
+      ],
+      "name": ">=",
+      "status": "Unknown"
     },
     {
       "description": "Returns [[Config | config]] entry with given name (alias of [[a / b]], slightly faster but with [[Operators#Order of Precedence|lower precedence]])",
@@ -101,6 +210,14 @@
       ],
       "name": "WFSideText",
       "status": "Passed"
+    },
+    {
+      "description": "''a'' raised to the power of ''b''",
+      "groups": [
+        "Math"
+      ],
+      "name": "^",
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -22427,9 +22544,18 @@
       ],
       "name": "worldToScreen",
       "status": "Passed"
+    },
+    {
+      "description": "Returns [[true]] if one or both conditions are [[true]]. In case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used. That means that if left operand is [[true]], evaluation of the right side is skipped completely.",
+      "groups": [
+        "Math",
+        "Variables"
+      ],
+      "name": "||",
+      "status": "Unknown"
     }
   ],
-  "timestamp": 1775272235,
-  "total": 2693,
+  "timestamp": 1775272612,
+  "total": 2707,
   "version": "1.0"
 }
