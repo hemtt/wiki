@@ -36,26 +36,9 @@
       },
       "left": {
         "Item": {
+          "desc": "or [[Position#PositionAGL|PositionAGL]] or [[Position#Introduction|Position2D]]",
           "name": "position",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position3dAGL"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position2d"
-              }
-            ]
-          }
+          "type": "Object"
         }
       },
       "ret": {

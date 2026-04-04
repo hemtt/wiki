@@ -59,31 +59,9 @@
         "Array": [
           {
             "Item": {
+              "desc": "or since {{GVI|arma3|2.12}} [[Array]] of [[Number]]s",
               "name": "index",
-              "type": {
-                "ArrayUnsized": {
-                  "value": {
-                    "OneOf": [
-                      {
-                        "desc": null,
-                        "since": null,
-                        "type": "Number"
-                      },
-                      {
-                        "desc": null,
-                        "since": {
-                          "arma3": "2.12"
-                        },
-                        "type": {
-                          "ArrayUnsized": {
-                            "value": "Number"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
+              "type": "Number"
             }
           },
           {

@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns [[true]] if stress damage is enabled in the game settings. A getter for [[enableStressDamage]].\n{{Feature|afm}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_settingEnabled = isStressDamageEnabled;</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "isStressDamageEnabled",
+  "name": "isStressDamageEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "enableStressDamage"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "Returns true if enabled, otherwise false",
+        "type": "Boolean"
+      }
+    }
+  ]
+}

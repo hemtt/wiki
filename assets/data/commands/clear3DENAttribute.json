@@ -29,21 +29,9 @@
       },
       "left": {
         "Item": {
+          "desc": "or [[Eden ID]]",
           "name": "entity",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "EdenEntity"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "EdenID"
-              }
-            ]
-          }
+          "type": "EdenEntity"
         }
       },
       "ret": {

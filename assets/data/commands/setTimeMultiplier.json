@@ -35,7 +35,7 @@
       },
       "right": {
         "Item": {
-          "desc": "has to be in range from 0.1 to 120",
+          "desc": "in range 0.1 .. 120",
           "name": "value",
           "type": "Number"
         }

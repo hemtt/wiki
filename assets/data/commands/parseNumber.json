@@ -36,23 +36,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or {{GVI|arma3|1.50|size= 0.75}} [[Boolean]]",
           "name": "value",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "String"
-              },
-              {
-                "desc": null,
-                "since": {
-                  "arma3": "1.50"
-                },
-                "type": "Boolean"
-              }
-            ]
-          }
+          "type": "String"
         }
       }
     }

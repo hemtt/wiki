@@ -1,0 +1,87 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[systemTime]] according to '''U'''niversal '''T'''ime '''C'''oordinated time scale.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _UKTime = systemTimeUTC;</sqf>",
+    "<sqf>systemTimeUTC apply { if (_x < 10) then { \"0\" + str _x } else { str _x } }; // [\"2021\",\"05\",\"03\",\"14\",\"09\",\"37\",\"593\"]</sqf>",
+    "<sqf>\nprivate _timeUTC = systemTimeUTC;\nprivate _time = systemTime;\nprivate _timeDiffH = (_time select 3) - (_timeUTC select 3);\nprivate _timeDiffM = (_time select 4) - (_timeUTC select 4);\nif (_timeDiffM < 0) then\n{\n\t_timeDiffH = _timeDiffH - 1;\n\t_timeDiffM = _timeDiffM + 60;\n};\nif (_timeDiffH < -12) then\n{\n\t_timeDiffH = _timeDiffH + 24;\n};\nif (_timeDiffH > 12) then\n{\n\t_timeDiffH = _timeDiffH - 24;\n};\nprivate _timeZone = [_timeDiffH, _timeDiffM]; // hour (_timeDiffH) is in range -12..+12\n</sqf>"
+  ],
+  "groups": [
+    "Time"
+  ],
+  "id": "systemTimeUTC",
+  "name": "systemTimeUTC",
+  "problem_notes": [],
+  "see_also": [
+    "systemTime",
+    "date",
+    "time",
+    "dayTime",
+    "diag_tickTime",
+    "serverTime",
+    "missionStart",
+    "diag_deltaTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "year",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "month",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "day",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "hour",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "minute",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "second",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "millisecond",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

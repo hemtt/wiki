@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Moves the marker. If position is given in 3D format, {{hl|z}} coordinate is stored with the marker and will be used when marker is passed to commands like [[createVehicle]], [[createUnit]], [[createAgent]], [[createMine]], [[setVehiclePosition]] for example. In case of an object, the object's model [0,0,0] is used.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\"MarkerOne\" setMarkerPosLocal getMarkerPos \"MarkerTwo\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerPosLocal",
+  "name": "setMarkerPosLocal",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerPos",
+    "setMarkerAlphaLocal",
+    "setMarkerBrushLocal",
+    "setMarkerColorLocal",
+    "setMarkerDirLocal",
+    "setMarkerShapeLocal",
+    "setMarkerSizeLocal",
+    "setMarkerTextLocal",
+    "setMarkerTypeLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": ", [[Position#PositionAGL|PositionAGL]] or {{GVI|arma3|1.94|size= 0.75}} [[Object]]. In case of an object, the object's model [0,0,0] is used.",
+          "name": "position",
+          "type": "Position2d"
+        }
+      }
+    }
+  ]
+}

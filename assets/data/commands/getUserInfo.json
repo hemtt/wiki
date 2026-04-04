@@ -1,0 +1,153 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns extended information about given server user.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _randomUserInfo = getUserInfo selectRandom allUsers;</sqf>",
+    "<sqf>\n_userInfo params [\"_playerID\", \"_ownerId\", \"_playerUID\", \"_profileName\", \"_displayName\", \"_steamName\", \"_clientState\", \"_isHC\", \"_adminState\", \"_networkInfo\", \"_unit\"];\n_networkInfo params [\"_avgPing\", \"_avgBandwidth\", \"_desync\"];\n</sqf>",
+    "<sqf>private _myInfo = getUserInfo getPlayerID player; // this particular example only works if player is server host</sqf>"
+  ],
+  "groups": [
+    "Multiplayer",
+    "Object Detection"
+  ],
+  "id": "getUserInfo",
+  "name": "getUserInfo",
+  "problem_notes": [],
+  "see_also": [
+    "allUsers",
+    "getPlayerID",
+    "getUnitFreefallInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "playerID"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "user DirectPlay ID (see [[getPlayerID]], [[Arma 3: Mission Event Handlers#PlayerConnected|PlayerConnected]])",
+              "name": "playerID",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "user owner (see [[owner]])",
+              "name": "owner",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "player UID (see [[getPlayerUID]])",
+              "name": "playerUID",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "player name (see [[profileName]])",
+              "name": "soldierName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "player name including squad (see [[name]], [[squadParams]])",
+              "name": "displayName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "returns the ''current machine's'' Steam profile name (see [[profileNameSteam]]), not the targeted player's Steam profile name",
+              "name": "steamProfileName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "user client state (see [[getClientStateNumber]])",
+              "name": "clientStateNumber",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "whether or not this is a headless client (see [[hasInterface]], [[isServer]])",
+              "name": "isHeadless",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "admin status of the user (see [[admin]])",
+              "name": "adminState",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "format [ping, bandwidth, desync]",
+              "name": "networkInfo",
+              "since": null,
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            },
+            {
+              "default": null,
+              "desc": "user player entity (see [[player]], [[selectPlayer]])",
+              "name": "playerObject",
+              "since": null,
+              "type": "Object"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "user DirectPlay ID (see [[getPlayerID]], [[Arma 3: Mission Event Handlers#PlayerConnected|PlayerConnected]])",
+          "name": "playerID",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "playerID",
+          "infoIndex"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "user DirectPlay ID (see [[getPlayerID]], [[Arma 3: Mission Event Handlers#PlayerConnected|PlayerConnected]])",
+          "name": "playerID",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "desc": "depends on the requested index (see main syntax) or [[Nothing]]",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "the index of the data in the return array (see main syntax)",
+          "name": "infoIndex",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

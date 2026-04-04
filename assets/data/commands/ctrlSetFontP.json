@@ -36,21 +36,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Number]]",
           "name": "fontOrSize",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "String"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Number"
-              }
-            ]
-          }
+          "type": "String"
         }
       }
     }

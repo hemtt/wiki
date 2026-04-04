@@ -38,13 +38,9 @@
       },
       "right": {
         "Item": {
+          "desc": "in range 0..1",
           "name": "points",
-          "type": {
-            "NumberRange": [
-              0,
-              1
-            ]
-          }
+          "type": "Number"
         }
       }
     }

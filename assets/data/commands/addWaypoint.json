@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds (or inserts when index is given) a new waypoint to a group.\n\nThe waypoint is placed randomly within a circle with the given center and radius.\n\n{{Feature|informative|For older titles and prior to {{arma3}} v1.90, use [[setWaypointPosition]] if you need exact waypoint placement.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_wp = _grp addWaypoint [position player, 0];</sqf>",
+    "<sqf>\n_wp = _grp addWaypoint [position player, 0];\t\t\t// imprecise, placed like [[setVehiclePosition]]'s \"NONE\" placement\n_wp setWaypointPosition [getPosASL player, -1];\t\t\t// from {{ofpe}} to {{arma3}} v1.88\n\nprivate _wp = _grp addWaypoint [getPosASL player, -1];\t// {{arma3}} v1.90+: precise placement\n</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "addWaypoint",
+  "name": "addWaypoint",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "createGuardedPoint",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "move",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "currentWaypoint",
+    "waypointName",
+    "waypointSpeed",
+    "setWPPos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "groupName",
+          [
+            "center",
+            "radius",
+            "index",
+            "name"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "groupName",
+          "type": "Group"
+        }
+      },
+      "ret": {
+        "type": "Waypoint"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "([[Position#PositionASL|PositionASL]] if ''radius'' is negative!) or [[Object]]",
+              "name": "center",
+              "type": "Position3dAGL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "random waypoint placement within ''radius'' from ''center''; {{GVI|arma3|1.90|size= 0.75}} -1 can be used for exact waypoint placement",
+              "name": "radius",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "-1",
+              "desc": "can be used to insert a waypoint in between existing waypoints; if it is invalid, the waypoint will be added at the end",
+              "name": "index",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"\"",
+              "desc": "[[waypointName]]",
+              "name": "name",
+              "optional": true,
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

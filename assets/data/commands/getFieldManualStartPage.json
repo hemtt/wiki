@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of the starting topic and hint the given field manual should display.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getFieldManualStartPage (findDisplay 46); // returns [\"\", \"\"]</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "getFieldManualStartPage",
+  "name": "getFieldManualStartPage",
+  "problem_notes": [],
+  "see_also": [
+    ":Category:Arma",
+    "3:",
+    "Field",
+    "Manual|Arma",
+    "3:",
+    "Field",
+    "Manual"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "display"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "startingTopic",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "hint",
+              "since": null,
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      }
+    }
+  ]
+}

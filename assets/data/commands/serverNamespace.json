@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns server's [[Namespace|namespace]].\nThis namespace is only available on the server for the server's uptime duration (same as [[uiNamespace]]).<br>\nAll [[Arma 3: Server Side Scripting|server event handlers]], which are available in [[Arma 3: Server Config File|server config]], use this namespace.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (isServer) then\n{\n\thint str allVariables serverNamespace;\n}\nelse\n{\n\thint \"you do not have permission!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "Variables",
+    "Multiplayer"
+  ],
+  "id": "serverNamespace",
+  "name": "serverNamespace",
+  "problem_notes": [],
+  "see_also": [
+    "missionNamespace",
+    "setVariable",
+    "getVariable",
+    "allVariables"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "on the server, [[Nothing]] on clients or in single-player.",
+        "type": "Namespace"
+      }
+    }
+  ]
+}

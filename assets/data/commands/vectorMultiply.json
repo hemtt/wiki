@@ -51,31 +51,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or {{GVI|arma3|2.14|size= 0.75}} [[Array]] of [[Number]]s",
           "name": "multiplier",
-          "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Number"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.14"
-                    },
-                    "type": {
-                      "ArrayUnsized": {
-                        "value": "Number"
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "type": "Number"
         }
       }
     }

@@ -36,13 +36,9 @@
       },
       "right": {
         "Item": {
+          "desc": "in range 0..360",
           "name": "direction",
-          "type": {
-            "NumberRange": [
-              0,
-              360
-            ]
-          }
+          "type": "Number"
         }
       }
     }

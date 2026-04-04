@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if the marker is drawn with shadow enabled.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _shadowEnabled = markerShadow _myMarker;</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "markerShadow",
+  "name": "markerShadow",
+  "problem_notes": [
+    "[[setMarkerType]] will reset the shadow value to the one defined in marker type."
+  ],
+  "see_also": [
+    "setMarkerShadow",
+    "setMarkerShadowLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "marker"
+      },
+      "ret": {
+        "desc": ": [[true]] if marker is enabled, [[false]] if not",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "the marker",
+          "name": "marker",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

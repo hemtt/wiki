@@ -52,21 +52,9 @@
         "Array": [
           {
             "Item": {
+              "desc": "or [[Control]]",
               "name": "idc",
-              "type": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Number"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Control"
-                  }
-                ]
-              }
+              "type": "Number"
             }
           },
           {

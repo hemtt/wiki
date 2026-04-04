@@ -58,51 +58,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Structured Text]], [[Array]] of [[String]]s or [[Array]] of [[Structured Text]]",
           "name": "message",
-          "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "String"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "StructuredText"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": {
-                      "ArrayUnsized": {
-                        "value": {
-                          "OneOf": [
-                            {
-                              "desc": null,
-                              "since": null,
-                              "type": "String"
-                            },
-                            {
-                              "desc": null,
-                              "since": null,
-                              "type": {
-                                "ArrayUnsized": {
-                                  "value": "StructuredText"
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "type": "String"
         }
       }
     }

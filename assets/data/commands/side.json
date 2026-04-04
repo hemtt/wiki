@@ -50,26 +50,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Group]] or [[Location]]",
           "name": "target",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Location"
-              }
-            ]
-          }
+          "type": "Object"
         }
       }
     }

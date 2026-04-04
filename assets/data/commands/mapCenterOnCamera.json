@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "The main syntax enables/disables continuous centering of the main map type control on the camera position. Needs to be executed once.<br>\nThe alternative syntax centers mini map type control on camera. Needs to be executed each frame (preferably inside an {{hl|onDraw}} event handler).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// --- Minimap update\n((uiNamespace getVariable \"BIS_UAV_DISPLAY\") displayCtrl 112410) mapCenterOnCamera true;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "mapCenterOnCamera",
+  "name": "mapCenterOnCamera",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlMapAnimAdd",
+    "ctrlMapAnimCommit",
+    "getPosWorld"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "mainmap",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "mainmap",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "minimap"
+      },
+      "ret": {
+        "desc": "of the map center (camera focus object's model centre's position (see [[getPosWorld]])) in render scope",
+        "type": "Position3dASL"
+      },
+      "right": {
+        "Item": {
+          "name": "minimap",
+          "type": "Control"
+        }
+      },
+      "since": {
+        "arma3": "1.48"
+      }
+    }
+  ]
+}

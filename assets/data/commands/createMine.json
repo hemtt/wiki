@@ -48,21 +48,9 @@
           },
           {
             "Item": {
+              "desc": "or [[Position#PositionAGL|PositionAGL]]",
               "name": "position",
-              "type": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3dAGL"
-                  }
-                ]
-              }
+              "type": "Object"
             }
           },
           {

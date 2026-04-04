@@ -35,29 +35,9 @@
       },
       "left": {
         "Item": {
+          "desc": "or [[Array]] of [[Object]]s",
           "name": "unitName",
-          "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": {
-                      "ArrayUnsized": {
-                        "value": "Object"
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "type": "Object"
         }
       },
       "ret": {

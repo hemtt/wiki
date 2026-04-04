@@ -41,21 +41,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Position#Introduction|Position2D]]",
           "name": "worldPosition",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position3dAGL"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position2d"
-              }
-            ]
-          }
+          "type": "Position3dAGL"
         }
       }
     }

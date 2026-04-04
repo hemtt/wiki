@@ -29,28 +29,9 @@
       },
       "left": {
         "Item": {
+          "desc": ", {{GVI|arma3|2.14|size= 0.75}} [[Object]] or [[Group]]",
           "name": "position",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position3d"
-              },
-              {
-                "desc": null,
-                "since": {
-                  "arma3": "2.14"
-                },
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              }
-            ]
-          }
+          "type": "Position3d"
         }
       },
       "ret": {

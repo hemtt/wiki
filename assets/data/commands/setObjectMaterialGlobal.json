@@ -43,23 +43,9 @@
         "Array": [
           {
             "Item": {
+              "desc": "or {{GVI|arma3|2.10|size= 0.75}} [[String]]",
               "name": "selection",
-              "type": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Number"
-                  },
-                  {
-                    "desc": null,
-                    "since": {
-                      "arma3": "2.10"
-                    },
-                    "type": "String"
-                  }
-                ]
-              }
+              "type": "Number"
             }
           },
           {

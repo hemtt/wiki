@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the team the unit belongs to. Possible values:\n\n* {{hl|\"MAIN\"}} (default and white)\n* {{hl|\"RED\"}}\n* {{hl|\"GREEN\"}}\n* {{hl|\"BLUE\"}}\n* {{hl|\"YELLOW\"}}\n* {{GVI|arma3|1.94}} {{hl|\"\"}} if given unit is [[objNull]] or [[remoteControl]]ling another unit",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_team = assignedTeam player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "assignedTeam",
+  "name": "assignedTeam",
+  "problem_notes": [],
+  "see_also": [
+    "assignTeam"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "desc": "(or, prior to Arma 3 v1.94, [[Nothing]] if given unit is [[objNull]] or [[remoteControl]]ling another unit)",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the current task of the unit in the formation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_currentTask = formationTask _unit;</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "formationTask",
+  "name": "formationTask",
+  "problem_notes": [],
+  "see_also": [
+    "setFormationTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": ": \"EXCLUDED\", \"MOVE\", \"COVER\", \"LEADER\", \"NOTHING\"",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Local",
+  "description": "Order the given unit to fire on the given target (via the radio).\nIf the target is [[objNull]], the unit is ordered to fire on its current target (set with [[doTarget]] or [[commandTarget]]).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_ESoldier1 commandFire _WSoldier1;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "commandFire",
+  "name": "commandFire",
+  "problem_notes": [],
+  "see_also": [
+    "fire",
+    "doFire",
+    "canFire",
+    "fireAtTarget",
+    "forceWeaponFire",
+    "commandArtilleryFire",
+    "commandSuppressiveFire",
+    "doArtilleryFire",
+    "doSuppressiveFire",
+    "isManualFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "of type [[Object|Unit]] or [[Array]] of [[Object|Unit]]s",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

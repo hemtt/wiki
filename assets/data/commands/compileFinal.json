@@ -27,45 +27,14 @@
         "Unary": "expression"
       },
       "ret": {
-        "type": {
-          "OneOf": [
-            {
-              "desc": null,
-              "since": null,
-              "type": "Code"
-            },
-            {
-              "desc": null,
-              "since": null,
-              "type": "HashMapUnknown"
-            }
-          ]
-        }
+        "desc": "or [[HashMap]]",
+        "type": "Code"
       },
       "right": {
         "Item": {
+          "desc": ", {{GVI|arma3|2.14|size= 0.75}} [[Code]] or [[HashMap]]",
           "name": "expression",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "String"
-              },
-              {
-                "desc": null,
-                "since": {
-                  "arma3": "2.14"
-                },
-                "type": "Code"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "HashMapUnknown"
-              }
-            ]
-          }
+          "type": "String"
         }
       }
     }

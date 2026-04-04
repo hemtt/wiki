@@ -1,0 +1,93 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets weblink (URL) of given menu strip entry, subject to {{hl|allowedHTMLLoadURIs[]}} whitelisting in [[CfgCommands]] config.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrlMenuStrip menuSetURL [[0,0,1], \"https://arma3.com/\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "id": "menuSetURL",
+  "name": "menuSetURL",
+  "problem_notes": [],
+  "see_also": [
+    "menuURL",
+    "ctrlSetURL"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "link"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "of [[Number]]s",
+              "name": "path",
+              "type": "TreeViewPath"
+            }
+          },
+          {
+            "Item": {
+              "name": "link",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "link"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "of [[Number]]s",
+              "name": "path",
+              "type": "TreeViewPath"
+            }
+          },
+          {
+            "Item": {
+              "name": "link",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns appID of the DLC the object belongs to or [[nil]] if object is vanilla.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_appID = getObjectDLC cursorTarget;\nif (!isNil \"_appID\") then {\n\thint format [\"This object belongs to DLC with id: %1\", _appID];\n} else {\n\thint \"This object is vanilla\";\n};\n</sqf>",
+    "<sqf>\n_akm = createSimpleObject [\"A3\\Weapons_F_Exp\\Rifles\\AKM\\AKM_F.p3d\",getPosASL player];\ngetObjectDLC _akm;\t// 395180\n</sqf>"
+  ],
+  "groups": [
+    "DLC"
+  ],
+  "id": "getObjectDLC",
+  "name": "getObjectDLC",
+  "problem_notes": [],
+  "see_also": [
+    "getDLCs",
+    "getPersonUsedDLCs",
+    "getMissionDLCs",
+    "getDLCAssetsUsageByName",
+    "getDLCAssetsUsage",
+    "getAssetDLCInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "obj"
+      },
+      "ret": {
+        "desc": "(or [[Nothing]] if vanilla item)",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

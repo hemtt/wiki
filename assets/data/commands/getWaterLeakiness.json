@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Get an object's water intake ratio when immersed.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (getWaterLeakiness _myCar > 0) then\n{\n\thint \"don't go in the water with it!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getWaterLeakiness",
+  "name": "getWaterLeakiness",
+  "problem_notes": [],
+  "see_also": [
+    "setWaterLeakiness",
+    "setWaterFillPercentage",
+    "getWaterFillPercentage"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "obj"
+      },
+      "ret": {
+        "desc": "in range 0..1 where 0 is waterproof and 1 is full leak",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "object to check",
+          "name": "obj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

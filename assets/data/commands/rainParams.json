@@ -1,0 +1,153 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns currently set [[Arma_3:_CfgWorlds_Config_Reference#class_RainParticles | RainParticles]] params, custom or default.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _rainParams = rainParams;\n// or\nrainParams params [\n\t\"_rainDropTexture\",\n\t\"_texDropCount\",\n\t\"_minRainDensity\",\n\t\"_effectRadius\",\n\t\"_windCoef\",\n\t\"_dropSpeed\",\n\t\"_rndSpeed\",\n\t\"_rndDir\",\n\t\"_dropWidth\",\n\t\"_dropHeight\",\n\t\"_dropColor\",\n\t\"_lumSunFront\",\n\t\"_lumSunBack\",\n\t\"_refractCoef\",\n\t\"_refractSaturation\",\n\t\"_snow\",\n\t\"_dropColorStrong\"\n];\n</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "rainParams",
+  "name": "rainParams",
+  "problem_notes": [],
+  "see_also": [
+    "setRain",
+    "fogParams",
+    "overcast",
+    "humidity",
+    "wind",
+    "forceWeatherChange"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "rainDropTexture",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "texDropCount",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "minRainDensity",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "effectRadius",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "windCoef",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "dropSpeed",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "rndSpeed",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "rndDir",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "dropWidth",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "dropHeight",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "dropColor",
+              "since": null,
+              "type": "ArrayColorRgba"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "lumSunFront",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "lumSunBack",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "refractCoef",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "refractSaturation",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "snow",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "dropColorStrong",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

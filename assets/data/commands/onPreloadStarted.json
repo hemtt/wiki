@@ -25,21 +25,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Code]]",
           "name": "command",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "String"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Code"
-              }
-            ]
-          }
+          "type": "String"
         }
       }
     }

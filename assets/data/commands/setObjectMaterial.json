@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets material of object selection. The selection number is defined through the [[CfgVehicles Config Reference#hiddenSelections|hiddenselection]][] = {} array in the vehicle's config (starting with 0).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\ncar setObjectMaterial [0,\"A3\\Structures_F\\Data\\Windows\\window_set.rvmat\"];\ncar setObjectMaterial [1,\"A3\\Structures_F\\Data\\Windows\\window_set.rvmat\"];\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setObjectMaterial",
+  "name": "setObjectMaterial",
+  "problem_notes": [],
+  "see_also": [
+    "getObjectMaterials",
+    "setObjectTextureGlobal",
+    "getObjectTextures",
+    "setObjectTexture",
+    "setObjectMaterialGlobal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          [
+            "selectionNumber",
+            "material"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "or [[String]] (since {{GVI|arma3|2.10}}).",
+              "name": "selectionNumber",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "material path. Since {{GVI|arma3|2.20}} using \"#reset\" would reset to default material.",
+              "name": "material",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

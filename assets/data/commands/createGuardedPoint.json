@@ -41,31 +41,9 @@
           },
           {
             "Item": {
+              "desc": ", [[Group]], [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]",
               "name": "position",
-              "type": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
-              }
+              "type": "Object"
             }
           },
           {

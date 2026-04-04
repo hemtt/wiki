@@ -1,0 +1,161 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns data about squad of given unit loaded from [[squad.xml]] as well as the unit itself.\n{{Feature|informative|This command returns an empty array in single player.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_info = squadParams player;</sqf>",
+    "<sqf>squadParams player params [\"_squadInfo\", \"_memberInfo\", \"_squadID\", \"_a3unitsID\"];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "System"
+  ],
+  "id": "squadParams",
+  "name": "squadParams",
+  "problem_notes": [],
+  "see_also": [
+    "squad.xml"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "squadInfo",
+              "since": null,
+              "type": {
+                "ArraySized": [
+                  {
+                    "default": null,
+                    "desc": "squad nickname",
+                    "name": "nick",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "squad full name",
+                    "name": "name",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "squad contact email",
+                    "name": "email",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "squad website URL",
+                    "name": "web",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "squad picture URL",
+                    "name": "picture",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "squad title",
+                    "name": "title",
+                    "since": null,
+                    "type": "String"
+                  }
+                ]
+              }
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "memberInfo",
+              "since": null,
+              "type": {
+                "ArraySized": [
+                  {
+                    "default": null,
+                    "desc": "member unique ID",
+                    "name": "uid",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "member name",
+                    "name": "name",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "member full name",
+                    "name": "fullname",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "member email",
+                    "name": "email",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "member ICQ number",
+                    "name": "icq",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "member remark",
+                    "name": "remark",
+                    "since": null,
+                    "type": "String"
+                  }
+                ]
+              }
+            },
+            {
+              "default": null,
+              "desc": "unique squad ID",
+              "name": "squadId",
+              "since": {
+                "arma3": "2.6"
+              },
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "unique {{arma3}} Units  ID",
+              "name": "a3unitsId",
+              "since": {
+                "arma3": "2.6"
+              },
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets if group icons raise [[onGroupIconClick]], [[onGroupIconOverEnter]] and [[onGroupIconOverLeave]] events.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setGroupIconsSelectable true;</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "id": "setGroupIconsSelectable",
+  "name": "setGroupIconsSelectable",
+  "problem_notes": [],
+  "see_also": [
+    "groupIconSelectable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "selectable"
+      },
+      "ret": {
+        "desc": "([[objNull]] prior to {{arma3}} v1.92)",
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "setting to [[true]] makes the icon selectable",
+          "name": "selectable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

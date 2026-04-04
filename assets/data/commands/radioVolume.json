@@ -24,12 +24,8 @@
     {
       "call": "Nular",
       "ret": {
-        "type": {
-          "NumberRange": [
-            0,
-            2
-          ]
-        }
+        "desc": "in range 0..2",
+        "type": "Number"
       }
     }
   ]

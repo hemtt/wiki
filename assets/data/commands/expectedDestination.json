@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Local",
+  "description": "Return expected destination of unit as an array.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_data = expectedDestination player;</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "AI Behaviour"
+  ],
+  "id": "expectedDestination",
+  "name": "expectedDestination",
+  "problem_notes": [],
+  "see_also": [
+    "setDestination",
+    "getUnitState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "destination",
+              "since": null,
+              "type": "Position3dAGL"
+            },
+            {
+              "default": null,
+              "desc": "can be one of:",
+              "name": "planningMode",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "specifies if path replanning was forced (through [[setDestination]])",
+              "name": "forceReplan",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

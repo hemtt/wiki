@@ -38,21 +38,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[String]]",
           "name": "code",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Code"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "String"
-              }
-            ]
-          }
+          "type": "Code"
         }
       }
     }

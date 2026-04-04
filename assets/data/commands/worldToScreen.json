@@ -45,21 +45,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Position#PositionAGL|PositionAGL]]",
           "name": "position",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position2d"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position3dAGL"
-              }
-            ]
-          }
+          "type": "Position2d"
         }
       }
     },
@@ -100,21 +88,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Position#PositionAGL|PositionAGL]]",
           "name": "position",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position2d"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position3dAGL"
-              }
-            ]
-          }
+          "type": "Position2d"
         }
       },
       "since": {

@@ -40,28 +40,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Object]] or {{GVI|arma3|2.02|size= 0.75}} [[Side]]",
           "name": "type",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": {
-                  "arma3": "2.2"
-                },
-                "type": "Side"
-              }
-            ]
-          }
+          "type": "Group"
         }
       }
     }

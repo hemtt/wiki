@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates child display of given display and loads from \"resourceName\". The notable difference between [[createDisplay]] and [[createDialog]] is that with [[createDisplay]] the player would be able to move around while the display is shown.<br>\nDisplays created with [[createDisplay]] or [[createDialog]] will take control of the mouse pointer and will close when user presses {{Controls|Esc}}.\n{{Feature|arma3|Since {{arma3}} v1.50 [[createDisplay]] returns [[Display]] and will first look in [[Description.ext|description.ext]] for resourceName config, if not found, it will then look in main config.}}\n{{Feature|informative|If an ''overlay'' is needed instead, use [[cutRsc]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 46 createDisplay \"RscCredits\";</sqf>",
+    "<sqf>\n// creates an empty display\nprivate _emptyDisplay = findDisplay 46 createDisplay \"RscDisplayEmpty\";\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "createDisplay",
+  "name": "createDisplay",
+  "problem_notes": [],
+  "see_also": [
+    "closeDisplay",
+    "createDialog",
+    "displayCtrl",
+    "dialog",
+    "displayNull",
+    "controlNull",
+    "ctrlCreate",
+    "displayParent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "parent",
+          "resourceName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "parent",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "desc": "(since {{GVI|arma3|1.50|size= 0.75}}, [[Nothing]] before)",
+        "type": "Display"
+      },
+      "right": {
+        "Item": {
+          "desc": "custom display class defined in [[Description.ext|description.ext]] or existing display class from main config",
+          "name": "resourceName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

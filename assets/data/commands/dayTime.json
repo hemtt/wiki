@@ -28,8 +28,13 @@
     {
       "call": "Nular",
       "ret": {
-        "desc": "day time using a 24 hour clock, using fractions of hours - range [0..24]",
-        "type": "Number"
+        "desc": "day time using a 24 hour clock, using fractions of hours",
+        "type": {
+          "NumberRange": [
+            0,
+            24
+          ]
+        }
       }
     }
   ]

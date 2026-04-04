@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Moves the marker. If position is given in 3D format, {{hl|z}} coordinate is stored with the marker and will be used when marker is passed to commands like [[createVehicle]], [[createUnit]], [[createAgent]], [[createMine]], [[setVehiclePosition]] for example. In case of an object, the object's model [0,0,0] is used.\n{{Feature|informative|\n'''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.\nAs such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\"MarkerOne\" setMarkerPos getMarkerPos \"MarkerTwo\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerPos",
+  "name": "setMarkerPos",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerPosLocal",
+    "setMarkerBrush",
+    "setMarkerColor",
+    "setMarkerDir",
+    "createMarker",
+    "setMarkerShape",
+    "setMarkerSize",
+    "setMarkerText",
+    "setMarkerType",
+    "setMarkerAlpha"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "or [[Position#PositionAGL|PositionAGL]] or {{GVI|arma3|1.94|size= 0.75}} [[Object]]. In case of an object, the object's model [0,0,0] is used.",
+          "name": "position",
+          "type": "Position2d"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the sub-parts of the task description.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_taskDescArray = taskDescription _task;</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "taskDescription",
+  "name": "taskDescription",
+  "problem_notes": [],
+  "see_also": [
+    "setSimpleTaskDescription",
+    "createSimpleTask"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "task"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "description",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "title",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "waypoint",
+              "since": null,
+              "type": "Waypoint"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      }
+    }
+  ]
+}

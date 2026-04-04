@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Global",
+  "description": "Gets provided player's Voice over Network (VoN) volume.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _volume = getPlayerVoNVolume (units player select 1);</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "getPlayerVoNVolume",
+  "name": "getPlayerVoNVolume",
+  "problem_notes": [],
+  "see_also": [
+    "setPlayerVoNVolume",
+    "soundVolume",
+    "radioVolume",
+    "musicVolume"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "in range 0..1, -1 in case of error (e.g provided a non-human)",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "the other player's unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

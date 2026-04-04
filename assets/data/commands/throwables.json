@@ -1,0 +1,178 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all throwables in unit inventory in [[currentThrowable]] format.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nthrowables player;\n/*\n\t[\n\t\t[\"HandGrenade\",\"HandGrenadeMuzzle\",[1e+007,0],1],\n\t\t[\"SmokeShell\",\"SmokeShellMuzzle\",[1e+007,0],1],\n\t\t[\"SmokeShellGreen\",\"SmokeShellGreenMuzzle\",[1e+007,0],1],\n\t\t[\"Chemlight_green\",\"ChemlightGreenMuzzle\",[1e+007,0],1],\n\t\t[\"Chemlight_green\",\"\",[1e+007,0],1],\n\t\t[\"HandGrenade\",\"\",[1e+007,0],1]\n\t]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Weapons",
+    "Unit Inventory"
+  ],
+  "id": "throwables",
+  "name": "throwables",
+  "problem_notes": [],
+  "see_also": [
+    "selectThrowable",
+    "currentThrowable",
+    "isThrowable",
+    "selectWeapon",
+    "currentWeapon",
+    "currentMagazine",
+    "currentMuzzle",
+    "BIS_fnc_isThrowable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "default": null,
+                  "desc": null,
+                  "name": "magazineName",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "default": null,
+                  "desc": null,
+                  "name": "muzzleName",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "default": null,
+                  "desc": null,
+                  "name": "id",
+                  "since": null,
+                  "type": {
+                    "ArraySized": [
+                      {
+                        "default": null,
+                        "desc": "unique ID of the item in the world",
+                        "name": "itemWorldID",
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "default": null,
+                        "desc": "unique ID of the player who created the item",
+                        "name": "creatorID",
+                        "since": null,
+                        "type": "Number"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "default": null,
+                  "desc": "magazine ammo (Since Arma 3 2.22)",
+                  "name": "ammoCount",
+                  "since": null,
+                  "type": "Number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "unit",
+          "includeEmpty"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "default": null,
+                  "desc": null,
+                  "name": "magazineName",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "default": null,
+                  "desc": null,
+                  "name": "muzzleName",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "default": null,
+                  "desc": null,
+                  "name": "id",
+                  "since": null,
+                  "type": {
+                    "ArraySized": [
+                      {
+                        "default": null,
+                        "desc": "unique ID of the item in the world",
+                        "name": "itemWorldID",
+                        "since": null,
+                        "type": "Number"
+                      },
+                      {
+                        "default": null,
+                        "desc": "unique ID of the player who created the item",
+                        "name": "creatorID",
+                        "since": null,
+                        "type": "Number"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "default": null,
+                  "desc": "magazine ammo (Since Arma 3 2.22)",
+                  "name": "ammoCount",
+                  "since": null,
+                  "type": "Number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "when [[true]] returns empty throwables as well.",
+              "name": "includeEmpty",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}

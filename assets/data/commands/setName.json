@@ -31,23 +31,9 @@
       },
       "left": {
         "Item": {
+          "desc": "or {{GVI|arma3|1.02|size= 0.75}} [[Object]]",
           "name": "thing",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Location"
-              },
-              {
-                "desc": null,
-                "since": {
-                  "arma3": "1.2"
-                },
-                "type": "Object"
-              }
-            ]
-          }
+          "type": "Location"
         }
       },
       "ret": {

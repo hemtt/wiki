@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns trigger statements.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_statements = triggerStatements someTrigger;</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "triggerStatements",
+  "name": "triggerStatements",
+  "problem_notes": [],
+  "see_also": [
+    "setTriggerStatements"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "trigger"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "condition",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "code ran when the trigger is activated",
+              "name": "activation",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "code ran when the trigger is deactivated",
+              "name": "deactivation",
+              "since": null,
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

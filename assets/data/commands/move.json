@@ -27,21 +27,9 @@
       },
       "left": {
         "Item": {
+          "desc": "or [[Group]]",
           "name": "group",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              }
-            ]
-          }
+          "type": "Object"
         }
       },
       "ret": {
@@ -49,21 +37,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Position#PositionATL|PositionATL]]",
           "name": "position",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position2d"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position3dATL"
-              }
-            ]
-          }
+          "type": "Position2d"
         }
       }
     }

@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Assigns the result of expression on the right to the variable on the left. Technically this is not a command and it is not listed in [[supportInfo]]; this is more of a compiler instruction.\n{{Feature|important|The following structure is invalid: <sqf inline>a = b = c = 4;</sqf>.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_value = 5;</sqf>",
+    "<sqf>_mygroup = group player;</sqf>",
+    "<sqf>_greeting = \"Hello!\";</sqf>",
+    "<sqf>private _enemyTank = myTank1;</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "a_%3D_b",
+  "name": "=",
+  "problem_notes": [],
+  "see_also": [
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "variable",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "see [[Identifier]]",
+          "name": "variable",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "desc": "{{Feature|important|The returned value is not equivalent to [[nil]]. See {{Link|#Notes}} below for additional information.}}",
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

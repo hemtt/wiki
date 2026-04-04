@@ -30,21 +30,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Structured Text]]",
           "name": "text",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "String"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "StructuredText"
-              }
-            ]
-          }
+          "type": "String"
         }
       }
     }

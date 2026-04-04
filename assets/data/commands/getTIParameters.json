@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all Thermal Imaging parameters.\n{{{!}} class=\"wikitable align-center-col-2\"\n! Parameter\n! Default Value\n! Description\n{{!}}-\n{{!}} {{hl|OutputRangeStart}}\n{{!}} 0.1\n{{!}} Thermal output minimal value\n{{!}}-\n{{!}} {{hl|OutputRangeWidth}}\n{{!}} 0.8\n{{!}} Thermal output width\n{{!}}-\n{{!}} {{hl|FilmGrain}}\n{{!}} 1\n{{!}} Film grain\n{{!}}-\n{{!}} {{hl|Blur}}\n{{!}} 1\n{{!}} Blur\n{{!}}-\n{{!}} {{hl|UpdateHistogram}}\n{{!}} 1\n{{!}} Histogram\n{{!}}-\n{{!}} {{GVI|arma3|2.20|size= 0.75}} {{hl|MaxResolution}}\n{{!}} -1\n{{!}} Maximum vertical resolution\n{{!}}-\n{{!}}}\n{{Feature|informative|\n* The output formula is as follows: {{hl|OutputRangeStart + ''thermalValue'' &times; OutputRangeWidth}}, making the default range 0.1..0.9.\n* {{GVI|arma3|2.20|size= 0.75}} The {{hl|MaxResolution}} setting takes into account the aspect ratio of the screen. A value of 1080 on a 16:9 screen provides a resolution of 1920&times;1080.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (getTIParameters get \"OutputRangeStart\" == 0.1) then { hint \"default Start\" };</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "getTIParameters",
+  "name": "getTIParameters",
+  "problem_notes": [],
+  "see_also": [
+    "setTIParameter",
+    "setCamUseTI",
+    "disableTIEquipment"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "format <sqf inline>[[\"OutputRangeStart\", 0.1], [\"OutputRangeWidth\", 0.8]]</sqf>",
+        "type": "HashMapUnknown"
+      }
+    }
+  ]
+}

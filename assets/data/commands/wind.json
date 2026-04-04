@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current wind vector (in m/s).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_windArray = wind;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "wind",
+  "name": "wind",
+  "problem_notes": [],
+  "see_also": [
+    "setWind",
+    "windDir"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "[x, y, 0]. with wind being only horizontal",
+        "type": "Vector3d"
+      }
+    }
+  ]
+}

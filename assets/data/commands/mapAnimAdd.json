@@ -52,26 +52,9 @@
           },
           {
             "Item": {
+              "desc": "or [[Position#Introduction|Position2D]], [[Position#Introduction|Position3D]]",
               "name": "position",
-              "type": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position2d"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Position3d"
-                  }
-                ]
-              }
+              "type": "Object"
             }
           }
         ]

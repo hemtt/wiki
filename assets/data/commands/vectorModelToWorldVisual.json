@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts vector from model to world space in render time scope.\n{{Feature|important|For [[setObjectScale|scaled objects]], the resulting vector's [[vectorMagnitude|magnitude]] will also be [[vectorMultiply|multiplied]] by the object scale.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Convert model space vector [0,-10,4] to world space; vector gets rotated according to _airplane: \n<sqf>_airplane vectorModelToWorldVisual [0,-10,4];</sqf>"
+  ],
+  "groups": [
+    "Math - Vectors",
+    "Render Time Scope"
+  ],
+  "id": "vectorModelToWorldVisual",
+  "name": "vectorModelToWorldVisual",
+  "problem_notes": [],
+  "see_also": [
+    "vectorDirVisual",
+    "modelToWorldVisual",
+    "addForce",
+    "addTorque",
+    "vectorModelToWorld",
+    "vectorWorldToModel",
+    "vectorWorldToModelVisual"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "modelDir"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "vector direction in world space in format [x,y,z]",
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "desc": "vector direction in model space in format [x,y,z]",
+          "name": "modelDir",
+          "type": "Vector3d"
+        }
+      }
+    }
+  ]
+}

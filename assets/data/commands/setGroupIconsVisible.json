@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets if group icons added with [[addGroupIcon]] are visible on map and in the HUD.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nsetGroupIconsVisible [true, true];\n(group player) addGroupIcon [\"b_inf\", [0, 0]];\n</sqf>"
+  ],
+  "groups": [
+    "High Command"
+  ],
+  "id": "setGroupIconsVisible",
+  "name": "setGroupIconsVisible",
+  "problem_notes": [],
+  "see_also": [
+    "addGroupIcon",
+    "clearGroupIcons",
+    "getGroupIcon",
+    "getGroupIconParams",
+    "groupIconSelectable",
+    "groupIconsVisible",
+    "onGroupIconClick",
+    "removeGroupIcon",
+    "setGroupIcon",
+    "setGroupIconParams",
+    "setGroupIconsSelectable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "showOnMap",
+          "showOnHUD"
+        ]
+      },
+      "ret": {
+        "desc": "(prior to {{arma3}} v1.94 this command returned [[Object]] of [[objNull|null]] value)",
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "[[true]] to show on map. Default is [[false]]",
+              "name": "showOnMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to show on HUD. Default is [[false]]",
+              "name": "showOnHUD",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

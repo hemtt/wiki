@@ -1,0 +1,107 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns hashmap of all items in units inventory as [classname, count] pairs.\n{{Feature|informative|\n* ''weaponItems'', ''uniformItems'', ''vestItems'', ''backpackItems'' arguments use the following [[Number]] values:\n** 0: do not return value\n** 1: returns container only (weapon or container)\n** 2: returns container and its content\n* weapons/containers that are stored inside containers (e.g weapon in backpack) always return all contents if contents for the parent container are enabled.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _unitUniqueItems = uniqueUnitItems [player, 0, 2, 2, 2, true];\nif (_unitUniqueItems getOrDefault [\"FirstAidKit\", 0] > 5) then { hint \"I'm rich of FAK to give!\"; };\n</sqf>",
+    "<sqf>private _unitUniqueItems = uniqueUnitItems [cursorObject];</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "uniqueUnitItems",
+  "name": "uniqueUnitItems",
+  "problem_notes": [],
+  "see_also": [
+    "getUnitLoadout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "in format itemClassname ([[String]]) &rarr; amount ([[Number]])",
+        "type": "HashMapUnknown"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "unit",
+          "weaponsItems",
+          "uniformItems",
+          "vestItems",
+          "backpackItems",
+          "assignedItems"
+        ]
+      },
+      "ret": {
+        "desc": "in format itemClassname ([[String]]) &rarr; amount ([[Number]])",
+        "type": "HashMapUnknown"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "default": "2",
+              "desc": "weapons (including binoculars) and their accessories (flashlight etc), loaded magazines",
+              "name": "weaponsItems",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "2",
+              "desc": "",
+              "name": "uniformItems",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "2",
+              "desc": "",
+              "name": "vestItems",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "2",
+              "desc": "",
+              "name": "backpackItems",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "returns [[assignedItems]] as well as [[headgear]] and [[hmd|goggles]]",
+              "name": "assignedItems",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

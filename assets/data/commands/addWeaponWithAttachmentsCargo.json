@@ -1,0 +1,152 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds a weapon into the cargo space of a vehicle / box with given attachments / magazines. Ignores available cargo space. If the weapon class has any pre-attached items (LinkedItems), they are removed and new items, supplied via command arguments, are added.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>cursorObject addWeaponWithAttachmentsCargo [[\"arifle_MX_GL_F\", \"muzzle_snds_H\", \"\", \"optic_aco\", [\"30Rnd_65x39_caseless_mag\", 15], [\"3Rnd_HE_Grenade_shell\", 2], \"\"], 2];</sqf>",
+    "Add five MX GL rifles, each with flashlight side attachment, a full 30 rounds magazine loaded into the gun and a full 3Rnd HE grenade magazine loaded into the grenade launcher:\n<sqf>cursorObject addWeaponWithAttachmentsCargo [[\"arifle_MX_GL_F\", \"\", \"acc_flashlight\", \"\", [\"30Rnd_65x39_caseless_mag\", 30], [\"3Rnd_HE_Grenade_shell\", 2], \"\"], 5];</sqf>",
+    "Add one MX rifle without any attachments or magazines event though the class has linked items:\n<sqf>cursorObject addWeaponWithAttachmentsCargo [[\"arifle_MX_Holo_pointer_F\", \"\", \"\", \"\", [], [], \"\"], 1];</sqf>",
+    "Add all weapons on player with attachments:\n<sqf>{ cursorObject addWeaponWithAttachmentsCargo [_x, 1] } forEach weaponsItems player;</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "addWeaponWithAttachmentsCargo",
+  "name": "addWeaponWithAttachmentsCargo",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponWithAttachmentsCargoGlobal",
+    "weaponsItems",
+    "addWeaponCargo",
+    "addWeaponCargoGlobal",
+    "clearWeaponCargo",
+    "getWeaponCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "container",
+          [
+            "weaponConfiguration",
+            "weaponsCount"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "container to add the weapon to. Might be a backpack, ammobox or vehicle.",
+          "name": "container",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "weaponConfiguration",
+              "type": {
+                "ArraySized": [
+                  {
+                    "default": null,
+                    "desc": "Weapon class name from [[:Category:CfgWeapons|CfgWeapons]]",
+                    "name": "weapon",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "Muzzle attachment class name. Use \"\" if not needed.",
+                    "name": "muzzle",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "Side rail attachment class name. Use \"\" if not needed.",
+                    "name": "flashlight",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "Top rail attachment class name. Use \"\" if not needed.",
+                    "name": "optics",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "Use [] if not needed",
+                    "name": "primaryMuzzle",
+                    "since": null,
+                    "type": {
+                      "ArraySized": [
+                        {
+                          "default": null,
+                          "desc": "Magazine class name",
+                          "name": "primaryMuzzleMagazine",
+                          "since": null,
+                          "type": "String"
+                        },
+                        {
+                          "default": null,
+                          "desc": "Ammo count in magazine (will be clipped to values between 0 and the maximum capacity of the magazine class)",
+                          "name": "primaryAmmoCount",
+                          "since": null,
+                          "type": "Number"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "default": null,
+                    "desc": "Use [] if not needed",
+                    "name": "secondaryMuzzle",
+                    "since": null,
+                    "type": {
+                      "ArraySized": [
+                        {
+                          "default": null,
+                          "desc": "Magazine class name",
+                          "name": "secondaryMuzzleMagazine",
+                          "since": null,
+                          "type": "String"
+                        },
+                        {
+                          "default": null,
+                          "desc": "Ammo count in magazine (will be clipped to values between 0 and the maximum capacity of the magazine class)",
+                          "name": "secondaryAmmoCount",
+                          "since": null,
+                          "type": "Number"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "default": null,
+                    "desc": "Underbarrel rail attachment class name. Use \"\" if not needed.",
+                    "name": "bipod",
+                    "since": null,
+                    "type": "String"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of weapons to add",
+              "name": "weaponsCount",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

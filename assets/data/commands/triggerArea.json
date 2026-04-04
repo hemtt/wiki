@@ -41,15 +41,10 @@
             },
             {
               "default": null,
-              "desc": null,
+              "desc": "in range 0..360",
               "name": "angle",
               "since": null,
-              "type": {
-                "NumberRange": [
-                  0,
-                  360
-                ]
-              }
+              "type": "Number"
             },
             {
               "default": null,

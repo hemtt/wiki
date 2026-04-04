@@ -36,21 +36,9 @@
         "Array": [
           {
             "Item": {
+              "desc": "or [[Object]]",
               "name": "groupOrUnit",
-              "type": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Group"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  }
-                ]
-              }
+              "type": "Group"
             }
           },
           {

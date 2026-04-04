@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Local",
+  "description": "Set object's up vector. Direction of the object remain unchanged. Default object's [[vectorUp]] is [0,0,1].",
+  "effect_loc": "Global",
+  "examples": [
+    "Turn object upside down:\n<sqf>_obj setVectorUp [0, 0, -1];</sqf>",
+    "Align object with the terrain underneath:\n<sqf>_obj setVectorUp surfaceNormal getPosASL _obj;</sqf>"
+  ],
+  "groups": [
+    "Math - Vectors"
+  ],
+  "id": "setVectorUp",
+  "name": "setVectorUp",
+  "problem_notes": [],
+  "see_also": [
+    "vectorDir",
+    "vectorUp",
+    "setVectorDir",
+    "setVectorDirAndUp",
+    "vectorDiff",
+    "vectorAdd",
+    "vectorMultiply",
+    "vectorCrossProduct",
+    "vectorDistance",
+    "vectorMagnitudeSqr",
+    "vectorDistanceSqr",
+    "vectorCos",
+    "vectorMagnitude",
+    "vectorDotProduct",
+    "vectorNormalized",
+    "vectorFromTo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "vectorUp"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "(normalised)",
+          "name": "vectorUp",
+          "type": "Vector3d"
+        }
+      }
+    }
+  ]
+}

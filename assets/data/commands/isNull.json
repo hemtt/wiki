@@ -35,56 +35,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Control]], [[Display]], [[Group]], [[Location]], [[Task]], [[Script Handle]], [[Config]] or [[Diary Record]]",
           "name": "entity",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Control"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Display"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Location"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Task"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "ScriptHandle"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Config"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "DiaryRecord"
-              }
-            ]
-          }
+          "type": "Object"
         }
       }
     }

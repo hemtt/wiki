@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns value of the given scenario attribute from the 1st tier. Since only config properties have values, the attribute should be config property.\nIf it is not found or config class is given, the return is [[nil]]. If the attribute defined in multiple places, the command checks them in the following order:\n# [[Description.ext]] entry\n# [[Eden Editor: Scenario Attributes|Eden Editor]] scenario attribute\n\nSo if an attribute exists in both places, the [[Description.ext]] value is used.\nPreviously, scenario attributes were extracted from Description.ext using [[missionConfigFile]].\nThat still works, but it ignores attributes set directly in the editor and should not be used anymore.\n\n{{Feature|important|This command cannot force return type, it will return the value of the type given in config. Use [[isEqualType]] to additionally reaffirm the correct type if necessary to account for human error.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _respawnDelay = getMissionConfigValue [\"respawnDelay\", 0];\t\t\t// returns the real, defined respawn delay value\nprivate _respawnDelay = getNumber (missionConfigFile >> \"respawnDelay\");\t// old approach, ignoring the Eden Editor-set value\n</sqf>"
+  ],
+  "groups": [
+    "Config",
+    "Mission Information"
+  ],
+  "id": "getMissionConfigValue",
+  "name": "getMissionConfigValue",
+  "problem_notes": [],
+  "see_also": [
+    "getMissionConfig",
+    "missionConfigFile",
+    "BIS_fnc_getParamValue",
+    "Mission_Parameters"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "attribute"
+      },
+      "ret": {
+        "desc": ", [[String]], [[Boolean]] or [[Array]], depending on the attribute value type. [[nil|Nil]] when the attribute is undefined.",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "attribute name",
+          "name": "attribute",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "attribute",
+          "defaultValue"
+        ]
+      },
+      "ret": {
+        "desc": ", [[String]], [[Boolean]] or [[Array]], depending on the attribute value type. Default value when the attribute is undefined.",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "attribute name",
+              "name": "attribute",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "value used when the attribute is undefined",
+              "name": "defaultValue",
+              "type": "Anything"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

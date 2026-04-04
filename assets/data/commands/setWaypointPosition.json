@@ -1,0 +1,83 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attempts to move given waypoint to a random position inside a circle with the given center and radius. \nThe waypoint will be placed similar to {{hl|\"NONE\"}} attribute in [[setVehiclePosition]], even if the radius is 0, which means it could still be off center. In order to force waypoint to the exact position, similar to {{hl|\"CAN_COLLIDE\"}} attribute, use a negative radius (see {{Link|#Example 2}}).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointPosition [position player, 0];</sqf>",
+    "Exact placement using a negative ''radius'' and [[Position#PositionASL|PositionASL]]:\n<sqf>_wp setWaypointPosition [getPosASL player, -1];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "setWaypointPosition",
+  "name": "setWaypointPosition",
+  "problem_notes": [],
+  "see_also": [
+    "waypointPosition",
+    "setWPPos",
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          [
+            "center",
+            "radius"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "or [[Position#PositionAGL|PositionAGL]] or [[Position#PositionASL|PositionASL]] if ''radius'' is negative",
+              "name": "center",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "random placement radius in meters. Set it to -1 and convert center to [[Position#PositionASL|PositionASL]] for the exact center placement",
+              "name": "radius",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

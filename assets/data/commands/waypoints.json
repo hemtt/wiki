@@ -54,21 +54,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Object]]",
           "name": "groupName",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              }
-            ]
-          }
+          "type": "Group"
         }
       }
     }

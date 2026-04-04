@@ -1,0 +1,120 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds a column at given position.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_ctrl lnbAddColumn 0.8;</sqf>",
+    "<sqf>lnbAddColumn [105, 0.8];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "id": "lnbAddColumn",
+  "name": "lnbAddColumn",
+  "problem_notes": [],
+  "see_also": [
+    "lnbAddArray",
+    "lnbAddRow",
+    "lnbDeleteColumn",
+    "lnbDeleteRow",
+    "lnbGetColumnsPosition",
+    "lnbSetColumnsPos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "returns the zero based index of the new column",
+        "type": {
+          "OneOf": [
+            {
+              "desc": null,
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "type": "Nothing"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "position of the new column where 0 means all the way to the left and 1 all the way to the right of the control",
+          "name": "position",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "controlOrIdc",
+          "position"
+        ]
+      },
+      "ret": {
+        "desc": "returns the zero based index of the new column",
+        "type": {
+          "OneOf": [
+            {
+              "desc": null,
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "type": "Nothing"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control or the idc of the control",
+              "name": "controlOrIdc",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Control"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "position of the new column where 0 means all the way to the left and 1 all the way to the right of the control",
+              "name": "position",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

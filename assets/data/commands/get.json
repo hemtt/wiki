@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Retrieves a value out of a [[HashMap]] after looking it up by its key.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _myValue = _myHashMap get \"a\";</sqf>"
+  ],
+  "groups": [
+    "HashMap"
+  ],
+  "id": "get",
+  "name": "get",
+  "problem_notes": [],
+  "see_also": [
+    "HashMap",
+    "getOrDefault"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "hashMap",
+          "key"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "hashMap",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "desc": ", or [[Nothing]] if ''key'' is not found",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "case sensitive key",
+          "name": "key",
+          "type": "HashMapKey"
+        }
+      }
+    }
+  ]
+}

@@ -35,21 +35,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Location]]",
           "name": "object",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Location"
-              }
-            ]
-          }
+          "type": "Object"
         }
       }
     }

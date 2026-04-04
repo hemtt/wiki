@@ -28,21 +28,9 @@
       },
       "left": {
         "Item": {
+          "desc": "or [[Position]]",
           "name": "var1",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position"
-              }
-            ]
-          }
+          "type": "Object"
         }
       },
       "ret": {
@@ -51,21 +39,9 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Position]]",
           "name": "var2",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Position"
-              }
-            ]
-          }
+          "type": "Object"
         }
       }
     },

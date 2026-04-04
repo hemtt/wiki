@@ -109,6 +109,15 @@
       "status": "Passed"
     },
     {
+      "description": "Assigns the result of expression on the right to the variable on the left. Technically this is not a command and it is not listed in [[supportInfo]]; this is more of a compiler instruction.\n{{Feature|important|The following structure is invalid: <sqf inline>a = b = c = 4;</sqf>.}}",
+      "groups": [
+        "Variables"
+      ],
+      "id": "a_%3D_b",
+      "name": "=",
+      "status": "Passed"
+    },
+    {
       "description": "Returns [[true]] if '''a''' is greater than '''b''', else returns [[false]].",
       "groups": [
         "Math",
@@ -252,16 +261,6 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "a_%3D_b",
-      "name": "a_%3D_b",
-      "status": "Failed"
-    },
-    {
       "description": "Returns absolute (positive) value of a real number.",
       "groups": [
         "Math"
@@ -378,7 +377,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: '{{Columns|2|'"
+        "Failed to parse array with element line: 'arguments: [[Anything]] or [[nil]] - arguments passed to the action'"
       ],
       "groups": [],
       "id": "actionParams",
@@ -1006,14 +1005,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Adds (or inserts when index is given) a new waypoint to a group.\n\nThe waypoint is placed randomly within a circle with the given center and radius.\n\n{{Feature|informative|For older titles and prior to {{arma3}} v1.90, use [[setWaypointPosition]] if you need exact waypoint placement.}}",
+      "groups": [
+        "Waypoints"
       ],
-      "groups": [],
       "id": "addWaypoint",
       "name": "addWaypoint",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Add a weapon to a unit. For a global version of this command see [[addWeaponGlobal]].\n\nInfantry units can only carry a specific number of weapons, once the weapon slots are filled, any further [[addWeapon]] commands are ignored.\n\n{{Feature|informative|a '''magazine''' must be added first for the added weapon to be loaded.}} \n\n{{Feature|warning| In Arma 3 this command can also link items to the inventory slots, the functionality is identical to [[linkItem]] command, which it global and thus differ in how it should be used.}}",
@@ -1081,24 +1079,22 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'primaryMuzzle: [[Array]] with [primaryMuzzleMagazine, primaryAmmoCount] - Use [] if not needed'"
+      "description": "Adds a weapon into the cargo space of a vehicle / box with given attachments / magazines. Ignores available cargo space. If the weapon class has any pre-attached items (LinkedItems), they are removed and new items, supplied via command arguments, are added.",
+      "groups": [
+        "Vehicle Inventory"
       ],
-      "groups": [],
       "id": "addWeaponWithAttachmentsCargo",
       "name": "addWeaponWithAttachmentsCargo",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'primaryMuzzle: [[Array]] with [primaryMuzzleMagazine, primaryAmmoCount] - Use [] if not needed'"
+      "description": "Adds a weapon into the cargo space of a vehicle / box with given attachments / magazines. Ignores available cargo space. If the weapon class has any pre-attached items (LinkedItems), they are removed and new items, supplied via command arguments, are added.",
+      "groups": [
+        "Vehicle Inventory"
       ],
-      "groups": [],
       "id": "addWeaponWithAttachmentsCargoGlobal",
       "name": "addWeaponWithAttachmentsCargoGlobal",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns a list of files present in the addon.<br>\n{{Feature|informative|Querying protected {{hl|.ebo}} addons will return an empty array {{hl|[]}}.}}",
@@ -1160,7 +1156,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: 'Each array consists of:'"
+        "Failed to parse array with element line: '0: Altitude (-60000 metres to 10^7 metres)'"
       ],
       "groups": [],
       "id": "airDensityCurveRTD",
@@ -1942,14 +1938,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns the team the unit belongs to. Possible values:\n\n* {{hl|\"MAIN\"}} (default and white)\n* {{hl|\"RED\"}}\n* {{hl|\"GREEN\"}}\n* {{hl|\"BLUE\"}}\n* {{hl|\"YELLOW\"}}\n* {{GVI|arma3|1.94}} {{hl|\"\"}} if given unit is [[objNull]] or [[remoteControl]]ling another unit",
+      "groups": [
+        "Object Manipulation"
       ],
-      "groups": [],
       "id": "assignedTeam",
       "name": "assignedTeam",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the vehicle to which a unit is assigned, usually with ''assignAsXXX'' command. If no vehicle is assigned [[objNull]] is returned.\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}",
@@ -3318,14 +3313,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Order the given unit to fire on the given target (via the radio).\nIf the target is [[objNull]], the unit is ordered to fire on its current target (set with [[doTarget]] or [[commandTarget]]).",
+      "groups": [
+        "Unit Control"
       ],
-      "groups": [],
       "id": "commandFire",
       "name": "commandFire",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Order the given unit(s) to follow another from his own group (via radio).\nIt can also be used to resume unit formation after e.g [[doStop]].",
@@ -3849,14 +3843,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Creates child display of given display and loads from \"resourceName\". The notable difference between [[createDisplay]] and [[createDialog]] is that with [[createDisplay]] the player would be able to move around while the display is shown.<br>\nDisplays created with [[createDisplay]] or [[createDialog]] will take control of the mouse pointer and will close when user presses {{Controls|Esc}}.\n{{Feature|arma3|Since {{arma3}} v1.50 [[createDisplay]] returns [[Display]] and will first look in [[Description.ext|description.ext]] for resourceName config, if not found, it will then look in main config.}}\n{{Feature|informative|If an ''overlay'' is needed instead, use [[cutRsc]].}}",
+      "groups": [
+        "GUI Control"
       ],
-      "groups": [],
       "id": "createDisplay",
       "name": "createDisplay",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Opens gear dialog for given unit.\n{{Feature|informative|[[action]] command can also be used:<sqf>player action [\"Gear\", player];</sqf>}}",
@@ -4030,7 +4023,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Unknown simple type: target"
       ],
       "groups": [],
       "id": "createTarget",
@@ -4059,7 +4052,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Failed to parse parameter for command 'createTrigger': 'makeGlobal: [[Boolean]] - (Optional - default [[true]]) locality flag\n* [[true]] - trigger is global {{Icon|globalEffect|24}}\n* [[false]] - trigger is local {{Icon|localEffect|24}}'"
       ],
       "groups": [],
       "id": "createTrigger",
@@ -5791,14 +5784,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns player's custom waypoint ({{Controls|LShift|LMB}}) position.",
+      "groups": [
+        "Waypoints"
       ],
-      "groups": [],
       "id": "customWaypointPosition",
       "name": "customWaypointPosition",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Terminates the effect in the given layer by fading it out according to the given duration. If named layer is used and it doesn't exist, it will be allocated. For title layer see [[titleFadeOut]].\n{{Feature|arma3|For greater efficiency and ease of moddability, it is recommended to use named layers.}}",
@@ -6940,14 +6932,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Executes ''code''. Used as part of a construct, such as [[while]], [[with]], [[for]] and [[switch]]. The ''code'' is always executed in [[missionNamespace]] unless [[do]] is used with [[with]] as an argument.",
+      "groups": [
+        "Program Flow"
       ],
-      "groups": [],
       "id": "do",
       "name": "do",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Performs given [[Eden Editor: Actions|Eden Editor action]].\n{{Feature|warning|\nPrior to {{GVI|arma3|2.12|size= 0.75}} it was possible to use this command outside of [[:Category:Eden Editor|Eden Editor]].<br>\nFor example <sqf inline>do3DENAction \"MissionSave\";</sqf> would wipe the [[mission.sqm]] without a way to restore it when executed accidentally during preview.\n}}",
@@ -7191,14 +7182,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: particlearray"
+      "description": "Creates a particle effect.\nThis command is used to create smoke, fire and similar effects.\nThe particles are single polygons with single textures that always face the player.\nThey can be set to dynamically change their position, size, direction, can be set to different weights and to be more or less dependent on the wind.",
+      "groups": [
+        "Particles"
       ],
-      "groups": [],
       "id": "drop",
       "name": "drop",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -7964,14 +7954,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: '\"DoNotPlan\" - used when not moving'"
+      "description": "Return expected destination of unit as an array.",
+      "groups": [
+        "Unit Control",
+        "AI Behaviour"
       ],
-      "groups": [],
       "id": "expectedDestination",
       "name": "expectedDestination",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Creates a log file containing an overview on all JIP (network) messages currently in the JIP queue.\nThe file is created in the same directory as [[Crash_Files|.rpt file]].\n{{Feature|informative|[[BattlEye]]'s RCON variant of this command is {{hl|#exportJIPqueue}} (see also [[Multiplayer Server Commands]]).}}\nFile name examples:\n* {{hl|jipqueue_12024_2024-10-25_11-31-11.log}} (using {{hl|#exportJIPqueue}} chat command)\n* {{hl|jipqueue-12024-2024-10-25_11-31-11.fileNameParameter.log}} (using [[exportJIPMessages]] sqf command)\nFile content example: <spoiler text=\"Show example\">\n<pre>\ntime = 78814.063\n\n==================================================================================================\nObjects: \n---------------------------------------------------------------------------------------------\n\tType_96 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_107 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_109 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_113 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_118 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tUnknown creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_332 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_334 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_198 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tUnknown creator:4 networkId:0 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_332 creator:4 networkId:1 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_334 creator:4 networkId:2 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_109 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_113 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_118 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_195 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:3 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:4 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:5 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:6 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:7 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:8 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:12 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:13 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:15 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:49 - owner NAME (1c7f3773)\n\n==================================================================================================\n_initMessages - Total: 7601\n\t            Type_330 :     4\n\t             Type_60 :     6\n\t            Type_272 :    31\n\t            Type_273 :    31\n\t            Type_274 :  4481\n\t             Type_64 :   435\n\t            Type_291 :   147\n\t            Type_292 :     1\n\t            Type_187 :    50\n\t            Type_248 :  1846\n\t             Type_53 :    70\n\t             Type_54 :   341\n\t            Type_294 :     3\n\t             Type_10 :    69\n\t            Type_385 :     1\n\t            Type_295 :     1\n\t            Type_296 :    16\n\t            Type_328 :     4\n\t            Type_329 :     4\n\t             Type_59 :    60\n\n==================================================================================================\n_initMessagesRE - Total: 0\n\n==================================================================================================\n_jipMarkerInfos - Total: 0\n\n</pre>\n</spoiler>",
@@ -8668,14 +8658,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Return the current task of the unit in the formation.",
+      "groups": [
+        "Groups"
       ],
-      "groups": [],
       "id": "formationTask",
       "name": "formationTask",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -8802,14 +8791,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Retrieves a value out of a [[HashMap]] after looking it up by its key.",
+      "groups": [
+        "HashMap"
       ],
-      "groups": [],
       "id": "get",
       "name": "get",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns state of given [[Eden Editor: Actions|Eden Editor action]].",
@@ -8833,7 +8821,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Unknown simple type: array"
       ],
       "groups": [],
       "id": "get3DENAttributes",
@@ -8937,7 +8925,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Unknown simple type: array"
       ],
       "groups": [],
       "id": "get3DENMissionAttributes",
@@ -8945,14 +8933,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: ''"
+      "description": "Returns the [[Eden Entity]] the mouse is hovering over in [[:Category:Eden Editor|Eden Editor]].",
+      "groups": [
+        "Eden Editor"
       ],
-      "groups": [],
       "id": "get3DENMouseOver",
       "name": "get3DENMouseOver",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -8996,7 +8983,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: '{{Columns|3|'"
+        "Failed to parse array with element line: '{{hl|\"rain\"}}'"
       ],
       "groups": [],
       "id": "getAllEnv3DSoundControllers",
@@ -9006,7 +8993,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: '{{Columns|3|'"
+        "Failed to parse array with element line: '{{hl|\"rain\"}}'"
       ],
       "groups": [],
       "id": "getAllEnvSoundControllers",
@@ -9045,7 +9032,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: '{{Columns|4|'"
+        "Failed to parse array with element line: '{{hl|\"rpm\"}}'"
       ],
       "groups": [],
       "id": "getAllSoundControllers",
@@ -9532,7 +9519,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: ''"
+        "Failed to parse array with element line: 'lastEntityCausingDamage'"
       ],
       "groups": [],
       "id": "getEntityInfo",
@@ -9585,14 +9572,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: ''"
+      "description": "Returns array of the starting topic and hint the given field manual should display.",
+      "groups": [
+        "System"
       ],
-      "groups": [],
       "id": "getFieldManualStartPage",
       "name": "getFieldManualStartPage",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "A getter for [[forceFlagTexture]]. Forced texture is different from your normal flag texture, which can be retrieved with [[flagTexture]]",
@@ -9846,14 +9832,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Returns value of the given scenario attribute from the 1st tier. Since only config properties have values, the attribute should be config property.\nIf it is not found or config class is given, the return is [[nil]]. If the attribute defined in multiple places, the command checks them in the following order:\n# [[Description.ext]] entry\n# [[Eden Editor: Scenario Attributes|Eden Editor]] scenario attribute\n\nSo if an attribute exists in both places, the [[Description.ext]] value is used.\nPreviously, scenario attributes were extracted from Description.ext using [[missionConfigFile]].\nThat still works, but it ignores attributes set directly in the editor and should not be used anymore.\n\n{{Feature|important|This command cannot force return type, it will return the value of the type given in config. Use [[isEqualType]] to additionally reaffirm the correct type if necessary to account for human error.}}",
+      "groups": [
+        "Config",
+        "Mission Information"
       ],
-      "groups": [],
       "id": "getMissionConfigValue",
       "name": "getMissionConfigValue",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -9970,14 +9956,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns appID of the DLC the object belongs to or [[nil]] if object is vanilla.",
+      "groups": [
+        "DLC"
       ],
-      "groups": [],
       "id": "getObjectDLC",
       "name": "getObjectDLC",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns Field of View of the given object in [[rad]]ians. Static objects return default value, which is 1.\nFOV of [[objNull]] is 0.\nObject FOV is indirectly connected with optics magnification or player view zoom, the narrower the angle the greater the zoom.\n{{Feature|informative|The FOV returned by this command doesn't change if user has custom FOV set in profile. Use it in combination with [[getResolution]] to adjust for the difference if required.}}",
@@ -10240,14 +10225,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse end of number range '1, -1 in case of error (e.g provided a non-human)': invalid digit found in string"
+      "description": "Gets provided player's Voice over Network (VoN) volume.",
+      "groups": [
+        "Radio and Chat"
       ],
-      "groups": [],
       "id": "getPlayerVoNVolume",
       "name": "getPlayerVoNVolume",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns object or location position. If the argument is an object, the return value is in format [[Position#PositionAGLS|PositionAGLS]].<br>\nThe alternative syntax gets the position given distance and heading away from provided object or position - the command equivalent of [[BIS_fnc_relPos]].\n\n{{Feature|important|\nDo '''not''' use this command's first syntax to get an object's position in 3D format:\n* the Z value from this command is '''relative''' to the surface underneath, and there is no compatible setter command to use it with;<br>the commonly misused code: <sqf inline>_obj1 setPos getPos _obj2</sqf> is '''absolutely wrong'''\n* this command is significantly '''slower''' than other [[:Category:Command Group: Positions|position commands]] because it has to calculate the surface below a position from objects in the (2D) area; its performance therefore suffers from areas with a high density of objects such as cities, and can easily be ~20x slower than other, simpler position commands - see [[Code Optimisation#getPos.2A and setPos.2A|this benchmark]].\nThe '''only''' correct usage of this command is to determine the altitude of an object '''from the surface below it''' (see {{Link|#Example 4}}).\n}}",
@@ -10577,14 +10561,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns all Thermal Imaging parameters.\n{{{!}} class=\"wikitable align-center-col-2\"\n! Parameter\n! Default Value\n! Description\n{{!}}-\n{{!}} {{hl|OutputRangeStart}}\n{{!}} 0.1\n{{!}} Thermal output minimal value\n{{!}}-\n{{!}} {{hl|OutputRangeWidth}}\n{{!}} 0.8\n{{!}} Thermal output width\n{{!}}-\n{{!}} {{hl|FilmGrain}}\n{{!}} 1\n{{!}} Film grain\n{{!}}-\n{{!}} {{hl|Blur}}\n{{!}} 1\n{{!}} Blur\n{{!}}-\n{{!}} {{hl|UpdateHistogram}}\n{{!}} 1\n{{!}} Histogram\n{{!}}-\n{{!}} {{GVI|arma3|2.20|size= 0.75}} {{hl|MaxResolution}}\n{{!}} -1\n{{!}} Maximum vertical resolution\n{{!}}-\n{{!}}}\n{{Feature|informative|\n* The output formula is as follows: {{hl|OutputRangeStart + ''thermalValue'' &times; OutputRangeWidth}}, making the default range 0.1..0.9.\n* {{GVI|arma3|2.20|size= 0.75}} The {{hl|MaxResolution}} setting takes into account the aspect ratio of the screen. A value of 1080 on a 16:9 screen provides a resolution of 1920&times;1080.\n}}",
+      "groups": [
+        "Environment"
       ],
-      "groups": [],
       "id": "getTIParameters",
       "name": "getTIParameters",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "A getter for [[setTerrainGrid]], returns the current terrain grid.",
@@ -10617,7 +10600,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Failed to parse array with element line: 'terrainGridWidth: [[Number]] width of each terrain grid, in meters (also known as \"cell size\")'"
+        "Failed to parse array with element line: 'The result of {{hl|landGridWidth * landGridSize}} and {{hl|terrainGridWidth * terrainGridSize}} is always equal to the [[worldSize]].'"
       ],
       "groups": [],
       "id": "getTerrainInfo",
@@ -10769,14 +10752,14 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'clientStateNumber: [[String]] user client state (see [[getClientStateNumber]])'"
+      "description": "Returns extended information about given server user.",
+      "groups": [
+        "Multiplayer",
+        "Object Detection"
       ],
-      "groups": [],
       "id": "getUserInfo",
       "name": "getUserInfo",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns array of user text variables used in MFD.",
@@ -10797,14 +10780,15 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns the value of variable in the variable space assigned to various data types.\nAll available data types combinations:\n{{{!}} class=\"wikitable\"\n!colspan=\"2\"{{!}}Primary syntax ([[String]]) !! colspan=\"2\"{{!}}Alternative syntax ([[Array]])\n{{!}}-\n{{!}}'''Code'''\n{{!}}'''Since'''\n{{!}}'''Code'''\n{{!}}'''Since'''\n{{!}}-\n{{!}} [[Namespace]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Namespace]] getVariable [[Array]] {{!}}{{!}} {{arma2oa}} v1.60\n{{!}}-\n{{!}} [[Object]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Object]] getVariable [[Array]] {{!}}{{!}} - \n{{!}}-\n{{!}} [[Group]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Group]] getVariable [[Array]] {{!}}{{!}} -\n{{!}}-\n{{!}} [[Team Member]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Team Member]] getVariable [[Array]] {{!}}{{!}} - \n{{!}}-\n{{!}} [[Task]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Task]] getVariable [[Array]] {{!}}{{!}} {{arma3}} v1.68\n{{!}}-\n{{!}} [[Location]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Location]] getVariable [[Array]] {{!}}{{!}} {{arma3}} v1.68\n{{!}}-\n{{!}} [[Control]] getVariable [[String]] {{!}}{{!}} - {{!}}{{!}} [[Control]] getVariable [[Array]] {{!}}{{!}} {{arma3}} v1.56\n{{!}}-\n{{!}} [[Display]] getVariable [[String]] {{!}}{{!}} {{arma3}} v1.56 {{!}}{{!}} [[Display]] getVariable [[Array]] {{!}}{{!}} {{arma3}} v1.56\n{{!}}}\n\n{{Feature|important|When variable is [[setVariable|set]] on a [[Task]], it is not actually set on the task itself, but on the FSM attached to the task.<br>\nIf there is no FSM, [[getVariable]] will not work.}}\n{{Feature| arma3 | In the case of Alt Syntax usage in {{arma3}}, ''defaultValue'' will be returned if:\n* Requested variable is either undefined or [[nil]]\n* Variable namespace is null ([[objNull]], [[grpNull]], etc.)}}",
+      "groups": [
+        "Variables",
+        "Namespaces",
+        "Multiplayer"
       ],
-      "groups": [],
       "id": "getVariable",
       "name": "getVariable",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -10856,14 +10840,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse end of number range '1 where 0 is waterproof and 1 is full leak': invalid digit found in string"
+      "description": "Get an object's water intake ratio when immersed.",
+      "groups": [
+        "Object Manipulation"
       ],
-      "groups": [],
       "id": "getWaterLeakiness",
       "name": "getWaterLeakiness",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -11485,7 +11468,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Failed to parse parameter for command 'inArea': 'area: [[Object]], [[String]], [[Location]]\n* [[Object]] - trigger\n* [[String]] - marker name\n* [[Location]] - location'"
       ],
       "groups": [],
       "id": "inArea",
@@ -11691,14 +11674,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'The results are also sorted, closest selection first'"
+      "description": "Finds named selections in object which are in specified LOD, intersected by given section of a line. Return value is in the form of [selection, distance]. Multiple returned arrays are nested within a single array. No intersection returns []. ''lodName'' could be one of the following: \n* \"FIRE\"\n* \"VIEW\"\n* \"GEOM\"\n* \"IFIRE\" - (\"I\" stands for Indirect, almost the same as FIRE)\n* {{GVI|arma3|2.02|size= 0.75}} \"PHYSX\" - PhysX geometry LOD",
+      "groups": [
+        "Math - Geometry"
       ],
-      "groups": [],
       "id": "intersect",
       "name": "intersect",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if the [[:Category:Eden Editor|Eden Editor]] is currently being used.",
@@ -12289,14 +12271,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Checks if given position is inside road segment. Same as [[roadAt]], only return is boolean instead of road object.",
+      "groups": [
+        "Roads and Airports"
       ],
-      "groups": [],
       "id": "isOnRoad",
       "name": "isOnRoad",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns whether Picture-In-Picture video option (Render to Texture) is enabled or not.",
@@ -12452,14 +12433,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns [[true]] if stress damage is enabled in the game settings. A getter for [[enableStressDamage]].\n{{Feature|afm}}",
+      "groups": [
+        "RTD"
       ],
-      "groups": [],
       "id": "isStressDamageEnabled",
       "name": "isStressDamageEnabled",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns wether or not the unit is in the process of switching weapon.",
@@ -12517,14 +12497,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Returns true if UAV is connectable by AV terminal(s).",
+      "groups": [
+        "Remote Control"
       ],
-      "groups": [],
       "id": "isUAVConnectable",
       "name": "isUAVConnectable",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns true if UAV is connected to some terminal. Termnal onnection is handled [[local]]ly, therefore the result of this command will be returned only for the client on which this command is executed.",
@@ -12824,7 +12803,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Failed to parse parameter for command 'land': 'mode: [[String]] - can be one of:\n* \"LAND\" - Complete stop\n* \"GET IN\" - Hovering very low, for another unit to get in\n* \"GET OUT\" - Hovering low, for another unit to get out\n* {{GVI|arma2|1.00|size= 0.75}} \"NONE\" - Cancel a landing'"
       ],
       "groups": [],
       "id": "land",
@@ -13517,14 +13496,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: nil"
+      "description": "Adds a column at given position.",
+      "groups": [
+        "GUI Control - ListNBox"
       ],
-      "groups": [],
       "id": "lnbAddColumn",
       "name": "lnbAddColumn",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Adds a row of strings.",
@@ -13957,7 +13935,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Unknown simple type: )"
+        "Param `variable = value <span style=\"margin-left: 7em\">'''{{Color|red|From {{arma2}} v1.00 until {{arma3}} v1.54}}''' - see '''` not found in pool"
       ],
       "groups": [],
       "id": "local",
@@ -14091,7 +14069,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Failed to parse parameter for command 'lockedCameraTo': 'return: Can be one of:\n* [[Nothing]] - not locked\n* [[Object]] - if locked to an object\n* [[Position#PositionASL|PositionASL]] - if locked to a position'"
       ],
       "groups": [],
       "id": "lockedCameraTo",
@@ -14239,14 +14217,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Param `class` not found in pool"
+      "description": "Returns an array of subarrays with the type names and ammo left of all the vehicle's cargo or container magazines.",
+      "groups": [
+        "Vehicle Inventory"
       ],
-      "groups": [],
       "id": "magazinesAmmoCargo",
       "name": "magazinesAmmoCargo",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -14341,14 +14318,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "The main syntax enables/disables continuous centering of the main map type control on the camera position. Needs to be executed once.<br>\nThe alternative syntax centers mini map type control on camera. Needs to be executed each frame (preferably inside an {{hl|onDraw}} event handler).",
+      "groups": [
+        "GUI Control - Map"
       ],
-      "groups": [],
       "id": "mapCenterOnCamera",
       "name": "mapCenterOnCamera",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the map grid position of an object or position.<br>\nThe format is determined by the Grid format specified in the CfgWorlds for the current world. Eg: \"024577\" or \"De82\" or similar.",
@@ -14443,14 +14419,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns if the marker is drawn with shadow enabled.",
+      "groups": [
+        "Markers"
       ],
-      "groups": [],
       "id": "markerShadow",
       "name": "markerShadow",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -14703,15 +14678,12 @@
     },
     {
       "description": "Sets weblink (URL) of given menu strip entry, subject to {{hl|allowedHTMLLoadURIs[]}} whitelisting in [[CfgCommands]] config.",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
       "groups": [
         "GUI Control - Menu"
       ],
       "id": "menuSetURL",
       "name": "menuSetURL",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets new value into menu entry on given path.",
@@ -15268,16 +15240,6 @@
       "id": "nearestBuilding",
       "name": "nearestBuilding",
       "status": "Passed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "nearestLocation",
-      "name": "nearestLocation",
-      "status": "Failed"
     },
     {
       "description": "Find the nearest location having a non-empty speech.\n{{Feature|arma3|No locations are dubbed in {{arma3}}.}}",
@@ -16664,14 +16626,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: '{{Columns|4|'"
+      "description": "Returns currently set [[Arma_3:_CfgWorlds_Config_Reference#class_RainParticles | RainParticles]] params, custom or default.",
+      "groups": [
+        "Environment"
       ],
-      "groups": [],
       "id": "rainParams",
       "name": "rainParams",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the current rainbow intensity.",
@@ -18068,7 +18029,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Param `position` not found in pool"
       ],
       "groups": [],
       "id": "screenToWorld",
@@ -18475,14 +18436,15 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns server's [[Namespace|namespace]].\nThis namespace is only available on the server for the server's uptime duration (same as [[uiNamespace]]).<br>\nAll [[Arma 3: Server Side Scripting|server event handlers]], which are available in [[Arma 3: Server Config File|server config]], use this namespace.",
+      "groups": [
+        "Namespaces",
+        "Variables",
+        "Multiplayer"
       ],
-      "groups": [],
       "id": "serverNamespace",
       "name": "serverNamespace",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Start the provided mission (if it exists) on a dedicated server.",
@@ -19483,24 +19445,22 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Sets if group icons raise [[onGroupIconClick]], [[onGroupIconOverEnter]] and [[onGroupIconOverLeave]] events.",
+      "groups": [
+        "High Command"
       ],
-      "groups": [],
       "id": "setGroupIconsSelectable",
       "name": "setGroupIconsSelectable",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Sets if group icons added with [[addGroupIcon]] are visible on map and in the HUD.",
+      "groups": [
+        "High Command"
       ],
-      "groups": [],
       "id": "setGroupIconsVisible",
       "name": "setGroupIconsVisible",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets the group radio callsign, how it will be displayed in radio chat. Two groups on the same side '''cannot''' have the same callsign (possible on different sides) - see {{Link|#Example 4}}.<br>\nThe identity setup can consist of format keywords (marked with '''%''') and param keywords taken from '''CfgWorlds''' config.\nFormatting is almost like using the [[format]] command but with some special group keywords (see {{Link|#Example 2}}).\n<br>\n<spoiler text=\"Show Arma 3 values table\">\n{{{!}} class=\"wikitable\"\n! %GroupSquad\n! %GroupPlatoon\n! %GroupCompany\n! %GroupNames\n! %GroupColors\n{{!}}- style=\"vertical-align: top\"\n{{!}}\n* \"Squad1\" &rarr; 1\n* \"Squad2\" &rarr; 2\n* \"Squad3\" &rarr; 3\n* \"Squad4\" &rarr; 4\n{{!}}\n* \"Platoon1\" &rarr; 1\n* \"Platoon2\" &rarr; 2\n* \"Platoon3\" &rarr; 3\n* \"Platoon4\" &rarr; 4\n{{!}}\n{{Columns|2|\n* \"CompanyAlpha\" &rarr; Alpha\n* \"CompanyBravo\" &rarr; Bravo\n* \"CompanyCharlie\" &rarr; etc.\n* \"CompanyDelta\"\n* \"CompanyEcho\"\n* \"CompanyFoxtrot\"\n* \"CompanyGolf\"\n* \"CompanyHotel\"\n* \"CompanyIndia\"\n* \"CompanyKilo\"\n* \"CompanyLima\"\n* \"CompanyMike\"\n* \"CompanyNovember\"\n* \"CompanyOscar\"\n* \"CompanyPapa\"\n* \"CompanyQuebec\"\n* \"CompanyRomeo\"\n* \"CompanySierra\"\n* \"CompanyTango\"\n* \"CompanyUniform\"\n* \"CompanyVictor\"\n* \"CompanyWhiskey\"\n* \"CompanyXray\" &rarr; X-Ray\n* \"CompanyYankee\"\n* \"CompanyZulu\"\n}}\n{{!}}\n{{Columns|2|\n* \"Alpha\"\n* \"Bravo\"\n* \"Charlie\"\n* \"Delta\"\n* \"Echo\"\n* \"Foxtrot\"\n* \"Golf\"\n* \"Hotel\"\n* \"November\"\n* \"Kilo\"\n* \"Yankee\"\n* \"Zulu\"\n* \"Convoy\"\n* \"Buffalo\"\n* \"Guardian\"\n* \"Two\"\n* \"Three\"\n* \"Fox\"\n}}\n{{!}}\n* \"GroupColor0\" &rarr; (nothing)\n* \"GroupColor1\" &rarr; Black\n* \"GroupColor2\" &rarr; Red\n* \"GroupColor3\" &rarr; Green\n* \"GroupColor4\" &rarr; Blue\n* \"GroupColor5\" &rarr; Yellow\n* \"GroupColor6\" &rarr; Orange\n* \"GroupColor7\" &rarr; Pink\n* \"Six\" &rarr; Six\n{{!}}}\n</spoiler>\n<spoiler text=\"Show OFP values table\">\n{{{!}} class=\"wikitable\"\n! Letter\n! Colour\n{{!}}- style=\"vertical-align: top\"\n{{!}}\n{{Columns|2|\n* \"Alpha\"\n* \"Bravo\"\n* \"Charlie\"\n* \"Delta\"\n* \"Echo\"\n* \"Foxtrot\"\n* \"Golf\"\n* \"Hotel\"\n* \"Kilo\"\n* \"Yankee\"\n* \"Zulu\"\n* \"Buffalo\"\n* \"Convoy\"\n* \"Guardian\"\n* \"November\"\n* \"Two\"\n* \"Three\"\n* \"Fox\"\n}}\n{{!}}\n* \"GroupColor0\" &rarr; (nothing)\n* \"GroupColor1\" &rarr; Black\n* \"GroupColor2\" &rarr; Red\n* \"GroupColor3\" &rarr; Green\n* \"GroupColor4\" &rarr; Blue\n* \"GroupColor5\" &rarr; Yellow\n* \"GroupColor6\" &rarr; Orange\n* \"GroupColor7\" &rarr; Pink\n* \"Six\" &rarr; Six\n{{!}}}\n</spoiler>\n{{Feature | ofp |\n* In '''{{ofp}}''', the group ID cannot be freely decided and format must be [letter, colour, picture] or [letter, colour] - ''nameFormat'' '''cannot''' be a custom text - see {{Link|#Example 3}}.\n* The radio callsign strings can be overwritten in a mission by writing [[Stringtable.csv|Stringtable]] entries of the same name. Some entry names: <spoiler>\n* STR_CFG_''GRPNAMES''_'''ALPHA'''\n* STR_CFG_''GRPNAMES''_'''FOX'''\n* STR_CFG_''GRPCOL''_'''BLACK'''\n* STR_CFG_''GRPNAMES''_'''SIX''' (unlike its name suggests, this is a \"group colour\")\n* STR_CFG_FIREFLYBASE\n* STR_CFG_PAPABEAR\n* STR_CFG_HQ_BASE</spoiler>}}",
@@ -19923,24 +19883,22 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Moves the marker. If position is given in 3D format, {{hl|z}} coordinate is stored with the marker and will be used when marker is passed to commands like [[createVehicle]], [[createUnit]], [[createAgent]], [[createMine]], [[setVehiclePosition]] for example. In case of an object, the object's model [0,0,0] is used.\n{{Feature|informative|\n'''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.\nAs such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).\n}}",
+      "groups": [
+        "Markers"
       ],
-      "groups": [],
       "id": "setMarkerPos",
       "name": "setMarkerPos",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Moves the marker. If position is given in 3D format, {{hl|z}} coordinate is stored with the marker and will be used when marker is passed to commands like [[createVehicle]], [[createUnit]], [[createAgent]], [[createMine]], [[setVehiclePosition]] for example. In case of an object, the object's model [0,0,0] is used.",
+      "groups": [
+        "Markers"
       ],
-      "groups": [],
       "id": "setMarkerPosLocal",
       "name": "setMarkerPosLocal",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets the shadow property of given marker.",
@@ -20151,14 +20109,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: )."
+      "description": "Sets material of object selection. The selection number is defined through the [[CfgVehicles Config Reference#hiddenSelections|hiddenselection]][] = {} array in the vehicle's config (starting with 0).",
+      "groups": [
+        "Object Manipulation"
       ],
-      "groups": [],
       "id": "setObjectMaterial",
       "name": "setObjectMaterial",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Set the material of the given selection on all computers in a network session.",
@@ -20280,14 +20237,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: particlearray"
+      "description": "Set parameters to particle source. Array is in format [[ParticleArray]]. <br>\n\nSince Arma 3 version 1.11.114706 you can use this command to overwrite many values set by [[setParticleClass]], particularity those defined in [[ParticleArray]]. Correspondence between CfgCloudlets class param names and command array of params:\n<sqf>\nparticleSource setParticleParams\n[\n\t/*\n\t\tString or Array - If string then the name of the particleShape. And following default values are used:\n\t\t\tparticleFSNtieth = 1\n\t\t\tparticleFSIndex = 0\n\t\t\tparticleFSFrameCount = 1\n\t\t\tparticleFSLoop = 1\n\t*/\n\t[\n\t\tparticleShape,\t\t\t/* String */\n\t\tparticleFSNtieth,\t\t/* Number */\n\t\tparticleFSIndex,\t\t/* Number */\n\t\tparticleFSFrameCount,\t/* Number */\n\t\tparticleFSLoop\t\t\t/* Optional - Number. Default: 1 */\n\t],\n\tanimationName,\t\t\t\t/* String */\n\tparticleType,\t\t\t\t/* String - Enum: Billboard, SpaceObject */\n\ttimerPeriod,\t\t\t\t/* Number */\n\tlifeTime,\t\t\t\t\t/* Number */\n\tpos3D,\t\t\t\t\t\t/* 3D Array of numbers as relative position to particleSource or (if object at index 18 is set) object. \n\t\t\t\t\t\t\t\t\tOr (if object at index 18 is set) String as memoryPoint of object. */\n\tmoveVelocity,\t\t\t\t/* 3D Array of numbers. */\n\trotationVelocity,\t\t\t/* Number */\n\tweight,\t\t\t\t\t\t/* Number */\n\tvolume,\t\t\t\t\t\t/* Number */\n\trubbing,\t\t\t\t\t/* Number */\n\tsizeOverLifetime,\t\t\t/* Array of Numbers */\n\tcolor,\t\t\t\t\t\t/* Array of Array of RGBA Numbers */\n\tanimationSpeed,\t\t\t\t/* Array of Number */\n\trandomDirectionPeriod,\t\t/* Number */\n\trandomDirectionIntensity,\t/* Number */\n\tonTimerScript,\t\t\t\t/* String */\n\tbeforeDestroyScript,\t\t/* String */\n\tobj,\t\t\t\t\t\t/* Object */\n\tangle,\t\t\t\t\t\t/* Optional Number - Default: 0 */\n\tonSurface,\t\t\t\t\t/* Optional Boolean - Default: true */\n\tbounceOnSurface,\t\t\t/* Optional Number - Default: -1 */\n\temissiveColor,\t\t\t\t/* Optional Array of Array of RGBA Numbers - Default [0,0,0,0] */\n\tvectorDirOrVectorDirAndUp\t/* Optional vector dir or [vectorDir, vectorUp]\n\t\tSince Arma 3 v1.92 it is possible to set the initial direction of the SpaceObject\n\t\tSince Arma 3 v2.12 it is possible to use a [vectorDir, vectorUp] array */\n];\n</sqf>",
+      "groups": [
+        "Particles"
       ],
-      "groups": [],
       "id": "setParticleParams",
       "name": "setParticleParams",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets randomization of particle source parameters. Correspondence between CfgCloudlets class param names and command array of params:\n<sqf>\nparticleSource setParticleRandom\n[\n\tlifeTimeVar,\n\tpositionVar,\n\tmoveVelocityVar,\n\trotationVelocityVar,\n\tsizeVar,\n\tcolorVar,\n\trandomDirectionPeriodVar,\n\trandomDirectionIntensityVar,\n\tangleVar,\n\tbounceOnSurfaceVar\n];\n</sqf>",
@@ -20483,14 +20439,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Adds/overrides loadout to a vehicle pylon. {{hl|TransportPylonsComponent}} in vehicle config and {{hl|pylonWeapon}} in the magazine config are required to run.\n{{Feature|informative|This command also adds the corresponding weapon if the vehicle does not have one, but will not remove one that is no longer used.}}",
+      "groups": [
+        "Vehicle Loadouts"
       ],
-      "groups": [],
       "id": "setPylonLoadout",
       "name": "setPylonLoadout",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Overrides default pylons priorities.",
@@ -21217,24 +21172,22 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "[[File:Vectordirandup.jpg|right|300px]] Sets orientation of an object.\nThe command takes 2 vector arrays, one for [[vectorDir]] and one for [[vectorUp]].\nDefault object orientation will always have [[vectorDir]] pointing forward (North) along Y axis and [[vectorUp]] pointing up along Z axis - [[0,1,0],[0,0,1]], as shown on the diagram below (see also [[BIS_fnc_transformVectorDirAndUp]]).<br>\n\nWhen attaching object to an object the axes are relative to the object that gets the attachment.\nIf it is player object for example, then X goes from left to right, Y goes from back to front, and Z goes from down up.<br>\n\nThe [[setDir]] command is incompatible with [[setVectorDirAndUp]] and should not be used together on the same object.\nUsing [[setVectorDirAndUp]] alone should be sufficient for any orientation.",
+      "groups": [
+        "Math - Vectors"
       ],
-      "groups": [],
       "id": "setVectorDirAndUp",
       "name": "setVectorDirAndUp",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Set object's up vector. Direction of the object remain unchanged. Default object's [[vectorUp]] is [0,0,1].",
+      "groups": [
+        "Math - Vectors"
       ],
-      "groups": [],
       "id": "setVectorUp",
       "name": "setVectorUp",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets how much ammunition (compared to a full state defined by the vehicle type) the vehicle has. Note that the ammo will be added only to [[Multiplayer Scripting#Locality|local]] turrets. To check locality of turret use [[turretLocal]].",
@@ -21367,14 +21320,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Sets [[velocity]] vector of an object in m/s.\n\n{{Feature|important|Since {{GVI|arma3|2.06|size= 0.75}} each velocity component is limited to the range +-5000 m/s.}}",
+      "groups": [
+        "Object Manipulation"
       ],
-      "groups": [],
       "id": "setVelocity",
       "name": "setVelocity",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets the velocity (i.e. speed) vector of the given vehicle relative to its model.\n\n{{Feature|important|Since {{GVI|arma3|2.06}}, each velocity component is limited to ±5000 m/s.}}",
@@ -21407,7 +21359,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Unknown simple type: array"
+        "Exceeded maximum recursion depth while parsing Value"
       ],
       "groups": [],
       "id": "setVisibleIfTreeCollapsed",
@@ -21560,14 +21512,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Attempts to move given waypoint to a random position inside a circle with the given center and radius. \nThe waypoint will be placed similar to {{hl|\"NONE\"}} attribute in [[setVehiclePosition]], even if the radius is 0, which means it could still be off center. In order to force waypoint to the exact position, similar to {{hl|\"CAN_COLLIDE\"}} attribute, use a negative radius (see {{Link|#Example 2}}).",
+      "groups": [
+        "Waypoints"
       ],
-      "groups": [],
       "id": "setWaypointPosition",
       "name": "setWaypointPosition",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Attaches a script to a scripted waypoint. In early versions of Arma, command consisted of a script name and additional script arguments and the script had to use [[SQS Syntax]]. The script receives the following arguments in [[Magic Variables#this|_this]] variable: [group, position, target] + [the optional passed arguments]. The optional arguments are [[append]]ed to the end of the arguments array.\n{{Feature|arma3|In Arma 3, ''command'' argument can be a reference to .sqf script (it will have to explicitly end with '''{{hl|.sqf}}''') or a reference to {{hl|.sqs}} script.}}",
@@ -22265,7 +22216,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Unknown simple type: step]"
       ],
       "groups": [],
       "id": "sliderSpeed",
@@ -22393,14 +22344,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'squadInfo: [[Array]] with [nick, name, email, web, picture, title]'"
+      "description": "Returns data about squad of given unit loaded from [[squad.xml]] as well as the unit itself.\n{{Feature|informative|This command returns an empty array in single player.}}",
+      "groups": [
+        "Object Manipulation",
+        "System"
       ],
-      "groups": [],
       "id": "squadParams",
       "name": "squadParams",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -22720,14 +22671,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns [[systemTime]] according to '''U'''niversal '''T'''ime '''C'''oordinated time scale.",
+      "groups": [
+        "Time"
       ],
-      "groups": [],
       "id": "systemTimeUTC",
       "name": "systemTimeUTC",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Tangent of x, argument in [[Number#Degrees|Degrees]].",
@@ -22814,14 +22764,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'waypoint'"
+      "description": "Returns the sub-parts of the task description.",
+      "groups": [
+        "Briefing"
       ],
-      "groups": [],
       "id": "taskDescription",
       "name": "taskDescription",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -23077,14 +23026,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'id: [[Array]] with [itemWorldID, creatorID]'"
+      "description": "Returns all throwables in unit inventory in [[currentThrowable]] format.",
+      "groups": [
+        "Weapons",
+        "Unit Inventory"
       ],
-      "groups": [],
       "id": "throwables",
       "name": "throwables",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns time elapsed since mission started (in seconds). The value is different on each client. If you need unified time, use [[serverTime]]. Unlike [[uiTime]] the [[time]] stops when game is [[isGamePaused | paused]].",
@@ -23319,14 +23268,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse parameter for command 'triggerStatements': 'return: [[Array]] format:<br>\n0: condition: [[String]]<br>\n1: code on activation: [[String]]<br>\n2: code on deactivation: [[String]]<br>'"
+      "description": "Returns trigger statements.",
+      "groups": [
+        "Triggers"
       ],
-      "groups": [],
       "id": "triggerStatements",
       "name": "triggerStatements",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns trigger text.",
@@ -23898,14 +23846,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns hashmap of all items in units inventory as [classname, count] pairs.\n{{Feature|informative|\n* ''weaponItems'', ''uniformItems'', ''vestItems'', ''backpackItems'' arguments use the following [[Number]] values:\n** 0: do not return value\n** 1: returns container only (weapon or container)\n** 2: returns container and its content\n* weapons/containers that are stored inside containers (e.g weapon in backpack) always return all contents if contents for the parent container are enabled.\n}}",
+      "groups": [
+        "Unit Inventory"
       ],
-      "groups": [],
       "id": "uniqueUnitItems",
       "name": "uniqueUnitItems",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -24255,14 +24202,14 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Converts vector from model to world space in render time scope.\n{{Feature|important|For [[setObjectScale|scaled objects]], the resulting vector's [[vectorMagnitude|magnitude]] will also be [[vectorMultiply|multiplied]] by the object scale.}}",
+      "groups": [
+        "Math - Vectors",
+        "Render Time Scope"
       ],
-      "groups": [],
       "id": "vectorModelToWorldVisual",
       "name": "vectorModelToWorldVisual",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Multiplies an array of numbers by a scalar or another array of numbers.<br>\n{{Feature|GVI|arma3|2.14|Since {{GVI|arma3|2.14|size= 0.75}} any count of numbers is valid, if one array is larger than the other, the remaining elements are inserted without change.<br>\nBefore {{GVI|arma3|2.14|size= 0.75}}, the first argument had to be vector 3D, or {{GVI|arma3|2.00|size= 0.75}} 2D (Which still returned 3D result, with z coordinate defaulted to 0)}}",
@@ -24274,24 +24221,22 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns normalised vector (unit vector, [[vectorMagnitude]] {{=}}{{=}} 1) of given vector. If given vector is 0 result is a 0 vector as well.\n{{Feature|informative|\n* {{GVI|arma3|2.14|size= 0.75}} any count of numbers is valid\n* {{GVI|arma3|2.00|size= 0.75}} now supports [[Vector2D]] (z defaulted to 0)\n* {{GVI|arma3|1.26|size= 0.75}} command introduction, only works with [[Vector3D]]\n}}",
+      "groups": [
+        "Math - Vectors"
       ],
-      "groups": [],
       "id": "vectorNormalized",
       "name": "vectorNormalized",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "[[File:arma3_object-vectors.jpg|thumb|right|An object with its [[vectorDir]], [[vectorUp]] and [[vectorSide]] (vectors not to scale)]]\nReturns an object's side vector in world space.\n\n{{Feature|important|The vector is '''not necessarily [[vectorNormalized|normalized]]'''. The [[vectorMagnitude|magnitude]] of the vector depends on the [[getObjectScale|object's scale]].}}",
+      "groups": [
+        "Math - Vectors"
       ],
-      "groups": [],
       "id": "vectorSide",
       "name": "vectorSide",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "[[File:arma3_object-vectors.jpg|thumb|right|An object with its [[vectorDirVisual]], [[vectorUpVisual]] and [[vectorSideVisual]] (vectors not to scale)]]\nReturns an object's side vector in world space and [[Simulation vs Render Time Scope|render time scope]].\n\n{{Feature|important|The vector is '''not necessarily [[vectorNormalized|normalized]]'''. The [[vectorMagnitude|magnitude]] of the vector depends on the [[getObjectScale|object's scale]].}}",
@@ -24957,7 +24902,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Unknown simple type: array"
       ],
       "groups": [],
       "id": "weaponsItemsCargo",
@@ -25001,14 +24946,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns the current wind vector (in m/s).",
+      "groups": [
+        "Environment"
       ],
-      "groups": [],
       "id": "wind",
       "name": "wind",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the current wind azimuth.",
@@ -25114,9 +25058,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 513,
-  "passed": 2179,
-  "timestamp": 1775290979,
-  "total": 2694,
+  "failed": 458,
+  "passed": 2233,
+  "timestamp": 1775292805,
+  "total": 2693,
   "version": "1.0"
 }

@@ -31,26 +31,9 @@
       },
       "right": {
         "Item": {
+          "desc": ", [[Group]] or [[Side]]",
           "name": "value",
-          "type": {
-            "OneOf": [
-              {
-                "desc": null,
-                "since": null,
-                "type": "Object"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Group"
-              },
-              {
-                "desc": null,
-                "since": null,
-                "type": "Side"
-              }
-            ]
-          }
+          "type": "Object"
         }
       }
     }
