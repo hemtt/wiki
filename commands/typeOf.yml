@@ -9,17 +9,8 @@ syntax:
     desc: config class name, or empty string if ''target'' does not have a class
   right: !Item
     name: target
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Control
-      desc: null
-      since:
-        arma3: '2.22'
-    - type: Display
-      desc: null
-      since: null
+    desc: ', since {{GVI|arma3|2.22}} [[Control]], [[Display]]'
+    type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

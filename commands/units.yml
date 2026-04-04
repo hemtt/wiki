@@ -11,17 +11,8 @@ syntax:
     desc: if ''type'' is a destroyed object, an empty array is returned
   right: !Item
     name: type
-    type: !OneOf
-    - type: Group
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
-    - type: Side
-      desc: null
-      since:
-        arma3: '2.2'
+    desc: ', [[Object]] or {{GVI|arma3|2.02|size= 0.75}} [[Side]]'
+    type: Group
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

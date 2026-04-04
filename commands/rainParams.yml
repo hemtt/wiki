@@ -1,0 +1,110 @@
+name: rainParams
+desc: Returns currently set [[Arma_3:_CfgWorlds_Config_Reference#class_RainParticles | RainParticles]] params, custom or default.
+multiplayer_note: |-
+  {{Feature|important|
+  * Rain particle params are '''local'''
+  * If used on a dedicated server, this command returns an empty array.
+  }}
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: !ArraySized
+    - name: rainDropTexture
+      type: String
+      default: null
+      desc: null
+      since: null
+    - name: texDropCount
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: minRainDensity
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: effectRadius
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: windCoef
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: dropSpeed
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: rndSpeed
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: rndDir
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: dropWidth
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: dropHeight
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: dropColor
+      type: ArrayColorRgba
+      default: null
+      desc: null
+      since: null
+    - name: lumSunFront
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: lumSunBack
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: refractCoef
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: refractSaturation
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: snow
+      type: Boolean
+      default: null
+      desc: null
+      since: null
+    - name: dropColorStrong
+      type: Boolean
+      default: null
+      desc: null
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nprivate _rainParams = rainParams;\n// or\nrainParams params [\n\t\"_rainDropTexture\",\n\t\"_texDropCount\",\n\t\"_minRainDensity\",\n\t\"_effectRadius\",\n\t\"_windCoef\",\n\t\"_dropSpeed\",\n\t\"_rndSpeed\",\n\t\"_rndDir\",\n\t\"_dropWidth\",\n\t\"_dropHeight\",\n\t\"_dropColor\",\n\t\"_lumSunFront\",\n\t\"_lumSunBack\",\n\t\"_refractCoef\",\n\t\"_refractSaturation\",\n\t\"_snow\",\n\t\"_dropColorStrong\"\n];\n</sqf>"
+see_also:
+- setRain
+- fogParams
+- overcast
+- humidity
+- wind
+- forceWeatherChange

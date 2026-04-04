@@ -19,11 +19,9 @@ syntax:
       desc: trigger area Y size / 2
       since: null
     - name: angle
-      type: !NumberRange
-      - 0
-      - 360
+      type: Number
       default: null
-      desc: null
+      desc: in range 0..360
       since: null
     - name: isRectangle
       type: Boolean

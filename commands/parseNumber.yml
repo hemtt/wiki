@@ -16,14 +16,8 @@ syntax:
     desc: the parsed number, {{hl|0}} if no valid number was found; in the case of a passed [[Boolean]], 0 if [[false]], 1 if [[true]]
   right: !Item
     name: value
-    type: !OneOf
-    - type: String
-      desc: null
-      since: null
-    - type: Boolean
-      desc: null
-      since:
-        arma3: '1.50'
+    desc: or {{GVI|arma3|1.50|size= 0.75}} [[Boolean]]
+    type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

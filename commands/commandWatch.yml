@@ -13,24 +13,12 @@ syntax:
     type: Nothing
   left: !Item
     name: units
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: !ArrayUnsized
-          value: Object
-        desc: null
-        since: null
+    desc: or [[Array]] of [[Object]]s
+    type: Object
   right: !Item
     name: target
-    type: !OneOf
-    - type: Position
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
+    desc: or [[Object]]
+    type: Position
 argument_loc: Local
 effect_loc: Global
 since: {}

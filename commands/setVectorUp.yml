@@ -1,0 +1,44 @@
+name: setVectorUp
+desc: Set object's up vector. Direction of the object remain unchanged. Default object's [[vectorUp]] is [0,0,1].
+groups:
+- Math - Vectors
+syntax:
+- call: !Binary
+  - object
+  - vectorUp
+  ret:
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: vectorUp
+    desc: (normalised)
+    type: Vector3d
+argument_loc: Local
+effect_loc: Global
+since: {}
+examples:
+- |-
+  Turn object upside down:
+  <sqf>_obj setVectorUp [0, 0, -1];</sqf>
+- |-
+  Align object with the terrain underneath:
+  <sqf>_obj setVectorUp surfaceNormal getPosASL _obj;</sqf>
+see_also:
+- vectorDir
+- vectorUp
+- setVectorDir
+- setVectorDirAndUp
+- vectorDiff
+- vectorAdd
+- vectorMultiply
+- vectorCrossProduct
+- vectorDistance
+- vectorMagnitudeSqr
+- vectorDistanceSqr
+- vectorCos
+- vectorMagnitude
+- vectorDotProduct
+- vectorNormalized
+- vectorFromTo

@@ -1,0 +1,26 @@
+name: get
+desc: Retrieves a value out of a [[HashMap]] after looking it up by its key.
+groups:
+- HashMap
+syntax:
+- call: !Binary
+  - hashMap
+  - key
+  ret:
+    type: Anything
+    desc: ', or [[Nothing]] if ''''key'''' is not found'
+  left: !Item
+    name: hashMap
+    type: HashMapUnknown
+  right: !Item
+    name: key
+    desc: case sensitive key
+    type: HashMapKey
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>private _myValue = _myHashMap get "a";</sqf>
+see_also:
+- HashMap
+- getOrDefault

@@ -21,16 +21,8 @@ syntax:
     type: String
   - !Item
     name: position
-    type: !OneOf
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
+    desc: ', [[Position#Introduction|Position3D]] or [[Object]]'
+    type: Position2d
   - !Item
     name: sizeX
     desc: in meters

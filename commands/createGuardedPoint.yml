@@ -23,19 +23,8 @@ syntax:
     type: Side
   - !Item
     name: position
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
+    desc: ', [[Group]], [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]'
+    type: Object
   - !Item
     name: objectMapID
     desc: static id of map object. -1 to ignore

@@ -10,9 +10,8 @@ syntax:
     type: Nothing
   right: !Item
     name: progress
-    type: !NumberRange
-    - 0
-    - 1
+    desc: in range 0..1
+    type: Number
 argument_loc: Unspecified
 effect_loc: Local
 since: {}

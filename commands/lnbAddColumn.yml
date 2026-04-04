@@ -1,0 +1,64 @@
+name: lnbAddColumn
+desc: Adds a column at given position.
+groups:
+- GUI Control - ListNBox
+syntax:
+- call: !Binary
+  - control
+  - position
+  ret:
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: Nothing
+      desc: null
+      since: null
+    desc: returns the zero based index of the new column
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: position
+    desc: position of the new column where 0 means all the way to the left and 1 all the way to the right of the control
+    type: Number
+- call: !Unary
+  - controlOrIdc
+  - position
+  ret:
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: Nothing
+      desc: null
+      since: null
+    desc: returns the zero based index of the new column
+  right: !Array
+  - !Item
+    name: controlOrIdc
+    desc: control or the idc of the control
+    type: !OneOf
+    - type: Control
+      desc: null
+      since: null
+    - type: Number
+      desc: null
+      since: null
+  - !Item
+    name: position
+    desc: position of the new column where 0 means all the way to the left and 1 all the way to the right of the control
+    type: Number
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_ctrl lnbAddColumn 0.8;</sqf>
+- <sqf>lnbAddColumn [105, 0.8];</sqf>
+see_also:
+- lnbAddArray
+- lnbAddRow
+- lnbDeleteColumn
+- lnbDeleteRow
+- lnbGetColumnsPosition
+- lnbSetColumnsPos

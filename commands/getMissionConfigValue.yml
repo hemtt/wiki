@@ -1,0 +1,49 @@
+name: getMissionConfigValue
+desc: |-
+  Returns value of the given scenario attribute from the 1st tier. Since only config properties have values, the attribute should be config property.
+  If it is not found or config class is given, the return is [[nil]]. If the attribute defined in multiple places, the command checks them in the following order:
+  # [[Description.ext]] entry
+  # [[Eden Editor: Scenario Attributes|Eden Editor]] scenario attribute
+
+  So if an attribute exists in both places, the [[Description.ext]] value is used.
+  Previously, scenario attributes were extracted from Description.ext using [[missionConfigFile]].
+  That still works, but it ignores attributes set directly in the editor and should not be used anymore.
+
+  {{Feature|important|This command cannot force return type, it will return the value of the type given in config. Use [[isEqualType]] to additionally reaffirm the correct type if necessary to account for human error.}}
+groups:
+- Config
+- Mission Information
+syntax:
+- call: !Unary attribute
+  ret:
+    type: Number
+    desc: ', [[String]], [[Boolean]] or [[Array]], depending on the attribute value type. [[nil|Nil]] when the attribute is undefined.'
+  right: !Item
+    name: attribute
+    desc: attribute name
+    type: String
+- call: !Unary
+  - attribute
+  - defaultValue
+  ret:
+    type: Number
+    desc: ', [[String]], [[Boolean]] or [[Array]], depending on the attribute value type. Default value when the attribute is undefined.'
+  right: !Array
+  - !Item
+    name: attribute
+    desc: attribute name
+    type: String
+  - !Item
+    name: defaultValue
+    desc: value used when the attribute is undefined
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nprivate _respawnDelay = getMissionConfigValue [\"respawnDelay\", 0];\t\t\t// returns the real, defined respawn delay value\nprivate _respawnDelay = getNumber (missionConfigFile >> \"respawnDelay\");\t// old approach, ignoring the Eden Editor-set value\n</sqf>"
+see_also:
+- getMissionConfig
+- missionConfigFile
+- BIS_fnc_getParamValue
+- Mission_Parameters

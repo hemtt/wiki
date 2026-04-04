@@ -19,16 +19,8 @@ syntax:
   right: !Array
   - !Item
     name: index
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Number
-        desc: null
-        since: null
-      - type: !ArrayUnsized
-          value: Number
-        desc: null
-        since:
-          arma3: '2.12'
+    desc: or since {{GVI|arma3|2.12}} [[Array]] of [[Number]]s
+    type: Number
   - !Item
     name: selected
     type: Boolean

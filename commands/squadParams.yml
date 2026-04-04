@@ -1,0 +1,104 @@
+name: squadParams
+desc: |-
+  Returns data about squad of given unit loaded from [[squad.xml]] as well as the unit itself.
+  {{Feature|informative|This command returns an empty array in single player.}}
+groups:
+- Object Manipulation
+- System
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArraySized
+    - name: squadInfo
+      type: !ArraySized
+      - name: nick
+        type: String
+        default: null
+        desc: squad nickname
+        since: null
+      - name: name
+        type: String
+        default: null
+        desc: squad full name
+        since: null
+      - name: email
+        type: String
+        default: null
+        desc: squad contact email
+        since: null
+      - name: web
+        type: String
+        default: null
+        desc: squad website URL
+        since: null
+      - name: picture
+        type: String
+        default: null
+        desc: squad picture URL
+        since: null
+      - name: title
+        type: String
+        default: null
+        desc: squad title
+        since: null
+      default: null
+      desc: null
+      since: null
+    - name: memberInfo
+      type: !ArraySized
+      - name: uid
+        type: String
+        default: null
+        desc: member unique ID
+        since: null
+      - name: name
+        type: String
+        default: null
+        desc: member name
+        since: null
+      - name: fullname
+        type: String
+        default: null
+        desc: member full name
+        since: null
+      - name: email
+        type: String
+        default: null
+        desc: member email
+        since: null
+      - name: icq
+        type: String
+        default: null
+        desc: member ICQ number
+        since: null
+      - name: remark
+        type: String
+        default: null
+        desc: member remark
+        since: null
+      default: null
+      desc: null
+      since: null
+    - name: squadId
+      type: String
+      default: null
+      desc: unique squad ID
+      since:
+        arma3: '2.6'
+    - name: a3unitsId
+      type: String
+      default: null
+      desc: unique {{arma3}} Units  ID
+      since:
+        arma3: '2.6'
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_info = squadParams player;</sqf>
+- <sqf>squadParams player params ["_squadInfo", "_memberInfo", "_squadID", "_a3unitsID"];</sqf>
+see_also:
+- squad.xml

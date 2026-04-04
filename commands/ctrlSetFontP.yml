@@ -13,13 +13,8 @@ syntax:
     type: Control
   right: !Item
     name: fontOrSize
-    type: !OneOf
-    - type: String
-      desc: null
-      since: null
-    - type: Number
-      desc: null
-      since: null
+    desc: or [[Number]]
+    type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

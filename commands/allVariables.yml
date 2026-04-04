@@ -12,33 +12,8 @@ syntax:
     desc: array of variable names. All names are in lower case (see [[toLower]])
   right: !Item
     name: namespace
-    type: !OneOf
-    - type: Namespace
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
-    - type: Task
-      desc: null
-      since: null
-    - type: Location
-      desc: null
-      since: null
-    - type: TeamMember
-      desc: null
-      since: null
-    - type: Control
-      desc: null
-      since:
-        arma3: '2.2'
-    - type: Display
-      desc: null
-      since:
-        arma3: '2.2'
+    desc: ', [[Object]], [[Group]], [[Task]], [[Location]], [[Team Member]], {{GVI|arma3|2.02|size= 0.75}} [[Control]], {{GVI|arma3|2.02|size= 0.75}} [[Display]]'
+    type: Namespace
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

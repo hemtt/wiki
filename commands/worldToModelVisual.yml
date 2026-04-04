@@ -16,13 +16,8 @@ syntax:
     type: Object
   right: !Item
     name: worldPosition
-    type: !OneOf
-    - type: Position3dAGL
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
+    desc: or [[Position#Introduction|Position2D]]
+    type: Position3dAGL
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

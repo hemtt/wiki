@@ -13,22 +13,12 @@ syntax:
     desc: distance in meters or 1e10 if distance cannot be calculated
   left: !Item
     name: var1
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position
-      desc: null
-      since: null
+    desc: or [[Position]]
+    type: Object
   right: !Item
     name: var2
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position
-      desc: null
-      since: null
+    desc: or [[Position]]
+    type: Object
 - call: !Binary
   - a
   - b

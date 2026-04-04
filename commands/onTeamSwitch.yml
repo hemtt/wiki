@@ -9,13 +9,8 @@ syntax:
     type: Nothing
   right: !Item
     name: commandset
-    type: !OneOf
-    - type: String
-      desc: null
-      since: null
-    - type: Code
-      desc: null
-      since: null
+    desc: or [[Code]]
+    type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

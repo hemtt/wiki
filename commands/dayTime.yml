@@ -8,8 +8,10 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: Number
-    desc: day time using a 24 hour clock, using fractions of hours - range [0..24]
+    type: !NumberRange
+    - 0
+    - 24
+    desc: day time using a 24 hour clock, using fractions of hours
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

@@ -12,13 +12,8 @@ syntax:
   right: !Array
   - !Item
     name: idc
-    type: !OneOf
-    - type: Number
-      desc: null
-      since: null
-    - type: Control
-      desc: null
-      since: null
+    desc: or [[Control]]
+    type: Number
   - !Array
     - !Item
       name: row

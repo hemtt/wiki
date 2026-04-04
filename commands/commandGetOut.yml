@@ -9,15 +9,8 @@ syntax:
     type: Nothing
   right: !Item
     name: unit(s)
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: !ArrayUnsized
-          value: Object
-        desc: null
-        since: null
+    desc: or [[Array]] of [[Object]]s
+    type: Object
 argument_loc: Local
 effect_loc: Global
 since: {}

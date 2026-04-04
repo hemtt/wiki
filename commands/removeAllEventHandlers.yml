@@ -10,14 +10,8 @@ syntax:
     type: Nothing
   left: !Item
     name: target
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since:
-        arma3: '2.10'
+    desc: or {{GVI|arma3|2.10}} [[Group]]
+    type: Object
   right: !Item
     name: handlerType
     desc: see [[:Category:Event Handlers|Event Handlers]]

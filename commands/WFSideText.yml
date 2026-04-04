@@ -34,16 +34,8 @@ syntax:
     desc: unlocalized side text value
   right: !Item
     name: value
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
-    - type: Side
-      desc: null
-      since: null
+    desc: ', [[Group]] or [[Side]]'
+    type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

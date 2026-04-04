@@ -15,8 +15,8 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: TreeViewPath
   - !Item
     name: link
     type: String
@@ -32,8 +32,8 @@ syntax:
   right: !Array
   - !Item
     name: path
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: TreeViewPath
   - !Item
     name: link
     type: String

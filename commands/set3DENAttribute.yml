@@ -14,13 +14,8 @@ syntax:
     desc: '[[true]] If the value was set'
   left: !Item
     name: entity
-    type: !OneOf
-    - type: EdenEntity
-      desc: null
-      since: null
-    - type: EdenID
-      desc: null
-      since: null
+    desc: or [[Eden ID]]
+    type: EdenEntity
   right: !Array
   - !Item
     name: class

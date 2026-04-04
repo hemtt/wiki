@@ -11,14 +11,8 @@ syntax:
     type: Nothing
   left: !Item
     name: thing
-    type: !OneOf
-    - type: Location
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since:
-        arma3: '1.2'
+    desc: or {{GVI|arma3|1.02|size= 0.75}} [[Object]]
+    type: Location
   right: !Item
     name: name
     type: String

@@ -8,14 +8,8 @@ syntax:
     type: String
   right: !Item
     name: dikCode
-    type: !OneOf
-    - type: Number
-      desc: null
-      since: null
-    - type: String
-      desc: null
-      since:
-        arma3: '2.8'
+    desc: or {{GVI|arma3|2.08|size= 0.75}} [[String]]
+    type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

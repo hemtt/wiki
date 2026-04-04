@@ -1,0 +1,20 @@
+name: setGroupIconsSelectable
+desc: Sets if group icons raise [[onGroupIconClick]], [[onGroupIconOverEnter]] and [[onGroupIconOverLeave]] events.
+groups:
+- High Command
+syntax:
+- call: !Unary selectable
+  ret:
+    type: Nothing
+    desc: ([[objNull]] prior to {{arma3}} v1.92)
+  right: !Item
+    name: selectable
+    desc: setting to [[true]] makes the icon selectable
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>setGroupIconsSelectable true;</sqf>
+see_also:
+- groupIconSelectable

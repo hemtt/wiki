@@ -1,0 +1,35 @@
+name: commandFire
+desc: |-
+  Order the given unit to fire on the given target (via the radio).
+  If the target is [[objNull]], the unit is ordered to fire on its current target (set with [[doTarget]] or [[commandTarget]]).
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - target
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: of type [[Object|Unit]] or [[Array]] of [[Object|Unit]]s
+    type: Object
+  right: !Item
+    name: target
+    type: Object
+argument_loc: Local
+effect_loc: Local
+since: {}
+examples:
+- <sqf>_ESoldier1 commandFire _WSoldier1;</sqf>
+see_also:
+- fire
+- doFire
+- canFire
+- fireAtTarget
+- forceWeaponFire
+- commandArtilleryFire
+- commandSuppressiveFire
+- doArtilleryFire
+- doSuppressiveFire
+- isManualFire

@@ -10,13 +10,8 @@ syntax:
       value: Waypoint
   right: !Item
     name: obj
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Waypoint
-      desc: null
-      since: null
+    desc: or [[Waypoint]]
+    type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

@@ -15,13 +15,8 @@ syntax:
       value: Object
   right: !Item
     name: group
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
+    desc: or [[Group]]
+    type: Object
 argument_loc: Global
 effect_loc: Global
 since: {}

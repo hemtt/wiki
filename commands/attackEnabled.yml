@@ -9,13 +9,8 @@ syntax:
     type: Boolean
   right: !Item
     name: name
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
+    desc: or [[Group]]
+    type: Object
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

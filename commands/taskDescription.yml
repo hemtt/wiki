@@ -1,0 +1,34 @@
+name: taskDescription
+desc: Returns the sub-parts of the task description.
+groups:
+- Briefing
+syntax:
+- call: !Unary task
+  ret:
+    type: !ArraySized
+    - name: description
+      type: String
+      default: null
+      desc: null
+      since: null
+    - name: title
+      type: String
+      default: null
+      desc: null
+      since: null
+    - name: waypoint
+      type: Waypoint
+      default: null
+      desc: null
+      since: null
+  right: !Item
+    name: task
+    type: Task
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_taskDescArray = taskDescription _task;</sqf>
+see_also:
+- setSimpleTaskDescription
+- createSimpleTask

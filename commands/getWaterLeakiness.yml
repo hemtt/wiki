@@ -1,0 +1,22 @@
+name: getWaterLeakiness
+desc: Get an object's water intake ratio when immersed.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary obj
+  ret:
+    type: Number
+    desc: in range 0..1 where 0 is waterproof and 1 is full leak
+  right: !Item
+    name: obj
+    desc: object to check
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nif (getWaterLeakiness _myCar > 0) then\n{\n\thint \"don't go in the water with it!\";\n};\n</sqf>"
+see_also:
+- setWaterLeakiness
+- setWaterFillPercentage
+- getWaterFillPercentage

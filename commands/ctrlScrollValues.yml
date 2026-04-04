@@ -18,18 +18,14 @@ syntax:
   ret:
     type: !ArraySized
     - name: vertical
-      type: !NumberRange
-      - 0
-      - 1
+      type: Number
       default: null
-      desc: null
+      desc: in range 0..1
       since: null
     - name: horizontal
-      type: !NumberRange
-      - 0
-      - 1
+      type: Number
       default: null
-      desc: null
+      desc: in range 0..1
       since: null
   right: !Item
     name: control

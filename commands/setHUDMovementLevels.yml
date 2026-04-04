@@ -40,13 +40,8 @@ syntax:
     type: Number
   - !Item
     name: targetOrPosition
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position
-      desc: null
-      since: null
+    desc: or [[Position]]
+    type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

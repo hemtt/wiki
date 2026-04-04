@@ -15,14 +15,8 @@ syntax:
   right: !Array
   - !Item
     name: selection
-    type: !OneOf
-    - type: Number
-      desc: null
-      since: null
-    - type: String
-      desc: null
-      since:
-        arma3: '2.10'
+    desc: or {{GVI|arma3|2.10|size= 0.75}} [[String]]
+    type: Number
   - !Item
     name: material
     desc: material path. Since {{GVI|arma3|2.20}} using "#reset" would reset to default material.

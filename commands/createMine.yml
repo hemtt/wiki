@@ -28,13 +28,8 @@ syntax:
     type: String
   - !Item
     name: position
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position3dAGL
-      desc: null
-      since: null
+    desc: or [[Position#PositionAGL|PositionAGL]]
+    type: Object
   - !Item
     name: markers
     desc: marker name(s)

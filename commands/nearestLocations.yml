@@ -16,16 +16,8 @@ syntax:
   right: !Array
   - !Item
     name: centre
-    type: !OneOf
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
+    desc: ', [[Position#Introduction|Position3D]] or [[Object]]'
+    type: Position2d
   - !Item
     name: locationTypes
     desc: list of [[Location#Location Types|location type]] names, e.g "NameCity"; {{GVI|arma3|2.14|size= 0.75}} passing empty array [] will return all available locations within the radius

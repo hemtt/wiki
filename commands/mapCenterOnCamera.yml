@@ -1,0 +1,40 @@
+name: mapCenterOnCamera
+desc: |-
+  The main syntax enables/disables continuous centering of the main map type control on the camera position. Needs to be executed once.<br>
+  The alternative syntax centers mini map type control on camera. Needs to be executed each frame (preferably inside an {{hl|onDraw}} event handler).
+groups:
+- GUI Control - Map
+syntax:
+- call: !Binary
+  - mainmap
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: mainmap
+    type: Control
+  right: !Item
+    name: enable
+    type: Boolean
+- call: !Unary minimap
+  ret:
+    type: Position3dASL
+    desc: of the map center (camera focus object's model centre's position (see [[getPosWorld]])) in render scope
+  right: !Item
+    name: minimap
+    type: Control
+  since:
+    arma3: '1.48'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- |-
+  <sqf>
+  // --- Minimap update
+  ((uiNamespace getVariable "BIS_UAV_DISPLAY") displayCtrl 112410) mapCenterOnCamera true;
+  </sqf>
+see_also:
+- ctrlMapAnimAdd
+- ctrlMapAnimCommit
+- getPosWorld

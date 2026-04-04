@@ -1,0 +1,35 @@
+name: expectedDestination
+desc: Return expected destination of unit as an array.
+groups:
+- Unit Control
+- AI Behaviour
+syntax:
+- call: !Unary person
+  ret:
+    type: !ArraySized
+    - name: destination
+      type: Position3dAGL
+      default: null
+      desc: null
+      since: null
+    - name: planningMode
+      type: String
+      default: null
+      desc: 'can be one of:'
+      since: null
+    - name: forceReplan
+      type: Boolean
+      default: null
+      desc: specifies if path replanning was forced (through [[setDestination]])
+      since: null
+  right: !Item
+    name: person
+    type: Object
+argument_loc: Local
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_data = expectedDestination player;</sqf>
+see_also:
+- setDestination
+- getUnitState

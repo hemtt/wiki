@@ -11,13 +11,8 @@ syntax:
     type: Nothing
   left: !Item
     name: group
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
+    desc: or [[Group]]
+    type: Object
   right: !Item
     name: enable
     type: Boolean

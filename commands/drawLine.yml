@@ -17,28 +17,12 @@ syntax:
   right: !Array
   - !Item
     name: from
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
+    desc: or [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]
+    type: Object
   - !Item
     name: to
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
+    desc: or [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]
+    type: Object
   - !Item
     name: color
     type: ArrayColorRgba

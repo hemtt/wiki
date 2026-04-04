@@ -13,9 +13,8 @@ syntax:
     type: Object
   right: !Item
     name: amount
-    type: !NumberRange
-    - 0
-    - 1
+    desc: in range 0..1
+    type: Number
 argument_loc: Local
 effect_loc: Global
 since: {}

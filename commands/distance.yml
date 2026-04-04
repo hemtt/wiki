@@ -14,28 +14,12 @@ syntax:
     desc: distance in meters or 1e10 if distance cannot be calculated
   left: !Item
     name: param1
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position3dAGL
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
+    desc: or [[Position#PositionAGL|PositionAGL]] or [[Position#Introduction|Position2D]]
+    type: Object
   right: !Item
     name: param2
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position3dAGL
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
+    desc: or [[Position#PositionAGL|PositionAGL]] or [[Position#Introduction|Position2D]]
+    type: Object
 - call: !Binary
   - location1
   - location2
@@ -44,28 +28,12 @@ syntax:
     desc: distance in meters or 1e10 if distance cannot be calculated
   left: !Item
     name: location1
-    type: !OneOf
-    - type: Location
-      desc: null
-      since: null
-    - type: Position
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
+    desc: or [[Position]] or [[Position#Introduction|Position2D]]
+    type: Location
   right: !Item
     name: location2
-    type: !OneOf
-    - type: Location
-      desc: null
-      since: null
-    - type: Position
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
+    desc: or [[Position]] or [[Position#Introduction|Position2D]]
+    type: Location
 - call: !Binary
   - a
   - b

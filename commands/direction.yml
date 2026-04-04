@@ -12,13 +12,8 @@ syntax:
     desc: Direction in degrees
   right: !Item
     name: object
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Location
-      desc: null
-      since: null
+    desc: or [[Location]]
+    type: Object
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

@@ -10,16 +10,8 @@ syntax:
     type: Boolean
   left: !Item
     name: position
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position3dAGL
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
+    desc: or [[Position#PositionAGL|PositionAGL]] or [[Position#Introduction|Position2D]]
+    type: Object
   right: !Item
     name: radius
     type: Number

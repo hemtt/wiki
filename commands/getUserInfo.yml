@@ -1,0 +1,101 @@
+name: getUserInfo
+desc: Returns extended information about given server user.
+groups:
+- Multiplayer
+- Object Detection
+syntax:
+- call: !Unary playerID
+  ret:
+    type: !ArraySized
+    - name: playerID
+      type: String
+      default: null
+      desc: 'user DirectPlay ID (see [[getPlayerID]], [[Arma 3: Mission Event Handlers#PlayerConnected|PlayerConnected]])'
+      since: null
+    - name: owner
+      type: Number
+      default: null
+      desc: user owner (see [[owner]])
+      since: null
+    - name: playerUID
+      type: String
+      default: null
+      desc: player UID (see [[getPlayerUID]])
+      since: null
+    - name: soldierName
+      type: String
+      default: null
+      desc: player name (see [[profileName]])
+      since: null
+    - name: displayName
+      type: String
+      default: null
+      desc: player name including squad (see [[name]], [[squadParams]])
+      since: null
+    - name: steamProfileName
+      type: String
+      default: null
+      desc: returns the ''current machine's'' Steam profile name (see [[profileNameSteam]]), not the targeted player's Steam profile name
+      since: null
+    - name: clientStateNumber
+      type: String
+      default: null
+      desc: user client state (see [[getClientStateNumber]])
+      since: null
+    - name: isHeadless
+      type: Boolean
+      default: null
+      desc: whether or not this is a headless client (see [[hasInterface]], [[isServer]])
+      since: null
+    - name: adminState
+      type: Number
+      default: null
+      desc: admin status of the user (see [[admin]])
+      since: null
+    - name: networkInfo
+      type: !ArrayUnsized
+        value: Number
+      default: null
+      desc: format [ping, bandwidth, desync]
+      since: null
+    - name: playerObject
+      type: Object
+      default: null
+      desc: user player entity (see [[player]], [[selectPlayer]])
+      since: null
+  right: !Item
+    name: playerID
+    desc: 'user DirectPlay ID (see [[getPlayerID]], [[Arma 3: Mission Event Handlers#PlayerConnected|PlayerConnected]])'
+    type: String
+- call: !Binary
+  - playerID
+  - infoIndex
+  ret:
+    type: Anything
+    desc: depends on the requested index (see main syntax) or [[Nothing]]
+  left: !Item
+    name: playerID
+    desc: 'user DirectPlay ID (see [[getPlayerID]], [[Arma 3: Mission Event Handlers#PlayerConnected|PlayerConnected]])'
+    type: String
+  right: !Item
+    name: infoIndex
+    desc: the index of the data in the return array (see main syntax)
+    type: Number
+  since:
+    arma3: '2.18'
+argument_loc: Unspecified
+effect_loc: Unspecified
+server_exec: true
+since: {}
+examples:
+- <sqf>private _randomUserInfo = getUserInfo selectRandom allUsers;</sqf>
+- |-
+  <sqf>
+  _userInfo params ["_playerID", "_ownerId", "_playerUID", "_profileName", "_displayName", "_steamName", "_clientState", "_isHC", "_adminState", "_networkInfo", "_unit"];
+  _networkInfo params ["_avgPing", "_avgBandwidth", "_desync"];
+  </sqf>
+- <sqf>private _myInfo = getUserInfo getPlayerID player; // this particular example only works if player is server host</sqf>
+see_also:
+- allUsers
+- getPlayerID
+- getUnitFreefallInfo

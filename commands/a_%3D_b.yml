@@ -1,0 +1,30 @@
+name: =
+desc: |-
+  Assigns the result of expression on the right to the variable on the left. Technically this is not a command and it is not listed in [[supportInfo]]; this is more of a compiler instruction.
+  {{Feature|important|The following structure is invalid: <sqf inline>a = b = c = 4;</sqf>.}}
+groups:
+- Variables
+syntax:
+- call: !Binary
+  - variable
+  - value
+  ret:
+    type: Nothing
+    desc: '{{Feature|important|The returned value is not equivalent to [[nil]]. See {{Link|#Notes}} below for additional information.}}'
+  left: !Item
+    name: variable
+    desc: see [[Identifier]]
+    type: Anything
+  right: !Item
+    name: value
+    type: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_value = 5;</sqf>
+- <sqf>_mygroup = group player;</sqf>
+- <sqf>_greeting = "Hello!";</sqf>
+- <sqf>private _enemyTank = myTank1;</sqf>
+see_also:
+- Operators

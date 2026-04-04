@@ -10,13 +10,8 @@ syntax:
     type: Nothing
   right: !Item
     name: text
-    type: !OneOf
-    - type: String
-      desc: null
-      since: null
-    - type: StructuredText
-      desc: null
-      since: null
+    desc: or [[Structured Text]]
+    type: String
 argument_loc: Unspecified
 effect_loc: Local
 since: {}

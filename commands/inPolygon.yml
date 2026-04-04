@@ -10,17 +10,8 @@ syntax:
     type: Boolean
   left: !Item
     name: position
-    type: !OneOf
-    - type: Position3d
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since:
-        arma3: '2.14'
-    - type: Group
-      desc: null
-      since: null
+    desc: ', {{GVI|arma3|2.14|size= 0.75}} [[Object]] or [[Group]]'
+    type: Position3d
   right: !Item
     name: polygon
     desc: 'positions in format: [position1, position2...., positionN]'

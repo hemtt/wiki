@@ -16,16 +16,8 @@ syntax:
     type: String
   - !Item
     name: record
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Task
-      desc: null
-      since: null
-    - type: DiaryRecord
-      desc: null
-      since: null
+    desc: ', [[Task]] or [[Diary Record]]'
+    type: Object
   - !Item
     name: text
     type: String

@@ -13,13 +13,8 @@ syntax:
   right: !Array
   - !Item
     name: groupOrUnit
-    type: !OneOf
-    - type: Group
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
+    desc: or [[Object]]
+    type: Group
   - !Item
     name: index
     type: Number

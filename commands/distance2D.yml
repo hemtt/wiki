@@ -13,28 +13,12 @@ syntax:
     desc: distance in meters or 1e10 if distance cannot be calculated
   left: !Item
     name: from
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
+    desc: ', [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]'
+    type: Object
   right: !Item
     name: to
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3d
-      desc: null
-      since: null
+    desc: ', [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]'
+    type: Object
 argument_loc: Global
 effect_loc: Unspecified
 since: {}

@@ -13,13 +13,8 @@ syntax:
     type: Object
   right: !Item
     name: target
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position3dASL
-      desc: null
-      since: null
+    desc: or [[Position#PositionASL|PositionASL]]
+    type: Object
 argument_loc: Local
 effect_loc: Unspecified
 since: {}

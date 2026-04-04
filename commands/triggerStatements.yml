@@ -1,0 +1,34 @@
+name: triggerStatements
+desc: Returns trigger statements.
+multiplayer_note: The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger statements set up locally on the client that executed the command. See [[createTrigger]] for more info.
+groups:
+- Triggers
+syntax:
+- call: !Unary trigger
+  ret:
+    type: !ArraySized
+    - name: condition
+      type: String
+      default: null
+      desc: null
+      since: null
+    - name: activation
+      type: String
+      default: null
+      desc: code ran when the trigger is activated
+      since: null
+    - name: deactivation
+      type: String
+      default: null
+      desc: code ran when the trigger is deactivated
+      since: null
+  right: !Item
+    name: trigger
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_statements = triggerStatements someTrigger;</sqf>
+see_also:
+- setTriggerStatements

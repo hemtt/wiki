@@ -5,9 +5,8 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: !NumberRange
-    - 0
-    - 1
+    type: Number
+    desc: in range 0..1
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

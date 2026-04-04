@@ -1,0 +1,41 @@
+name: setGroupIconsVisible
+desc: Sets if group icons added with [[addGroupIcon]] are visible on map and in the HUD.
+groups:
+- High Command
+syntax:
+- call: !Unary
+  - showOnMap
+  - showOnHUD
+  ret:
+    type: Nothing
+    desc: (prior to {{arma3}} v1.94 this command returned [[Object]] of [[objNull|null]] value)
+  right: !Array
+  - !Item
+    name: showOnMap
+    desc: '[[true]] to show on map. Default is [[false]]'
+    type: Boolean
+  - !Item
+    name: showOnHUD
+    desc: '[[true]] to show on HUD. Default is [[false]]'
+    type: Boolean
+argument_loc: Unspecified
+effect_loc: Local
+since: {}
+examples:
+- |-
+  <sqf>
+  setGroupIconsVisible [true, true];
+  (group player) addGroupIcon ["b_inf", [0, 0]];
+  </sqf>
+see_also:
+- addGroupIcon
+- clearGroupIcons
+- getGroupIcon
+- getGroupIconParams
+- groupIconSelectable
+- groupIconsVisible
+- onGroupIconClick
+- removeGroupIcon
+- setGroupIcon
+- setGroupIconParams
+- setGroupIconsSelectable

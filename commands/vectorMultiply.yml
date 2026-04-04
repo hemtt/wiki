@@ -19,16 +19,8 @@ syntax:
       value: Number
   right: !Item
     name: multiplier
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Number
-        desc: null
-        since: null
-      - type: !ArrayUnsized
-          value: Number
-        desc: null
-        since:
-          arma3: '2.14'
+    desc: or {{GVI|arma3|2.14|size= 0.75}} [[Array]] of [[Number]]s
+    type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

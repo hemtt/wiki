@@ -1,0 +1,19 @@
+name: formationTask
+desc: Return the current task of the unit in the formation.
+groups:
+- Groups
+syntax:
+- call: !Unary unit
+  ret:
+    type: String
+    desc: ': "EXCLUDED", "MOVE", "COVER", "LEADER", "NOTHING"'
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_currentTask = formationTask _unit;</sqf>
+see_also:
+- setFormationTask

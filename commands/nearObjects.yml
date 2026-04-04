@@ -11,16 +11,8 @@ syntax:
       value: Object
   left: !Item
     name: position
-    type: !OneOf
-    - type: Position
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
+    desc: ', [[Position#Introduction|Position2D]] or [[Object]]'
+    type: Position
   right: !Item
     name: radius
     type: Number
@@ -33,16 +25,8 @@ syntax:
       value: Object
   left: !Item
     name: position
-    type: !OneOf
-    - type: Position3dAGL
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Object
-      desc: null
-      since: null
+    desc: ', [[Position#Introduction|Position2D]] or [[Object]]'
+    type: Position3dAGL
   right: !Array
   - !Item
     name: typeName

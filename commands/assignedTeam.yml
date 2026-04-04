@@ -1,0 +1,27 @@
+name: assignedTeam
+desc: |-
+  Returns the team the unit belongs to. Possible values:
+
+  * {{hl|"MAIN"}} (default and white)
+  * {{hl|"RED"}}
+  * {{hl|"GREEN"}}
+  * {{hl|"BLUE"}}
+  * {{hl|"YELLOW"}}
+  * {{GVI|arma3|1.94}} {{hl|""}} if given unit is [[objNull]] or [[remoteControl]]ling another unit
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary unitName
+  ret:
+    type: String
+    desc: (or, prior to Arma 3 v1.94, [[Nothing]] if given unit is [[objNull]] or [[remoteControl]]ling another unit)
+  right: !Item
+    name: unitName
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_team = assignedTeam player;</sqf>
+see_also:
+- assignTeam

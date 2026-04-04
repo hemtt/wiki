@@ -1,0 +1,25 @@
+name: isOnRoad
+desc: Checks if given position is inside road segment. Same as [[roadAt]], only return is boolean instead of road object.
+groups:
+- Roads and Airports
+syntax:
+- call: !Unary position
+  ret:
+    type: Boolean
+  right: !Item
+    name: position
+    desc: or [[Position#PositionAGL|PositionAGL]] (especially on bridges) or {{GVI|arma3|2.00|size= 0.75}} [[Position#Introduction|Position2D]], in which case Z will be automatically deduced as the height of the road surface
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since: {}
+examples:
+- <sqf>_objOnRoad = isOnRoad player;</sqf>
+- <sqf>_posOnRoad = isOnRoad ASLToAGL getPosASL player;</sqf>
+see_also:
+- nearRoads
+- roadsConnectedTo
+- roadAt
+- surfaceIsWater
+- getRoadInfo
+- nearestTerrainObjects

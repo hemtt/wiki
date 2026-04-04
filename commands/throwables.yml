@@ -1,0 +1,104 @@
+name: throwables
+desc: Returns all throwables in unit inventory in [[currentThrowable]] format.
+groups:
+- Weapons
+- Unit Inventory
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArrayUnsized
+      value: !ArraySized
+      - name: magazineName
+        type: String
+        default: null
+        desc: null
+        since: null
+      - name: muzzleName
+        type: String
+        default: null
+        desc: null
+        since: null
+      - name: id
+        type: !ArraySized
+        - name: itemWorldID
+          type: Number
+          default: null
+          desc: unique ID of the item in the world
+          since: null
+        - name: creatorID
+          type: Number
+          default: null
+          desc: unique ID of the player who created the item
+          since: null
+        default: null
+        desc: null
+        since: null
+      - name: ammoCount
+        type: Number
+        default: null
+        desc: magazine ammo (Since Arma 3 2.22)
+        since: null
+  right: !Item
+    name: unit
+    type: Object
+- call: !Unary
+  - unit
+  - includeEmpty
+  ret:
+    type: !ArrayUnsized
+      value: !ArraySized
+      - name: magazineName
+        type: String
+        default: null
+        desc: null
+        since: null
+      - name: muzzleName
+        type: String
+        default: null
+        desc: null
+        since: null
+      - name: id
+        type: !ArraySized
+        - name: itemWorldID
+          type: Number
+          default: null
+          desc: unique ID of the item in the world
+          since: null
+        - name: creatorID
+          type: Number
+          default: null
+          desc: unique ID of the player who created the item
+          since: null
+        default: null
+        desc: null
+        since: null
+      - name: ammoCount
+        type: Number
+        default: null
+        desc: magazine ammo (Since Arma 3 2.22)
+        since: null
+  right: !Array
+  - !Item
+    name: unit
+    type: Object
+  - !Item
+    name: includeEmpty
+    desc: when [[true]] returns empty throwables as well.
+    type: Boolean
+    optional: true
+  since:
+    arma3: '2.22'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since: {}
+examples:
+- "<sqf>\nthrowables player;\n/*\n\t[\n\t\t[\"HandGrenade\",\"HandGrenadeMuzzle\",[1e+007,0],1],\n\t\t[\"SmokeShell\",\"SmokeShellMuzzle\",[1e+007,0],1],\n\t\t[\"SmokeShellGreen\",\"SmokeShellGreenMuzzle\",[1e+007,0],1],\n\t\t[\"Chemlight_green\",\"ChemlightGreenMuzzle\",[1e+007,0],1],\n\t\t[\"Chemlight_green\",\"\",[1e+007,0],1],\n\t\t[\"HandGrenade\",\"\",[1e+007,0],1]\n\t]\n*/\n</sqf>"
+see_also:
+- selectThrowable
+- currentThrowable
+- isThrowable
+- selectWeapon
+- currentWeapon
+- currentMagazine
+- currentMuzzle
+- BIS_fnc_isThrowable

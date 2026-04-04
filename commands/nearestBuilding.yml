@@ -8,16 +8,8 @@ syntax:
     type: Object
   right: !Item
     name: position
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Position2d
-      desc: null
-      since: null
-    - type: Position3dAGL
-      desc: null
-      since: null
+    desc: or [[Position#Introduction|Position2D]] or [[Position#PositionAGL|PositionAGL]]
+    type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

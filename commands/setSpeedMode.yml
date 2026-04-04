@@ -10,13 +10,8 @@ syntax:
     type: Nothing
   left: !Item
     name: groupName
-    type: !OneOf
-    - type: Object
-      desc: null
-      since: null
-    - type: Group
-      desc: null
-      since: null
+    desc: or [[Group]]
+    type: Object
   right: !Item
     name: mode
     type: String

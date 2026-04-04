@@ -10,7 +10,7 @@ syntax:
     type: Nothing
   right: !Item
     name: value
-    desc: has to be in range from 0.1 to 120
+    desc: in range 0.1 .. 120
     type: Number
 argument_loc: Unspecified
 effect_loc: Global

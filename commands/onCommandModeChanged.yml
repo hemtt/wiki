@@ -9,13 +9,8 @@ syntax:
     type: Nothing
   right: !Item
     name: code
-    type: !OneOf
-    - type: Code
-      desc: null
-      since: null
-    - type: String
-      desc: null
-      since: null
+    desc: or [[String]]
+    type: Code
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}
