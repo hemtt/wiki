@@ -23,7 +23,7 @@ syntax:
       type: Number
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
 - call: !Binary
   - ctrl
   - - - row
@@ -44,7 +44,7 @@ syntax:
       type: Number
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
 argument_loc: Local
 effect_loc: Local
 since: {}

@@ -10,7 +10,7 @@ syntax:
   ret:
     type: !ArraySized
     - name: ambientLightColor
-      type: ArrayColor
+      type: ArrayColorRgb
       default: null
       desc: null
       since: null
@@ -20,7 +20,7 @@ syntax:
       desc: null
       since: null
     - name: dynamicLightColor
-      type: ArrayColor
+      type: ArrayColorRgb
       default: null
       desc: null
       since: null

@@ -26,7 +26,7 @@ syntax:
       value: Position
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
   - !Item
     name: fill
     desc: fill texture file or [[Procedural Textures]]. See note in description for more info.

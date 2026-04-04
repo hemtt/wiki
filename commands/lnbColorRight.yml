@@ -8,7 +8,7 @@ syntax:
   - - row
     - column
   ret:
-    type: ArrayColor
+    type: ArrayColorRgba
   right: !Array
   - !Item
     name: idc
@@ -27,7 +27,7 @@ syntax:
   - - row
     - column
   ret:
-    type: ArrayColor
+    type: ArrayColorRgba
   left: !Item
     name: ctrl
     type: Control

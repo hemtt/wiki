@@ -13,7 +13,7 @@ syntax:
     type: Object
   right: !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgb
 argument_loc: Local
 effect_loc: Local
 since: {}

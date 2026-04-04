@@ -15,7 +15,7 @@ syntax:
     name: properties
     type: !ArraySized
     - name: color
-      type: ArrayColor
+      type: ArrayColorRgba
       default: null
       desc: null
       since: null
@@ -40,7 +40,7 @@ syntax:
       desc: null
       since: null
     - name: WPcolor
-      type: ArrayColor
+      type: ArrayColorRgba
       default: null
       desc: null
       since: null

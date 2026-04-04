@@ -19,7 +19,7 @@ syntax:
     type: Position3dAGL
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
   - !Item
     name: width
     desc: ''

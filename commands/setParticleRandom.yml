@@ -42,7 +42,7 @@ syntax:
     type: Number
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
   - !Item
     name: directionPeriod
     type: Number

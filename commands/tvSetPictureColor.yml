@@ -19,7 +19,7 @@ syntax:
     type: Path
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
 - call: !Binary
   - ctrl
   - - path
@@ -35,7 +35,7 @@ syntax:
     type: Path
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
 argument_loc: Local
 effect_loc: Local
 since: {}

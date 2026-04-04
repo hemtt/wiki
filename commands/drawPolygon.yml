@@ -19,7 +19,7 @@ syntax:
       value: Position3d
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
 argument_loc: Unspecified
 effect_loc: Unspecified
 since: {}

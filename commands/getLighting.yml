@@ -7,7 +7,7 @@ syntax:
   ret:
     type: !ArraySized
     - name: ambientLightColor
-      type: ArrayColor
+      type: ArrayColorRgb
       default: null
       desc: null
       since: null

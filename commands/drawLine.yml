@@ -43,7 +43,7 @@ syntax:
         since: null
   - !Item
     name: color
-    type: ArrayColor
+    type: ArrayColorRgba
   - !Item
     name: width
     desc: ''

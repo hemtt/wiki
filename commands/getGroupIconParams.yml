@@ -7,7 +7,7 @@ syntax:
   ret:
     type: !ArraySized
     - name: color
-      type: ArrayColor
+      type: ArrayColorRgb
       default: null
       desc: icon color
       since: null
@@ -32,7 +32,7 @@ syntax:
       desc: waypoint visibility
       since: null
     - name: WPcolor
-      type: ArrayColor
+      type: ArrayColorRgb
       default: null
       desc: waypoint color
       since: null

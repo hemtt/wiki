@@ -7,7 +7,7 @@ syntax:
   - idc
   - index
   ret:
-    type: ArrayColor
+    type: ArrayColorRgba
   right: !Array
   - !Item
     name: idc
@@ -20,7 +20,7 @@ syntax:
   - control
   - index
   ret:
-    type: ArrayColor
+    type: ArrayColorRgba
   left: !Item
     name: control
     type: Control
