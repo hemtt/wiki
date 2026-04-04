@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns elapsed time in seconds for currently playing music track.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nplayMusic [\"LeadTrack06_F_Tank\", 0];\nonEachFrame {hintSilent str getMusicPlayedTime};\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "getMusicPlayedTime",
+  "problem_notes": [],
+  "see_also": [
+    "addMusicEventHandler",
+    "playMusic"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

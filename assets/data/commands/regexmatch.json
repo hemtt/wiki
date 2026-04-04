@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether the ''haystack'' matches the ''pattern''.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"I'm a coOkIe clicker\" regexMatch \".*cookie.*\"; // true</sqf>",
+    "<sqf>\"I'm a coOkIe clicker\" regexMatch \".*cookie.*/\"; // false, empty flags == case sensitive</sqf>",
+    "<sqf>\nforceUnicode 1;\n\"I'm a coÖkIe clicker\" regexMatch \".*coökie.*\";\n</sqf>",
+    "<sqf>\"Cookie clicker\" regexMatch \"cookie/i\"; // false, pattern does not fully match the haystack</sqf>"
+  ],
+  "groups": [
+    "Strings - Regular Expression"
+  ],
+  "name": "regexMatch",
+  "problem_notes": [],
+  "see_also": [
+    "regexFind",
+    "regexReplace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "haystack",
+          "pattern"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "haystack",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "desc": "returns [[true]] if match was found, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "in format [[Arma 3: Regular Expressions|regex pattern]]",
+          "name": "pattern",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

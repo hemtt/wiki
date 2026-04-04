@@ -1,0 +1,156 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns all magazines (including empty) from all vehicle turrets (including driver turret [-1]) and their ammo counts. Since Arma 3 v2.08.148327 it is possible to exclude person turrets from returned results.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mags = magazinesAllTurrets vehicle player;</sqf>",
+    "<sqf>_mags = magazinesAllTurrets [vehicle player, true];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "name": "magazinesAllTurrets",
+  "problem_notes": [],
+  "see_also": [
+    "magazinesTurret",
+    "allTurrets",
+    "addMagazineTurret",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "loadMagazine",
+    "magazines",
+    "magazinesDetail",
+    "magazinesAmmo",
+    "magazinesAmmoFull",
+    "addWeaponTurret",
+    "removeWeaponTurret",
+    "turretLocal",
+    "getPylonMagazines",
+    "ammoOnPylon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "desc": "magazine class name",
+                  "name": "className",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "desc": null,
+                  "name": "turretPath",
+                  "since": null,
+                  "type": "TurretPath"
+                },
+                {
+                  "desc": "how many rounds left in the magazine",
+                  "name": "ammoCount",
+                  "since": null,
+                  "type": "Number"
+                },
+                {
+                  "desc": "id of the magazine object. The number starts at 10,000,000. This gives it about 6,700,000 possible ids before the number starts losing precision and cannot be used in scripts.",
+                  "name": "id",
+                  "since": null,
+                  "type": "Number"
+                },
+                {
+                  "desc": "[[owner]] / [[clientOwner]] of the PC that created the object",
+                  "name": "creator",
+                  "since": null,
+                  "type": "Number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "vehicle with turrets",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "vehicle",
+          "excludePersonTurrets"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "desc": "magazine class name",
+                  "name": "className",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "desc": null,
+                  "name": "turretPath",
+                  "since": null,
+                  "type": "TurretPath"
+                },
+                {
+                  "desc": "how many rounds left in the magazine",
+                  "name": "ammoCount",
+                  "since": null,
+                  "type": "Number"
+                },
+                {
+                  "desc": "id of the magazine object. The number starts at 10,000,000. This gives it about 6,700,000 possible ids before the number starts losing precision and cannot be used in scripts.",
+                  "name": "id",
+                  "since": null,
+                  "type": "Number"
+                },
+                {
+                  "desc": "[[owner]] / [[clientOwner]] of the PC that created the object",
+                  "name": "creator",
+                  "since": null,
+                  "type": "Number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "vehicle with turrets",
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "when [[true]] only vehicle's turrets are queried",
+              "name": "excludePersonTurrets",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.8"
+      }
+    }
+  ]
+}

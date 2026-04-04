@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns ceiling height for curator camera.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _height = curatorCameraAreaCeiling BIS_curatorUnit;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "curatorCameraAreaCeiling",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curatorObj"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

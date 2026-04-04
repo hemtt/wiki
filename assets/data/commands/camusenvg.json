@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set / clear using of night vision during cutscenes. This command only works with [[camCreate]] created camera that is currently the main camera for the player (see {{Link|#Examples}}).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>camUseNVG true;</sqf>",
+    "<sqf>\nsetDate [2000, 12, 31, 0, 0];\n_cam = \"camera\" camCreate [0, 0, 0];\n_cam camSetTarget player;\n_cam camSetRelPos [0, -5, 3];\n_cam cameraEffect [\"Internal\", \"Back\"];\n_cam camCommit 0;\ncamUseNVG true;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camUseNVG",
+  "problem_notes": [],
+  "see_also": [
+    "setCamUseTI",
+    "disableTIEquipment"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "set"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "enable/disable night vision",
+          "name": "set",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

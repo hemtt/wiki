@@ -1,0 +1,105 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Smoothly change the fog over given time (in seconds). See also [[fogParams]].\n{{Feature|arma3|This command is MP synchronised, if executed on server, the changes will propagate globally. If executed on client effect is temporary as it will soon change to the server setting.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>15 setFog 0.5;</sqf>",
+    "Force no fog:\n<sqf>\n0 setFog 0;\n// forceWeatherChange; // change is immediate\n999999 setFog 0;\n</sqf>",
+    "<sqf>\n// Arma 3 examples:\n0 setFog [1, 0.01, 0];\n0 setFog [1, -1, 70];\t// mountain fog, starts from 70m ASL and thickens the higher you climb\n0 setFog [1, 1, 60];\t// valley fog, starts from 60m ASL and thickens the lower you descend\n0 setFog [1, 1, 0];\t\t// fooooog on the waaaater\n</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "setFog",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Improved",
+    "Fog",
+    "fog",
+    "fogParams",
+    "fogForecast",
+    "nextWeatherChange",
+    "forceWeatherChange",
+    "setRain"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "time",
+          "fog"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transition time to the new value",
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "fog density in range 0..1",
+          "name": "fog",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "time",
+          [
+            "fogValue",
+            "fogDecay",
+            "fogBase"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transition time to the new value",
+          "name": "time",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "normal [[fog]] value that represents fog density at ''fogBase'' level, in range 0..1",
+              "name": "fogValue",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "decay of fog density with altitude, in range -1..1; a negative value means a \"ceiling\" fog",
+              "name": "fogDecay",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "base altitude ([[Position#PositionASL|ASL]]) of fog (in meters), in range -5000..5000",
+              "name": "fogBase",
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "0.50"
+      }
+    }
+  ]
+}

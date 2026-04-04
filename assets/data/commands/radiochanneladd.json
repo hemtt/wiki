@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Add the units to the custom channel.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>2 radioChannelAdd [player, unit1];</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Custom Radio and Chat"
+  ],
+  "name": "radioChannelAdd",
+  "problem_notes": [],
+  "see_also": [
+    "radioChannelCreate",
+    "radioChannelRemove",
+    "radioChannelSetCallSign",
+    "radioChannelSetLabel"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "customChannelID",
+          "units"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[Channel IDs|custom channel ID]] returned by [[radioChannelCreate]] command",
+          "name": "customChannelID",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "list of units",
+          "name": "units",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns unit description set in the editor and visible on role selection screen in multiplayer.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_playerRole = roleDescription player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Multiplayer"
+  ],
+  "name": "roleDescription",
+  "problem_notes": [
+    "'''Does not''' work in single player."
+  ],
+  "see_also": [
+    "name",
+    "getPlayerUID",
+    "vehicleVarName",
+    "worldName",
+    "briefingName",
+    "missionName",
+    "serverName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

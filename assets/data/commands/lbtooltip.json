@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns tooltip for ListBox, ComboBox and Toolbox",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lbTooltip [1, 1];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "lbTooltip",
+  "problem_notes": [],
+  "see_also": [
+    "lbSetTooltip",
+    "ctrlTooltip"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns an array of names of all unit's stored items, including [[weapons]] but excluding [[magazines]] (see [[itemsWithMagazines]]) and [[assignedItems]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_itemsPlayer = items player;</sqf>",
+    "<sqf>player sideChat format [\"%1\", items player];</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "items",
+  "problem_notes": [],
+  "see_also": [
+    "itemsWithMagazines",
+    "assignedItems",
+    "primaryWeaponItems",
+    "secondaryWeaponItems",
+    "backpacks"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

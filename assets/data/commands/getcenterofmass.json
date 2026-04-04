@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns center of mass of an object.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_com = getCenterOfMass _myCar;</sqf>"
+  ],
+  "groups": [
+    "PhysX"
+  ],
+  "name": "getCenterOfMass",
+  "problem_notes": [],
+  "see_also": [
+    "getMass",
+    "setCenterOfMass",
+    "setMass",
+    "addTorque",
+    "addForce"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "relative to the model centre",
+        "type": "Position3dRelative"
+      },
+      "right": {
+        "Item": {
+          "desc": "PhysX object",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Local",
+  "description": "Gets array of indices of rows under this header.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _indices = _control ctFindHeaderRows 0;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "name": "ctFindHeaderRows",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "header's index",
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

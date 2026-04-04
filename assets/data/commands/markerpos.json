@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns marker position. See also [[setMarkerPos]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mPos1 = markerPos \"markerOne\";</sqf>",
+    "<sqf>_mPos2 = markerPos [\"markerTwo\", true];</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "markerPos",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerPos",
+    "setMarkerPosLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "desc": "[x, y, 0], z is always 0",
+        "type": "Position3dAGL"
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "markerName",
+          "preserveElevation"
+        ]
+      },
+      "ret": {
+        "desc": "if ''preserveElevation'' is [[true]] or [x, y, 0] if ''preserveElevation'' is [[false]]",
+        "type": "Position3dAGL"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "markerName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]])",
+              "name": "preserveElevation",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.94"
+      }
+    }
+  ]
+}

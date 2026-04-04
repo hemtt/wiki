@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if item on given path is checked or not.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _isChecked = findDisplay 313 displayCtrl 120 menuChecked [0, 1];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuChecked",
+  "problem_notes": [],
+  "see_also": [
+    "menuSetCheck"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

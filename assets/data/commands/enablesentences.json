@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables radio transmissions to be heard and seen on screen. It does not affect KBTell conversations.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>enableSentences false;</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Sounds"
+  ],
+  "name": "enableSentences",
+  "problem_notes": [],
+  "see_also": [
+    "sentencesEnabled",
+    "setSpeaker",
+    "disableConversation",
+    "enableRadio",
+    "showSubtitles"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enable"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

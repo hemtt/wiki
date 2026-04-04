@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggles various diagnostics.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"All\" diag_enable true;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_enable",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Diagnostics",
+    "Exe",
+    "diag_toggle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "mode",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "see [[Arma 3: Diagnostics Exe]]",
+          "name": "mode",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to enable diag mode, [[false]] to disable it",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

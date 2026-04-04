@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds side score. This is shown in the MP score tab as the total score. '''MP only'''.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>west addScoreSide 10;</sqf>"
+  ],
+  "groups": [
+    "Sides",
+    "Multiplayer"
+  ],
+  "name": "addScoreSide",
+  "problem_notes": [],
+  "see_also": [
+    "score",
+    "addScore",
+    "scoreSide",
+    "getPlayerScores"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "side",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

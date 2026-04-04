@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks whether the player has the artillery computer currently open.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (shownArtilleryComputer) then { hint \"Artillery Computer shown on screen\"; };</sqf>"
+  ],
+  "groups": [
+    "Artillery"
+  ],
+  "name": "shownArtilleryComputer",
+  "problem_notes": [],
+  "see_also": [
+    "enableEngineArtillery",
+    "getArtilleryComputerSettings",
+    "inRangeOfArtillery",
+    "commandArtilleryFire",
+    "doArtilleryFire",
+    "getArtilleryETA"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

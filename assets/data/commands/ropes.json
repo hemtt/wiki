@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all ropes attached to a ropes owner transport vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str (ropes vehicle player);</sqf>",
+    "<sqf>_rope1 = (ropes heli1) select 0;</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "name": "ropes",
+  "problem_notes": [],
+  "see_also": [
+    "canSlingLoad",
+    "enableRopeAttach",
+    "getSlingLoad",
+    "ropeAttachedObjects",
+    "ropeAttachTo",
+    "ropeDestroy",
+    "ropeLength",
+    "ropeUnwound",
+    "ropeAttachedTo",
+    "ropeCreate",
+    "ropeDetach",
+    "ropeAttachEnabled",
+    "ropeCut",
+    "ropeEndPosition",
+    "ropeUnwind",
+    "setSlingLoad",
+    "slingLoadAssistantShown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ropesOwner"
+      },
+      "ret": {
+        "desc": "array of the actual rope objects",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "a transport from which the ropes originate",
+          "name": "ropesOwner",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

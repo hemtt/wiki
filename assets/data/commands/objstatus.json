@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the status of an objective that was defined in [[Briefing.html|briefing.html]].\n\nStatus may be one of:\n* \"ACTIVE\"\n* \"FAILED\"\n* \"DONE\"\n* \"HIDDEN\"\n\nTo refer to an objective that is named \"OBJ_1\", for example, use only the index number in this command (i.e. \"1\" objStatus \"HIDDEN\").",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"1\" objStatus \"DONE\";</sqf> \nMarks the objective named \"OBJ_1\" as completed."
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "objStatus",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "objectivenumber",
+          "status"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "objectivenumber",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "status",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

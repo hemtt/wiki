@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Similar to [[setMousePosition]] but relative to the given control.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetMousePosition [0.5, 0.5];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "ctrlSetMousePosition",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlMousePosition",
+    "setMousePosition",
+    "getMousePosition",
+    "ctrlMapCursor"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "x",
+            "y"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "position in x",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "position in y",
+              "name": "y",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

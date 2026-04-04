@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns a group's name or a unit's group ID number.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_name = groupId group player;\t\t\t// e.g \"B Alpha 1-1\"</sqf>",
+    "<sqf>private _unitGroupId = groupId player;\t// e.g 3 (number, not a string)</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "name": "groupId",
+  "problem_notes": [],
+  "see_also": [
+    "setGroupId",
+    "setGroupIdGlobal",
+    "group"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "desc": "the group's name (e.g \"Alpha Red\")",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "the unit's group ID (e.g \"2, taking command\")",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "a group's unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "since": {
+        "arma3": "2.12"
+      }
+    }
+  ]
+}

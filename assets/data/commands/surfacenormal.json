@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns terrain's {{Link|https://en.wikipedia.org/wiki/Normal_(geometry)|surface normal}} on given position.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_normal = surfaceNormal [300, 500];</sqf>",
+    "<sqf>_normal = surfaceNormal getPosASL player;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "surfaceNormal",
+  "problem_notes": [],
+  "see_also": [
+    "setVectorUp",
+    "surfaceIsWater",
+    "surfaceType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "position"
+      },
+      "ret": {
+        "type": "Vector3d"
+      },
+      "right": {
+        "Item": {
+          "desc": "when using [[Position#Introduction|Position3D]], Z is ignored",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

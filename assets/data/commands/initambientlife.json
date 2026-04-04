@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Initialises the ambient life on [[Multiplayer Scripting#Locality|local]] client from {{hl|CfgWorlds >> worldName >> AmbientA3}}. Has no effect on dedicated server or headless client.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>initAmbientLife;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "initAmbientLife",
+  "problem_notes": [],
+  "see_also": [
+    "enableEnvironment",
+    "sideAmbientLife"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

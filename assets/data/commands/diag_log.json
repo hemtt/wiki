@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Dumps the argument's value to the [[arma.RPT|report file]]. Each call creates a new line in the file.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_log time;</sqf>",
+    "<sqf>diag_log format [\"%1, %2\", player, time];</sqf>",
+    "<sqf>\n_array = [1, \"foo\", player, \"bar\"];\n{\n\tdiag_log _x;\n} forEach _array ; // creates 4 entries on 4 lines\n</sqf>",
+    "<sqf>\n_array = [1, \"foo\", player, \"bar\"];\ndiag_log _array; // Creates one entry of e.g. [1,\"foo\",B Alpha 1-1:1 (Player Name),\"bar\"]\n</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_log",
+  "problem_notes": [],
+  "see_also": [
+    "arma.RPT",
+    "diag_dumpCalltraceToLog",
+    "diag_stacktrace",
+    "copyToClipboard",
+    "copyFromClipboard",
+    "diag_fps",
+    "diag_fpsMin",
+    "diag_frameNo",
+    "diag_tickTime",
+    "diag_deltaTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "output"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "output",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

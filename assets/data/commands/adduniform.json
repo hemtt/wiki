@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Global",
+  "description": "Create a new uniform and try to link it into uniform slot (given uniform has to be supported by allowedUniforms list of target soldier).\n{{Feature | informative | To check if a uniform is allowed use [[isUniformAllowed]], and to force an incompatible uniform use [[forceAddUniform]].}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_unit addUniform \"U_B_CombatUniform_mcam\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "addUniform",
+  "problem_notes": [],
+  "see_also": [
+    "forceAddUniform",
+    "isUniformAllowed",
+    "removeUniform",
+    "uniform"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the status of STREAM FRIENDLY UI setting in UI (OPTIONS >> GAME >> GENERAL >> STREAM FRIENDLY UI).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str isStreamFriendlyUIEnabled;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "isStreamFriendlyUIEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "isInstructorFigureEnabled",
+    "isTutHintsEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

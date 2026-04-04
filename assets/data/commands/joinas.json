@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Global",
+  "description": "Joins the unit to the given group, if position id is available, this one is used.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player joinAs [_group, 4];</sqf>",
+    "To get the position id:\n<sqf>\ngetUnitPositionId = {\n\tprivate [\"_vvn\", \"_str\"];\n\t_vvn = vehicleVarName _this;\n\t_this setVehicleVarName \"\";\n\t_str = str _this;\n\t_this setVehicleVarName _vvn;\n\tparseNumber (_str select [(_str find \":\") + 1])\n};\nplayer joinAs [createGroup west, 5];\n_id = player call getUnitPositionId;\nhint str _id; // 5\n</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "name": "joinAs",
+  "problem_notes": [],
+  "see_also": [
+    "join",
+    "joinAsSilent",
+    "joinSilent",
+    "group"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "group",
+            "id"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "group",
+              "type": "Group"
+            }
+          },
+          {
+            "Item": {
+              "name": "id",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Global",
+  "description": "Creates new item and tries to add it into inventory. Inventory must have enough space to accomodate new item or command will fail.The item can also be a weapon or a magazine.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n// identical to bluforUnit linkItem \"NVGoggles\"\n// addItem then assignItem makes the item go through through inventory storage and fail if storage space was missing\nbluforUnit addItem \"NVGoggles\";\nbluforUnit assignItem \"NVGoggles\";\n\nopforUnit addItem \"NVGoggles_OPFOR\";\nopforUnit assignItem \"NVGoggles_OPFOR\";\n\nindependentUnit addItem \"NVGoggles_INDEP\";\nindependentUnit assignItem \"NVGoggles_INDEP\";\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "addItem",
+  "problem_notes": [],
+  "see_also": [
+    "removeItem",
+    "assignItem",
+    "unassignItem",
+    "assignedItems",
+    "linkItem",
+    "unlinkItem",
+    "removeAllAssignedItems",
+    "addItemToUniform",
+    "addItemToVest",
+    "addItemToBackpack"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

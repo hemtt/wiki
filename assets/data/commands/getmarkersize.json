@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the size of the given marker. A getter for [[setMarkerSize]] and an alias of [[markerSize]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n\"MarkerOne\" setMarkerSize [100,200];\n_size = getMarkerSize \"MarkerOne\"; //returns [100,200]\n</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "getMarkerSize",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerSize",
+    "setMarkerBrush",
+    "setMarkerColor",
+    "setMarkerDir",
+    "setMarkerPos",
+    "setMarkerShape",
+    "createMarker",
+    "setMarkerText",
+    "setMarkerType",
+    "setMarkerAlpha"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "markerName"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "1/2 width of marker",
+              "name": "a_axis",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "1/2 height of marker",
+              "name": "b_axis",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

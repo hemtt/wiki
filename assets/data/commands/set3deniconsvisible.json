@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggle visibility of [[:Category:Eden Editor|Eden Editor]] icons.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>set3DENIconsVisible [false, false]; // Hide all icons</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "set3DENIconsVisible",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENIconsVisible",
+    "set3DENLinesVisible",
+    "get3DENLinesVisible",
+    "set3DENModelsVisible"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "showMap",
+          "showScene"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "visibility in the map",
+              "name": "showMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "visibility in the scene",
+              "name": "showScene",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

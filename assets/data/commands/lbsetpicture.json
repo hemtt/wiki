@@ -1,0 +1,96 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the left picture in the row with given index of [[CT_LISTBOX]] or [[CT_COMBO]]. The picture is searched for in the mission directory, the dtaExt subdirectory of the campaign directory and the dtaExt directory and the data bank (or directory).<br>\n{{Feature|arma3|In {{arma3}} it might be necessary to set the color of the picture as well with [[lbSetPictureColor]] as default color <sqf inline>[0,0,0,0]</sqf> makes the picture invisible.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>lbSetPicture [101, 0, \"iskoda.paa\"];</sqf>",
+    "<sqf>_control lbSetPicture [0, \"iskoda.paa\"];</sqf>",
+    "{{Feature|informative|\nAdding pictures to lists is very slow. In order to prevent a list filling's possible slowdown, add the pictures in the '''scheduled''' environment using [[spawn]].<br>\nOne drawback of that method is that sorting the entries is not easily possible.\n}}\n<sqf>\nprivate _path = _ctrlTV tvAdd [[], \"Some Entry\"];\n[_ctrlTV, _path] spawn {\n\t(_this select 0) tvSetPictureRight [[_this select 1], \"someImage.paa\"];\n};\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbSetPicture",
+  "problem_notes": [],
+  "see_also": [
+    "lbPicture",
+    "lbSetPictureColor",
+    "lbSetPictureRight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "index",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "path to the picture",
+              "name": "path",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "index",
+            "path"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "index",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "path to the picture",
+              "name": "path",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

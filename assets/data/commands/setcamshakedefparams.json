@@ -1,0 +1,85 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets camera shake default parameters.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setCamShakeDefParams [1, 2, 3, 4, 5, .5, .5];</sqf>",
+    "<sqf>setCamShakeDefParams [100, 10, 10, 4, 5, 1, 1];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "setCamShakeDefParams",
+  "problem_notes": [],
+  "see_also": [
+    "enableCamShake",
+    "addCamShake",
+    "setCamShakeParams",
+    "resetCamShake"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "power",
+          "duration",
+          "frequency",
+          "minSpeed",
+          "minMass",
+          "caliberCoefHit",
+          "vehicleCoef"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "power",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "duration",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "frequency",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "minSpeed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "minMass",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "caliberCoefHit",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "vehicleCoef",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

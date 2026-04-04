@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns throttle position. Works only on player's vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _throttle = airplaneThrottle objectParent player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "airplaneThrottle",
+  "problem_notes": [],
+  "see_also": [
+    "setAirplaneThrottle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "airplane"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "airplane",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

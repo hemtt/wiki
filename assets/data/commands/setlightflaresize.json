@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets relative size of the flare for the light.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>myLight setLightFlareSize 5;</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "name": "setLightFlareSize",
+  "problem_notes": [],
+  "see_also": [
+    "setLightAmbient",
+    "setLightColor",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightIntensity",
+    "setLightAttenuation",
+    "setLightUseFlare",
+    "setLightBrightness",
+    "setLightFlareMaxDistance",
+    "setLightDayLight"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "light",
+          "size"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "light",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "size",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Reload models on-the-fly without the need of restarting the game.\nChanges applied by '''diag_resetShapes''' are applied to all new entities so restart of mission is not necessarily  required - spawning vehicle again or changing back forth weapon should usually do the trick.\nIt works only with {{hl|[[Arma 3: Startup Parameters#Developer Options|-filePatching]]}} in combination with local data. Command will reload '''only''' models present in local data.\n{{Feature|informative|Limitation: {{hl|CfgSkeletons}} (inside {{hl|model.cfg}}) cannot be reloaded.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_resetShapes;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_resetShapes",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

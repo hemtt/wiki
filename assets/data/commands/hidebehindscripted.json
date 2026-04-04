@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "When set to [[true]] it disables the default engine hiding behavior.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_unit hideBehindScripted true;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Unit Control"
+  ],
+  "name": "hideBehindScripted",
+  "problem_notes": [],
+  "see_also": [
+    "isHideBehindScripted"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "scriptedHideBehind"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "scriptedHideBehind",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

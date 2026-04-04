@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Executes a command on the given ''camera / actor'' object. Known commands:\n\n{{{!}} class{{=}}\"wikitable\"\n! All cameras !! \"Camera\" !! \"Seagull\" !! \"CamCurator\"\n{{!}}- style=\"vertical-align: top\"\n{{!}}\n* {{hl|\"manual on\"}}\n* {{hl|\"manual off\"}}\n{{!}}\n* {{hl|\"inertia on\"}}\n* {{hl|\"inertia off\"}}\n{{!}}\n* {{hl|\"landed\"}} lands the seagull\n* {{hl|\"airborne\"}} makes the seagull fly\n{{!}}\n* {{hl|\"maxPitch (x)\"}} (number, in degrees)\n* {{hl|\"minPitch (x)\"}} (number, in degrees)\n* {{hl|\"speedDefault (x)\"}} (number)\n* {{hl|\"speedMax (x)\"}} (number)\n* {{hl|\"ceilingHeight (x)\"}} (number, in meters, ASL)\n* {{hl|\"atl (x)\"}} (on/off)\n* {{hl|\"surfaceSpeed (x)\"}} (on/off)\n{{!}}}\n\n{{Feature|informative|The [[camCommand]] effect is immediate and does not need [[camCommit]]/[[camCommitPrepared]].}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_camera camCommand \"manual on\";</sqf>",
+    "<sqf>\nprivate _camera = \"CamCurator\" camCreate [0,0,0];\n_camera camCommand \"maxPitch 89\";\n_camera camCommand \"minPitch -89\";\n_camera camCommand \"speedDefault 0.1\";\n_camera camCommand \"speedMax 2\";\n_camera camCommand \"ceilingHeight 5000\";\n_camera camCommand \"atl off\";\n_camera camCommand \"surfaceSpeed off\";\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camCommand",
+  "problem_notes": [],
+  "see_also": [
+    "cameraEffect",
+    "camCreate",
+    "camCommit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "command"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "see [[camCreate]]",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see description",
+          "name": "command",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

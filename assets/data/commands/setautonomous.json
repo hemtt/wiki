@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets UAV autonomous mode.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>uav setAutonomous true;</sqf>"
+  ],
+  "groups": [
+    "Remote Control"
+  ],
+  "name": "setAutonomous",
+  "problem_notes": [],
+  "see_also": [
+    "isAutonomous",
+    "disableAI",
+    "enableAI",
+    "checkAIFeature"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "uav",
+          "bool"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "uav",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "whether the operation was successful. Returns [[false]] when the object is not a uav.",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current value of rain density.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_rainLevel = rain;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "rain",
+  "problem_notes": [],
+  "see_also": [
+    "setRain",
+    "fog"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "NumberRange": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  ]
+}

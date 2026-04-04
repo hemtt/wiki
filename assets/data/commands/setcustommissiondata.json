@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines custom mission text that is sent to [[Arma 3: Analytics]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setCustomMissionData [\"someData\", \"someMoreData\"];</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "setCustomMissionData",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "data"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "A maximum of five strings is allowed, each string with a maximum length of 16 characters",
+          "name": "data",
+          "type": {
+            "ArrayUnsized": {
+              "value": "String"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Dump script assembly.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_dumpScriptAssembly BIS_fnc_taskCreate;</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_dumpScriptAssembly",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Diagnostics",
+    "Exe"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "code"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "code",
+          "type": "Code"
+        }
+      }
+    }
+  ]
+}

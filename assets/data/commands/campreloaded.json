@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks whether the camera has finished preloading.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (camPreloaded _camera) exitWith { hint \"loaded\" };</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camPreloaded",
+  "problem_notes": [],
+  "see_also": [
+    "cameraEffect",
+    "camCreate",
+    "camCommit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "camera"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "camera",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

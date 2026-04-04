@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes weapon from the turret. Use turret path [-1] for driver's turret.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_tank removeWeaponTurret [\"LMG_M200\", [0,0]];</sqf>",
+    "<sqf>vehicle player removeWeaponTurret [\"SportCarHorn\", [-1]];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "name": "removeWeaponTurret",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponTurret",
+    "turretLocal",
+    "addMagazineTurret",
+    "magazinesTurret",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "currentMagazineDetailTurret",
+    "currentMagazineTurret",
+    "currentWeaponTurret",
+    "selectWeaponTurret"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "weaponName",
+            "turretPath"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "weaponName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

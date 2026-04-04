@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a [[Structured Text]] similar to [[format]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint formatText [\"Image: %1\", image \"\\a3\\Data_f\\Flags\\flag_Altis_co.paa\"];</sqf>",
+    "<sqf>\nhint formatText [\"%1%2%3\", \"line1\", \"<br/>\", \"line2\"];\t\t// result displayed in one line\nhint formatText [\"%1%2%3\", \"line1\", lineBreak, \"line2\"];\t// result displayed in two lines\n</sqf>"
+  ],
+  "groups": [
+    "Strings",
+    "Structured Text"
+  ],
+  "name": "formatText",
+  "problem_notes": [],
+  "see_also": [
+    "Structured",
+    "Text",
+    "format",
+    "composeText",
+    "text",
+    "parseText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "format",
+          "argumentN"
+        ]
+      },
+      "ret": {
+        "type": "StructuredText"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "a string containing text and/or references to the variables listed below in the array. The references appear in the form of %1, %2 etc.",
+              "name": "format",
+              "type": "String"
+            }
+          },
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "desc": "use [[Structured Text]] where necessary (see [[#Example|Example 2]])",
+                  "name": "argumentN",
+                  "type": "Anything"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

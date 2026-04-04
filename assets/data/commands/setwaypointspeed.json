@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Switches the group speed mode when the waypoint becomes active.\n<br>\n<br>\nPossible values are:\n* \"UNCHANGED\"\n* \"LIMITED\"\n* \"NORMAL\"\n* \"FULL\"",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointSpeed \"FULL\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "setWaypointSpeed",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

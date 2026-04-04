@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Prepares the camera heading. \n{{Feature|warning|This command is '''non-functional'''!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_camera camPrepareDir 150;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Camera Control"
+  ],
+  "name": "camPrepareDir",
+  "problem_notes": [],
+  "see_also": [
+    "camPreload",
+    "camCommitPrepared"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "direction"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "direction",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

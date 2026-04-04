@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the marker brush. See [[setMarkerBrush]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (markerBrush \"Marker1\" == \"Solid\") then { hint \"Marker1 is solid!\" };</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "markerBrush",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerBrush",
+    "setMarkerBrushLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "marker name",
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

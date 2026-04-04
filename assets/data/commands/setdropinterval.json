@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Set interval of emitting particles from particle source. In Arma 3 hardcoded limit of how many particles can exist at the same time is {{Link|link= http://forums.bistudio.com/showthread.php?177797-Ruin-your-copy-of-Arma-and-your-PC#post2691090|text= 18000}}. Correspondence between CfgCloudlets class param name and command param:\n<sqf>particleSource setDropInterval interval;</sqf>",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_source setDropInterval 0.05;</sqf>"
+  ],
+  "groups": [
+    "Particles"
+  ],
+  "name": "setDropInterval",
+  "problem_notes": [],
+  "see_also": [
+    "drop",
+    "setParticleParams",
+    "setParticleRandom",
+    "setParticleFire",
+    "setParticleCircle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "particleSource",
+          "interval"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "particleSource",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "interval",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

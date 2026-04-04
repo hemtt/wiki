@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the collective pitch control to a specific position, regardless of input devices (until those are changed).\n* 0: collective fully down\n* ~0.7: approximate stable hover position\n* 1: collective fully up \n{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myHelicopterRTD setActualCollectiveRTD 0.7;</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "name": "setActualCollectiveRTD",
+  "problem_notes": [],
+  "see_also": [
+    "collectiveRTD"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "helicopterRTD",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "collective position",
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

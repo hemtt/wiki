@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sorts all children, including trees deriving from given path. Text of [[CT_TREE|Tree View]] entries is used for sorting.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ctrl tvSortAll [[], false]; // sorts the complete Tree View</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSortAll",
+  "problem_notes": [],
+  "see_also": [
+    "tvSort",
+    "tvSortByValue",
+    "tvSortByValueAll"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "reversed"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "path to start sorting from",
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to reverse sort it.",
+              "name": "reversed",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

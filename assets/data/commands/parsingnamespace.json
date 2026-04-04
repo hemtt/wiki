@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the global namespace attached to config parser.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nparsingNamespace setVariable [\"var1\", 101.23124];\n_profVar1 = parsingNamespace getVariable \"var1\";\n</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "Variables"
+  ],
+  "name": "parsingNamespace",
+  "problem_notes": [],
+  "see_also": [
+    "missionNamespace",
+    "uiNamespace",
+    "currentNamespace",
+    "profileNamespace",
+    "localNamespace",
+    "allVariables",
+    "with",
+    "ArmA:_Editing#Forward_Compatibility|Forward",
+    "Compatibility"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Namespace"
+      }
+    }
+  ]
+}

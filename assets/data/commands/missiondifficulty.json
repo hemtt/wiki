@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return difficulty that has been forced for this mission, returns -1 if difficulty is not forced and it is used one from player's options.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _number = missionDifficulty;</sqf>",
+    "<sqf>\nprivate _playedDifficulty = missionDifficulty;\nif (_playedDifficulty == -1) then\n{\n\t_playedDifficulty = difficulty;\n};\n</sqf>"
+  ],
+  "groups": [
+    "Difficulty",
+    "Mission Information"
+  ],
+  "name": "missionDifficulty",
+  "problem_notes": [],
+  "see_also": [
+    "difficultyOption",
+    "difficulty"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

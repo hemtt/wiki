@@ -1,0 +1,113 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets string text to item on given path. IDC means id of parent Tree View.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tvSetText [101, [0], \"Test data\"];</sqf>",
+    "<sqf>_ctrl tvSetText [[0,0,0], \"Test data\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetText",
+  "problem_notes": [],
+  "see_also": [
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "text"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "text"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

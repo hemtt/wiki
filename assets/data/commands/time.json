@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns time elapsed since mission started (in seconds). The value is different on each client. If you need unified time, use [[serverTime]]. Unlike [[uiTime]] the [[time]] stops when game is [[isGamePaused | paused]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _future = time + 30;\nwaitUntil { time >= _future };  // continue after 30 seconds\n</sqf>",
+    "Wait until mission fully started:\n<sqf>waitUntil { time > 0 };</sqf>"
+  ],
+  "groups": [
+    "Time",
+    "Mission Information"
+  ],
+  "name": "time",
+  "problem_notes": [],
+  "see_also": [
+    "uiTime",
+    "sleep",
+    "date",
+    "dayTime",
+    "serverTime",
+    "skipTime",
+    "accTime",
+    "dateToNumber",
+    "timeMultiplier",
+    "setTimeMultiplier",
+    "missionStart",
+    "diag_tickTime",
+    "diag_deltaTime",
+    "systemTime",
+    "systemTimeUTC",
+    "BIS_fnc_timeToString"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the next '''lowest''' integer in relation to the provided number.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nfloor 5.1;\t\t// result is  5\nfloor 5.999;\t// result is  5\nfloor -2.01;\t// result is -3\nfloor -2.99;\t// result is -3\n</sqf>"
+  ],
+  "groups": [
+    "Math"
+  ],
+  "name": "floor",
+  "problem_notes": [],
+  "see_also": [
+    "ceil",
+    "round",
+    "linearConversion"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "num"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "num",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

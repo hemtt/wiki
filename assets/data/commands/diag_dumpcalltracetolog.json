@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Dumps current callstack/calltrace to RPT.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ndiag_dumpCalltraceToLog;\n/* outputs:\nCallstack:\"\n14:17:06 \"    [] L1 ()\"\n14:17:06 \"    [] L25 (A3\\functions_f\\Debug\\fn_debugConsoleExec.sqf)\"\n14:17:06 \"        _this:[{st = 15 / 0;}]\"\n14:17:06 \"    [] L0 ()\"\n14:17:06 \"    [] L25 (A3\\functions_f\\Debug\\fn_debugConsoleExec.sqf)\"\n14:17:06 \"        _x:any\"\n14:17:06 \"    [] L1 ()\"\n14:17:06 \"        _this:[]\"\n14:17:06 \"CALLSTACK END;;;\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_dumpCalltraceToLog",
+  "problem_notes": [],
+  "see_also": [
+    "arma.RPT",
+    "diag_stacktrace",
+    "diag_log"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

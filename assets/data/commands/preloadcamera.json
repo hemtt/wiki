@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Preload all textures and models around given [[Position]] to avoid visual artifacts after camera is moved.\n\nShould be used before any abrupt camera change/cut.\n\nReturns true once all data is ready. See [[camPreload]] for alternative, more flexible camera preloading.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waitUntil { preloadCamera markerPos \"cam_location_2\" };</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "preloadCamera",
+  "problem_notes": [],
+  "see_also": [
+    "camPreload",
+    "camPreloaded"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "position"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": "Position"
+        }
+      }
+    }
+  ]
+}

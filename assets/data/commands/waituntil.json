@@ -1,0 +1,142 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Suspends execution of [[Scheduler|scheduled]] script until the given condition satisfied. \n* This command will loop and call the code inside <sqf inline>{}</sqf> '''mostly every frame''', depends on complexity of the condition and the overall engine load, until the [[Code|code]] returns [[true]]\n* If the very first execution of the code returns [[true]] the command will exit immediately, therefore it will not produce any \"Suspending not allowed in this context\" error when used inside [[Scheduler#Unscheduled_Environment|non-scheduled]] script. For all other uses it must be executed in environment that allows [[Scheduler#Suspension|suspension]] ([[canSuspend]]), such as [[spawn]]ed or [[execVM]]ed code\n* Avoid doing <sqf inline>waitUntil { time > 20 };</sqf> and use <sqf inline>sleep 20;</sqf> instead!\n* If you can, add a [[sleep]] to the condition to save some cpu cycles <sqf inline>waitUntil { sleep 1; !alive player };</sqf>\n\n{{Feature|arma3|Since {{arma3}} v1.94, a ''condition'' returning anything other than [[true]] or [[false]] '''will''' result in an appropriate type error.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waitUntil { not alive player };</sqf>",
+    "<sqf>_i = 0; waitUntil { _i = _i + 1; _i >= 100 };</sqf>",
+    "[[waitUntil]] can lead to performance loss if used improperly:\n<sqf>\nwaitUntil { not alive player };\t\t\t// bad\nwaitUntil { sleep 1; not alive player };\t// good - checks every 1 second\nplayer addEventHandler [\"Killed\", {  }];\t// best - don't forget about Event Handlers\n</sqf>",
+    "An on-the-fly custom [[Arma 3: Event Handlers|event handler]]:\n<sqf>\n_myEH = [\"ZoomIn\"] spawn {\n\twhile { true } do\n\t{\n\t\twaitUntil { inputAction (_this select 0) == 1 };\n\t\tdiag_log format [\"%1 @ %2\", _this select 0, diag_tickTime];\n\t};\n};\n</sqf>\nAlthough it may be better to use [[onEachFrame]] ([[BIS_fnc_addStackedEventHandler|stacked]]) [[Arma_3:_Mission_Event_Handlers#EachFrame|mission Event Handler]], depending on the application.",
+    "Use [[getVariable]] with default value to prevent unexcepted script errors:\n<sqf>\nwaitUntil { bank getVariable [\"money\", 0] > 0 };\nwaitUntil { missionNamespace getVariable [\"isready\", false] };\n</sqf>",
+    "Always return [[Boolean]]:\n<sqf>\nwaitUntil { sleep 1; if (not alive player) exitWith {}; _time = _time + 1 };\t\t\t\t// bad\nwaitUntil { sleep 1; if (not alive player) exitWith { true }; _time = _time + 1; false };\t// good\nwaitUntil { sleep 1; not alive player };\t\t\t\t\t\t\t\t\t\t\t\t\t// perfect\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "waitUntil",
+  "problem_notes": [
+    "For some unknown reason if you have [[waitUntil]] loop active and game is '''saved/loaded''', some variables in the expression may appear undefined for a short time. As a workaround, assign expression to a variable and make sure it is defined before [[waitUntil]] checks it:\n<sqf>waitUntil { private _expression = someBooleanVar && (someNumberVar > 10); !isNil \"_expression\" && { _expression } };</sqf>"
+  ],
+  "see_also": [
+    "sleep",
+    "uiSleep",
+    "canSuspend",
+    "spawn",
+    "execVM",
+    "while",
+    "Control",
+    "Structures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "condition"
+      },
+      "ret": {
+        "desc": "the value the condition evaluates to when the wait is over (normally [[true]])",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "the expression that must return a [[Boolean]], [[true]] to finish waiting or [[false]] to continue waiting",
+          "name": "condition",
+          "type": "Code"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "condition",
+          "timeout",
+          "interval"
+        ]
+      },
+      "ret": {
+        "desc": "the value the condition evaluates to when the wait is over (normally [[true]]), or [[Nothing]] if the timeout ended the wait",
+        "type": "Anything"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the expression that must return a [[Boolean]], [[true]] to finish waiting or [[false]] to continue waiting",
+              "name": "condition",
+              "type": "Code"
+            }
+          },
+          {
+            "Item": {
+              "desc": "a timeout in seconds of game time ([[sleep]] vs [[uiSleep]]). The timeout is only checked after the condition was checked.",
+              "name": "timeout",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 0) the time interval in seconds of game time between condition checks, this is equivalent to using a \"sleep\" after the condition.",
+              "name": "interval",
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    },
+    {
+      "call": {
+        "Unary": "scriptHandle"
+      },
+      "ret": {
+        "desc": "The result of the script or [[Script_Handle#Promise_Handles|Promise]]",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "a script handle or [[Script Handle|promise]] to wait on",
+          "name": "scriptHandle",
+          "type": "ScriptHandle"
+        }
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "scriptHandle",
+          "timeout"
+        ]
+      },
+      "ret": {
+        "desc": "the result of the script or [[Script_Handle#Promise_Handles|Promise]]. Or [[Nothing]] if timed out.",
+        "type": "Anything"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "a script handle or [[Script Handle|promise]] to wait on",
+              "name": "scriptHandle",
+              "type": "ScriptHandle"
+            }
+          },
+          {
+            "Item": {
+              "desc": "a timeout in seconds of game time ([[sleep]] vs [[uiSleep]])",
+              "name": "timeout",
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}

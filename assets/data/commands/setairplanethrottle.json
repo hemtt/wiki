@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets a wanted throttle position - works only on [[player]]'s vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setAirplaneThrottle 0.5;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setAirplaneThrottle",
+  "problem_notes": [],
+  "see_also": [
+    "airplaneThrottle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "airplane",
+          "value"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "airplane",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "wanted throttle",
+          "name": "value",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

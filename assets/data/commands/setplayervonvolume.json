@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets provided player's Voice over Network (VoN) volume.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_loudPlayer setPlayerVoNVolume 0.5;</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "name": "setPlayerVoNVolume",
+  "problem_notes": [],
+  "see_also": [
+    "getPlayerVoNVolume",
+    "fadeSound",
+    "fadeRadio",
+    "fadeMusic"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "volume"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the other player's unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the wanted volume",
+          "name": "volume",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

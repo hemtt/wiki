@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Global",
+  "description": "Count how many units in the array are unknown to the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_num = player countUnknown list _triggerOne;</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "countUnknown",
+  "problem_notes": [],
+  "see_also": [
+    "countFriendly",
+    "countEnemy",
+    "count",
+    "countSide",
+    "countType"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "others"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "others",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

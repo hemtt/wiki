@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the global namespace attached to mission.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nmissionNamespace setVariable [\"StringVariable\", \"myString\"]; // same as: StringVariable = \"myString\";\n_myStringValue = missionNamespace getVariable \"StringVariable\";\nhint _myStringValue; // hints \"myString\"\n</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "Variables"
+  ],
+  "name": "missionNamespace",
+  "problem_notes": [],
+  "see_also": [
+    "currentNamespace",
+    "uiNamespace",
+    "parsingNamespace",
+    "profileNamespace",
+    "localNamespace",
+    "serverNamespace",
+    "allVariables",
+    "with",
+    "ArmA:_Editing#Forward_Compatibility|Forward",
+    "Compatibility"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Namespace"
+      }
+    }
+  ]
+}

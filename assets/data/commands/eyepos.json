@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the object's eyes / main turret position.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_eyesPos = eyePos player;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "eyePos",
+  "problem_notes": [],
+  "see_also": [
+    "eyeDirection",
+    "getPosASL",
+    "setPosASL",
+    "setPosASL2",
+    "getCameraViewDirection",
+    "positionCameraToWorld"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Position3dASL"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

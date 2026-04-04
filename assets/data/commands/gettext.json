@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Extracts [[localize]]d text from config entry, if entry is subject to [[localize|localization]], otherwise returns text value.\nTo obtain the translation key itself, see [[getTextRaw]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_text = getText (configFile >> \"CfgVehicles\" >> \"Thing\" >> \"icon\"); // \"Get in %1 as Driver\"</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "name": "getText",
+  "problem_notes": [],
+  "see_also": [
+    "configFile",
+    "a",
+    "/",
+    "b",
+    "configName",
+    "count",
+    "getArray",
+    "getNumber",
+    "inheritsFrom",
+    "isArray",
+    "isClass",
+    "isNumber",
+    "isText",
+    "select",
+    "getTextRaw"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "config"
+      },
+      "ret": {
+        "desc": "text value",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    }
+  ]
+}

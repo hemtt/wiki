@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines an action performed when [[High Command|high command]] group selection has been changed.<br>\nCommand receives 2 variables:\n* _group: [[Group]] - last selected/deselected group\n* _isSelected: [[Boolean]] - new selection state of the specific group\nThe code is executed on every [[High Command|hc]] group selection change until it is replaced or removed (see {{Link|#Example 3}}).\n{{Feature|important|Using the command again will '''overwrite''' the previously set code.}}\n{{Feature|informative|Since {{arma3}} v1.58 a stackable version of this EH is available: [[Arma 3: Mission Event Handlers#HCGroupSelectionChanged|HCGroupSelectionChanged]]}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nonHCGroupSelectionChanged {\n\tif (_isSelected) then\n\t{\n\t\thint format [\"Group %1 has been selected.\", _group];\n\t}\n\telse\n\t{\n\t\thint format [\"Group %1 has been deselected.\", _group];\n\t};\n};\n</sqf>",
+    "<sqf>onHCGroupSelectionChanged \"player globalChat 'HC group selection has been changed.';\";</sqf>",
+    "Remove event handler:\n<sqf>\nonHCGroupSelectionChanged \"\";\n// or\nonHCGroupSelectionChanged {};\n</sqf>"
+  ],
+  "groups": [
+    "High Command",
+    "Event Handlers"
+  ],
+  "name": "onHCGroupSelectionChanged",
+  "problem_notes": [],
+  "see_also": [
+    "High",
+    "Command",
+    "hcAllGroups",
+    "hcGroupParams",
+    "hcLeader",
+    "hcRemoveAllGroups",
+    "hcRemoveGroup",
+    "hcSelected",
+    "hcSelectGroup",
+    "hcSetGroup",
+    "hcShowBar",
+    "hcShownBar",
+    "onCommandModeChanged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "code"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "code",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

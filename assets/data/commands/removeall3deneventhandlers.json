@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all [[:Category:Eden Editor|Eden Editor]] event handlers of given type. \n<br><br>\nSee the list of all [[Arma_3:_Event_Handlers:_Eden_Editor|Eden Editor Event Handlers]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>removeAll3DENEventHandlers \"onUndo\";</sqf>"
+  ],
+  "groups": [
+    "Eden Editor",
+    "Event Handlers"
+  ],
+  "name": "removeAll3DENEventHandlers",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENEventHandler",
+    "remove3DENEventHandler"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "type"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of event handler",
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Global",
+  "description": "Checks whether the object is marked for weapons collection.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_marked = isMarkedForCollection _truck;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "isMarkedForCollection",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets custom eye accommodation camera aperture.\n\n{{Feature|informative|\nIf HDR is enabled, when [[setAperture]] {{hl|value}} is used it also forces [[setApertureNew]] to the following values: [{{hl|value}}, {{hl|value}}, {{hl|value}}, 1].\nExecute [[setApertureNew]] after [[setAperture]] to override this default mechanic.\n}}  \n{{Feature|important|\nThe aperture is set to default by the engine at the mission start. If you set it before the mission started it will reset like it never happened.\nMake sure you set it at the right time (see {{Link|#Example 2}}).\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setAperture 0.3;</sqf>",
+    "<sqf>0 spawn { sleep 0.1; setAperture 100 };</sqf>"
+  ],
+  "groups": [
+    "Camera Control",
+    "Lights"
+  ],
+  "name": "setAperture",
+  "problem_notes": [],
+  "see_also": [
+    "setApertureNew",
+    "apertureParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "aperture"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "aperture value; a value {{hl|c= <= 0}} will set the aperture automatically. Maximum value which has an effect seems to be {{hl|100}}.",
+          "name": "aperture",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

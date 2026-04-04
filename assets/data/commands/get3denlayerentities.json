@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return all entities and sub-layer in [[Eden Entity]] layer. In order to get all layer entities during a scenario use [[getMissionLayerEntities]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_myLayer = -1 add3DENLayer \"CTRG\";\nplayer set3DENLayer _myLayer;\n_entities = get3DENLayerEntities _myLayer;\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "get3DENLayerEntities",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENLayer",
+    "remove3DENLayer",
+    "set3DENLayer",
+    "getMissionLayerEntities",
+    "getMissionLayers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "layerID"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "EdenEntity"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "layer ID as returned by [[add3DENLayer]] command",
+          "name": "layerID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

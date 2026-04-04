@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a list of all opened GUI displays.\n\n{{Feature | informative | Other displays could be accessed via [[uiNamespace]] variable which is updated every time a display is opened or closed.\nFor example, to access IGUI displays:\n<sqf>private _iguiDisplays = uiNamespace getVariable [\"IGUI_displays\", []];</sqf>\n\nOther display variables:\n{{Columns|4|\n* {{hl|\"3DENDisplaysTemp_displays\"}}\n* {{hl|\"3DENDisplays_displays\"}}\n* {{hl|\"BootcampDisplays_displays\"}}\n* {{hl|\"BootcampTitles_displays\"}}\n* {{hl|\"CuratorDisplays_displays\"}}\n* {{hl|\"CuratorTitles_displays\"}}\n* {{hl|\"GUI_displays\"}}\n* {{hl|\"IGUI_displays\"}}\n* {{hl|\"KartDisplays_displays\"}}\n* {{hl|\"Loading_displays\"}}\n}}\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _allDisps = allDisplays;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "allDisplays",
+  "problem_notes": [],
+  "see_also": [
+    "allControls",
+    "findDisplay",
+    "controlsGroupCtrl",
+    "ctrlCreate",
+    "allVariables",
+    "allCurators",
+    "allGroups",
+    "allDead",
+    "allDeadMen"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Display"
+          }
+        }
+      }
+    }
+  ]
+}

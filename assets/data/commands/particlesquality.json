@@ -1,0 +1,30 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current user settings for particles quality (configure->video->general->particles). 0-low, 1-normal, 2-high",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_currentQuality = particlesQuality;</sqf>"
+  ],
+  "groups": [
+    "Particles"
+  ],
+  "name": "particlesQuality",
+  "problem_notes": [],
+  "see_also": [
+    "setParticleCircle",
+    "setParticleParams",
+    "setParticleRandom",
+    "ParticleTemplates",
+    "setParticleClass",
+    "setParticleFire"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

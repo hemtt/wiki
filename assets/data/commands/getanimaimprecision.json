@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns aim precision for current animation",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _aimPrecision = getAnimAimPrecision player;</sqf>"
+  ],
+  "groups": [
+    "Animations",
+    "Stamina System"
+  ],
+  "name": "getAnimAimPrecision",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

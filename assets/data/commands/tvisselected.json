@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns true if given treeview item is selected.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control tvIsSelected [0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvIsSelected",
+  "problem_notes": [],
+  "see_also": [
+    "tvSelection",
+    "tvSetSelected"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

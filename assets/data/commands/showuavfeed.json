@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Shows/hides video feed transmitted from UAV in [[Arma 3: Custom Info|its custom info panel]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>showUAVFeed true;</sqf>"
+  ],
+  "groups": [
+    "Remote Control",
+    "Custom Panels"
+  ],
+  "name": "showUAVFeed",
+  "problem_notes": [],
+  "see_also": [
+    "shownUAVFeed",
+    "allUnitsUAV",
+    "getConnectedUAV",
+    "UAVControl",
+    "connectTerminalToUAV",
+    "isUAVConnected",
+    "BIS_fnc_liveFeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "show"
+      },
+      "ret": {
+        "desc": "always [[true]] unless error",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "show",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

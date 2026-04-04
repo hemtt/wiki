@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns flag position on the flag pole.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>flagAnimationPhase _flag1;</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "name": "flagAnimationPhase",
+  "problem_notes": [],
+  "see_also": [
+    "setFlagAnimationPhase",
+    "Arma",
+    "3:",
+    "Flag",
+    "Textures"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "flag"
+      },
+      "ret": {
+        "desc": "flag position, where 0 is bottom of the flag pole, 1 is the top of the flag pole",
+        "type": {
+          "NumberRange": [
+            0,
+            1
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "flag pole of the type {{hl|\"FlagCarrier\"}}",
+          "name": "flag",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

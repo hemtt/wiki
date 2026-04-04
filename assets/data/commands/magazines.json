@@ -1,0 +1,82 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of type names of all vehicle's magazines. When applied to a unit, the command behaves differently and will omit magazines already loaded into unit's weapons. Use [[currentMagazine]] to get this information for a currently loaded magazine.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_mags = magazines player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory",
+    "Vehicle Inventory"
+  ],
+  "name": "magazines",
+  "problem_notes": [],
+  "see_also": [
+    "currentMagazine",
+    "magazinesTurret",
+    "magazinesDetail",
+    "magazinesAmmo",
+    "magazinesAmmoFull",
+    "ammo",
+    "weapons",
+    "backpacks"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "unit or vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "vehicle",
+          "includeEmpty"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "unit or vehicle",
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) [[true]] to include empty magazines",
+              "name": "includeEmpty",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.0"
+      }
+    }
+  ]
+}

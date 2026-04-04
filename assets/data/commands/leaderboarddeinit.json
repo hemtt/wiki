@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Deletes internal class for the leaderboard with given name. Returns true if the board has been found and deinitialized.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>leaderboardDeInit \"TT01\";</sqf>"
+  ],
+  "groups": [
+    "Leaderboards"
+  ],
+  "name": "leaderboardDeInit",
+  "problem_notes": [],
+  "see_also": [
+    "leaderboardGetRows",
+    "leaderboardInit",
+    "leaderboardRequestRowsFriends",
+    "leaderboardRequestRowsGlobal",
+    "leaderboardRequestRowsGlobalAroundUser",
+    "leaderboardsRequestUploadScore",
+    "leaderboardsRequestUploadScoreKeepBest",
+    "leaderboardState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "boardName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "boardName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "[[ArmA:_Mission_Editor#Synchronize_Mode_.28F5.29|Synchronizes]] the trigger with zero or more waypoints.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_trigger synchronizeTrigger [];</sqf>",
+    "<sqf>_trigger synchronizeTrigger [_waypoint1];</sqf>",
+    "<sqf>_trigger synchronizeTrigger [_waypoint1, [_group5, 7], _waypoint3];</sqf>"
+  ],
+  "groups": [
+    "Triggers",
+    "Waypoints"
+  ],
+  "name": "synchronizeTrigger",
+  "problem_notes": [],
+  "see_also": [
+    "createTrigger",
+    "synchronizeWaypoint"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "trigger",
+          "waypoints"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "trigger to synchronize",
+          "name": "trigger",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "waypoints to synchronize with trigger. Array can be empty to unset",
+          "name": "waypoints",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Waypoint"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets rank of given unit.\n\nPossible rank values, and the associated [[rating]] that is '''set''' (not added, the value replaces previous rating) with it:\n\n{{{!}} class=\"wikitable\" style=\"text-align: center\"\n! colspan=\"2\" {{!}} Ranks\n! PRIVATE\n! CORPORAL\n! SERGEANT\n! LIEUTENANT\n! CAPTAIN\n! MAJOR\n! COLONEL\n{{!}}-\n! rowspan=\"3\" {{!}} Ratings\n!\n{{Name|arma1|short}}<br>\n{{Name|arma2|short}}<br>\n{{Name|arma2oa|short}}<br>\n{{Name|tkoh|short}}\n{{!}} 0\n{{!}} 500\n{{!}} 1500\n{{!}} 2500\n{{!}} 3500\n{{!}} 5000\n{{!}} 7500\n{{!}}-\n! {{Name|arma3|short}} (ca 2015)\n{{!}} 0\n{{!}} 50\n{{!}} 150\n{{!}} 250\n{{!}} 350\n{{!}} 500\n{{!}} 750\n{{!}}-\n! {{Name|arma3|short}}\n{{!}} 0\n{{!}} 0\n{{!}} 0\n{{!}} 0\n{{!}} 0\n{{!}} 0\n{{!}} 0\n{{!}}}\n\n{{Feature|arma3|Before {{arma3}} v1.68 and in previous titles, this command was {{Icon|globalArgument|32}} {{Icon|localEffect|32}}.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player setUnitRank \"COLONEL\";</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "name": "setUnitRank",
+  "problem_notes": [],
+  "see_also": [
+    "ArmA:",
+    "Armed",
+    "Assault:",
+    "Rating",
+    "Values|Rating",
+    "Values",
+    "rating",
+    "addRating",
+    "rank",
+    "setRank"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "rank"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see above. If a wrong string is provided, the command errors and reverts to using \"PRIVATE\"",
+          "name": "rank",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

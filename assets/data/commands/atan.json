@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the '''arcus tangens'''.<br><br>[[File:atan.jpg|200px]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_degrees = atan 1; // 45</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "name": "atan",
+  "problem_notes": [],
+  "see_also": [
+    "atg",
+    "atan2"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "x"
+      },
+      "ret": {
+        "desc": "result is in degrees",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "x",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

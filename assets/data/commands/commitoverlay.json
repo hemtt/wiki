@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Commit the current overlay. \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>commitOverlay _map;</sqf>"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "commitOverlay",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "map"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

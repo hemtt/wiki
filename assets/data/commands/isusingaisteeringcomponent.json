@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether the [[useAISteeringComponent|AI steering component]] setting is enabled globally.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (isUsingAISteeringComponent) then\n{\n\tuseAISteeringComponent false;\n};\n</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "name": "isUsingAISteeringComponent",
+  "problem_notes": [],
+  "see_also": [
+    "useAISteeringComponent",
+    "isAISteeringComponentEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

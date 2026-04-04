@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enable ambient traffic. {{Feature|arma3|This command does nothing in {{arma3}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>enableTraffic true;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "enableTraffic",
+  "problem_notes": [],
+  "see_also": [
+    "setTrafficDensity",
+    "setTrafficDistance",
+    "setTrafficGap",
+    "setTrafficSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enable"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "enable or disable",
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

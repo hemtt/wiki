@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Global",
+  "description": "Check if given vehicle/person/building is alive (i.e. not dead or destroyed).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "SQS:\n<sqs>? not alive player : exit</sqs>",
+    "SQF:\n<sqf>if (!alive player) exitWith {};</sqf>",
+    "<sqf>alive objNull; // returns false</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "alive",
+  "problem_notes": [],
+  "see_also": [
+    "setDamage",
+    "damage",
+    "waterDamaged"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "[[true]] if alive, [[false]] if dead/destroyed",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

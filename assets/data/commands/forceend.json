@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Forces mission ending (set with [[endMission]]) even if a camera effect or any another condition delays the endMission (mostly in [[:Category:Operation Flashpoint|{{ofp}}]]).",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>forceEnd;// in an ending trigger to ensure no camera is delaying mission ending</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "name": "forceEnd",
+  "problem_notes": [],
+  "see_also": [
+    "missionEnd",
+    "failMission",
+    "endMission",
+    "enableEndDialog"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

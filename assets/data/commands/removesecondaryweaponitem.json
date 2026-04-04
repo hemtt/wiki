@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes given weapon item, including magazine, from the [[secondaryWeapon]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeSecondaryWeaponItem (secondaryWeaponItems player select 0);</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeSecondaryWeaponItem",
+  "problem_notes": [],
+  "see_also": [
+    "addSecondaryWeaponItem",
+    "removePrimaryWeaponItem",
+    "removeHandgunItem",
+    "removeBinocularItem"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "item"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "item",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

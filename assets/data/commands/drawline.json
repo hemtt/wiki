@@ -1,0 +1,123 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Draw a line on the map. Can decrease framerate!",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n(findDisplay 12 displayCtrl 51) ctrlAddEventHandler [\"Draw\",\n\t\"(_this select 0) drawLine [\n\t\tplayer,\n\t\t[0,0,0],\n\t\t[0,0,1,1]\n\t];\"\n];\n</sqf>\n\n{{GVI|arma3|2.02}} [[toString]] version:\n<sqf>\n(findDisplay 12 displayCtrl 51) ctrlAddEventHandler [\"Draw\", toString {\n\t(_this select 0) drawLine [\n\t\tplayer,\n\t\t[0,0,0],\n\t\t[0,0,1,1] // blue\n\t];\n}];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "name": "drawLine",
+  "problem_notes": [],
+  "see_also": [
+    "drawArrow",
+    "drawEllipse",
+    "drawIcon",
+    "drawRectangle",
+    "drawPolygon",
+    "drawTriangle",
+    "drawXPolygon"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          [
+            "from",
+            "to",
+            "color",
+            "width"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "from",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position2d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position3d"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "to",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position2d"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position3d"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "color",
+              "type": "ArrayColor"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default 3)",
+              "name": "width",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

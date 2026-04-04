@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the nameSound of a person.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>nameSound player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "nameSound",
+  "problem_notes": [],
+  "see_also": [
+    "setNameSound",
+    "name",
+    "setName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "person"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

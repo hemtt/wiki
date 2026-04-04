@@ -1,0 +1,34 @@
+{
+  "argument_loc": "Local",
+  "description": "Forces the unit to respawn. The effect is as if the player pressed the RESPAWN button in the game pause menu; the unit is killed but there is no \"X was killed\" message and no score adjustment.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>forceRespawn player;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "forceRespawn",
+  "problem_notes": [],
+  "see_also": [
+    "playerRespawnTime",
+    "setPlayerRespawnTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

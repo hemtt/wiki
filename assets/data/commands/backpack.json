@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a class of a backpack.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_classname = backpack player;</sqf>"
+  ],
+  "groups": [
+    "Containers"
+  ],
+  "name": "backpack",
+  "problem_notes": [],
+  "see_also": [
+    "backpackContainer",
+    "firstBackpack",
+    "unitBackpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack",
+    "backpacks"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

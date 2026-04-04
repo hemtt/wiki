@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Saves units's identity to [[Objects.sav]] file in campaign directory as entry name.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_successful = player saveIdentity \"playerid\";</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "name": "saveIdentity",
+  "problem_notes": [],
+  "see_also": [
+    "loadIdentity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "name"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if successful, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

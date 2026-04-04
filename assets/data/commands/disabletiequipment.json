@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Global",
+  "description": "Disables TI (Thermal Imaging) equipment for given vehicle.\n{{Feature|informative|In older versions of Arma this command would also disable NV (Night Vision), but since Arma 3 v1.54 this command disables only TI. Use [[disableNVGEquipment]] to disable NV.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>vehicle player disableTIEquipment true;</sqf>",
+    "<sqf>_tank disableTIEquipment true;</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "name": "disableTIEquipment",
+  "problem_notes": [],
+  "see_also": [
+    "equipmentDisabled",
+    "disableNVGEquipment",
+    "currentVisionMode",
+    "setCamUseTI",
+    "camUseNVG"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "true to turn TI off, false to turn TI on",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Global",
+  "description": "Connect person with UAV terminal to UAV unit. UAV Terminal item needs to be assigned to GPS slot. In MP the connection is handled [[local]]ly, therefore it is possible for multiple MP clients to connect to the same UAV. However, each UAV can only have one connection to a terminal per MP client, so if UAV is already connected to another terminal on the same MP client, this new connection will fail.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>bool = player connectTerminalToUAV uav1;</sqf>",
+    "<sqf>player connectTerminalToUAV objNull; //disconnect</sqf>"
+  ],
+  "groups": [
+    "Remote Control"
+  ],
+  "name": "connectTerminalToUAV",
+  "problem_notes": [],
+  "see_also": [
+    "allUnitsUAV",
+    "getConnectedUAV",
+    "isUAVConnected",
+    "UAVControl",
+    "showUAVFeed",
+    "shownUAVFeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "person",
+          "uav"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "uav",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if given [[serverCommand]] is available on current machine, [[false]] if not.\n\n{{Feature|informative|\nExecution via [[BattlEye#RCon|RCon]] is basically being '''logged-in''' as [[admin]] in terms of permissions.\n}}\n\n{{{!}} class=\"wikitable align-center\"\n! rowspan=\"2\" {{!}} {{arma3}} [[Multiplayer Server Commands]]\n! colspan=\"4\" {{!}} Available to\n{{!}}-\n! Client\n! Voted [[admin|Admin]]\n! Logged [[admin|Admin]]\n! [[isServer|Server Host]]\n{{!}}-\n{{!}} {{hl|#login}}, {{hl|#userlist}}, {{hl|#beclient}}, {{hl|#vote}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} {{hl|#kick}}, {{hl|#debug}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} {{hl|#lock}}, {{hl|#unlock}}, {{hl|#maxping}}, {{hl|#maxdesync}}, {{hl|#maxpacketloss}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} {{hl|#logout}}, {{hl|#restart}}, {{hl|#mission}}, {{hl|#missions}}, {{hl|#reassign}}, {{hl|#monitor}}, {{hl|#init}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} {{hl|#shutdown}}, {{hl|#restartserver}}, {{hl|#restartserveraftermission}}, {{hl|#shutdownaftermission}}, {{hl|#dctimeout}}, {{hl|#exec}}, {{hl|#monitords}}, {{hl|#beserver}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} {{hl|#logentities}}, {{hl|#exportjipqueue}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} Profiling type builds only: {{hl|#captureframe}}, {{hl|#captureslowframe}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|unchecked}}\n{{!}} {{Icon|checked}}\n{{!}} {{Icon|checked}}\n\n{{!}}}\n\nTo check if a [[Multiplayer Server Commands|server command]] can be executed in the current environment, use [[serverCommandExecutable]].\n\n{{Feature|informative|The table above does not apply to the command's password variant on a dedicated server as everything is available to it.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_can = serverCommandAvailable \"#kick\";</sqf>",
+    "<sqf>\nif (serverCommandAvailable \"#logout\") then \n{\n\thint \"You are a some sort of admin\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "serverCommandAvailable",
+  "problem_notes": [],
+  "see_also": [
+    "serverCommand",
+    "serverCommandExecutable",
+    "admin",
+    "isServer",
+    "Multiplayer",
+    "Server",
+    "Commands"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "command"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "command",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

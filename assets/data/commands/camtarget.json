@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns camera's target.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_someObject = camTarget _camera;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camTarget",
+  "problem_notes": [],
+  "see_also": [
+    "camSetTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "camera"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "camera",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

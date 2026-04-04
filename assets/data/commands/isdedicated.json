@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if the machine executing the command is a dedicated multiplayer server. Returns [[false]] in single player.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (isDedicated) then { diag_log \"Dedicated Server on the run !\"; };</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "isDedicated",
+  "problem_notes": [],
+  "see_also": [
+    "isServer",
+    "hasInterface"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

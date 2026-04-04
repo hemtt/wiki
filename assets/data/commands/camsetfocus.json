@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets camera focus range. It does not automatically commit changes (see [[camCommit]]). Use [-1, -1] to disable focus completely.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_camera camSetFocus [50, 1];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camSetFocus",
+  "problem_notes": [],
+  "see_also": [
+    "camCreate",
+    "camCommand",
+    "camDestroy",
+    "camCommit",
+    "camPrepareFocus"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "focusRange"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "focusRange",
+          "type": {
+            "ArraySized": [
+              {
+                "desc": null,
+                "name": "distance",
+                "since": null,
+                "type": "Number"
+              },
+              {
+                "desc": "sets the camera focus blur",
+                "name": "blur",
+                "since": null,
+                "type": "Number"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Remove the units from the custom radio channel.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>3 radioChannelRemove [blufor_unit_1, blufor_unit_2];</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Custom Radio and Chat"
+  ],
+  "name": "radioChannelRemove",
+  "problem_notes": [],
+  "see_also": [
+    "radioChannelAdd",
+    "radioChannelCreate",
+    "radioChannelSetCallSign",
+    "radioChannelSetLabel"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "customChannelID",
+          "units"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[Channel IDs|custom channel ID]] returned by [[radioChannelCreate]] command",
+          "name": "customChannelID",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "units",
+          "name": "units",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

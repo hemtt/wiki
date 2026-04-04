@@ -1,0 +1,87 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Merges two [[HashMap]]s.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_hashMap merge _otherHashMap;</sqf>",
+    "<sqf>\nprivate _hashmap1 = [\"cow\", \"cat\", \"chicken\"] createHashMapFromArray [100, 200, 200];\nprivate _hashmap2 = [\"cow\", \"cat\", \"chicken\", \"camel\"] createHashMapFromArray [150, 300, 400, 800];\n_hashmap1 merge _hashmap2; // _hashmap is [[\"cow\",100],[\"cat\",200],[\"chicken\",200],[\"camel\",800]]\n</sqf>",
+    "<sqf>\nprivate _hashmap1 = [\"cow\", \"cat\", \"chicken\"] createHashMapFromArray [100, 200, 200];\nprivate _hashmap2 = [\"cow\", \"cat\", \"chicken\", \"camel\"] createHashMapFromArray [150, 300, 400, 800];\n_hashmap1 merge [_hashmap2, true]; // _hashmap is [[\"cow\",150],[\"cat\",300],[\"chicken\",400],[\"camel\",800]]\n</sqf>",
+    "<sqf>\nprivate _hashmap1 = [\"cow\", \"cat\", \"chicken\"] createHashMapFromArray [100, 200, 200];\nprivate _hashmap2 = [\"cow\", \"cat\", \"chicken\", \"camel\"] createHashMapFromArray [150, 300, 400, 800];\n_hashmap1 merge [_hashmap2, false]; // _hashmap is [[\"cow\",100],[\"cat\",200],[\"chicken\",200],[\"camel\",800]] as Syntax 1\n</sqf>"
+  ],
+  "groups": [
+    "HashMap"
+  ],
+  "name": "merge",
+  "problem_notes": [],
+  "see_also": [
+    "insert",
+    "set"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "hashMap1",
+          "hashMap2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "this HashMap will be modified",
+          "name": "hashMap1",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "all key-value pairs from this HashMap are added to ''hashMap1''. If a key from ''hashMap2'' already exists in ''hashMap1'', it doesn't overwrite the value in ''hashMap1''.",
+          "name": "hashMap2",
+          "type": "HashMapUnknown"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "hashMap1",
+          [
+            "hashMap2",
+            "overwriteExisting"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "this HashMap will be modified",
+          "name": "hashMap1",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "all key-value pairs from this HashMap are added to ''hashMap1''",
+              "name": "hashMap2",
+              "type": "HashMapUnknown"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) if [[true]], keys from ''hashMap1'' that also exist in ''hashMap2'' are overwritten. When set to [[true]], merging is faster",
+              "name": "overwriteExisting",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

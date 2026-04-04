@@ -1,0 +1,112 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sorts subentries of item on given path by their text.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuSort [[], true];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuSort",
+  "problem_notes": [],
+  "see_also": [
+    "menuEnable",
+    "menuExpand",
+    "menuCollapse",
+    "menuSetData",
+    "menuSetValue",
+    "menuSetCheck",
+    "menuSetAction",
+    "menuDelete",
+    "menuAdd",
+    "menuHover",
+    "menuValue",
+    "menuURL",
+    "menuText",
+    "menuEnabled",
+    "menuChecked",
+    "menuAction",
+    "menuShortcutText",
+    "menuShortcut",
+    "menuPicture",
+    "menuData",
+    "menuClear",
+    "menuSetPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "sortOrder"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to sort from A to Z, [[false]] to sort from Z to A",
+              "name": "sortOrder",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "sortOrder"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to sort from A to Z, [[false]] to sort from Z to A",
+              "name": "sortOrder",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

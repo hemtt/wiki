@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the actual in-mission date and time.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\n// in {{arma3}}\ndate params [\"_year\", \"_month\", \"_day\", \"_hours\", \"_minutes\"];\n\n// pre {{arma3}}\nprivate [\"_now\", \"_year\", \"_month\", \"_day\", \"_hours\", \"_minutes\"];\n_now = date;\t// [2014,10,30,2,30] a.k.a Oct. 30th, 2:30am\n_year\t\t= _now select 0;\n_month\t\t= _now select 1;\n_day\t\t= _now select 2;\n_hours\t\t= _now select 3;\n_minutes\t= _now select 4;\n</sqf>",
+    "<sqf>\nif (date select 3 >= 19) then\t\t// 7pm\n{\n\thintSilent \"ah, Arma sunset\";\t// ...cue bad guys\n};\n</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "name": "date",
+  "problem_notes": [],
+  "see_also": [
+    "setDate",
+    "dateToNumber",
+    "numberToDate",
+    "time",
+    "missionStart",
+    "systemTime",
+    "systemTimeUTC"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "ArrayDate"
+      }
+    }
+  ]
+}

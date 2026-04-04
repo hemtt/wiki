@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns client state in network game. Works on both, client and dedicated server. The following states are possible:\n\n{{{!}} class{{=}}\"wikitable\"\n! [[getClientStateNumber]]\n! [[getClientState]]\n! Description\n{{!}}-\n{{!}} 0 {{!}}{{!}} \"NONE\" {{!}}{{!}} No client (or singleplayer)\n{{!}}-\n{{!}} 1 {{!}}{{!}} \"CREATED\" {{!}}{{!}} Client is created\n{{!}}-\n{{!}} 2 {{!}}{{!}} \"CONNECTED\" {{!}}{{!}} Client is connected to server, message formats are registered\n{{!}}-\n{{!}} 3 {{!}}{{!}} \"LOGGED IN\" {{!}}{{!}} Identity is created\n{{!}}-\n{{!}} 4 {{!}}{{!}} \"MISSION SELECTED\" {{!}}{{!}}Mission is selected\n{{!}}-\n{{!}} 5 {{!}}{{!}} \"MISSION ASKED\" {{!}}{{!}} Server was asked to send / not send mission\n{{!}}-\n{{!}} 6 {{!}}{{!}} \"ROLE ASSIGNED\" {{!}}{{!}} Role was assigned (and confirmed)\n{{!}}-\n{{!}} 7 {{!}}{{!}} \"MISSION RECEIVED\" {{!}}{{!}} Mission received\n{{!}}-\n{{!}} 8 {{!}}{{!}} \"GAME LOADED\" {{!}}{{!}} Island loaded, vehicles received\n{{!}}-\n{{!}} 9 {{!}}{{!}} \"BRIEFING SHOWN\" {{!}}{{!}} Briefing was displayed\n{{!}}-\n{{!}} 10 {{!}}{{!}} \"BRIEFING READ\" {{!}}{{!}} Ready to play mission\n{{!}}-\n{{!}} 11 {{!}}{{!}} \"GAME FINISHED\" {{!}}{{!}} Game was finished\n{{!}}-\n{{!}} 12 {{!}}{{!}} \"DEBRIEFING READ\" {{!}}{{!}} Debriefing read, ready to continue with next mission\n{{!}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_state = getClientStateNumber;</sqf>",
+    "<sqf>_inGame = getClientStateNumber > 8;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "getClientStateNumber",
+  "problem_notes": [],
+  "see_also": [
+    "getClientState",
+    "getPlayerUID"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "client state (see table above)",
+        "type": "Number"
+      }
+    }
+  ]
+}

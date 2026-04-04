@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of all mines in the mission",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"there are %1 mines total\", count allMines];</sqf>",
+    "<sqf>private _isFirstMineDetected = (allMines select 0) mineDetectedBy blufor;</sqf>"
+  ],
+  "groups": [
+    "Mines"
+  ],
+  "name": "allMines",
+  "problem_notes": [],
+  "see_also": [
+    "detectedMines",
+    "mineDetectedBy",
+    "createMine",
+    "mineActive",
+    "revealMine",
+    "allMissionObjects"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

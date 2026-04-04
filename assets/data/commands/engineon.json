@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Local",
+  "description": "Activates and deactivates the engine of a vehicle.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>if (!isEngineOn _jeep) then { _jeep engineOn true; };</sqf>",
+    "<sqf>\nwaitUntil { player == driver _jeep; };\nvehicle player engineOn true;\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "engineOn",
+  "problem_notes": [],
+  "see_also": [
+    "isEngineOn"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to turn the engine on, [[false]] to turn it off",
+          "name": "state",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

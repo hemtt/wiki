@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return leader of the formation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (formationLeader player != leader player) then\n{\n\thint \"Formation leader is not the group leader.\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "formationLeader",
+  "problem_notes": [],
+  "see_also": [
+    "commandFollow",
+    "doFollow",
+    "formLeader",
+    "isFormationLeader",
+    "leader",
+    "selectLeader",
+    "setLeader"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

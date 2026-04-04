@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines a [[Switch Type]] default case - does '''not''' need a colon to define its block. See [[switch]] for more information.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nswitch (_condition) do\n{\n\tcase 1: { hint \"1\" };\n\tcase 2: { hint \"2\" };\n\tdefault { hint \"default\" }; // no colon after default\n};\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "default",
+  "problem_notes": [],
+  "see_also": [
+    "Control",
+    "Structures",
+    "switch",
+    "case"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "a"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "a",
+          "type": "Code"
+        }
+      }
+    }
+  ]
+}

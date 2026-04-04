@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns true if there is a linked and enabled flashlight on a given weapon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player isFlashlightOn (currentWeapon player);</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Weapons"
+  ],
+  "name": "isFlashlightOn",
+  "problem_notes": [],
+  "see_also": [
+    "enableGunLights"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "weapon"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "weapon",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

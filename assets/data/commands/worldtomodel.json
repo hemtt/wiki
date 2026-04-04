@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts position from world space to object model space.\n{{Feature|important|For [[setObjectScale|scaled objects]], the relative position will be [[vectorMultiply|divided]] by the object scale.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_relPos = myObject worldToModel [0,0,0];</sqf>",
+    "<sqf>_relPos = player worldToModel ASLToAGL getPosASL car;</sqf>",
+    "<sqf>_relPos = car worldToModel [12000,5000];</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "worldToModel",
+  "problem_notes": [],
+  "see_also": [
+    "worldToModelVisual",
+    "vectorWorldToModel",
+    "modelToWorld"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "model",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "model",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "position relative to model",
+        "type": "Position3dRelative"
+      },
+      "right": {
+        "Item": {
+          "desc": "world position",
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

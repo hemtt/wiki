@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets model for 3D-[[Arma: GUI Configuration|Dialogs]] (see [[Arma 3: createSimpleObject/objects]] for a p3d models' list).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control3D ctrlSetModel \"\\a3\\Ui_f\\objects\\Compass.p3d\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object"
+  ],
+  "name": "ctrlSetModel",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "displayCtrl",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "model"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "model path",
+          "name": "model",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

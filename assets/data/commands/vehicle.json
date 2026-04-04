@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Vehicle in which given unit is mounted. If none, unit is returned. Alternatively, use [[objectParent]]\n{{Feature|important|While [[vehicle]] may return the vehicle the unit is in for '''[[alive]]''' units, for dead units which are groupless, this command returns the unit itself - use [[objectParent]] instead.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "SQS\n<sqs>? vehicle player != player : hint \"Player is in a vehicle\"</sqs>",
+    "SQF\n<sqf>if (vehicle player != player) then { hint \"Player is in a vehicle\" };</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "vehicle",
+  "problem_notes": [],
+  "see_also": [
+    "objectParent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[alive]] unit",
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

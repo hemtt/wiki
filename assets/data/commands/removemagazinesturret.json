@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes all magazines of the given type from given vehicle. Use turret path [-1] for driver's turret.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>vehicle player removeMagazinesTurret [\"60rnd_CMFlareMagazine\", [-1]];</sqf>",
+    "<sqf>_tank removeMagazinesTurret [\"20Rnd_120mmSABOT_M1A2\", [0]];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "name": "removeMagazinesTurret",
+  "problem_notes": [],
+  "see_also": [
+    "removeAllMagazinesTurret",
+    "addMagazineTurret",
+    "removeAllMagazines",
+    "magazinesTurret",
+    "removeMagazineTurret",
+    "weaponsTurret",
+    "addWeaponTurret",
+    "removeWeaponTurret",
+    "turretLocal"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "magazineName",
+            "turretPath"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "magazineName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

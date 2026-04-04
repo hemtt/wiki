@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an object's rendered position (z value above surface underneath) in render time scope. Same as [[getPosVisual]].\n{{Feature|important|This command must '''not''' be used for actual 3D calculations. See [[getPos]] for an explanation.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_playerRenderedPos = visiblePosition player;</sqf>"
+  ],
+  "groups": [
+    "Positions",
+    "Render Time Scope"
+  ],
+  "name": "visiblePosition",
+  "problem_notes": [],
+  "see_also": [
+    "getPosVisual",
+    "getPosATLVisual",
+    "getPosASLVisual",
+    "getPosWorldVisual",
+    "visiblePositionASL",
+    "position",
+    "getPos",
+    "getPosATL",
+    "getPosASL",
+    "getPosASLW"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Position3dAGLS"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the object",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

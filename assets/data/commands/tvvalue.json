@@ -1,0 +1,95 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns numeric value set for given tree view path.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvValue [101, [0]];</sqf>",
+    "<sqf>_ctrl tvValue [0,0,0];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvValue",
+  "problem_notes": [],
+  "see_also": [
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "desc": "set value; if no value was set, 0 is returned",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "set value; if no value was set, 0 is returned",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

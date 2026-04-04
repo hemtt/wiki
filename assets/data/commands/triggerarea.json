@@ -1,0 +1,73 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns currently monitored trigger area. Since Arma 3 v1.60, the command returns 3rd dimension for the monitored area. If height is not set, the value for it would be -1.\n{{Feature | important | The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger area set up locally on the client that executed the command. See [[createTrigger]] for more info.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_area = triggerArea sensor1; // result is [200, 120, 45, false, -1];</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "name": "triggerArea",
+  "problem_notes": [],
+  "see_also": [
+    "setTriggerArea",
+    "inArea",
+    "inAreaArray"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "trigger"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "trigger area X size / 2",
+              "name": "a",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "trigger area Y size / 2",
+              "name": "b",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "angle",
+              "since": null,
+              "type": {
+                "NumberRange": [
+                  0,
+                  360
+                ]
+              }
+            },
+            {
+              "desc": null,
+              "name": "isRectangle",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "trigger area Z size / 2 (since {{arma3}} v1.60)",
+              "name": "c",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

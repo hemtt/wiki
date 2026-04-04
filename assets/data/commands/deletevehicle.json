@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Global",
+  "description": "Deletes an object. Only objects inserted in the mission editor and objects created during the game's progress can be deleted by this command. Terrain objects and players cannot be deleted.\n{{Feature|informative|The actual object deletion, when the object becomes [[objNull]], happens on the next frame after command execution, but there are some object modifications that happen immediately. For example if the object is a unit in a group, it immediately becomes groupless (<sqf inline>isNull group _unit; // true</sqf>).}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>deleteVehicle _house1;</sqf>",
+    "Deleting a vehicle with crew:\n<sqf>\n// might want to make sure that the car is local\n{ car deleteVehicleCrew _x } forEach crew car;\ndeleteVehicle car;\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "deleteVehicle",
+  "problem_notes": [
+    "{{Feature|warning|Use [[deleteVehicleCrew]] to delete units that are in a vehicle! Do '''not''' use this command for a vehicle's [[crew]] members as it may lead to all sorts of bugs and ghost objects left on the map.}}"
+  ],
+  "see_also": [
+    "deleteVehicleCrew",
+    "createUnit",
+    "createVehicleLocal",
+    "createVehicle",
+    "Arma_3:_Event_Handlers#Deleted",
+    "|",
+    "Deleted",
+    "EH"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "objects"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "objects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Object"
+            }
+          }
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Local",
+  "description": "Destroys camera object created with [[camCreate]]. This command doesn't need [[camCommit]]. \n{{Feature | important | Destroying camera object does not terminate camera effect automatically, use [[cameraEffect]] prior to deleting the camera (see Example 2)}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>camDestroy _cam;</sqf>",
+    "<sqf>\n_cam cameraEffect [\"terminate\",\"back\"];\ncamDestroy _cam;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camDestroy",
+  "problem_notes": [],
+  "see_also": [
+    "camCreate",
+    "cameraEffect"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

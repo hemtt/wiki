@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Local",
+  "description": "Move soldier into vehicle commander position (Immediate, no animation).\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_soldierOne moveInCommander _tankOne;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "moveInCommander",
+  "problem_notes": [],
+  "see_also": [
+    "moveInAny",
+    "moveInCargo",
+    "moveInDriver",
+    "moveInGunner",
+    "moveInTurret",
+    "assignAsCargo",
+    "assignAsCommander",
+    "assignAsDriver",
+    "assignAsGunner"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "vehicle"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

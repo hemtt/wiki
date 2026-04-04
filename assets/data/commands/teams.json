@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return a list of teams in the current mission.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_teams = teams;</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "teams",
+  "problem_notes": [],
+  "see_also": [
+    "agents",
+    "addTeamMember",
+    "createTeam",
+    "deleteTeam",
+    "forEachMemberTeam",
+    "removeTeamMember",
+    "teamMember",
+    "teamName",
+    "teamType",
+    "forEachMember",
+    "forEachMemberAgent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "TeamMember"
+          }
+        }
+      }
+    }
+  ]
+}

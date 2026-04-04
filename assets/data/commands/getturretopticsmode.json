@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Local",
+  "description": "Get the current optics mode of the optics in the turret occupied by the specified unit. The alternative syntax allows a vehicle and turret path to be specified without needing a unit. Optic modes refer to the different fields of view (FOV) or zoom levels of an optic.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getTurretOpticsMode player;</sqf>",
+    "<sqf>myTank getTurretOpticsMode [-1];</sqf>",
+    "<sqf>myAircraft getTurretOpticsMode [0, 0];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "name": "getTurretOpticsMode",
+  "problem_notes": [],
+  "see_also": [
+    "setTurretOpticsMode",
+    "turretOwner",
+    "getPilotCameraOpticsMode",
+    "setPilotCameraOpticsMode"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "obj"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "turretPath"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "turretPath",
+          "type": "TurretPath"
+        }
+      }
+    }
+  ]
+}

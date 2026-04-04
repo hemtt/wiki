@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current time of the most important RTM animation currently being played on the soldier.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>moveTime player;</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "name": "moveTime",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "soldier"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "soldier",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

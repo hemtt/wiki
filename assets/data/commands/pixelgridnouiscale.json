@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns grid size based on screen resolution and configs: <syntaxhighlight lang=\"cpp\" inline>uiScaleFactor</syntaxhighlight>, <syntaxhighlight lang=\"cpp\" inline>uiScaleMaxGrids</syntaxhighlight>.\nAs mentioned in the name of this command, '''the user interface scale is ignored'''.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _gridHeightNoUIScale = pixelH * pixelGridNoUIScale;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "pixelGridNoUIScale",
+  "problem_notes": [],
+  "see_also": [
+    "pixelGrid",
+    "pixelGridBase",
+    "pixelH",
+    "pixelW",
+    "Pixel",
+    "Grid",
+    "System"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "grid size, see [[Arma 3: Pixel Grid System]]",
+        "type": "Number"
+      }
+    }
+  ]
+}

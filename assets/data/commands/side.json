@@ -1,0 +1,80 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the side of a unit, vehicle, object or location.\n* side of a renegade soldier is [[sideEnemy]]\n* side of an empty vehicle is [[civilian]]\n* side of a crewed vehicle is, if present, commander's > gunner's > driver's or > cargo's side, in this order\n* side of a captive or dead unit is [[civilian]]. Use <sqf inline>side group _unit</sqf> to get the underlying side (see {{Link|#Example 2}})\n* you can use [[playerSide]] to know the real player's side\n\n{{Feature|informative|\nConverting a side to string will '''not''' always return the side command text: e.g <sqf inline>str resistance; // returns \"GUER\"</sqf>.<br>\nSee [[Side]] page to see the return value of all side commands.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (side player == west) then { hint \"Player is on the West side\" };</sqf>",
+    "<sqf>_sideAlsoWorkingForDead = side group _deadUnit;</sqf>",
+    "<sqf>_sideLocation = side myLocation;</sqf>",
+    "<sqf>if (side player != playerSide) then { hint \"player is renegade or dead\"; };</sqf>",
+    "Check the [[side]] of the vehicle:\n<sqf>_vehicleSide = side group _vehicle; // sideUnknown (CIV for Arma 3) if empty or dead crew, otherwise the appropriate side</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "side",
+  "problem_notes": [],
+  "see_also": [
+    "CfgVehicles",
+    "Config",
+    "Reference#side|CfgVehicles",
+    "Config",
+    "Side",
+    "Value",
+    "Side",
+    "playerSide",
+    "west",
+    "east",
+    "resistance",
+    "civilian",
+    "sideLogic",
+    "sideFriendly",
+    "sideEnemy",
+    "sideUnknown",
+    "sideEmpty",
+    "sideAmbientLife",
+    "Side",
+    "Relations",
+    "BIS_fnc_sideID",
+    "BIS_fnc_objectSide"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "target"
+      },
+      "ret": {
+        "type": "Side"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Location"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

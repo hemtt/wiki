@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Controls whether a lamp is lit or not.\n{{Feature|arma3|\nThis command was originally designed to only work with {{hl|CfgNonAIVehicles}} class {{hl|\"StreetLamp\"}} only.\nSince {{arma3}} v1.92 this command was extended to work with street lights and some prop lights, like portable construction light.\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>(object 12345) switchLight \"OFF\";</sqf>",
+    "<sqf>nearestObject [player, \"Streetlamp\"] switchLight \"OFF\";</sqf>",
+    "<sqf>cursorObject switchLight \"ON\";</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "name": "switchLight",
+  "problem_notes": [],
+  "see_also": [
+    "lightIsOn",
+    "BIS_fnc_switchLamp"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "lamp",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "lamp",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "mode can be: \"ON\", \"OFF\" or \"AUTO\" (''lamp'' is on only during nighttime, default)",
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

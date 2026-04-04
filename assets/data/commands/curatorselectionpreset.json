@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns list of all objects stored in the given selection preset.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _savedItems = curatorSelectionPreset 1;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "curatorSelectionPreset",
+  "problem_notes": [],
+  "see_also": [
+    "loadCuratorSelectionPreset",
+    "setCuratorSelectionPreset",
+    "curatorSelected",
+    "setCuratorSelected",
+    "addCuratorSelected",
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "numkey"
+      },
+      "ret": {
+        "desc": "objects saved in the selection preset",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "number key under which the selection preset is saved",
+          "name": "numkey",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

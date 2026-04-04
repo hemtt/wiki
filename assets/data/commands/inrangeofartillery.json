@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns true if all given units are able to fire at given position with given magazineType.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isInRange = getMarkerPos \"myTarget\" inRangeOfArtillery [[myArty], \"32Rnd_155mm_Mo_shells\"];</sqf>"
+  ],
+  "groups": [
+    "Artillery"
+  ],
+  "name": "inRangeOfArtillery",
+  "problem_notes": [],
+  "see_also": [
+    "getArtilleryAmmo",
+    "commandArtilleryFire",
+    "doArtilleryFire",
+    "enableEngineArtillery",
+    "getArtilleryComputerSettings",
+    "shownArtilleryComputer",
+    "getArtilleryETA"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "pos",
+          [
+            "units",
+            "magazineType"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "pos",
+          "type": "Position"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "array of units.",
+              "name": "units",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Object"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "case-sensitive",
+              "name": "magazineType",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

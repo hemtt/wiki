@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets for how many seconds injured unit leaves blood trail.\nThe unit damage must be >= 0.1 for this command to have an effect, otherwise, the [[getBleedingRemaining]] will return 0 and no blood trail is left behind.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_unit setBleedingRemaining 60;</sqf>",
+    "<sqf>\nplayer setDamage 0.25;\nplayer setBleedingRemaining 120;\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setBleedingRemaining",
+  "problem_notes": [],
+  "see_also": [
+    "getBleedingRemaining",
+    "isBurning",
+    "isBleeding"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "time"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "time",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

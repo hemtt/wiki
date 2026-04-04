@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets progress position of a [[CT_PROGRESS|progress bar]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control progressSetPosition 0.5;</sqf>",
+    "<sqf>\nwith uiNamespace do {\n\tbar = findDisplay 46 ctrlCreate [\"RscProgress\", -1];\n\tbar ctrlSetPosition [0,0,1,0.01];\n\tbar ctrlCommit 0;\n\tbar progressSetPosition 0.75;\n};\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "progressSetPosition",
+  "problem_notes": [],
+  "see_also": [
+    "progressPosition",
+    "ctrlSetScrollValues",
+    "sliderSetPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "progress"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "progress bar control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "0: no progress; 1: full progress",
+          "name": "progress",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

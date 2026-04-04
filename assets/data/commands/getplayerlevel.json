@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Global",
+  "description": "Return the level of the provided player.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nplayer addEventHandler [\"Killed\", {\n\t_killer = _this select 1;\n\tif (getPlayerLevel _killer < getCurrentPlayerLevel) then\n\t{\n\t\thint \"oooooooooh!\";\n\t};\n}];\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "name": "getPlayerLevel",
+  "problem_notes": [],
+  "see_also": [
+    "getCurrentPlayerLevel",
+    "isPlayerSupporter"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "the provided player's level or -1 on error (unreachable servers, not a player, etc)",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "a player-controlled unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

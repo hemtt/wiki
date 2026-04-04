@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "This command is an alias for {{hl|[[compile]](Final) (prefixHeader + [[preprocessFileLineNumbers]] path)}}. See description of [[preprocessFileLineNumbers]] for more details.<br>\nIn addition, this command can also compile [[SQF Bytecode]] files, which can reduce compilation time. If both a .sqf file and .sqfc file are pressing in the the path, this command will automatically compile the .sqfc file.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ncompileScript [\"a3\\props_f_enoch\\military\\equipment\\scripts\\meteo.sqf\"];\n// has the same functionality as \ncompile preprocessFileLineNumbers \"a3\\props_f_enoch\\military\\equipment\\scripts\\meteo.sqf\";\n</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "compileScript",
+  "problem_notes": [],
+  "see_also": [
+    "compile",
+    "compileFinal",
+    "preprocessFileLineNumbers",
+    "preprocessFile",
+    "call",
+    "spawn"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "path",
+          "final",
+          "prefixHeader"
+        ]
+      },
+      "ret": {
+        "type": "Code"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "path to script file",
+              "name": "path",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]]) compile final, see [[compileFinal]]",
+              "name": "final",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default \"\") value added at the beginning of the file",
+              "name": "prefixHeader",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

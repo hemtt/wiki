@@ -1,0 +1,103 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set min/max movement borders displayed in HUD gauges. Use -1 to skip some value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setHUDMovementLevels [20, 30, -1, -1, 0.23, 2.1, [0,0,0]];</sqf>",
+    "<sqf>setHUDMovementLevels [20, 30, -1, -1, 0.23, 2.1, player];</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "name": "setHUDMovementLevels",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "minSpeed",
+          "maxSpeed",
+          "minAlt",
+          "maxAlt",
+          "minDir",
+          "maxDir",
+          "targetOrPosition"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "in m/s",
+              "name": "minSpeed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in m/s",
+              "name": "maxSpeed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in meters",
+              "name": "minAlt",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in meters",
+              "name": "maxAlt",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in degrees",
+              "name": "minDir",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "in degrees",
+              "name": "maxDir",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "targetOrPosition",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Object"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "Position"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attach type to the simple task. See [[Arma_3_Tasks_Overhaul#Default_Task_Types:_Actions|Default Task Types]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>(currentTask player) setSimpleTaskType \"attack\";</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "name": "setSimpleTaskType",
+  "problem_notes": [],
+  "see_also": [
+    "taskType",
+    "currentTask",
+    "setSimpleTaskCustomData",
+    "taskCustomData",
+    "Arma_3_Tasks_Overhaul#Default_Task_Types:_Actions|Default",
+    "Task",
+    "Types"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "task",
+          "taskType"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "type of task",
+          "name": "taskType",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the waypoint timeout values.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waypointTimeout [groupOne,1];</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "waypointTimeout",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "setWaypointTimeout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "waypoint"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": null,
+              "name": "min",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "mid",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": null,
+              "name": "max",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      }
+    }
+  ]
+}

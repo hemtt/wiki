@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a structured text, containing an image or name (if no image is found) of the button, on the keyboard, mouse or joystick, with the given code.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_image = keyImage 28; // result is \"Enter\"</sqf>",
+    "From Arma 3 v2.08:\n<sqf>_image = keyImage \"-1660944350\"; // result is \"Right Ctrl+G\"</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "keyImage",
+  "problem_notes": [],
+  "see_also": [
+    "keyName",
+    "actionKeys",
+    "actionKeysImages",
+    "actionKeysNames",
+    "actionKeysNamesArray",
+    "DIK",
+    "KeyCodes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "dikCode"
+      },
+      "ret": {
+        "type": "StructuredText"
+      },
+      "right": {
+        "Item": {
+          "name": "dikCode",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.8"
+                    },
+                    "type": "String"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

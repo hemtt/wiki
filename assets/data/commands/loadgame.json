@@ -1,0 +1,28 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Loads game from the last autosave made with [[saveGame]].\nIf no autosave exists, restarts the mission. When used in campaign it will also deduct 1 life, defined in:\n<sqf>campaignConfigFile >> \"Campaign\" / \"ChapterName\" / \"MissionName\" / \"lives\"</sqf>\n\n{{Feature|informative|\nA {{hl|[[Arma 3: Mission Event Handlers#Loaded|\"Loaded\"]]}} [[addMissionEventHandler|mission event handler]] is available;\nit is important that it is added in {{hl|preInit}} in order for it to fire on load from save.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>loadGame;</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "name": "loadGame",
+  "problem_notes": [],
+  "see_also": [
+    "enableSaving",
+    "saveGame",
+    "savingEnabled",
+    "isSaving"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns bool array if it is possible to load cargo inside vehicle and if possible to load cargo into empty vehicle",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Blackfish with no vehicle cargo loaded\n<sqf>private _result = blackfish canVehicleCargo offroad; // [true, true]</sqf>",
+    "Blackfish with one vehicle cargo called offroad already loaded\n<sqf>private _result = blackfish canVehicleCargo offroad; // [false, false]</sqf>\nEven if the Blackfish were empty, the offroad could not be loaded because it is already in a cargo space",
+    "Blackfish with one vehicle cargo called offroad already loaded\n<sqf>private _result = blackfish canVehicleCargo offroad2; // [false, true]</sqf>\noffroad2 can't be loaded because there isn't enough space in the Blackfish, but if there were space offroad2 could be loaded into the Blackfish"
+  ],
+  "groups": [
+    "Vehicle in Vehicle Transport"
+  ],
+  "name": "canVehicleCargo",
+  "problem_notes": [],
+  "see_also": [
+    "setVehicleCargo",
+    "enableVehicleCargo",
+    "getVehicleCargo",
+    "isVehicleCargo",
+    "vehicleCargoEnabled",
+    "canSlingLoad",
+    "Arma",
+    "3:",
+    "Vehicle",
+    "in",
+    "Vehicle",
+    "Transport|Vehicle",
+    "in",
+    "Vehicle",
+    "Transport"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "cargo"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle carrying cargo",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[willFitIntoCurrentVehicle, willFitIntoEmptyVehicle]",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Boolean"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "cargo to put in vehicle",
+          "name": "cargo",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

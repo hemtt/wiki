@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if the given magazine is a throwable.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>isThrowable \"HandGrenade\"; // true</sqf>"
+  ],
+  "groups": [
+    "Weapons",
+    "Unit Inventory"
+  ],
+  "name": "isThrowable",
+  "problem_notes": [],
+  "see_also": [
+    "selectThrowable",
+    "currentThrowable",
+    "throwables",
+    "selectWeapon",
+    "currentWeapon",
+    "currentMagazine",
+    "currentMuzzle",
+    "BIS_fnc_isThrowable"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "magazine"
+      },
+      "ret": {
+        "desc": "[[true]] if throwable",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "magazine",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

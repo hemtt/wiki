@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Local",
+  "description": "Set an object's water intake ratio when immersed.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\nprivate _veh = vehicle player;\nif (surfaceIsWater getPosASL _veh) then\n{\n\t_veh setWaterLeakiness 1;\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setWaterLeakiness",
+  "problem_notes": [],
+  "see_also": [
+    "getWaterLeakiness",
+    "setWaterFillPercentage",
+    "getWaterFillPercentage"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "leakiness"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object to manipulate",
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "in range 0..1 where 0 is waterproof and 1 is full leak",
+          "name": "leakiness",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

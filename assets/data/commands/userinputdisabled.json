@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether or not user input is disabled.\n{{Feature|important|The disabled input system internally ''counts'' how many times <sqf inline>disableUserInput true</sqf> has been called - see {{Link|#Example 2}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Toggles user input<sqf>disableUserInput !userInputDisabled;</sqf>",
+    "<sqf>\ndisableUserInput true;\ndisableUserInput true;\ndisableUserInput true;\n\ndiag_log str userInputDisabled; // true\n\ndisableUserInput false;\ndiag_log str userInputDisabled; // true\n\ndisableUserInput false;\ndiag_log str userInputDisabled; // true\n\ndisableUserInput false;\ndiag_log str userInputDisabled; // false - control is regained only here\n</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "name": "userInputDisabled",
+  "problem_notes": [],
+  "see_also": [
+    "disableUserInput"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

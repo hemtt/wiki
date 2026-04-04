@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines an action performed when the user double clicks on the map. Command receives:,_pos array position,_units array selected units,_shift,_alt bool key state\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "onDoubleClick",
+  "problem_notes": [],
+  "see_also": [
+    "onMapSingleClick"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "command"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "command",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the current timeout for [[currentWaypoint]] of a [[group]] or -1 if countdown is not in progress.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_timeout = waypointTimeoutCurrent group player;</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "waypointTimeoutCurrent",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "setWaypointTimeout"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "group"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "group",
+          "type": "Group"
+        }
+      }
+    }
+  ]
+}

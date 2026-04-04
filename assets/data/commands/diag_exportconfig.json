@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Exports given [[Config|config]] into file of given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "export an [[Arma: All-in-one Config|All-in-One config]]:\n<sqf>diag_exportConfig [\"O:/config.cpp\", configFile];</sqf>"
+  ],
+  "groups": [
+    "Diagnostic",
+    "Config"
+  ],
+  "name": "diag_exportConfig",
+  "problem_notes": [],
+  "see_also": [
+    "configFile"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "path",
+          "config"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "file path on disc",
+              "name": "path",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "the config you would like to export",
+              "name": "config",
+              "type": "Config"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

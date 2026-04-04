@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Assigns a static object to the trigger. The activation source is changed to \"STATIC\".",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_trigger triggerAttachObject 1234;</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "name": "triggerAttachObject",
+  "problem_notes": [],
+  "see_also": [
+    "attachObject",
+    "attachTo",
+    "attachedObjects",
+    "attachedTo",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "lightAttachObject",
+    "triggerAttachVehicle",
+    "attachedObject",
+    "triggerAttachedVehicle",
+    "triggerInterval",
+    "setTriggerInterval",
+    "enableSimulation",
+    "simulationEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "triggerName",
+          "objectId"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "triggerName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "objectId",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

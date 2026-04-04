@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns number of headers (rows not included) in the RscControlsTable.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>ctHeaderCount _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "name": "ctHeaderCount",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddHeader",
+    "ctAddRow",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctRemoveHeaders",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ctrl"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

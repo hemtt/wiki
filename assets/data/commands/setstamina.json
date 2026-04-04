@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Local",
+  "description": "Set units' stamina (seconds until depletion)",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player setStamina 42;</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "name": "setStamina",
+  "problem_notes": [],
+  "see_also": [
+    "setStaminaScheme",
+    "getStamina",
+    "enableStamina",
+    "setFatigue",
+    "getFatigue",
+    "Arma",
+    "3:",
+    "Stamina"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "stamina"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "stamina",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

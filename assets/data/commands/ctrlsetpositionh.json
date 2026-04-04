@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the height of a 2D control. [[ctrlCommit]] is required to complete the operation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_ctrl ctrlSetPositionH 0.5;\n_ctrl ctrlCommit 1;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "ctrlSetPositionH",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetPosition",
+    "ctrlSetPositionX",
+    "ctrlSetPositionY",
+    "ctrlSetPositionW"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "h"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "2D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "height of the control",
+          "name": "h",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

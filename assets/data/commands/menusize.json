@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns how many sub entries is in item on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuSize [];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuSize",
+  "problem_notes": [],
+  "see_also": [
+    "menuEnable",
+    "menuExpand",
+    "menuCollapse",
+    "menuSetData",
+    "menuSetValue",
+    "menuSetCheck",
+    "menuSetAction",
+    "menuDelete",
+    "menuAdd",
+    "menuHover",
+    "menuValue",
+    "menuURL",
+    "menuText",
+    "menuSort",
+    "menuEnabled",
+    "menuChecked",
+    "menuAction",
+    "menuShortcutText",
+    "menuShortcut",
+    "menuPicture",
+    "menuData",
+    "menuClear",
+    "menuSetPicture"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

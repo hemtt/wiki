@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get array with all items (of any kind, even weapons) from uniform.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nuniformItems player;\n// returns e.g\n/*\n[\n\t\"FirstAidKit\",\n\t\"30Rnd_65x39_caseless_mag\",\n\t\"30Rnd_65x39_caseless_mag\",\n\t\"30Rnd_65x39_caseless_mag\"\n]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "uniformItems",
+  "problem_notes": [],
+  "see_also": [
+    "vestItems",
+    "backpackItems"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "Class names of items",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

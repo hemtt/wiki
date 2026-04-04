@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return true if the main map is shown (active). In {{arma3}} it also returns true if the respawn screen map is visible.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (visibleMap) then { hint \"You're showing the map !\" };</sqf>"
+  ],
+  "groups": [
+    "Map",
+    "Interaction"
+  ],
+  "name": "visibleMap",
+  "problem_notes": [],
+  "see_also": [
+    "forceMap",
+    "openMap"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

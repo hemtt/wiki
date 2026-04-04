@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "When used on a person, a smooth transition to the given action will be initiated, but all previous playAction are discarded.\n{{Feature|arma3|For {{arma3}} actions, see [[playAction/actions]].}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>soldierOne playActionNow \"SitDown\";</sqf>",
+    "<sqf>rabbitTwo playActionNow \"WalkF\";</sqf>"
+  ],
+  "groups": [
+    "Animations"
+  ],
+  "name": "playActionNow",
+  "problem_notes": [],
+  "see_also": [
+    "playAction",
+    "switchAction",
+    "playMove",
+    "playMoveNow",
+    "switchMove"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "soldier",
+          "action"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "soldier",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "action",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

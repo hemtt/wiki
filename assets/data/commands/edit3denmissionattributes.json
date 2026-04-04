@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Open a window with [[Eden Editor: Scenario Atttributes|scenario attribute]] in given section.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>edit3DENMissionAttributes \"Multiplayer\";</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "edit3DENMissionAttributes",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENAttribute",
+    "set3DENAttributes"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "section"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "attribute section from <sqf inline>configFile >> \"Cfg3DEN\" >> \"Mission\"</sqf>",
+          "name": "section",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

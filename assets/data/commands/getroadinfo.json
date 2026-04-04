@@ -1,0 +1,102 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns road piece information.\n{{Feature|informative|\n* Bridges are special case. Only large bridges are part of Road Net. Small pedestrian bridges are not recognized as roads. Bridge \"mapType\" is {{hl|\"ROAD\"}} so the best way to detect bridges is to check \"isBridge\" value. Bridges are not part of new roads and don't have the same info as other new roads, so only \"mapType\", \"texture\" (maybe \"textureEnd\"), \"begPos\", \"endPos\" and \"isBridge\" are  updated.\n* Pedestrian roads \"mapType\" is usually {{hl|\"TRAIL\"}}. They are part of Road Net but excluded from path finding. Use [[roadsConnectedTo]] with alternative flag to find the connections between pedestrian roads.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _info = getRoadInfo _road;\n_info params [\"_mapType\", \"_width\", \"_isPedestrian\", \"_texture\", \"_textureEnd\", \"_material\", \"_begPos\", \"_endPos\", \"_isBridge\"];\nprivate _roadDirection = _begPos getDir _endPos;\n</sqf>"
+  ],
+  "groups": [
+    "Roads and Airports"
+  ],
+  "name": "getRoadInfo",
+  "problem_notes": [],
+  "see_also": [
+    "nearRoads",
+    "roadsConnectedTo",
+    "isOnRoad",
+    "roadAt",
+    "nearestTerrainObjects"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "road"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "road segment type, could be {{hl|\"HIDE\"}}, {{hl|\"ROAD\"}}, {{hl|\"MAIN ROAD\"}}, {{hl|\"TRACK\"}}, {{hl|\"TRAIL\"}} (see [[nearestTerrainObjects]])",
+              "name": "mapType",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "road segment width",
+              "name": "width",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "when [[true]] road is for pedestrian use only",
+              "name": "isPedestrian",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "road segment surface texture",
+              "name": "texture",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "road segment surface texture",
+              "name": "textureEnd",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "road segment surface material",
+              "name": "material",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "desc": "start of the road segment",
+              "name": "begPos",
+              "since": null,
+              "type": "Position3dASL"
+            },
+            {
+              "desc": "finish of the road segment",
+              "name": "endPos",
+              "since": null,
+              "type": "Position3dASL"
+            },
+            {
+              "desc": "when [[true]] road segment is a bridge",
+              "name": "isBridge",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "config value of `AIpathOffset`",
+              "name": "AIpathOffset",
+              "since": {
+                "arma3": "2.12"
+              },
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "road",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets the shadows rendering distance.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_value = getShadowDistance;</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Environment"
+  ],
+  "name": "getShadowDistance",
+  "problem_notes": [],
+  "see_also": [
+    "setShadowDistance",
+    "isPipEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

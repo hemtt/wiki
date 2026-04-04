@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Generates new roads. Working only in [[Oxygen Viewer|buldozer]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_loaded = buldozer_loadNewRoads \"C:/A3/Map_Stratis/data/roads/\"</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "buldozer_loadNewRoads",
+  "problem_notes": [],
+  "see_also": [
+    "buldozer_reloadOperMap"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "path"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

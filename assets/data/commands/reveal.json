@@ -1,0 +1,125 @@
+{
+  "argument_loc": "Global",
+  "description": "Reveals a target to a [[group]]. If ''toWhom'' is a unit, unit's group is considered. If ''toWhom'' is a vehicle, vehicle commander's group is considered.  The [[knowsAbout|knowledge value]] will be set to the highest level any unit of the revealing side has about the revealed target. If the revealing side has ''no'' knowledge about the revealed target, the value will be set to 1.\n\n{{Feature | informative | The knowledge level can only be increased by this command, not decreased. Use [[forgetTarget]] first if you need to decrease value.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_soldierOne reveal _soldierTwo; // soldierOne knowsAbout information about soldierTwo is updated</sqf>",
+    "<sqf>player reveal cursorObject; // player knowsAbout information about object under cursor is updated</sqf>",
+    "<sqf>_soldierOne reveal [_soldierTwo, 1.5];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "reveal",
+  "problem_notes": [],
+  "see_also": [
+    "nearTargets",
+    "knowsAbout",
+    "forgetTarget",
+    "ignoreTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "toWhom",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "which receives revealing information",
+          "name": "toWhom",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "which is revealed",
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "toWhom",
+          [
+            "target",
+            "accuracy"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "which receives revealing information",
+          "name": "toWhom",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "which is revealed",
+              "name": "target",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "knowledge value, clamped to 0..4 range",
+              "name": "accuracy",
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma2oa": "1.60"
+      }
+    }
+  ]
+}

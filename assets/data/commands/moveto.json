@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Local",
+  "description": "Low level command to person to move to given position. It is good to check first if AI pilot unit state is COMPLETED [[moveToCompleted]] first as this command will set unit into WAIT state waiting for instruction, but only if the unit has COMPLETED.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_myAgent moveTo getPosATL player;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "moveTo",
+  "problem_notes": [],
+  "see_also": [
+    "doMove",
+    "commandMove",
+    "setDestination",
+    "move",
+    "moveToCompleted",
+    "moveToFailed",
+    "addWaypoint"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "position",
+          "type": "Position3dATL"
+        }
+      }
+    }
+  ]
+}

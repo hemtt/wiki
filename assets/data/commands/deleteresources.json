@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Global",
+  "description": "Delete (unregister) resources of the team member. Resources are deleted in the order they were added. Case insensitive.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>teamMember _agent deleteResources [\"Legs\"];</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "deleteResources",
+  "problem_notes": [],
+  "see_also": [
+    "resources",
+    "addResources"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "teamMember",
+          "resources"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "resources",
+          "type": {
+            "ArrayUnsized": {
+              "value": "String"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

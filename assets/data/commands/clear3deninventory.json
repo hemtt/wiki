@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Deletes inventory from mission.sqm of given units. Effect is not immediately visible, only when previewing the inventory resets to default.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>clear3DENInventory get3DENSelected \"Object\";</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "clear3DENInventory",
+  "problem_notes": [],
+  "see_also": [
+    "save3DENInventory",
+    "get3DENEntityID",
+    "collect3DENHistory",
+    "get3DENSelected"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entities"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "entities",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenEntity"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenID"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

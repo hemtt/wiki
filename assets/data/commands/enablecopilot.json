@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Global",
+  "description": "Enables copilot actions, toggles availability of the actions related to copilots, such as taking over controls, suspending controls, etc. This command triggers the {{hl|\"ControlsShifted\"}} event handler.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nif (!isCopilotEnabled myHeli) then\n{\n\tmyHeli enableCopilot true;\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "enableCopilot",
+  "problem_notes": [],
+  "see_also": [
+    "isCopilotEnabled",
+    "currentPilot"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle on which to toggle copilot actions",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "enable or disable",
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

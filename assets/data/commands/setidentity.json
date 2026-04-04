@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets identity of a person. The identities could be defined in a custom config in [[Description.ext#CfgIdentities|Description.ext]] or in the main config. For a list of available main config values see [[CfgIdentities]].\n<br><br> \nThis command is an aggregate of the following commands: [[setName]], [[setFace]], [[setSpeaker]], [[setNameSound]], [[setPitch]], only the values are loaded from the given config. It also includes value for glasses for which currently there is no direct command, instead there is an inventory command [[addGoggles]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_soldier1 setIdentity \"MyLittleSoldier\";</sqf>",
+    "Clone factory in MP:\n<sqf>\nfor \"_i\" from 1 to 10 do\n{\n\t_bob = group player createUnit [typeOf player, position player, [], 0, \"none\"];\n\t[_bob, \"MyLittleSoldier\"] remoteExec [\"setIdentity\", 0, _bob];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "name": "setIdentity",
+  "problem_notes": [],
+  "see_also": [
+    "setFace",
+    "setName",
+    "setNameSound",
+    "setSpeaker",
+    "setPitch",
+    "addGoggles",
+    "loadIdentity",
+    "lockIdentity",
+    "Arma_3:_Event_Handlers#HandleIdentity",
+    "|",
+    "HandleIdentity",
+    "EH",
+    "hasCustomFace"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "person",
+          "identity"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to which the identity will be applied",
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the subclass in [[CfgIdentities]]",
+          "name": "identity",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

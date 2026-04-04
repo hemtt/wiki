@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create a multiplayer role for the unit. The roles created this way are used for [[Multiplayer Scripting#Join In Progress|Join In Progress]] and [[Team Switch]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setPlayable _aPerson;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Multiplayer"
+  ],
+  "name": "setPlayable",
+  "problem_notes": [
+    "{{Feature|warning|This command does not work as intended and currently does nothing in {{arma3}}.}}"
+  ],
+  "see_also": [
+    "addSwitchableUnit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

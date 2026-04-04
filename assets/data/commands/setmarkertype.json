@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets marker type. Marker type is a class name from [[CfgMarkers]].\n{{Feature|informative|\n'''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.\nAs such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\"MarkerOne\" setMarkerType \"Warning\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "name": "setMarkerType",
+  "problem_notes": [],
+  "see_also": [
+    "CfgMarkers",
+    "setMarkerDrawPriority",
+    "setMarkerTypeLocal",
+    "markerType",
+    "setMarkerAlphaLocal",
+    "setMarkerBrush",
+    "setMarkerColor",
+    "setMarkerDir",
+    "setMarkerPos",
+    "setMarkerShape",
+    "setMarkerSize",
+    "setMarkerText",
+    "createMarker"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[CfgMarkers]]",
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

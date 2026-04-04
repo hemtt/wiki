@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Log all frames, where section takes longer than the threshold (in seconds).\n{{Feature|informative|Only available in specific builds. See [[Performance Profiling]] for details.}}\n{{Feature|warning|This command is not implemented in '''{{arma3}}''' builds. {{GVI|arma3|2.20}} Use [[diag_captureSlowFrame]] with '''toFile''' parameter instead. Or [[Multiplayer_Server_Commands#Performance_profiling|admin chat commands]] for server side captures. }}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_logSlowFrame ['total', 0.3];</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "name": "diag_logSlowFrame",
+  "problem_notes": [],
+  "see_also": [
+    "Performance",
+    "Profiling",
+    "diag_captureFrame",
+    "diag_captureSlowFrame",
+    "diag_captureFrameToFile",
+    "Multiplayer_Server_Commands#Performance_Profiling|Admin",
+    "chat",
+    "commands"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "section",
+          "threshold"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "section",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "duration of frame in seconds",
+              "name": "threshold",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

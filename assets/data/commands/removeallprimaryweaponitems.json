@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Local",
+  "description": "Removes all items from [[primaryWeapon]], except magazine.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>removeAllPrimaryWeaponItems player;</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeAllPrimaryWeaponItems",
+  "problem_notes": [],
+  "see_also": [
+    "addPrimaryWeaponItem",
+    "removePrimaryWeaponItem",
+    "removeAllSecondaryWeaponItems",
+    "removeAllHandgunItems",
+    "removeAllBinocularItems"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

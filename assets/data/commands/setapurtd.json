@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Let the Auxiliary Power Unit (APU) reach a desired state over the given period of time.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setAPURTD [1, 15];</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "name": "setAPURTD",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "helicopterRTD",
+          [
+            "value",
+            "time"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "desired APU state. 0 being completely off, 1 being fully powered up",
+              "name": "value",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "time to reach (seconds)",
+              "name": "time",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

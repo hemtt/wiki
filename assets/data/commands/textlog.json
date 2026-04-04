@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Dump argument value to debugging output. <br>\n{{Feature|warning|This command is non-functional in the retail version}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>textLog player;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands"
+  ],
+  "name": "textLog",
+  "problem_notes": [],
+  "see_also": [
+    "diag_log"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "anything"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "anything",
+          "type": "Anything"
+        }
+      }
+    }
+  ]
+}

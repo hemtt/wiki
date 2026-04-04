@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Destroy [[Post Process Effects]] given by handle or array of handles.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ppEffectDestroy _hndl;</sqf>",
+    "<sqf>ppEffectDestroy [_hndl0, _hndl1, _hndl2];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "ppEffectDestroy",
+  "problem_notes": [],
+  "see_also": [
+    "Post",
+    "Process",
+    "Effects",
+    "ppEffectForceInNVG",
+    "ppEffectEnable",
+    "ppEffectEnabled",
+    "ppEffectCreate",
+    "ppEffectCommit",
+    "ppEffectCommitted",
+    "ppEffectAdjust"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "effect"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "effect handle",
+          "name": "effect",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "effects"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "array of effect handles",
+          "name": "effects",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

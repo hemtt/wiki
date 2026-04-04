@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Main syntax: Reload first found muzzle that needs reloading (with some inconsistencies).<br>\nAlternative syntax: this syntax allows to reload given muzzle with given magazine while playing proper animation.\nIf ''param'' is omitted or is empty string, default value is used. The default behaviour is to find the best matching magazine for the provided muzzle from the pool of available magazines.\nIf specific magazine is requested, the reload will fail if unit has run out of this type of magazines. If an empty array <sqf inline>[]</sqf> is given, the behaviour is similar to pressing the \"Reload\" key.\nThe command reloads the given muzzle but does not select it. In case of [[currentThrowable|throwable]] muzzles, each throwable has its own muzzle, they are autoreloaded after throw.\nUsing [[reload]] on the throwable muzzle will just swap throwable for another one of the same type from inventory.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (needReload player == 1) then { reload player };</sqf>",
+    "<sqf>player reload [\"GL_3GL_F\", \"1Rnd_HE_Grenade_shell\"];</sqf>",
+    "Reload current muzzle:\n<sqf>player reload [];</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "name": "reload",
+  "problem_notes": [],
+  "see_also": [
+    "reloadEnabled",
+    "needReload",
+    "enableReload",
+    "setWeaponReloadingTime"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "muzzle",
+            "magazine"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "person",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "(Optional, default [[currentMuzzle]]) muzzle name or \"\" for the current muzzle.",
+              "name": "muzzle",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default given muzzle magazine) magazine name or \"\" for given muzzle's magazine. If given muzzle is [[currentMuzzle]] then [[currentMagazine]]",
+              "name": "magazine",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.8"
+      }
+    }
+  ]
+}

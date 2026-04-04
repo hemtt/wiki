@@ -1,0 +1,61 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets P font of given HTML control or its size.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetFontP \"TahomaB\";</sqf>",
+    "<sqf>_control ctrlSetFontP 0.05;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - HTML"
+  ],
+  "name": "ctrlSetFontP",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetFontHeightSecondary",
+    "ctrlSetFontSecondary"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "fontOrSize"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "fontOrSize",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

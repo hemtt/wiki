@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return camera interest for given entity, as set by [[setCameraInterest]], or as autodetected.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>camInterest = cameraInterest myUnit;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "cameraInterest",
+  "problem_notes": [],
+  "see_also": [
+    "setCameraInterest"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

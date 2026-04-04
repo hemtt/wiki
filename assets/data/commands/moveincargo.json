@@ -1,0 +1,99 @@
+{
+  "argument_loc": "Local",
+  "description": "Moves a unit into a vehicle cargo position (immediately and without animation).\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_soldierOne moveInCargo _jeepOne;</sqf>",
+    "<sqf>_soldierOne moveInCargo [_jeepOne, 1];</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "moveInCargo",
+  "problem_notes": [],
+  "see_also": [
+    "moveInAny",
+    "moveInCommander",
+    "moveInDriver",
+    "moveInGunner",
+    "moveInTurret",
+    "assignAsCargo",
+    "assignAsCommander",
+    "assignAsDriver",
+    "assignAsGunner",
+    "getCargoIndex"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "vehicle"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "vehicle",
+            "cargoIndex",
+            "canReassign"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "name": "cargoIndex",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) try to move ''unit'' into the first free ''vehicle'' cargo seat if ''cargoIndex'' is already occupied",
+              "name": "canReassign",
+              "since": {
+                "arma3": "2.8"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

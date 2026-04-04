@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if team member is an agent.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>isAgent teamMember _unit;</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "isAgent",
+  "problem_notes": [],
+  "see_also": [
+    "agent",
+    "agents",
+    "createAgent",
+    "forEachMemberAgent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "teamMember"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

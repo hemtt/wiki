@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Global",
+  "description": "Assign a unit as cargo of a vehicle. Used together with [[orderGetIn]] to order a unit to get in as cargo into a specific vehicle. Before usage of this command a subordinate unit has not got the option to get into the cargo space of the vehicle.\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n_soldier1 assignAsCargo _truck;\n[_soldier1] orderGetIn true;\n</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "assignAsCargo",
+  "problem_notes": [],
+  "see_also": [
+    "assignAsDriver",
+    "assignAsGunner",
+    "assignAsCommander",
+    "assignAsTurret",
+    "assignAsCargoIndex",
+    "moveInCargo",
+    "moveInCommander",
+    "moveInDriver",
+    "moveInGunner",
+    "moveInTurret",
+    "assignedVehicleRole",
+    "assignedVehicle",
+    "unassignVehicle",
+    "leaveVehicle",
+    "fullCrew"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "vehicleName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicleName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

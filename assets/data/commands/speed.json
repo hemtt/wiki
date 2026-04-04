@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Object speed (in km/h). Returns relative speed of given object along Y axis. An equivalent to: <sqf inline>3.6 * (velocityModelSpace _obj select 1)</sqf>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (speed _truck1 >= 100) then { hint \"You're going too fast!\" };</sqf>",
+    "<sqf>if ((speed objectParent player) < 0) then { hint \"You're going reverse!\" };</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "speed",
+  "problem_notes": [],
+  "see_also": [
+    "velocity",
+    "setVelocity",
+    "velocityModelSpace",
+    "setVelocityModelSpace",
+    "setVelocityTransformation",
+    "limitSpeed"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

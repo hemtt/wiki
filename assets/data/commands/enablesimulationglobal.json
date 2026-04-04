@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Global",
+  "description": "Enable or disable simulation for given entity, globally. Has the same effect as [[enableSimulation]] when used in singleplayer.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_myObject enableSimulationGlobal false;</sqf>",
+    "<sqf>[_object, false] remoteExec [\"enableSimulationGlobal\", 2];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "enableSimulationGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "enableSimulation",
+    "simulationEnabled",
+    "enableDynamicSimulationSystem",
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "entity",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

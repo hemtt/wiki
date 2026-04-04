@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return root of config entries hierarchy.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isMyClassActive = isClass (configFile >> \"CfgPatches\" >> \"MyClass\");</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "name": "configFile",
+  "problem_notes": [],
+  "see_also": [
+    "missionConfigFile",
+    "campaignConfigFile"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Config"
+      }
+    }
+  ]
+}

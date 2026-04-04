@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a structured text containing the given image. Use [[setAttributes]] to set additional [[Structured_Text#Attributes | attributes]] on the image.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint composeText [\"Image: \", image \"\\a3\\Data_f\\Flags\\flag_Altis_co.paa\"];</sqf>",
+    "<sqf>hint str (composeText [\"Image: \", image \"\\a3\\Data_f\\Flags\\flag_Altis_co.paa\"] == parseText \"Image: <img image='\\a3\\Data_f\\Flags\\flag_Altis_co.paa'/>\"); // true</sqf>"
+  ],
+  "groups": [
+    "Strings",
+    "GUI Control",
+    "Structured Text"
+  ],
+  "name": "image",
+  "problem_notes": [],
+  "see_also": [
+    "setAttributes",
+    "parseText",
+    "text",
+    "composeText",
+    "lineBreak"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "filename"
+      },
+      "ret": {
+        "type": "StructuredText"
+      },
+      "right": {
+        "Item": {
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

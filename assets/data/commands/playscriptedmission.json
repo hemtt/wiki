@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Load the given world, launch an empty mission, and execute the given expression.\nIf provided, ''config'' can reference to the config entry, replacing [[Description.ext]] for this mission.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nplayScriptedMission\n[\n\t\"desert_e\",\n\t{\n\t\texecVM \"\\ca\\missions_e\\data\\scenes\\credits1\\init.sqf\";\n\t},\n\tconfigFile / \"CfgMissions\" / \"Cutscenes\" / \"Credits\"\n];\n</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "playScriptedMission",
+  "problem_notes": [],
+  "see_also": [
+    "hostMission",
+    "playMission",
+    "createMissionDisplay",
+    "createMPCampaignDisplay"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "world",
+          "expression",
+          "config",
+          "ignoreChildWindow"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "world",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "expression",
+              "type": "Code"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "config",
+              "type": "Config"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional)",
+              "name": "ignoreChildWindow",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

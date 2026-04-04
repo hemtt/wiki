@@ -1,0 +1,89 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets new value into menu entry on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>findDisplay 313 displayCtrl 120 menuSetValue [[0, 1], 1337];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuSetValue",
+  "problem_notes": [],
+  "see_also": [
+    "menuValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "value"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "path",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

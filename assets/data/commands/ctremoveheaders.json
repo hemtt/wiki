@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Local",
+  "description": "Takes array of header indices as a parameter and removes headers with those indices. Indices of remaining headers will be recomputed.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_control ctRemoveHeaders [0, 1, 2];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Controls Table"
+  ],
+  "name": "ctRemoveHeaders",
+  "problem_notes": [],
+  "see_also": [
+    "ctAddRow",
+    "ctAddHeader",
+    "ctClear",
+    "ctCurSel",
+    "ctSetCurSel",
+    "ctRowControls",
+    "ctHeaderControls",
+    "ctRowCount",
+    "ctHeaderCount",
+    "ctSetValue",
+    "ctValue",
+    "ctSetData",
+    "ctData",
+    "ctFindRowHeader",
+    "ctFindHeaderRows",
+    "ctRemoveRows",
+    "ctSetRowTemplate",
+    "ctSetHeaderTemplate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          "indices"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "indices",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Number"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

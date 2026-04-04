@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Local",
+  "description": "Checks if a group or a side knows about target.\n* Enemy knowledge is instantly shared among the group units\n* Units in the same group always perfectly know about each others\n* AI knowledge cannot check beyond current [[viewDistance]] and it resets to zero as soon as the target's distance is over it<br>Note: neither fog nor daylight affect this behaviour\n* Losing sight of a target for more than 120 seconds resets its [[knowsAbout]] to zero as well\n* '''Magic number''' is the value that must be reached for a unit to shoot at an enemy (used by \"Detected by\" triggers as well):\n:{{{!}}class=\"wikitable align-center\"\n! Game\n{{!}} {{GVI|ofp|1.46}}\n{{!}} {{GVI|ofpr|1.96}}\n{{!}} {{GVI|arma1|1.18}}\n{{!}} {{GVI|arma2|1.11}}\n{{!}} {{GVI|arma2oa|1.62}}\n{{!}} {{GVI|arma3|1.82}}\n{{!}}-\n! Magic value\n{{!}} 0.7\n{{!}} 0.105\n{{!}} ?\n{{!}} ?\n{{!}} ?\n{{!}} ?\n{{!}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_knowledge = player knowsAbout _target;</sqf>",
+    "<sqf>_knowledge = (group player) knowsAbout _target;</sqf>",
+    "<sqf>_knowledge = (side player) knowsAbout _target;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Sides"
+  ],
+  "name": "knowsAbout",
+  "problem_notes": [],
+  "see_also": [
+    "nearTargets",
+    "reveal",
+    "getHideFrom",
+    "targetKnowledge",
+    "targetsAggregate",
+    "targetsQuery",
+    "forgetTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "who",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "if a unit, unit's [[group]] is considered; if a vehicle, vehicle commander's [[group]] is used.",
+          "name": "who",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Side"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "in range of 0..4, where 4 is maximum knowledge.",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

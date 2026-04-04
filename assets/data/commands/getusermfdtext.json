@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of user text variables used in MFD.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getUserMFDText _vehicle;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "getUserMFDText",
+  "problem_notes": [],
+  "see_also": [
+    "setUserMFDText",
+    "setUserMFDValue",
+    "getUserMFDValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

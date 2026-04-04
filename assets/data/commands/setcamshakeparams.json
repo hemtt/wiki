@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets camera shake parameters. Will not have any effect until shake is started via [[addCamShake]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setCamShakeParams [0.1, 1, 1, 1, true];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "setCamShakeParams",
+  "problem_notes": [],
+  "see_also": [
+    "setCamShakeDefParams",
+    "addCamShake",
+    "enableCamShake",
+    "resetCamShake"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "posCoef",
+          "vertCoef",
+          "horzCoef",
+          "bankCoef",
+          "interpolation"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "strength of positional movement (how far the whole position can change in X,Y&Z). Should not be bigger than 0.1 to prevent the camera from moving into or behind the player",
+              "name": "posCoef",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "strength of vertical camera pan (up/down), practical range: 0..10",
+              "name": "vertCoef",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "strength of horizontal camera pan (left/right), practical range: 0..10",
+              "name": "horzCoef",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "strength of camera tilt/bank, practical range: 0..20",
+              "name": "bankCoef",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "if [[true]], then transitions in the different shaking directions will be smoother",
+              "name": "interpolation",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

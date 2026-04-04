@@ -1,0 +1,113 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets scalar data to item on given path. IDC means id of parent Tree View. If the given value is not integer, it will be converted to integer",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvSetValue [101, [0], 555];</sqf>",
+    "<sqf>_ctrl tvSetValue [[0,0,0], 14];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetValue",
+  "problem_notes": [],
+  "see_also": [
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "val"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "val",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            "path",
+            "val"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Number"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "val",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Displays a resource defined in RscTitles. Also see [[cutRsc]], with these two commands you can show two different resources at once.\n{{Feature|arma3|{{GVI|arma3|1.58}} Multiple layers and map overlays are possible with [[cutRsc]] which provides more options and handles layers better.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>titleRsc [\"BIS\", \"PLAIN\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "titleRsc",
+  "problem_notes": [],
+  "see_also": [
+    "titleText",
+    "titleObj",
+    "cutRsc",
+    "allActiveTitleEffects",
+    "activeTitleEffectParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "text",
+          "type",
+          "speed",
+          "showInMap"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the class name of the resource. (\"Default\" will remove the current resource)",
+              "name": "text",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "can be one of: \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\"; see [[Title Effect Type]]s for more information about these values",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) time in seconds to fade in resource",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to hide the text when the map is opened",
+              "name": "showInMap",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

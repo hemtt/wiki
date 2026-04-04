@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Clears the value of the given entity's [[Eden_Editor:_Entity_Attributes|attribute]] in [[:Category:Eden Editor|Eden Editor]]. An attribute is identified by its {{hl|property}} ({{hl|data}} when it is engine-drive attribute) value in config. For the list of all attributes with their properties, see [[Eden_Editor:_Setting_Attributes#Attributes|Setting Attributes]].\n\n{{Feature|important|Attributes are available only within the Eden Editor workspace. You cannot access them in scenario preview or exported scenario!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>0 clear3DENAttribute \"name\";</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "clear3DENAttribute",
+  "problem_notes": [],
+  "see_also": [
+    "set3DENAttribute",
+    "set3DENAttributes",
+    "set3DENMissionAttributes",
+    "get3DENMissionAttribute",
+    "get3DENAttribute"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          "attribute"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "entity",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenEntity"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenID"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "attribute property",
+          "name": "attribute",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

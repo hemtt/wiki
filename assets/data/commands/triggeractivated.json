@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns true if the trigger has been activated.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (triggerActivated trg1) then { hint \"trigger trg1 activated!\" };</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "name": "triggerActivated",
+  "problem_notes": [],
+  "see_also": [
+    "setTriggerActivation",
+    "triggerActivation",
+    "triggerInterval",
+    "setTriggerInterval",
+    "enableSimulation",
+    "simulationEnabled",
+    "createTrigger"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "trigger"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

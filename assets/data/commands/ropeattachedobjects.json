@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of all entities that are attached to the transport with [[ropes]]. This command is the opposite of [[ropeAttachedTo]].<br><br>\n[[File:ropeAttachedObjects.jpg|400px]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_cargoArray = ropeAttachedObjects heli1;</sqf>"
+  ],
+  "groups": [
+    "Ropes and Sling Loading"
+  ],
+  "name": "ropeAttachedObjects",
+  "problem_notes": [],
+  "see_also": [
+    "ropes",
+    "canSlingLoad",
+    "enableRopeAttach",
+    "getSlingLoad",
+    "ropeAttachTo",
+    "ropeDestroy",
+    "ropeLength",
+    "ropeUnwound",
+    "ropeAttachedTo",
+    "ropeCreate",
+    "ropeDetach",
+    "ropeAttachEnabled",
+    "ropeCut",
+    "ropeEndPosition",
+    "ropeUnwind",
+    "setSlingLoad",
+    "slingLoadAssistantShown"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ropesOwner"
+      },
+      "ret": {
+        "desc": "array of attached entities on ropes",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "transport from which a single or multiple ropes are originating",
+          "name": "ropesOwner",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

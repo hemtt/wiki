@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Terminates the effect in the given layer by fading it out according to the given duration. If named layer is used and it doesn't exist, it will be allocated. For title layer see [[titleFadeOut]].\n{{Feature|arma3|For greater efficiency and ease of moddability, it is recommended to use named layers.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>0 cutFadeOut 2;</sqf>",
+    "<sqf>private _layer = \"layer1\" cutFadeOut 2;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "cutFadeOut",
+  "problem_notes": [],
+  "see_also": [
+    "allCutLayers",
+    "cutText",
+    "cutRsc",
+    "cutObj",
+    "allActiveTitleEffects",
+    "activeTitleEffectParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "layer",
+          "duration"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "layer",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "duration",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "layerName",
+          "duration"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "effect layer name. Layer names are CaSe SeNsItIvE",
+          "name": "layerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "desc": "number of the corresponding layer",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "fade out time",
+          "name": "duration",
+          "type": "Number"
+        }
+      },
+      "since": {
+        "arma3": "1.58"
+      }
+    }
+  ]
+}

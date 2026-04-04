@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets 'shadow' property of the control:\n* 0 - no shadow\n* 1 - shadow\n* 2 - outline",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetShadow 1;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlSetShadow",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlShadow",
+    "ctrlCreate"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "shadow"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "shadow value, see description",
+          "name": "shadow",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

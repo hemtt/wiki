@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array with all the units in the group or unit's group, or all units belonging to a certain side.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_myUnitCount = count units player;</sqf>",
+    "<sqf>_isInMyGroup = _soldier1 in units player;</sqf>",
+    "<sqf>private _unitsEast = units opfor;</sqf>",
+    "<sqf>\n// both methods are the same, the latter is preferred for performance reason\nunits group player;\t\t// [B Alpha 1-1:1 (R3vo), B Alpha 1-1:2, B Alpha 1-1:3, B Alpha 1-1:4, B Alpha 1-1:5, B Alpha 1-1:6, B Alpha 1-1:7, B Alpha 1-1:8]\nunits player;\t\t\t// [B Alpha 1-1:1 (R3vo), B Alpha 1-1:2, B Alpha 1-1:3, B Alpha 1-1:4, B Alpha 1-1:5, B Alpha 1-1:6, B Alpha 1-1:7, B Alpha 1-1:8]\n</sqf>"
+  ],
+  "groups": [
+    "Groups",
+    "Object Detection"
+  ],
+  "name": "units",
+  "problem_notes": [],
+  "see_also": [
+    "group",
+    "allGroups",
+    "groups",
+    "allUnits",
+    "playableUnits",
+    "switchableUnits",
+    "vehicles"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "type"
+      },
+      "ret": {
+        "desc": "if ''type'' is a destroyed object, an empty array is returned",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "type",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.2"
+                    },
+                    "type": "Side"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

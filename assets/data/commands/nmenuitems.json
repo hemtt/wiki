@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the total number of user-added menu items belonging to the given menu. {{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "nMenuItems",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "menuName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "\"file\" or \"view\"",
+          "name": "menuName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

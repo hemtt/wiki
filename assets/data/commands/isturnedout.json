@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if given unit is turned out, otherwise [[false]]. The output changes to [[true]] after unit finished turning out, however will change to [[false]] almost immediately after unit is ordered to turn in.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_commanderOut = isTurnedOut (tank turretUnit [0,0]);</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "isTurnedOut",
+  "problem_notes": [],
+  "see_also": [
+    "moveOut",
+    "moveInDriver",
+    "turretUnit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "unit on turn(in/out) enabled turret",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

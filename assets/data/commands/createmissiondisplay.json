@@ -1,0 +1,85 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create single missions display as a child of given display. The mission dialog will be set to the directory given as an argument \"root\".",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ChildDisplay = _Rootdisplay createMissionDisplay \"Tutorial\";</sqf>",
+    "In {{arma3}} this creates the scenarios UI:\n<sqf>findDisplay 46 createMissionDisplay \"\";</sqf>",
+    "Other options for {{arma3}}:\n<sqf>\nprivate _missionDisplay = findDisplay 46;\n_missionDisplay createMissionDisplay [\"\", \"Cutscenes\"];\n_missionDisplay createMissionDisplay [\"\", \"Campaigns\"];\n_missionDisplay createMissionDisplay [\"\", \"MPMissions\"];\n_missionDisplay createMissionDisplay [\"\", \"Challenges\"];\n_missionDisplay createMissionDisplay [\"\", \"Showcases\"];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "createMissionDisplay",
+  "problem_notes": [],
+  "see_also": [
+    "createMPCampaignDisplay",
+    "playMission",
+    "playScriptedMission",
+    "hostMission"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "display",
+          "missionRootDirectoryString"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "type": "Display"
+      },
+      "right": {
+        "Item": {
+          "name": "missionRootDirectoryString",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "display",
+          [
+            "missionRootDirectoryString",
+            "cfgMissionsClass"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "display",
+          "type": "Display"
+        }
+      },
+      "ret": {
+        "type": "Display"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "root direction from {{hl|\\Arma 3\\Missions\\ROOT}}",
+              "name": "missionRootDirectoryString",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "cfgMissions class to use",
+              "name": "cfgMissionsClass",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets cost of waypoints (used for placing, editing and deleting).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myCurator setCuratorWaypointCost 0.1;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "setCuratorWaypointCost",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          "cost"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "cost",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

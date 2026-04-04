@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array with all objects that has curator registered and their settings.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorRegisteredObjects _curatorModule;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "curatorRegisteredObjects",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curator"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module",
+          "name": "curator",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

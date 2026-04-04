@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the distance to keep to the vehicle which is '''in front'''.<br>\n*This command has to be applied to all vehicles in a convoy in order to have a separation of, for example, 50 m. \n*Vehicles in a convoy can also have different distances.\n*It's recommended that small values (<10m) should only be used for slowly moving convoys, otherwise AI driven vehicles will leave the road frequently to avoid collisions",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>cursorObject setConvoySeparation 20;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setConvoySeparation",
+  "problem_notes": [],
+  "see_also": [
+    "forceFollowRoad",
+    "useAISteeringComponent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "distance"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "distance",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

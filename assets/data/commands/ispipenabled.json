@@ -1,0 +1,25 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether Picture-In-Picture video option (Render to Texture) is enabled or not.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _PiPState = isPiPEnabled;</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "isPiPEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "BIS_fnc_PIP"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

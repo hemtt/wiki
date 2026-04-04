@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns power produced by engines in Watts.\n{{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_array = enginesPowerRTD vehicle player;</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "name": "enginesPowerRTD",
+  "problem_notes": [],
+  "see_also": [
+    ":Category:Command_Group:_RTD|RTD",
+    "Commands",
+    "Group"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "RTD_helicopter"
+      },
+      "ret": {
+        "desc": "watts produced by the engines, to format [engine1, engine2]. Returns an empty array if [[Advanced_Helicopter_Flight_Model_in_Arma3|Advanced Flight Model]] is disabled.",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "helicopter with advanced flight model enabled",
+          "name": "RTD_helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

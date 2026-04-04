@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns mission root plus the filename in a form of filepath to be used with commands requiring absolute path such as [[playSound3D]], [[drawIcon3D]], [[createSimpleObject]], etc.\nAny leading \"\\\" in the filename will be stripped as the mission root includes one already.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// returns e.g \"C:\\Users\\Username\\Documents\\Arma 3\\missions\\MissionName.Altis\\icons\\myIcon.paa\"\nprivate _path = getMissionPath \"icons\\myIcon.paa\";\nprivate _path = getMissionPath \"\\icons\\myIcon.paa\"; // leading \\ is also fine\n</sqf>",
+    "<sqf>\n// returns e.g \"C:\\Users\\Username\\Documents\\Arma 3\\missions\\MissionName.Altis\\\" with the trailing \\\nprivate _root = getMissionPath \"\";\n</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Mission Information"
+  ],
+  "name": "getMissionPath",
+  "problem_notes": [],
+  "see_also": [
+    "missionConfigFile",
+    "playSound3D",
+    "drawIcon3D",
+    "createSimpleObject",
+    "Description.ext|description.ext",
+    "playSoundUI"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "filename"
+      },
+      "ret": {
+        "desc": "absolute path",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns whether the object is fully underwater.\n{{Feature|informative|This command works well with Arma 3 mini-submarines, which was most likely the primary design goal.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _isUnderwater = underwater vehicle player;</sqf>",
+    "<sqf>private _isHeadUnderwater = eyePos player select 2 < 0;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "underwater",
+  "problem_notes": [],
+  "see_also": [
+    "isTouchingGround",
+    "isAbleToBreathe"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "desc": "[[true]] if submerged",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "mini-submarine",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

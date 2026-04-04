@@ -1,0 +1,50 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Host the multiplayer mission defined in the config class and opens the lobby with the scenario loaded. Must be called in UI action from a dialog.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hostMission [configFile >> \"CfgMissions\" >> \"MPMissions\" >> _scenarioClassName, _currentlyActiveDisplay];</sqf>",
+    "Launch host mission dialog from a client on dedicated server in {{arma3}}:\n<sqf>\nhostMission [\n\tconfigFile >> \"CfgMissions\" >> \"MPmissions\" >> \"MP_COOP_m01\",\n\tfindDisplay 46\n];\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "hostMission",
+  "problem_notes": [],
+  "see_also": [
+    "playScriptedMission",
+    "playMission",
+    "createMPCampaignDisplay",
+    "createMissionDisplay"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "configEntry",
+          "activeDisplay"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "configEntry",
+              "type": "Config"
+            }
+          },
+          {
+            "Item": {
+              "name": "activeDisplay",
+              "type": "Display"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

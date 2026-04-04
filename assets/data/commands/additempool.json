@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds count items of type name into the weapon pool (used in the campaign to transfer items to the next mission)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>addItemPool [\"ItemGPS\", 5];</sqf>"
+  ],
+  "groups": [
+    "Weapon Pool"
+  ],
+  "name": "addItemPool",
+  "problem_notes": [],
+  "see_also": [
+    "clearItemPool"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "itemName",
+          "count"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "item name",
+              "name": "itemName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "number of items to add",
+              "name": "count",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

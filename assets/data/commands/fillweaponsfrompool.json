@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds magazines from the campaign pool to the given unit, depending on his weapons. Available in campaigns only.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>fillWeaponsFromPool _soldier;</sqf>"
+  ],
+  "groups": [
+    "Weapon Pool"
+  ],
+  "name": "fillWeaponsFromPool",
+  "problem_notes": [],
+  "see_also": [
+    "addWeaponPool"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

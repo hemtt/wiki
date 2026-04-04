@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets map mode to MAP,3D or PREVIEW. \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "setEditorMode",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

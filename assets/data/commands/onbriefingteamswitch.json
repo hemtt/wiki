@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Select a sound defined in the [[Description.ext#CfgSounds|CfgSounds]] of the mission to be played the first time the TeamSwitch tab is selected in the [[Briefing.html|briefing]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>onBriefingTeamSwitch \"TeamSwitchVoiceOver\";</sqf>"
+  ],
+  "groups": [
+    "Briefing",
+    "Sounds",
+    "Team Switch",
+    "Event Handlers"
+  ],
+  "name": "onBriefingTeamSwitch",
+  "problem_notes": [],
+  "see_also": [
+    "enableTeamSwitch",
+    "onTeamSwitch",
+    "teamSwitch",
+    "teamSwitchEnabled",
+    "Description.ext#CfgSounds|CfgSounds"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "soundName"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "soundName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

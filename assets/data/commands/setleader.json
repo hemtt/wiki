@@ -1,0 +1,48 @@
+{
+  "argument_loc": "Local",
+  "description": "{{Feature|important|To set a [[Group]] leader, see [[selectLeader]].}}\nSet the leader of the given [[Team]]. Effect is local, unless both leader unit and team are local to PC on which command is executed, then effect is global.",
+  "effect_loc": "Local",
+  "examples": [
+    ""
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "setLeader",
+  "problem_notes": [],
+  "see_also": [
+    "commandFollow",
+    "doFollow",
+    "formationLeader",
+    "formLeader",
+    "isFormationLeader",
+    "leader",
+    "selectLeader"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "team",
+          "leader"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "team",
+          "type": "TeamMember"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "leader",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

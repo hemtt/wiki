@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Requests given leaderboard to download friends rows from the given leaderboard",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>leaderboardRequestRowsFriends \"TT01\";</sqf>"
+  ],
+  "groups": [
+    "Leaderboards"
+  ],
+  "name": "leaderboardRequestRowsFriends",
+  "problem_notes": [],
+  "see_also": [
+    "leaderboardDeInit",
+    "leaderboardGetRows",
+    "leaderboardRequestRowsGlobal",
+    "leaderboardRequestRowsGlobalAroundUser",
+    "leaderboardsRequestUploadScore",
+    "leaderboardsRequestUploadScoreKeepBest",
+    "leaderboardState"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "boardName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "boardName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

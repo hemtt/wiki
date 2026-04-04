@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a location's importance value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_locationImportance = importance myLocation;</sqf>"
+  ],
+  "groups": [
+    "Locations"
+  ],
+  "name": "importance",
+  "problem_notes": [],
+  "see_also": [
+    "setImportance"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "location"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      }
+    }
+  ]
+}

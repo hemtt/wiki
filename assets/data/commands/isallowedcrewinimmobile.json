@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Global",
+  "description": "Whether or not units can be in a vehicle with broken tracks/wheels.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif !(isAllowedCrewInImmobile _tank) then\n{\n\t_tank allowCrewInImmobile true;\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "isAllowedCrewInImmobile",
+  "problem_notes": [],
+  "see_also": [
+    "allowCrewInImmobile"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "[[true]] - allowed, [[false]] - not allowed",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "transport",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the provided unit's current morale level.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint format [\"Leader's morale: %1\", morale leader player];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "morale",
+  "problem_notes": [],
+  "see_also": [
+    "skill",
+    "setSkill",
+    ":Category:",
+    "AI|Category:",
+    "AI"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "in range -1..+1",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

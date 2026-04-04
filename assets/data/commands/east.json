@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Pre-defined variable for the eastern [[Side|side]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "[[SQS Syntax|SQS]]:\n<sqs>? side _unit == east : hint \"This is an eastern unit!\"</sqs>",
+    "[[SQF Syntax|SQF]]:\n<sqf>\nif (side _unit == east) then\n{\n\thint \"This is an eastern unit!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "east",
+  "problem_notes": [],
+  "see_also": [
+    "side",
+    "west",
+    "resistance",
+    "civilian",
+    "sideEmpty",
+    "sideAmbientLife"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

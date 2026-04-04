@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Global",
+  "description": "Wakes up sleeping PhysX object or puts a PhysX object to sleep. In 2.10 this command can be used on corpses of type {{hl|Man}} and has no effect on [[alive]] units. When unit gets killed it goes into ragdoll state for a short while, then the units get frozen and any simulation and collision is removed to save system resources. As a result, corpses do not react to their surrounding any more. Using this command will temporarily re-enable ragdoll state of a corpse to the same state it was when unit died. If this command is used in \"enable/disable\" sequence on a dead body, it gives the corpse a visible nudge (See example 3).\n\n{{Feature|informative|This command won't have lasting effect on vehicles as vehicles are actively simulated, but it works rather well on smaller PhysX enabled objects.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_object awake false;</sqf>",
+    "Since 2.10: <sqf>_deadUnit awake true;</sqf>",
+    "Make corpse react to explosion (since 2.10): <sqf>\n_deadUnit addEventHandler [\"Explosion\", \n{\n\tparams [\"_unit\", \"_damage\"];\n\tif (_damage < 0.01) exitWith {};\n\t_unit awake true;\n\t_unit awake false;\n}];\n</sqf>"
+  ],
+  "groups": [
+    "PhysX"
+  ],
+  "name": "awake",
+  "problem_notes": [],
+  "see_also": [
+    "isAwake",
+    "addTorque",
+    "addForce",
+    "vectorModelToWorld",
+    "vectorModelToWorldVisual",
+    "selectionPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "awake"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "PhysX object or dead unit",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to awake the object, [[false]] - to put it to sleep",
+          "name": "awake",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

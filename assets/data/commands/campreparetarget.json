@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Prepares the camera target to a position or to a target. Needs the call of [[camCommitPrepared]] to be conducted.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_camera camPrepareTarget getPos player;</sqf>",
+    "<sqf>_camera camPrepareTarget player;</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "camPrepareTarget",
+  "problem_notes": [],
+  "see_also": [
+    "camPreload",
+    "camCommitPrepared",
+    "camSetTarget"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "target location",
+          "name": "position",
+          "type": "Position"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

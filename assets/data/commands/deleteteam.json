@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Destroy given team.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>deleteTeam _team;</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "deleteTeam",
+  "problem_notes": [],
+  "see_also": [
+    "addTeamMember",
+    "createTeam",
+    "forEachMemberTeam",
+    "removeTeamMember",
+    "teamMember",
+    "teamName",
+    "teams",
+    "teamType",
+    "forEachMember",
+    "forEachMemberAgent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "team"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "team",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

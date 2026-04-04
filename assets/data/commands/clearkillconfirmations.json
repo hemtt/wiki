@@ -1,0 +1,25 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Clears the list of kill confirmations.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>clearKillConfirmations;</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "name": "clearKillConfirmations",
+  "problem_notes": [],
+  "see_also": [
+    "clearRadio"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

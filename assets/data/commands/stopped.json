@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if unit is stopped by [[stop]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>? (stopped _loon1) : hint \"Loon1 is stopped\"</sqs>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "name": "stopped",
+  "problem_notes": [],
+  "see_also": [
+    "stop"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

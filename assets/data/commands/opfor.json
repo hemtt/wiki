@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Pre-defined variable for the opfor [[Side|side]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (side player == opfor) then\n{\n\thint \"OPFOR\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "name": "opfor",
+  "problem_notes": [],
+  "see_also": [
+    "side",
+    "civilian",
+    "blufor",
+    "east",
+    "independent",
+    "resistance",
+    "west"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

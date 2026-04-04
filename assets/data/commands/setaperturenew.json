@@ -1,0 +1,89 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets custom camera aperture when HDR is enabled. Provided values should be set such as ''minimum'' &lte; ''standard'' &lte; ''maximum''.\n{{Feature|informative|\n* This command has to be executed after mission start: be sure to use e.g <sqf inline>sleep 0.1;</sqf> for it to take effect.\n* If HDR is enabled (it is by default), when [[setAperture]] {{hl|value}} is used it also forces [[setApertureNew]] to the following values: [{{hl|value}}, {{hl|value}}, {{hl|value}}, 1]. Execute [[setApertureNew]] ''after'' [[setAperture]] to override this default mechanic.\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nsetApertureNew [0.1, 0.2, 0.3, 1];\nsetApertureNew [-1];\t\t\t\t// reset to default\n</sqf>",
+    "Simulate eye adjustment at night:\n<sqf>\nsetDate [2016, 8, 10, 4, 0];\nsetApertureNew [2, 8, 14, 0.9];\n</sqf>",
+    "Narrower range for a subtler effect:\n<sqf>\nsetDate [2016, 8, 10, 4, 0];\nsetApertureNew [2, 5, 9, 0.8];\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control",
+    "Lights"
+  ],
+  "name": "setApertureNew",
+  "problem_notes": [],
+  "see_also": [
+    "setAperture",
+    "apertureParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "minimum",
+          "standard",
+          "maximum",
+          "luminance"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "minimum aperture",
+              "name": "minimum",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "standard aperture",
+              "name": "standard",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "maximum aperture",
+              "name": "maximum",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "standard luminance",
+              "name": "luminance",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "reset"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "reset to default with -1",
+              "name": "reset",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

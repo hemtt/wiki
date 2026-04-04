@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Local",
+  "description": "Set an object's water filling.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nif (getWaterLeakiness _myCar > 0 && surfaceIsWater getPosASL _myCar) then\n{\n\t_myCar setWaterFillPercentage 1;\n\thint \"I told you not to go in the water!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "setWaterFillPercentage",
+  "problem_notes": [],
+  "see_also": [
+    "setWaterLeakiness",
+    "getWaterLeakiness",
+    "getWaterFillPercentage"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "obj",
+          "level"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object to manipulate",
+          "name": "obj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "water level in range 0..1 (empty to full)",
+          "name": "level",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

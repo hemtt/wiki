@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Disables unit's AV terminal(s) connecting to UAV.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>myUnit disableUAVConnectability [myUav, true];</sqf>"
+  ],
+  "groups": [
+    "Remote Control"
+  ],
+  "name": "disableUAVConnectability",
+  "problem_notes": [],
+  "see_also": [
+    "isUAVConnectable",
+    "enableUAVConnectability"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "uav",
+            "checkAllItems"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "uav",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to disable all terminals in unit's inventory, [[false]] to only disable the currently assigned terminal.",
+              "name": "checkAllItems",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

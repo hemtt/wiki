@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects a unit from player's group. If player is the leader, the effect of this command is similar to player pressing {{Controls|F1}}, {{Controls|F2}}, {{Controls|F3}} etc to highlight units in his squad, after which the unit command menu is shown.\nIf leader is AI, player will get usual communication menu to interact with the leader.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "After leaving menu, deselect all units (command menu is not opened → no selection)\n<sqf>\n{\n\tplayer groupSelectUnit [_x, false];\n} forEach (groupSelectedUnits player);\n</sqf>",
+    "Select all units when player is the leader:\n<sqf>\n{\n\tplayer groupSelectUnit [_x, true];\n} forEach units player;\n</sqf>",
+    "Open communication with group leader:\n<sqf>player groupSelectUnit [leader player, true];</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "name": "groupSelectUnit",
+  "problem_notes": [],
+  "see_also": [
+    "groupSelectedUnits"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "player",
+          [
+            "unit",
+            "select"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "player",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "unit",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "name": "select",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

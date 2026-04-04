@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Delete all curator camera areas.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>removeAllCuratorCameraAreas myCurator;</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "name": "removeAllCuratorCameraAreas",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator",
+    "addCuratorCameraArea",
+    "removeCuratorCameraArea",
+    "curatorCameraArea"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "curatorObj"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "curator module.",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

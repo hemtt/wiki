@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Preloads area to be used with [[findEmptyPosition]] command and returns [[true]] when area is ready.\nThe size of the area preloaded is from {{hl|center - radius - maxDistance}} to {{hl|center + radius + maxDistance}}\n{{Feature|important|Preloading large areas may take a long time, we are talking minutes. However once preloaded, it stays preloaded even after mission restart.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Preload aread within 500m:\n<sqf>_ready = _center findEmptyPositionReady [0, 500];</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "name": "findEmptyPositionReady",
+  "problem_notes": [],
+  "see_also": [
+    "findEmptyPosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "center",
+          [
+            "radius",
+            "maxDistance"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "search area center position in format [x,y] or [x,y,z] in which case z is ignored",
+          "name": "center",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "[[true]] when ready",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "distance from the center",
+              "name": "radius",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "distance from the end of radius",
+              "name": "maxDistance",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

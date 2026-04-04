@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attaches a location to the specified object. To detach a location, attach it to [[objNull]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myLocation attachObject player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Locations"
+  ],
+  "name": "attachObject",
+  "problem_notes": [],
+  "see_also": [
+    "attachedObject",
+    "createLocation"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "location",
+          "object"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "location",
+          "type": "Location"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a type of given team.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_type = teamType _team;</sqf>"
+  ],
+  "groups": [
+    "Teams"
+  ],
+  "name": "teamType",
+  "problem_notes": [],
+  "see_also": [
+    "addTeamMember",
+    "createTeam",
+    "deleteTeam",
+    "forEachMemberTeam",
+    "removeTeamMember",
+    "teamMember",
+    "teamName",
+    "teams",
+    "forEachMember",
+    "forEachMemberAgent"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "team"
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "team",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets one of entity [[Eden Editor: Entity Attributes|attributes]]. For the list of all attributes with their properties see [[Eden_Editor:_Setting_Attributes#Attributes|Setting Attributes]].\n{{Feature|important|Attributes are available only within the [[:Category:Eden Editor|Eden Editor]] workspace. You cannot access them in scenario preview or exported scenario!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player set3DENAttribute [\"allowDamage\", false]; // Mark player as invincible</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "set3DENAttribute",
+  "problem_notes": [],
+  "see_also": [
+    "set3DENAttributes",
+    "get3DENAttribute"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          [
+            "class",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "entity",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenEntity"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "EdenID"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "desc": "[[true]] If the value was set",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "attribute name",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "new attribute value",
+              "name": "value",
+              "type": "Anything"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if file on given path exists. Uses same path resolve code as [[loadFile]].\n{{Feature|informative|Absolute paths are not supported, such as those generated using [[getMissionPath]]. Attempting to check an absolute path will result in this error in [[RPT]] logs:\n{{hl|Invalid path (only relative paths supported): 'C:\\...'}}\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>fileExists \"\\a3\\mySuperPath\\bestFileEver.paa\"; // returns false</sqf>",
+    "<sqf>\nprivate _path = \"a3\\functions_f_mp_mark\\revive\\_addaction_revive.inc\";\nif (fileExists _path) then { loadFile _path } else { diag_log format [\"File (%1) does not exist!\", _path] };\n</sqf>",
+    "<sqf>\n// Sometimes it might be better to check if a file exists instead of checking if path is empty (\"\")\nprivate _class = \"ModuleObjectiveRaceFinish_F\";\nprivate _picture = getText (configFile >> \"CfgVehicles\" >> _class >> \"editorPreview\");\nif !(fileExists _picture) then { _picture = getText (configFile >> \"CfgVehicles\" >> _class >> \"portrait\") };\nif !(fileExists _picture) then { _picture = getText (configFile >> \"CfgVehicles\" >> _class >> \"icon\") };\nif !(fileExists _picture) then { _picture = getText (configFile >> \"CfgVehicles\" >> _class >> \"picture\") };\nif !(fileExists _picture) then { systemChat \"No valid picture found!\" } else { systemChat _picture };\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "name": "fileExists",
+  "problem_notes": [],
+  "see_also": [
+    "loadFile",
+    "preprocessFile",
+    "preprocessFileLineNumbers"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "path"
+      },
+      "ret": {
+        "desc": "[[true]] if it exists, otherwise [[false]]",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "path to file",
+          "name": "path",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

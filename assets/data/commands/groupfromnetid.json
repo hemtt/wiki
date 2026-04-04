@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get group from the provided unique ID. For objects, use [[objectFromNetId]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_group = groupFromNetId \"4:45\";</sqf>"
+  ],
+  "groups": [
+    "Groups",
+    "Multiplayer"
+  ],
+  "name": "groupFromNetId",
+  "problem_notes": [],
+  "see_also": [
+    "objectFromNetId",
+    "netId",
+    "BIS_fnc_objectFromNetId",
+    "BIS_fnc_netId",
+    "BIS_fnc_groupFromNetId"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "id"
+      },
+      "ret": {
+        "type": "Group"
+      },
+      "right": {
+        "Item": {
+          "name": "id",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

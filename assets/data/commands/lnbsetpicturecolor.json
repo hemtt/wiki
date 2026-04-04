@@ -1,0 +1,118 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the cell picture's colour.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>lnbSetPictureColor [1492, [1,0], [0,0.75,0.3,0.5]];</sqf>",
+    "<sqf>ctrl lnbSetPictureColor [[0, 3], [1,0,0,1]];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "name": "lnbSetPictureColor",
+  "problem_notes": [],
+  "see_also": [],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          [
+            "row",
+            "column"
+          ],
+          "colour"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "0-based index (first column is 0, second is 1, etc)",
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "0-based index (first column is 0, second is 1, etc)",
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
+          },
+          {
+            "Item": {
+              "name": "colour",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            [
+              "row",
+              "column"
+            ],
+            "colour"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "0-based index (first column is 0, second is 1, etc)",
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "0-based index (first column is 0, second is 1, etc)",
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
+          },
+          {
+            "Item": {
+              "name": "colour",
+              "type": "ArrayColor"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

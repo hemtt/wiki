@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Switch camera to given vehicle / camera. Mode is one of:\n* '''\"INTERNAL\"''': 1st person\n* '''\"GUNNER\"''': optics / sights\n* '''\"EXTERNAL\"''': 3rd person (inaccessible if difficulty settings do not allow for it)\n* '''\"GROUP\"''': group\n* '''\"CARGO\"''': same as \"INTERNAL\"\n\nIf you switch to a unit in a vehicle, this command uses the correct turret.\n{{Feature|important|\n* Control over the unit is not given to the player. Use [[selectPlayer]] or a combination of [[switchCamera]] and [[remoteControl]] to achieve this.\n* Always [[switchCamera]] first (when needed) '''before''' using [[remoteControl]] as doing it after may lead to unpredictable results.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player switchCamera \"Gunner\";</sqf>",
+    "<sqf>vehicle player switchCamera \"External\";</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "name": "switchCamera",
+  "problem_notes": [],
+  "see_also": [
+    "cameraView",
+    "cameraOn",
+    "cameraEffect",
+    "selectPlayer",
+    "remoteControl"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "target",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "target"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "target",
+          "type": "Object"
+        }
+      },
+      "since": {
+        "arma3": "1.66"
+      }
+    }
+  ]
+}

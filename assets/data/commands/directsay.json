@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Global",
+  "description": "Sends given audio message to the direct channel. Command operates just like xxxxRadio commands, but the sound is played over direct channel and is independent of [[fadeSound]]. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol or a kbAddTopic. The transmission will play only on the PC where command was executed. If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]). Use [[clearRadio]] to clear chat history\n{{Feature|informative|When transmitting unit gets killed, transmission will be interrupted. However when receiving unit gets killed, the transmission continues to play.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player directSay configName selectRandom (\"true\" configClasses (configFile >> \"CfgRadio\"));</sqf>",
+    "An equivalent of a '''''directChat''''' command:\n<sqf>\n[player, \"Hello there\", 30] call {\n\tparams [\"_unit\", \"_text\", \"_distance\"];\n\t[_unit, _text] remoteExec [\"globalChat\", call BIS_fnc_listPlayers select { _x distance _unit < _distance }];\n};\n</sqf>\n\nA [[:Category:Functions Library|function]] can be made for [[localize|localisation]] purpose:\n<sqf>\n/* TAG_fnc_globalChat */\nparams [\n\t[\"_unit\", objNull, [objNull]],\n\t[\"_text\", \"\", [\"\"]]\n];\n\n_unit globalChat (_text call BIS_fnc_localize);\n</sqf>\n<sqf>\n// usage\n[player, \"STR_HelloThere\"] remoteExec [\"TAG_fnc_globalChat\", call BIS_fnc_listPlayers select { _x distance _unit < 30 }];\n</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Sounds"
+  ],
+  "name": "directSay",
+  "problem_notes": [],
+  "see_also": [
+    "sideRadio",
+    "groupRadio",
+    "customRadio",
+    "vehicleRadio",
+    "globalRadio",
+    "commandRadio"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "radioName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to transmit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "class name from CfgRadio",
+          "name": "radioName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the current client {{Link|Multiplayer Scripting#Join In Progress|Joined In Progress}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (didJIP) then\n{\n\thint \"you're late to the party!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "didJIP",
+  "problem_notes": [],
+  "see_also": [
+    "didJIPOwner",
+    "exportJIPMessages"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

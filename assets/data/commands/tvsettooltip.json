@@ -1,0 +1,108 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the tooltip text associated with the specified tree view path.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>tvSetTooltip [101, [0,2], \"This is a tooltip\"];</sqf>",
+    "<sqf>_tree tvSetTooltip [[0,2], \"This is a tooltip\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Tree View"
+  ],
+  "name": "tvSetTooltip",
+  "problem_notes": [],
+  "see_also": [
+    "tvTooltip",
+    "tvAdd",
+    "tvClear",
+    "tvCollapse",
+    "tvCount",
+    "tvCurSel",
+    "tvData",
+    "tvDelete",
+    "tvExpand",
+    "tvPicture",
+    "tvSetCurSel",
+    "tvSetData",
+    "tvSetPicture",
+    "tvSetValue",
+    "tvSort",
+    "tvSortByValue",
+    "tvText",
+    "tvValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path",
+          "text"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "IDC of the tree view control",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "ctrl",
+          [
+            "path",
+            "text"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ctrl",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          },
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Identical to [[tan]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_tangent = tg 45; // Result is 1</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "name": "tg",
+  "problem_notes": [],
+  "see_also": [
+    "tan",
+    "sin",
+    "cos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "x"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "x",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

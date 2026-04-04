@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Global",
+  "description": "Removes the magazine from the unit.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player removeMagazineGlobal \"30Rnd_65x39_caseless_mag\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeMagazineGlobal",
+  "problem_notes": [],
+  "see_also": [
+    "removeMagazine",
+    "removeMagazines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "magazineName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "magazineName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "argument_loc": "Local",
+  "description": "Adds an item with the given text to the [[CT_LISTBOX]] or [[CT_COMBO]] or [[CT_TOOLBOX]].\n\n{{Feature|informative| If using {{hl|RscToolBox}} as template with [[ctrlCreate]], clear it first with [[lbClear]]}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_index = lbAdd [101, \"First item\"];</sqf>",
+    "<sqf>_index = _control lbAdd \"First item\";</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListBox"
+  ],
+  "name": "lbAdd",
+  "problem_notes": [],
+  "see_also": [
+    "lbDelete",
+    "lbText"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "text"
+        ]
+      },
+      "ret": {
+        "desc": "index (row) of newly added item",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "control IDC",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "visible text",
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "text"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "index (row) of newly added item",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "text",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates the load overlay dialog for the specified type of overlay.\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "loadOverlay",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "config"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    }
+  ]
+}

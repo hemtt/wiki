@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Local",
+  "description": "Remove magazine from the unit or static weapon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player removeMagazine \"M16\";</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "removeMagazine",
+  "problem_notes": [],
+  "see_also": [
+    "removeMagazines",
+    "removeWeapon",
+    "removeMagazinesTurret",
+    "removeMagazineTurret",
+    "setVehicleAmmo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "magazineName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "see [[:Category:Weapons|weapons]]",
+          "name": "magazineName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

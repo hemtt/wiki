@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the person's score in MP.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_pScore = score player;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "name": "score",
+  "problem_notes": [],
+  "see_also": [
+    "addScore",
+    "scoreSide",
+    "addScoreSide",
+    "getPlayerScores"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

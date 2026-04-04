@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "For waypoints attached to a house, this defines the target [[buildingPos]] index.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointHousePosition 1;</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "setWaypointHousePosition",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "setWaypointLoiterType",
+    "waypointSpeed",
+    "buildingPos"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "pos"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[buildingPos]] index",
+          "name": "pos",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

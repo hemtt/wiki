@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns a unit's freefall information.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getUnitFreefallInfo player;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "getUnitFreefallInfo",
+  "problem_notes": [],
+  "see_also": [
+    "setUnitFreefallHeight",
+    "getUserInfo",
+    "getModelInfo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "[[true]] if unit is falling",
+              "name": "isFalling",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "[[true]] if unit is in freefall pose",
+              "name": "isInFreefallPose",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": "current minimum freefall height (see [[setUnitFreefallHeight]])",
+              "name": "minFreefallHeight",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

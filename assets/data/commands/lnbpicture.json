@@ -1,0 +1,120 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns the picture name or path of the item with the given position of the 2D listbox.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>lnbPicture [200, [1, 1]];</sqf>",
+    "<sqf>_control lnbPicture [1, 1]; // \"a3\\ui_f\\data\\gui\\cfg\\ranks\\corporal_gs.paa\"</sqf>"
+  ],
+  "groups": [
+    "GUI Control - ListNBox"
+  ],
+  "name": "lnbPicture",
+  "problem_notes": [],
+  "see_also": [
+    "lnbAddArray",
+    "lnbAddColumn",
+    "lnbAddRow",
+    "lnbClear",
+    "lnbColor",
+    "lnbCurSelRow",
+    "lnbData",
+    "lnbDeleteColumn",
+    "lnbDeleteRow",
+    "lnbGetColumnsPosition",
+    "lnbSetColor",
+    "lnbSetColumnsPos",
+    "lnbSetCurSelRow",
+    "lnbSetData",
+    "lnbSetPicture",
+    "lnbSetText",
+    "lnbSetValue",
+    "lnbSize",
+    "lnbText",
+    "lnbValue"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          [
+            "row",
+            "column"
+          ]
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "number of [[Control]]",
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Array": [
+              {
+                "Item": {
+                  "desc": "index of Row",
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "desc": "index of Column",
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "row",
+            "column"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "index of Row in given Control",
+              "name": "row",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "index of Column in given Control",
+              "name": "column",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

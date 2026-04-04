@@ -1,0 +1,27 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns ''Enemy'' side which is hostile to all units.\n{{Feature|warning|This command is not functional and appears to have been replaced by [[sideEnemy]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>? _side == enemy : hint \"ouch\"</sqs>"
+  ],
+  "groups": [
+    "Sides",
+    "Broken Commands"
+  ],
+  "name": "enemy",
+  "problem_notes": [],
+  "see_also": [
+    "sideEnemy",
+    "sideFriendly"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

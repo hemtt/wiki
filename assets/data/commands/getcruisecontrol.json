@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns cruise control settings set with [[setCruiseControl]] command.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>getCruiseControl vehicle player params [\"_speedLimit\", \"_cruiseControlActive\"];</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Object Manipulation"
+  ],
+  "name": "getCruiseControl",
+  "problem_notes": [],
+  "see_also": [
+    "setCruiseControl",
+    "limitSpeed",
+    "forceSpeed",
+    "setAirplaneThrottle"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "desc": "defined speed limit",
+              "name": "speedLimit",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "desc": "[[true]] if cruise control is enabled, [[false]] if only speed was limited",
+              "name": "cruiseControlActive",
+              "since": null,
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "the vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current environment volume (set by [[fadeEnvironment]])",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str environmentVolume;</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "name": "environmentVolume",
+  "problem_notes": [],
+  "see_also": [
+    "fadeEnvironment",
+    "musicVolume",
+    "soundVolume",
+    "radioVolume",
+    "speechVolume",
+    "getAudioOptionVolumes",
+    "environmentEnabled"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

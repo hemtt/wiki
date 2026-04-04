@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the text of a control of the currently active user dialog. This command can be used on static texts, buttons, edit lines and active texts as well as for images, where it returns the image path. Does not work on HTML control and returns empty string \"\". Since Arma 3 v2.05.147765 supported control types are:\n* [[CT_STATIC]]\n* [[CT_EDIT]]\n* [[CT_XKEYDESC]]\n* [[CT_XBUTTON]]\n* [[CT_SHORTCUTBUTTON]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_BUTTON]]\n* [[CT_ACTIVETEXT]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_text = ctrlText 100;</sqf>",
+    "<sqf>_text = ctrlText _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlText",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlTextSecondary",
+    "ctrlSetText",
+    "Arma:",
+    "GUI",
+    "Configuration"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "desc": "the text or image path is returned, dependent on the control type",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "control ID",
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "controlName"
+      },
+      "ret": {
+        "desc": "the text or image path is returned, dependent on the control type",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

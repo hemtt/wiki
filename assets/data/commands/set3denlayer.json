@@ -1,0 +1,47 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set layer for [[Eden Entity]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _myLayer = -1 add3DENLayer \"CTRG\";\nplayer set3DENLayer _myLayer;\n</sqf>",
+    "<sqf>player set3DENLayer -1; // Move to root</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "set3DENLayer",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENLayer",
+    "remove3DENLayer",
+    "get3DENLayerEntities"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          "layerID"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "entity",
+          "type": "EdenEntity"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if the entity was moved succesfully",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "layer ID as returned by [[add3DENLayer]] command",
+          "name": "layerID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

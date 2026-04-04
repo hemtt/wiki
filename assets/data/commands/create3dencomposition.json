@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create new [[Eden_Editor:_Composition|Composition]]. To create individual entities, use [[create3DENEntity]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nmyComposition = create3DENComposition [\n\tconfigFile >> \"CfgGroups\" >> \"West\" >> \"BLU_F\" >> \"Infantry\" >> \"BUS_InfSquad\",\n\tscreenToWorld [0.5, 0.5]\n];\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "name": "create3DENComposition",
+  "problem_notes": [],
+  "see_also": [
+    "create3DENEntity"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "configPath",
+          "position"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "EdenEntity"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "path to {{hl|CfgGroups}} or since {{GVI|arma3|2.18}} {{hl|configFile >> \"Cfg3DEN\" >> \"Compositions\"}} class of a composition",
+              "name": "configPath",
+              "type": "Config"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

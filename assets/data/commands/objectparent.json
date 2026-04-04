@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "[[File:objectParent.jpg|right|500px]]\nReturns the parent of an object if said object is a proxy.\n\n{{Feature|important|\nUse [[objectParent]] instead of [[vehicle]] to get a soldier's vehicle.\nApart from being faster it is also more reliable, as when used on dead [[crew]], [[vehicle]] command may surprisingly return the unit itself.\n}}\n\n{{Feature|informative|\nSince {{arma3}} v2.18 [[objectParent]] can return the creator of a weaponholder if the weaponholder was created through some user action.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_isOnFoot = isNull objectParent player;\t\t\t\t\t\t\t// check if the player is on foot\n_isCommander = player isEqualTo commander objectParent player;\t// check if the player is in a vehicle and is its commander\n\n_holder = objectParent _myBackpack;\t\t\t\t\t\t\t\t// return:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// - the weapon holder of a dropped backpack\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// - the cargo space of a vehicle holding this backpack\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// - the dead unit holding the backpack\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// works for a backpack, a vest or a uniform\n\n_isDeployed = isNull objectParent _deployableStaticMG;\t\t\t// true if deployed, false if in a backpack\n\n_ropeParent = objectParent _ropeSegment;\t\t\t\t\t\t// since {{arma3}} v2.12\n_creatorUnit = objectParent _weaponholder;\t\t\t\t\t\t// since {{arma3}} v2.18\n</sqf>",
+    "Create and place a created backpack in front of player:\n<sqf>\n_backpackContainer = \"B_TacticalPack_rgr\" createVehicle [0, 0, 0];\n_weaponHolder = objectParent _backpackContainer;\n_weaponHolder setPosWorld (player modelToWorldWorld [0, 5, 0]);\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "name": "objectParent",
+  "problem_notes": [],
+  "see_also": [
+    "backpackContainer",
+    "unitBackpack",
+    "backpack",
+    "backpackCargo",
+    "getBackpackCargo",
+    "backpackItems",
+    "addBackpack",
+    "addBackpackCargo",
+    "addBackpackCargoGlobal",
+    "removeBackpack",
+    "clearBackpackCargo",
+    "clearBackpackCargoGlobal",
+    "clearAllItemsFromBackpack",
+    "loadBackpack",
+    "backpackSpaceFor",
+    "canAddItemToBackpack",
+    "addItemToBackpack",
+    "removeItemFromBackpack",
+    "everyBackpack",
+    "vehicle",
+    "getCorpse"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

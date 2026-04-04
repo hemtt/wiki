@@ -1,0 +1,78 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] only if both conditions are [[true]].\nIn case of the alternative syntax, {{Link|https://en.wikipedia.org/wiki/Lazy_evaluation#Control_structures|lazy evaluation}} is used - if left operand is [[false]], evaluation of the right side is ignored.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif ((not isNull player) and (alive player) and (_enemycount == 0)) then\n{\n\thint \"you win !\";\n};\n</sqf>",
+    "<sqf>\nif ((count _array > 0) and { (_array select 0) == player }) then\t// works as expected\n{\n\thint \"It works!\";\n};\n\nif ((count _array > 0) and (_array select 0) == player) then\t\t// Error: _array select 0 is evaluated\n{\n\thint \"It... works?\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Variables",
+    "Math"
+  ],
+  "name": "and",
+  "problem_notes": [],
+  "see_also": [
+    "a",
+    "&&",
+    "b",
+    "or",
+    "Operators"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "a",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "b",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "a",
+          "b"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "test condition or variable",
+          "name": "a",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "code that returns [[Boolean]]. It is not evaluated if ''a'' is [[false]]",
+          "name": "b",
+          "type": "Code"
+        }
+      },
+      "since": {
+        "arma2oa": "1.62"
+      }
+    }
+  ]
+}

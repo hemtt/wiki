@@ -1,0 +1,143 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Find objects (Units, Vehicles, Dead, Map Objects) in a sphere with given radius. The first object in the returned array is ''not'' necessarily the closest one. If you need returned objects to be sorted by distance, use [[nearestObjects]]. If typeName is given, only objects of given type (or its subtype) are listed.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_list = position player nearObjects 50;</sqf>",
+    "<sqf>_list = [_xpos,_ypos] nearObjects [\"House\", 20];</sqf>",
+    "<sqf>_list = player nearObjects 20;</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "name": "nearObjects",
+  "problem_notes": [],
+  "see_also": [
+    "findNearestEnemy",
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearestLocation",
+    "nearEntities",
+    "nearTargets",
+    "nearSupplies",
+    "nearestLocationWithDubbing",
+    "nearObjectsReady",
+    "nearRoads",
+    "nearestMines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "position",
+          "radius"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "radius",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "position",
+          [
+            "typeName",
+            "radius"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "position",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dAGL"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "typeName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "radius",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

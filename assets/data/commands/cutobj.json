@@ -1,0 +1,219 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Displays an object defined in the global config in {{hl|CfgTitles}}.\n{{Feature|arma3|For greater efficiency and ease of modability, it is recommended to use named layers with {{Link|#Syntax 3}}.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\ncutObj [\"TVSet\", \"PLAIN\"];\ncutObj [\"TVSet\", \"PLAIN\", 2];\n</sqf>",
+    "<sqf>2 cutObj [\"Sphere\", \"PLAIN\"];</sqf>",
+    "<sqf>private _layer = \"layer1\" cutObj [\"BISLogo\", \"PLAIN\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "cutObj",
+  "problem_notes": [],
+  "see_also": [
+    "allCutLayers",
+    "titleObj",
+    "cutText",
+    "cutRsc",
+    "cutFadeOut",
+    "allActiveTitleEffects",
+    "activeTitleEffectParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "class",
+          "type",
+          "speed",
+          "showInMap",
+          "drawOverHUD"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the className of the object defined in {{hl|[[configFile]] >> \"CfgTitles\" >> class}}",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\". See [[Title Effect Type]]s for more information about these values",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) time in seconds to fade in resource",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to hide the text when the map is opened",
+              "name": "showInMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to show the object under in-game HUD",
+              "name": "drawOverHUD",
+              "since": {
+                "arma3": "2.16"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "layer",
+          [
+            "class",
+            "type",
+            "speed",
+            "showInMap",
+            "drawOverHUD"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "layer number on which the effect is shown, where 0 is the back most. Layer number is rounded to the nearest integer and also cannot be negative. Layer 99.5 will be treated as layer 100",
+          "name": "layer",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the className of the object defined in {{hl|[[configFile]] >> \"CfgTitles\" >> class}}",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\". See [[Title Effect Type]]s for more information about these values.",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) time in seconds to fade in resource",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to hide the text when the map is opened",
+              "name": "showInMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to show the object under in-game HUD",
+              "name": "drawOverHUD",
+              "since": {
+                "arma3": "2.16"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "layerName",
+          [
+            "class",
+            "type",
+            "speed",
+            "showInMap",
+            "drawOverHUD"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "layer name on which the effect is shown. Layer names are CaSe SeNsItIvE",
+          "name": "layerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "desc": "number of the allocated layer",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the className of the object defined in {{hl|[[configFile]] >> \"CfgTitles\" >> class}}",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\". See [[Title Effect Type]]s for more information about these values",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default -1) time in seconds to fade in resource",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to hide the text when the map is opened",
+              "name": "showInMap",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[true]]) [[false]] to show the object under in-game HUD",
+              "name": "drawOverHUD",
+              "since": {
+                "arma3": "2.16"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.58"
+      }
+    }
+  ]
+}

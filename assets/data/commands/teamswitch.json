@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Invoke the [[Team Switch]] dialog (force it even when conditions are not met).\nThere has to be at least one playable unit for team switch to work, and for this command to work in MP, respawn type in [[Description.ext|description.ext]] should be 5 (SIDE).\n{{Feature|informative|When player switches and leaves behind AI unit, you need to enable \"TeamSwitch\" AI on it <sqf inline>_unit enableAI \"TeamSwitch\"</sqf> so that the unit continues with [[waypoints]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>teamSwitch;</sqf>"
+  ],
+  "groups": [
+    "Team Switch"
+  ],
+  "name": "teamSwitch",
+  "problem_notes": [],
+  "see_also": [
+    "Team",
+    "Switch",
+    "enableTeamSwitch",
+    "onBriefingTeamSwitch",
+    "onTeamSwitch",
+    "teamSwitchEnabled",
+    "selectPlayer"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Nothing"
+      }
+    }
+  ]
+}

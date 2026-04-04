@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array with all registered task types for the given agent.\nThe values are the names set in {{hl|CfgTasks}} classes {{hl|name}} property and are the same names used for [[unregisterTask]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>tasklist = registeredTasks teamMember _agent;</sqf>",
+    "<sqf>\n_rabbit = createAgent [\"Rabbit_F\", position player,[], 0, \"None\"];\nhint str registeredTasks teamMember _rabbit; // shows [\"Animal Main Task\"] in {{arma3}}\n</sqf>"
+  ],
+  "groups": [
+    "Briefing",
+    "Teams"
+  ],
+  "name": "registeredTasks",
+  "problem_notes": [],
+  "see_also": [
+    "registerTask",
+    "unregisterTask",
+    "sendTask",
+    "createTask",
+    "currentTasks",
+    "taskCompleted"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "teamMember"
+      },
+      "ret": {
+        "desc": "names of tasks",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "[[teamMember]] [[agent]]",
+          "name": "teamMember",
+          "type": "TeamMember"
+        }
+      }
+    }
+  ]
+}

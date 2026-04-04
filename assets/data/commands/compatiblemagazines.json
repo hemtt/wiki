@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all magazines that can be loaded in the given weapon or all magazines containing the provided ammo. No compatible magazines are returned for submunition or missiles.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>compatibleMagazines \"arifle_Katiba_GL_F\";</sqf>",
+    "<sqf>compatibleMagazines [\"arifle_Katiba_GL_F\", \"this\"];</sqf>",
+    "<sqf>compatibleMagazines [\"arifle_Katiba_GL_F\", \"EGLM\"];</sqf>",
+    "<sqf>\ncompatibleMagazines \"B_65x39_Caseless_green\"; // [\"30Rnd_65x39_caseless_green\", \"30Rnd_65x39_caseless_green_mag_Tracer\"]\n</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "name": "compatibleMagazines",
+  "problem_notes": [],
+  "see_also": [
+    "compatibleWeapons",
+    "compatibleItems",
+    "BIS_fnc_compatibleMagazines",
+    "canAdd"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "weaponOrAmmo"
+      },
+      "ret": {
+        "desc": "all magazines that can be loaded in any muzzle of the given weapon or magazines containing given ammo.",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "weapon class name or {{GVI|arma3|2.22|size= 0.75}} ammo class name",
+          "name": "weaponOrAmmo",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "weapon",
+          "muzzle"
+        ]
+      },
+      "ret": {
+        "desc": "all magazines that can be loaded in the given muzzle of the given weapon.",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "weapon class name",
+              "name": "weapon",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "muzzle name (\"this\" is supported for primary muzzle)",
+              "name": "muzzle",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

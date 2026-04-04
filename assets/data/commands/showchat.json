@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Shows/hides the whole chat window.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>showChat false;</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "name": "showChat",
+  "problem_notes": [],
+  "see_also": [
+    "shownChat"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "bool"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "bool",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

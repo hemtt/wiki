@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Cosine of a number, argument in degrees.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>cos 60; // returns 0.5</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "name": "cos",
+  "problem_notes": [],
+  "see_also": [
+    "acos",
+    "sin",
+    "asin",
+    "tan",
+    "atan",
+    "atan2"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "x"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "x",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

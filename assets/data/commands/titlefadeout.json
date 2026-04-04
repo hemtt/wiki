@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Terminate the title effect and set duration of the fade out phase to the given time. Same as [[cutFadeOut]] but for the title layer.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ntitleText [\"Hi\", \"plain\"];\ntitleFadeOut 2;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "titleFadeOut",
+  "problem_notes": [],
+  "see_also": [
+    "titleText",
+    "titleRsc",
+    "titleObj",
+    "cutFadeOut",
+    "allActiveTitleEffects",
+    "activeTitleEffectParams"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "duration"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "duration",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

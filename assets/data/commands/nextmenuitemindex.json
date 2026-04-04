@@ -1,0 +1,33 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the next available menu item index.\n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "nextMenuItemIndex",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "map"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

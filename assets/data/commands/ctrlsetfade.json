@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets wanted transparency for control animation. Requires [[ctrlCommit]] to commit changes. To hide or show a control instantly, use [[ctrlShow]].\n{{Feature|informative|\nIf there are multiple (interactable) controls on top of each other but the top-most control is faded using <sqf inline>ctrlSetFade 1</sqf>,\nthis control will interfere with other controls that were defined earlier and in the exact same position.\nTo counter that, the faded control '''must''' be disabled with [[ctrlEnable]].\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_control ctrlSetFade 1;\n_control ctrlCommit 5;\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "name": "ctrlSetFade",
+  "problem_notes": [
+    "Despite having <syntaxhighlight lang=\"cpp\" inline>fade = 1;</syntaxhighlight> in a control's config, [[ctrlFade]] will still report a fade of 0 - resulting in <sqf inline>ctrlSetFade 0</sqf> doing nothing.<br>\nTo counter that, first use <sqf inline>ctrlSetFade 1</sqf>, then <sqf inline>ctrlCommit 0</sqf> to apply it, and only then [[ctrlSetFade]] can be used as usual."
+  ],
+  "see_also": [
+    "ctrlFade",
+    "cutFadeOut",
+    "ctrlCommit"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "controlName",
+          "fade"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "controlName",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "fade",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

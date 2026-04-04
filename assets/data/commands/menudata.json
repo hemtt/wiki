@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns data stored in menu entry on given path.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// Create an entry which will return its data once clicked\nprivate _ctrlMenuStrip = findDisplay 313 displayCtrl 120;\nprivate _indexMain = _ctrlMenuStrip menuAdd [[], \"Custom Tools\"];\nprivate _indexData = _ctrlMenuStrip menuAdd [[_indexMain],\"This entry will print its data to system chat when clicked\"];\n_ctrlMenuStrip menuSetData [[_indexMain,_indexData], \"[objNull,'Some String',true]\"];\n_ctrlMenuStrip menuSetAction [[_indexMain,_indexData], \"systemChat (findDisplay 313 displayCtrl 120 menuData (menuHover (findDisplay 313 displayCtrl 120)));\"];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Menu"
+  ],
+  "name": "menuData",
+  "problem_notes": [],
+  "see_also": [
+    "menuSetData"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "path"
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "path",
+              "type": "Path"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "Path"
+        }
+      }
+    }
+  ]
+}

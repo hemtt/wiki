@@ -1,0 +1,32 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns grid size based on screen resolution, UI size and configs: uiScaleFactor, uiScaleMaxGrids.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _gridHeight = pixelH * pixelGrid;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "name": "pixelGrid",
+  "problem_notes": [],
+  "see_also": [
+    "pixelGridBase",
+    "pixelGridNoUIScale",
+    "pixelH",
+    "pixelW",
+    "Pixel",
+    "Grid",
+    "System"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "grid size, see [[Arma 3: Pixel Grid System]]",
+        "type": "Number"
+      }
+    }
+  ]
+}

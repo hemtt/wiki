@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Local",
+  "description": "Resets the info a group has about a target, forcing [[knowsAbout]] value to 0.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>soldier1 forgetTarget soldier2;</sqf>",
+    "Give enemyBob some amnesia:\n<sqf>onEachFrame { enemyBob forgetTarget player };</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Groups"
+  ],
+  "name": "forgetTarget",
+  "problem_notes": [],
+  "see_also": [
+    "knowsAbout",
+    "targetsQuery",
+    "targetsAggregate",
+    "nearTargets",
+    "reveal",
+    "getHideFrom",
+    "targetKnowledge"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "target"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "group itself or unit in a group",
+          "name": "group",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "group target",
+          "name": "target",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Select an editor object. Does not un-select previously selected objects. \n{{Feature|informative|Some Old Editor Command}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "-"
+  ],
+  "groups": [
+    "Game 2 Editor"
+  ],
+  "name": "selectEditorObject",
+  "problem_notes": [],
+  "see_also": [
+    "-"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          "object"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "name": "object",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the waypoint loiter type.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp, 2] setWaypointLoiterType \"CIRCLE\";</sqf>",
+    "<sqf>[_grp, 2] setWaypointLoiterType \"CIRCLE_L\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "name": "setWaypointLoiterType",
+  "problem_notes": [],
+  "see_also": [
+    "waypoints",
+    "deleteWaypoint",
+    "copyWaypoints",
+    "setCurrentWaypoint",
+    "setWaypointBehaviour",
+    "setWaypointCombatMode",
+    "setWaypointCompletionRadius",
+    "setWaypointDescription",
+    "setWaypointFormation",
+    "setWaypointHousePosition",
+    "setWaypointPosition",
+    "setWaypointScript",
+    "setWaypointSpeed",
+    "setWaypointStatements",
+    "setWaypointTimeout",
+    "setWaypointType",
+    "setWaypointVisible",
+    "waypointAttachVehicle",
+    "waypointAttachedVehicle",
+    "setWaypointLoiterRadius",
+    "waypointLoiterRadius",
+    "addWaypoint",
+    "currentWaypoint",
+    "waypointSpeed",
+    "setWPPos",
+    "waypointName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

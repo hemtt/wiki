@@ -1,0 +1,66 @@
+{
+  "argument_loc": "Global",
+  "description": "Sends the chat message to the custom radio channel. The radio channel needs to be created on the server before hand, with [[radioChannelCreate]] command. Use [[clearRadio]] to clear chat history\n\n{{Feature|important|The unit must have an [[assignItem|assigned]] radio item (such as '''''\"ItemRadio\"''''') to see or transmit the messages. A radio item must have the property <syntaxhighlight lang=\"cpp\" inline>simulation = \"ItemRadio\";</syntaxhighlight> in its [[CfgWeapons_Config_Reference#simulation.3D.22Weapon.22|CfgWeapons config]].}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_unit customChat [1, \"Hi, I am a custom chat message\"];</sqf>",
+    "[[File:xChat.jpg|right]]\n<sqf>\ndriver vehicle player sideChat \"sideChat\";\ndriver vehicle player globalChat \"globalChat\";\ndriver vehicle player groupChat \"groupChat\";\nvehicle player vehicleChat \"vehicleChat\";\ndriver vehicle player commandChat \"commandChat\";\ndriver vehicle player customChat [1, \"customChat\"];\nsystemChat \"systemChat\";\n</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Custom Radio and Chat"
+  ],
+  "name": "customChat",
+  "problem_notes": [],
+  "see_also": [
+    "globalChat",
+    "groupChat",
+    "vehicleChat",
+    "commandChat",
+    "sideChat",
+    "systemChat",
+    "radioChannelCreate",
+    "customRadio"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "customChannelID",
+            "message"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "sender",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "[[Channel IDs|Custom channel ID]] returned by [[radioChannelCreate]] command",
+              "name": "customChannelID",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "message",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

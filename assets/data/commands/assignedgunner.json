@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the soldier assigned to the given vehicle as a gunner.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_gunner = assignedGunner vehicle player;</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Object Manipulation"
+  ],
+  "name": "assignedGunner",
+  "problem_notes": [],
+  "see_also": [
+    "assignAsGunner",
+    "assignAsTurret",
+    "assignAsCommander",
+    "assignAsDriver",
+    "moveInGunner",
+    "moveInTurret",
+    "moveInCommander",
+    "moveInDriver",
+    "gunner",
+    "ArmA:_Actions#GetInTurret|GetInTurret",
+    "commander",
+    "driver",
+    "assignAsCargo",
+    "moveInCargo",
+    "assignedCommander",
+    "assignedDriver"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

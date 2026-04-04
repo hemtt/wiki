@@ -1,0 +1,35 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if unit has some ammo.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>? not (someAmmo _loon1) : hint \"Loon1 is out of ammo!\"</sqs>",
+    "<sqf>if (not someAmmo _loon1) then { hint \"Loon1 is out of ammo!\" };</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "name": "someAmmo",
+  "problem_notes": [],
+  "see_also": [
+    "ammo",
+    "magazines"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitName"
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

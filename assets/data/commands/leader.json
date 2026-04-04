@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the group leader for the given '''unit''' or '''group'''. For dead units, [[objNull]] is returned.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>leader group player == leader player;</sqf>",
+    "<sqf>leader group vehicle player;</sqf>",
+    "<sqf>leader player;</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "name": "leader",
+  "problem_notes": [],
+  "see_also": [
+    "formationLeader",
+    "formLeader",
+    "isFormationLeader",
+    "selectLeader"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitOrGroup"
+      },
+      "ret": {
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "unitOrGroup",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

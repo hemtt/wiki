@@ -1,0 +1,26 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[true]] if mouse vertical axe is inverted.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (reversedMouseY) then { hint \"Dude!\" };</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "name": "reversedMouseY",
+  "problem_notes": [],
+  "see_also": [
+    "setMousePosition",
+    "getMousePosition"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Boolean"
+      }
+    }
+  ]
+}

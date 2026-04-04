@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return number of magazines of type name in magazine pool (used in campaign to transfer magazines into next mission).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_num = queryMagazinePool \"M16\";</sqf>"
+  ],
+  "groups": [
+    "Weapon Pool"
+  ],
+  "name": "queryMagazinePool",
+  "problem_notes": [],
+  "see_also": [
+    "addMagazineGlobal",
+    "addMagazine",
+    "addMagazines",
+    "addMagazineCargo",
+    "addMagazineCargoGlobal",
+    "addMagazineTurret",
+    "addWeaponPool",
+    "clearMagazinePool",
+    "addMagazineAmmoCargo"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "name"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "name",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

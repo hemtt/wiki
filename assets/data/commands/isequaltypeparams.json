@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Compares types of all elements of input array to types of all elements of template array. Similar to [[isEqualTypeArray]] however this command is designed for fast validation of functions params, so there are differences:\n* Input can be anything but will be expected to be an [[Array]], otherwise [[false]] is returned\n* Input array can be longer but not shorter than template array, will return [[false]] if shorter\n* [[nil]] could be used in template type array as a wild card to allow any type match",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// These all return true\n[1,2,player,\"10\"] isEqualTypeParams [0,0,objNull,\"\"];\n[1,2,player,\"10\",true] isEqualTypeParams [0,0,nil,\"\"];\n[1,2,getPos player,\"10\",true] isEqualTypeParams [0,0,nil,\"\"];\n</sqf>",
+    "<sqf>\n// These all return false\n123 isEqualTypeParams [0,0,objNull,\"\"];\n[] isEqualTypeParams [0,0,objNull,\"\"];\n[1,2,player] isEqualTypeParams [0,0,objNull,\"\"];\n</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "name": "isEqualTypeParams",
+  "problem_notes": [],
+  "see_also": [
+    "isEqualTypeAll",
+    "isEqualTypeAny",
+    "isEqualType",
+    "isEqualTypeArray",
+    "param",
+    "params",
+    "isEqualTo",
+    "typeName"
+  ],
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "input",
+          "template"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "could be value of any type, but only type [[Array]] will be validated",
+          "name": "input",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "array of expected types",
+          "name": "template",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
