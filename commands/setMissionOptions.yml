@@ -22,7 +22,8 @@ syntax:
     type: HashMapUnknown
 argument_loc: Unspecified
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - <sqf>setMissionOptions createHashMapFromArray [["IgnoreNoDamage", true], ["IgnoreFakeHeadHit", true], ["IgnoreUpsideDownDamage", true]];</sqf>
 - <sqf>setMissionOptions createHashMap; // reset options to default</sqf>
