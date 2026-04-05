@@ -14,7 +14,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>_actions = actionIDs player;</sqf>
 see_also:
