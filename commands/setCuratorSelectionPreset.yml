@@ -19,7 +19,8 @@ syntax:
       value: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.14'
 examples:
 - <sqf>1 setCuratorSelectionPreset [object1, object2];</sqf>
 see_also:
