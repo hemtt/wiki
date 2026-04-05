@@ -14,7 +14,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  argo: '1.00'
 examples:
 - |-
   <sqf>
