@@ -9,7 +9,8 @@ syntax:
     desc: '[[true]] when inside editor environment, [[false]] when outside of editor environment'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>if is3DEN then { systemChat "Welcome to Eden Editor!" };</sqf>
 see_also:
