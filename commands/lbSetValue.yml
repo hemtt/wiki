@@ -40,7 +40,14 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofp: '1.75'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>lbSetValue [101, 0, 1];</sqf>
 - <sqf>_control lbSetValue [0, 1];</sqf>
