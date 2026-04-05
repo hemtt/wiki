@@ -12,7 +12,7 @@ impl Serialize for Version {
     where
         S: serde::Serializer,
     {
-        serializer.serialize_str(&format!("{}.{}", self.major, self.minor))
+        serializer.serialize_str(&format!("{}.{:02}", self.major, self.minor))
     }
 }
 

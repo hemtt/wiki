@@ -10,6 +10,9 @@ mod syntax;
 mod value;
 mod version;
 
+#[cfg(feature = "parser")]
+pub mod parser;
+
 pub const BRANCH: &str = "dist";
 
 pub use branch::Branch;

@@ -188,40 +188,4 @@ impl Command {
     pub fn add_see_also(&mut self, see_also: String) {
         self.see_also.push(see_also);
     }
-
-    #[must_use]
-    pub fn has_unknown(&self) -> bool {
-        for syntax in &self.syntax {
-            // if let Some(left) = syntax.left()
-            //     && left.typ().is_unknown()
-            // {
-            //     println!(
-            //         "Unknown left param type in command {}: {}",
-            //         self.name(),
-            //         left.typ()
-            //     );
-            //     return true;
-            // }
-            // if let Some(right) = syntax.right()
-            //     && right.typ().is_unknown()
-            // {
-            //     println!(
-            //         "Unknown right param type in command {}: {}",
-            //         self.name(),
-            //         right.typ()
-            //     );
-            //     return true;
-            // }
-            // TODO recrusively check params
-            if syntax.ret().typ().is_unknown() {
-                println!(
-                    "Unknown return type in command {}: {}",
-                    self.name(),
-                    syntax.ret().typ()
-                );
-                return true;
-            }
-        }
-        false
-    }
 }

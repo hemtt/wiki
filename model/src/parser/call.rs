@@ -1,12 +1,6 @@
-use arma3_wiki_model::{Arg, Call};
+use crate::{Arg, Call};
 
-pub trait CallParser {
-    fn parse(source: &str) -> Result<Call, String>;
-    fn parse_params(source: &str) -> Option<Arg>;
-    fn param_names(&self) -> Vec<String>;
-}
-
-impl CallParser for Call {
+impl Call {
     /// Parses a call from the wiki.
     ///
     /// # Errors
@@ -14,7 +8,7 @@ impl CallParser for Call {
     ///
     /// # Panics
     /// Panics if the parameters are invalid.
-    fn parse(source: &str) -> Result<Self, String> {
+    pub fn parse(source: &str) -> Result<Self, String> {
         if !source.contains(' ') {
             return Ok(Self::Nular);
         }
@@ -45,12 +39,12 @@ impl CallParser for Call {
         }
     }
 
-    fn parse_params(source: &str) -> Option<Arg> {
+    pub fn parse_params(source: &str) -> Option<Arg> {
         let mut chars = source.trim().chars().peekable();
         parse_arg(&mut chars)
     }
 
-    fn param_names(&self) -> Vec<String> {
+    pub fn param_names(&self) -> Vec<String> {
         match self {
             Self::Nular => Vec::new(),
             Self::Unary(arg) => arg.names(),
@@ -287,9 +281,7 @@ fn extract_base_name(s: &str) -> Option<String> {
 
 #[cfg(test)]
 mod tests {
-    use arma3_wiki_model::{Arg, Call};
-
-    use super::CallParser;
+    use crate::{Arg, Call};
 
     #[test]
     fn call_from_wiki() {

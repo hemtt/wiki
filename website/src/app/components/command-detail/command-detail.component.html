@@ -69,9 +69,20 @@
         </section>
         }
 
+        @if (commandSince().length > 0) {
+        <section class="mb-8">
+            <div class="flex flex-wrap gap-2">
+            @for (since of commandSince(); track since) {
+            <app-game-version [game]="since.game" [version]="since.version"></app-game-version>
+            }
+            </div>
+        </section>
+        }
+
+
         <section class="mb-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-4">Description</h2>
-            <p class="text-gray-700">{{ fullCommand()?.description || 'No description available.' }}</p>
+            <app-wiki-text [source]="fullCommand()?.description || 'No description available.'"></app-wiki-text>
         </section>
 
         @if (commandArgumentLoc() != 'Unspecified' || commandEffectLoc() != 'Unspecified') {

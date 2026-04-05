@@ -1,6 +1,6 @@
 use std::path::Path;
 
-use arma3_wiki::parser::command::CommandParser;
+use arma3_wiki_model::parser::command::CommandParser;
 
 const ROOT: &str = "tests/parse_sources";
 

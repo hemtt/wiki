@@ -120,6 +120,7 @@ fn generate_individual_commands(
             "syntax": cmd.syntax(),
             "examples": cmd.examples(),
             "see_also": cmd.see_also(),
+            "since": cmd.since(),
             "argument_loc": format!("{:?}", cmd.argument_loc()),
             "effect_loc": format!("{:?}", cmd.effect_loc()),
             "problem_notes": cmd.problem_notes(),

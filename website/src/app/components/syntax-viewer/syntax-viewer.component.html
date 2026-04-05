@@ -1,4 +1,14 @@
 <div class="flex flex-col gap-5">
+    @if (syntaxInfo.since.length > 0) {
+    <section>
+        <div class="flex flex-wrap gap-2">
+            @for (since of syntaxInfo.since; track since.game) {
+            <app-game-version [game]="since.game" [version]="since.version"></app-game-version>
+            }
+        </div>
+    </section>
+    }
+
     <div class="font-mono text-base font-medium text-gray-900 bg-gray-50 px-4 py-3.5 rounded-md leading-relaxed tracking-wider"
         [innerHTML]="syntaxInfo.signature"></div>
 
@@ -9,11 +19,18 @@
             @for (param of syntaxInfo.parameters; track param.name) {
             <div>
                 <span class="text-gray-700 font-medium">{{ param.name }}</span>
+                @if (param.since && param.since.length > 0) {
+                <div class="flex flex-cols gap-1 text-emerald-500 italic">
+                    @for (since of param.since; track since.game) {
+                    <app-game-version [game]="since.game" [version]="since.version" [slim]="true"></app-game-version>
+                    }
+                </div>
+                }
             </div>
             <div class="flex flex-col">
                 <app-value [value]="param.type"></app-value>
                 @if (param.desc) {
-                <span class="col-span-full text-gray-600">{{ param.desc }}</span>
+                <span class="col-span-full text-gray-600"><app-wiki-text [source]="param.desc"></app-wiki-text></span>
                 }
             </div>
             }

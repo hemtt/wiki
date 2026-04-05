@@ -3,26 +3,31 @@ import { FullCommand } from 'src/app/services/command.service';
 import { Param } from 'src/bindings/Param';
 import { Syntax } from 'src/bindings/Syntax';
 import { ReturnTypeComponent } from "../return-type/return-type.component";
-import { TypeComponent } from '../type/type.component';
 import { Value } from 'src/bindings/Value';
 import { ValueComponent } from '../value/value.component';
+import { Version } from 'src/bindings/Version';
+import { GameVersionComponent } from "../game-version/game-version.component";
+import { mapSince } from 'src/app/mapSince';
+import { WikiTextComponent } from "../wiki-text/wiki-text.component";
 
 interface ParamInfo {
     name: string;
     type: Value;
     desc?: string;
+    since?: { game: string; version: string | Version }[];
 }
 
 interface SyntaxInfo {
     signature: string;
     parameters: ParamInfo[];
+    since: { game: string; version: string | Version }[];
 }
 
 @Component({
     selector: 'app-syntax-viewer',
     standalone: true,
     templateUrl: './syntax-viewer.component.html',
-    imports: [ReturnTypeComponent, ValueComponent],
+    imports: [ReturnTypeComponent, ValueComponent, GameVersionComponent, WikiTextComponent],
 })
 export class SyntaxViewerComponent {
     @Input() command!: FullCommand;
@@ -36,21 +41,20 @@ export class SyntaxViewerComponent {
             return {
                 signature: 'Unable to parse syntax',
                 parameters: [],
+                since: [],
             };
         }
     }
 
     private parseSyntax(command: FullCommand, syntax: Syntax): SyntaxInfo {
         if (!syntax || typeof syntax !== 'object') {
-            return { signature: String(syntax), parameters: [] };
+            return { signature: String(syntax), parameters: [], since: [] };
         }
 
         const signature = this.buildSignature(command, syntax);
         const parameters = this.extractParameters(syntax);
 
-        console.log('Return type:', syntax.ret);
-
-        return { signature, parameters };
+        return { signature, parameters, since: mapSince(syntax.since) };
     }
 
     private buildSignature(command: FullCommand, syntax: Syntax): string {
@@ -110,9 +114,9 @@ export class SyntaxViewerComponent {
         // Look for Item with name and type
         if ('Item' in obj) {
             const item = obj.Item;
-            return [{ name: item.name, type: item.type, desc: item.desc || undefined }];
+            return [{ name: item.name, type: item.type, desc: item.desc || undefined, since: mapSince(item.since) }];
         }
-        
+
         // Look for Array
         if ('Array' in obj) {
             const items: ParamInfo[] = obj.Array.map((item: Param, index: number) => {
@@ -122,13 +126,14 @@ export class SyntaxViewerComponent {
                         name: itemData.name || `${defaultName} ${index + 1}`,
                         type: itemData.type,
                         desc: itemData.desc || undefined,
+                        since: mapSince(itemData.since),
                     };
                 }
-                return { name: `${defaultName} ${index + 1}`, type: 'Unknown' };
+                return { name: `${defaultName} ${index + 1}`, type: 'Unknown', since: [] };
             });
             return items;
         }
-        
+
         // Look for Infinite
         if ('Infinite' in obj) {
             const items: ParamInfo[] = obj.Infinite.map((item: Param, index: number) => {
@@ -138,9 +143,10 @@ export class SyntaxViewerComponent {
                         name: itemData.name || `${defaultName} ${index + 1}`,
                         type: itemData.type,
                         desc: itemData.desc || undefined,
+                        since: mapSince(itemData.since)
                     };
                 }
-                return { name: `${defaultName} ${index + 1}`, type: 'Unknown' };
+                return { name: `${defaultName} ${index + 1}`, type: 'Unknown', since: [] };
             });
             return items;
         }

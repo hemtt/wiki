@@ -101,18 +101,8 @@ pub enum Value {
     WithType,
     ParticleArray,
 
-    Unknown,
-
     OneOf(Vec<OneOfValue>),
 }
-
-impl Value {
-    #[must_use]
-    pub const fn is_unknown(&self) -> bool {
-        matches!(self, Self::Unknown)
-    }
-}
-
 impl std::fmt::Display for Value {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
@@ -199,7 +189,6 @@ impl std::fmt::Display for Value {
             Self::Waypoint => write!(f, "Waypoint"),
             Self::WhileType => write!(f, "While Type"),
             Self::WithType => write!(f, "With Type"),
-            Self::Unknown => write!(f, "Unknown"),
             Self::OneOf(values) => {
                 let formatted = values
                     .iter()

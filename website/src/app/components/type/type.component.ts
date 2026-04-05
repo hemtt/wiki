@@ -56,6 +56,10 @@ export class TypeComponent {
                 return 'Tree View Path';
             case 'HashMapKey':
                 return 'HashMap Key';
+            case 'Vector2d':
+                return 'Vector 2D';
+            case 'Vector3d':
+                return 'Vector 3D';
             default:
                 return this.type;
         }
@@ -92,6 +96,10 @@ export class TypeComponent {
                 return 'Turret_Path';
             case 'TreeViewPath':
                 return 'Arma_3:_Tree_View_Path';
+            case 'Vector2d':
+                return 'Vector2D';
+            case 'Vector3d':
+                return 'Vector3D';
             default:
                 return this.type;
         }
@@ -141,7 +149,7 @@ export class TypeComponent {
                 </div>
                 `;
             case 'TreeViewPath':
-                return 'A path in a tree view structure, represented as an array of numbers indicating the hierarchy. <img src="assets/treeview.jpg" alt="Tree View Example" class="mt-2 rounded">';
+                return 'A path in a tree view structure, represented as an array of numbers indicating the hierarchy. <img src="/assets/treeview.webp" alt="Tree View Example" class="mt-2 rounded">';
             case 'HashMapKey':
                 return `A virtual compound type containing all the possible types that can be used as keys in a HashMap.
                 <div class="flex flex-col gap-2 mt-2">
@@ -159,6 +167,10 @@ export class TypeComponent {
                     </ul>
                 </div>
                 `;
+            case 'Vector2d':
+                return 'A 2D vector, represented as an array of two numbers [x, y].';
+            case 'Vector3d':
+                return 'A 3D vector, represented as an array of three numbers [x, y, z].';
 
             case 'Control':
                 return 'A user interface control element, such as a button or slider.';

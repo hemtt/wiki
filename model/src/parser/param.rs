@@ -1,15 +1,9 @@
-use arma3_wiki_model::{Call, Param, ParamItem, Since, Value};
+use crate::{Call, Param, ParamItem, Since, Value};
 
-use crate::parser::{ParseError, call::CallParser, value::ValueParser};
+use super::ParseError;
 
-pub trait ParamItemParser {
-    fn parse(command: &str, source: &str) -> Result<(Self, Vec<ParseError>), String>
-    where
-        Self: Sized;
-}
-
-impl ParamItemParser for ParamItem {
-    fn parse(command: &str, source: &str) -> Result<(Self, Vec<ParseError>), String> {
+impl ParamItem {
+    pub fn parse(command: &str, source: &str) -> Result<(Self, Vec<ParseError>), String> {
         if let Some(parsed) = try_simple_line(source)? {
             return Ok((parsed, Vec::new()));
         }
@@ -255,7 +249,7 @@ pub fn try_optional(source: &str) -> Option<(Option<String>, String)> {
 
 #[cfg(test)]
 mod tests {
-    use arma3_wiki_model::{Arg, ArraySizedElement, OneOfValue, Since};
+    use crate::{Arg, ArraySizedElement, OneOfValue, Since};
 
     use super::*;
 

@@ -24,9 +24,8 @@ rust-embed = { version = "8.11.0", features = ["interpolate-folder-path"] }
 git2 = { version = "0.20.4", optional = true }
 
 [features]
-default = ["remote", "parser"]
+default = ["remote"]
 remote = ["git2"]
-parser = []
 
 [build-dependencies]
 arma3-wiki-model = { path = "../../model" }

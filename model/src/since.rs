@@ -6,10 +6,10 @@ use super::Version;
 #[ts(export)]
 pub struct Since {
     #[serde(default)]
-    #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(skip_serializing_if = "Option::is_none", rename = "ofp")]
     flashpoint: Option<Version>,
     #[serde(default)]
-    #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(skip_serializing_if = "Option::is_none", rename = "ofpe")]
     flashpoint_elite: Option<Version>,
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none", rename = "arma1")]

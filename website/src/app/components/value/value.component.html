@@ -17,7 +17,7 @@
                     }
                 </div>
                 @if (item.desc) {
-                <div class="text-gray-600 text-sm mt-1">{{ item.desc }}</div>
+                <div class="text-gray-600 text-sm mt-1"><app-wiki-text [source]="item.desc"></app-wiki-text></div>
                 }
             </div>
         }
@@ -32,7 +32,7 @@
         @for (option of value.OneOf; track option) {
             <app-value [value]="option.type"></app-value>
             @if (option.desc) {
-                <div class="text-gray-600 text-sm mt-1">{{ option.desc }}</div>
+                <div class="text-gray-600 text-sm mt-1"><app-wiki-text [source]="option.desc"></app-wiki-text></div>
             }
         }
         </div>

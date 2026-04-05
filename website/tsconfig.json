@@ -15,11 +15,15 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
-    "target": "ES2022",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2024",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "types": ["node"],
     "lib": [
-      "ES2022",
+      "esnext",
       "dom"
     ]
   },

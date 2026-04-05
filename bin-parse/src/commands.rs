@@ -1,8 +1,8 @@
 use arma3_wiki_model::{Command, Value};
 use std::{collections::HashMap, path::Path, sync::Arc};
 
-use arma3_wiki::parser::{ParseError, command::CommandParser};
 use arma3_wiki_github::report::Report;
+use arma3_wiki_model::parser::{ParseError, command::CommandParser};
 use indicatif::ProgressBar;
 use regex::Regex;
 use reqwest::{Client, header::LAST_MODIFIED};
@@ -61,47 +61,6 @@ pub async fn list(client: &Client) -> HashMap<String, String> {
 pub async fn commands(client: &Client, report: Report, args: &[String]) -> Report {
     let commands = if args.iter().all(|arg| arg.starts_with("--")) {
         list(client).await
-    } else if args.iter().any(|arg| arg == "--bads") {
-        let mut bads = HashMap::new();
-        let wiki = arma3_wiki::Wiki::load_dist();
-        for (_, cmd) in wiki.commands().iter() {
-            let cmd_name_cased = cmd.name();
-            if cmd.syntax().iter().any(|syn| {
-                if syn.ret().typ() == &Value::Unknown {
-                    println!("cmd {:?} has unknown ret {:?}", cmd_name_cased, syn.ret());
-                    return true;
-                }
-                // if let Some(left) = syn.left()
-                //     && left.typ() == &Value::Unknown
-                // {
-                //     println!(
-                //         "cmd {:?} has unknown left param {:?}",
-                //         cmd_name_cased,
-                //         syn.ret()
-                //     );
-                //     return true;
-                // }
-                // if let Some(right) = syn.right()
-                //     && right.typ() == &Value::Unknown
-                // {
-                //     println!(
-                //         "cmd {:?} has unknown right param {:?}",
-                //         cmd_name_cased,
-                //         syn.ret()
-                //     );
-                //     return true;
-                // }
-                // TODO recursive check params for Unknown
-                false
-            }) {
-                bads.insert(
-                    cmd_name_cased.to_string(),
-                    format!("https://community.bistudio.com/wiki/{cmd_name_cased}"),
-                );
-            }
-        }
-        println!("Checking {} bad commands", bads.len());
-        bads
     } else {
         args.iter()
             .filter(|arg| !arg.starts_with("--"))
@@ -336,19 +295,6 @@ pub async fn command(
                 errors.retain(|e| {
                     e != &ParseError::Syntax(String::from("Invalid call: see [[remoteExec]]"))
                 });
-            }
-            if parsed.has_unknown() && std::env::args().any(|arg| arg == "--interactive") {
-                pg.println(format!(
-                    "Command {name} has unknown types, errors: {errors:?}"
-                ));
-                pg.println("Try again? y/n");
-                let mut input = String::new();
-                std::io::stdin()
-                    .read_line(&mut input)
-                    .expect("Failed to read input");
-                if input.trim().to_lowercase() == "y" {
-                    return Box::pin(command(pg, client, name, url, true)).await;
-                }
             }
             if dist_path.exists() {
                 // Check if the file has changed

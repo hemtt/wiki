@@ -1,5 +1,5 @@
-use crate::parser::{ParseError, syntax::SyntaxParser};
-use arma3_wiki_model::{Branch, Command, Locality, Syntax};
+use super::ParseError;
+use crate::{Branch, Command, Locality, Syntax};
 
 pub trait CommandParser {
     fn parse(name: &str, source: &str) -> Result<(Command, Vec<ParseError>), String>;
@@ -124,6 +124,7 @@ impl CommandParser for Command {
                         if !next.0.starts_with("version") {
                             Err(format!("Unknown key when expecting version: {}", next.0))?;
                         }
+                        command.since_mut().set_from_wiki(value, next.1)?;
                     } else if key.starts_with("gr") {
                         command.add_group(value.to_string());
                         // if value.contains("Broken Commands") {

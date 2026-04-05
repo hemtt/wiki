@@ -79,7 +79,6 @@ dependencies = [
 name = "arma3-wiki-parse"
 version = "0.1.0"
 dependencies = [
- "arma3-wiki",
  "arma3-wiki-github",
  "arma3-wiki-model",
  "fs-err",

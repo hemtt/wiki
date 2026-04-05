@@ -7,7 +7,6 @@ use commands::Commands;
 use git2::Repository;
 
 pub mod commands;
-pub mod parser;
 
 #[allow(clippy::disallowed_methods)]
 mod assets {

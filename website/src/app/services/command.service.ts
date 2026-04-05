@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Syntax } from 'src/bindings/Syntax';
 import { Locality } from 'src/bindings/Locality';
+import { Since } from 'src/bindings/Since';
 
 export interface Command {
     name: string;
@@ -18,6 +19,7 @@ export interface FullCommand extends Command {
     alias?: string[];
     syntax: Syntax[];
     see_also: string[];
+    since?: Since;
     argument_loc: Locality;
     effect_loc: Locality;
     problem_notes: string[];
@@ -112,5 +114,10 @@ export class CommandService {
     loadCommandDetails(commandName: string): Observable<FullCommand> {
         const filename = commandName.replace(/ /g, '_');
         return this.http.get<FullCommand>(`assets/data/commands/${filename}.json`);
+    }
+
+    isCommand(name: string): boolean {
+        const commands = this.commands();
+        return commands.some((cmd) => cmd.name === name);
     }
 }
