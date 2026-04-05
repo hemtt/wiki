@@ -20,7 +20,8 @@ syntax:
     type: Vector3d
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.68'
 examples:
 - <sqf>MyCar setVelocityModelSpace [0, 10, 0]; // Pushes MyCar forward.</sqf>
 see_also:
