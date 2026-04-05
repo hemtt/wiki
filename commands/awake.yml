@@ -21,7 +21,8 @@ syntax:
     type: Boolean
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.08'
 examples:
 - <sqf>_object awake false;</sqf>
 - 'Since 2.10: <sqf>_deadUnit awake true;</sqf>'
