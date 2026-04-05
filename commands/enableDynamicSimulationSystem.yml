@@ -12,7 +12,8 @@ syntax:
 argument_loc: Unspecified
 effect_loc: Global
 server_exec: true
-since: {}
+since:
+  arma3: '1.68'
 examples:
 - <sqf>enableDynamicSimulationSystem true;</sqf>
 see_also:
