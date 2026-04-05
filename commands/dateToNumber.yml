@@ -18,7 +18,11 @@ syntax:
     type: ArrayDate
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_float = dateToNumber [2035, 7, 6, 12, 0]; // 0.510959</sqf>
 - <sqf>dateToNumber date; // returns float number for the current date</sqf>
