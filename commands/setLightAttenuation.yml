@@ -47,7 +47,8 @@ syntax:
     optional: true
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>myLight setLightAttenuation [2, 4, 4, 0, 9, 10];</sqf>
 see_also:
