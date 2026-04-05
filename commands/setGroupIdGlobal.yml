@@ -25,7 +25,8 @@ syntax:
       type: String
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.48'
 examples:
 - |-
   <sqf>
