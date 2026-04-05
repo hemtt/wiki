@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.16'
 examples:
 - "<sqf>\nif (getWaterFillPercentage _myCar > 0) then\n{\n\thint \"My feet are wet.\";\n};\n</sqf>"
 see_also:
