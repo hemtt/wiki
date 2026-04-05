@@ -14,7 +14,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.12'
 examples:
 - <sqf>_nvgs = hmd player; //NVGoggles</sqf>
 see_also:
