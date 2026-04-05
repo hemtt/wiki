@@ -18,7 +18,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>[_veh1, _veh2] remoteExecCall ["enableCollisionWith", 0, _veh1];</sqf>
 see_also:
