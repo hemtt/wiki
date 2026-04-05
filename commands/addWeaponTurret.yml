@@ -21,7 +21,9 @@ syntax:
     type: TurretPath
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma2oa: '1.64'
+  arma3: '1.32'
 examples:
 - <sqf>_tank addWeaponTurret ["LMG_M200", [0,0]];</sqf>
 see_also:
