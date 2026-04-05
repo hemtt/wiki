@@ -26,7 +26,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '2.20'
 examples:
 - <sqf>_tank addMagazinesTurret ["20Rnd_120mmSABOT_M1A2", [0], 10];</sqf>
 see_also:
