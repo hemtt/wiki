@@ -51,10 +51,14 @@ syntax:
     type: Boolean
     optional: true
     since:
-      arma3: '2.2'
+      arma3: '2.02'
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>player attachTo [car, [0, 0, 1]];</sqf>
 - <sqf>player attachTo [tank, [0, -1, 0], "Usti hlavne"];</sqf>
