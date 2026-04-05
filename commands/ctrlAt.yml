@@ -25,7 +25,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.12'
 examples:
 - <sqf>private _ctrl = _myDisplay ctrlAt [0.5, 0.5];</sqf>
 see_also:
