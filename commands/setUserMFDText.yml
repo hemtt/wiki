@@ -22,7 +22,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.78'
 examples:
 - <sqf>_vehicle setUserMFDText [0, "some text"];</sqf>
 see_also:
