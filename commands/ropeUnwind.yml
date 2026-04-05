@@ -32,7 +32,8 @@ syntax:
     optional: true
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.34'
 examples:
 - <sqf>ropeUnwind [ropes heli1 select 0, 3, 10]; // set rope length to 10m at 3m/s</sqf>
 - <sqf>ropeUnwind [ropes heli1 select 0, 3, -5, true]; // decrease rope length by 5m at 3m/s</sqf>
