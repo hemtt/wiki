@@ -12,7 +12,9 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2oa: '1.63'
+  arma3: '0.50'
 examples:
 - <sqf>objectFromNetId "2:3"</sqf>
 see_also:
