@@ -9,7 +9,14 @@ syntax:
     desc: '[[true]] if a dialog is open, [[false]] if not'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofp: '1.78'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>if (!dialog) then { createDialog "Dialog1"; };</sqf>
 see_also:
