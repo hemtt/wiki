@@ -19,7 +19,8 @@ syntax:
     - 1000
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '2.16'
 examples:
 - <sqf>myTank setFuelConsumptionCoef 10; // consume 10x more fuel than default</sqf>
 see_also:
