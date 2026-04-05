@@ -19,7 +19,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>_reldir = player getRelDir tank;</sqf>
 - |-
