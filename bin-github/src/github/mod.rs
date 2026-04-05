@@ -1,6 +1,5 @@
 use std::process::Command;
 
-use arma3_wiki_model::BRANCH;
 use octocrab::{models::pulls::PullRequest, Octocrab};
 
 use crate::{REPO_NAME, REPO_ORG};
@@ -49,14 +48,12 @@ impl GitHub {
 }
 
 impl GitHub {
-    pub async fn command_pr(&self, command: &str) -> Result<Option<PullRequest>, String> {
+    pub async fn command_commit(&self, command: &str) -> Result<Option<PullRequest>, String> {
         if std::env::var("CI").is_err() {
-            println!("Local, Skipping PR creation for {command}");
+            println!("Local, Skipping commit for {command}");
             return Ok(None);
         }
-        let head = format!("command/{command}");
-        command!(["checkout", BRANCH]);
-        command!(["checkout", "-b", head.as_str()]);
+        command!(["checkout", "dist"]);
         command!([
             "add",
             format!("commands/{}.yml", urlencoding::encode(command)).as_str()
@@ -66,61 +63,39 @@ impl GitHub {
             "-m",
             format!("Update Command `{command}`").as_str()
         ]);
-        command!(["push", "--set-upstream", "origin", head.as_str()]);
-        self.0
-            .pulls(REPO_ORG, REPO_NAME)
-            .create(format!("Update Command `{command}`"), head, BRANCH)
-            .send()
-            .await
-            .map_err(|e| e.to_string())
-            .map(Some)
+        command!(["push", "origin", "dist"]);
+        Ok(None)
     }
 
-    pub async fn event_handler_pr(
+    pub async fn event_handler_commit(
         &self,
         ns: &str,
         handler: &str,
     ) -> Result<Option<PullRequest>, String> {
         if std::env::var("CI").is_err() {
-            println!("Local, Skipping PR creation for {ns}::{handler}");
+            println!("Local, Skipping commit for {ns}::{handler}");
             return Ok(None);
         }
-        let head = format!("events/{ns}/{handler}");
-        command!(["checkout", BRANCH]);
-        command!(["checkout", "-b", head.as_str()]);
+        command!(["checkout", "dist"]);
         command!(["add", format!("events/{ns}/{handler}.yml").as_str()]);
         command!([
             "commit",
             "-m",
             format!("Update Event `{ns}::{handler}`").as_str()
         ]);
-        command!(["push", "--set-upstream", "origin", head.as_str()]);
-        self.0
-            .pulls(REPO_ORG, REPO_NAME)
-            .create(format!("Update Event `{ns}::{handler}`"), head, BRANCH)
-            .send()
-            .await
-            .map_err(|e| e.to_string())
-            .map(Some)
+        command!(["push", "origin", "dist"]);
+        Ok(None)
     }
 
-    pub async fn version_pr(&self, version: &str) {
+    pub async fn version_commit(&self, version: &str) {
         if std::env::var("CI").is_err() {
-            println!("Local, Skipping PR creation for version");
+            println!("Local, Skipping commit for version");
             return;
         }
-        let head = "version";
-        command!(["checkout", BRANCH]);
-        command!(["checkout", "-b", head]);
+        command!(["checkout", "dist"]);
         command!(["add", "version.txt"]);
         command!(["commit", "-m", "Update version"]);
-        command!(["push", "--set-upstream", "origin", head]);
-        self.0
-            .pulls(REPO_ORG, REPO_NAME)
-            .create(format!("Update version to {version}"), head, BRANCH)
-            .send()
-            .await
-            .expect("Failed to create version PR");
+        command!(["push", "origin", "dist"]);
     }
 }
 
