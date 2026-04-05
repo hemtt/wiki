@@ -34,7 +34,9 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.01'
+  arma3: '0.50'
 examples:
 - <sqf>setTrafficSpeed [50, _xMin, _xMax, _zMin, _zMax];</sqf>
 see_also:
