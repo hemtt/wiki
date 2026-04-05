@@ -39,7 +39,8 @@ syntax:
     arma3: '1.72'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>_control ctrlSetChecked true;</sqf>
 - <sqf>_control ctrlSetChecked [3, true];</sqf>
