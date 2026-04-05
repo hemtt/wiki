@@ -18,7 +18,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>[get3DENSelected "logic" select 0] set3DENLogicType "MiscOR_F";</sqf>
 see_also:
