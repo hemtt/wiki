@@ -42,7 +42,8 @@ syntax:
     arma3: '2.20'
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '0.76'
 examples:
 - "<sqf>\n{\n\t_x removeWeaponGlobal \"Laserdesignator\";\n} forEach allUnits;\n</sqf>"
 - "<sqf>\n{\n\tif (typeOf _x == \"O_Heli_Attack_02_black_F\") then {\n\t\t_x removeWeaponGlobal \"rockets_Skyfire\";\n\t};\n} forEach vehicles;\n</sqf>"
