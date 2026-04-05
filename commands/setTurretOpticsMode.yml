@@ -34,7 +34,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.10'
 examples:
 - <sqf>player setTurretOpticsMode 0;</sqf>
 - <sqf>myTank setTurretOpticsMode [[-1], 1];</sqf>
