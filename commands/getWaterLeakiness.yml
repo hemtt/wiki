@@ -15,7 +15,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.16'
 examples:
 - "<sqf>\nif (getWaterLeakiness _myCar > 0) then\n{\n\thint \"don't go in the water with it!\";\n};\n</sqf>"
 see_also:
