@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.08'
 examples:
 - <sqf>private _playersDrone = getConnectedUAVUnit player;</sqf>
 see_also:
