@@ -17,7 +17,8 @@ syntax:
     type: Control
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>menuClear (findDisplay 313 displayCtrl 120); // removes all entries from Eden Editor. Restart the editor to reset the menu.</sqf>
 see_also:
