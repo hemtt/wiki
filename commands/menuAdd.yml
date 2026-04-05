@@ -40,7 +40,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>findDisplay 313 displayCtrl 120 menuAdd [[], "Custom Tools"]; // Add new entry at the top level to the menu strip in Eden Editor</sqf>
 see_also:
