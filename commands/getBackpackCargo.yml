@@ -24,7 +24,10 @@ syntax:
     type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2oa: '1.55'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - "<sqf>\ngetBackpackCargo cursorTarget;\n/*\n\treturns e.g\n\t[\n        [\"5BackpackA\", \"10BackpackB\"]\n        [5, 10]\n\t]\n*/\n</sqf>"
 - <sqf>_content = getBackpackCargo carName;</sqf>
