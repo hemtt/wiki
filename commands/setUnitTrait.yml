@@ -49,7 +49,8 @@ syntax:
     optional: true
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.58'
 examples:
 - <sqf>player setUnitTrait ["Medic", true];</sqf>
 see_also:
