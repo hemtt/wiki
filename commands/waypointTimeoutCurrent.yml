@@ -11,7 +11,8 @@ syntax:
     type: Group
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.08'
 examples:
 - <sqf>_timeout = waypointTimeoutCurrent group player;</sqf>
 see_also:
