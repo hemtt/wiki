@@ -33,7 +33,8 @@ syntax:
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.20'
 examples:
 - <sqf>steamGameRecordingEvent ["UnitKilled", 0, ["Player1", "50"]]; //"UnitKilled" event, happening now, with arguments</sqf>
 - <sqf>steamGameRecordingEvent ["ZeusUI", 5, [], -5]; //Was in the Zeus UI during the last 5 seconds</sqf>
