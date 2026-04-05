@@ -18,7 +18,8 @@ syntax:
     type: Config
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>_result = (vehicle player) getSoundControllerResult (configFile >> "cfgVehicles" >> typeOf (vehicle player) >> "sounds" >> "idle_ext" >> "volume");</sqf>
 - |-
