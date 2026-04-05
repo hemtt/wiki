@@ -51,7 +51,8 @@ syntax:
     type: ArrayColorRgba
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.00'
 examples:
 - <sqf>_control lnbSetColorRight [[0, 0], [1,1,1,0.5]];</sqf>
 see_also:
