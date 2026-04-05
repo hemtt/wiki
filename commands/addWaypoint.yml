@@ -42,7 +42,13 @@ syntax:
     default: '""'
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_wp = _grp addWaypoint [position player, 0];</sqf>
 - "<sqf>\n_wp = _grp addWaypoint [position player, 0];\t\t\t// imprecise, placed like [[setVehiclePosition]]'s \"NONE\" placement\n_wp setWaypointPosition [getPosASL player, -1];\t\t\t// from {{ofpe}} to {{arma3}} v1.88\n\nprivate _wp = _grp addWaypoint [getPosASL player, -1];\t// {{arma3}} v1.90+: precise placement\n</sqf>"
