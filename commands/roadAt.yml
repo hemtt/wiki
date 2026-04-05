@@ -17,10 +17,11 @@ syntax:
     - type: Position2d
       desc: null
       since:
-        arma3: '2.0'
+        arma3: '2.00'
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.58'
 examples:
 - <sqf>_road = roadAt ASLToAGL getPosASL player;</sqf>
 - <sqf>_isOnRoad = !isNull roadAt player;</sqf>
