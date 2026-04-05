@@ -72,7 +72,8 @@ syntax:
       arma3: '1.96'
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.38'
 examples:
 - <sqf>player addWeaponItem ["arifle_MX_GL_ACO_F", "1Rnd_HE_Grenade_shell"];</sqf>
 - <sqf>player addWeaponItem ["arifle_MX_GL_ACO_F", ["1Rnd_HE_Grenade_shell", 1, "GL_3GL_F"]];</sqf>
