@@ -25,7 +25,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.00'
 examples:
 - <sqf>_control ctrlSetTextSelection [5, 10];</sqf>
 - |-
