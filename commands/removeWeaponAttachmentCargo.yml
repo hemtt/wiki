@@ -26,7 +26,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.22'
 examples:
 - <sqf>rearmTruckOne removeWeaponAttachmentCargo [weaponID, creatorID, "attachment"];</sqf>
 see_also:
