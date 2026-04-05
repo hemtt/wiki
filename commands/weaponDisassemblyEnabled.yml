@@ -19,7 +19,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.14'
 examples:
 - <sqf>private _enabled = weaponDisassemblyEnabled player && weaponDisassemblyEnabled _weapon;</sqf>
 see_also:
