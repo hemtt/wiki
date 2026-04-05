@@ -19,7 +19,14 @@ syntax:
     type: Vector3d
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  ofp: '1.80'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_truck1 setVelocity [20, 0, 0];</sqf>
 - "Advanced method used for relative acceleration:\n<sqf>\n_vel = velocity _vehicle;\n_dir = getDir _vehicle;\n_additionalSpeed = 10; // in m/s\n_vehicle setVelocity [\n\t(_vel select 0) + (sin _dir * _additionalSpeed), \n\t(_vel select 1) + (cos _dir * _additionalSpeed), \n\t(_vel select 2) // horizontal only\n];\n</sqf>"
