@@ -23,10 +23,11 @@ syntax:
     name: vehicle
     type: Object
   since:
-    arma3: '2.6'
+    arma3: '2.06'
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.32'
 examples:
 - "<sqf>\n// delete when knowing the vehicle\n_helicopter deleteVehicleCrew driver _helicopter;\n\n// delete when only knowing the unit\n// vehicle _soldier deleteVehicleCrew _soldier;\t\t// may return the unit itself when used on dead crew\nobjectParent _soldier deleteVehicleCrew _soldier;\t// faster and always returns the vehicle\n</sqf>"
 - |-
