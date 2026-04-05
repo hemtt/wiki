@@ -20,7 +20,9 @@ syntax:
       value: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>3 radioChannelRemove [blufor_unit_1, blufor_unit_2];</sqf>
 see_also:
