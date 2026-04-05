@@ -14,7 +14,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>removeAllMissionEventHandlers "Loaded";</sqf>
 see_also:
