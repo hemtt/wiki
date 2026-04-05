@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '0.70'
 examples:
 - <sqf>removeAllPrimaryWeaponItems player;</sqf>
 see_also:
