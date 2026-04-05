@@ -13,7 +13,10 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofp: '1.75'
+  ofpe: '1.00'
+  arma1: '1.00'
 examples:
 - <sqf>_object = object 1;</sqf>
 see_also:
