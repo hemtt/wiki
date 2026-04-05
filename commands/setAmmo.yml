@@ -24,7 +24,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - |-
   Set player's handgun magazine ammo count to 10 rounds:
