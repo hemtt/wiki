@@ -8,7 +8,14 @@ syntax:
     type: Nothing
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  ofp: '1.27'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>mapAnimCommit;</sqf>
 see_also:
