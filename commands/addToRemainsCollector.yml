@@ -13,7 +13,8 @@ syntax:
       value: Object
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.32'
 examples:
 - <sqf>addToRemainsCollector [unit1, unit2, vehicle1];</sqf>
 see_also:
