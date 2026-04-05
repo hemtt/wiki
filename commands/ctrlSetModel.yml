@@ -18,7 +18,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.32'
 examples:
 - <sqf>_control3D ctrlSetModel "\a3\Ui_f\objects\Compass.p3d";</sqf>
 see_also:
