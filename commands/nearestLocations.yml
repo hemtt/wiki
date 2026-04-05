@@ -43,7 +43,12 @@ syntax:
     optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma1: '1.08'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_nearbyLocations = nearestLocations [getPosATL player, ["RockArea", "VegetationFir"], 100];</sqf>
 - "Find any of nearest locations:\n<sqf>\nprivate _allLocationTypes = [];\n\"_allLocationTypes pushBack configName _x\" configClasses (configFile >> \"CfgLocationTypes\");\n{\n\tsystemChat format [\n\t\t\"%1 (%2) - %3m\", \n\t\t_x, \n\t\ttext _x, \n\t\tgetPosATL player distance _x\n\t];\n} forEach nearestLocations [player, _allLocationTypes, 500];\n</sqf>"
