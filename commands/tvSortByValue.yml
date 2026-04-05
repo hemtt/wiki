@@ -45,7 +45,8 @@ syntax:
     optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.74'
 examples:
 - <sqf>control tvSortByValue [[0], false];</sqf>
 - <sqf>tvSortByValue [102, [0], false];</sqf>
