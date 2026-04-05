@@ -24,7 +24,8 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>_isInRange = getMarkerPos "myTarget" inRangeOfArtillery [[myArty], "32Rnd_155mm_Mo_shells"];</sqf>
 see_also:
