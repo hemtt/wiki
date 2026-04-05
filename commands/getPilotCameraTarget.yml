@@ -26,7 +26,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>getPilotCameraTarget vehicle player params ["_pilotCamTracking", "_pilotCamTargetPos", "_pilotCamTarget"];</sqf>
 see_also:
