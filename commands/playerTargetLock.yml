@@ -23,7 +23,8 @@ syntax:
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - "<sqf>\nplayerTargetLock params [\"_target\", \"_lock\", \"_cfg\"];\nif (_lock == 1) then\n{\n\thint format [\"%1 locked %2\", getText (_cfg >> \"displayName\"), getText (configOf _target >> \"displayName\")];\n};\n</sqf>"
 - <sqf>playerTargetLock; // returns [objNull, 0, configNull] if no lock is being done</sqf>
