@@ -10,7 +10,11 @@ syntax:
       value: TeamMember
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>{ agent _x moveTo position player } forEach agents;</sqf>
 see_also:
