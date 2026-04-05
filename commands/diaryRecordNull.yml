@@ -9,7 +9,8 @@ syntax:
     type: DiaryRecord
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.00'
 examples:
 - <sqf>isNull diaryRecordNull; // true</sqf>
 - <sqf>isNull (objNull createDiaryRecord ["Diary", ["Title", "Text"]]); // true - objNull cannot take diary records</sqf>
