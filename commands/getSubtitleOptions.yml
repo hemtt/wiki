@@ -10,7 +10,8 @@ syntax:
     desc: options in format [subtitlesEnabled, radioSubtitlesEnabled]
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.94'
 examples:
 - <sqf>private _subtitleSettings = getSubtitleOptions;</sqf>
 see_also:
