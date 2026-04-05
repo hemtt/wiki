@@ -19,7 +19,8 @@ syntax:
     type: Boolean
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>set3DENIconsVisible [false, false]; // Hide all icons</sqf>
 see_also:
