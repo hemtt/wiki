@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>isWeaponLowered = weaponLowered player;</sqf>
 see_also:
