@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.08'
 examples:
 - <sqf>_remaining = triggerTimeoutCurrent _trigger;</sqf>
 see_also:
