@@ -8,7 +8,8 @@ syntax:
     type: Boolean
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - "<sqf>\nif (isUsingAISteeringComponent) then\n{\n\tuseAISteeringComponent false;\n};\n</sqf>"
 see_also:
