@@ -15,7 +15,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.56'
 examples:
 - "<sqf>\n_myCode = compileFinal \"a = a + 1\";\ncall _myCode;\n \n// repeated compile won't have any effect\n_myCode = compileFinal \"a = a + 2\";\n</sqf>"
 - |-
