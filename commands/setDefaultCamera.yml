@@ -19,7 +19,8 @@ syntax:
     type: Vector3d
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.10'
 examples:
 - <sqf>setDefaultCamera [[5000, 5000, 200], [1, 1, -1]];</sqf>
 - |-
