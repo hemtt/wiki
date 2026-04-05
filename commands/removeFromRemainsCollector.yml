@@ -12,7 +12,8 @@ syntax:
       value: Object
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.32'
 examples:
 - <sqf>removeFromRemainsCollector [unit1, unit2, vehicle1];</sqf>
 see_also:
