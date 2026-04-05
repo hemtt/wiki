@@ -21,7 +21,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.00'
 examples:
 - <sqf>vehicle player setBatteryChargeRTD 0.5;</sqf>
 see_also:
