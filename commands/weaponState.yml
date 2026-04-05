@@ -46,7 +46,7 @@ syntax:
       default: null
       desc: current ammo round reload phase (see [[weaponReloadingTime]])
       since:
-        arma3: '2.6'
+        arma3: '2.06'
     - name: magazineReloadPhase
       type: !NumberRange
       - 0
@@ -54,7 +54,7 @@ syntax:
       default: null
       desc: current magazine reload phase, 0 - reload complete. &gt; 0 - reload in progress
       since:
-        arma3: '2.6'
+        arma3: '2.06'
   right: !Item
     name: unit
     type: Object
@@ -96,13 +96,13 @@ syntax:
       default: null
       desc: current ammo round reload phase (see [[weaponReloadingTime]])
       since:
-        arma3: '2.6'
+        arma3: '2.06'
     - name: magazineReloadPhase
       type: Number
       default: null
       desc: current magazine reload phase from 1 to 0, 0 - reload complete. &gt; 0 - reload in progress
       since:
-        arma3: '2.6'
+        arma3: '2.06'
   right: !Array
   - !Item
     name: vehicle
@@ -125,7 +125,7 @@ syntax:
     optional: true
     default: '{{hl|""}}'
     since:
-      arma3: '2.8'
+      arma3: '2.08'
   - !Item
     name: firemode
     desc: firemode name
@@ -133,7 +133,7 @@ syntax:
     optional: true
     default: '{{hl|""}}'
     since:
-      arma3: '2.8'
+      arma3: '2.08'
 - call: !Binary
   - unit
   - weaponOrMuzzle
@@ -169,13 +169,13 @@ syntax:
       default: null
       desc: current ammo round reload phase (see [[weaponReloadingTime]])
       since:
-        arma3: '2.6'
+        arma3: '2.06'
     - name: magazineReloadPhase
       type: Number
       default: null
       desc: current magazine reload phase from 1 to 0, 0 - reload complete. &gt; 0 - reload in progress
       since:
-        arma3: '2.6'
+        arma3: '2.06'
   left: !Item
     name: unit
     type: Object
@@ -183,10 +183,13 @@ syntax:
     name: weaponOrMuzzle
     type: String
   since:
-    arma3: '2.6'
+    arma3: '2.06'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2oa: '1.60'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - "<sqf>_wsPlayer = weaponState player;\t\t\t\t\t// [\"arifle_MXC_ACO_F\",\"arifle_MXC_ACO_F\",\"Single\",\"30Rnd_65x39_caseless_mag\",30,0,0]</sqf>"
 - "Query currently selected gunner weapon:\n<sqf>_wsVehicle = weaponState [_apc, [0]];\t\t\t// [\"autocannon_40mm_CTWS\",\"HE\",\"player\",\"60Rnd_40mm_GPR_Tracer_Red_shells\",60,0,0]</sqf>"
