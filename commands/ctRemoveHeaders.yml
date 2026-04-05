@@ -17,7 +17,8 @@ syntax:
       value: Number
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>_control ctRemoveHeaders [0, 1, 2];</sqf>
 see_also:
