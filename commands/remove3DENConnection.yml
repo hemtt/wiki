@@ -26,7 +26,8 @@ syntax:
     type: EdenEntity
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>remove3DENConnection ["RandomStart", get3DENSelected "Object", "marker_0"];// Remove random start on marker "marker_0" from all selected objects.</sqf>
 see_also:
