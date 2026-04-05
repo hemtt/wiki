@@ -40,7 +40,8 @@ syntax:
     optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.06'
 examples:
 - <sqf>_map ctrlMapSetPosition [0,0,1,1];</sqf>
 - |-
