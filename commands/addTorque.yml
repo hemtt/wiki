@@ -26,7 +26,8 @@ syntax:
     type: Vector3d
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.72'
 examples:
 - |-
   Apply torque [1000,0,0] to object not factoring object positioning:
