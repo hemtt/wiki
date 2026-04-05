@@ -25,7 +25,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>soldier1 forgetTarget soldier2;</sqf>
 - |-
