@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.42'
 examples:
 - <sqf>getSuppression AI_unit_1;</sqf>
 see_also:
