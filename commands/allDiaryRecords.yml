@@ -63,7 +63,8 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.10'
 examples:
 - <sqf>player allDiaryRecords "Diary";</sqf>
 see_also:
