@@ -41,7 +41,8 @@ syntax:
     desc: channel ID (see [[BIS_fnc_channelNumToRadioChannelID]], [[BIS_fnc_radioChannelIDToChannelNum]])
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.42'
 examples:
 - <sqf>_selected = currentChannel; // 3 for the Group channel</sqf>
 see_also:
