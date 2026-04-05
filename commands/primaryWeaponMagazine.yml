@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.70'
 examples:
 - <sqf>hint str primaryWeaponMagazine player; //["30Rnd_65x39_caseless_mag"]</sqf>
 - "<sqf>\n_array = primaryWeaponMagazine player;\nif (count _array > 0) then {\n\thint (\"Primary weapon is loaded with \" + (_array select 0) + \"!\");\n} else {\n\tif (primaryWeapon player != \"\") then {\n\t\thint \"Primary weapon is not loaded!\";\n\t} else {\n\t\thint \"Player doesn't have a primary weapon!\";\n\t};\n};\n</sqf>"
