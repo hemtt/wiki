@@ -18,7 +18,8 @@ syntax:
     type: Boolean
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.34'
 examples:
 - <sqf>vehicle player enableRopeAttach false;</sqf>
 see_also:
