@@ -16,7 +16,8 @@ syntax:
     type: Boolean
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>myLight setLightUseFlare true;</sqf>
 see_also:
