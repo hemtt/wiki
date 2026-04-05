@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.42'
 examples:
 - <sqf>_rest = isWeaponRested player;</sqf>
 see_also:
