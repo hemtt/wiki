@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.12'
 examples:
 - <sqf>_com = getCenterOfMass _myCar;</sqf>
 see_also:
