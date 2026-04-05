@@ -20,7 +20,8 @@ syntax:
     type: Boolean
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.18'
 see_also:
 - hideObject
 - isObjectHidden
