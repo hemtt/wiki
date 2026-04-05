@@ -22,7 +22,8 @@ syntax:
     type: Control
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>private _array = ctAddHeader _control;</sqf>
 see_also:
