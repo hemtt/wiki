@@ -8,7 +8,9 @@ syntax:
     type: Boolean
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.01'
+  arma3: '0.50'
 examples:
 - <sqf>private _PiPState = isPiPEnabled;</sqf>
 see_also:
