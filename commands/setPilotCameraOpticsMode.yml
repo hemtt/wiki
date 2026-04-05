@@ -16,7 +16,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.14'
 examples:
 - <sqf>vehicle player setPilotCameraOpticsMode 0</sqf>
 see_also:
