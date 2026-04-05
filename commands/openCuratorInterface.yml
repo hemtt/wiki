@@ -8,7 +8,8 @@ syntax:
     type: Nothing
 argument_loc: Unspecified
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.16'
 examples:
 - |-
   Open interface:
