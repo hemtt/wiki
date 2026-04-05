@@ -15,7 +15,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.82'
 examples:
 - <sqf>diag_lightNewLoad "o:\lighting.txt";</sqf>
 see_also:
