@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.14'
 examples:
 - "<sqf>\nif (isNull attachedTo _obj1) then\n{\n\thint \"_obj1 is not attached to anything.\";\n};\n</sqf>"
 see_also:
