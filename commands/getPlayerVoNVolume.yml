@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.00'
 examples:
 - <sqf>private _volume = getPlayerVoNVolume (units player select 1);</sqf>
 see_also:
