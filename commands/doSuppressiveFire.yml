@@ -32,7 +32,8 @@ syntax:
       since: null
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.60'
 examples:
 - <sqf>_soldier doSuppressiveFire [1869.508,5760.962,0.000];</sqf>
 - <sqf>units player doSuppressiveFire cursorTarget;</sqf>
