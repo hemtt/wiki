@@ -63,7 +63,8 @@ syntax:
     arma3: '2.14'
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '0.76'
 examples:
 - |-
   <sqf>
