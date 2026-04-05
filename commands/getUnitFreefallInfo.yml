@@ -27,7 +27,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.10'
 examples:
 - <sqf>getUnitFreefallInfo player;</sqf>
 see_also:
