@@ -19,7 +19,9 @@ syntax:
     type: Boolean
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  tkoh: '1.01'
+  arma3: '0.50'
 examples:
 - "<sqf>\nif (!isCopilotEnabled myHeli) then\n{\n\tmyHeli enableCopilot true;\n};\n</sqf>"
 see_also:
