@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.16'
 examples:
 - <sqf>(getAssignedCuratorLogic player) removeCuratorEditableObjects [allDead, true];</sqf>
 see_also:
