@@ -16,7 +16,11 @@ syntax:
     type: Position3dATL
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma2: '1.03'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>player setPosATL [getPosATL player select 0, (getPosATL player select 1) - 10, getPosATL player select 2];</sqf>
 see_also:
