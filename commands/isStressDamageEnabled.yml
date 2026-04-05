@@ -11,7 +11,8 @@ syntax:
     desc: Returns true if enabled, otherwise false
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.34'
 examples:
 - <sqf>_settingEnabled = isStressDamageEnabled;</sqf>
 see_also:
