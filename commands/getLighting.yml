@@ -28,7 +28,8 @@ syntax:
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.00'
 examples:
 - <sqf>getLighting; // returns [[0.646753,0.781818,1],28526.2,[-0.0167152,0.211598,-0.977214],0]</sqf>
 - <sqf>getLighting params ["_ambientLightColour", "_ambientLightBrightness", "_lightDirection", "_starsVisibility"];</sqf>
