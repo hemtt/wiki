@@ -37,10 +37,17 @@ syntax:
     desc: zero means non-captive, a non-zero value means [[captive]]; see [[captiveNum]]
     type: Number
   since:
-    arma2: '1.0'
+    arma2: '1.00'
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  ofp: '1.00'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - "<sqf>\n_soldier1 setCaptive true;\nside _soldier1;\t\t\t// returns civilian\nside group _soldier1;\t// returns e.g blufor\n</sqf>"
 - "<sqf>\n_soldier1 setCaptive 1;\ncaptive _soldier1;\t\t// returns true\n\n_soldier1 setCaptive 42;\ncaptive _soldier1;\t\t// returns true\n\n_soldier1 setCaptive 0;\ncaptive _soldier1;\t\t// returns false\n</sqf>"
