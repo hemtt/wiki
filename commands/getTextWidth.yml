@@ -31,7 +31,8 @@ syntax:
     default: -1 (system font size
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.98'
 examples:
 - <sqf>_textWidth = "Hello World" getTextWidth ["PuristaMedium", 0.03];</sqf>
 - <sqf>_textWidthInclMargins = ("Hello World" getTextWidth ["PuristaMedium", 0.03]) + 0.016;</sqf>
