@@ -59,7 +59,8 @@ syntax:
       since: null
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.04'
 examples:
 - <sqf>private _apertureParams = apertureParams;</sqf>
 see_also:
