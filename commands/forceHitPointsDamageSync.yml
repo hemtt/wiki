@@ -16,7 +16,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - <sqf>forceHitPointsDamageSync house1;</sqf>
 - "<sqf>\nhouse1 addEventHandler [\"HandleDamage\", \n{\n\tif (isServer && { _this select 9 == 2 }) then { (_this select 0) spawn { forceHitPointsDamageSync _this; } };\n\tif (_this select 7 find \"glass\" >= 0) then { _this select 2 } else { 0 };\n}];\n</sqf>"
