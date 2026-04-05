@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>_goggles = goggles assaultDiver; //G_Diving</sqf>
 - <sqf>_goggles = goggles reconTeamLeader; //G_Shades_Black</sqf>
