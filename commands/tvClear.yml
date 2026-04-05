@@ -17,7 +17,8 @@ syntax:
     type: Control
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.74'
 examples:
 - <sqf>tvClear 101;</sqf>
 see_also:
