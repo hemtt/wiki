@@ -16,7 +16,8 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.04'
 examples:
 - <sqf>player addItemToBackpack "arifle_MXM_Hamr_pointer_F";</sqf>
 - <sqf>player addItemToBackpack "itemGPS";</sqf>
