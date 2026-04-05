@@ -44,7 +44,11 @@ syntax:
     optional: true
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_position = getPosASL player findEmptyPosition [0, 100];</sqf>
 - <sqf>_position = _center findEmptyPosition [10,100,"UH60M_EP1"];</sqf>
