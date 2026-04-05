@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.96'
 examples:
 - <sqf>_obj setPosWorld getPosWorldVisual _obj;</sqf>
 - <sqf>_groundObj modelToWorldVisualWorld [0,0,0] isEqualTo getPosWorldVisual _groundObj; // true</sqf>
