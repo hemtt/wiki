@@ -44,7 +44,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - "<sqf>\nsetApertureNew [0.1, 0.2, 0.3, 1];\nsetApertureNew [-1];\t\t\t\t// reset to default\n</sqf>"
 - |-
