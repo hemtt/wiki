@@ -24,10 +24,11 @@ syntax:
     type: Boolean
     optional: true
   since:
-    arma3: '2.6'
+    arma3: '2.06'
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.42'
 examples:
 - <sqf>_dep = isWeaponDeployed player;</sqf>
 - <sqf>_depOnObj = isWeaponDeployed [player, false];</sqf>
