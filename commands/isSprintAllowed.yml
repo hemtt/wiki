@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.54'
 examples:
 - <sqf>if (not isSprintAllowed player) then { hint "no running in the corridors!" };</sqf>
 see_also:
