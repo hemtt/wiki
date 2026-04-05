@@ -39,7 +39,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.74'
 examples:
 - <sqf>tvSetValue [101, [0], 555];</sqf>
 - <sqf>_ctrl tvSetValue [[0,0,0], 14];</sqf>
