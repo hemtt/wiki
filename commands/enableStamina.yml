@@ -16,7 +16,8 @@ syntax:
     type: Boolean
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.54'
 examples:
 - <sqf>player enableStamina true;</sqf>
 see_also:
