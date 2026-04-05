@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - <sqf>hint str angularVelocityModelSpace myHeli; // [0.01, 0.03, 0.95]</sqf>
 see_also:
