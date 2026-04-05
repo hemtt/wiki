@@ -9,7 +9,8 @@ syntax:
     desc: returns [[true]] if radio is enabled
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.06'
 examples:
 - <sqf>if (radioEnabled) then { enableRadio false };</sqf>
 see_also:
