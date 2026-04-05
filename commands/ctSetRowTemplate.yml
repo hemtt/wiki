@@ -16,7 +16,8 @@ syntax:
     type: Config
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>_control ctSetRowTemplate _configPath;</sqf>
 see_also:
