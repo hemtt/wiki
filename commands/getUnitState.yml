@@ -24,7 +24,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - <sqf>_state = getUnitState bob; //"WAIT"</sqf>
 see_also:
