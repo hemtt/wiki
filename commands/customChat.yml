@@ -27,7 +27,8 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>_unit customChat [1, "Hi, I am a custom chat message"];</sqf>
 - |-
