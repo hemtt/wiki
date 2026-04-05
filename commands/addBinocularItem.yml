@@ -16,7 +16,8 @@ syntax:
     type: String
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '2.02'
 examples:
 - <sqf>player addBinocularItem "Laserbatteries";</sqf>
 see_also:
