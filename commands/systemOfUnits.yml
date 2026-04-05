@@ -12,7 +12,9 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_system = systemOfUnits;</sqf>
 see_also:
