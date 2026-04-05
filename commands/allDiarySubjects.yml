@@ -42,7 +42,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.04'
 examples:
 - <sqf>allDiarySubjects player;</sqf>
 see_also:
