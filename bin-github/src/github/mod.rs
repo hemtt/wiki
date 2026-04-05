@@ -2,8 +2,6 @@ use std::process::Command;
 
 use octocrab::{models::pulls::PullRequest, Octocrab};
 
-use crate::{REPO_NAME, REPO_ORG};
-
 mod issues;
 
 pub use issues::Issues;
