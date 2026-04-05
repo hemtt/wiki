@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - <sqf>if (getLeaning player < 0) then { systemChat "player is leaning left" };</sqf>
 see_also:
