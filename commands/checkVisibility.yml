@@ -57,7 +57,8 @@ syntax:
     type: Position3dASL
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>private _canSee = [objNull, "VIEW"] checkVisibility [eyePos player, eyePos unit1];</sqf>
 see_also:
