@@ -45,21 +45,21 @@ async fn main() {
         }
     }
 
-    for (command, reasons) in report.failed_commands() {
-        match issues
-            .failed_command_create(&github, command, reasons)
-            .await
-        {
-            Err(e) => {
-                println!("Failed to create issue for {command}: {e}");
-                failed = true;
-            }
-            Ok(Some(_)) => {
-                println!("Created / Updated issue for {command}");
-            }
-            _ => (),
-        }
-    }
+    // for (command, reasons) in report.failed_commands() {
+    //     match issues
+    //         .failed_command_create(&github, command, reasons)
+    //         .await
+    //     {
+    //         Err(e) => {
+    //             println!("Failed to create issue for {command}: {e}");
+    //             failed = true;
+    //         }
+    //         Ok(Some(_)) => {
+    //             println!("Created / Updated issue for {command}");
+    //         }
+    //         _ => (),
+    //     }
+    // }
 
     for (ns, handlers) in report.passed_event_handlers() {
         let ns = ns.to_string();
@@ -85,25 +85,25 @@ async fn main() {
         }
     }
 
-    for (ns, handlers) in report.failed_event_handlers() {
-        let ns = ns.to_string();
-        for handler in handlers {
-            let handler = handler.id();
-            match issues
-                .failed_event_handler_create(&github, &ns, handler, "Unknown Error")
-                .await
-            {
-                Err(e) => {
-                    println!("Failed to create issue for {ns}::{handler}: {e}");
-                    failed = true;
-                }
-                Ok(Some(_)) => {
-                    println!("Created / Updated issue for {ns}::{handler}");
-                }
-                _ => (),
-            }
-        }
-    }
+    // for (ns, handlers) in report.failed_event_handlers() {
+    //     let ns = ns.to_string();
+    //     for handler in handlers {
+    //         let handler = handler.id();
+    //         match issues
+    //             .failed_event_handler_create(&github, &ns, handler, "Unknown Error")
+    //             .await
+    //         {
+    //             Err(e) => {
+    //                 println!("Failed to create issue for {ns}::{handler}: {e}");
+    //                 failed = true;
+    //             }
+    //             Ok(Some(_)) => {
+    //                 println!("Created / Updated issue for {ns}::{handler}");
+    //             }
+    //             _ => (),
+    //         }
+    //     }
+    // }
 
     if failed {
         std::process::exit(1);
