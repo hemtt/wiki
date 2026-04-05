@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>_pilotCamPos = getPilotCameraPosition vehicle player;</sqf>
 see_also:
