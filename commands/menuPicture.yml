@@ -28,7 +28,8 @@ syntax:
     type: TreeViewPath
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>private _picturePath = (findDisplay 313 displayCtrl 120) menuPicture [0, 1];</sqf>
 see_also:
