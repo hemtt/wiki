@@ -11,7 +11,8 @@ syntax:
     type: Side
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofp: '1.75'
 examples:
 - '<sqs>? _side == enemy : hint "ouch"</sqs>'
 see_also:
