@@ -17,7 +17,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>position player getEnvSoundController "trees"; //0.3333</sqf>
 see_also:
