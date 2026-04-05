@@ -82,7 +82,8 @@ syntax:
     type: String
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.20'
 examples:
 - <sqf>_control ctrlWebBrowserAction ["OpenDataAsURL", loadFile "example.html"];</sqf>
 see_also:
