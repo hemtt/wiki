@@ -28,7 +28,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>Mortar commandArtilleryFire [[3000, 120, 1000], "8Rnd_82mm_Mo_shells", 3];</sqf>
 see_also:
