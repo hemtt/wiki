@@ -84,19 +84,20 @@ syntax:
       default: null
       desc: unique squad ID
       since:
-        arma3: '2.6'
+        arma3: '2.06'
     - name: a3unitsId
       type: String
       default: null
       desc: unique {{arma3}} Units  ID
       since:
-        arma3: '2.6'
+        arma3: '2.06'
   right: !Item
     name: unit
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.18'
 examples:
 - <sqf>_info = squadParams player;</sqf>
 - <sqf>squadParams player params ["_squadInfo", "_memberInfo", "_squadID", "_a3unitsID"];</sqf>
