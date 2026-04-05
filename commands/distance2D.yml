@@ -21,7 +21,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.50'
 examples:
 - <sqf>_meters = player distance2D heli;</sqf>
 see_also:
