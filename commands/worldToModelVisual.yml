@@ -20,7 +20,8 @@ syntax:
     type: Position3dAGL
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.32'
 examples:
 - <sqf>_relPos = myObject worldToModelVisual [0,0,0];</sqf>
 - <sqf>_relPos = player worldToModelVisual position car;</sqf>
