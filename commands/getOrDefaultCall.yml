@@ -34,7 +34,8 @@ syntax:
     default: 'false'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.12'
 examples:
 - <sqf>_hashmap getOrDefaultCall [123, { systemChat "The key 123 does not exist and will be created and assigned 345"; 345 }, true];</sqf>
 see_also:
