@@ -51,7 +51,8 @@ syntax:
     default: <sqf inline>[]</sqf>
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>vehicle player setPylonLoadout ["pylon1", ""];</sqf>
 - "Make all of your pylon weapons Twin Cannon 30 mm:\n<sqf>\nprivate _vehicle = vehicle player;\nprivate _pylonsIndices = getAllPylonsInfo _vehicle select { _x select 0 };\n{\n\t_vehicle setPylonLoadout [_x, \"PylonWeapon_300Rnd_20mm_shells\", true];\n} forEach _pylonsIndices;\n</sqf>"
