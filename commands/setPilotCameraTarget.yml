@@ -17,7 +17,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>_pilotCamTrack = vehicle player setPilotCameraTarget [2100,4200,4.2];</sqf>
 - <sqf>_pilotCamTrack = vehicle player setPilotCameraTarget BIS_Edita;</sqf>
