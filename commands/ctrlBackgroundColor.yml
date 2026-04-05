@@ -11,7 +11,8 @@ syntax:
     type: Control
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.06'
 examples:
 - <sqf>ctrlBackgroundColor _control;</sqf>
 see_also:
