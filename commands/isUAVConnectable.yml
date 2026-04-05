@@ -23,7 +23,8 @@ syntax:
     type: Boolean
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.24'
 examples:
 - <sqf>private _canConnect = myUnit isUAVConnectable [myUav, true];</sqf>
 see_also:
