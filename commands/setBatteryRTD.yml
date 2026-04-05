@@ -18,7 +18,8 @@ syntax:
     type: Boolean
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.00'
 examples:
 - <sqf>(vehicle player) setBatteryRTD false;</sqf>
 see_also:
