@@ -19,7 +19,8 @@ syntax:
     type: Vector3d
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '2.18'
 examples:
 - <sqf>myHeli setAngularVelocity [0,0,1]; // will cause the helicopter to spin around a vertical line passing through its center</sqf>
 see_also:
