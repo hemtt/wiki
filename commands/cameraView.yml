@@ -8,7 +8,11 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - "<sqf>\nif (cameraOn == _vehicle && cameraView == \"EXTERNAL\") then\n{\n\t_vehicle switchCamera \"INTERNAL\";\n};\n</sqf>"
 see_also:
