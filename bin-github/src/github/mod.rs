@@ -46,7 +46,7 @@ impl GitHub {
 }
 
 impl GitHub {
-    pub async fn command_commit(&self, command: &str) -> Result<Option<PullRequest>, String> {
+    pub fn command_commit(&self, command: &str) -> Result<Option<PullRequest>, String> {
         if std::env::var("CI").is_err() {
             println!("Local, Skipping commit for {command}");
             return Ok(None);
@@ -65,7 +65,7 @@ impl GitHub {
         Ok(None)
     }
 
-    pub async fn event_handler_commit(
+    pub fn event_handler_commit(
         &self,
         ns: &str,
         handler: &str,
@@ -85,7 +85,7 @@ impl GitHub {
         Ok(None)
     }
 
-    pub async fn version_commit(&self, version: &str) {
+    pub fn version_commit(&self) {
         if std::env::var("CI").is_err() {
             println!("Local, Skipping commit for version");
             return;
