@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.82'
 examples:
 - <sqf>if (getPlateNumber vehicle player != "H4X0RZ") then { hint "u no 1337 bro" };</sqf>
 see_also:
