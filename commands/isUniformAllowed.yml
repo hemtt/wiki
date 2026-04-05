@@ -16,7 +16,8 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.22'
 examples:
 - <sqf>_canUse = _unit isUniformAllowed "U_B_CombatUniform_mcam";</sqf>
 see_also:
