@@ -77,10 +77,11 @@ syntax:
     desc: when [[true]] only vehicle's turrets are queried
     type: Boolean
   since:
-    arma3: '2.8'
+    arma3: '2.08'
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.52'
 examples:
 - <sqf>_mags = magazinesAllTurrets vehicle player;</sqf>
 - <sqf>_mags = magazinesAllTurrets [vehicle player, true];</sqf>
