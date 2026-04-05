@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.54'
 examples:
 - <sqf>_coef = getCustomAimCoef player;</sqf>
 see_also:
