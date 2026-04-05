@@ -34,7 +34,9 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.01'
+  arma3: '0.50'
 examples:
 - <sqf>setTrafficGap [50, 31000, 32500, 28000, 32000];</sqf>
 see_also:
