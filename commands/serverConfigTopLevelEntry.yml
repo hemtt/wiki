@@ -15,7 +15,8 @@ syntax:
 argument_loc: Unspecified
 effect_loc: Unspecified
 server_exec: true
-since: {}
+since:
+  argo: '1.00'
 examples:
 - <sqf>_kickDupes = getNumber serverConfigTopLevelEntry "kickDuplicate" != 0;</sqf>
 see_also:
