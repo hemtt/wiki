@@ -12,7 +12,8 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>edit3DENMissionAttributes "Multiplayer";</sqf>
 see_also:
