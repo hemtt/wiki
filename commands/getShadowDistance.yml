@@ -9,7 +9,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.00'
 examples:
 - <sqf>_value = getShadowDistance;</sqf>
 see_also:
