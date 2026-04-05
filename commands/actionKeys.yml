@@ -27,10 +27,16 @@ syntax:
     name: userAction
     type: String
   since:
-    arma3: '2.8'
+    arma3: '2.08'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_arrayOfNumbers = actionKeys "ReloadMagazine";</sqf>
 - 'From {{arma3}} v2.08: <sqf>_arrayOfStrings = actionKeys ["ReloadMagazine"];</sqf>'
