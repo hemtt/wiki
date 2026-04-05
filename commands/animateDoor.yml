@@ -28,7 +28,8 @@ syntax:
     default: 'false'
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>Taru animateDoor ["Door_1_source", 1];</sqf>
 - |-
