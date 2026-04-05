@@ -16,7 +16,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.50'
 examples:
 - <sqf>myLight setLightFlareSize 5;</sqf>
 see_also:
