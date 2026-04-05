@@ -35,7 +35,8 @@ syntax:
     type: Position3dRelative
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.02'
 examples:
 - <sqf>myObject setCenterOfMass [[0,-1,0], 0.5];</sqf>
 - <sqf>myObject setCenterOfMass [0,-1,0];</sqf>
