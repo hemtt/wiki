@@ -13,7 +13,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.08'
 examples:
 - "<sqf>\nif !(isAllowedCrewInImmobile _tank) then\n{\n\t_tank allowCrewInImmobile true;\n};\n</sqf>"
 see_also:
