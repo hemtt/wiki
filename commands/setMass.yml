@@ -32,7 +32,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.02'
 examples:
 - <sqf>myObject setMass [10, 0.5];</sqf>
 - <sqf>myObject setMass 10;</sqf>
