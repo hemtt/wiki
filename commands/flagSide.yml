@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.54'
 examples:
 - <sqf>_flagSide =  flagSide aFlag;</sqf>
 see_also:
