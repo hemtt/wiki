@@ -39,7 +39,8 @@ syntax:
     type: Anything
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - "<sqf>\nprivate _respawnDelay = getMissionConfigValue [\"respawnDelay\", 0];\t\t\t// returns the real, defined respawn delay value\nprivate _respawnDelay = getNumber (missionConfigFile >> \"respawnDelay\");\t// old approach, ignoring the Eden Editor-set value\n</sqf>"
 see_also:
