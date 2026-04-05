@@ -80,7 +80,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.10'
 examples:
 - "<sqf>private _info = player getEventHandlerInfo [\"MPKilled\", 1];\t\t\t// object EH</sqf>"
 - "<sqf>private _info = getEventHandlerInfo [\"EachFrame\", 0];\t\t\t\t// mission EH</sqf>"
