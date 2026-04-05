@@ -11,7 +11,8 @@ syntax:
     type: Display
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.58'
 examples:
 - '<sqf>_display = displayParent findDisplay 49; // Display #46</sqf>'
 see_also:
