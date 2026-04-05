@@ -10,7 +10,8 @@ syntax:
     type: Side
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofp: '1.78'
 examples:
 - '<sqs>?_side == friendly : hint "Hey buddy!"</sqs>'
 see_also:
