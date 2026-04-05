@@ -20,7 +20,8 @@ syntax:
     type: Position3dASL
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.68'
 examples:
 - <sqf>_posASL = terrainIntersectAtASL [eyePos player, getPosASL chopper];</sqf>
 see_also:
