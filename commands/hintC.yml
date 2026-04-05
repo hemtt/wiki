@@ -28,7 +28,14 @@ syntax:
     type: String
 argument_loc: Unspecified
 effect_loc: Local
-since: {}
+since:
+  ofp: '1.00'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>hintC "Press W to move forward";</sqf>
 - "Same as the above in {{arma3}} but without second [[hint]] displayed:<br>[[File:HintC.jpg|400px|right]]\n<sqf>\nhintC \"Press W to move forward\";\nhintC_EH = findDisplay 57 displayAddEventHandler [\"Unload\", {\n\t_this spawn {\n\t\t_this select 0 displayRemoveEventHandler [\"Unload\", hintC_EH];\n\t\thintSilent \"\";\n\t};\n}];\n</sqf>"
