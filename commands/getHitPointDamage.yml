@@ -21,7 +21,9 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>vehicle player getHitPointDamage "hitEngine";</sqf>
 see_also:
