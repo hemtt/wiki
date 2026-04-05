@@ -23,6 +23,7 @@
     "setLightBrightness",
     "setLightDayLight"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

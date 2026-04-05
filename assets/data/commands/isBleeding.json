@@ -16,6 +16,7 @@
     "isBurning",
     "setBleedingRemaining"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

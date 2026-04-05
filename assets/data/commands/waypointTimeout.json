@@ -15,6 +15,7 @@
     "waypoints",
     "setWaypointTimeout"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

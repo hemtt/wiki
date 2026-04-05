@@ -25,6 +25,7 @@
     "toLowerANSI",
     "toUpperANSI"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

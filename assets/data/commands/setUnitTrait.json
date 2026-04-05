@@ -15,6 +15,7 @@
     "getUnitTrait",
     "getAllUnitTraits"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

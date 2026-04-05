@@ -17,6 +17,7 @@
     "isLightOn",
     "isCollisionLightOn"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

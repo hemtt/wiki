@@ -25,6 +25,7 @@
     "doArtilleryFire",
     "isManualFire"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -18,6 +18,7 @@
     "setMousePosition",
     "getMousePosition"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

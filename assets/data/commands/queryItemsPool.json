@@ -21,6 +21,7 @@
     "Pool",
     "queryWeaponPool"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

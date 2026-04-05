@@ -30,6 +30,7 @@
     "setWaypointType",
     "setWaypointVisible"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

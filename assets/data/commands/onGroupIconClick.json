@@ -27,6 +27,7 @@
     "onGroupIconOverEnter",
     "onGroupIconOverLeave"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

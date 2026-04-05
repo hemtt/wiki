@@ -17,6 +17,7 @@
     "posScreenToWorld",
     "ctrlMapWorldToScreen"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

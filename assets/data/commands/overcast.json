@@ -16,6 +16,7 @@
     "setOvercast",
     "nextWeatherChange"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

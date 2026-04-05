@@ -17,6 +17,7 @@
     "enableAI",
     "checkAIFeature"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

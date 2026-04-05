@@ -23,6 +23,7 @@
     "infoPanelComponents",
     "enableInfoPanelComponent"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

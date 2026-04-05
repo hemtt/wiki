@@ -15,6 +15,7 @@
     "createDiaryRecord",
     "removeDiarySubject"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

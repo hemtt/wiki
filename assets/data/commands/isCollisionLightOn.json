@@ -18,6 +18,7 @@
     "setCollisionLight",
     "isIRLaserOn"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

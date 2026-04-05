@@ -24,6 +24,7 @@
     "getEntityInfo",
     "getModelInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

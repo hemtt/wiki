@@ -20,6 +20,7 @@
     "addEventHandler",
     "removeMissionEventHandler"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

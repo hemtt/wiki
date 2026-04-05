@@ -18,6 +18,7 @@
     "createDiarySubject",
     "diarySubjectExists"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

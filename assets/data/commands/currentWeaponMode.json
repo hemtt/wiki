@@ -16,6 +16,7 @@
     "ArmA:_Actions#SWITCHWEAPON|SWITCHWEAPON",
     "currentWeapon"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

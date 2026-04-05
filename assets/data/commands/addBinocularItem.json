@@ -24,6 +24,7 @@
     "secondaryWeaponItems",
     "handgunItems"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

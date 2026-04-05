@@ -19,6 +19,7 @@
     "UAVControl",
     "connectTerminalToUAV"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

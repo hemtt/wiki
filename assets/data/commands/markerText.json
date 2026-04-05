@@ -15,6 +15,7 @@
     "setMarkerText",
     "setMarkerTextLocal"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

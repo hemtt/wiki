@@ -19,6 +19,7 @@
     "playMusic",
     "removeAllMusicEventHandlers"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

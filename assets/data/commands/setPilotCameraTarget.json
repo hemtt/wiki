@@ -21,6 +21,7 @@
     "setPilotCameraDirection",
     "setPilotCameraRotation"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

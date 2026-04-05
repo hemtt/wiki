@@ -18,6 +18,7 @@
     "assignedVehicleRole",
     "weaponState"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -22,6 +22,7 @@
     "setMusicEffect",
     "setTitleEffect"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

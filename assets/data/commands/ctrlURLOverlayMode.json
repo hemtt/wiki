@@ -16,6 +16,7 @@
     "ctrlURL",
     "isSteamOverlayEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

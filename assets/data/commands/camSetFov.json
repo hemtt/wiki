@@ -16,6 +16,7 @@
     "camSetFovRange",
     "camSetTarget"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

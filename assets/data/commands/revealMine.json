@@ -18,6 +18,7 @@
     "createMine",
     "mineActive"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

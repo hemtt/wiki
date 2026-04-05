@@ -17,6 +17,7 @@
     "publicVariableClient",
     "addPublicVariableEventHandler"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

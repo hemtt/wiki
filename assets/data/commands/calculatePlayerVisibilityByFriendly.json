@@ -15,6 +15,7 @@
     "getCalculatePlayerVisibilityByFriendly",
     "knowsAbout"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

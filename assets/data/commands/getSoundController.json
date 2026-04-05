@@ -23,6 +23,7 @@
     "setCustomSoundController",
     "getCustomSoundControllerCount"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

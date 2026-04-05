@@ -16,6 +16,7 @@
     "commander",
     "vehicleMoveInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

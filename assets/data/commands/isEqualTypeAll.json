@@ -24,6 +24,7 @@
     "isEqualTo",
     "typeName"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

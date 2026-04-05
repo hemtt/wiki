@@ -32,6 +32,7 @@
     "action",
     "enableWeaponDisassembly"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

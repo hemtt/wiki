@@ -28,6 +28,7 @@
     "select",
     "getTextRaw"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -26,6 +26,7 @@
     "isGamePaused",
     "isGameFocused"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

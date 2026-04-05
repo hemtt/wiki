@@ -24,6 +24,7 @@
     "getTurretOpticsMode",
     "setTurretOpticsMode"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -23,6 +23,7 @@
     "setLightFlareMaxDistance",
     "setLightBrightness"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -19,6 +19,7 @@
     "setFatigue",
     "getFatigue"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

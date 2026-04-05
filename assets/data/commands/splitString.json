@@ -43,6 +43,7 @@
     "{{Link|http://www.cplusplus.com/reference/cstring/strtok/|strtok",
     "(C++)}}"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

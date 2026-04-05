@@ -19,6 +19,7 @@
     "setVehiclePosition",
     "Position#setPosAGLS|setPosAGLS"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

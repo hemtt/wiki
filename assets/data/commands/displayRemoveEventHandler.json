@@ -18,6 +18,7 @@
     "displayAddEventHandler",
     "displayRemoveAllEventHandlers"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

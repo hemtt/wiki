@@ -18,6 +18,7 @@
     "deleteMarker",
     "customWaypointPosition"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

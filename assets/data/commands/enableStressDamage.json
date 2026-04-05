@@ -18,6 +18,7 @@
     "difficultyEnabledRTD",
     "isStressDamageEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

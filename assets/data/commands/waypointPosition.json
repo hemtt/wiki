@@ -20,6 +20,7 @@
     "waypointHousePosition",
     "setWPPos"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

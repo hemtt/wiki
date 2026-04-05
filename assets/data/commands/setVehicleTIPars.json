@@ -16,6 +16,7 @@
     "disableTIEquipment",
     "setCamUseTI"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

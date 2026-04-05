@@ -24,6 +24,7 @@
     "brakesDisabled",
     "getModelInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -126,7 +127,7 @@
               "name": "customCenter",
               "optional": true,
               "since": {
-                "arma3": "2.8"
+                "arma3": "2.08"
               },
               "type": "Position3dRelative"
             }

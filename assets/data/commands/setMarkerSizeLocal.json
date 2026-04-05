@@ -30,6 +30,7 @@
     "setMarkerType",
     "setMarkerTypeLocal"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

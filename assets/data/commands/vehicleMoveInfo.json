@@ -22,6 +22,7 @@
     "getUnitState",
     "enableAIFeature"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

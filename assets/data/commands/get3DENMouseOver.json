@@ -42,6 +42,7 @@
     "set3DENLinesVisible",
     "set3DENObjectType"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

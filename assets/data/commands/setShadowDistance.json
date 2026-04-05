@@ -16,6 +16,7 @@
     "getShadowDistance",
     "isPipEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -21,6 +21,7 @@
     "getHitIndex",
     "setHitIndex"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

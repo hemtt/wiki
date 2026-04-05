@@ -15,6 +15,7 @@
     "useAISteeringComponent",
     "isUsingAISteeringComponent"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

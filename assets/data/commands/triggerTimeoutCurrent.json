@@ -16,6 +16,7 @@
     "setTriggerTimeout",
     "waypointTimeoutCurrent"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -15,6 +15,7 @@
     "setVehicleInit",
     "processInitCommands"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

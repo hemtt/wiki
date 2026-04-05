@@ -21,6 +21,7 @@
     "drawTriangle",
     "drawXPolygon"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

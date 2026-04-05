@@ -27,6 +27,7 @@
     "nearestTerrainObjects",
     "nearestMines"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

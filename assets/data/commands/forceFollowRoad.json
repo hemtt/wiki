@@ -17,6 +17,7 @@
     "setDriveOnPath",
     "useAISteeringComponent"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

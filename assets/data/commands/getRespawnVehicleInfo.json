@@ -19,6 +19,7 @@
     "playerRespawnTime]],",
     "getEntityInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

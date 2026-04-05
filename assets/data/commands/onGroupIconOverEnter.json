@@ -18,6 +18,7 @@
     "groupIconSelectable",
     "setGroupIconsSelectable"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

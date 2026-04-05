@@ -18,6 +18,7 @@
     "regexFind",
     "regexReplace"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

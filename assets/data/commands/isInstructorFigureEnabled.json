@@ -15,6 +15,7 @@
     "isStreamFriendlyUIEnabled",
     "isTutHintsEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

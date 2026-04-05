@@ -15,6 +15,7 @@
     "setBatteryChargeRTD",
     "setBatteryRTD"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

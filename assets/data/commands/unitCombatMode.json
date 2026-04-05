@@ -16,6 +16,7 @@
     "setCombatMode",
     "combatMode"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

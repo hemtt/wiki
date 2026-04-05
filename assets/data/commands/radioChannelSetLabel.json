@@ -18,6 +18,7 @@
     "radioChannelRemove",
     "radioChannelSetCallSign"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

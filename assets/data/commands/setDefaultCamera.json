@@ -27,6 +27,7 @@
     "preloadCamera",
     "restartEditorCamera"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

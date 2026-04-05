@@ -24,6 +24,7 @@
     "cursorTarget",
     "disableRemoteSensors"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

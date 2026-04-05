@@ -17,6 +17,7 @@
     "ctrlTextSelection",
     "ctrlSetTextSelection"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

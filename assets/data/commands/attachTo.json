@@ -32,6 +32,7 @@
     "modelToWorld",
     "BIS_fnc_transformVectorDirAndUp"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -100,7 +101,7 @@
               "name": "followBoneRotation",
               "optional": true,
               "since": {
-                "arma3": "2.2"
+                "arma3": "2.02"
               },
               "type": "Boolean"
             }

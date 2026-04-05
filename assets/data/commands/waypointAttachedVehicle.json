@@ -21,6 +21,7 @@
     "triggerAttachVehicle",
     "attachedObject"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

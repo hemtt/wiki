@@ -25,6 +25,7 @@
     "setPylonLoadout",
     "magazinesAllTurrets"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -15,6 +15,7 @@
     "getConnectedUAV",
     "isUAVConnected"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

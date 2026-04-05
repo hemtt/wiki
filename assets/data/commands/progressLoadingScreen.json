@@ -16,6 +16,7 @@
     "endLoadingScreen",
     "BIS_fnc_progressLoadingScreen"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

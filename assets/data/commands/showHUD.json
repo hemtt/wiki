@@ -24,6 +24,7 @@
     "showCompass",
     "showPad"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -159,7 +160,7 @@
               "name": "showIcon3D",
               "optional": true,
               "since": {
-                "arma3": "2.4"
+                "arma3": "2.04"
               },
               "type": "Boolean"
             }

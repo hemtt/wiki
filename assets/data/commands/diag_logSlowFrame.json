@@ -21,6 +21,7 @@
     "chat",
     "commands"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

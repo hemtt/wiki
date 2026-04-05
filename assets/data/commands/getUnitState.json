@@ -19,6 +19,7 @@
     "vehicleMoveInfo",
     "expectedDestination"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

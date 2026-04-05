@@ -21,6 +21,7 @@
     "waypoints",
     "setWaypointType"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

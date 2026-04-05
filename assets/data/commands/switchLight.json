@@ -17,6 +17,7 @@
     "lightIsOn",
     "BIS_fnc_switchLamp"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -19,6 +19,7 @@
     "removeCuratorEditableObjects",
     "curatorEditableObjects"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

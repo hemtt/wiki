@@ -20,6 +20,7 @@
     "lnbGetColumnsPosition",
     "lnbSetColumnsPos"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

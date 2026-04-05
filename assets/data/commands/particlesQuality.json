@@ -19,6 +19,7 @@
     "setParticleClass",
     "setParticleFire"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

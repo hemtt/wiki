@@ -17,6 +17,7 @@
     "lbSelection",
     "lbSetCurSel"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

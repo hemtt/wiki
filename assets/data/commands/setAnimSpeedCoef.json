@@ -19,6 +19,7 @@
     "getAnimSpeedCoef",
     "setAccTime"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

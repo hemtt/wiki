@@ -23,6 +23,7 @@
     "setLightFlareMaxDistance",
     "setLightDayLight"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -18,6 +18,7 @@
     "addCuratorEditableObjects",
     "curatorEditableObjects"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

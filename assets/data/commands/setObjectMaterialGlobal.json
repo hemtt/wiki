@@ -18,6 +18,7 @@
     "setObjectMaterial",
     "getObjectMaterials"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

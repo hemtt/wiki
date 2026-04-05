@@ -26,6 +26,7 @@
     "assignAsGunner",
     "ArmA:_Actions#GetInTurret|GetInTurret"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

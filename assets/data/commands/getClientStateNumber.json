@@ -16,6 +16,7 @@
     "getClientState",
     "getPlayerUID"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

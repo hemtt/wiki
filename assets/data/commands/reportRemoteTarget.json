@@ -20,6 +20,7 @@
     "vehicleReportOwnPosition",
     "setVehicleReportOwnPosition"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

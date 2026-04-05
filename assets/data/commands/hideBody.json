@@ -16,6 +16,7 @@
     "setDamage",
     "addToRemainsCollector"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

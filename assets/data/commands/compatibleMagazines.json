@@ -20,6 +20,7 @@
     "BIS_fnc_compatibleMagazines",
     "canAdd"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

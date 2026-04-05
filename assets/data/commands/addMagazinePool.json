@@ -15,6 +15,7 @@
     "clearMagazinePool",
     "queryMagazinePool"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

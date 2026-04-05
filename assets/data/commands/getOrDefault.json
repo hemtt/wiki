@@ -18,6 +18,7 @@
     "HashMap",
     "get"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -65,7 +66,7 @@
               "name": "setDefault",
               "optional": true,
               "since": {
-                "arma3": "2.4"
+                "arma3": "2.04"
               },
               "type": "Boolean"
             }

@@ -17,6 +17,7 @@
     "setSpeaker",
     "hasCustomFace"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

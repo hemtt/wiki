@@ -16,6 +16,7 @@
     "canMove",
     "canFire"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

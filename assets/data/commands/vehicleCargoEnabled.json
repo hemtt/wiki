@@ -28,6 +28,7 @@
     "getVehicleCargo",
     "isVehicleCargo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

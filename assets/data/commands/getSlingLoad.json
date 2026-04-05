@@ -30,6 +30,7 @@
     "setSlingLoad",
     "slingLoadAssistantShown"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -19,6 +19,7 @@
     "environmentVolume",
     "getAudioOptionVolumes"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

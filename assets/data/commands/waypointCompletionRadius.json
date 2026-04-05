@@ -15,6 +15,7 @@
     "waypoints",
     "setWaypointCompletionRadius"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

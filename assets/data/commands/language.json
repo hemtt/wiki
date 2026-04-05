@@ -19,6 +19,7 @@
     "diag_localized",
     "BIS_fnc_localize"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

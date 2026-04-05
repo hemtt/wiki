@@ -18,6 +18,7 @@
     "isForcedWalk",
     "getSpeed"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

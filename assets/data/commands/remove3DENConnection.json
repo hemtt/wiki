@@ -15,6 +15,7 @@
     "add3DENConnection",
     "get3DENConnections"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

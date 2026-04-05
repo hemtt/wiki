@@ -17,6 +17,7 @@
     "sliderSetPosition",
     "progressSetPosition"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -20,6 +20,7 @@
     "viewDistance",
     "getObjectViewDistance"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

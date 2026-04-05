@@ -20,6 +20,7 @@
     "removeAllCuratorCameraAreas",
     "curatorCameraArea"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

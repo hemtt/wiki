@@ -16,6 +16,7 @@
     "enableFatigue",
     "getStamina"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

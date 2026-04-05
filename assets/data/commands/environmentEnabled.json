@@ -22,6 +22,7 @@
     "getEnvSoundController",
     "setSoundEffect"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

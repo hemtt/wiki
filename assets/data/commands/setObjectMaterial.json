@@ -18,6 +18,7 @@
     "setObjectTexture",
     "setObjectMaterialGlobal"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

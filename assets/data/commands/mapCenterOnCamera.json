@@ -16,6 +16,7 @@
     "ctrlMapAnimCommit",
     "getPosWorld"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

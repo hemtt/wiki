@@ -25,6 +25,7 @@
     "hcShowBar",
     "onHCGroupSelectionChanged"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

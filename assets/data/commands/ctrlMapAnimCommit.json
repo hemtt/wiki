@@ -20,6 +20,7 @@
     "ctrlMapAnimClear",
     "ctrlMapAnimDone"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

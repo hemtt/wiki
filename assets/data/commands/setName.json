@@ -20,6 +20,7 @@
     "setNameSound",
     "setIdentity"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -89,7 +90,7 @@
         ]
       },
       "since": {
-        "arma3": "1.2"
+        "arma3": "1.02"
       }
     }
   ]

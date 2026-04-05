@@ -17,6 +17,7 @@
     "isObjectRTD",
     "Description.ext#forceRotorLibSimulation|forceRotorLibSimulation"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

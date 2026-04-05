@@ -15,6 +15,7 @@
     "getPlayerLevel",
     "isPlayerSupporter"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

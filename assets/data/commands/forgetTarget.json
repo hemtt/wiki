@@ -22,6 +22,7 @@
     "getHideFrom",
     "targetKnowledge"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

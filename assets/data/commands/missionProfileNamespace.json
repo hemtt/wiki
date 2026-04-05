@@ -18,6 +18,7 @@
     "saveMissionProfileNamespace",
     "isMissionProfileNamespaceLoaded"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

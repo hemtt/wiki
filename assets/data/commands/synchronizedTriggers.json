@@ -16,6 +16,7 @@
     "synchronizeObjectsRemove",
     "synchronizedWaypoints"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

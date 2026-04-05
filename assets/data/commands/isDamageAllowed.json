@@ -16,6 +16,7 @@
     "setDamage",
     "setHit"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -21,6 +21,7 @@
     "enableAIFeature",
     "enableSentences"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -18,6 +18,7 @@
     "camSetTarget",
     "getCameraViewDirection"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

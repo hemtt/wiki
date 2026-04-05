@@ -23,6 +23,7 @@
     "deleteAt",
     "deleteRange"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -108,7 +109,7 @@
               "name": "insertOnly",
               "optional": true,
               "since": {
-                "arma3": "2.8"
+                "arma3": "2.08"
               },
               "type": "Boolean"
             }
@@ -116,7 +117,7 @@
         ]
       },
       "since": {
-        "arma3": "2.2"
+        "arma3": "2.02"
       }
     }
   ]

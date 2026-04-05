@@ -16,6 +16,7 @@
     "ctrlModelScale",
     "ctrlSetModelScale"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

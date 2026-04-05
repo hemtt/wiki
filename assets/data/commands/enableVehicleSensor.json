@@ -15,6 +15,7 @@
     "listVehicleSensors",
     "isVehicleSensorEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

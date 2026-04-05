@@ -15,6 +15,7 @@
     "isWeaponDeployed",
     "canDeployWeapon"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

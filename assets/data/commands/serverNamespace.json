@@ -19,6 +19,7 @@
     "getVariable",
     "allVariables"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

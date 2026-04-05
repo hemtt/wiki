@@ -17,6 +17,7 @@
     "getObjectType",
     "getResolution"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

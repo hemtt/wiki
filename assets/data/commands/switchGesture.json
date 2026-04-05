@@ -17,6 +17,7 @@
     "getUnitMovesInfo",
     "switchMove"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

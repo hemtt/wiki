@@ -16,6 +16,7 @@
     "ctrlSetTooltipColorBox",
     "ctrlSetTooltipColorText"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

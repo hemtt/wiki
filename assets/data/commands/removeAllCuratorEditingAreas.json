@@ -19,6 +19,7 @@
     "removeCuratorEditingArea",
     "curatorEditingArea"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

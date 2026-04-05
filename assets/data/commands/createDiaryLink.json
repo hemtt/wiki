@@ -19,6 +19,7 @@
     "diarySubjectExists",
     "setDiaryRecordText"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

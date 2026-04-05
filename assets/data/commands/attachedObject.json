@@ -21,6 +21,7 @@
     "lightAttachObject",
     "triggerAttachVehicle"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

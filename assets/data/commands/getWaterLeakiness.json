@@ -16,6 +16,7 @@
     "setWaterFillPercentage",
     "getWaterFillPercentage"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -23,8 +24,13 @@
         "Unary": "obj"
       },
       "ret": {
-        "desc": "in range 0..1 where 0 is waterproof and 1 is full leak",
-        "type": "Number"
+        "desc": "0 is waterproof and 1 is full leak",
+        "type": {
+          "NumberRange": [
+            0,
+            1
+          ]
+        }
       },
       "right": {
         "Item": {

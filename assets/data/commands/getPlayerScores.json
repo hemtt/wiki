@@ -18,6 +18,7 @@
     "addScoreSide",
     "addPlayerScores"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

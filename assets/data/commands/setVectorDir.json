@@ -32,6 +32,7 @@
     "vectorNormalized",
     "vectorFromTo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

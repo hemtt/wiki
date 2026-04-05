@@ -17,6 +17,7 @@
     "gearSlotAmmoCount",
     "gearIDCAmmoCount"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

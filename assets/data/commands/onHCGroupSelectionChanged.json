@@ -29,6 +29,7 @@
     "hcShownBar",
     "onCommandModeChanged"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

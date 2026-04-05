@@ -15,6 +15,7 @@
     "isInstructorFigureEnabled",
     "isTutHintsEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

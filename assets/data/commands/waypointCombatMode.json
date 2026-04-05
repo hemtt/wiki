@@ -17,6 +17,7 @@
     "waypoints",
     "setWaypointCombatMode"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

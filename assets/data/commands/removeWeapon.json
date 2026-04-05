@@ -18,6 +18,7 @@
     "addWeapon",
     "removeAllWeapons"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

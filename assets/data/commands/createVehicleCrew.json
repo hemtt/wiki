@@ -21,6 +21,7 @@
     "moveInCargo",
     "BIS_fnc_spawnVehicle"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

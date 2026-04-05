@@ -27,6 +27,7 @@
     "ctrlSetModelDirAndUp",
     "displayParent"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -66,7 +67,7 @@
         }
       },
       "since": {
-        "arma3": "2.6"
+        "arma3": "2.06"
       }
     }
   ]

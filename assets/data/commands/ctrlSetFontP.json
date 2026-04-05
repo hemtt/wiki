@@ -16,6 +16,7 @@
     "ctrlSetFontHeightSecondary",
     "ctrlSetFontSecondary"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

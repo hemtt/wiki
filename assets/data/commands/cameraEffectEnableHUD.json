@@ -23,6 +23,7 @@
     "camCreate",
     "cameraEffect"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

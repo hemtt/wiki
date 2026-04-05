@@ -17,6 +17,7 @@
     "setDiaryRecordText",
     "Diary"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

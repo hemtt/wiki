@@ -20,6 +20,7 @@
     "UAVControl",
     "enableCopilot"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

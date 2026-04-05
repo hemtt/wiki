@@ -18,6 +18,7 @@
     "directionStabilizationEnabled",
     "lockCameraTo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -21,6 +21,7 @@
     "isUAVConnected",
     "BIS_fnc_liveFeed"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

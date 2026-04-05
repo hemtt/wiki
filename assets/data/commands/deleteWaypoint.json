@@ -21,6 +21,7 @@
     "setWaypointType",
     "addWaypoint"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

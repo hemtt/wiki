@@ -19,6 +19,7 @@
     "getMissionConfig",
     "getMissionPath"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -16,6 +16,7 @@
     "getUserInfo",
     "getModelInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

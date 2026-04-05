@@ -20,6 +20,7 @@
     "moveToFailed",
     "addWaypoint"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

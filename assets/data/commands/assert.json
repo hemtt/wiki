@@ -21,6 +21,7 @@
     "diag_captureSlowFrame",
     "diag_logSlowFrame"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

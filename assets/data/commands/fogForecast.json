@@ -17,6 +17,7 @@
     "setFog",
     "nextWeatherChange"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

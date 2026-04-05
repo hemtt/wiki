@@ -23,6 +23,7 @@
     "setMarkerType",
     "setMarkerAlpha"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

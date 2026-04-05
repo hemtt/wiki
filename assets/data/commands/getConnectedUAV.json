@@ -20,6 +20,7 @@
     "connectTerminalToUAV",
     "isUAVConnected"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

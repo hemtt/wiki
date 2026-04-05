@@ -15,6 +15,7 @@
     "setUnloadInCombat",
     "getUnloadInCombat"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -16,6 +16,7 @@
     "nextWeatherChange",
     "simulSetHumidity"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

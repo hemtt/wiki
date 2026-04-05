@@ -23,6 +23,7 @@
     "hintSilent",
     "BIS_fnc_guiMessage"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

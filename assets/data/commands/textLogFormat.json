@@ -16,6 +16,7 @@
     "BIS_fnc_log",
     "BIS_fnc_logFormat"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

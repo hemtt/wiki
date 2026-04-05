@@ -26,6 +26,7 @@
     "currentWeaponTurret",
     "addWeaponTurret"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -70,7 +71,7 @@
               "name": "muzzle",
               "optional": true,
               "since": {
-                "arma3": "2.8"
+                "arma3": "2.08"
               },
               "type": "String"
             }
@@ -81,7 +82,7 @@
               "name": "firemode",
               "optional": true,
               "since": {
-                "arma3": "2.8"
+                "arma3": "2.08"
               },
               "type": "String"
             }

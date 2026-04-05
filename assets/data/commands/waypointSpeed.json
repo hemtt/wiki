@@ -38,6 +38,7 @@
     "setWPPos",
     "waypointName"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

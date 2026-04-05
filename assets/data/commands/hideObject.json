@@ -17,6 +17,7 @@
     "hideObjectGlobal",
     "deleteCollection"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

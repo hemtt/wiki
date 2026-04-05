@@ -24,6 +24,7 @@
     "addBackpackCargoGlobal",
     "addWeaponWithAttachmentsCargo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

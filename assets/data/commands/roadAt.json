@@ -21,6 +21,7 @@
     "getRoadInfo",
     "nearestTerrainObjects"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -45,7 +46,7 @@
               {
                 "desc": null,
                 "since": {
-                  "arma3": "2.0"
+                  "arma3": "2.00"
                 },
                 "type": "Position2d"
               }

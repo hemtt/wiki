@@ -16,6 +16,7 @@
     "canAddItemToBackpack",
     "canAddItemToVest"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

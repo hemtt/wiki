@@ -18,6 +18,7 @@
     "roadAt",
     "nearestTerrainObjects"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

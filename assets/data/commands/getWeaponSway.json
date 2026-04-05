@@ -16,6 +16,7 @@
     "weaponInertia",
     "getCustomAimCoef"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

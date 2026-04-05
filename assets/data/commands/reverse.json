@@ -35,6 +35,7 @@
     "joinString",
     "forceUnicode"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -71,7 +72,7 @@
         }
       },
       "since": {
-        "arma3": "2.2"
+        "arma3": "2.02"
       }
     }
   ]

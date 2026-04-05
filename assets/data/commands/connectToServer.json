@@ -16,6 +16,7 @@
     "serverCommand",
     "getSteamFriendsServers"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

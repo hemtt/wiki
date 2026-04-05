@@ -18,6 +18,7 @@
     "setAperture",
     "apertureParams"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

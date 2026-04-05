@@ -18,6 +18,7 @@
     "animationState",
     "getUnitMovesInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

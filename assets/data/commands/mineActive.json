@@ -18,6 +18,7 @@
     "createMine",
     "revealMine"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -25,6 +25,7 @@
     "getTerrainHeightASL",
     "setUnitFreefallHeight"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

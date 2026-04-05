@@ -19,6 +19,7 @@
     "doArtilleryFire",
     "getArtilleryETA"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

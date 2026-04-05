@@ -17,6 +17,7 @@
     "BIS_fnc_mapSize",
     "getTerrainInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -19,6 +19,7 @@
     "setMarkerPos",
     "setMarkerPosLocal"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

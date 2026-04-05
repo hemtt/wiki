@@ -19,6 +19,7 @@
     "processInitCommands",
     "clearVehicleInit"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

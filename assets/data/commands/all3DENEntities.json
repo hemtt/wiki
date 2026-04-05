@@ -19,6 +19,7 @@
     "get3DENEntityID",
     "get3DENSelected"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

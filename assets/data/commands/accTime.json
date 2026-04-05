@@ -17,6 +17,7 @@
     "timeMultiplier",
     "useAudioTimeForMoves"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

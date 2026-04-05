@@ -16,6 +16,7 @@
     "gearSlotData",
     "gearSlotAmmoCount"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

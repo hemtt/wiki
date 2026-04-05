@@ -16,6 +16,7 @@
     "setUnloadInCombat",
     "canMove"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

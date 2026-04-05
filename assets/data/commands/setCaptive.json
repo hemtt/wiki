@@ -17,6 +17,7 @@
     "captive",
     "captiveNum"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -67,7 +68,7 @@
         }
       },
       "since": {
-        "arma2": "1.0"
+        "arma2": "1.00"
       }
     }
   ]

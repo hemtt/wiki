@@ -24,6 +24,7 @@
     "primaryWeapon",
     "setUnitLoadout"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -20,6 +20,7 @@
     "drawRectangle",
     "drawXPolygon"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

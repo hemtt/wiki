@@ -18,6 +18,7 @@
     "removeSecondaryWeaponItem",
     "removeBinocularItem"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

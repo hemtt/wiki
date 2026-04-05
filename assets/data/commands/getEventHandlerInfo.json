@@ -23,6 +23,7 @@
     "addMissionEventHandler",
     "addMusicEventHandler"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

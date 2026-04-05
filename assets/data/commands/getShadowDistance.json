@@ -16,6 +16,7 @@
     "setShadowDistance",
     "isPipEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

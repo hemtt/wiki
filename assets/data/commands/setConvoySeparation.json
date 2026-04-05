@@ -15,6 +15,7 @@
     "forceFollowRoad",
     "useAISteeringComponent"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

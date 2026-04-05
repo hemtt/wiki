@@ -22,6 +22,7 @@
     "vectorMagnitude",
     "matrixMultiply"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

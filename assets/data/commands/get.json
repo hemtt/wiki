@@ -15,6 +15,7 @@
     "HashMap",
     "getOrDefault"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

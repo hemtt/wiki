@@ -17,6 +17,7 @@
     "lbSetPictureRightColor",
     "lbSetPictureRightColorDisabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

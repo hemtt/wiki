@@ -15,6 +15,7 @@
     "setUnconscious",
     "incapacitatedState"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

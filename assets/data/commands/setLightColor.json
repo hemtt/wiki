@@ -24,6 +24,7 @@
     "setLightDayLight",
     "setLightIR"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

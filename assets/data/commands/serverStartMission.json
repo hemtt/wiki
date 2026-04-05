@@ -15,6 +15,7 @@
     "playMission",
     "playScriptedMission"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -16,6 +16,7 @@
   "see_also": [
     "squad.xml"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -134,7 +135,7 @@
               "desc": "unique squad ID",
               "name": "squadId",
               "since": {
-                "arma3": "2.6"
+                "arma3": "2.06"
               },
               "type": "String"
             },
@@ -143,7 +144,7 @@
               "desc": "unique {{arma3}} Units  ID",
               "name": "a3unitsId",
               "since": {
-                "arma3": "2.6"
+                "arma3": "2.06"
               },
               "type": "String"
             }

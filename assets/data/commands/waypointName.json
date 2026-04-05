@@ -16,6 +16,7 @@
     "waypointPosition",
     "waypointSpeed"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

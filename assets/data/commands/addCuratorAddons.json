@@ -21,6 +21,7 @@
     "removeAllCuratorAddons",
     "curatorAddons"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

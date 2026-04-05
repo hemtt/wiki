@@ -15,6 +15,7 @@
     "addMusicEventHandler",
     "playMusic"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

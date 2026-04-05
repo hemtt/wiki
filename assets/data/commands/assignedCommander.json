@@ -30,6 +30,7 @@
     "assignedCargo",
     "assignedDriver"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

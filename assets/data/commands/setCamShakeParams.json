@@ -17,6 +17,7 @@
     "enableCamShake",
     "resetCamShake"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

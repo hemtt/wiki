@@ -15,6 +15,7 @@
     "getPlayerLevel",
     "getCurrentPlayerLevel"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

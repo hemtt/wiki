@@ -15,6 +15,7 @@
     "disableUAVConnectability",
     "isUAVConnectable"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

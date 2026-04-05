@@ -18,6 +18,7 @@
     "removeDiaryRecord",
     "allDiarySubjects"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

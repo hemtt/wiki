@@ -20,6 +20,7 @@
     "ctrlAutoScrollDelay",
     "ctrlSetAutoScrollRewind"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

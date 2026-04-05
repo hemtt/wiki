@@ -25,6 +25,7 @@
     "doSuppressiveFire",
     "isManualFire"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

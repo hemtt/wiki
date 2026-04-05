@@ -30,6 +30,7 @@
     "waypointSpeed",
     "setWPPos"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

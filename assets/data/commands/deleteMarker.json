@@ -15,6 +15,7 @@
     "createMarker",
     "deleteMarkerLocal"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

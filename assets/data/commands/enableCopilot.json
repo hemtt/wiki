@@ -15,6 +15,7 @@
     "isCopilotEnabled",
     "currentPilot"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

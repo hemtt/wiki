@@ -18,6 +18,7 @@
     "removeAllSecondaryWeaponItems",
     "removeAllHandgunItems"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -19,6 +19,7 @@
     "playMoveNow",
     "switchMove"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

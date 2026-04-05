@@ -34,6 +34,7 @@
     "BIS_fnc_getPitchBank",
     "BIS_fnc_transformVectorDirAndUp"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

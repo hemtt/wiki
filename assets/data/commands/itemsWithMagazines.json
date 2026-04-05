@@ -16,6 +16,7 @@
     "removeAllItemsWithMagazines",
     "backpacks"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

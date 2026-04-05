@@ -19,6 +19,7 @@
     "createMarkerLocal",
     "getObjectID"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

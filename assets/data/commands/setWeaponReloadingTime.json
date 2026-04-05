@@ -21,6 +21,7 @@
     "weaponState",
     "reload"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

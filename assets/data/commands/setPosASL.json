@@ -26,6 +26,7 @@
     "setPosWorld",
     "setVehiclePosition"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

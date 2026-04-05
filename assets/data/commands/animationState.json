@@ -19,6 +19,7 @@
     "BIS_fnc_ambientAnimGetParams",
     "getUnitMovesInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

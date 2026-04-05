@@ -16,6 +16,7 @@
     "magazinesDetailUniform",
     "magazinesDetailBackpack"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -81,7 +82,7 @@
         ]
       },
       "since": {
-        "arma3": "2.0"
+        "arma3": "2.00"
       }
     }
   ]

@@ -24,6 +24,7 @@
     "setMarkerType",
     "createMarker"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -15,6 +15,7 @@
     "setVehicleInit",
     "clearVehicleInit"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

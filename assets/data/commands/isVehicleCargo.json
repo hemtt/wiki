@@ -29,6 +29,7 @@
     "getVehicleCargo",
     "vehicleCargoEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

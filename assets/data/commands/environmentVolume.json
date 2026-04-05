@@ -20,6 +20,7 @@
     "getAudioOptionVolumes",
     "environmentEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

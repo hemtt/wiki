@@ -16,6 +16,7 @@
     "ctrlTextWidth",
     "ctrlSetFontHeight"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

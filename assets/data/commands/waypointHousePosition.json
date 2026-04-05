@@ -17,6 +17,7 @@
     "setWaypointHousePosition",
     "buildingPos"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

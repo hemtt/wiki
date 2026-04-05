@@ -16,6 +16,7 @@
     "playSound3D",
     "soundParams"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -17,6 +17,7 @@
     "find",
     "findIf"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

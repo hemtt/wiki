@@ -20,6 +20,7 @@
     "getArtilleryETA",
     "inRangeOfArtillery"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

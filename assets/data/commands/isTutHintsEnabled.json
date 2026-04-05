@@ -15,6 +15,7 @@
     "isInstructorFigureEnabled",
     "isStreamFriendlyUIEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

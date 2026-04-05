@@ -16,6 +16,7 @@
     "waypointAttachedObject",
     "synchronizeWaypoint"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

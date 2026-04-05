@@ -25,6 +25,7 @@
     "setPylonLoadout",
     "setMagazineTurretAmmo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

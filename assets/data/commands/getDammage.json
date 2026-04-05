@@ -25,6 +25,7 @@
     "getHitPointDamage",
     "setHitPointDamage"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

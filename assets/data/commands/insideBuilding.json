@@ -17,6 +17,7 @@
     "enableAudioFeature",
     "BIS_fnc_buildingPositions"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

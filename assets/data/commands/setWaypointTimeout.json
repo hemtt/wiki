@@ -37,6 +37,7 @@
     "waypointTimeoutCurrent",
     "waypointSpeed"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

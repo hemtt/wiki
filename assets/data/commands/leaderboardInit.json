@@ -21,6 +21,7 @@
     "leaderboardsRequestUploadScoreKeepBest",
     "leaderboardState"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

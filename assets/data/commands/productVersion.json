@@ -18,6 +18,7 @@
     "supportInfo",
     "requiredVersion"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -58,7 +59,7 @@
               "desc": "build type, can be {{hl|\"Stable\"}}, {{hl|\"Development\"}}, {{hl|\"Diag\"}} or {{hl|\"Profile\"}}",
               "name": "buildType",
               "since": {
-                "arma3": "1.0"
+                "arma3": "1.00"
               },
               "type": "String"
             },
@@ -67,7 +68,7 @@
               "desc": "is the product running with mods ([[true]]) or vanilla ([[false]])",
               "name": "isModded",
               "since": {
-                "arma3": "1.0"
+                "arma3": "1.00"
               },
               "type": "Boolean"
             },
@@ -76,7 +77,7 @@
               "desc": "can be {{hl|\"Windows\"}}, {{hl|\"Linux\"}} or {{hl|\"OSX\"}}",
               "name": "platform",
               "since": {
-                "arma3": "1.0"
+                "arma3": "1.00"
               },
               "type": "String"
             },

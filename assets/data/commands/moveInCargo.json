@@ -24,6 +24,7 @@
     "assignAsGunner",
     "getCargoIndex"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -90,7 +91,7 @@
               "name": "canReassign",
               "optional": true,
               "since": {
-                "arma3": "2.8"
+                "arma3": "2.08"
               },
               "type": "Boolean"
             }

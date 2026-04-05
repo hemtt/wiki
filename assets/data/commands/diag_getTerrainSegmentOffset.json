@@ -15,6 +15,7 @@
     "diag_getTerrainHeight",
     "diag_getTerrainGrid"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

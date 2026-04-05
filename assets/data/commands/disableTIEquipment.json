@@ -19,6 +19,7 @@
     "setCamUseTI",
     "camUseNVG"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

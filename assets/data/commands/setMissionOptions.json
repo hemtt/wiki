@@ -18,6 +18,7 @@
     "getAudioOptionVolumes",
     "getSubtitleOptions"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

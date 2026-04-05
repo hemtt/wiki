@@ -24,6 +24,7 @@
     "setGroupIconParams",
     "setGroupIconsSelectable"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -24,6 +24,7 @@
     "getHideFrom",
     "ignoreTarget"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

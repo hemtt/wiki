@@ -30,6 +30,7 @@
     "assignedCargo",
     "assignedCommander"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

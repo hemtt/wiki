@@ -20,6 +20,7 @@
     "setDiarySubjectPicture",
     "allDiarySubjects"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -16,6 +16,7 @@
     "set3DENIconsVisible",
     "get3DENIconsVisible"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

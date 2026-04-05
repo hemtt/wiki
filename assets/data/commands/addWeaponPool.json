@@ -17,6 +17,7 @@
     "queryWeaponPool",
     "addMagazineAmmoCargo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

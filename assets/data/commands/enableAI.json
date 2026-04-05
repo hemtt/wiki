@@ -18,6 +18,7 @@
     "vehicleMoveInfo",
     "getUnitState"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

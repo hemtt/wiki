@@ -28,6 +28,7 @@
     "uiSleep",
     "canSuspend"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

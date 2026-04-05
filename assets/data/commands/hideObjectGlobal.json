@@ -18,6 +18,7 @@
     "isObjectHidden",
     "deleteCollection"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

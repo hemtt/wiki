@@ -21,6 +21,7 @@
     "getStamina",
     "enableStamina"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

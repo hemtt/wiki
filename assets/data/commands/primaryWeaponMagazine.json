@@ -22,6 +22,7 @@
     "secondaryWeaponMagazine",
     "binocularMagazine"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

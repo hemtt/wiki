@@ -15,6 +15,7 @@
     "waypoints",
     "setWaypointDescription"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

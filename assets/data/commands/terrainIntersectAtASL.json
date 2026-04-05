@@ -21,6 +21,7 @@
     "lineIntersectsObjs",
     "checkVisibility"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

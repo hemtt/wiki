@@ -19,6 +19,7 @@
     "playScriptedMission",
     "hostMission"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

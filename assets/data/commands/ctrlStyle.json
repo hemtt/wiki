@@ -15,6 +15,7 @@
     "ctrlType",
     "BIS_fnc_bitflagsToArray"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

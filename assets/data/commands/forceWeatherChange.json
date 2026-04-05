@@ -24,6 +24,7 @@
     "setWind",
     "simulWeatherSync"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

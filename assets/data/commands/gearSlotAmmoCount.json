@@ -16,6 +16,7 @@
     "gearSlotData",
     "gearIDCAmmoCount"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

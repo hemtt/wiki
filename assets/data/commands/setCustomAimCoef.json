@@ -18,6 +18,7 @@
     "getCustomAimCoef",
     "getWeaponSway"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

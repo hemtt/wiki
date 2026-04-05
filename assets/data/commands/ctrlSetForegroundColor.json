@@ -15,6 +15,7 @@
     "ctrlSetTextColor",
     "ctrlSetBackgroundColor"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

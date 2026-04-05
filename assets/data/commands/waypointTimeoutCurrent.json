@@ -36,6 +36,7 @@
     "setWaypointLoiterType",
     "setWaypointTimeout"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

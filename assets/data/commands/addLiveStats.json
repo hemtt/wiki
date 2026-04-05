@@ -16,6 +16,7 @@
     "unlockAchievement",
     "setStatValue"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

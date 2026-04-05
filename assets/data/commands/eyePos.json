@@ -19,6 +19,7 @@
     "getCameraViewDirection",
     "positionCameraToWorld"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

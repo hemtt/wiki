@@ -20,6 +20,7 @@
     "setObjectMaterial",
     "forceFlagTexture"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

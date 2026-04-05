@@ -18,6 +18,7 @@
     "viewDistance",
     "diag_getTerrainGrid"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

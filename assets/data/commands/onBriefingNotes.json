@@ -17,6 +17,7 @@
     "playSound",
     "{{Link|Description.ext#CfgSounds}}"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -18,6 +18,7 @@
     "shownCompass",
     "shownHUD"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -15,6 +15,7 @@
     "diag_getTerrainSegmentOffset",
     "getTerrainGrid"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

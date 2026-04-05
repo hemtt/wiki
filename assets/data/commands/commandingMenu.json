@@ -18,6 +18,7 @@
     "BIS_fnc_addCommMenuItem",
     "BIS_fnc_removeCommMenuItem"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

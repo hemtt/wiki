@@ -26,6 +26,7 @@
     "ArmA:_Editing#Forward_Compatibility|Forward",
     "Compatibility"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

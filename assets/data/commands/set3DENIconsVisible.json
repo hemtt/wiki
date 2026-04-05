@@ -17,6 +17,7 @@
     "get3DENLinesVisible",
     "set3DENModelsVisible"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

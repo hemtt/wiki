@@ -17,6 +17,7 @@
     "isVehicleRadarOn",
     "isVehicleSensorEnabled"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

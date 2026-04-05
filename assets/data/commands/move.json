@@ -16,6 +16,7 @@
     "commandMove",
     "addWaypoint"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

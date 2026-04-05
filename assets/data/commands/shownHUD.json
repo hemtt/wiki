@@ -22,6 +22,7 @@
     "shownCompass",
     "shownUAVFeed"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -31,7 +32,7 @@
           "ArraySized": [
             {
               "default": null,
-              "desc": "show scripted HUD such as weapon crosshair, action menu and overlays created with [[cutRsc]] and [[titleRsc]]. Same as [[showHUD]]'s first syntax",
+              "desc": "show scripted HUD such as weapon crosshair, action menu and overlays created with [[cutRsc]] and [[titleRsc]]",
               "name": "hud",
               "since": null,
               "type": "Boolean"

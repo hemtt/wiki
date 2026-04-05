@@ -18,6 +18,7 @@
     "addMPEventHandler",
     "removeMPEventHandler"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

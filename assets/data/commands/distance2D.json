@@ -16,6 +16,7 @@
     "distanceSqr",
     "vectorDistance"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

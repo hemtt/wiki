@@ -19,6 +19,7 @@
     "action",
     "inGameUISetEventHandler"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

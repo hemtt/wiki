@@ -16,6 +16,7 @@
     "remoteControl",
     "isRemoteControlling"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

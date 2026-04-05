@@ -16,6 +16,7 @@
     "camCommitPrepared",
     "camSetPos"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

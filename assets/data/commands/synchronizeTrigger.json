@@ -18,6 +18,7 @@
     "createTrigger",
     "synchronizeWaypoint"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

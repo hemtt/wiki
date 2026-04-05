@@ -19,6 +19,7 @@
     "atan",
     "atan2"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

@@ -15,6 +15,7 @@
     "isServer",
     "hasInterface"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

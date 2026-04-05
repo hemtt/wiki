@@ -18,6 +18,7 @@
     "logEntities",
     "diag_captureFrame"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

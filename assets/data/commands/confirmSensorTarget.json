@@ -21,6 +21,7 @@
     "setVehicleReportOwnPosition",
     "reportRemoteTarget"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

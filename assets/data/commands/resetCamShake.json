@@ -17,6 +17,7 @@
     "setCamShakeDefParams",
     "setCamShakeParams"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

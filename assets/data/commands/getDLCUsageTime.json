@@ -20,6 +20,7 @@
     "getDLCAssetsUsage",
     "getAssetDLCInfo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

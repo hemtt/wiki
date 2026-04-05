@@ -37,6 +37,7 @@
     "setWaypointLoiterType",
     "waypointSpeed"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

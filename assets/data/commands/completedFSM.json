@@ -19,6 +19,7 @@
     "getFSMVariable",
     "setFSMVariable"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

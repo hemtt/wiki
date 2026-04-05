@@ -20,6 +20,7 @@
     "BIS_fnc_markerToString",
     "BIS_fnc_stringToMarker"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -76,7 +77,7 @@
               "name": "channel",
               "optional": true,
               "since": {
-                "arma3": "2.2"
+                "arma3": "2.02"
               },
               "type": "Number"
             }
@@ -88,7 +89,7 @@
               "name": "creator",
               "optional": true,
               "since": {
-                "arma3": "2.2"
+                "arma3": "2.02"
               },
               "type": "Object"
             }

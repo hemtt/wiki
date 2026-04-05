@@ -32,6 +32,7 @@
     "[\"UseWeapon\"]",
     ":Category:Weapons"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

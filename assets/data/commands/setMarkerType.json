@@ -26,6 +26,7 @@
     "setMarkerText",
     "createMarker"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

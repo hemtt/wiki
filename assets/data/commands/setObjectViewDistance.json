@@ -20,6 +20,7 @@
     "setDetailMapBlendPars",
     "setTerrainGrid"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

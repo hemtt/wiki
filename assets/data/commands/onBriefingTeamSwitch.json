@@ -21,6 +21,7 @@
     "teamSwitchEnabled",
     "Description.ext#CfgSounds|CfgSounds"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {

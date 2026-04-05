@@ -24,6 +24,7 @@
     "ppEffectCommitted",
     "ppEffectAdjust"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
@@ -56,7 +57,7 @@
         }
       },
       "since": {
-        "arma3": "2.4"
+        "arma3": "2.04"
       }
     }
   ]

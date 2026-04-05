@@ -15,6 +15,7 @@
     "getSteamFriendsServers",
     "openYoutubeVideo"
   ],
+  "since": {},
   "status": "Passed",
   "syntax": [
     {
