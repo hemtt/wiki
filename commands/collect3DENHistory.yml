@@ -67,10 +67,11 @@ syntax:
     desc: code that is executed in [[Scheduler#Unscheduled_Environment|Unscheduled Environment]]
     type: Code
   since:
-    arma3: '2.6'
+    arma3: '2.06'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - "<sqf>\ncollect3DENHistory \n{\n\t_logic = create3DENEntity [\"Logic\", \"Logic\", position player];\n\tadd3DENConnection [\"Sync\", [_logic], player];\n}; // Creates a logic and connects it to player in one history step.\n</sqf>"
 - "<sqf>\n[\"Create Entity\", \"B_Soldier_F\", \"a3\\3den\\data\\cfg3den\\history\\create_ca.paa\"] collect3DENHistory \n{\n\tcreate3DENEntity [\"Object\",\"B_Soldier_F\", screenToWorld [0.5,0.5]];\n};\n</sqf>"
