@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.64'
 examples:
 - <sqf>_pilotCamVector = getPilotCameraDirection vehicle player;</sqf>
 see_also:
