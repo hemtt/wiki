@@ -33,19 +33,19 @@ syntax:
       default: null
       desc: build type, can be {{hl|"Stable"}}, {{hl|"Development"}}, {{hl|"Diag"}} or {{hl|"Profile"}}
       since:
-        arma3: '1.0'
+        arma3: '1.00'
     - name: isModded
       type: Boolean
       default: null
       desc: is the product running with mods ([[true]]) or vanilla ([[false]])
       since:
-        arma3: '1.0'
+        arma3: '1.00'
     - name: platform
       type: String
       default: null
       desc: can be {{hl|"Windows"}}, {{hl|"Linux"}} or {{hl|"OSX"}}
       since:
-        arma3: '1.0'
+        arma3: '1.00'
     - name: architecture
       type: String
       default: null
@@ -60,7 +60,10 @@ syntax:
         arma3: '2.20'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma2oa: '1.62'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>hint str productVersion; // would return ["Arma 2 OA", "arma2oa", 162, 95208] on Arma 2 OA 1.62.95208</sqf>
 - <sqf>hint str productVersion; // ["Arma 3", "Arma3", 137, 128764, "Development", false, "Windows"]</sqf>
