@@ -19,7 +19,8 @@ syntax:
     type: Boolean
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.00'
 examples:
 - <sqf>vehicle player lockInventory true;</sqf>
 - <sqf>backpackContainer player lockInventory true;</sqf>
