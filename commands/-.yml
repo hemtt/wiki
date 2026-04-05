@@ -40,7 +40,14 @@ syntax:
       value: Anything
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  ofp: '1.00'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_result = 10 - 7; // result is 3</sqf>
 - |-
