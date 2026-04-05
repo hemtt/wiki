@@ -26,7 +26,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '2.06'
 examples:
 - <sqf>_light setLightConePars [90, 45, 1];</sqf>
 see_also:
