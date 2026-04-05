@@ -23,7 +23,8 @@ syntax:
     type: ArrayColorRgba
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.20'
 examples:
 - <sqf>_ctrl lbSetPictureRightColorSelected [0, [1, 1, 1, 1]];</sqf>
 see_also:
