@@ -11,7 +11,8 @@ syntax:
     type: Control
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.70'
 examples:
 - <sqf>_curSel = ctCurSel _control;</sqf>
 see_also:
