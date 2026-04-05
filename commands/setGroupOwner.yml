@@ -18,7 +18,8 @@ syntax:
 argument_loc: Unspecified
 effect_loc: Unspecified
 server_exec: true
-since: {}
+since:
+  arma3: '1.40'
 examples:
 - <sqf>_localityChanged = _someGroup setGroupOwner (owner _playerObject);</sqf>
 see_also:
