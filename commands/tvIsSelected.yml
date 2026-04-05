@@ -16,7 +16,8 @@ syntax:
     type: TreeViewPath
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.02'
 examples:
 - <sqf>_control tvIsSelected [0];</sqf>
 see_also:
