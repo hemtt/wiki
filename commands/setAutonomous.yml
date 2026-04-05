@@ -17,7 +17,8 @@ syntax:
     type: Boolean
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.16'
 examples:
 - <sqf>uav setAutonomous true;</sqf>
 see_also:
