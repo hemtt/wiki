@@ -19,10 +19,11 @@ syntax:
     desc: '[[CT_CONTROLS_GROUP]]'
     type: Control
   since:
-    arma3: '2.4'
+    arma3: '2.04'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.38'
 examples:
 - <sqf>_allCtrls = allControls findDisplay 46;</sqf>
 - <sqf>_allSubCtrls = allControls _myControlsGroup;</sqf>
