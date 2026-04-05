@@ -30,7 +30,8 @@ syntax:
     default: '""'
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.02'
 examples:
 - "<sqf>\ncompileScript [\"a3\\props_f_enoch\\military\\equipment\\scripts\\meteo.sqf\"];\n// has the same functionality as \ncompile preprocessFileLineNumbers \"a3\\props_f_enoch\\military\\equipment\\scripts\\meteo.sqf\";\n</sqf>"
 see_also:
