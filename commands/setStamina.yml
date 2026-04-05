@@ -16,7 +16,8 @@ syntax:
     type: Number
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.54'
 examples:
 - <sqf>player setStamina 42;</sqf>
 see_also:
