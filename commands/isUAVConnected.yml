@@ -11,7 +11,8 @@ syntax:
     type: Object
 argument_loc: Global
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.76'
 examples:
 - <sqf>_isConnected = isUAVConnected cursorTarget;</sqf>
 see_also:
