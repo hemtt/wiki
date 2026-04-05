@@ -38,7 +38,8 @@ syntax:
     type: String
 argument_loc: Local
 effect_loc: Local
-since: {}
+since:
+  arma3: '0.74'
 examples:
 - <sqf>tvSetTooltip [101, [0,2], "This is a tooltip"];</sqf>
 - <sqf>_tree tvSetTooltip [[0,2], "This is a tooltip"];</sqf>
