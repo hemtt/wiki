@@ -25,7 +25,12 @@ syntax:
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma1: '1.05'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
 examples:
 - <sqf>_screenCoord = _control ctrlMapWorldToScreen _worldCoord;</sqf>
 - <sqf>_screenCoord = _control ctrlMapWorldToScreen position player;</sqf>
