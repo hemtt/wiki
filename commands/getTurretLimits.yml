@@ -42,7 +42,8 @@ syntax:
     type: TurretPath
 argument_loc: Global
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.12'
 examples:
 - |-
   <sqf>
