@@ -15,7 +15,8 @@ syntax:
     type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  tkoh: '1.00'
 examples:
 - <sqf>_charge = batteryChargeRTD vehicle player;</sqf>
 see_also:
