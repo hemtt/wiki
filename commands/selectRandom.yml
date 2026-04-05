@@ -13,7 +13,8 @@ syntax:
       value: Anything
 argument_loc: Unspecified
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '1.56'
 examples:
 - <sqf>_randomElement = selectRandom [1,2,3,4,5];</sqf>
 see_also:
