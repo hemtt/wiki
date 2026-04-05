@@ -17,7 +17,8 @@ syntax:
     type: String
 argument_loc: Global
 effect_loc: Global
-since: {}
+since:
+  arma3: '1.22'
 examples:
 - <sqf>_unit forceAddUniform "U_B_CombatUniform_mcam";</sqf>
 see_also:
