@@ -12,7 +12,8 @@ syntax:
     type: Object
 argument_loc: Local
 effect_loc: Unspecified
-since: {}
+since:
+  arma3: '2.06'
 examples:
 - <sqf>if (canDeployWeapon player) then { hint "I could rest my weapon here..." };</sqf>
 see_also:
