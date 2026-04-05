@@ -13,7 +13,8 @@ syntax:
     type: Number
 argument_loc: Unspecified
 effect_loc: Local
-since: {}
+since:
+  arma3: '1.42'
 examples:
 - <sqf>_isDirectSelected = setCurrentChannel 5; // sets Direct channel as current active</sqf>
 see_also:
