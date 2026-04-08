@@ -11,7 +11,7 @@ effect_loc: Unspecified
 since:
   arma3: '1.22'
 examples:
-- <sqf>if (visibleGPS) then {hint "GPS is visible"};</sqf>
+- "<sqf>\nif (visibleGPS) then\n{\n\thint \"GPS is visible\";\n};\n</sqf>"
 see_also:
 - openGPS
 - showGPS
