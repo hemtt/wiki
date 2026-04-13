@@ -1,5 +1,5 @@
 name: clearBackpackCargoGlobal
-desc: Removes all backpacks from the vehicle cargo space. MP synchronized.
+desc: Removes all backpacks from the vehicle cargo space; MP-synchronised.
 groups:
 - Containers
 syntax:
