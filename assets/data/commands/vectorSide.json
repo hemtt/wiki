@@ -33,7 +33,9 @@
     "BIS_fnc_getPitchBank",
     "BIS_fnc_transformVectorDirAndUp"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.14"
+  },
   "status": "Passed",
   "syntax": [
     {

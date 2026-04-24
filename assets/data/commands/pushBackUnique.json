@@ -31,7 +31,9 @@
     "BIS_fnc_arrayPushStack",
     "BIS_fnc_arrayPush"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.56"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -15,7 +15,9 @@
     "removeWeaponAttachmentCargo",
     "weaponAccessoriesCargo"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.22"
+  },
   "status": "Passed",
   "syntax": [
     {

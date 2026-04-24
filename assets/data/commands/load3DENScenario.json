@@ -16,7 +16,9 @@
   "see_also": [
     "is3DENPreview"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.18"
+  },
   "status": "Passed",
   "syntax": [
     {

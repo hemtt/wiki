@@ -18,7 +18,11 @@
     "supportInfo",
     "requiredVersion"
   ],
-  "since": {},
+  "since": {
+    "arma2oa": "1.62",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

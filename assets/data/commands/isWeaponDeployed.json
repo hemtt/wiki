@@ -16,7 +16,9 @@
     "isWeaponRested",
     "canDeployWeapon"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.42"
+  },
   "status": "Passed",
   "syntax": [
     {

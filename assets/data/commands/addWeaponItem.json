@@ -29,7 +29,9 @@
     "removeHandgunItem",
     "removeBinocularItem"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.38"
+  },
   "status": "Passed",
   "syntax": [
     {

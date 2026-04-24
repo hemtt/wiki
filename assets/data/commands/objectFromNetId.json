@@ -18,7 +18,10 @@
     "BIS_fnc_netId",
     "BIS_fnc_groupFromNetId"
   ],
-  "since": {},
+  "since": {
+    "arma2oa": "1.63",
+    "arma3": "0.50"
+  },
   "status": "Passed",
   "syntax": [
     {

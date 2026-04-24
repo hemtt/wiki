@@ -25,7 +25,9 @@
     "toLowerANSI",
     "toUpperANSI"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.66"
+  },
   "status": "Passed",
   "syntax": [
     {

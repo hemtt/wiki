@@ -18,7 +18,9 @@
     "scoreSide",
     "getPlayerScores"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.12"
+  },
   "status": "Passed",
   "syntax": [
     {

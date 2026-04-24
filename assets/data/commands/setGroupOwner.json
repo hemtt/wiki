@@ -16,7 +16,9 @@
     "setOwner",
     "groupOwner"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.40"
+  },
   "status": "Passed",
   "syntax": [
     {

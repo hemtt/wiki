@@ -12,7 +12,9 @@
   "name": "setAPURTD",
   "problem_notes": [],
   "see_also": [],
-  "since": {},
+  "since": {
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

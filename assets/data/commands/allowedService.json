@@ -15,7 +15,9 @@
     "allowService",
     "needService"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.12"
+  },
   "status": "Passed",
   "syntax": [
     {

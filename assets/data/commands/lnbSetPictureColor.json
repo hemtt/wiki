@@ -13,7 +13,9 @@
   "name": "lnbSetPictureColor",
   "problem_notes": [],
   "see_also": [],
-  "since": {},
+  "since": {
+    "arma3": "1.42"
+  },
   "status": "Passed",
   "syntax": [
     {

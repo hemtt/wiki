@@ -15,7 +15,9 @@
     "calculatePlayerVisibilityByFriendly",
     "knowsAbout"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.84"
+  },
   "status": "Passed",
   "syntax": [
     {

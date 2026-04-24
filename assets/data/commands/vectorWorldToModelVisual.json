@@ -20,7 +20,9 @@
     "vectorModelToWorldVisual",
     "vectorWorldToModel"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.72"
+  },
   "status": "Passed",
   "syntax": [
     {

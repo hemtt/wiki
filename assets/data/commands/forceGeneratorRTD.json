@@ -15,7 +15,10 @@
     "clearForcesRTD",
     "forceAtPositionRTD"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.34",
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

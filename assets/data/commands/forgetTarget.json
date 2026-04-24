@@ -22,7 +22,9 @@
     "getHideFrom",
     "targetKnowledge"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.70"
+  },
   "status": "Passed",
   "syntax": [
     {

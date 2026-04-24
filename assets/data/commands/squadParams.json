@@ -16,7 +16,9 @@
   "see_also": [
     "squad.xml"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.18"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -20,7 +20,9 @@
     "secondaryWeaponMagazine",
     "handgunMagazine"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.02"
+  },
   "status": "Passed",
   "syntax": [
     {

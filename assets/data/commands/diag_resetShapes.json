@@ -12,7 +12,9 @@
   "name": "diag_resetShapes",
   "problem_notes": [],
   "see_also": [],
-  "since": {},
+  "since": {
+    "arma3": "1.70"
+  },
   "status": "Passed",
   "syntax": [
     {

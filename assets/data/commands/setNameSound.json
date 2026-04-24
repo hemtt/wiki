@@ -19,7 +19,9 @@
     "setName",
     "setIdentity"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.02"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -94,9 +94,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_less%253D_b",
+      "id": "a_less%3D_b",
       "name": "<=",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if '''a''' is less than or equal to '''b''', else returns [[false]].",
@@ -104,9 +104,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_less%3D_b",
+      "id": "a_less%253D_b",
       "name": "<=",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Assigns the result of expression on the right to the variable on the left. Technically this is not a command and it is not listed in [[supportInfo]]; this is more of a compiler instruction.\n{{Feature|important|The following structure is invalid: <sqf inline>a = b = c = 4;</sqf>.}}",
@@ -133,9 +133,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_greater%3D_b",
+      "id": "a_greater%253D_b",
       "name": ">=",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns if ''a'' is greater than or equal to ''b''.",
@@ -143,9 +143,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_greater%253D_b",
+      "id": "a_greater%3D_b",
       "name": ">=",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns [[Config | config]] entry with given name (alias of [[a / b]], slightly faster but with [[Operators#Order of Precedence|lower precedence]])",
@@ -279,11 +279,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "ArcCosine of a number, result in [[Number#Degrees|Degrees]]",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
-      "groups": [],
+      "groups": [
+        "Math - Geometry"
+      ],
       "id": "acos",
       "name": "acos",
       "status": "Failed"
@@ -2410,7 +2412,7 @@
       "status": "Failed"
     },
     {
-      "description": "Calls custom .dll also known as [[Extensions|Extension]]. The name of the extension is the name of the extension .dll without \".dll\" part (or without \"_x64.dll\" part on 64-bit Arma). For example if the file is 'myExtension.dll' the name of the extension will be \"myExtension\". For 64-bit extensions, the name of the extension doesn't need to change and is still \"myExtension\". The game will automatically look for 'myExtension_x64.dll' when you use 64-bit Arma exe.\n<br><br>\nThis command is blocking, meaning that the game will wait for the extension to return before continuing. This may cause FPS drop if extension is not optimised. If extension takes too long, consider making asynchronous extension, where the result of the work of the extension is collected in a separate call.\n<br><br>\nCurrently there is no limit how much data you can send to the extension. However there is a limit on how much data you can return from extension in one call. The limit is known to the extension and is passed in {{hl| int outputSize}}. The limit may or may not change in the future and is currently 10240 bytes. It is up to extension designer to handle multipart results if returned data exceeds output limit.\n<br><br>\nSince {{arma3}} v1.68 it is possible to pass array of arguments to extensions. The array of arguments could be anything and all elements will be converted to strings, however you might want to only send simple types like [[Boolean]]s, [[String]]s, [[Number]]s and [[Array]]s of all of the above. There is currently a limit on how many arguments can be sent and it is 2048 (since Arma 3 v1.92; previous limit: 1024). However an argument could be an [[Array]] itself, in this case extension maker will have to provide additional methods for parsing such arguments.\n<br><br>\nPossible error codes:\n* 101: SYNTAX_ERROR_WRONG_PARAMS_SIZE\n* 102: SYNTAX_ERROR_WRONG_PARAMS_TYPE\n* 201: PARAMS_ERROR_TOO_MANY_ARGS\n* 301: EXECUTION_WARNING_TAKES_TOO_LONG\n* {{GVI|arma3|2.22|size=.75}} 400: EXTENSION_LOAD_FAILED\n* {{GVI|arma3|2.22|size=.75}} 403: EXTENSION_BLOCKED_BY_BATTLEYE\n* {{GVI|arma3|2.22|size=.75}} 404: EXTENSION_NOT_FOUND\nEach error will have entry in .rpt file with more details.<br><br>\n\nThe extension execution timeout, after which {{hl|301: EXECUTION_WARNING_TAKES_TOO_LONG}} warning is issued, is hardcoded on clients and is 1000.0 milliseconds (1 second). On the server the default limit is also 1 second, however it is possible to set custom limit with {{hl|callExtReportLimit}} param (see [[Arma 3: Server Config File#Server_Options | Server Options]]).\n<br><br>\nIf an extension with the given name cannot be found (or it is found but doesn't implement the required interface properly / at all) the following error will be written into the RPT (In this example the given dll-name was \"MyExtension\"):\n<code style=\"display: block\">14:27:07 CallExtension 'MyExtension' could not be found</code>\n<br>\nIf an extension is not whitelisted with BattlEye (see [[Extensions]] for more info) it will be blocked on clients running with enabled BattlEye protection. RPT message outputted however is a little obscure:\n<code style=\"display: block\">21:35:04 Call extension 'MyExtension' could not be loaded: Insufficient system resources exist to complete the requested service</code>\n<br>\nSince {{arma3}} v1.70, {{hl|RVExtensionVersion}} interface (see source code example below) has been added, which is called by the engine on extension load and expects extension version. This interface is designed to work with both, Linux and Windows. The max buffer size is 32 bytes. The version information will then appear in .[[rpt]] file like so:\n<code style=\"display: block\">19:06:36 CallExtension loaded: test_extension (.\\test_extension.dll) [1.0.0.1]</code>\n<br>\nFor more information see [[Extensions]].\n<br><br>\n<u>Linux specific</u><br>\nWhile on Windows the extension name is case-insensitive, on Linux the extension name is case-sensitive and should match the name of the .so file exactly (minus \".so\" part).<br><br>\n\n{{Feature|important|\nIf a user has '''anti-virus software real time protection running''', this could cause brand new extension to stutter the game and return with {{hl|EXECUTION_WARNING_TAKES_TOO_LONG}} when executed for the first time, because of the AV software scanning.\nAfter the extension is whitelisted by AV this should go away until a new version of the extension is installed.\nPerhaps a dummy call to the extension on init should be considered as a feature of implementation to account for that.\n}}\n<br>\n\n'''<u>Extension Context</u>'''\n\nSince {{arma3}} v2.12 the engine will call the {{hl|RVExtensionContext}} method (if it exists, see {{Link|#Example 4}}) and pass the following data:\n* {{hl|steamID}} of the client calling extension [[getPlayerUID]] or \"0\"\n* {{hl|fileSource}} from which the extension was executed or \"\" if done on the fly\n* {{hl|missionName}} [[missionNameSource]]\n* {{hl|serverName}} [[serverName]]",
+      "description": "Calls custom .dll also known as [[Extensions|Extension]]. The name of the extension is the name of the extension .dll without \".dll\" part (or without \"_x64.dll\" part on 64-bit Arma). For example if the file is 'myExtension.dll' the name of the extension will be \"myExtension\". For 64-bit extensions, the name of the extension doesn't need to change and is still \"myExtension\". The game will automatically look for 'myExtension_x64.dll' when you use 64-bit Arma exe.\n<br><br>\nThis command is blocking, meaning that the game will wait for the extension to return before continuing. This may cause FPS drop if extension is not optimised. If extension takes too long, consider making asynchronous extension, where the result of the work of the extension is collected in a separate call.\n<br><br>\nCurrently there is no limit how much data you can send to the extension. However there is a limit on how much data you can return from extension in one call. The limit is known to the extension and is passed in {{hl| int outputSize}}. The limit may or may not change in the future and is currently 10240 bytes. It is up to extension designer to handle multipart results if returned data exceeds output limit.\n<br><br>\nSince {{arma3}} v1.68 it is possible to pass array of arguments to extensions. The array of arguments could be anything and all elements will be converted to strings, however you might want to only send simple types like [[Boolean]]s, [[String]]s, [[Number]]s and [[Array]]s of all of the above. There is currently a limit on how many arguments can be sent and it is 2048 (since Arma 3 v1.92; previous limit: 1024). However an argument could be an [[Array]] itself, in this case extension maker will have to provide additional methods for parsing such arguments.\n<br><br>\nPossible error codes:\n* 101: SYNTAX_ERROR_WRONG_PARAMS_SIZE\n* 102: SYNTAX_ERROR_WRONG_PARAMS_TYPE\n* 201: PARAMS_ERROR_TOO_MANY_ARGS\n* 301: EXECUTION_WARNING_TAKES_TOO_LONG\n* {{GVI|arma3|2.22|size=.75}} 400: EXTENSION_LOAD_FAILED\n* {{GVI|arma3|2.22|size=.75}} 403: EXTENSION_BLOCKED_BY_BATTLEYE\n* {{GVI|arma3|2.22|size=.75}} 404: EXTENSION_NOT_FOUND\n* {{GVI|arma3|2.22|size=.75}} 412: EXTENSION_BLOCKED_BY_SCRIPT\n* {{GVI|arma3|2.22|size=.75}} 415: EXTENSION_WRONG_ARCHITECTURE\nEach error will have entry in .rpt file with more details.<br><br>\n\nThe extension execution timeout, after which {{hl|301: EXECUTION_WARNING_TAKES_TOO_LONG}} warning is issued, is hardcoded on clients and is 1000.0 milliseconds (1 second). On the server the default limit is also 1 second, however it is possible to set custom limit with {{hl|callExtReportLimit}} param (see [[Arma 3: Server Config File#Server_Options | Server Options]]).\n<br><br>\nIf an extension with the given name cannot be found (or it is found but doesn't implement the required interface properly / at all) the following error will be written into the RPT (In this example the given dll-name was \"MyExtension\"):\n<code style=\"display: block\">14:27:07 CallExtension 'MyExtension' could not be found</code>\n<br>\nIf an extension is not whitelisted with BattlEye (see [[Extensions]] for more info) it will be blocked on clients running with enabled BattlEye protection. RPT message outputted however is a little obscure:\n<code style=\"display: block\">21:35:04 Call extension 'MyExtension' could not be loaded: Insufficient system resources exist to complete the requested service</code>\n<br>\nSince {{arma3}} v1.70, {{hl|RVExtensionVersion}} interface (see source code example below) has been added, which is called by the engine on extension load and expects extension version. This interface is designed to work with both, Linux and Windows. The max buffer size is 32 bytes. The version information will then appear in .[[rpt]] file like so:\n<code style=\"display: block\">19:06:36 CallExtension loaded: test_extension (.\\test_extension.dll) [1.0.0.1]</code>\n<br>\nFor more information see [[Extensions]].\n<br><br>\n<u>Linux specific</u><br>\nWhile on Windows the extension name is case-insensitive, on Linux the extension name is case-sensitive and should match the name of the .so file exactly (minus \".so\" part).<br><br>\n\n{{Feature|important|\nIf a user has '''anti-virus software real time protection running''', this could cause brand new extension to stutter the game and return with {{hl|EXECUTION_WARNING_TAKES_TOO_LONG}} when executed for the first time, because of the AV software scanning.\nAfter the extension is whitelisted by AV this should go away until a new version of the extension is installed.\nPerhaps a dummy call to the extension on init should be considered as a feature of implementation to account for that.\n}}\n<br>\n\n'''<u>Extension Context</u>'''\n\nSince {{arma3}} v2.12 the engine will call the {{hl|RVExtensionContext}} method (if it exists, see {{Link|#Example 4}}) and pass the following data:\n* {{hl|steamID}} of the client calling extension [[getPlayerUID]] or \"0\"\n* {{hl|fileSource}} from which the extension was executed or \"\" if done on the fly\n* {{hl|missionName}} [[missionNameSource]]\n* {{hl|serverName}} [[serverName]]",
       "groups": [
         "System"
       ],
@@ -3038,7 +3040,7 @@
       "status": "Passed"
     },
     {
-      "description": "Removes all backpacks from the vehicle cargo space. MP synchronized.",
+      "description": "Removes all backpacks from the vehicle cargo space; MP-synchronised.",
       "groups": [
         "Containers"
       ],
@@ -3936,11 +3938,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Creates a [[Multiplayer Scripting#Locality|local]] marker at the given position - the marker only exists on the machine that created it. The marker name has to be unique, if a marker with the given name exists, the command will be ignored. Use [[deleteMarkerLocal]] to delete a local marker.<br><br>\nIf the position is given in 3D format, {{hl|z}} coordinate is stored with the marker and will be used when marker is passed to commands like [[createVehicle]], [[createUnit]], [[createAgent]], [[createMine]], [[setVehiclePosition]] for example. However [[getMarkerPos]] and [[markerPos]] will always return 0 for {{hl|z}}. \n\n{{Feature|important|Local markers have their own set of local commands \"xxMarkerxxLocal\" to work with. If you use global marker commands on a local marker, the local marker will become '''global'''.}}",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "Markers"
+      ],
       "id": "createMarkerLocal",
       "name": "createMarkerLocal",
       "status": "Failed"
@@ -21108,7 +21112,7 @@
       "status": "Passed"
     },
     {
-      "description": "Enables or disables a trait or alters a trait of the given unit. Unit traits consist of unit abilities, which are [[Boolean]]s and modifiers, which are [[Number]]s. Custom trait can only be a [[Boolean|bool]].<br><br>\n\n{{Feature|Informative|The command can also be used on vehicles (and drones), and it will get applied to the [[effectiveCommander]] of the vehicle. In addition, if the [[effectiveCommander]] has a trait, it will get applied to the entire vehicle (for example, the vehicle can become harder to spot due to low '''camouflageCoef''')}}\n\nAbilities:\n* [[Boolean]] '''engineer''' - Ability to partially repair vehicles with toolkit, equivalent to {{hl|c= engineer = 1;}} in [[CfgVehicles_Config_Reference|CfgVehicles]]\n* [[Boolean]] '''explosiveSpecialist''' - Ability to defuse mines with toolkit, equivalent to {{hl|c= canDeactivateMines = 1;}} in CfgVehicles\n* [[Boolean]] '''medic''' - Ability to treat self and others with medikit, equivalent to {{hl|c= attendant = 1;}} in CfgVehicles\n* [[Boolean]] '''UAVHacker''' - Ability to hack enemy and friendly drones, equivalent to {{hl|c= uavHacker = 1;}} in CfgVehicles\nModifiers:\n* [[Number]] '''audibleCoef''' - A lower value means the unit is harder to hear\n* [[Number]] '''camouflageCoef''' - A lower value means the unit is harder to spot\n* [[Number]] '''loadCoef''' - Equipment weight multiplier affecting fatigue and stamina",
+      "description": "Enables or disables a trait or alters a trait of the given unit. Unit traits consist of unit abilities, which are [[Boolean]]s and modifiers, which are [[Number]]s. Custom trait can only be a [[Boolean|bool]].<br><br>\n\n{{Feature|Informative|The command can also be used on vehicles (and drones), and it will get applied to the [[effectiveCommander]] of the vehicle. In addition, if the [[effectiveCommander]] has a trait, it will get applied to the entire vehicle (for example, the vehicle can become harder to spot due to low '''camouflageCoef''')}}\n\nAbilities:\n* [[Boolean]] '''engineer''' - Ability to partially repair vehicles with toolkit, equivalent to {{hl|c= engineer = 1;}} in [[CfgVehicles_Config_Reference|CfgVehicles]]\n* [[Boolean]] '''explosiveSpecialist''' - Ability to defuse mines with toolkit, equivalent to {{hl|c= canDeactivateMines = 1;}} in CfgVehicles\n* [[Boolean]] '''medic''' - Ability to treat self and others with medikit, equivalent to {{hl|c= attendant = 1;}} in CfgVehicles\n* [[Boolean]] '''UAVHacker''' - Ability to hack enemy and friendly drones, equivalent to {{hl|c= uavHacker = 1;}} in CfgVehicles\nModifiers:\n* [[Number]] '''audibleCoef''' - A lower value means the unit is harder to hear\n* [[Number]] '''camouflageCoef''' - A lower value means the unit is harder to spot\n* [[Number]] '''loadCoef''' - Equipment weight multiplier affecting stamina regeneration and max stamina\n* [[Number]] '''staminaDrainCoef''' - Since {{GVI|arma3|2.22}}, Influences how quickly stamina is drained. '''Do not set negative values!'''",
       "groups": [
         "Object Manipulation"
       ],
@@ -24192,11 +24196,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
+      "description": "Converts vector direction from model to world space.\n{{Feature|important|For [[setObjectScale|scaled objects]], the resulting vector's [[vectorMagnitude|magnitude]] will also be [[vectorMultiply|multiplied]] by the object scale.}}",
       "errors": [
         "Unknown simple type: array"
       ],
-      "groups": [],
+      "groups": [
+        "Math - Vectors"
+      ],
       "id": "vectorModelToWorld",
       "name": "vectorModelToWorld",
       "status": "Failed"
@@ -25060,7 +25066,7 @@
   ],
   "failed": 458,
   "passed": 2233,
-  "timestamp": 1775391332,
+  "timestamp": 1777030082,
   "total": 2693,
   "version": "1.0"
 }

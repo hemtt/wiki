@@ -30,7 +30,9 @@
     "allUsers",
     "getUserInfo"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.48"
+  },
   "status": "Passed",
   "syntax": [
     {

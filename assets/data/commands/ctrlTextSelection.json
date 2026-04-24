@@ -16,7 +16,9 @@
   "see_also": [
     "ctrlSetTextSelection"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.00"
+  },
   "status": "Passed",
   "syntax": [
     {

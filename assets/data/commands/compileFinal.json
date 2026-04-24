@@ -20,7 +20,9 @@
     "call",
     "spawn"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.56"
+  },
   "status": "Passed",
   "syntax": [
     {

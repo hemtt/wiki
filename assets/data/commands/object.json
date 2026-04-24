@@ -17,7 +17,11 @@
     "nearObjects",
     "nearestObject"
   ],
-  "since": {},
+  "since": {
+    "arma1": "1.00",
+    "ofp": "1.75",
+    "ofpe": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

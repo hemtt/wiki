@@ -15,7 +15,9 @@
   "see_also": [
     "getClientState"
   ],
-  "since": {},
+  "since": {
+    "argo": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

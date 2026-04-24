@@ -25,7 +25,9 @@
     "isManualFire",
     "suppressFor"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.60"
+  },
   "status": "Passed",
   "syntax": [
     {

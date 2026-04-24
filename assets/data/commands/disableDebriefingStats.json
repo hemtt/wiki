@@ -15,7 +15,9 @@
   "see_also": [
     "enableDebriefingStats"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

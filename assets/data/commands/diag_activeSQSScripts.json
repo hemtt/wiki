@@ -21,7 +21,9 @@
     "diag_tickTime",
     "diag_activeScripts"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.44"
+  },
   "status": "Passed",
   "syntax": [
     {

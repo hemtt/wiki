@@ -21,7 +21,10 @@
     "getHitIndex",
     "setHitIndex"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

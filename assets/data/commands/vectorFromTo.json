@@ -30,7 +30,9 @@
     "matrixMultiply",
     "matrixTranspose"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.26"
+  },
   "status": "Passed",
   "syntax": [
     {

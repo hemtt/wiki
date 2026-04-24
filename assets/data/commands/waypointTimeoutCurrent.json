@@ -36,7 +36,9 @@
     "setWaypointLoiterType",
     "setWaypointTimeout"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.08"
+  },
   "status": "Passed",
   "syntax": [
     {

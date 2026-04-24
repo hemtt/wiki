@@ -14,7 +14,9 @@
   "see_also": [
     "activateAddons"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.14"
+  },
   "status": "Passed",
   "syntax": [
     {

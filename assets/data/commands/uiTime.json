@@ -30,7 +30,9 @@
     "systemTimeUTC",
     "BIS_fnc_timeToString"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.20"
+  },
   "status": "Passed",
   "syntax": [
     {

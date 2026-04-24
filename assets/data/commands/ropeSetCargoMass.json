@@ -19,7 +19,9 @@
     "setMass",
     "getCenterOfMass"
   ],
-  "since": {},
+  "since": {
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

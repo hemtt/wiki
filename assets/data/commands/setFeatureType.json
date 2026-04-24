@@ -15,7 +15,9 @@
     "setViewDistance",
     "setObjectViewDistance"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.68"
+  },
   "status": "Passed",
   "syntax": [
     {

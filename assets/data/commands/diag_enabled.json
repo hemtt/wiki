@@ -19,7 +19,9 @@
     "diag_toggle",
     "diag_enable"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

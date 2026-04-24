@@ -20,7 +20,9 @@
     "animateDoor",
     "doorPhase"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.58"
+  },
   "status": "Passed",
   "syntax": [
     {

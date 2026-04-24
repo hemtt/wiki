@@ -18,7 +18,9 @@
     "addScoreSide",
     "addPlayerScores"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.56"
+  },
   "status": "Passed",
   "syntax": [
     {

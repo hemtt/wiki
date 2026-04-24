@@ -28,7 +28,9 @@
     "Effect",
     "Type"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.98"
+  },
   "status": "Passed",
   "syntax": [
     {

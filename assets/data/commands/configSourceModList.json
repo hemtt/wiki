@@ -17,7 +17,9 @@
     "configSourceAddonList",
     "modParams"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.40"
+  },
   "status": "Passed",
   "syntax": [
     {

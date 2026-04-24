@@ -14,7 +14,9 @@
   "see_also": [
     "modelToWorldVisualWorld"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.70"
+  },
   "status": "Passed",
   "syntax": [
     {

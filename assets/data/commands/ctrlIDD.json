@@ -15,7 +15,9 @@
     "displayCtrl",
     "findDisplay"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.50"
+  },
   "status": "Passed",
   "syntax": [
     {

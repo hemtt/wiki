@@ -23,7 +23,9 @@
     "getEnvSoundController",
     "getAllEnvSoundControllers"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.86"
+  },
   "status": "Passed",
   "syntax": [
     {

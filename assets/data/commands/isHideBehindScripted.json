@@ -15,7 +15,9 @@
   "see_also": [
     "hideBehindScripted"
   ],
-  "since": {},
+  "since": {
+    "arma1": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

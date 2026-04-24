@@ -12,7 +12,9 @@
   "name": "diag_recordTurretLimits",
   "problem_notes": [],
   "see_also": [],
-  "since": {},
+  "since": {
+    "arma3": "1.64"
+  },
   "status": "Passed",
   "syntax": [
     {

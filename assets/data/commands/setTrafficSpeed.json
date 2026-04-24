@@ -17,7 +17,10 @@
     "setTrafficDistance",
     "setTrafficGap"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.50",
+    "tkoh": "1.01"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -19,7 +19,9 @@
     "tvSetPictureRight",
     "tvSetPictureRightColor"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.74"
+  },
   "status": "Passed",
   "syntax": [
     {

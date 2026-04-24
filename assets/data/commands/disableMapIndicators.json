@@ -14,7 +14,9 @@
   "see_also": [
     "difficultyOption"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.82"
+  },
   "status": "Passed",
   "syntax": [
     {

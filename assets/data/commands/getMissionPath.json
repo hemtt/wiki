@@ -21,7 +21,9 @@
     "Description.ext|description.ext",
     "playSoundUI"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.96"
+  },
   "status": "Passed",
   "syntax": [
     {

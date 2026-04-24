@@ -15,7 +15,9 @@
   "see_also": [
     "configFile"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.02"
+  },
   "status": "Passed",
   "syntax": [
     {

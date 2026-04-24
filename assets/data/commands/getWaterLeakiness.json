@@ -16,7 +16,9 @@
     "setWaterFillPercentage",
     "getWaterFillPercentage"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.16"
+  },
   "status": "Passed",
   "syntax": [
     {

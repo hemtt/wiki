@@ -23,7 +23,9 @@
     "setVelocityTransformation",
     "setVelocityModelSpace"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.08"
+  },
   "status": "Passed",
   "syntax": [
     {

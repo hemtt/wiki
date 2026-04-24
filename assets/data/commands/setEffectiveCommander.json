@@ -16,7 +16,9 @@
     "commander",
     "vehicleMoveInfo"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.96"
+  },
   "status": "Passed",
   "syntax": [
     {

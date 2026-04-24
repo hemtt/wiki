@@ -15,7 +15,9 @@
     "random",
     "BIS_fnc_randomNum"
   ],
-  "since": {},
+  "since": {
+    "argo": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

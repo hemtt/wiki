@@ -17,7 +17,9 @@
     "stance",
     "pose"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.18"
+  },
   "status": "Passed",
   "syntax": [
     {

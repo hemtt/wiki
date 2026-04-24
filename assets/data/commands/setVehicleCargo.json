@@ -31,7 +31,9 @@
     "isVehicleCargo",
     "vehicleCargoEnabled"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.62"
+  },
   "status": "Passed",
   "syntax": [
     {

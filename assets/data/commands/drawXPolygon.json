@@ -20,7 +20,9 @@
     "drawTriangle",
     "drawEllipse"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.20"
+  },
   "status": "Passed",
   "syntax": [
     {

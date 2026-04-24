@@ -25,7 +25,10 @@
     "currentWeaponTurret",
     "selectWeaponTurret"
   ],
-  "since": {},
+  "since": {
+    "arma2oa": "1.64",
+    "arma3": "1.32"
+  },
   "status": "Passed",
   "syntax": [
     {

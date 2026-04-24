@@ -17,7 +17,9 @@
     "magazinesDetailVest",
     "currentMagazineDetail"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.04"
+  },
   "status": "Passed",
   "syntax": [
     {

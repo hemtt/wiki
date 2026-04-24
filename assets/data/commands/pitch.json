@@ -15,7 +15,9 @@
   "see_also": [
     "setPitch"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.02"
+  },
   "status": "Passed",
   "syntax": [
     {

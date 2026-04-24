@@ -19,7 +19,9 @@
     "remoteExecutedOwner",
     "exportJIPMessages"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.50"
+  },
   "status": "Passed",
   "syntax": [
     {

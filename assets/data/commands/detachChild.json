@@ -21,7 +21,9 @@
     "parentAttached",
     "chainedObjects"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.22"
+  },
   "status": "Passed",
   "syntax": [
     {

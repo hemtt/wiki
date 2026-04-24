@@ -16,7 +16,9 @@
     "diag_stacktrace",
     "diag_log"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.00"
+  },
   "status": "Passed",
   "syntax": [
     {

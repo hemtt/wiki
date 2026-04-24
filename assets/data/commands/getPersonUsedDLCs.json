@@ -20,7 +20,9 @@
     "getDLCAssetsUsage",
     "getAssetDLCInfo"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.36"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -18,7 +18,9 @@
     "forceSpeed",
     "setAirplaneThrottle"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.06"
+  },
   "status": "Passed",
   "syntax": [
     {

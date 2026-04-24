@@ -43,7 +43,9 @@
     "{{Link|http://www.cplusplus.com/reference/cstring/strtok/|strtok",
     "(C++)}}"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.50"
+  },
   "status": "Passed",
   "syntax": [
     {

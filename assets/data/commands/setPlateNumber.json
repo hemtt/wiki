@@ -15,7 +15,9 @@
   "see_also": [
     "getPlateNumber"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.82"
+  },
   "status": "Passed",
   "syntax": [
     {

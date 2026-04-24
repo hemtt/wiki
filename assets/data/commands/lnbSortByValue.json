@@ -21,7 +21,9 @@
     "lbSortByValue",
     "tvSort"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.08"
+  },
   "status": "Passed",
   "syntax": [
     {

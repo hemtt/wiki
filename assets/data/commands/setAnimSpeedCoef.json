@@ -19,7 +19,9 @@
     "getAnimSpeedCoef",
     "setAccTime"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.54"
+  },
   "status": "Passed",
   "syntax": [
     {

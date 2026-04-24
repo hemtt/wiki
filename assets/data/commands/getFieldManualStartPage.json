@@ -20,7 +20,9 @@
     "Field",
     "Manual"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.18"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -43,7 +43,9 @@
     "set3DENIconsVisible",
     "set3DENLinesVisible"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.70"
+  },
   "status": "Passed",
   "syntax": [
     {

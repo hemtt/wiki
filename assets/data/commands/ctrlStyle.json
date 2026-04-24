@@ -15,7 +15,9 @@
     "ctrlType",
     "BIS_fnc_bitflagsToArray"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.02"
+  },
   "status": "Passed",
   "syntax": [
     {

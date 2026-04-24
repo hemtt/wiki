@@ -19,7 +19,9 @@
     "magazines",
     "everyBackpack"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.14"
+  },
   "status": "Passed",
   "syntax": [
     {

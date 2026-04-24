@@ -15,7 +15,9 @@
     "addMusicEventHandler",
     "playMusic"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.78"
+  },
   "status": "Passed",
   "syntax": [
     {

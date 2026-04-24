@@ -15,7 +15,9 @@
     "showScoretable",
     "shownScoretable"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.64"
+  },
   "status": "Passed",
   "syntax": [
     {

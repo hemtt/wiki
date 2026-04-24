@@ -14,7 +14,9 @@
   "see_also": [
     "disableRemoteSensors"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.52"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -16,7 +16,11 @@
     "isDedicated",
     "isServer"
   ],
-  "since": {},
+  "since": {
+    "arma2oa": "1.63",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

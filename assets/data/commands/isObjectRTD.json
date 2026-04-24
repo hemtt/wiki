@@ -15,7 +15,9 @@
     "weightRTD",
     "difficultyEnabledRTD"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.34"
+  },
   "status": "Passed",
   "syntax": [
     {

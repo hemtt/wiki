@@ -17,7 +17,9 @@
     "lbSetPictureRightColor",
     "lbSetPictureRightColorDisabled"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.20"
+  },
   "status": "Passed",
   "syntax": [
     {

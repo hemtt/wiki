@@ -20,7 +20,9 @@
     "drawRectangle",
     "drawXPolygon"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.76"
+  },
   "status": "Passed",
   "syntax": [
     {

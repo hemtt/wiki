@@ -18,7 +18,9 @@
     "Mission_Editor:_Waypoints#Behaviour|Behaviour",
     "Description"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.58"
+  },
   "status": "Passed",
   "syntax": [
     {

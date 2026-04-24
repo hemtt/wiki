@@ -22,7 +22,9 @@
     "attachedObject",
     "detach"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.14"
+  },
   "status": "Passed",
   "syntax": [
     {

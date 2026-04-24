@@ -35,7 +35,9 @@
     "lbText",
     "lbValue"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.46"
+  },
   "status": "Passed",
   "syntax": [
     {

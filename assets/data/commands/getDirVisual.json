@@ -17,7 +17,9 @@
     "getDir",
     "direction"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.32"
+  },
   "status": "Passed",
   "syntax": [
     {

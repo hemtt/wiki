@@ -22,7 +22,9 @@
     "assignAsCargoIndex",
     "emptyPositions"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.34"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -20,7 +20,9 @@
     "handgunMagazine",
     "binocularMagazine"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.70"
+  },
   "status": "Passed",
   "syntax": [
     {

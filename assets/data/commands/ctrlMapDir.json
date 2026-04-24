@@ -14,7 +14,9 @@
   "see_also": [
     "ctrlMapScale"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.14"
+  },
   "status": "Passed",
   "syntax": [
     {

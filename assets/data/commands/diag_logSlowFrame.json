@@ -21,7 +21,9 @@
     "chat",
     "commands"
   ],
-  "since": {},
+  "since": {
+    "arma2oa": "1.63"
+  },
   "status": "Passed",
   "syntax": [
     {

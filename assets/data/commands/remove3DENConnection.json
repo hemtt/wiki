@@ -15,7 +15,9 @@
     "add3DENConnection",
     "get3DENConnections"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.56"
+  },
   "status": "Passed",
   "syntax": [
     {

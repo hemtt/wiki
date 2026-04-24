@@ -3,7 +3,7 @@
   "description": "Returns the current scale of given map control.",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>\n_control = (findDisplay 12) displayCtrl 51; //Arma 3\n_scale = ctrlMapScale _control; //returns number from 1 to 0.001\n</sqf>"
+    "<sqf>\n_control = (findDisplay 12) displayCtrl 51; // {{arma3}}\n_scale = ctrlMapScale _control; // returns number from 1 to 0.001\n</sqf>"
   ],
   "groups": [
     "GUI Control - Map"
@@ -16,7 +16,13 @@
     "ctrlSetScale",
     "ctrlMapDir"
   ],
-  "since": {},
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

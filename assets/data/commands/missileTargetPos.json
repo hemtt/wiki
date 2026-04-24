@@ -17,7 +17,9 @@
     "setMissileTarget",
     "missileState"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.92"
+  },
   "status": "Passed",
   "syntax": [
     {

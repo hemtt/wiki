@@ -17,7 +17,9 @@
     "enableAI",
     "checkAIFeature"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.16"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -30,7 +30,12 @@
     "assignedCommander",
     "assignedDriver"
   ],
-  "since": {},
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
   "status": "Passed",
   "syntax": [
     {

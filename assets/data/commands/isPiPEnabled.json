@@ -14,7 +14,10 @@
   "see_also": [
     "BIS_fnc_PIP"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.50",
+    "tkoh": "1.01"
+  },
   "status": "Passed",
   "syntax": [
     {

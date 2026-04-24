@@ -19,7 +19,9 @@
     "UAVControl",
     "connectTerminalToUAV"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.76"
+  },
   "status": "Passed",
   "syntax": [
     {

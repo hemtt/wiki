@@ -16,7 +16,9 @@
     "sideEnemy",
     "sideFriendly"
   ],
-  "since": {},
+  "since": {
+    "ofp": "1.75"
+  },
   "status": "Passed",
   "syntax": [
     {

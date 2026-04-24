@@ -14,7 +14,9 @@
   "see_also": [
     "ctrlSetTooltip"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.02"
+  },
   "status": "Passed",
   "syntax": [
     {

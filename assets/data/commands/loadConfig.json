@@ -31,7 +31,9 @@
     "getNumber",
     "getArray"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.10"
+  },
   "status": "Passed",
   "syntax": [
     {

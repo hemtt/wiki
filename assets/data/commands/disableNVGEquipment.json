@@ -15,7 +15,9 @@
     "equipmentDisabled",
     "disableTIEquipment"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.52"
+  },
   "status": "Passed",
   "syntax": [
     {

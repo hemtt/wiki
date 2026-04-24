@@ -21,7 +21,9 @@
     "moveInCargo",
     "BIS_fnc_spawnVehicle"
   ],
-  "since": {},
+  "since": {
+    "arma3": "0.76"
+  },
   "status": "Passed",
   "syntax": [
     {

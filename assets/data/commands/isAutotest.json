@@ -14,7 +14,9 @@
   "see_also": [
     "Arma_3_Startup_Parameters#autotest|autotest"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.24"
+  },
   "status": "Passed",
   "syntax": [
     {

@@ -18,7 +18,9 @@
     "displayParent",
     "ctrlParent"
   ],
-  "since": {},
+  "since": {
+    "arma3": "2.04"
+  },
   "status": "Passed",
   "syntax": [
     {

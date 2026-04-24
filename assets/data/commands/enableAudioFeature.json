@@ -16,7 +16,9 @@
   "see_also": [
     "insideBuilding"
   ],
-  "since": {},
+  "since": {
+    "arma3": "1.64"
+  },
   "status": "Passed",
   "syntax": [
     {
