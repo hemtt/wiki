@@ -1,0 +1,34 @@
+name: set3DENAttachedCursorEntity
+desc: Attach an entity to the [[:Category:Eden Editor|Eden Editor]] cursor.
+groups:
+- Eden Editor
+syntax:
+- call: !Unary entityHashMap
+  ret:
+    type: Nothing
+  right: !Item
+    name: entityHashMap
+    desc: |-
+      in format [["type", entityType], otherOptions] where ''entityType'' can be one of:
+      * "classname": [[String]] - object classname; see [[Arma 3: Assets]]
+      * "classname": [[String]] - see [[Arma 3: CfgMarkers#Marker Classes|marker classes]]
+      * "markershape": [[String]] - can be one of:
+      ** "icon"
+      ** "rectangle"
+      ** "ellipse"{{Feature|important|"polyline" is not supported.}}
+      * "classname": [[String]] - object classname; from CfgNonAIVehicles with simulation="detector". Usually "EmptyDetector"
+      * "classname": [[String]] - object classname;
+      * "classname": [[String]] - classname; from CfgWaypoints
+    type: HashMapUnknown
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.18'
+examples:
+- <sqf>set3DENAttachedCursorEntity createHashMapFromArray [["type", "object"], ["classname", "B_Survivor_F"]];</sqf>
+- <sqf>set3DENAttachedCursorEntity createHashMapFromArray [["type", "marker"], ["classname", "mil_pickup"], ["markertype", "icon"]];</sqf>
+see_also:
+- Eden
+- 'Editor:'
+- Object
+- typeOf
