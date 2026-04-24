@@ -1,0 +1,41 @@
+name: diag_drawMode
+desc: Activates a debug visualisation.
+groups:
+- Diagnostic
+syntax:
+- call: !Unary type
+  ret:
+    type: Nothing
+  right: !Item
+    name: type
+    desc: |-
+      type of visualisation. Can be one of:
+      * "Normal"
+      * "Roadway"
+      * "Geometry"
+      * "ViewGeometry"
+      * "FireGeometry"
+      * "Paths"
+      * "ShadowVolume"
+      * "ShadowBuffer"
+      * "Buoyancy"
+      * {{GVI|arma3|2.10|size= 0.75}} "Wire" - can be used along other visualisation
+      ** first mode: pure wireframe, no normal rendering
+      ** second mode: normal rendering combined with wireframe
+      ** third mode: back to normal
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.86'
+branch: Diag
+examples:
+- |-
+  <sqf>
+  diag_drawMode "FireGeometry";
+  sleep 5;
+  diag_drawMode "Normal";
+  </sqf>
+- "\"Wire\" can be used along other modes:\n<sqf>\ndiag_drawMode \"Wire\";\t\t\t// switch to first Wire mode\ndiag_drawMode \"Roadway\";\t\t// switch to Roadway like usual\n\ndiag_drawMode \"Wire\";\t\t\t// switch to second Wire mode\ndiag_drawMode \"ViewGeometry\";\t// switch to ViewGeometry, keeping the current Wire mode\n\ndiag_drawMode \"Wire\";\t\t\t// disable Wire\n</sqf>"
+see_also:
+- diag_list
