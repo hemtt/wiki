@@ -1,0 +1,25 @@
+name: leaderboardState
+desc: Returns the state of the board with the given name.
+groups:
+- Leaderboards
+syntax:
+- call: !Unary boardname
+  ret:
+    type: Number
+    desc: |-
+      * 0: Busy (async. operation in progress)
+      * 1: Async. operation ended with success
+      * 2: Async. operation ended with error
+      * 3: Invalid board (bad board name, not initialised etc)
+  right: !Item
+    name: boardname
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.42'
+examples:
+- <sqf>leaderboardState "TT01";</sqf>
+see_also:
+- leaderboardsRequestUploadScoreKeepBest
+- leaderboardsRequestUploadScore
