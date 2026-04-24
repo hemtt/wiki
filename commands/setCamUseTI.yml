@@ -1,0 +1,63 @@
+name: setCamUseTI
+desc: Sets thermal vision mode for currently used camera. This command only works with [[camCreate]] created camera that is currently the main camera for the player (see Example 2).
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - state
+  - modeIndex
+  ret:
+    type: Nothing
+  left: !Item
+    name: state
+    desc: '[[true]] to enable, [[false]] to disable the effect'
+    type: Boolean
+  right: !Item
+    name: modeIndex
+    desc: TI mode. Can be
+    type: !NumberEnum
+    - value: 0
+      desc: White Hot
+      since: null
+    - value: 1
+      desc: Black Hot
+      since: null
+    - value: 2
+      desc: Light Green Hot / Darker Green cold
+      since: null
+    - value: 3
+      desc: Black Hot / Darker Green cold
+      since: null
+    - value: 4
+      desc: Light Red Hot /Darker Red Cold
+      since: null
+    - value: 5
+      desc: Black Hot / Darker Red Cold
+      since: null
+    - value: 6
+      desc: White Hot . Darker Red Cold
+      since: null
+    - value: 7
+      desc: Thermal (Shade of Red and Green, Bodies are white)
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>true setCamUseTI 1;</sqf>
+- |-
+  ''Predator'' vision:
+  <sqf>
+  _cam = "camera" camCreate [0, 0, 0];
+  _cam camSetTarget player;
+  _cam camSetRelPos [0, 1, 1.5];
+  _cam cameraEffect ["Internal", "Back"];
+  _cam camCommit 0;
+  true setCamUseTI 7;
+  </sqf>
+see_also:
+- camUseNVG
+- disableTIEquipment
