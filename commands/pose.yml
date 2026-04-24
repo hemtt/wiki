@@ -1,0 +1,95 @@
+name: pose
+desc: Returns the pose of the given unit.
+groups:
+- Unit Control
+syntax:
+- call: !Unary unit
+  ret:
+    type: !StringEnum
+    - value: Dead
+      desc: null
+      since: null
+    - value: Weapon
+      desc: null
+      since: null
+    - value: BinocLying
+      desc: null
+      since: null
+    - value: LyingNoWeapon
+      desc: null
+      since: null
+    - value: Lying
+      desc: null
+      since: null
+    - value: HandGunLying
+      desc: null
+      since: null
+    - value: Crouch
+      desc: null
+      since: null
+    - value: HandGunCrouch
+      desc: null
+      since: null
+    - value: Combat
+      desc: null
+      since: null
+    - value: HandGunStand
+      desc: null
+      since: null
+    - value: Stand
+      desc: null
+      since: null
+    - value: Swimming
+      desc: null
+      since: null
+    - value: BottomSwimming
+      desc: null
+      since: null
+    - value: SurfaceSwimming
+      desc: null
+      since: null
+    - value: Diving
+      desc: null
+      since: null
+    - value: BottomDiving
+      desc: null
+      since: null
+    - value: SurfaceDiving
+      desc: null
+      since: null
+    - value: NoWeapon
+      desc: null
+      since: null
+    - value: Binoc
+      desc: null
+      since: null
+    - value: BinocStand
+      desc: null
+      since: null
+    - value: Healing
+      desc: null
+      since: null
+    - value: Dragged
+      desc: null
+      since: null
+    - value: Carrying
+      desc: null
+      since: null
+    - value: Freefall
+      desc: null
+      since: null
+    desc: ''
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since:
+  arma3: '2.08'
+examples:
+- <sqf>if (pose player == "SurfaceSwimming") then { hint "How's water?" };</sqf>
+see_also:
+- animationState
+- unitPos
+- stance
+- getLeaning
