@@ -6,15 +6,26 @@ groups:
 syntax:
 - call: !Unary unitOrGroup
   ret:
-    type: String
-    desc: |-
-      unit behaviour - one of:
-      * "CARELESS"
-      * "SAFE"
-      * "AWARE"
-      * "COMBAT"
-      * "STEALTH"
-      * "ERROR" - when not available
+    type: !StringEnum
+    - value: CARELESS
+      desc: null
+      since: null
+    - value: SAFE
+      desc: null
+      since: null
+    - value: AWARE
+      desc: null
+      since: null
+    - value: COMBAT
+      desc: null
+      since: null
+    - value: STEALTH
+      desc: null
+      since: null
+    - value: ERROR
+      desc: when not available
+      since: null
+    desc: unit behaviour
   right: !Item
     name: unitOrGroup
     desc: AI unit or group
