@@ -18,13 +18,20 @@ syntax:
   right: !Array
   - !Item
     name: type
-    desc: |-
-      defines [[Title Effect Type]] when not NONE, can be one of:
-      * "NONE"
-      * "OBJECT" - ''text'' defines the shown object , a subclass of {{hl|CfgTitles}} (see [[cutObj]])
-      * "RES" - ''text'' defines a resource class, a subclass of RscTitles (see [[cutRsc]])
-      * "TEXT" - ''text'' defines text string to show (see [[cutText]])
-    type: String
+    desc: defines [[Title Effect Type]] when not NONE
+    type: !StringEnum
+    - value: NONE
+      desc: null
+      since: null
+    - value: OBJECT
+      desc: '''''text'''' defines the shown object , a subclass of {{hl|CfgTitles}} (see [[cutObj]])'
+      since: null
+    - value: RES
+      desc: '''''text'''' defines a resource class, a subclass of RscTitles (see [[cutRsc]])'
+      since: null
+    - value: TEXT
+      desc: '''''text'''' defines text string to show (see [[cutText]])'
+      since: null
   - !Item
     name: effect
     type: String
