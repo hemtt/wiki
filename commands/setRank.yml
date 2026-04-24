@@ -1,0 +1,41 @@
+name: setRank
+desc: |-
+  Sets rank of given unit.
+
+  {{Feature|arma3|Before {{arma3}} v1.68 and in previous titles, this command was {{Icon|globalArgument|32}} {{Icon|localEffect|32}}.}}
+groups:
+- Unit Identity
+syntax:
+- call: !Binary
+  - unitName
+  - rank
+  ret:
+    type: Nothing
+  left: !Item
+    name: unitName
+    type: Object
+  right: !Item
+    name: rank
+    desc: |-
+      one of:
+      * {{hl|"PRIVATE"}}
+      * {{hl|"CORPORAL"}}
+      * {{hl|"SERGEANT"}}
+      * {{hl|"LIEUTENANT"}}
+      * {{hl|"CAPTAIN"}}
+      * {{hl|"MAJOR"}}
+      * {{hl|"COLONEL"}}
+    type: String
+argument_loc: Local
+effect_loc: Global
+since:
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>player setRank "COLONEL";</sqf>
+see_also:
+- rank
+- setUnitRank
