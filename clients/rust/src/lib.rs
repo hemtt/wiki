@@ -146,7 +146,7 @@ impl Wiki {
 
                 git2::build::RepoBuilder::new()
                     .branch(BRANCH)
-                    .clone("https://github.com/hemtt/arma3-wiki", &appdata)
+                    .clone("https://github.com/hemtt/wiki", &appdata)
                     .map_err(|e| format!("Failed to clone repository: {e}"))?
             };
             Self::update_git(&repo).is_ok()
