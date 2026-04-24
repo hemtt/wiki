@@ -1,0 +1,72 @@
+name: getSlotItemName
+desc: Returns the name of assigned item in given slot or the empty string.
+groups:
+- Unit Inventory
+syntax:
+- call: !Binary
+  - unit
+  - slot
+  ret:
+    type: String
+    desc: item name
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: slot
+    desc: can be one of
+    type: !NumberEnum
+    - value: 603
+      desc: Goggles
+      since: null
+    - value: 605
+      desc: Headgear
+      since: null
+    - value: 608
+      desc: Map
+      since: null
+    - value: 609
+      desc: Compass
+      since: null
+    - value: 610
+      desc: Watch
+      since: null
+    - value: 611
+      desc: Radio
+      since: null
+    - value: 612
+      desc: GPS
+      since: null
+    - value: 616
+      desc: HMD
+      since: null
+    - value: 617
+      desc: Binoculars
+      since: null
+    - value: 701
+      desc: Vest
+      since: null
+    - value: 801
+      desc: Uniform
+      since: null
+    - value: 901
+      desc: Backpack
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.14'
+examples:
+- <sqf>hint (player getSlotItemName 610);</sqf>
+see_also:
+- assignedItems
+- assignItem
+- unassignItem
+- linkItem
+- unlinkItem
+- addItem
+- removeItem
+- removeAllAssignedItems
+- items
+- itemsWithMagazines
+- backpacks
