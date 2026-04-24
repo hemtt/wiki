@@ -19,18 +19,14 @@ syntax:
     type: String
   - !Item
     name: function
-    desc: |-
-      passed params array is [musicClassname, eventHandlerId] where:
-      * musicClassName: [[String]] - [[Description.ext#Music|CfgMusic]] class name of the music that started
-      * eventHandlerId: [[Number]] - event handler id (same as returned by [[addMusicEventHandler]] usage)
-      * {{GVI|arma3|2.18|size= 0.75}} currentPosition: [[Number]] - current playback position in 0..1 range (see [[getMusicPlayedTime]])
-      * {{GVI|arma3|2.18|size= 0.75}} totalLength: [[Number]] - track total length in seconds
+    desc: passed params array is [musicClassname, eventHandlerId] where
     type: !OneOf
     - type: String
-      desc: null
-      since: null
-    - type: Code
-      desc: null
+      desc: |-
+        musicClassName: [[String]] - [[Description.ext#Music|CfgMusic]] class name of the music that started
+        eventHandlerId: [[Number]] - event handler id (same as returned by [[addMusicEventHandler]] usage)
+        {{GVI|arma3|2.18|size= 0.75}} currentPosition: [[Number]] - current playback position in 0..1 range (see [[getMusicPlayedTime]])
+        {{GVI|arma3|2.18|size= 0.75}} totalLength: [[Number]] - track total length in seconds
       since: null
 argument_loc: Unspecified
 effect_loc: Local
