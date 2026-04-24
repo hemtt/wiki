@@ -43,9 +43,7 @@ impl GitHub {
             },
         ))
     }
-}
 
-impl GitHub {
     pub fn command_commit(&self, command: &str) -> Result<Option<PullRequest>, String> {
         if std::env::var("CI").is_err() {
             println!("Local, Skipping commit for {command}");
@@ -94,6 +92,18 @@ impl GitHub {
         command!(["add", "version.txt"]);
         command!(["commit", "-m", "Update version"]);
         command!(["push", "origin", "dist"]);
+    }
+
+    pub fn report_commit(&self) -> Result<(), String> {
+        if std::env::var("CI").is_err() {
+            println!("Local, Skipping commit for report");
+            return Ok(());
+        }
+        command!(["checkout", "dist"]);
+        command!(["add", "report.json"]);
+        command!(["commit", "-m", "Update report"]);
+        command!(["push", "origin", "dist"]);
+        Ok(())
     }
 }
 

@@ -28,7 +28,7 @@ async fn main() {
         github.version_commit();
     }
 
-    for command in report.passed_commands() {
+    for command in report.outdated_commands() {
         match issues.failed_command_close(&github, command).await {
             Err(e) => {
                 println!("Failed to close issue for {command}: {e}");
@@ -61,7 +61,7 @@ async fn main() {
     //     }
     // }
 
-    for (ns, handlers) in report.passed_event_handlers() {
+    for (ns, handlers) in report.outdated_event_handlers() {
         let ns = ns.to_string();
         for handler in handlers {
             let handler = handler.id();
@@ -104,6 +104,12 @@ async fn main() {
     //         }
     //     }
     // }
+
+    // Commit report.json with updated version and outdated commands
+    if let Err(e) = github.report_commit() {
+        println!("Failed to commit report: {e}");
+        failed = true;
+    }
 
     if failed {
         std::process::exit(1);

@@ -855,7 +855,42 @@ fn or_array_of() {
                 typ: Value::ArrayUnsized {
                     value: Box::new(Value::Code),
                 },
-                desc: Some("[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}".to_string()),
+                desc: Some("array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}".to_string()),
+                since: None,
+            },
+        ])
+    );
+}
+
+#[test]
+fn or_with_bullets() {
+    let line = r#"expression: [[Code]] or [[String]] - expression that will be executed in [[missionNamespace]] when event handler fires.
+* If the event handler has some data to return upon activation they are stored in the {{hl|_this}} variable
+* {{GVI|arma3|1.64|size= 0.75}} the event handler's handle is stored in {{hl|_thisEventHandler}} variable and is available during event handler code execution
+* {{GVI|arma3|2.04|size= 0.75}} it is possible to pass additional arguments to the EH code via optional param. The ''args'' are stored in {{hl|_thisArgs}} variable
+{{Feature|important|Only arguments of simple types get proper serialization. [[Object]]s, [[Group]]s etc will not serialize and appear as NULLs on game load.}}
+* {{GVI|arma3|2.06|size= 0.75}} the event's name is available from {{hl|_thisEvent}} variable"#;
+    let (param_item, errors) =
+        ParamItem::parse("test", line).expect("Failed to parse or with bullets line");
+    assert!(errors.is_empty());
+    assert_eq!(param_item.name, "expression");
+    assert_eq!(
+        param_item.desc.as_deref(),
+        Some(
+            "expression that will be executed in [[missionNamespace]] when event handler fires.\n* If the event handler has some data to return upon activation they are stored in the {{hl|_this}} variable\n* {{GVI|arma3|1.64|size= 0.75}} the event handler's handle is stored in {{hl|_thisEventHandler}} variable and is available during event handler code execution\n* {{GVI|arma3|2.04|size= 0.75}} it is possible to pass additional arguments to the EH code via optional param. The ''args'' are stored in {{hl|_thisArgs}} variable\n{{Feature|important|Only arguments of simple types get proper serialization. [[Object]]s, [[Group]]s etc will not serialize and appear as NULLs on game load.}}\n* {{GVI|arma3|2.06|size= 0.75}} the event's name is available from {{hl|_thisEvent}} variable"
+        )
+    );
+    assert_eq!(
+        param_item.typ,
+        Value::OneOf(vec![
+            OneOfValue {
+                typ: Value::Code,
+                desc: None,
+                since: None,
+            },
+            OneOfValue {
+                typ: Value::String,
+                desc: None,
                 since: None,
             },
         ])

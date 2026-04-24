@@ -337,8 +337,8 @@ pub fn try_string_enum(source: &str) -> Result<Option<ParamItem>, String> {
     let mut enum_values = Vec::new();
     let mut in_columns = false;
 
-    for i in 1..lines.len() {
-        let line = lines[i].trim();
+    for line in &lines[1..] {
+        let line = line.trim();
 
         // Handle {{Columns|...| opening
         if line.contains("{{Columns|") {
@@ -512,9 +512,13 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
     // Collect entries from remaining lines
     let mut entries: Vec<(Option<String>, Option<String>, Option<String>)> = Vec::new(); // (val1, val2, description)
     let mut raw_line_contents: Vec<String> = Vec::new();
+    let mut original_lines: Vec<String> = Vec::new(); // Keep original lines as they appear
 
-    for i in 1..lines.len() {
-        let line = lines[i].trim();
+    for line in &lines[1..] {
+        let line_str = line.to_string();
+        original_lines.push(line_str.clone());
+
+        let line = line.trim();
         if line.is_empty() {
             continue;
         }
@@ -561,7 +565,10 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
         }
     }
 
-    if entries.is_empty() {
+    if entries.is_empty() && raw_line_contents.is_empty() {
+        // If both types are plain and there are no additional lines, we still need to match
+        // Let this fall through or return None based on whether we want plain OneOf parsing
+        // For now, if there are no entries at all, this parser doesn't apply
         return Ok(None);
     }
 
@@ -587,19 +594,35 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
     );
 
     if type1_is_plain {
-        // First type is plain (e.g., Boolean), attach all raw lines as description
-        let all_desc = raw_line_contents.join("\n");
-        one_of_values.push(OneOfValue {
-            typ: type1_val,
-            desc: Some(all_desc),
-            since: type1_since,
-        });
+        // First type is plain (e.g., Boolean, String), check if we have valid enum entries
 
-        // Parse second type as enum (extract first value for each line as enum value)
-        let mut enum_values: Vec<NumberEnumValue> = Vec::new();
-        for (val1, _, desc) in &entries {
-            if let Some(val_str) = val1 {
-                if let Ok(num) = val_str.parse::<i32>() {
+        // Count how many entries are numeric (potential enum values)
+        let numeric_entries: Vec<_> = entries
+            .iter()
+            .filter(|(val1, _, _)| {
+                if let Some(val_str) = val1 {
+                    val_str.parse::<i32>().is_ok()
+                } else {
+                    false
+                }
+            })
+            .collect();
+
+        if !numeric_entries.is_empty() {
+            // We have numeric enum values - reconstruct them as description for type1
+            let enum_desc = raw_line_contents.join("\n");
+            one_of_values.push(OneOfValue {
+                typ: type1_val,
+                desc: Some(enum_desc),
+                since: type1_since,
+            });
+
+            // Parse numeric values for type2
+            let mut enum_values: Vec<NumberEnumValue> = Vec::new();
+            for (val1, _, desc) in &entries {
+                if let Some(val_str) = val1
+                    && let Ok(num) = val_str.parse::<i32>()
+                {
                     enum_values.push(NumberEnumValue {
                         value: num,
                         desc: desc.clone(),
@@ -607,14 +630,42 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
                     });
                 }
             }
-        }
-
-        if !enum_values.is_empty() {
             one_of_values.push(OneOfValue {
                 typ: Value::NumberEnum(enum_values),
                 desc: None,
                 since: type2_since,
             });
+        } else {
+            // No numeric enum values found - all remaining lines are just additional description
+
+            // Add plain types with no descriptions
+            one_of_values.push(OneOfValue {
+                typ: type1_val,
+                desc: None,
+                since: type1_since,
+            });
+
+            one_of_values.push(OneOfValue {
+                typ: Value::parse(type2_clean, 0)?,
+                desc: None,
+                since: type2_since,
+            });
+
+            // All remaining lines are additional description - preserve original format
+            if !original_lines.is_empty() {
+                let extra_text = original_lines.join("\n");
+                let mut combined_desc = desc.clone();
+                combined_desc.push('\n');
+                combined_desc.push_str(&extra_text);
+                return Ok(Some(ParamItem {
+                    name: name_part.trim().to_string(),
+                    typ: Value::OneOf(one_of_values),
+                    desc: Some(combined_desc),
+                    default: None,
+                    optional: false,
+                    since: None,
+                }));
+            }
         }
     } else {
         // Both types can have enums - create enums for both
@@ -622,14 +673,14 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
         // Parse first type as enum (numeric)
         let mut enum1_values: Vec<NumberEnumValue> = Vec::new();
         for (val1, _, desc) in &entries {
-            if let Some(val_str) = val1 {
-                if let Ok(num) = val_str.parse::<i32>() {
-                    enum1_values.push(NumberEnumValue {
-                        value: num,
-                        desc: desc.clone(),
-                        since: None,
-                    });
-                }
+            if let Some(val_str) = val1
+                && let Ok(num) = val_str.parse::<i32>()
+            {
+                enum1_values.push(NumberEnumValue {
+                    value: num,
+                    desc: desc.clone(),
+                    since: None,
+                });
             }
         }
 
@@ -710,8 +761,8 @@ pub fn try_oneof_types(source: &str) -> Result<Option<ParamItem>, String> {
     // Collect the type-description pairs from bullet lines
     let mut type_descs: Vec<(String, Option<String>)> = Vec::new();
 
-    for i in 1..lines.len() {
-        let line = lines[i].trim();
+    for line in &lines[1..] {
+        let line = line.trim();
         if line.is_empty() {
             continue;
         }
@@ -741,39 +792,34 @@ pub fn try_oneof_types(source: &str) -> Result<Option<ParamItem>, String> {
 
     for (type_str, desc) in &type_descs {
         let typ = Value::parse(type_str, 0)?;
-
-        // For complex types (containing " of "), include the type in the description
-        let final_desc = if type_str.contains(" of ") {
-            if let Some(d) = desc {
-                Some(format!("{} - {}", type_str, d))
-            } else {
-                Some(type_str.clone())
-            }
-        } else {
-            desc.clone()
-        };
-
         one_of_values.push(OneOfValue {
             typ,
-            desc: final_desc,
+            desc: desc.clone(),
             since: None,
         });
     }
-
-    // Remove unused type_descs warning if we're not using it directly in the final loop
-    // (It's used indirectly through the iteration above)
 
     if one_of_values.is_empty() {
         return Ok(None);
     }
 
     // Extract overall description from the bullet points
+    // For complex types (containing " of "), include the type prefix
     let overall_desc = if !one_of_values.is_empty() {
         let mut desc_parts = Vec::new();
-        for oneof_val in &one_of_values {
-            if let Some(desc) = &oneof_val.desc {
-                desc_parts.push(desc.clone());
-            }
+        for (type_str, desc) in &type_descs {
+            let line = if type_str.contains(" of ") {
+                // Complex type: include type prefix
+                if let Some(d) = desc {
+                    format!("{} - {}", type_str, d)
+                } else {
+                    type_str.clone()
+                }
+            } else {
+                // Simple type: description only
+                desc.clone().unwrap_or_else(|| type_str.clone())
+            };
+            desc_parts.push(line);
         }
         if desc_parts.is_empty() {
             None
