@@ -18,20 +18,36 @@ syntax:
     type: String
   right: !Item
     name: brush
-    desc: |-
-      (case-insensitive) can be one of:
-      * "Solid"
-      * {{GVI|arma3|0.50|size= 0.75}} "SolidFull"
-      * "Horizontal"
-      * "Vertical"
-      * "Grid"
-      * "FDiagonal"
-      * "BDiagonal"
-      * "DiagGrid"
-      * "Cross"
-      * {{GVI|arma2|1.00|size= 0.75}} "Border"
-      * {{GVI|arma2|1.00|size= 0.75}} "SolidBorder"
-    type: String
+    desc: (case-insensitive)
+    type: !StringEnum
+    - value: Solid
+      desc: null
+      since: null
+    - value: SolidFull
+      desc: null
+      since:
+        arma3: '0.50'
+    - value: Horizontal
+      desc: null
+      since: null
+    - value: Vertical
+      desc: null
+      since: null
+    - value: Grid
+      desc: null
+      since: null
+    - value: FDiagonal
+      desc: null
+      since: null
+    - value: BDiagonal
+      desc: null
+      since: null
+    - value: DiagGrid
+      desc: null
+      since: null
+    - value: Cross
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Global
 since:
