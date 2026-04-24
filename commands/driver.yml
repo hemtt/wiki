@@ -1,0 +1,30 @@
+name: driver
+desc: Returns the driver of a vehicle.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: Object
+    desc: '-'
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Global
+effect_loc: Unspecified
+since:
+  ofp: '1.00'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>(driver _tank) action ["getout", _tank];</sqf>
+- <sqf>driver vehicle player isEqualTo player // check if player is driver of current vehicle</sqf>
+see_also:
+- commander
+- gunner
+- crew
+- currentPilot
