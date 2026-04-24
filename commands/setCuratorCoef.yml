@@ -16,15 +16,26 @@ syntax:
   right: !Array
   - !Item
     name: action
-    desc: |-
-      can be one of:
-      * "Place"
-      * "Edit"
-      * "Delete"
-      * "Destroy"
-      * "Group"
-      * "Synchronize"
-    type: String
+    desc: ''
+    type: !StringEnum
+    - value: Place
+      desc: null
+      since: null
+    - value: Edit
+      desc: null
+      since: null
+    - value: Delete
+      desc: null
+      since: null
+    - value: Destroy
+      desc: null
+      since: null
+    - value: Group
+      desc: null
+      since: null
+    - value: Synchronize
+      desc: null
+      since: null
   - !Item
     name: coef
     desc: or [[Boolean]]
