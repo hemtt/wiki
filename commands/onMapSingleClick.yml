@@ -9,18 +9,14 @@ syntax:
     type: Nothing
   right: !Item
     name: command
-    desc: |-
-      code executed on click. The following variables are available:
-      * _pos: [[Position#Introduction|Position2D]] - clicked position
-      * _units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')
-      * _shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map
-      * _alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map
+    desc: code executed on click. The following variables are available
     type: !OneOf
     - type: String
-      desc: null
-      since: null
-    - type: Code
-      desc: null
+      desc: |-
+        _pos: [[Position#Introduction|Position2D]] - clicked position
+        _units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')
+        _shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map
+        _alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map
       since: null
 - call: !Binary
   - params
@@ -32,19 +28,15 @@ syntax:
     type: Anything
   right: !Item
     name: command
-    desc: |-
-      code executed on click. The following variables are available:
-      * _this: [[Anything]] - Params passed to onMapSingleClick
-      * _pos: [[Position#Introduction|Position2D]] - clicked position
-      * _units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')
-      * _shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map
-      * _alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map
+    desc: code executed on click. The following variables are available
     type: !OneOf
     - type: String
-      desc: null
-      since: null
-    - type: Code
-      desc: null
+      desc: |-
+        _this: [[Anything]] - Params passed to onMapSingleClick
+        _pos: [[Position#Introduction|Position2D]] - clicked position
+        _units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')
+        _shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map
+        _alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
