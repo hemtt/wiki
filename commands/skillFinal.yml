@@ -19,7 +19,7 @@ syntax:
       * "aimingAccuracy"
       * "aimingShake"
       * "aimingSpeed"
-      * "endurance" (Has no effect in {{arma3}})
+      * "endurance" - Has no effect in {{arma3}}
       * "spotDistance"
       * "spotTime"
       * "courage"
