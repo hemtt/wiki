@@ -27,17 +27,13 @@ syntax:
     type: String
   - !Item
     name: expression
-    desc: |-
-      expression to execute.<br>
-      * Event Handler parameters are accessible via <sqf inline>_this</sqf>
-      * The Event Handler type is available as <sqf inline>_thisEvent</sqf>
-      * The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>
+    desc: expression to execute.<br>
     type: !OneOf
     - type: String
-      desc: null
-      since: null
-    - type: Code
-      desc: null
+      desc: |-
+        Event Handler parameters are accessible via <sqf inline>_this</sqf>
+        The Event Handler type is available as <sqf inline>_thisEvent</sqf>
+        The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>
       since: null
 argument_loc: Global
 effect_loc: Global
