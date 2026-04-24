@@ -1,0 +1,29 @@
+name: weaponInertia
+desc: Returns current rate of how much the weapon view is distorted because of quick aiming.
+groups:
+- Weapons
+syntax:
+- call: !Unary unit
+  ret:
+    type: !ArraySized
+    - name: x
+      type: Number
+      default: null
+      desc: Amount of x-axis sway
+      since: null
+    - name: y
+      type: Number
+      default: null
+      desc: Amount of y-axis sway
+      since: null
+  right: !Item
+    name: unit
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.48'
+examples:
+- <sqf>_inertia = weaponInertia player; //[-0.0126307,0.038023]</sqf>
+see_also:
+- getWeaponSway
