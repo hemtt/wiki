@@ -11,8 +11,8 @@ pub use helpers::{extract_string_enum_value, parse_enum_lines, strip_wiki_markup
 
 // Re-export parsers for internal use
 use parsers::{
-    try_array_with, try_number_enum, try_simple_line, try_simple_line_with_extra_description,
-    try_string_enum,
+    try_array_with, try_multiple_type_enum, try_number_enum, try_oneof_types, try_simple_line,
+    try_simple_line_with_extra_description, try_string_enum,
 };
 
 /// Main dispatcher for parsing parameter definitions
@@ -31,6 +31,12 @@ impl ParamItem {
             return Ok((parsed, Vec::new()));
         }
         if let Some(parsed) = try_string_enum(source)? {
+            return Ok((parsed, Vec::new()));
+        }
+        if let Some(parsed) = try_multiple_type_enum(source)? {
+            return Ok((parsed, Vec::new()));
+        }
+        if let Some(parsed) = try_oneof_types(source)? {
             return Ok((parsed, Vec::new()));
         }
         if let Some(parsed) = try_simple_line_with_extra_description(source)? {

@@ -611,6 +611,193 @@ fn string_enum() {
             },
         ])
     );
+
+    let line = r#"return: [[String]] - unit behaviour - one of:
+{{Columns|2|
+* "CARELESS"
+* "SAFE"
+* "AWARE"
+* "COMBAT"
+* "STEALTH"
+* "ERROR" - when not available
+}}"#;
+    let (param_item, errors) =
+        ParamItem::parse("test", line).expect("Failed to parse string enum with columns line");
+    assert!(errors.is_empty());
+    assert_eq!(param_item.name, "return");
+    assert_eq!(param_item.desc, Some("unit behaviour".to_string()));
+    assert_eq!(
+        param_item.typ,
+        Value::StringEnum(vec![
+            StringEnumValue {
+                value: "CARELESS".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "SAFE".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "AWARE".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "COMBAT".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "STEALTH".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "ERROR".to_string(),
+                desc: Some("when not available".to_string()),
+                since: None,
+            },
+        ])
+    );
+
+    let line = r#"toneName: [[String]] - can be one of:
+* "Arma"
+* "Filmic"
+* "Reinhard""#;
+    let (param_item, errors) = ParamItem::parse("test", line)
+        .expect("Failed to parse string enum with incomplete list line");
+    assert!(errors.is_empty());
+    assert_eq!(param_item.name, "toneName");
+    assert_eq!(param_item.desc, Some(String::new()));
+    assert_eq!(
+        param_item.typ,
+        Value::StringEnum(vec![
+            StringEnumValue {
+                value: "Arma".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "Filmic".to_string(),
+                desc: None,
+                since: None,
+            },
+            StringEnumValue {
+                value: "Reinhard".to_string(),
+                desc: None,
+                since: None,
+            },
+        ])
+    );
+}
+
+#[test]
+fn multiple_type_enum() {
+    let line = r#"mode: [[Number]] or [[String]] - can be one of the following:
+* 0 / "AUTO" - control position (x, y, w, h) is always rounded to whole pixels (game default)
+* 1 / "ON" - control position (x, y, w, h) is rounded to whole pixels only when not animating
+* 2 / "OFF" - control position (x, y, w, h) is always precise, no pixel rounding applies here"#;
+    let (param_item, errors) =
+        ParamItem::parse("test", line).expect("Failed to parse multiple type enum line");
+    assert!(errors.is_empty());
+    assert_eq!(param_item.name, "mode");
+    assert_eq!(
+        param_item.desc.as_deref(),
+        Some("can be one of the following")
+    );
+    assert_eq!(
+        param_item.typ,
+        Value::OneOf(vec![
+            OneOfValue {
+                typ: Value::NumberEnum(vec![
+                    NumberEnumValue {
+                        value: 0,
+                        desc: Some("control position (x, y, w, h) is always rounded to whole pixels (game default)".to_string()),
+                        since: None,
+                    },
+                    NumberEnumValue {
+                        value: 1,
+                        desc: Some("control position (x, y, w, h) is rounded to whole pixels only when not animating".to_string()),
+                        since: None,
+                    },
+                    NumberEnumValue {
+                        value: 2,
+                        desc: Some("control position (x, y, w, h) is always precise, no pixel rounding applies here".to_string()),
+                        since: None,
+                    },
+                ]),
+                desc: None,
+                since: None,
+            },
+            OneOfValue {
+                typ: Value::StringEnum(vec![
+                    StringEnumValue {
+                        value: "AUTO".to_string(),
+                        desc: Some("control position (x, y, w, h) is always rounded to whole pixels (game default)".to_string()),
+                        since: None,
+                    },
+                    StringEnumValue {
+                        value: "ON".to_string(),
+                        desc: Some("control position (x, y, w, h) is rounded to whole pixels only when not animating".to_string()),
+                        since: None,
+                    },
+                    StringEnumValue {
+                        value: "OFF".to_string(),
+                        desc: Some("control position (x, y, w, h) is always precise, no pixel rounding applies here".to_string()),
+                        since: None,
+                    },
+                ]),
+                desc: None,
+                since: None,
+            },
+        ])
+    );
+
+    let line = r#"isSpeech: [[Boolean]] or {{GVI|arma3|2.04|size= 0.75}} [[Number]] - (Optional, default [[false]])
+* 0/[[false]] = play as sound ([[fadeSound]] applies)
+* 1/[[true]] = play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)
+* 2 = play as sound ([[fadeSound]] applies) without interior/vehicle muffling"#;
+    let (param_item, errors) =
+        ParamItem::parse("test", line).expect("Failed to parse multiple type enum line");
+    assert!(errors.is_empty());
+    assert_eq!(param_item.name, "isSpeech");
+    assert_eq!(
+        param_item.desc.as_deref(),
+        Some("(Optional, default [[false]])")
+    );
+    assert_eq!(
+        param_item.typ,
+        Value::OneOf(vec![
+            OneOfValue {
+                typ: Value::Boolean,
+                desc: Some("0/[[false]] = play as sound ([[fadeSound]] applies)\n1/[[true]] = play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)\n2 = play as sound ([[fadeSound]] applies) without interior/vehicle muffling".to_string()),
+                since: None,
+            },
+            OneOfValue {
+                typ: Value::NumberEnum(vec![
+                    NumberEnumValue {
+                        value: 0,
+                        desc: Some("play as sound ([[fadeSound]] applies)".to_string()),
+                        since: None,
+                    },
+                    NumberEnumValue {
+                        value: 1,
+                        desc: Some("play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)".to_string()),
+                        since: None,
+                    },
+                    NumberEnumValue {
+                        value: 2,
+                        desc: Some("play as sound ([[fadeSound]] applies) without interior/vehicle muffling".to_string()),
+                        since: None,
+                    },
+                ]),
+                desc: None,
+                since: Some(Since::arma3("2.04")),
+            },
+        ])
+    );
 }
 
 #[test]
@@ -638,6 +825,40 @@ fn extra_description() {
     assert_eq!(
         param_item.desc,
         Some("flag texture. If texture is {{hl|\"\"}}, flag is not drawn. Custom texture can be used:\n* Prior {{arma3}}: Dimension 200x200, file extension .jpg\n* Since {{arma3}}: Dimension 512×256, file extension .paa".to_string())
+    );
+}
+
+#[test]
+fn or_array_of() {
+    let line = "thenCode: [[Code]] or [[Array]] of [[Code]]:
+* [[Code]] - code block to execute if ''ifType''<nowiki/>'s condition is [[true]]
+* [[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}";
+    let (param_item, errors) =
+        ParamItem::parse("test", line).expect("Failed to parse or array of line");
+    assert!(errors.is_empty());
+    assert_eq!(param_item.name, "thenCode");
+    assert_eq!(
+        param_item.desc.as_deref(),
+        Some(
+            "code block to execute if ''ifType''<nowiki/>'s condition is [[true]]\n[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}"
+        )
+    );
+    assert_eq!(
+        param_item.typ,
+        Value::OneOf(vec![
+            OneOfValue {
+                typ: Value::Code,
+                desc: Some("code block to execute if ''ifType''<nowiki/>'s condition is [[true]]".to_string()),
+                since: None,
+            },
+            OneOfValue {
+                typ: Value::ArrayUnsized {
+                    value: Box::new(Value::Code),
+                },
+                desc: Some("[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}".to_string()),
+                since: None,
+            },
+        ])
     );
 }
 

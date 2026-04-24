@@ -66,15 +66,71 @@ where
     enum_values
 }
 
-/// Extract a quoted string value from {{hl|"VALUE"}} format
+/// Extract a quoted string value from {{hl|"VALUE"}} format or plain "VALUE" format
+/// Also extracts optional description after " - "
 pub fn extract_string_enum_value(text: &str) -> Option<String> {
+    // Try {{hl|\"VALUE\"}} format first
     if let Some(start) = text.find("{{hl|\"") {
         let after_prefix = &text[start + 6..];
         if let Some(end) = after_prefix.find("\"") {
             return Some(after_prefix[..end].to_string());
         }
     }
+
+    // Try plain \"VALUE\" format (just quoted string at start of line)
+    let trimmed = text.trim_start();
+    if trimmed.starts_with('\"') {
+        if let Some(end) = trimmed[1..].find('\"') {
+            return Some(trimmed[1..end + 1].to_string());
+        }
+    }
+
     None
+}
+
+/// Extract string enum value with optional description
+/// Returns (value, description)
+pub fn extract_string_enum_value_with_desc(text: &str) -> Option<(String, Option<String>)> {
+    let mut value = None;
+    let mut remainder = text.trim_start();
+
+    // Try {{hl|\"VALUE\"}} format first
+    if let Some(start) = remainder.find("{{hl|\"") {
+        let after_prefix = &remainder[start + 6..];
+        if let Some(end) = after_prefix.find("\"") {
+            value = Some(after_prefix[..end].to_string());
+            remainder = &remainder[start + 8 + end..];
+        }
+    }
+
+    // If not found, try plain \"VALUE\" format
+    if value.is_none() && remainder.starts_with('\"') {
+        if let Some(end) = remainder[1..].find('\"') {
+            value = Some(remainder[1..end + 1].to_string());
+            remainder = &remainder[end + 2..];
+        }
+    }
+
+    // Extract description if present
+    let desc = if remainder.trim_start().starts_with(" - ") {
+        let desc_str = remainder.trim_start()[3..].trim();
+        if !desc_str.is_empty() {
+            Some(desc_str.to_string())
+        } else {
+            None
+        }
+    } else if remainder.trim_start().starts_with('-') {
+        let desc_str = remainder.trim_start()[1..].trim();
+        if !desc_str.is_empty() {
+            Some(desc_str.to_string())
+        } else {
+            None
+        }
+    } else {
+        None
+    };
+
+    value.map(|v| (v, desc))
 }
 
 #[must_use]
