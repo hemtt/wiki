@@ -1,0 +1,47 @@
+name: ctrlSetPixelPrecision
+desc: Switches mode of pixel precision (rounding) in a given control interface.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: !Binary
+  - control
+  - mode
+  ret:
+    type: Nothing
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: mode
+    desc: |-
+      can be one of the following:
+      * 0 / "AUTO" - control position (x, y, w, h) is always rounded to whole pixels (game default)
+      * 1 / "ON" - control position (x, y, w, h) is rounded to whole pixels only when not animating
+      * 2 / "OFF" - control position (x, y, w, h) is always precise, no pixel rounding applies here
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: String
+      desc: null
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.82'
+examples:
+- <sqf>_control ctrlSetPixelPrecision 2; // Enables pixel precision of the given control</sqf>
+see_also:
+- ctrlCommit
+- ctrlCreate
+- ctrlDelete
+- ctrlModel
+- ctrlSetModel
+- ctrlPosition
+- ctrlClassName
+- displayCtrl
+- ctrlModelScale
+- ctrlSetModelScale
+- ctrlModelDirAndUp
+- ctrlSetModelDirAndUp
+- ctrlSetPosition
