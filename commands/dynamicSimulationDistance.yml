@@ -1,0 +1,32 @@
+name: dynamicSimulationDistance
+desc: A getter for [[setDynamicSimulationDistance]].
+groups:
+- Dynamic Simulation
+syntax:
+- call: !Unary category
+  ret:
+    type: Number
+    desc: activation distance
+  right: !Item
+    name: category
+    desc: |-
+      can be:
+      * {{hl|"Group"}} - Infantry units and groups
+      * {{hl|"Vehicle"}} - Vehicles with crew
+      * {{hl|"EmptyVehicle"}} - All vehicles without crew
+      * {{hl|"Prop"}} - Static objects
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.68'
+examples:
+- <sqf>hint str dynamicSimulationDistance "Prop";</sqf>
+see_also:
+- Arma
+- '3:'
+- Dynamic
+- Simulation
+- setDynamicSimulationDistance
+- setDynamicSimulationDistanceCoef
+- dynamicSimulationDistanceCoef
