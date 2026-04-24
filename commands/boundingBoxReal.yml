@@ -1,0 +1,94 @@
+name: boundingBoxReal
+desc: |-
+  [[File:Boundingbox.jpg|right|200px]] Returns a raw bounding box of given object in model coordinates space. This command is similar to [[boundingBox]] but gives more precise measurements.<br>
+  The alternative syntax allows to specify clipping type to be used, which in some cases could make the result even more precise.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dRelative
+    desc: the extreme points of the model along {{GVI|arma3|1.92|size= 0.75}} the bounding box sphere radius, in format [[xmin, ymin, zmin], [xmax, ymax, zmax], boundingSphereRadius]
+  right: !Item
+    name: object
+    type: Object
+- call: !Binary
+  - clippingType
+  - object
+  ret:
+    type: Position3dRelative
+    desc: the extreme points of the model, as well as bounding sphere radius, in format [[xmin, ymin, zmin], [xmax, ymax, zmax], boundingSphereRadius]
+  left: !Item
+    name: clippingType
+    desc: can be one of
+    type: !NumberEnum
+    - value: 0
+      desc: ClipVisual (can significantly reduce bounding box's size on buildings)
+      since: null
+    - value: 1
+      desc: ClipShadow
+      since: null
+    - value: 2
+      desc: ClipGeometry
+      since: null
+    - value: 3
+      desc: ClipGeneral (same type that is used in the main syntax)
+      since: null
+  right: !Item
+    name: object
+    type: Object
+  since:
+    arma3: '1.92'
+- call: !Unary
+  - object
+  - LOD
+  ret:
+    type: Position3dRelative
+    desc: the extreme points of the model, as well as bounding box sphere radius, in format [[xmin, ymin, zmin], [xmax, ymax, zmax], boundingSphereRadius]
+  right: !Array
+  - !Item
+    name: object
+    type: Object
+  - !Item
+    name: LOD
+    desc: ''
+    type: !StringEnum
+    - value: Memory
+      desc: null
+      since: null
+    - value: Geometry
+      desc: null
+      since: null
+    - value: FireGeometry
+      desc: null
+      since: null
+    - value: LandContact
+      desc: null
+      since: null
+    - value: HitPoints
+      desc: null
+      since: null
+    - value: ViewGeometry
+      desc: null
+      since: null
+  since:
+    arma3: '2.14'
+argument_loc: Global
+effect_loc: Unspecified
+since:
+  arma3: '0.50'
+examples:
+- |-
+  <sqf>
+  private _bbr = boundingBoxReal vehicle player;
+  private _p1 = _bbr select 0;
+  private _p2 = _bbr select 1;
+  private _maxWidth = abs ((_p2 select 0) - (_p1 select 0));
+  private _maxLength = abs ((_p2 select 1) - (_p1 select 1));
+  private _maxHeight = abs ((_p2 select 2) - (_p1 select 2));
+  </sqf>
+- <sqf>hint str (0 boundingBoxReal cursorObject);</sqf>
+see_also:
+- boundingBox
+- sizeOf
+- boundingCenter
