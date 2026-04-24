@@ -27,14 +27,23 @@ syntax:
       since: null
   right: !Item
     name: behaviour
-    desc: |-
-      can be one of:
-      * "CARELESS"
-      * "SAFE"
-      * "AWARE"
-      * "COMBAT"
-      * "STEALTH"
-    type: String
+    desc: ''
+    type: !StringEnum
+    - value: CARELESS
+      desc: null
+      since: null
+    - value: SAFE
+      desc: null
+      since: null
+    - value: AWARE
+      desc: null
+      since: null
+    - value: COMBAT
+      desc: null
+      since: null
+    - value: STEALTH
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Global
 since:
