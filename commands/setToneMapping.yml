@@ -1,0 +1,35 @@
+name: setToneMapping
+desc: |-
+  Applies a specific tone mapping to the game. The tone mapping can be edited with [[setToneMappingParams]].
+  {{Feature|arma3|This command is not present in {{arma3}}.}}
+groups:
+- System
+syntax:
+- call: !Unary toneName
+  ret:
+    type: Nothing
+  right: !Item
+    name: toneName
+    desc: |-
+      can be one of:
+      * "Arma"
+      * "Filmic"
+      * "Reinhard"
+    type: String
+argument_loc: Unspecified
+effect_loc: Local
+since:
+  arma2oa: '1.62'
+  tkoh: '1.00'
+examples:
+- <sqf>setToneMapping "Filmic";</sqf>
+see_also:
+- setToneMappingParams
+- ppEffectAdjust
+- ppEffectCommit
+- ppEffectCommitted
+- ppEffectCreate
+- ppEffectDestroy
+- Post
+- Process
+- Effects
