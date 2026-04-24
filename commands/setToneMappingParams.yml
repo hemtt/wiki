@@ -12,12 +12,17 @@ syntax:
     type: Nothing
   left: !Item
     name: toneName
-    desc: |-
-      can be one of:
-      * "Arma"
-      * "Filmic"
-      * "Reinhard"
-    type: String
+    desc: ''
+    type: !StringEnum
+    - value: Arma
+      desc: null
+      since: null
+    - value: Filmic
+      desc: null
+      since: null
+    - value: Reinhard
+      desc: null
+      since: null
   right: !Item
     name: params
     desc: |-
