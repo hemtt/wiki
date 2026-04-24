@@ -8,13 +8,20 @@ syntax:
     type: Nothing
   right: !Item
     name: teamColor
-    desc: |-
-      can be one of:
-      * "RED"
-      * "GREEN"
-      * "BLUE"
-      * "YELLOW"
-    type: String
+    desc: ''
+    type: !StringEnum
+    - value: RED
+      desc: null
+      since: null
+    - value: GREEN
+      desc: null
+      since: null
+    - value: BLUE
+      desc: null
+      since: null
+    - value: YELLOW
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Unspecified
 since:
