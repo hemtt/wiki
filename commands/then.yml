@@ -18,10 +18,16 @@ syntax:
   right: !Item
     name: thenCode
     desc: |-
-      or [[Array]] of [[Code]]:
-      * [[Code]] - code block to execute if ''ifTypes condition is [[true]]
-      * [[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}
-    type: Code
+      code block to execute if ''ifTypes condition is [[true]]
+      [[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}
+    type: !OneOf
+    - type: Code
+      desc: code block to execute if ''ifTypes condition is [[true]]
+      since: null
+    - type: !ArrayUnsized
+        value: Code
+      desc: '[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}'
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
