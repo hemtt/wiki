@@ -28,16 +28,23 @@ syntax:
     optional: true
   - !Item
     name: team
-    desc: |-
-      can be one of:
-      * "teamMain"
-      * "teamRed"
-      * "teamGreen"
-      * "teamBlue"
-      * "teamYellow"
-    type: String
-    optional: true
-    default: '"teammain"'
+    desc: (Optional, default "teamMain")
+    type: !StringEnum
+    - value: teamMain
+      desc: null
+      since: null
+    - value: teamRed
+      desc: null
+      since: null
+    - value: teamGreen
+      desc: null
+      since: null
+    - value: teamBlue
+      desc: null
+      since: null
+    - value: teamYellow
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
