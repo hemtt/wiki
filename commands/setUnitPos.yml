@@ -1,0 +1,43 @@
+name: setUnitPos
+desc: |-
+  Set unit position rules. This command will not change the stance of the human player, even though it will change the output of [[unitPos]] command. To change player stance use [[playAction]] or [[playActionNow]]:
+  <sqf>
+  player playAction "PlayerProne"; // DOWN
+  player playAction "PlayerStand"; // UP
+  player playAction "PlayerCrouch"; // MIDDLE
+  </sqf>
+groups:
+- Unit Control
+syntax:
+- call: !Binary
+  - unit
+  - mode
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    type: Object
+  right: !Item
+    name: mode
+    desc: |-
+      can be:
+      * "DOWN" - Unit goes prone and stays prone.
+      * "UP" - Unit stands and stays standing.
+      * "MIDDLE" - Kneel Position. {{GVI|arma1|1.04}} - Unit will not kneel if it is unarmed
+      * "AUTO" - Unit chooses mode according to circumstances.
+    type: String
+argument_loc: Local
+effect_loc: Global
+since:
+  ofp: '1.00'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>_soldier setUnitPos "UP";</sqf>
+see_also:
+- setUnitPosWeak
+- unitPos
