@@ -1,0 +1,60 @@
+name: actionKeysNamesArray
+desc: Returns a list of button names assigned to the given user action. You can find the action names in config class ControllerSchemes or [[:Category:Key_Actions|user action names]].
+groups:
+- Interaction
+syntax:
+- call: !Unary userAction
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Item
+    name: userAction
+    desc: name of the action
+    type: String
+- call: !Unary
+  - userAction
+  - maxKeys
+  - inputDevicePriority
+  ret:
+    type: !ArrayUnsized
+      value: String
+  right: !Array
+  - !Item
+    name: userAction
+    desc: name of the action
+    type: String
+  - !Item
+    name: maxKeys
+    desc: maximum number of keys to return
+    type: Number
+  - !Item
+    name: inputDevicePriority
+    desc: |-
+      result sorted by {{hl|inputDevicePriority}} with values:
+      * {{hl|"Mouse"}}
+      * {{hl|"Keyboard"}}
+      * {{hl|"Stick"}}
+      * {{hl|"Gamepad"}}
+      * {{hl|"Tracker"}}
+      * {{hl|"Combo"}} (mouse and keyboard combinations)
+      * {{sic|{{hl|"Controler"}}}} (any controller other than mouse or keyboard)
+      * {{hl|"Unsorted"}}
+    type: String
+    optional: true
+    since:
+      arma3: '1.36'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>_actionList = actionKeysNamesArray "ReloadMagazine";</sqf>
+- <sqf>_actionList = actionKeysNamesArray ["ReloadMagazine", 1];</sqf>
+see_also:
+- actionKeys
+- actionKeysImages
+- actionKeysNames
+- actionName
+- inputAction
