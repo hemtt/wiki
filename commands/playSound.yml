@@ -23,21 +23,27 @@ syntax:
     type: String
   - !Item
     name: isSpeech
-    desc: |2-
-
-      * 0/[[false]] = play as sound ([[fadeSound]] applies)
-      * 1/[[true]] = play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)
-      * 2 = play as sound ([[fadeSound]] applies) without interior/vehicle muffling
+    desc: (Optional, default [[false]])
     type: !OneOf
     - type: Boolean
-      desc: null
+      desc: |-
+        0/[[false]] = play as sound ([[fadeSound]] applies)
+        1/[[true]] = play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)
+        2 = play as sound ([[fadeSound]] applies) without interior/vehicle muffling
       since: null
-    - type: Number
+    - type: !NumberEnum
+      - value: 0
+        desc: play as sound ([[fadeSound]] applies)
+        since: null
+      - value: 1
+        desc: play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)
+        since: null
+      - value: 2
+        desc: play as sound ([[fadeSound]] applies) without interior/vehicle muffling
+        since: null
       desc: null
       since:
         arma3: '2.04'
-    optional: true
-    default: 'false'
   - !Item
     name: offset
     desc: offset in seconds. Same as [[playMusic]]
