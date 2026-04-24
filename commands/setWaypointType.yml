@@ -1,0 +1,59 @@
+name: setWaypointType
+desc: "Sets the waypoint type of given waypoint. \n\nMore details at [[Waypoints]]."
+groups:
+- Waypoints
+syntax:
+- call: !Binary
+  - waypoint
+  - type
+  ret:
+    type: Nothing
+  left: !Item
+    name: waypoint
+    type: Waypoint
+  right: !Item
+    name: type
+    desc: |-
+      waypoint type. Can be:
+      * {{hl|"MOVE"}}
+      * {{hl|"DESTROY"}}
+      * {{hl|"GETIN"}}
+      * {{hl|"SAD"}} ''(Seek And Destroy)''
+      * {{hl|"JOIN"}}
+      * {{hl|"LEADER"}}
+      * {{hl|"GETOUT"}}
+      * {{hl|"CYCLE"}}
+      * {{hl|"LOAD"}}
+      * {{hl|"UNLOAD"}}
+      * {{hl|"TR UNLOAD"}}
+      * {{hl|"HOLD"}}
+      * {{hl|"SENTRY"}}
+      * {{hl|"GUARD"}} <small>(used with GUARDED BY trigger or [[createGuardedPoint]])</small>
+      * {{hl|"TALK"}}
+      * {{hl|"SCRIPTED"}}
+      * {{hl|"SUPPORT"}}
+      * {{hl|"GETIN NEAREST"}}
+      * {{hl|"DISMISS"}}
+      * {{hl|"LOITER"}} <small>({{arma3}})</small>
+      * {{GVI|arma3|1.34|size= 0.75}} {{hl|"HOOK"}} <small>(slingload object)</small>
+      * {{GVI|arma3|1.34|size= 0.75}} {{hl|"UNHOOK"}} <small>(slingload drop)</small>
+      * {{hl|"AND"}} <small>(only for game logics)</small>
+      * {{hl|"OR"}} <small>(only for game logics)</small>
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>_myWaypoint setWaypointType "HOLD";</sqf>
+see_also:
+- 2D
+- 'Editor:'
+- Waypoints#Select
+- Type|Waypoints
+- Types
+- waypointType
