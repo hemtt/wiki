@@ -16,27 +16,59 @@ syntax:
     type: Object
   right: !Item
     name: mimic
-    desc: |-
-      can be one of:
-      * "Default"
-      * "Normal"
-      * "Smile"
-      * "Hurt"
-      * "Ironic"
-      * "Sad"
-      * "Cynic"
-      * "Surprised"
-      * {{sic|"Agresive"}}
-      * "Angry"
-      * "neutral"
-      * "dead"
-      * "danger"
-      * "hurt"
-      * "aware"
-      * "safe"
-      * "combat"
-      * "unconscious"
-    type: String
+    desc: ''
+    type: !StringEnum
+    - value: Default
+      desc: null
+      since: null
+    - value: Normal
+      desc: null
+      since: null
+    - value: Smile
+      desc: null
+      since: null
+    - value: Hurt
+      desc: null
+      since: null
+    - value: Ironic
+      desc: null
+      since: null
+    - value: Sad
+      desc: null
+      since: null
+    - value: Cynic
+      desc: null
+      since: null
+    - value: Surprised
+      desc: null
+      since: null
+    - value: Angry
+      desc: null
+      since: null
+    - value: neutral
+      desc: null
+      since: null
+    - value: dead
+      desc: null
+      since: null
+    - value: danger
+      desc: null
+      since: null
+    - value: hurt
+      desc: null
+      since: null
+    - value: aware
+      desc: null
+      since: null
+    - value: safe
+      desc: null
+      since: null
+    - value: combat
+      desc: null
+      since: null
+    - value: unconscious
+      desc: null
+      since: null
 argument_loc: Global
 effect_loc: Local
 since:
