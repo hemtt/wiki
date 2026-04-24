@@ -9,13 +9,20 @@ groups:
 syntax:
 - call: !Unary lamppost
   ret:
-    type: String
-    desc: |-
-      can be one of:
-      * "ON" - light is on
-      * "OFF" - light is off
-      * "AUTO" - applicable only to the light of type "StreetLamp" and is only on during the night.
-      * "ERROR" - if command fails
+    type: !StringEnum
+    - value: ON
+      desc: light is on
+      since: null
+    - value: OFF
+      desc: light is off
+      since: null
+    - value: AUTO
+      desc: applicable only to the light of type "StreetLamp" and is only on during the night.
+      since: null
+    - value: ERROR
+      desc: if command fails
+      since: null
+    desc: ''
   right: !Item
     name: lamppost
     type: Object
