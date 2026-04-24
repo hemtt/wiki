@@ -28,19 +28,13 @@ syntax:
     type: Number
   - !Item
     name: speed
-    desc: |2-
-
-      * [[Boolean]] - when set to [[true]], animation is instant
-      * {{GVI|arma3|1.66|size= 0.75}} [[Number]] > 0 is treated as config speed value multiplier. Since {{GVI|arma3|2.10|size= 0.75}} values <= 0 will instantly reset animation to initPhase.
+    desc: (Optional, default [[false]])
     type: !OneOf
     - type: Boolean
-      desc: null
+      desc: |-
+        [[Boolean]] - when set to [[true]], animation is instant
+        {{GVI|arma3|1.66|size= 0.75}} [[Number]] > 0 is treated as config speed value multiplier. Since {{GVI|arma3|2.10|size= 0.75}} values <= 0 will instantly reset animation to initPhase.
       since: null
-    - type: Number
-      desc: null
-      since: null
-    optional: true
-    default: 'false'
 argument_loc: Global
 effect_loc: Global
 since:
