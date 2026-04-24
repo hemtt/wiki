@@ -8,22 +8,39 @@ syntax:
     type: Nothing
   right: !Item
     name: type
-    desc: |-
-      type of visualisation. Can be one of:
-      * "Normal"
-      * "Roadway"
-      * "Geometry"
-      * "ViewGeometry"
-      * "FireGeometry"
-      * "Paths"
-      * "ShadowVolume"
-      * "ShadowBuffer"
-      * "Buoyancy"
-      * {{GVI|arma3|2.10|size= 0.75}} "Wire" - can be used along other visualisation
-      ** first mode: pure wireframe, no normal rendering
-      ** second mode: normal rendering combined with wireframe
-      ** third mode: back to normal
-    type: String
+    desc: type of visualisation.
+    type: !StringEnum
+    - value: Normal
+      desc: null
+      since: null
+    - value: Roadway
+      desc: null
+      since: null
+    - value: Geometry
+      desc: null
+      since: null
+    - value: ViewGeometry
+      desc: null
+      since: null
+    - value: FireGeometry
+      desc: null
+      since: null
+    - value: Paths
+      desc: null
+      since: null
+    - value: ShadowVolume
+      desc: null
+      since: null
+    - value: ShadowBuffer
+      desc: null
+      since: null
+    - value: Buoyancy
+      desc: null
+      since: null
+    - value: Wire
+      desc: can be used along other visualisation
+      since:
+        arma3: '2.10'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
