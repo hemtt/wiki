@@ -14,13 +14,17 @@ syntax:
     type: Object
   right: !Item
     name: mode
-    desc: |-
-      can be one of:
-      * "LAND" - Complete stop
-      * "GET IN" - Hovering very low, for another unit to get in
-      * "GET OUT" - Hovering low, for another unit to get out
-      * {{GVI|arma2|1.00|size= 0.75}} "NONE" - Cancel a landing
-    type: String
+    desc: ''
+    type: !StringEnum
+    - value: LAND
+      desc: Complete stop
+      since: null
+    - value: GET IN
+      desc: Hovering very low, for another unit to get in
+      since: null
+    - value: GET OUT
+      desc: Hovering low, for another unit to get out
+      since: null
 argument_loc: Local
 effect_loc: Global
 since:
