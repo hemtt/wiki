@@ -1,0 +1,48 @@
+name: setTitleEffect
+desc: "Defines the title effect to show on activation via [Type, Effect, Text] where\n\n'Type' \n\nThe title effect does not disappear on deactivation, this should be done manually if required."
+groups:
+- Triggers
+- Waypoints
+syntax:
+- call: !Binary
+  - triggerOrWaypoint
+  - - type
+    - effect
+    - text
+  ret:
+    type: Nothing
+  left: !Item
+    name: triggerOrWaypoint
+    desc: or [[Waypoint]]
+    type: Object
+  right: !Array
+  - !Item
+    name: type
+    desc: |-
+      defines [[Title Effect Type]] when not NONE, can be one of:
+      * "NONE"
+      * "OBJECT" - ''text'' defines the shown object , a subclass of {{hl|CfgTitles}} (see [[cutObj]])
+      * "RES" - ''text'' defines a resource class, a subclass of RscTitles (see [[cutRsc]])
+      * "TEXT" - ''text'' defines text string to show (see [[cutText]])
+    type: String
+  - !Item
+    name: effect
+    type: String
+  - !Item
+    name: text
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>_trigger setTitleEffect ["TEXT", "PLAIN DOWN", "Hello world."];</sqf>
+see_also:
+- createTrigger
+- setSoundEffect
+- setMusicEffect
