@@ -1,0 +1,90 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines the action performed when user clicks in map by executing command string. The code is executed on every click, until the '''command''' is \n* removed via <sqf inline>onMapSingleClick \"\"</sqf>, or\n* replaced by <sqf inline>onMapSingleClick \"SomeOtherCommand(s)\"</sqf>\n\nIn {{arma3}} the code should return [[true]] only if you wish to override default engine handling of the mouse click on map (see {{Link|#Example 4}}).<br>\nFor older games, when click is processed, code should ultimately return [[true]] back to the engine. If [[false]] is returned, default processing by the game engine is done.\nReturn value of any other type (including [[Nothing]]) is an error. In such case default processing by the game engine is done, and error message may be displayed.\n\n{{Feature|arma3|Since {{GVI|arma3|1.58}} the stackable [[Arma 3: Mission Event Handlers#MapSingleClick|MapSingleClick]] Mission Event Handler is available and should be used instead.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "'''{{arma1}}:''' Creates a soldier unit at the position clicked:\n<sqf>onMapSingleClick \"'SoldierWB' createUnit [_pos, group player]; true\";</sqf>",
+    "'''{{arma1}}:''' Orders \"grp1\" to move to position clicked. Disables further map-click actions:\n<sqf>onMapSingleClick \"grp1 move _pos; onMapSingleClick ''; true\";</sqf>",
+    "'''{{ofp}}:''' Single quotes cannot be used for string definition, so two double-quotes have to be used instead:\n<sqf>onMapSingleClick \"'SoldierWB' createUnit [_pos, group player]; true\";</sqf>",
+    "<sqf>\n// The following code will disable Shift+click waypoint marker creation\nonMapSingleClick {_shift};\n</sqf>",
+    "<sqf>\n// Pass params to onMapSingleClick code\nplayer onMapSingleClick { hint (\"Hello \" + name _this) }; // Hello KK\n</sqf>",
+    "<sqf>\n// Pass params to onMapSingleClick code -and- disable Shift+click waypoint marker creation\n player onMapSingleClick \"hint (\"\"Hello \"\" + name _this); _shift\"; // Hello KK\n</sqf>"
+  ],
+  "groups": [
+    "Map",
+    "Event Handlers"
+  ],
+  "id": "onMapSingleClick",
+  "name": "onMapSingleClick",
+  "problem_notes": [],
+  "see_also": [
+    "onGroupIconClick"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.85",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "command"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "code executed on click. The following variables are available",
+          "name": "command",
+          "type": {
+            "OneOf": [
+              {
+                "desc": "_pos: [[Position#Introduction|Position2D]] - clicked position\n_units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')\n_shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map\n_alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map",
+                "since": null,
+                "type": "String"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "params",
+          "command"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "params",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "code executed on click. The following variables are available",
+          "name": "command",
+          "type": {
+            "OneOf": [
+              {
+                "desc": "_this: [[Anything]] - Params passed to onMapSingleClick\n_pos: [[Position#Introduction|Position2D]] - clicked position\n_units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')\n_shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map\n_alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map",
+                "since": null,
+                "type": "String"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

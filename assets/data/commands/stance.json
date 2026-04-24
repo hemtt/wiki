@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the stance of the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (stance player == \"STAND\") then { hint \"I am standing!\" };</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "stance",
+  "name": "stance",
+  "problem_notes": [],
+  "see_also": [
+    "animationState",
+    "unitPos",
+    "pose",
+    "getLeaning"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "can be:\n* {{hl|\"STAND\"}}\n* {{hl|\"CROUCH\"}}\n* {{hl|\"PRONE\"}}\n* {{hl|\"UNDEFINED\"}} (for example, swimming)\n* {{hl|\"\"}} (on non-person [[Object|object]])",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

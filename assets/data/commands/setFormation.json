@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Local",
+  "description": "Set group formation.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_groupOne setFormation \"LINE\";</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "setFormation",
+  "name": "setFormation",
+  "problem_notes": [],
+  "see_also": [
+    "Mission_Editor:_Waypoints#Formation|formations",
+    "description",
+    "formation"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "group",
+          "formation"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "or [[Group]]",
+          "name": "group",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "",
+          "name": "formation",
+          "type": {
+            "StringEnum": [
+              {
+                "desc": null,
+                "since": null,
+                "value": "COLUMN"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "STAG COLUMN"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "WEDGE"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "ECH LEFT"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "ECH RIGHT"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "VEE"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "LINE"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

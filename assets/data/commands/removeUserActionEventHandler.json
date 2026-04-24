@@ -1,0 +1,87 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes a UserAction event handler. For a list of available UserAction event handlers, see: [[Arma 3: Mission Event Handlers]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>removeUserActionEventHandler [\"Reload\", \"Activate\", _reloadUAEH];</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "removeUserActionEventHandler",
+  "name": "removeUserActionEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "addUserActionEventHandler",
+    "removeAllUserActionEventHandlers",
+    "Arma",
+    "3:",
+    "Event",
+    "Handlers#UserAction",
+    "Event",
+    "Handlers|UserAction",
+    "Event",
+    "Handlers"
+  ],
+  "since": {
+    "arma3": "2.06"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "keyName",
+          "event",
+          "index"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "action key name; see [[inputAction/actions]]",
+              "name": "keyName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "event name - see [[Arma 3: Event Handlers#UserAction Event Handlers|UserAction Event Handlers]].",
+              "name": "event",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Activate"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Deactivate"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Analog"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "index returned by [[addUserActionEventHandler]]",
+              "name": "index",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

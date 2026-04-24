@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attempts to sort given array either in ascending ([[true]]) or descending ([[false]]) order. {{Feature|important|This will '''modify''' the original array!}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_arr = [5.21725,1.30859,4,5.03028,1];\n_arr sort true;\nhint str _arr; //[1,1.30859,4,5.03028,5.21725]\n</sqf>",
+    "<sqf>\n_dev = [\"ja\",\"pa\",\"pa\",\"tram\",\"tara\"];\n_dev sort false;\nhint str _dev; //[\"tram\",\"tara\",\"pa\",\"pa\",\"ja\"]\n</sqf>",
+    "<sqf>\n#define ASC true\n#define DESC false\n_scores = [[123,\"bob\",15],[123,\"bill\",20],[200,\"dave\",21],[200,\"steve\",11]];\n_scores sort DESC;\nhint str _scores; //[[200,\"steve\",11],[200,\"dave\",21],[123,\"bob\",15],[123,\"bill\",20]]\n</sqf>",
+    "Sort buildings by distance and return position of the most distant building:\n<sqf>\n_buildings = player nearObjects [\"Land_Cargo_Patrol_V1_F\", 500];\n_buildings = _buildings apply { [_x distance player, _x] };\n_buildings sort false;\nhint format [\n\t\"Most distant building is at %1, distance %2 m\", \n\tgetPos (_buildings select 0 select 1),\n\tround (_buildings select 0 select 0)\n];\n</sqf>"
+  ],
+  "groups": [
+    "Arrays"
+  ],
+  "id": "sort",
+  "name": "sort",
+  "problem_notes": [],
+  "see_also": [
+    "lbSortBy",
+    "lnbSortBy",
+    "BIS_fnc_sortAlphabetically",
+    "BIS_fnc_sortBy",
+    "BIS_fnc_sortNum"
+  ],
+  "since": {
+    "arma3": "1.44"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "array",
+          "order"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "array to be sorted, can also be a nested array.<br><br>\n* [[String]] - Array of strings {{hl|[\"a\",\"b\",\"c\"...]}}\n* [[Number]] - Array of numbers {{hl|[1,2,3...]}}\n* [[Array]] - Array of subarrays {{hl|[[\"a\",1,2],[\"b\",3,4],[\"c\",5,6]...]}}. Subarrays should be of the same structure. Subarray elements other than [[String]] or [[Number]] will be ignored during sorting.",
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "sorting order.\n* [[true]]: ascending\n* [[false]]: descending",
+          "name": "order",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

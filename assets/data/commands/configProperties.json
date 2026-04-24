@@ -1,0 +1,74 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of config entries that meet the criteria in the condition code. The command iterates through available classes and config properties for given config entry.\nCurrent looked at config is stored in _x variable (similar to alternative [[count]] command implementation).\nThe condition has to return [[true]] in order for the looked at property to be added to the resulting array. This command is a bit slower than [[configClasses]] but allows to access inherited entries.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_configs = configProperties [configFile >> \"CfgVehicles\" >> \"O_Truck_02_box_F\"];</sqf>",
+    "<sqf>_configs = configProperties [configFile >> \"RscText\", \"true\", true];</sqf>",
+    "Get all hitpoints of a truck:\n<sqf>\n_hitPoints = [];\n_hitPointsCfgs = configProperties [\n\tconfigFile >> \"CfgVehicles\" >> \"O_Truck_02_box_F\" >> \"HitPoints\", \n\t\"true\", \n\ttrue\n];\nhint str _hitPointsCfgs;\n</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "id": "configProperties",
+  "name": "configProperties",
+  "problem_notes": [],
+  "see_also": [
+    "Config",
+    "configFile",
+    "missionConfigFile",
+    "configClasses",
+    "configHierarchy"
+  ],
+  "since": {
+    "arma3": "1.36"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "config",
+          "condition",
+          "inherit"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Config"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "config entry to search",
+              "name": "config",
+              "type": "Config"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"true\"",
+              "desc": "expression, which if returns [[true]], adds current property to result\n* The condition code passed to [[configProperties]] should only be used for simple filter expressions and nothing more.\n* Since {{GVI|arma3|2.02}} the following conditions are optimised for performance:\n** {{hl|\"true\"}} (omitted condition)\n** {{hl|\"isClass _x\"}}\n** {{hl|\"isClass _x &amp;&amp; (...)\"}}",
+              "name": "condition",
+              "optional": true,
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "include inherited properties",
+              "name": "inherit",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns high-level selected difficulty mode.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (difficulty == 0) then\n{\n\thint \"You will need to follow my lead - read the Field Manual!\";\n};\n</sqf>",
+    "[[File:Difficulty.jpg|400px|thumb|Note: \"Insane\" is a modded difficulty]] The command returns the index of selected difficulty as they appear in ''CfgDifficulties'':\n<sqf>hint str difficulty; //Result: 4</sqf>"
+  ],
+  "groups": [
+    "Difficulty"
+  ],
+  "id": "difficulty",
+  "name": "difficulty",
+  "problem_notes": [],
+  "see_also": [
+    "difficultyOption",
+    "Arma",
+    "3:",
+    "Difficulty",
+    "Settings",
+    "missionDifficulty"
+  ],
+  "since": {
+    "arma3": "0.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "Can be one of:\n* 0 (Recruit)\n* 1 (Regular)\n* 2 (Veteran)\n* 3 (Elite)",
+        "type": "Number"
+      }
+    }
+  ]
+}

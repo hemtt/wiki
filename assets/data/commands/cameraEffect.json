@@ -1,0 +1,160 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the given effect on the given camera. If you want to switch the screen directly to the first-person, aiming, third-person or group view of an object, use [[switchCamera]] instead. The effect type \"Terminate\" is used to exit the current camera view and switch back to the player's view. Does not need [[camCommit]].\n<br><br>\nSince {{GVI|arma3|1.74}}, it is possible to terminate individual r2t source. For example:\n<sqf>\ncam cameraEffect [\"terminate\", \"back\", \"rtt1\"]; // would terminate \"rtt1\" r2t source\ncam cameraEffect [\"terminate\", \"back\"]; // would terminate all r2t sources\n</sqf>\n{{Feature|important|\nOne cannot mix and match [[cameraEffect]] and can either have multiple [[r2t]] cameras or a single camera for the whole screen.\nIf one needs a background stream overlayed with [[r2t]] streams, this could be achieved by creating an object and using [[switchCamera]] to switch to it for background image, while using [[cameraEffect]] for [[r2t]] overlay (see {{Link|#Example 4}}).\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_cam cameraEffect [\"internal\", \"BACK\"];</sqf>",
+    "<sqf>_cam cameraEffect [\"internal\", \"back\", \"rendersurface\"];</sqf>",
+    "<sqf>\ncam = \"seagull\" camCreate (player modelToWorld [0,0,100]);\ncam cameraEffect [\"FIXED\", \"LEFT TOP\"];\ncam camCommand \"MANUAL ON\";\n</sqf>",
+    "<sqf>\n_ctrl = findDisplay 46 createDisplay \"RscDisplayEmpty\" ctrlCreate [\"RscPicture\", -1];\n_ctrl ctrlSetPosition [0.5, 0, 0.5, 0.5];\n_ctrl ctrlSetText \"#(argb,512,512,1)r2t(rtt1,1.0)\";\n_ctrl ctrlCommit 0;\n_cam1 = \"camera\" camCreate (ASLToAGL eyePos player vectorAdd [0, -10, 0]);\n_cam1 cameraEffect [\"Internal\", \"Back\", \"rtt1\"];\n_cam2 = \"Land_HandyCam_F\" createVehicle [0,0,0];\n_cam2 enableSimulation false;\n_cam2 setPos (ASLToAGL eyePos player vectorAdd [0, 10, 0]);\n_cam2 setDir (_cam2 getDir player);\nswitchCamera _cam2;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "cameraEffect",
+  "name": "cameraEffect",
+  "problem_notes": [],
+  "see_also": [
+    "switchCamera",
+    "cameraView",
+    "cameraOn",
+    "setPiPEffect",
+    "camCreate",
+    "cameraEffectEnableHUD",
+    "camUseNVG",
+    "setCamUseTI"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "camera",
+          [
+            "effectName",
+            "effectPosition",
+            "r2tName"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of type \"camera\"",
+          "name": "camera",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the effect type (defined in main config or [[Description.ext#CfgCameraEffects|CfgCameraEffects]] >> Array). Defaults are: {{hl|\"Internal\"}}, {{hl|\"External\"}}, {{hl|\"Fixed\"}}, {{hl|\"FixedWithZoom\"}}, {{hl|\"Terminate\"}}",
+              "name": "effectName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "position of the effect.",
+              "name": "effectPosition",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "TOP"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "LEFT"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "RIGHT"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "FRONT"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "BACK"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "LEFT FRONT"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "RIGHT FRONT"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "LEFT BACK"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "RIGHT BACK"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "LEFT TOP"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "RIGHT TOP"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "FRONT TOP"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "BACK TOP"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "BOTTOM"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[Procedural_Textures#Render_To_Texture|Render To Texture]] surface reference",
+              "name": "r2tName",
+              "optional": true,
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

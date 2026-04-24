@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Links an [[If Type]] with [[Code]] to be executed if said [[If Type]]'s condition is [[true]]; otherwise, \"[[else]]\" code is executed if provided.<br>\nThe alternative syntax allows to set \"[[then]]\" code and \"[[else]]\" code in one array.\n{{Feature|informative|Variables declared inside ''thenCode'' are private to that code block - see {{Link|Variables#Local Variables Scope}}.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (a > b) then { hint \"a is greater than b!\"; };</sqf>",
+    "<sqf>\nprivate _c = 0;\nif (_a > _b) then\n{\n\t_c = 1;\n}\nelse\n{\n\t_c = 2;\n};\n</sqf>",
+    "<sqf>if (alive player) then [{ hint \"player is alive\"; }, { hint \"player is dead\"; }];</sqf>",
+    "<sqf>private _value = if (alive player) then { 1 } else { 0 };</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "id": "then",
+  "name": "then",
+  "problem_notes": [],
+  "see_also": [
+    "Control",
+    "Structures",
+    "if",
+    "else"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.85",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "ifType",
+          "thenCode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "ifType",
+          "type": "IfType"
+        }
+      },
+      "ret": {
+        "desc": "result of the executed code",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "code block to execute if ''ifTypes condition is [[true]]\n[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}",
+          "name": "thenCode",
+          "type": {
+            "OneOf": [
+              {
+                "desc": "code block to execute if ''ifTypes condition is [[true]]",
+                "since": null,
+                "type": "Code"
+              },
+              {
+                "desc": "[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}",
+                "since": null,
+                "type": {
+                  "ArrayUnsized": {
+                    "value": "Code"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Plays a sound from CfgSounds. Sound can be defined in [[missionConfigFile]], [[configFile]] or [[campaignConfigFile]].",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>playSound \"soundname\";</sqf>",
+    "Start a sound and then stop it after 1.2 second:\n<sqf>\nplaySound \"AlarmCar\";\n0 spawn\n{\n\t_sound = ASLToAGL [0,0,0] nearestObject \"#soundonvehicle\";\n\tsleep 1.2;\n\tdeleteVehicle _sound;\n};\n\n// since {{arma3}} v2.00\n_source = playSound \"AlarmCar\";\n_source spawn\n{\n\tsleep 1.2;\n\tdeleteVehicle _this;\n};\n</sqf>",
+    "Start a sound and wait until it is finished:\n<sqf>\nplaySound \"Alarm\";\nhint \"Started!\";\n0 spawn\n{\n\t_sound = ASLToAGL [0,0,0] nearestObject \"#soundonvehicle\";\n\twaitUntil {isNull _sound};\n\thint \"Finished!\";\n};\n\n// since {{arma3}} v2.00\nprivate _source = playSound \"Alarm\";\n_source spawn\n{\n\twaitUntil { isNull _this };\n\thint \"Finished!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "playSound",
+  "name": "playSound",
+  "problem_notes": [],
+  "see_also": [
+    "playSound3D",
+    "sideRadio",
+    "say",
+    "playMusic",
+    "say2D",
+    "say3D",
+    "createSoundSource",
+    "playSoundUI"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "soundName"
+      },
+      "ret": {
+        "desc": "the speaker object ([[Nothing]] before {{GVI|arma3|2.00|size= 0.75}})",
+        "type": "Object"
+      },
+      "right": {
+        "Item": {
+          "name": "soundName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "soundName",
+          "isSpeech",
+          "offset"
+        ]
+      },
+      "ret": {
+        "desc": "the speaker object ([[Nothing]] before {{GVI|arma3|2.00|size= 0.75}})",
+        "type": "Object"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "soundName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]])",
+              "name": "isSpeech",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": "0/[[false]] = play as sound ([[fadeSound]] applies)\n1/[[true]] = play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)\n2 = play as sound ([[fadeSound]] applies) without interior/vehicle muffling",
+                    "since": null,
+                    "type": "Boolean"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "2.04"
+                    },
+                    "type": {
+                      "NumberEnum": [
+                        {
+                          "desc": "play as sound ([[fadeSound]] applies)",
+                          "since": null,
+                          "value": 0
+                        },
+                        {
+                          "desc": "play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)",
+                          "since": null,
+                          "value": 1
+                        },
+                        {
+                          "desc": "play as sound ([[fadeSound]] applies) without interior/vehicle muffling",
+                          "since": null,
+                          "value": 2
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "0",
+              "desc": "offset in seconds. Same as [[playMusic]]",
+              "name": "offset",
+              "optional": true,
+              "since": {
+                "arma3": "2.00"
+              },
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

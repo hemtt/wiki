@@ -1,0 +1,88 @@
+{
+  "argument_loc": "Global",
+  "description": "Defines trigger condition, activation and deactivation statements. Trigger condition has to return [[Boolean]]. [[true]] will activate the trigger, [[false]] will deactivate it (only if activation is set to repeat). [[thisList]] returns the same result as [[list]] command, which includes all entities in the trigger area that are capable of activating the trigger. Dead entities are excluded as well as crew in vehicles, vehicles themselves are included.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_trg setTriggerStatements [\"this\", \"hint 'trigger on'\", \"hint 'trigger off'\"];</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "setTriggerStatements",
+  "name": "setTriggerStatements",
+  "problem_notes": [],
+  "see_also": [
+    "triggerStatements",
+    "createTrigger",
+    "setTriggerActivation",
+    "setTriggerArea",
+    "setTriggerText",
+    "setTriggerTimeout",
+    "setTriggerType",
+    "Magic",
+    "Variables#this_2|this",
+    "thisList",
+    "thisTrigger",
+    "triggerInterval",
+    "setTriggerInterval",
+    "enableSimulation",
+    "simulationEnabled"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "trigger",
+          [
+            "condition",
+            "activation",
+            "deactivation"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "trigger object",
+          "name": "trigger",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "code containing trigger condition. Special variables available here:\n* [[Magic Variables#this_2|this]] ([[Boolean]]) - detection event\n* [[thisTrigger]] ([[Object]]) - trigger instance\n* [[thisList]] ([[Array]]) - array of all detected entities",
+              "name": "condition",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "code that is executed when the trigger is activated. Special variables available here:\n* [[thisTrigger]] ([[Object]]) - trigger instance\n* [[thisList]] ([[Array]]) - array of all detected entities",
+              "name": "activation",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "code that is executed when the trigger is deactivated. Special variable available here:\n* [[thisTrigger]] ([[Object]]) - trigger instance",
+              "name": "deactivation",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

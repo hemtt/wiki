@@ -1,0 +1,89 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a [[Trigger|trigger]] of the given type and at the given position. The type must be a class name in ''CfgNonAIVehicles'' or ''CfgVehicles'' with <syntaxhighlight lang=\"cpp\" inline>simulation = detector</syntaxhighlight>. An array containing all units that have activated the trigger is available via <sqf inline>list triggerobj</sqf>. Since triggers are '''[[Object]]s''', commands such as [[getPosASL]], [[setPosASL]], [[deleteVehicle]] etc. work on them.\n{{Feature|important|Triggers are always created on the road surface (AGL) at provided x, y coordinates. The z param is ignored. In order to place the trigger with a custom z, use a 'setPosXXX' command after trigger creation.}}\n{{Feature|informative|Since {{arma3}} v1.54 triggers can be disabled/enabled using [[enableSimulation]] command.}}\n\nTriggers are created with default parameters:\n{{Columns|4|\n* {{hl|a}}: 50\n* {{hl|b}}: 50\n* {{hl|c}}: -1\n* {{hl|angle}}: 0\n* {{hl|rectangular}}: false\n* {{hl|activationBy}}: None\n* {{hl|activationType}}: Present\n* {{hl|repeating}}: false\n* {{hl|timeoutMin}}: 0\n* {{hl|timeoutMid}}: 0\n* {{hl|timeoutMax}}: 0\n* {{hl|interruptable}}: true\n* {{hl|type}}: None\n* {{hl|text}}: \"\"\n* {{hl|name}}: \"\"\n* {{hl|expCond}}: \"this\"\n* {{hl|expActiv}}: \"\"\n* {{hl|expDesactiv}}: \"\"\n* {{GVI|arma3|1.98|size= 0.75}} {{hl|interval}}: 0.5\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_trg = createTrigger [\"EmptyDetector\", getPos player];\n_trg setTriggerArea [5, 5, 0, false];\n_trg setTriggerActivation [\"CIV\", \"PRESENT\", true];\n_trg setTriggerStatements [\"this\", \"hint 'Civilian near player'\", \"hint 'no civilian near'\"];\n</sqf>",
+    "Open/close Bar Gate automatically:\n<sqf>\n//--- init of the Bar Gate\nif (isServer) then\n{\t\n\t_gateTrigger = createTrigger [\"EmptyDetector\", getPosWorld this, false];\n\t_gateTrigger setVariable [\"BarGateObj\", this];\n\t_gateTrigger setTriggerActivation [\"ANYPLAYER\", \"PRESENT\", true];\n\t_gateTrigger setTriggerArea [5, 25, getDir this, true];\n\t_gateTrigger setTriggerStatements \n\t[\n\t\t\"this\", \n\t\t\"thisTrigger getVariable \"\"BarGateObj\"\" animateSource [\"\"Door_1_sound_source\"\", 1]\", \n\t\t\"thisTrigger getVariable \"\"BarGateObj\"\" animateSource [\"\"Door_1_sound_source\"\", 0]\"\n\t];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "createTrigger",
+  "name": "createTrigger",
+  "problem_notes": [],
+  "see_also": [
+    "setTriggerActivation",
+    "setTriggerArea",
+    "setTriggerStatements",
+    "setTriggerText",
+    "setTriggerTimeout",
+    "setTriggerType",
+    "setEffectCondition",
+    "setSoundEffect",
+    "setMusicEffect",
+    "setTitleEffect",
+    "deleteVehicle",
+    "synchronizeWaypoint",
+    "synchronizeTrigger",
+    "createGuardedPoint",
+    "triggerInterval",
+    "setTriggerInterval",
+    "enableSimulation",
+    "simulationEnabled"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "position",
+          "makeGlobal"
+        ]
+      },
+      "ret": {
+        "desc": "created trigger",
+        "type": "Object"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "usually \"EmptyDetector\"",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": ", [[Position#Introduction|Position3D]] or [[Object]] (see the note in description)",
+              "name": "position",
+              "type": "Position2d"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "locality flag\n* [[true]] - trigger is global {{Icon|globalEffect|24}}\n* [[false]] - trigger is local {{Icon|localEffect|24}}",
+              "name": "makeGlobal",
+              "optional": true,
+              "since": {
+                "arma3": "1.44"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

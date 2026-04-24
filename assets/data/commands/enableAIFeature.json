@@ -1,0 +1,99 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables/disables given AI feature.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"AwareFormationSoft\" enableAIFeature true;</sqf>",
+    "<sqf>bob enableAIFeature [\"AUTOTARGET\", false];</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "enableAIFeature",
+  "name": "enableAIFeature",
+  "problem_notes": [],
+  "see_also": [
+    "checkAIFeature",
+    "enableAI",
+    "disableAI",
+    "getUnitState",
+    "disableRemoteSensors",
+    "vehicleMoveInfo"
+  ],
+  "since": {
+    "arma2": "1.05",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "feature",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "can be:\n* {{hl|\"AwareFormationSoft\"}}\n* {{hl|\"CombatFormationSoft\"}}",
+          "name": "feature",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[true]] to enable, [[false]] to disable",
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "feature",
+            "enable"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to test AI feature for",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "see [[disableAI]] / [[enableAI]] for possible values",
+              "name": "feature",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to enable, [[false]] to disable",
+              "name": "enable",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.96"
+      }
+    }
+  ]
+}

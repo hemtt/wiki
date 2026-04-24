@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the turret path the given vehicle's gunner is in.\nTo get the turret's unit see [[turretUnit]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_vehicle unitTurret _gunner;</sqf>",
+    "<sqf>vehicle player unitTurret player;</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "unitTurret",
+  "name": "unitTurret",
+  "problem_notes": [],
+  "see_also": [
+    "turretUnit",
+    "driver",
+    "gunner",
+    "commander",
+    "effectiveCommander",
+    "currentPilot",
+    "moveInTurret",
+    "assignAsTurret",
+    "assignedVehicleRole",
+    "lockedTurret",
+    "isTurnedOut"
+  ],
+  "since": {
+    "arma3": "2.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "gunner"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "TurretPath"
+      },
+      "right": {
+        "Item": {
+          "name": "gunner",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

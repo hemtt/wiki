@@ -1,0 +1,58 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Preloads all textures, materials and proxies needed to render given object. Works with objects and classnames - note that classnames require an object instance in the mission.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n0 spawn \n{\n\twaitUntil { 10 preloadObject \"SoldierW\" };\n\thint \"Preload finished\";\n};\n</sqf>",
+    "<sqf>\n0 spawn \n{\n\twaitUntil { 10 preloadObject leader player };\n\thint \"Preload finished\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "preloadObject",
+  "name": "preloadObject",
+  "problem_notes": [],
+  "see_also": [
+    "preloadCamera",
+    "preloadSound",
+    "preloadTitleObj",
+    "preloadTitleRsc"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "distance",
+          "object"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "distance at which preload the object",
+          "name": "distance",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] when preload is finished",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "or [[String]]\n* [[Object]] - existing object\n* [[String]] - object classname - an object of that type must exist in the mission for it to have effect",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

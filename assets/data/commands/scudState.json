@@ -1,0 +1,80 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the current state of given Scud launcher.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nwaitUntil { sleep 1; scudState _scud > 2 };\nguba say \"MasterPlanCompletion\";\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "scudState",
+  "name": "scudState",
+  "problem_notes": [],
+  "see_also": [
+    "action",
+    "Arma",
+    "3:",
+    "Actions#ScudStart|\"ScudStart\"",
+    "action",
+    "Arma",
+    "3:",
+    "Actions#ScudLaunch|\"ScudLaunch\"",
+    "action"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.30",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "scudName"
+      },
+      "ret": {
+        "desc": "can be one of",
+        "type": {
+          "NumberEnum": [
+            {
+              "desc": "No activity",
+              "since": null,
+              "value": 0
+            },
+            {
+              "desc": "Launch preparation",
+              "since": null,
+              "value": 1
+            },
+            {
+              "desc": "Launch prepared",
+              "since": null,
+              "value": 2
+            },
+            {
+              "desc": "Ignition",
+              "since": null,
+              "value": 3
+            },
+            {
+              "desc": "Launched",
+              "since": null,
+              "value": 4
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "scudName",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

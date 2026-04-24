@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "This is dedicated server command, which queries the admin state of any client on the network by their client ([[owner]]) id.\n{{Feature|informative|To self-check the admin state of a local client, use [[BIS_fnc_admin]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _isLoggedInAdmin = admin 3 == 2;</sqf>",
+    "<sqf>private _adminState = admin owner unit1;</sqf>"
+  ],
+  "groups": [
+    "Multiplayer"
+  ],
+  "id": "admin",
+  "name": "admin",
+  "problem_notes": [],
+  "see_also": [
+    "serverCommand",
+    "serverCommandAvailable",
+    "owner",
+    "clientOwner",
+    "remoteExecutedOwner"
+  ],
+  "since": {
+    "arma3": "1.70"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ownerID"
+      },
+      "ret": {
+        "desc": "admin state of given client",
+        "type": {
+          "NumberEnum": [
+            {
+              "desc": "client is not an admin",
+              "since": null,
+              "value": 0
+            },
+            {
+              "desc": "client is admin that is voted in",
+              "since": null,
+              "value": 1
+            },
+            {
+              "desc": "client is admin that is logged in",
+              "since": null,
+              "value": 2
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "[[clientOwner]] id",
+          "name": "ownerID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

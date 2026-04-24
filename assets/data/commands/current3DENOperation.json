@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the currently performed editing operation in [[:Category:Eden Editor|Eden Editor]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (current3DENOperation == \"MoveItems\") then { hint \"Moving things are we\"; };</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "current3DENOperation",
+  "name": "current3DENOperation",
+  "problem_notes": [],
+  "see_also": [
+    "do3DENAction",
+    "get3DENActionState"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "operation name. Can be:\n* {{hl|\"\"}} (no operation)\n* {{hl|\"CreateObject\"}}\n* {{hl|\"CreateMarker\"}}\n* {{hl|\"CreateTrigger\"}}\n* {{hl|\"MoveItems\"}}\n* {{hl|\"RotateItems\"}}\n* {{hl|\"ScaleItems\"}}\n* {{hl|\"SyncWith\"}}\n* {{hl|\"GroupWith\"}}\n* {{hl|\"SetTriggerOwner\"}}\n* {{hl|\"AddRandomStart\"}}",
+        "type": "String"
+      }
+    }
+  ]
+}

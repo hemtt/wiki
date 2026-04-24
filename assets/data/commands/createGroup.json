@@ -1,0 +1,91 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a new [[Group]] for the given [[Side]]. Using this command if the group limit is reached will return [[grpNull]]. The new [[Group]] exists globally, but it's locality is where this command was executed.\n{{{!}} class=\"wikitable\" style=\"text-align: center\"\n! Game\n{{!}} {{GVI|ofp|1.00}}\n{{!}} {{GVI|ofpe|1.00}}\n{{!}} {{GVI|arma1|1.00}}\n{{!}} {{GVI|arma2|1.00}}\n{{!}} {{GVI|arma2oa|1.50}}\n{{!}} {{GVI|tkoh|1.00}}\n{{!}} {{GVI|arma3|1.00}}\n{{!}} {{GVI|arma3|1.68}}\n{{!}}-\n! Group auto-deletion\n{{!}} colspan=\"6\" {{!}} {{Icon|unchecked}}\n{{!}} colspan=\"2\" {{!}} {{Icon|checked}}\n{{!}}-\n! Group limit per side\n{{!}} 63\n{{!}} colspan=\"6\" {{!}} 144\n{{!}} 288\n{{!}}}\n\n{{Feature | important |\n* Groups can only be created for the [[west]]/[[blufor]], [[opfor]]/[[east]], [[independent]]/[[resistance]], [[civilian]] and [[sideLogic]] sides - any other side will return [[grpNull]]\n* Before {{arma3}}, a [[Side]] [[createCenter|center]] must exist before group creation (either by having editor-placed units or [[createCenter]] usage)\n}}\n\n{{Feature|arma3|\n* [[createCenter]] usage is not needed anymore as all centers are automatically created.\n* When the last unit leaves its group, the group usually gets immediately auto-deleted, regardless of its auto-deletion setting.\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>private _group = createGroup east;</sqf>",
+    "<sqf>private _group = createGroup [east, true];</sqf>"
+  ],
+  "groups": [
+    "Groups"
+  ],
+  "id": "createGroup",
+  "name": "createGroup",
+  "problem_notes": [],
+  "see_also": [
+    "deleteGroup",
+    "deleteGroupWhenEmpty",
+    "isGroupDeletedWhenEmpty",
+    "group",
+    "setGroupId",
+    "groupID",
+    "units",
+    "groupFromNetId",
+    "netId",
+    "leader",
+    "selectLeader",
+    "join",
+    "createCenter",
+    "createUnit",
+    "createVehicle",
+    "Side"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "side"
+      },
+      "ret": {
+        "desc": "[[grpNull]] if the group limit is reached",
+        "type": "Group"
+      },
+      "right": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "side",
+          "deleteWhenEmpty"
+        ]
+      },
+      "ret": {
+        "desc": "[[grpNull]] if the group limit is reached",
+        "type": "Group"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "side",
+              "type": "Side"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to [[deleteGroupWhenEmpty|delete the group when empty]].\n* If set to [[true]], forces a group to get deleted when empty - it does not prevent its deletion by other commands when set to [[false]].\n* Deletion may take up to a minute after the last unit is removed.",
+              "name": "deleteWhenEmpty",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "1.68"
+      }
+    }
+  ]
+}

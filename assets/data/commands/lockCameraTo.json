@@ -1,0 +1,146 @@
+{
+  "argument_loc": "Local",
+  "description": "Lock/Unlock stabilized camera to target. Works only on turrets which have optic mode selected with [[directionStabilizationEnabled|direction stabilization enabled]].\n\n{{Feature|informative|Since {{GVI|arma3|2.08}} the command also works with non-stabilized turrets (such as main turret of a tank). See {{Link|#Alternative_Syntax|syntax 2}}.}}\n\n{{Feature|informative|The command is local to the '''turret''' gunner, not the vehicle.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>uav lockCameraTo [cursorObject, [0,0]];</sqf>",
+    "<sqf>uav lockCameraTo [objNull, [0,0]]; // unlocks the turret</sqf>",
+    "<sqf>vehicle player lockCameraTo [enemyTarget, vehicle player unitTurret player, false];</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "lockCameraTo",
+  "name": "lockCameraTo",
+  "problem_notes": [],
+  "see_also": [
+    "lockedCameraTo",
+    "camTarget",
+    "camSetTarget",
+    "camPrepareTarget",
+    "directionStabilizationEnabled",
+    "enableDirectionStabilization"
+  ],
+  "since": {
+    "arma3": "1.26"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "target",
+            "turretPath"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "UAV",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "* This syntax only works with stabilized turrets.\n* When using this syntax, if target is out of possible view, the turret will move to its limit and get stuck there, with blocked input.",
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "use [[objNull]] to unlock",
+              "name": "target",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dASL"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "path to the turret with required camera",
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "target",
+            "turretPath",
+            "temporary"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "UAV",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "use [[objNull]] to unlock",
+              "name": "target",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3dASL"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "path to the turret with required camera",
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "if set to [[true]], the engine will automatically remove the lock-on once the turret reaches its target.",
+              "name": "temporary",
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.08"
+      }
+    }
+  ]
+}

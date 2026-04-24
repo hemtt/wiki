@@ -1,0 +1,82 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of available turret paths from vehicle object.\n\n{{Feature|informative|\n* to look up turrets from config, use [[BIS_fnc_allTurrets]]\n* to get config from turret path, use [[BIS_fnc_turretConfig]]\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_turretPaths = allTurrets _mySlammerUP;\t\t\t\t// [[0],[0,0]]\n_turretPaths = allTurrets [_mySlammerUP, true];\t\t// [[0],[0,0]] <- commander turret is also an FFV turret\n_turretPaths = allTurrets [_mySlammerUP, false];\t// [[0]]\n</sqf>",
+    "Return FFV turrets only:\n<sqf>_FFVTurrets = allTurrets [tank, true] - allTurrets [tank, false];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "allTurrets",
+  "name": "allTurrets",
+  "problem_notes": [],
+  "see_also": [
+    "moveInTurret",
+    "enablePersonTurret",
+    "assignedVehicleRole",
+    "fullCrew",
+    "turretUnit",
+    "turretLocal",
+    "turretOwner",
+    "BIS_fnc_allTurrets",
+    "BIS_fnc_turretConfig"
+  ],
+  "since": {
+    "arma3": "1.34"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "TurretPath"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "vehicle",
+          "includeFFV"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "TurretPath"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to include FFV (Firing From Vehicle) positions, [[false]] to exclude them",
+              "name": "includeFFV",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

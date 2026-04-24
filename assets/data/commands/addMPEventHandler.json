@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds a multiplayer event handler (EH) to the given object and returns EH handle. See {{Link|Category:Event Handlers|Event Handlers}}.\n{{Feature|important|A Multiplayer Event Handler is '''not''' saved in a save file and therefore will not be restored on load - use it accordingly.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_index = player addMPEventHandler [\"MPKilled\", { _this execVM \"playerKilled.sqf\"; }];</sqf>"
+  ],
+  "groups": [
+    "Multiplayer",
+    "Event Handlers"
+  ],
+  "id": "addMPEventHandler",
+  "name": "addMPEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    ":Category:Event",
+    "Handlers|EventHandlers",
+    "List",
+    "removeMPEventHandler",
+    "removeAllMPEventHandlers",
+    "getEventHandlerInfo"
+  ],
+  "since": {
+    "arma2oa": "1.55",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "type",
+            "expression"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object to monitor",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "event handler index",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "event handler name",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "expression to execute.<br>",
+              "name": "expression",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": "Event Handler parameters are accessible via <sqf inline>_this</sqf>\nThe Event Handler type is available as <sqf inline>_thisEvent</sqf>\nThe Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
+                    "since": null,
+                    "type": "String"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds event handler attached to the current mission and returns event handler handle. For the list of available mission event handlers see: [[Arma 3: Mission Event Handlers]]",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_id = addMissionEventHandler [\"PlayerDisconnected\", { systemChat str _this }];</sqf>",
+    "<sqf>_id = addMissionEventHandler [\"EachFrame\", { systemChat str [_thisArgs, time] }, [time]];</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "addMissionEventHandler",
+  "name": "addMissionEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "removeMissionEventHandler",
+    "removeAllMissionEventHandlers",
+    "getEventHandlerInfo"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "event",
+          "expression",
+          "arguments"
+        ]
+      },
+      "ret": {
+        "desc": "the index of the currently added mission event handler is returned",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "event name",
+              "name": "event",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "expression that will be executed in [[missionNamespace]] when event handler fires.",
+              "name": "expression",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": "If the event handler has some data to return upon activation they are stored in the {{hl|_this}} variable\n{{GVI|arma3|1.64|size= 0.75}} the event handler's handle is stored in {{hl|_thisEventHandler}} variable and is available during event handler code execution\n{{GVI|arma3|2.04|size= 0.75}} it is possible to pass additional arguments to the EH code via optional param. The ''args'' are stored in {{hl|_thisArgs}} variable\n{{GVI|arma3|2.06|size= 0.75}} the event's name is available from {{hl|_thisEvent}} variable",
+                    "since": null,
+                    "type": "Code"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "<sqf inline>[]</sqf>",
+              "desc": "additional arguments to be passed to the EH code. Available during code execution via {{hl|_thisArgs}} variable.",
+              "name": "arguments",
+              "optional": true,
+              "since": {
+                "arma3": "2.04"
+              },
+              "type": {
+                "ArrayUnsized": {
+                  "value": "Anything"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

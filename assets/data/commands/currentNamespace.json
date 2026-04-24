@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the current [[Namespace|global namespace]] the script runs in.\n{{Feature|informative|Since {{arma3}} v2.00, [[Namespace]]s can be compared with [[==]] and [[!=]] operators in addition to [[isEqualTo]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (currentNamespace isEqualTo uiNamespace) then { hint \"This is uiNamespace\" };</sqf>",
+    "<sqf>\nprivate _fn_getCurrentNamespaceName = {\n\tif (currentNamespace isEqualTo missionNamespace) exitWith { \"missionNamespace\" };\n\tif (currentNamespace isEqualTo parsingNamespace) exitWith { \"parsingNamespace\" };\n\tif (currentNamespace isEqualTo profileNamespace) exitWith { \"profileNamespace\" };\n\tif (currentNamespace isEqualTo uiNamespace) exitWith { \"uiNamespace\" };\n\t\"error\";\n};\n\nwith profileNamespace do {\n\tsystemChat call _fn_getCurrentNamespaceName;\t// profileNamespace\n};\n\nsystemChat call _fn_getCurrentNamespaceName;\t\t// missionNamespace\n\nwith uiNamespace do {\n\tsystemChat call _fn_getCurrentNamespaceName;\t// uiNamespace\n};\n</sqf>"
+  ],
+  "groups": [
+    "Namespaces",
+    "System"
+  ],
+  "id": "currentNamespace",
+  "name": "currentNamespace",
+  "problem_notes": [],
+  "see_also": [
+    "missionNamespace",
+    "uiNamespace",
+    "parsingNamespace",
+    "profileNamespace",
+    "localNamespace",
+    "allVariables",
+    "with",
+    "ArmA:_Editing#Forward_Compatibility|Forward",
+    "Compatibility"
+  ],
+  "since": {
+    "arma3": "1.48"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "one of:\n* [[missionNamespace]]\n* [[uiNamespace]]\n* [[parsingNamespace]]\n* [[profileNamespace]]\n* [[localNamespace]]",
+        "type": "Namespace"
+      }
+    }
+  ]
+}

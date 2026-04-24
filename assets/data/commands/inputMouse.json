@@ -1,0 +1,97 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the state of mouse button action, alone or in combination with key presses. For more information on codes and combos see [[Arma_3:_Modded_Keybinding]] and [[DIK_KeyCodes]] but here are some examples of how codes could be hand constructed:\n\n* KEYBOARD_COMBO 16777216 (0x1000000)\n* DEVICE_MOUSE 65536 (0x10000)\n* HOLD_OFFSET 0\n* CLICK_OFFSET 128 (0x80)\n* DOUBLE_CLICK_OFFSET 256 (0x100)\n* SPECIAL_COMBINATIONS 1114112 (0x110000)\n<pre>\nClick + Hold: BUTTON + DEVICE_MOUSE + HOLD_OFFSET = BUTTON + 65536 + 0\nClick: BUTTON + DEVICE_MOUSE + CLICK_OFFSET = BUTTON + 65536 + 128 \nDouble Click: BUTTON + DEVICE_MOUSE + DOUBLE_CLICK_OFFSET = BUTTON + 65536 + 256\n\nRMB Click + Hold:  1 + 65536 + 0 = 65537\nRMB Click: 1 + 65536 + 128 = 65665\nRMB Double Click: 1 + 65536 + 256 = 65793\n\nCombo + Click + Hold: DIK * KEYBOARD_COMBO + SPECIAL_COMBINATIONS + BUTTON + HOLD_OFFSET = DIK * 16777216 + 1114112 + BUTTON + 0\nCombo + Click: DIK * KEYBOARD_COMBO + SPECIAL_COMBINATIONS + BUTTON + CLICK_OFFSET = DIK * 16777216 + 1114112 + BUTTON + 128\nCombo + Double Click: DIK * KEYBOARD_COMBO + SPECIAL_COMBINATIONS + BUTTON + DOUBLE_CLICK_OFFSET = DIK * 16777216 + 1114112 + BUTTON + 256\n\nLShift + RMB Click + Hold: 42 * 16777216 + 1114112 + 1 + 0 = 705757185\nLShift + RMB Click: 42 * 16777216 + 1114112 + 1 + 128 = 705757313\nLShift + RMB Double Click: 42 * 16777216 + 1114112 + 1 + 256 = 705757441\n</pre>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "State of the RMB:\n<sqf>onEachFrame { hintSilent str inputMouse 1 };</sqf>",
+    "Detect LCtrl + 2xRMB:\n<sqf>onEachFrame { hintSilent str inputMouse \"487653633\" };</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "inputMouse",
+  "name": "inputMouse",
+  "problem_notes": [],
+  "see_also": [
+    "inputController",
+    "inputAction",
+    "actionKeys",
+    "actionKeysImages",
+    "actionKeysNames",
+    "actionIDs",
+    "actionParams",
+    "addAction",
+    "setUserActionText",
+    "inGameUISetEventHandler",
+    "showHUD",
+    "removeAction",
+    "removeAllActions",
+    "action"
+  ],
+  "since": {
+    "arma3": "2.08"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "button"
+      },
+      "ret": {
+        "desc": "the state of the button",
+        "type": {
+          "NumberEnum": [
+            {
+              "desc": "released",
+              "since": null,
+              "value": 0
+            },
+            {
+              "desc": "click",
+              "since": null,
+              "value": 1
+            },
+            {
+              "desc": "click + hold",
+              "since": null,
+              "value": 2
+            },
+            {
+              "desc": "double click",
+              "since": null,
+              "value": 3
+            },
+            {
+              "desc": "double click + hold",
+              "since": null,
+              "value": 4
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "button number 0..7: 0-LMB, 1-RMB, 2-MMB",
+          "name": "button",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "combocode"
+      },
+      "ret": {
+        "desc": "[[true]] if given code/combination detected, [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "code or combination (see [[actionKeys]])",
+          "name": "combocode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

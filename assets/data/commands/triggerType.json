@@ -1,0 +1,109 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the trigger type. \n\n{{Feature|important|\nThe trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger type set up locally on the client that executed the command.\nSee [[createTrigger]] for more info.\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_type = triggerType tr1;</sqf>"
+  ],
+  "groups": [
+    "Triggers"
+  ],
+  "id": "triggerType",
+  "name": "triggerType",
+  "problem_notes": [],
+  "see_also": [
+    "setTriggerType"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "trigger"
+      },
+      "ret": {
+        "desc": "",
+        "type": {
+          "StringEnum": [
+            {
+              "desc": null,
+              "since": null,
+              "value": "NONE"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "EAST G"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "WEST G"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "GUER G"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "SWITCH"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "END1"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "END2"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "END3"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "END4"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "END5"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "END6"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "LOOSE"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "WIN"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "trigger",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

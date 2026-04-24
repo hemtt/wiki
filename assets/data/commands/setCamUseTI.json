@@ -1,0 +1,95 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets thermal vision mode for currently used camera. This command only works with [[camCreate]] created camera that is currently the main camera for the player (see Example 2).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>true setCamUseTI 1;</sqf>",
+    "''Predator'' vision:\n<sqf>\n_cam = \"camera\" camCreate [0, 0, 0];\n_cam camSetTarget player;\n_cam camSetRelPos [0, 1, 1.5];\n_cam cameraEffect [\"Internal\", \"Back\"];\n_cam camCommit 0;\ntrue setCamUseTI 7;\n</sqf>"
+  ],
+  "groups": [
+    "Camera Control"
+  ],
+  "id": "setCamUseTI",
+  "name": "setCamUseTI",
+  "problem_notes": [],
+  "see_also": [
+    "camUseNVG",
+    "disableTIEquipment"
+  ],
+  "since": {
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "state",
+          "modeIndex"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "[[true]] to enable, [[false]] to disable the effect",
+          "name": "state",
+          "type": "Boolean"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "TI mode. Can be",
+          "name": "modeIndex",
+          "type": {
+            "NumberEnum": [
+              {
+                "desc": "White Hot",
+                "since": null,
+                "value": 0
+              },
+              {
+                "desc": "Black Hot",
+                "since": null,
+                "value": 1
+              },
+              {
+                "desc": "Light Green Hot / Darker Green cold",
+                "since": null,
+                "value": 2
+              },
+              {
+                "desc": "Black Hot / Darker Green cold",
+                "since": null,
+                "value": 3
+              },
+              {
+                "desc": "Light Red Hot /Darker Red Cold",
+                "since": null,
+                "value": 4
+              },
+              {
+                "desc": "Black Hot / Darker Red Cold",
+                "since": null,
+                "value": 5
+              },
+              {
+                "desc": "White Hot . Darker Red Cold",
+                "since": null,
+                "value": 6
+              },
+              {
+                "desc": "Thermal (Shade of Red and Green, Bodies are white)",
+                "since": null,
+                "value": 7
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

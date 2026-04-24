@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns position of a given indexed position in a [[Object#Building|building]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_soldier setPosATL (_house1 buildingPos 2);</sqf>",
+    "<sqf>_allpositions = nearestBuilding player buildingPos -1;</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "buildingPos",
+  "name": "buildingPos",
+  "problem_notes": [],
+  "see_also": [
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearObjects",
+    "insideBuilding",
+    "buildingExit",
+    "position",
+    "setPos",
+    "setWaypointHousePosition",
+    "waypointHousePosition",
+    "BIS_fnc_buildingPositions"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "building",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "building",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "a single building position. If building position with given index does not exist, {{hl|[0, 0, 0]}} is returned",
+        "type": "Position3dAGL"
+      },
+      "right": {
+        "Item": {
+          "desc": "index of a specific position {{Feature|arma3|Since v1.56 index {{hl|-1}} will return all available building positions.}}",
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

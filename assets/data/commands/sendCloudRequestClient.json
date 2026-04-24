@@ -1,0 +1,97 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sends a client request to the {{Name|bi|short}} cloud service and executes callback code with server's response.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_result = sendCloudRequestClient [\"users/current\", \"hint 'success'\", player];</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "sendCloudRequestClient",
+  "name": "sendCloudRequestClient",
+  "problem_notes": [],
+  "see_also": [
+    "sendCloudRequestServer",
+    "sendAnalyticEvent"
+  ],
+  "since": {
+    "argo": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "requestName",
+          "callback",
+          "data",
+          "httpMethod"
+        ]
+      },
+      "ret": {
+        "desc": "[[true]] on success, [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "can be anything but \"users\"",
+              "name": "requestName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"\"",
+              "desc": "code to be executed on request completion",
+              "name": "callback",
+              "optional": true,
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"\"",
+              "desc": "JSON data to be sent",
+              "name": "data",
+              "optional": true,
+              "type": "Anything"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default \"GET\", or \"POST\" if ''data'' is provided - case-insensitive)",
+              "name": "httpMethod",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "POST"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "GET"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "DELETE"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "PUT"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

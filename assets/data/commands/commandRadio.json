@@ -1,0 +1,99 @@
+{
+  "argument_loc": "Global",
+  "description": "Sends the audio message to the command radio channel. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol. The transmission will play only on the PC where command was executed. If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]).\n{{Feature|important|\nThe unit must have an [[assignItem|assigned]] radio item (such as '''''\"ItemRadio\"''''') to see or transmit the messages.\nA radio item must have the property <syntaxhighlight lang=\"cpp\" inline>simulation = \"ItemRadio\";</syntaxhighlight> in its [[CfgWeapons_Config_Reference#simulation.3D.22Weapon.22|CfgWeapons config]].\n}}\n{{Feature|informative|When transmitting unit gets killed, transmission will be interrupted. However when receiving unit gets killed, the transmission continues to play.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_soldierOne commandRadio \"messageOne\";</sqf>",
+    "<sqf>player commandRadio configName selectRandom (\"true\" configClasses (configFile >> \"CfgRadio\"));</sqf>",
+    "<sqf>[west, \"Base\"] commandRadio configName selectRandom (\"true\" configClasses (configFile >> \"CfgRadio\"));</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat",
+    "Sounds"
+  ],
+  "id": "commandRadio",
+  "name": "commandRadio",
+  "problem_notes": [],
+  "see_also": [
+    "sideRadio",
+    "groupRadio",
+    "customRadio",
+    "vehicleRadio",
+    "globalRadio",
+    "directSay",
+    "commandChat"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "radioName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to transmit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "class name from CfgRadio",
+          "name": "radioName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          [
+            "side",
+            "identity"
+          ],
+          "radioName"
+        ]
+      },
+      "left": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "side to which the transmission will be played",
+              "name": "side",
+              "type": "Side"
+            }
+          },
+          {
+            "Item": {
+              "desc": "class name of one of the identities in CfgHQIdentities. Possible identities in {{arma3}} are:\n* \"Base\"\n* \"HQ\"\n* \"PAPA_BEAR\"\n* \"AirBase\"\n* \"BLU\"\n* \"OPF\"\n* \"IND\"\n* \"IND_G\"",
+              "name": "identity",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "class name from CfgRadio",
+          "name": "radioName",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

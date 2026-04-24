@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Eden Entity]] based on its [[Eden ID]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myEntity = get3DENEntity 1;</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENEntity",
+  "name": "get3DENEntity",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENEntityID"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "ID"
+      },
+      "ret": {
+        "desc": "or [[Number]]\n* If the ''ID'' points to an [[Eden Entity]] the entity is returned\n* If it points to a [[Eden Editor: Layer]] or [[Eden Editor: Comment]] the ''ID'' is returned\n* If no entity with given ''ID'' exists {{hl|-1}} is returned",
+        "type": "EdenEntity"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[Eden ID]]",
+          "name": "ID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

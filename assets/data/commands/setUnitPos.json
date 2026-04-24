@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Local",
+  "description": "Set unit position rules. This command will not change the stance of the human player, even though it will change the output of [[unitPos]] command. To change player stance use [[playAction]] or [[playActionNow]]:\n<sqf>\nplayer playAction \"PlayerProne\"; // DOWN\nplayer playAction \"PlayerStand\"; // UP\nplayer playAction \"PlayerCrouch\"; // MIDDLE\n</sqf>",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_soldier setUnitPos \"UP\";</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "setUnitPos",
+  "name": "setUnitPos",
+  "problem_notes": [],
+  "see_also": [
+    "setUnitPosWeak",
+    "unitPos"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be:\n* \"DOWN\" - Unit goes prone and stays prone.\n* \"UP\" - Unit stands and stays standing.\n* \"MIDDLE\" - Kneel Position. {{GVI|arma1|1.04}} - Unit will not kneel if it is unarmed\n* \"AUTO\" - Unit chooses mode according to circumstances.",
+          "name": "mode",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

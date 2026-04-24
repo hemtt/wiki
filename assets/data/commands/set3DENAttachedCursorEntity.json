@@ -1,0 +1,42 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Attach an entity to the [[:Category:Eden Editor|Eden Editor]] cursor.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>set3DENAttachedCursorEntity createHashMapFromArray [[\"type\", \"object\"], [\"classname\", \"B_Survivor_F\"]];</sqf>",
+    "<sqf>set3DENAttachedCursorEntity createHashMapFromArray [[\"type\", \"marker\"], [\"classname\", \"mil_pickup\"], [\"markertype\", \"icon\"]];</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "set3DENAttachedCursorEntity",
+  "name": "set3DENAttachedCursorEntity",
+  "problem_notes": [],
+  "see_also": [
+    "Eden",
+    "Editor:",
+    "Object",
+    "typeOf"
+  ],
+  "since": {
+    "arma3": "2.18"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entityHashMap"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "in format [[\"type\", entityType], otherOptions] where ''entityType'' can be one of:\n* \"classname\": [[String]] - object classname; see [[Arma 3: Assets]]\n* \"classname\": [[String]] - see [[Arma 3: CfgMarkers#Marker Classes|marker classes]]\n* \"markershape\": [[String]] - can be one of:\n** \"icon\"\n** \"rectangle\"\n** \"ellipse\"{{Feature|important|\"polyline\" is not supported.}}\n* \"classname\": [[String]] - object classname; from CfgNonAIVehicles with simulation=\"detector\". Usually \"EmptyDetector\"\n* \"classname\": [[String]] - object classname;\n* \"classname\": [[String]] - classname; from CfgWaypoints",
+          "name": "entityHashMap",
+          "type": "HashMapUnknown"
+        }
+      }
+    }
+  ]
+}

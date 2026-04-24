@@ -1,0 +1,80 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Trims a [[String|string]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>trim \"\t\thello, how are you?  \"; // returns \"hello, how are you?\"</sqf>",
+    "<sqf>\"hewosentence!123\" trim [\"3e1o2hw\", 0]; // returns \"sentence!\"</sqf>"
+  ],
+  "groups": [
+    "Strings"
+  ],
+  "id": "trim",
+  "name": "trim",
+  "problem_notes": [],
+  "see_also": [
+    "select"
+  ],
+  "since": {
+    "arma3": "2.02"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "stringValue"
+      },
+      "ret": {
+        "desc": "trimmed string",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "string to be trimmed. spaces, tabs and line returns are removed from both ends of ''stringValue''.",
+          "name": "stringValue",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "string",
+          [
+            "chars",
+            "where"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "string to be trimmed",
+          "name": "string",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "desc": "trimmed string",
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "list of characters to be trimmed",
+              "name": "chars",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of:\n* 0 - trim at the beginning (left) and the end (right)\n* 1 - trim at the beginning (left)\n* 2 - trim at the end (right)",
+              "name": "where",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

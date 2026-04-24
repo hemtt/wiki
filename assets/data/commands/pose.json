@@ -1,0 +1,164 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the pose of the given unit.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (pose player == \"SurfaceSwimming\") then { hint \"How's water?\" };</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "pose",
+  "name": "pose",
+  "problem_notes": [],
+  "see_also": [
+    "animationState",
+    "unitPos",
+    "stance",
+    "getLeaning"
+  ],
+  "since": {
+    "arma3": "2.08"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "",
+        "type": {
+          "StringEnum": [
+            {
+              "desc": null,
+              "since": null,
+              "value": "Dead"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Weapon"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "BinocLying"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "LyingNoWeapon"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Lying"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "HandGunLying"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Crouch"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "HandGunCrouch"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Combat"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "HandGunStand"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Stand"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Swimming"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "BottomSwimming"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "SurfaceSwimming"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Diving"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "BottomDiving"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "SurfaceDiving"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "NoWeapon"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Binoc"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "BinocStand"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Healing"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Dragged"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Carrying"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "Freefall"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

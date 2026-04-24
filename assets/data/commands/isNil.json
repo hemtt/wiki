@@ -1,0 +1,93 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Tests whether a variable is [[nil]] or undefined from its [[Identifier|identifier]], or whether the given expression evaluates to [[nil]] or [[Nothing]].\n{{Feature|arma0|This command does not exist in {{ofp}}/{{arma0}} but can be emulated (see {{Link|#Example 5}}).}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (isNil \"TAG_globalVariable\") then { TAG_globalVariable = 0 };\nif (isNil \"_localVariable\") then { hint \"_localVariable is nil\" };\n</sqf>",
+    "<sqf>isNil { player getVariable \"someVar\" };</sqf>",
+    "<sqf>\n_myArray = [0, 1];\nisNil { _myArray select 0 }; // returns false\nisNil { _myArray select 1 }; // returns false\nisNil { _myArray select 2 }; // returns true\nisNil { _myArray select 3 }; // throws a script error. only length+1 select is allowed\n</sqf>",
+    "This trick forces executing something in [[Scheduler|Unscheduled Environment]]:\n<sqf>\n0 spawn {\n\tsystemChat str canSuspend;\t\t// chat shows true\n\tisNil { hint str canSuspend };\t// hint shows false\n};\n</sqf>",
+    "{{ofp}} [[String]] comparison workaround<br>\n[[SQS Syntax]]:\n<sqs>\n_nil = format [\"%1\", _undefinedVariable]\n? (format [\"%1\", variableToTest] == _nil) : hint \"variableToTest is nil\"\n</sqs>\n\n[[SQF Syntax]]:\n<sqf>\n_nil = format [\"%1\", _undefinedVariable];\nif (format [\"%1\", variableToTest] == _nil) then { hint \"variableToTest is nil\" };\n</sqf>"
+  ],
+  "groups": [
+    "Variables"
+  ],
+  "id": "isNil",
+  "name": "isNil",
+  "problem_notes": [],
+  "see_also": [
+    "nil",
+    "Variables",
+    "Scheduler"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "variableName"
+      },
+      "ret": {
+        "desc": "[[true]] if variable is [[nil]] or undefined",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[missionNamespace]]'s or local [[Variables|variable]]'s [[Identifier|identifier]] (e.g \"globalVariable\", \"_localVariable\")",
+          "name": "variableName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "code"
+      },
+      "ret": {
+        "desc": "[[true]] if ''code'' returns [[Nothing]], [[false]] otherwise",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "code to evaluate:\n* the code will be executed; <sqf inline>isNil { player setDamage 1 };</sqf> ''will'' kill the player\n* the code will not be allowed to [[canSuspend|suspend]] while expression is evaluated, even if the parent scope allows it (see {{Link|#Example 4}}).",
+          "name": "code",
+          "type": "Code"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "namespace",
+          "variableName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": ", [[Object]], [[Group]], [[HashMap]], {{GVI|arma3|2.20|size= 0.75}} [[Control]] and [[Display]]",
+          "name": "namespace",
+          "type": "Namespace"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if variable is [[nil]] or undefined",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "name": "variableName",
+          "type": "String"
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "argument_loc": "Local",
+  "description": "Limits or sets '''[[local]] [[player]]-controlled''' vehicle's speed through cruise control.\n\n{{Feature|informative|\n* this command only works on CarX, TankX, ShipX simulation vehicles\n* this command is implemented using a PID controller overwriting the vehicle's thrust/brakes input\n}}\n\n{{{!}} class=\"wikitable\"\n! Speed Limiter\n! Cruise Control\n{{!}}- style=\"vertical-align: top\"\n{{!}}\n* the vehicle does not accelerate by itself\n* manually accelerating is required to move forward\n* accelerating beyond set speed limit is restricted by the PID controller\n* applying brakes does not disable Speed Limiter\n* behaviour:\n** if the speed is over 120% the set limit, the vehicle will apply 100% of braking and limit acceleration to 0%\n** if the speed is below 80% the set limit, the acceleration and braking are untouched\n** between 80 and 120%, the PID controller limits the acceleration and applies brakes if required\n{{!}}\n* the vehicle accelerates by itself\n* manually accelerating is possible\n* accelerating above set speed limit is possible\n* applying brakes disables Cruise Control\n* behaviour:\n** if the speed is over 120% the set limit, the vehicle will apply 100% of braking\n** if the speed is below 80% the set limit, the vehicle will apply 100% of acceleration\n** between 80 and 120%, the PID controller manages the speed\n{{!}}}\n\n{{Feature|important|This command should only be called to ''change'' values and '''not''' be called every frame, as it resets the PID controller.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>vehicle player setCruiseControl [50, true]; // sets cruise control to 50 km/h</sqf>",
+    "<sqf>vehicle player setCruiseControl [5, false]; // limits player's vehicle speed to 5 km/h</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Object Manipulation"
+  ],
+  "id": "setCruiseControl",
+  "name": "setCruiseControl",
+  "problem_notes": [],
+  "see_also": [
+    "getCruiseControl",
+    "limitSpeed",
+    "forceSpeed",
+    "setAirplaneThrottle"
+  ],
+  "since": {
+    "arma3": "2.06"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "speed",
+            "autoThrust"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the vehicle to limit; [[local]] [[player]]'s vehicle (<sqf inline>vehicle player</sqf>)",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "desired/top speed in km/h. 0 to disable any setting. Only positives values are valid, negative values will make the vehicle unable to move forward",
+              "name": "speed",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "* [[true]] - Cruise Control: the vehicle will maintain this speed until brakes is applied or driver dies or leaves the vehicle\n* [[false]] - Speed Limiter: the vehicle will not accelerate above set speed",
+              "name": "autoThrust",
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

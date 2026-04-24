@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns combat behaviour of unit or group. To set unit or group behaviour see [[setCombatBehaviour]]. The behaviour is one of:",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nunit1 setCombatBehaviour \"CARELESS\";\ncombatBehaviour unit1; // \"CARELESS\"\n</sqf>",
+    "<sqf>\ngroup unit1 setCombatBehaviour \"SAFE\";\ncombatBehaviour group unit1; // \"SAFE\"\n</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour",
+    "Groups"
+  ],
+  "id": "combatBehaviour",
+  "name": "combatBehaviour",
+  "problem_notes": [],
+  "see_also": [
+    "setCombatBehaviour",
+    "setBehaviour",
+    "setBehaviourStrong",
+    "setWaypointBehaviour",
+    "combatMode",
+    "setCombatMode",
+    "skill",
+    "setSkill"
+  ],
+  "since": {
+    "arma3": "2.04"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unitOrGroup"
+      },
+      "ret": {
+        "desc": "unit behaviour",
+        "type": {
+          "StringEnum": [
+            {
+              "desc": null,
+              "since": null,
+              "value": "CARELESS"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "SAFE"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "AWARE"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "COMBAT"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "value": "STEALTH"
+            },
+            {
+              "desc": "when not available",
+              "since": null,
+              "value": "ERROR"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "AI unit or group",
+          "name": "unitOrGroup",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Group"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

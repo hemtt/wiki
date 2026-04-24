@@ -1,0 +1,98 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets coef for some action (coef have to be bigger than -1 000 000, anything lower is considered as disabled action).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>curatorModule setCuratorCoef [\"Place\", 1];</sqf>",
+    "<sqf>curatorModule setCuratorCoef [\"Delete\", -1e10];</sqf>"
+  ],
+  "groups": [
+    "Curator"
+  ],
+  "id": "setCuratorCoef",
+  "name": "setCuratorCoef",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Curator"
+  ],
+  "since": {
+    "arma3": "1.16"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "curatorObj",
+          [
+            "action",
+            "coef"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "curator module",
+          "name": "curatorObj",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "",
+              "name": "action",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Place"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Edit"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Delete"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Destroy"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Group"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Synchronize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "or [[Boolean]]",
+              "name": "coef",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

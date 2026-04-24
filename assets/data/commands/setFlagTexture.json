@@ -1,0 +1,70 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets flag texture.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_flagE setFlagTexture \"\\ca\\misc\\data\\sever_vlajka.paa\";</sqf>",
+    "<sqf>_flagW setFlagTexture \"\\ca\\misc\\data\\usa_vlajka.paa\";</sqf>",
+    "<sqf>flag1 setFlagTexture \"\\A3\\Data_F\\Flags\\Flag_red_CO.paa\";</sqf>",
+    "<sqf>_customFlag setFlagTexture \"myMissionFlag.paa\";</sqf>",
+    "<sqf>_flag_Arma_3 setFlagTexture \"\\a3\\ui_f\\data\\Logos\\arma3_expansion_ca.paa\";</sqf>",
+    "Capturable OPFOR flag:\n<sqf>\nprivate _flag = \"FlagPole_F\" createVehicle position player;\n_flag setFlagTexture \"\\A3\\Data_F\\Flags\\Flag_CSAT_CO.paa\";\n_flag setFlagSide east;\n</sqf>"
+  ],
+  "groups": [
+    "Flags"
+  ],
+  "id": "setFlagTexture",
+  "name": "setFlagTexture",
+  "problem_notes": [],
+  "see_also": [
+    "flag",
+    "flagOwner",
+    "setFlagOwner",
+    "setFlagSide",
+    "setObjectTexture",
+    "setObjectTextureGlobal",
+    "flagSide",
+    "flagTexture",
+    "setFlagAnimationPhase",
+    "flagAnimationPhase",
+    "forceFlagTexture",
+    "getForcedFlagTexture"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "flag",
+          "texture"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "a flag pole",
+          "name": "flag",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "flag texture. If texture is {{hl|\"\"}}, flag is not drawn. Custom texture can be used:\n* Prior {{arma3}}: Dimension 200×200, file extension .jpg\n* Since {{arma3}}: Dimension 512×256, file extension .paa",
+          "name": "texture",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

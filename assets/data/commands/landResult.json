@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return the result of helicopter landing position searching (performed after the [[land]] command).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_result = landResult BIS_heli;</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "landResult",
+  "name": "landResult",
+  "problem_notes": [],
+  "see_also": [
+    "land"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "helicopter"
+      },
+      "ret": {
+        "desc": "result, can be:\n* {{hl|\"Found\"}} - position found\n* {{hl|\"NotFound\"}} - position not found\n* {{hl|\"NotReady\"}} - position searching is still in progress\n* {{hl|\"\"}} - empty string when the provided ''helicopter'' is invalid",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "helicopter",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

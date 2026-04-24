@@ -1,0 +1,53 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "ArcCosine of a number, result in [[Number#Degrees|Degrees]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_degrees = acos 0.5; // Returns 60</sqf>"
+  ],
+  "groups": [
+    "Math - Geometry"
+  ],
+  "id": "acos",
+  "name": "acos",
+  "problem_notes": [],
+  "see_also": [
+    "atan",
+    "asin",
+    "sin",
+    "cos",
+    "tan"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "x"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "any other value returns [[NaN]]",
+          "name": "x",
+          "type": {
+            "NumberRange": [
+              -1,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

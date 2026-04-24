@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Removes all UserAction event handlers of the given type which were added by [[addUserActionEventHandler]].\n\n{{Feature|important|This command also resets the Event Handler creation index to 0.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>removeAllUserActionEventHandlers [\"Reload\", \"Activate\"];</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "removeAllUserActionEventHandlers",
+  "name": "removeAllUserActionEventHandlers",
+  "problem_notes": [],
+  "see_also": [
+    "addUserActionEventHandler",
+    "removeUserActionEventHandler",
+    "Arma",
+    "3:",
+    "Event",
+    "Handlers#UserAction",
+    "Event",
+    "Handlers|UserAction",
+    "Event",
+    "Handlers"
+  ],
+  "since": {
+    "arma3": "2.06"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "keyName",
+          "eventType"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "see [[inputAction/actions]]",
+              "name": "keyName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "event name; see [[Arma 3: Event Handlers#UserAction Event Handlers|UserAction Event Handlers]].",
+              "name": "eventType",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Activate"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Deactivate"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Analog"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

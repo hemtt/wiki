@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets activation distance multiplier of [[Arma 3: Dynamic Simulation]] for the given class",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"IsMoving\" setDynamicSimulationDistanceCoef 3;</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "id": "setDynamicSimulationDistanceCoef",
+  "name": "setDynamicSimulationDistanceCoef",
+  "problem_notes": [],
+  "see_also": [
+    "enableDynamicSimulationSystem",
+    "dynamicSimulationSystemEnabled",
+    "enableDynamicSimulation",
+    "dynamicSimulationEnabled",
+    "setDynamicSimulationDistance",
+    "dynamicSimulationDistance",
+    "dynamicSimulationDistanceCoef",
+    "triggerDynamicSimulation",
+    "canTriggerDynamicSimulation",
+    "enableSimulation",
+    "simulationEnabled",
+    "enableSimulationGlobal",
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation"
+  ],
+  "since": {
+    "arma3": "1.68"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "class",
+          "multiplier"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "multiplier class, currently only:\n* {{hl|\"IsMoving\"}} - Multiplies the entity activation distance by set value if the entity is moving. Default: 2",
+          "name": "class",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "distance multiplier",
+          "name": "multiplier",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

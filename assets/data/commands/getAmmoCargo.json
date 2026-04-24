@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns the amount (1 is full) of ammo resources in the cargo space of a rearm vehicle.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>value = getAmmoCargo myVehicleName;</sqf>"
+  ],
+  "groups": [
+    "Vehicle Inventory"
+  ],
+  "id": "getAmmoCargo",
+  "name": "getAmmoCargo",
+  "problem_notes": [],
+  "see_also": [
+    "setAmmoCargo",
+    "getFuelCargo",
+    "getRepairCargo"
+  ],
+  "since": {
+    "arma3": "0.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "vehicle"
+      },
+      "ret": {
+        "desc": "ammo cargo value between 0 (empty, [[alive|destroyed]] or [[isNull|null]] [[Object]]) and 1 (full), -1 if ammo cargo is not supported<br>",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

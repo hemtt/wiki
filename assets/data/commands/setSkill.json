@@ -1,0 +1,103 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the skill level of given unit. The value of a [[AI Sub-skills|sub-skill]] is interpolated into a range defined in [[CfgAISkill]].",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_hero setSkill 1;</sqf>",
+    "<sqf>\n_finalBoss setSkill [\"reloadSpeed\", 0.8];\n_finalBoss setSkill [\"aimingSpeed\", 0.33];\n</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "setSkill",
+  "name": "setSkill",
+  "problem_notes": [],
+  "see_also": [
+    "skill",
+    "setUnitAbility",
+    "Arma",
+    "3:",
+    "AI",
+    "Skill",
+    "Combat",
+    "Modes",
+    "skillFinal"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.75",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "skill"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "general skill in range 0..1",
+          "name": "skill",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "skillName",
+            "value"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "available sub-skills are:\n* {{hl|\"general\"}}\n* {{hl|\"courage\"}}\n* {{hl|\"aimingAccuracy\"}}\n* {{hl|\"aimingShake\"}}\n* {{hl|\"aimingSpeed\"}}\n* {{hl|\"commanding\"}}\n* {{hl|\"endurance\"}}\n* {{hl|\"spotDistance\"}}\n* {{hl|\"spotTime\"}}\n* {{hl|\"reloadSpeed\"}}",
+              "name": "skillName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "value in range 0..1",
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma1": "1.00"
+      }
+    }
+  ]
+}

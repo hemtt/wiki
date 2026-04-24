@@ -1,0 +1,128 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds given set of compiled instructions to the current stack and waits for it to finish and return, provides an option to pass arguments to the executed [[Code]].\nSee [[Scheduler]] to learn more about how the code is executed and behaves.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>call { hint str 123; };</sqf>",
+    "<sqf>123 call { hint str _this; };</sqf>",
+    "<sqf>\n_sum = [1, 2] call { (_this select 0) + (_this select 1); };\nhint str _sum; // displays 3\n</sqf>",
+    "<sqf>123 call compile \"hint str _this;\";</sqf>",
+    "<sqf>_result = 123 call compile preprocessFileLineNumbers \"myFile.sqf\";</sqf>",
+    "<sqf>\nprivate _hashMapObj = createHashMapObject [[\n\t[\"MyMethod\", { systemChat (\"MyMethod arguments: \" + str _this); }]\n]];\n\n_hashMapObj call [\"MyMethod\", [\"Hello there\", player, 123]]; // hints 'MyMethod arguments: [\"Hello there\", player, 123]'\n</sqf>"
+  ],
+  "groups": [
+    "Program Flow"
+  ],
+  "id": "call",
+  "name": "call",
+  "problem_notes": [],
+  "see_also": [
+    "spawn",
+    "execVM",
+    "canSuspend",
+    "compile",
+    "compileScript",
+    "preprocessFile",
+    "remoteExec",
+    "remoteExecCall"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.85",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "code"
+      },
+      "ret": {
+        "desc": "the last value given in the function is returned - see the topic [[Function#Return_Values|Function]] for more information",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[compile]]d instructions",
+          "name": "code",
+          "type": "Code"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "args",
+          "code"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "arguments that are passed to the function in the <sqf inline>_this</sqf> variable.",
+          "name": "args",
+          "type": "Anything"
+        }
+      },
+      "ret": {
+        "desc": "the last value given in the function is returned. See the topic [[Function#Return_Values|Function]] for more information.",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[compile]]d instructions",
+          "name": "code",
+          "type": "Code"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "hashMapObj",
+          [
+            "methodName",
+            "arguments"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the HashMap (not necessarily created through [[createHashMapObject]]) to call the method on",
+          "name": "hashMapObj",
+          "type": "HashMapUnknown"
+        }
+      },
+      "ret": {
+        "desc": "the value returned by the ''methodName'' method",
+        "type": "Anything"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the name of the method to call (the method must be defined in ''hashMapObj''; see [[createHashMapObject]])",
+              "name": "methodName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "parent scope's {{hl|_this}}",
+              "desc": "arguments passed to the method in the <sqf inline>_this</sqf> variable",
+              "name": "arguments",
+              "optional": true,
+              "type": "Anything"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.14"
+      }
+    }
+  ]
+}

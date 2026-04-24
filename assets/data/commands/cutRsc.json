@@ -1,0 +1,173 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Display a resource defined in RscTitles of the mission's [[Description.ext]], the campaign's description.ext or the global config.\n{{Feature|arma3|For greater efficiency and ease of modability, it is recommended to use named layers available with [[String]] and {{Link|#Syntax 2}}.}}\n{{Feature|important|To avoid conflicts with existing layers it is recommended to register a layer with [[BIS_fnc_rscLayer]] and to start the name with a TAG:\n<sqf>\n(\"TAG_myLayer\" call BIS_fnc_rscLayer) cutRsc [\"myRsc\", \"PLAIN\"];\n\"TAG_myLayer\" cutRsc [\"myRsc\", \"PLAIN\"];</sqf>\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\ncutRsc [\"binocular\", \"PLAIN\"];\ncutRsc [\"binocular\", \"PLAIN\", 2];\ncutRsc [\"binocular\", \"PLAIN\", 2, false];\n</sqf>",
+    "<sqf>2 cutRsc [\"binocular\", \"PLAIN\", 2];</sqf>",
+    "<sqf>\"layer1\" cutRsc [\"binocular\", \"PLAIN\", 2];</sqf>",
+    "<sqf>\n// create IGUI display\n// such display can be closed with closeDisplay command or by overwriting the same cut layer with another output.\n// note that \"Unload\" EH for some reason does not work with such display.\n\"someLayer\" cutRsc [\"RscTitleDisplayEmpty\", \"PLAIN\"];\nprivate _display = uiNamespace getVariable \"RscTitleDisplayEmpty\";\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "cutRsc",
+  "name": "cutRsc",
+  "problem_notes": [],
+  "see_also": [
+    "allCutLayers",
+    "titleRsc",
+    "cutText",
+    "cutObj",
+    "cutFadeOut",
+    "setTitleEffect",
+    "allActiveTitleEffects",
+    "activeTitleEffectParams"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "class",
+          "effect",
+          "speed",
+          "showInMap",
+          "drawOverHUD"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the class name of the resource. (\"Default\" will remove the current resource.)",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\". See [[Title Effect Type]]s for more information about these values.",
+              "name": "effect",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "-1",
+              "desc": "time in seconds to fade in resource.",
+              "name": "speed",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "[[false]] to hide the text when the map is opened.",
+              "name": "showInMap",
+              "optional": true,
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "[[false]] to show the resource under in-game HUD (for example, a binocular effect)",
+              "name": "drawOverHUD",
+              "optional": true,
+              "since": {
+                "arma3": "2.16"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "layer",
+          [
+            "class",
+            "effect",
+            "speed",
+            "showInMap",
+            "drawOverHUD"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "or [[String]]\n* [[Number]] - layer number on which the effect is shown, where 0 is the back most. Layer number is rounded to the nearest integer and also cannot be negative. Layer 99.5 will be treated as layer 100\n* [[String]] - {{GVI|arma3|1.58|size= 0.75}} layer name on which the effect is shown. Layer names are CaSe SeNsItIvE.",
+          "name": "layer",
+          "type": "Number"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the class name of the resource. (\"Default\" will remove the current resource.)",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "one of \"PLAIN\", \"PLAIN DOWN\", \"BLACK\", \"BLACK FADED\", \"BLACK OUT\", \"BLACK IN\", \"WHITE OUT\" and \"WHITE IN\". See [[Title Effect Type]]s for more information about these values.",
+              "name": "effect",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "-1",
+              "desc": "time in seconds to fade in resource.",
+              "name": "speed",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "[[false]] to hide the text when the map is opened.",
+              "name": "showInMap",
+              "optional": true,
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "[[false]] to show the resource under in-game HUD (for example, a binocular effect)",
+              "name": "drawOverHUD",
+              "optional": true,
+              "since": {
+                "arma3": "2.16"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

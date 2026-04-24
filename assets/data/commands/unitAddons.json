@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns list with addons the unit belongs to.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str unitAddons typeOf player; // [\"A3_Characters_F_BLUFOR\"]</sqf>"
+  ],
+  "groups": [
+    "Mods and Addons"
+  ],
+  "id": "unitAddons",
+  "name": "unitAddons",
+  "problem_notes": [],
+  "see_also": [
+    "activateAddons"
+  ],
+  "since": {
+    "arma3": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "className"
+      },
+      "ret": {
+        "desc": "addon names",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "class name of a unit/vehicle or object",
+          "name": "className",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

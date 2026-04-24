@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set system of units. This will only impact gauges from advanced flight model.\n{{Feature|important|This command is buggy: any value other than 0 (metric) will display both units at the same time.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>if (player in _myHelicopter) then { setSystemOfUnits 2; };</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Broken Commands"
+  ],
+  "id": "setSystemOfUnits",
+  "name": "setSystemOfUnits",
+  "problem_notes": [],
+  "see_also": [
+    "Description.ext#forceRotorLibSimulation|forceRotorLibSimulation",
+    "Advanced",
+    "Helicopter",
+    "Flight",
+    "Model",
+    "in",
+    "Arma3|Advanced",
+    "Helicopter",
+    "Flight",
+    "Model",
+    ":Category:Command_Group:_RTD|RotorLib",
+    "commands",
+    "systemOfUnits"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "value"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "possible values are",
+          "name": "value",
+          "type": {
+            "NumberEnum": [
+              {
+                "desc": "metric",
+                "since": null,
+                "value": 0
+              },
+              {
+                "desc": "mixed",
+                "since": null,
+                "value": 1
+              },
+              {
+                "desc": "imperial",
+                "since": null,
+                "value": 2
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

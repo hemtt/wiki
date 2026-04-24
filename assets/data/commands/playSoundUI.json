@@ -1,0 +1,112 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Plays given [[CfgSounds]] sound or a [[Arma 3: Sound Files| sound file]] given by file path through a dedicated UI sound channel unaffected by the global mixer volumes. If the file path is given, the leading slash will be ignored. To stop the sound use [[stopSound]]",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>playSoundUI [\"Alarm\", 0.5, 0.5];</sqf>",
+    "<sqf>playSoundUI [\"A3\\Sounds_F\\sfx\\blip1.wss\"];</sqf>",
+    "Sound file extension must be specified even if a config entry has none:\n<sqf>\nplaySoundUI [\"A3\\Sounds_F\\sfx\\alarm_independent\", 5, 1];\t\t// no sound\nplaySoundUI [\"A3\\Sounds_F\\sfx\\alarm_independent.wss\", 5, 1];\t// alarm\n</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "playSoundUI",
+  "name": "playSoundUI",
+  "problem_notes": [],
+  "see_also": [
+    "stopSound",
+    "soundParams",
+    "say3D",
+    "playSound",
+    "say2D",
+    "say",
+    "createSoundSource",
+    "setRandomLip",
+    "getMissionPath",
+    "playSound3D"
+  ],
+  "since": {
+    "arma3": "2.10"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "sound",
+          "volume",
+          "soundPitch",
+          "isEffect",
+          "offset",
+          "loop"
+        ]
+      },
+      "ret": {
+        "desc": "id of the sound (0..65535) since {{GVI|arma3|2.12|size= 0.75}} (was [[Nothing]] before that)",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "[[CfgSounds]] class or file as used in [[playSound3D]] (see [[Arma 3: Sound Files]] for available file names)",
+              "name": "sound",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "1",
+              "desc": "sound volume clamped in range 0..5",
+              "name": "volume",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "1",
+              "desc": "\n* 1.0 &rarr; normal\n* 0.5 &rarr; Darth Vader\n* 2.0 &rarr; Chipmunks",
+              "name": "soundPitch",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "if [[true]], diverts sound through effects channel (see [[fadeSound]], [[soundVolume]])",
+              "name": "isEffect",
+              "optional": true,
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "0",
+              "desc": "offset in seconds. Same as with [[playSound3D]] (ignored if sound is set to 'loop')",
+              "name": "offset",
+              "optional": true,
+              "since": {
+                "arma3": "2.12"
+              },
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "If [[true]] the sound will loop forever. Use [[stopSound]] to stop",
+              "name": "loop",
+              "optional": true,
+              "since": {
+                "arma3": "2.22"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

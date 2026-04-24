@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Check if lampost is on (shining).\n{{Feature|informative|A lamp state is '''local''' to each client (see [[switchLight]]).}}\n{{Feature | arma3 | This command was originally designed to only work with CfgNonAIVehicles class \"StreetLamp\" only;\nsince {{arma3}} v1.92 this command was extended to work with street lights.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>if (lightIsOn nearestObject [player, \"StreetLamp\"] == \"ON\") then { hint \"nightime\"; };</sqf>",
+    "<sqf>_it = lightIsOn object 159582;</sqf>",
+    "<sqf>\nif (count allMissionObjects \"StreetLamp\" == 0) then {\n\thint \"Objects compatible with 'lightIsOn' are not found.\";\n} else {\n\thint \"'lightIsOn' compatible objects are found!\";\n};\n</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "id": "lightIsOn",
+  "name": "lightIsOn",
+  "problem_notes": [],
+  "see_also": [
+    "switchLight"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.04",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "lamppost"
+      },
+      "ret": {
+        "desc": "",
+        "type": {
+          "StringEnum": [
+            {
+              "desc": "light is on",
+              "since": null,
+              "value": "ON"
+            },
+            {
+              "desc": "light is off",
+              "since": null,
+              "value": "OFF"
+            },
+            {
+              "desc": "applicable only to the light of type \"StreetLamp\" and is only on during the night.",
+              "since": null,
+              "value": "AUTO"
+            },
+            {
+              "desc": "if command fails",
+              "since": null,
+              "value": "ERROR"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "lamppost",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

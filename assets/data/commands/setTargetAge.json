@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets how the target is known to the other centers. They behave like the target was seen age seconds ago.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player setTargetAge \"10 MIN\";</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setTargetAge",
+  "name": "setTargetAge",
+  "problem_notes": [],
+  "see_also": [
+    "targets",
+    "targetsQuery",
+    "nearTargets",
+    "targetsAggregate",
+    "targetKnowledge",
+    "knowsAbout",
+    "reveal",
+    "forgetTarget",
+    "getHideFrom"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          "age"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be:\n* \"ACTUAL\"\n* \"5 MIN\"\n* \"10 MIN\"\n* \"15 MIN\"\n* \"30 MIN\"\n* \"60 MIN\"\n* \"120 MIN\"\n* \"UNKNOWN\"",
+          "name": "age",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

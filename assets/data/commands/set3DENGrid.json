@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the grid increment for the given transformation type.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>set3DENGrid [\"t\", 100]; // 100m movement increment</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "set3DENGrid",
+  "name": "set3DENGrid",
+  "problem_notes": [],
+  "see_also": [
+    "get3DENGrid"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "value"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of transformation type. Can be:\n* {{hl|\"r\"}} - Rotation\n* {{hl|\"t\"}} - Translation\n* {{hl|\"s\"}} - Scale",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "transformation increment",
+              "name": "value",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Selects shape (actual type) of the marker. Non-existing marker shape defaults to \"RECTANGLE\".",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\"Marker1\" setMarkerShape \"RECTANGLE\";</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerShape",
+  "name": "setMarkerShape",
+  "problem_notes": [],
+  "see_also": [
+    "markerShape",
+    "setMarkerShapeLocal"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "shape"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "the shape",
+          "name": "shape",
+          "type": {
+            "StringEnum": [
+              {
+                "desc": null,
+                "since": null,
+                "value": "ICON"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "RECTANGLE"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "ELLIPSE"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "1.60"
+                },
+                "value": "POLYLINE"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "TRIANGLE"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "PENTAGON"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "HEXAGON"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "HEPTAGON"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "OCTAGON"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "NONAGON"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.20"
+                },
+                "value": "DECAGON"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds [[playMusic]] event handler. Returns id of the handler or -1 when failed. Like [[addMissionEventHandler]], the music event handler is attached to the mission.\nSee {{Link|Arma 3: Event Handlers#Music Event Handlers}}.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _ehID = addMusicEventHandler [\"MusicStart\", { hint str _this }];</sqf>",
+    "<sqf>private _ehID = addMusicEventHandler [\"MusicStop\", { hint str _this }];</sqf>"
+  ],
+  "groups": [
+    "Event Handlers",
+    "Sounds"
+  ],
+  "id": "addMusicEventHandler",
+  "name": "addMusicEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "removeMusicEventHandler",
+    "playMusic",
+    "{{Link|Arma",
+    "3:",
+    "Event",
+    "Handlers#Music",
+    "Event",
+    "Handlers}}",
+    "removeAllMusicEventHandlers",
+    "getEventHandlerInfo"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "function"
+        ]
+      },
+      "ret": {
+        "desc": "event handler id",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "\"MusicStart\" or \"MusicStop\"",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "passed params array is [musicClassname, eventHandlerId] where",
+              "name": "function",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": "musicClassName: [[String]] - [[Description.ext#Music|CfgMusic]] class name of the music that started\neventHandlerId: [[Number]] - event handler id (same as returned by [[addMusicEventHandler]] usage)\n{{GVI|arma3|2.18|size= 0.75}} currentPosition: [[Number]] - current playback position in 0..1 range (see [[getMusicPlayedTime]])\n{{GVI|arma3|2.18|size= 0.75}} totalLength: [[Number]] - track total length in seconds",
+                    "since": null,
+                    "type": "String"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

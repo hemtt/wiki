@@ -1,0 +1,44 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "{{{!}} class=\"wikitable align-center-col-2 float-right\"\n! [[Post Process Effects|Post-Process Effect]]\n! Active in<br>screenshot\n{{!}}-\n{{!}} ColorInversion\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} FilmGrain\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} ColorCorrections\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} DynamicBlur\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} WetDistortion\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} ChromaticAberration\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} RadialBlur\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} SSAO\n{{!}} {{Icon|unknown}}\n{{!}}-\n{{!}} Resolution\n{{!}} {{Icon|checked}}\n{{!}}}\nTakes a screenshot of the 3D scene and saves it to the provided filename.\n* Only the 3D scene is captured, no GUI/cursor\n* Sampling is taken in consideration: a 200% sampling value on a 1920x1080 resolution takes a 3840x2160 screenshot\n* PNG is the only available format\n<br>\nThe file is saved in the ''Screenshots'' folder in the [[Profile]] directory. The folder is by default limited to '''250 MB''' to prevent abuse.<br>\nTo increase the limit, add the following line at the end of the profile file:\n<syntaxhighlight lang=\"cpp\">maxScreenShotFolderSizeMB = 2000; // 2 GB</syntaxhighlight>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>screenshot \"\";</sqf>",
+    "<sqf>screenshot \"testFile.png\";</sqf>",
+    "The following code will result in the screenshot being placed in {{hl|\\Documents\\Arma 3\\Screenshots\\'''any\\where\\you\\want.png'''}}:\n<sqf>screenshot \"any\\where\\you\\want.png\";</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "screenshot",
+  "name": "screenshot",
+  "problem_notes": [],
+  "see_also": [
+    "BIS_fnc_exportEditorPreviews",
+    "Eden_Editor:_Configuring_Asset_Previews|Configuring",
+    "Asset",
+    "Previews"
+  ],
+  "since": {
+    "arma3": "1.60"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "filename"
+      },
+      "ret": {
+        "desc": "[[true]] if success",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "must have {{hl|.png}} extension; desired path and name relative to {{hl|&lt;PROFILEDIR&gt;\\Screenshots\\}} (see [[Profile]]).<br>",
+          "name": "filename",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "argument_loc": "Local",
+  "description": "The unit will be forced to fire weapon from the given muzzle. The weapon will not fire if firemode passed as parameter is not supported by the given muzzle. The muzzle could belong to a vehicle weapon and unit in this case will be the unit operating this weapon. Doesnt't seem to work for units in FFV positions. Works on [[player]]. See also: [[BIS_fnc_fire]]",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\n_unit forceWeaponFire [\"arifle_MX_F\", \"Single\"];\n_unit forceWeaponFire [\"hgun_ACPC2_F\", \"hgun_ACPC2_F\"];\n_unit forceWeaponFire [\"HandGrenadeMuzzle\",\"HandGrenadeMuzzle\"];\n_unit forceWeaponFire [\"MiniGrenadeMuzzle\",\"MiniGrenadeMuzzle\"];\n_unit forceWeaponFire [\"HandGrenade_Stone\",\"HandGrenade_Stone\"];\n_unit forceWeaponFire [\"SmokeShellMuzzle\",\"SmokeShellMuzzle\"];\n_unit forceWeaponFire [\"ChemlightGreenMuzzle\",\"ChemlightGreenMuzzle\"];\n_unit forceWeaponFire [\"IRGrenade\",\"IRGrenade\"];\n_unit forceWeaponFire [\"Laserdesignator\",\"Laserdesignator\"];\n</sqf>",
+    "<sqf>gunner blackfoot forceWeaponFire [\"gatling_20mm\", \"close\"];</sqf>"
+  ],
+  "groups": [
+    "Unit Control",
+    "Weapons"
+  ],
+  "id": "forceWeaponFire",
+  "name": "forceWeaponFire",
+  "problem_notes": [],
+  "see_also": [
+    "currentWeapon",
+    "currentWeaponMode",
+    "setWeaponReloadingTime",
+    "selectWeapon",
+    "fire",
+    "doFire",
+    "commandFire",
+    "canFire",
+    "fireAtTarget",
+    "commandArtilleryFire",
+    "commandSuppressiveFire",
+    "doArtilleryFire",
+    "doSuppressiveFire",
+    "isManualFire",
+    "BIS_fnc_fire"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "muzzle",
+            "firemode"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit alone or in vehicle",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "muzzle",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "common options are \"Single\", \"Burst\", \"FullAuto\". For the full list of a weapon firemodes:",
+              "name": "firemode",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

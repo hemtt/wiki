@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the throttle for the given engine(s) of a helicopter.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player setThrottleRTD [0.5, 1];</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "setThrottleRTD",
+  "name": "setThrottleRTD",
+  "problem_notes": [],
+  "see_also": [
+    "throttleRTD"
+  ],
+  "since": {
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "helicopterRTD",
+          [
+            "value",
+            "engineIndex"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "throttle level, range 0..1\n* throttle 0: fully closed\n* throttle ~0.15: average flight idle\n* throttle 1: full",
+              "name": "value",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "engine index\n* engine index 0: engine #1\n* engine index 1: engine #2\n* engine index 2: engine #3\n* engine index -1: all engines",
+              "name": "engineIndex",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

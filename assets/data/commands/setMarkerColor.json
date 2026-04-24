@@ -1,0 +1,65 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set marker's colour. {{arma3}}'s marker colour names and their corresponding RGBA values can be found here: [[Arma 3: CfgMarkerColors]].\n{{Feature|informative|\n'''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.\nAs such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>\"MarkerOne\" setMarkerColor \"ColorBlack\";</sqf>",
+    "<sqf>\"MarkerOne\" setMarkerColor \"#(1,0,0,1)\"; // red color - since {{arma3}} v2.20</sqf>"
+  ],
+  "groups": [
+    "Markers"
+  ],
+  "id": "setMarkerColor",
+  "name": "setMarkerColor",
+  "problem_notes": [],
+  "see_also": [
+    "setMarkerColorLocal",
+    "markerColor",
+    "getMarkerColor",
+    "setMarkerBrush",
+    "createMarker",
+    "setMarkerDir",
+    "setMarkerPos",
+    "setMarkerShape",
+    "setMarkerSize",
+    "setMarkerText",
+    "setMarkerType",
+    "setMarkerAlpha"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.21",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "markerName",
+          "colour"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "markerName",
+          "type": "String"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "* {{hl|{{Link|Arma 3: CfgMarkerColors|CfgMarkerColors}}}}'s class name\n* {{GVI|arma3|2.20|size= 0.75}} direct colour definition in one of the following formats (values in range 0..1):\n** \"#(r,g,b)\" (e.g {{hl|\"#(1,0,1)\"}}, {{hl|#FF00FF}} equivalent)\n** \"#(r,g,b,a)\" (e.g {{hl|\"#(0.678,0.749,0.514,0.5)\"}}, {{hl|#ADBF8380}} equivalent). Alpha 'a' in this format is independent of [[markerAlpha]]",
+          "name": "colour",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array of app IDs of DLCs.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_ownedDLCs = getDLCs 1;</sqf>",
+    "<sqf>_hasKarts = (288520 in (getDLCs 1));</sqf>"
+  ],
+  "groups": [
+    "DLC"
+  ],
+  "id": "getDLCs",
+  "name": "getDLCs",
+  "problem_notes": [],
+  "see_also": [
+    "getObjectDLC",
+    "getPersonUsedDLCs",
+    "getMissionDLCs",
+    "getDLCAssetsUsageByName",
+    "getDLCAssetsUsage",
+    "getAssetDLCInfo"
+  ],
+  "since": {
+    "arma3": "1.16"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "filter"
+      },
+      "ret": {
+        "desc": "App IDs",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Number"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "one of:\n* 0 - all\n* 1 - owned\n* 2 - not owned",
+          "name": "filter",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

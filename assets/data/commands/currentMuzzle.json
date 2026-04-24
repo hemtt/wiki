@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns a unit's current weapon muzzle. Does not work on vehicles.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_muzzle = currentMuzzle player;</sqf>",
+    "<sqf>_muzzle = currentMuzzle (gunner (vehicle player));</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "currentMuzzle",
+  "name": "currentMuzzle",
+  "problem_notes": [],
+  "see_also": [
+    "currentWeapon",
+    "currentMagazine",
+    "currentThrowable"
+  ],
+  "since": {
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "desc": "current muzzle",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

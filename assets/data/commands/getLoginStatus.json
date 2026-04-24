@@ -1,0 +1,31 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get the client's current Cloud service login status.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nswitch (getLoginStatus) do\n{\n\tcase 0:\t\t{ hint \"Not logged\" };\n\tcase 1:\t\t{ hint \"You are BI-approved, gooooood\" };\n\tcase 2:\t\t{ hint \"Logged in as a Guest? 2, target that man!\" };\n\tcase -1:\t{ hint \"Something went wrong\" };\n};\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "getLoginStatus",
+  "name": "getLoginStatus",
+  "problem_notes": [],
+  "see_also": [
+    "getClientState",
+    "getClientStateNumber"
+  ],
+  "since": {
+    "argo": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "desc": "can be one of:\n* &nbsp;0: Not logged in\n* &nbsp;1: Logged in with a {{Name|bi}} account\n* &nbsp;2: Logged in as guest\n* -1: Internal error",
+        "type": "Number"
+      }
+    }
+  ]
+}

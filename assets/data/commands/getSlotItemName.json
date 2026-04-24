@@ -1,0 +1,121 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the name of assigned item in given slot or the empty string.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint (player getSlotItemName 610);</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "getSlotItemName",
+  "name": "getSlotItemName",
+  "problem_notes": [],
+  "see_also": [
+    "assignedItems",
+    "assignItem",
+    "unassignItem",
+    "linkItem",
+    "unlinkItem",
+    "addItem",
+    "removeItem",
+    "removeAllAssignedItems",
+    "items",
+    "itemsWithMagazines",
+    "backpacks"
+  ],
+  "since": {
+    "arma3": "2.14"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "slot"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "item name",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be one of",
+          "name": "slot",
+          "type": {
+            "NumberEnum": [
+              {
+                "desc": "Goggles",
+                "since": null,
+                "value": 603
+              },
+              {
+                "desc": "Headgear",
+                "since": null,
+                "value": 605
+              },
+              {
+                "desc": "Map",
+                "since": null,
+                "value": 608
+              },
+              {
+                "desc": "Compass",
+                "since": null,
+                "value": 609
+              },
+              {
+                "desc": "Watch",
+                "since": null,
+                "value": 610
+              },
+              {
+                "desc": "Radio",
+                "since": null,
+                "value": 611
+              },
+              {
+                "desc": "GPS",
+                "since": null,
+                "value": 612
+              },
+              {
+                "desc": "HMD",
+                "since": null,
+                "value": 616
+              },
+              {
+                "desc": "Binoculars",
+                "since": null,
+                "value": 617
+              },
+              {
+                "desc": "Vest",
+                "since": null,
+                "value": 701
+              },
+              {
+                "desc": "Uniform",
+                "since": null,
+                "value": 801
+              },
+              {
+                "desc": "Backpack",
+                "since": null,
+                "value": 901
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

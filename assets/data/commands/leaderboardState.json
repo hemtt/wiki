@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the state of the board with the given name.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>leaderboardState \"TT01\";</sqf>"
+  ],
+  "groups": [
+    "Leaderboards"
+  ],
+  "id": "leaderboardState",
+  "name": "leaderboardState",
+  "problem_notes": [],
+  "see_also": [
+    "leaderboardsRequestUploadScoreKeepBest",
+    "leaderboardsRequestUploadScore"
+  ],
+  "since": {
+    "arma3": "1.42"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "boardname"
+      },
+      "ret": {
+        "desc": "* 0: Busy (async. operation in progress)\n* 1: Async. operation ended with success\n* 2: Async. operation ended with error\n* 3: Invalid board (bad board name, not initialised etc)",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "boardname",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

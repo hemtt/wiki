@@ -1,0 +1,76 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets activation distance of [[Arma 3: Dynamic Simulation]] for given category.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\"Group\" setDynamicSimulationDistance 1000;</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "id": "setDynamicSimulationDistance",
+  "name": "setDynamicSimulationDistance",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation",
+    "dynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef"
+  ],
+  "since": {
+    "arma3": "1.68"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "category",
+          "distance"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "",
+          "name": "category",
+          "type": {
+            "StringEnum": [
+              {
+                "desc": null,
+                "since": null,
+                "value": "Group"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Vehicle"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "EmptyVehicle"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Prop"
+              }
+            ]
+          }
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "distance",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

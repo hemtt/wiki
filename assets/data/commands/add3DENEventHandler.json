@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds an [[Arma 3: Event Handlers: Eden Editor|Eden Editor Event Handler]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _ehID = add3DENEventHandler [\"onUndo\", { systemChat \"Zip...\" }];</sqf>"
+  ],
+  "groups": [
+    "Eden Editor",
+    "Event Handlers"
+  ],
+  "id": "add3DENEventHandler",
+  "name": "add3DENEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "remove3DENEventHandler",
+    "removeAll3DENEventHandlers"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "type",
+          "code"
+        ]
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "see [[Arma 3: Event Handlers: Eden Editor|Eden Editor Event Handler]]",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "* Event Handler parameters are accessible via <sqf inline>_this</sqf>\n* The Event Handler type is available as <sqf inline>_thisEvent</sqf>\n* The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
+              "name": "code",
+              "type": "Code"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

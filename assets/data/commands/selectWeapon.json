@@ -1,0 +1,129 @@
+{
+  "argument_loc": "Local",
+  "description": "Selects the given weapon.\n{{Feature|informative|Passing empty string will not deselect current weapon. Use 'SwitchWeapon' [[action]] instead:\n<sqf>player action [\"SwitchWeapon\", player, player, -1]</sqf>\n}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>_soldier1 selectWeapon \"LAWLauncher\";</sqf>",
+    "<sqf>player selectWeapon \"M203Muzzle\";</sqf>",
+    "<sqf>player selectWeapon [\"arifle_MX_GL_ACO_F\", \"arifle_MX_GL_ACO_F\", \"FullAuto\"];</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "selectWeapon",
+  "name": "selectWeapon",
+  "problem_notes": [],
+  "see_also": [
+    "fire",
+    "forceWeaponFire",
+    "primaryWeapon",
+    "handgunWeapon",
+    "secondaryWeapon",
+    "weapons",
+    "ArmA:_Actions#SWITCHWEAPON|action",
+    "SwitchWeapon",
+    "ArmA:_Actions#SWITCHMAGAZINE|action",
+    "SwitchMagazine",
+    "isSwitchingWeapon"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.27",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "muzzleName"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of the weapon or muzzle\n* In {{ofp}}, in most cases, both names are the same. But check.\n* In {{arma1}} the weaponNames and muzzleNames are different.\n* For muzzle names see [[:Category:Weapons|CfgWeapons]].",
+          "name": "muzzleName",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "weapon",
+            "muzzle",
+            "firemode"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "person. This argument has to be [[local]], or it can be remote when executed on the [[isServer|server]]",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success, [[false]] on failure, [[Nothing]] when the call to the command is dispatched over network",
+        "type": {
+          "OneOf": [
+            {
+              "desc": null,
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "type": "Nothing"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "name of the weapon, personal or vehicle's weapon (see [[weaponState]])",
+              "name": "weapon",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "name of the selected muzzle (see [[weaponState]])",
+              "name": "muzzle",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "name of the firemode (see [[weaponState]])",
+              "name": "firemode",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.08"
+      }
+    }
+  ]
+}

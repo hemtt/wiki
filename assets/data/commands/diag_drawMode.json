@@ -1,0 +1,94 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Activates a debug visualisation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ndiag_drawMode \"FireGeometry\";\nsleep 5;\ndiag_drawMode \"Normal\";\n</sqf>",
+    "\"Wire\" can be used along other modes:\n<sqf>\ndiag_drawMode \"Wire\";\t\t\t// switch to first Wire mode\ndiag_drawMode \"Roadway\";\t\t// switch to Roadway like usual\n\ndiag_drawMode \"Wire\";\t\t\t// switch to second Wire mode\ndiag_drawMode \"ViewGeometry\";\t// switch to ViewGeometry, keeping the current Wire mode\n\ndiag_drawMode \"Wire\";\t\t\t// disable Wire\n</sqf>"
+  ],
+  "groups": [
+    "Diagnostic"
+  ],
+  "id": "diag_drawMode",
+  "name": "diag_drawMode",
+  "problem_notes": [],
+  "see_also": [
+    "diag_list"
+  ],
+  "since": {
+    "arma3": "1.86"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "type"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "type of visualisation.",
+          "name": "type",
+          "type": {
+            "StringEnum": [
+              {
+                "desc": null,
+                "since": null,
+                "value": "Normal"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Roadway"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Geometry"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "ViewGeometry"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "FireGeometry"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Paths"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "ShadowVolume"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "ShadowBuffer"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Buoyancy"
+              },
+              {
+                "desc": "can be used along other visualisation",
+                "since": {
+                  "arma3": "2.10"
+                },
+                "value": "Wire"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

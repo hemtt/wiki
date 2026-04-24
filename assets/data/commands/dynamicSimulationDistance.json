@@ -1,0 +1,45 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "A getter for [[setDynamicSimulationDistance]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>hint str dynamicSimulationDistance \"Prop\";</sqf>"
+  ],
+  "groups": [
+    "Dynamic Simulation"
+  ],
+  "id": "dynamicSimulationDistance",
+  "name": "dynamicSimulationDistance",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Dynamic",
+    "Simulation",
+    "setDynamicSimulationDistance",
+    "setDynamicSimulationDistanceCoef",
+    "dynamicSimulationDistanceCoef"
+  ],
+  "since": {
+    "arma3": "1.68"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "category"
+      },
+      "ret": {
+        "desc": "activation distance",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be:\n* {{hl|\"Group\"}} - Infantry units and groups\n* {{hl|\"Vehicle\"}} - Vehicles with crew\n* {{hl|\"EmptyVehicle\"}} - All vehicles without crew\n* {{hl|\"Prop\"}} - Static objects",
+          "name": "category",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

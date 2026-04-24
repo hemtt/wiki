@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the waypoint type of given waypoint. \n\nMore details at [[Waypoints]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_myWaypoint setWaypointType \"HOLD\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "setWaypointType",
+  "name": "setWaypointType",
+  "problem_notes": [],
+  "see_also": [
+    "2D",
+    "Editor:",
+    "Waypoints#Select",
+    "Type|Waypoints",
+    "Types",
+    "waypointType"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "type"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "waypoint type. Can be:\n* {{hl|\"MOVE\"}}\n* {{hl|\"DESTROY\"}}\n* {{hl|\"GETIN\"}}\n* {{hl|\"SAD\"}} ''(Seek And Destroy)''\n* {{hl|\"JOIN\"}}\n* {{hl|\"LEADER\"}}\n* {{hl|\"GETOUT\"}}\n* {{hl|\"CYCLE\"}}\n* {{hl|\"LOAD\"}}\n* {{hl|\"UNLOAD\"}}\n* {{hl|\"TR UNLOAD\"}}\n* {{hl|\"HOLD\"}}\n* {{hl|\"SENTRY\"}}\n* {{hl|\"GUARD\"}} <small>(used with GUARDED BY trigger or [[createGuardedPoint]])</small>\n* {{hl|\"TALK\"}}\n* {{hl|\"SCRIPTED\"}}\n* {{hl|\"SUPPORT\"}}\n* {{hl|\"GETIN NEAREST\"}}\n* {{hl|\"DISMISS\"}}\n* {{hl|\"LOITER\"}} <small>({{arma3}})</small>\n* {{GVI|arma3|1.34|size= 0.75}} {{hl|\"HOOK\"}} <small>(slingload object)</small>\n* {{GVI|arma3|1.34|size= 0.75}} {{hl|\"UNHOOK\"}} <small>(slingload drop)</small>\n* {{hl|\"AND\"}} <small>(only for game logics)</small>\n* {{hl|\"OR\"}} <small>(only for game logics)</small>",
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

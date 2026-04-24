@@ -1,0 +1,88 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Checks if the given AI feature is currently enabled.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_featureUsed = checkAIFeature \"AwareFormationSoft\";</sqf>",
+    "<sqf>_autotargetOn = bob checkAIFeature \"AUTOTARGET\";</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "checkAIFeature",
+  "name": "checkAIFeature",
+  "problem_notes": [],
+  "see_also": [
+    "enableAIFeature",
+    "enableAI",
+    "getUnitState",
+    "disableAI"
+  ],
+  "since": {
+    "arma2": "1.05",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "feature"
+      },
+      "ret": {
+        "desc": "[[true]] if is enabled",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "",
+          "name": "feature",
+          "type": {
+            "StringEnum": [
+              {
+                "desc": null,
+                "since": null,
+                "value": "AwareFormationSoft"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "CombatFormationSoft"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "feature"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit to test AI feature for",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if is enabled",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "[[disableAI]] / [[enableAI]] feature",
+          "name": "feature",
+          "type": "String"
+        }
+      },
+      "since": {
+        "arma3": "1.96"
+      }
+    }
+  ]
+}

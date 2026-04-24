@@ -1,0 +1,54 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns current rate of how much the weapon view is distorted because of quick aiming.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_inertia = weaponInertia player; //[-0.0126307,0.038023]</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "weaponInertia",
+  "name": "weaponInertia",
+  "problem_notes": [],
+  "see_also": [
+    "getWeaponSway"
+  ],
+  "since": {
+    "arma3": "1.48"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "Amount of x-axis sway",
+              "name": "x",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "Amount of y-axis sway",
+              "name": "y",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

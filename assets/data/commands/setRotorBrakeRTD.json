@@ -1,0 +1,49 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Toggles a helicopter's rotor brake. {{Feature|afm}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>myHelicopterRTD setRotorBrakeRTD 1;</sqf>"
+  ],
+  "groups": [
+    "RTD"
+  ],
+  "id": "setRotorBrakeRTD",
+  "name": "setRotorBrakeRTD",
+  "problem_notes": [],
+  "see_also": [
+    "getRotorBrakeRTD"
+  ],
+  "since": {
+    "arma3": "1.34",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "helicopterRTD",
+          "enable"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "helicopter",
+          "name": "helicopterRTD",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be:\n* 0: off\n* 1: on",
+          "name": "enable",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

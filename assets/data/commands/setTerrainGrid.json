@@ -1,0 +1,63 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the desired [[getTerrainGrid | terrain resolution]] in meters.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>setTerrainGrid 12.5;</sqf>"
+  ],
+  "groups": [
+    "System",
+    "Environment"
+  ],
+  "id": "setTerrainGrid",
+  "name": "setTerrainGrid",
+  "problem_notes": [],
+  "see_also": [
+    "getTerrainGrid",
+    "setViewDistance",
+    "viewDistance",
+    "setDetailMapBlendPars",
+    "getObjectViewDistance",
+    "setObjectViewDistance"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.75",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "grid"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "for default landscapes the supported resolutions are",
+          "name": "grid",
+          "type": {
+            "NumberEnum": [
+              {
+                "desc": "smoothest, less lag",
+                "since": null,
+                "value": 50
+              },
+              {
+                "desc": "default in multiplayer",
+                "since": null,
+                "value": 25
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

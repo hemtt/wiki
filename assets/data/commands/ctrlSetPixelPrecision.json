@@ -1,0 +1,108 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Switches mode of pixel precision (rounding) in a given control interface.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control ctrlSetPixelPrecision 2; // Enables pixel precision of the given control</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "ctrlSetPixelPrecision",
+  "name": "ctrlSetPixelPrecision",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlCommit",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlSetModel",
+    "ctrlPosition",
+    "ctrlClassName",
+    "displayCtrl",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp",
+    "ctrlSetPosition"
+  ],
+  "since": {
+    "arma3": "1.82"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be one of the following",
+          "name": "mode",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "NumberEnum": [
+                    {
+                      "desc": "control position (x, y, w, h) is always rounded to whole pixels (game default)",
+                      "since": null,
+                      "value": 0
+                    },
+                    {
+                      "desc": "control position (x, y, w, h) is rounded to whole pixels only when not animating",
+                      "since": null,
+                      "value": 1
+                    },
+                    {
+                      "desc": "control position (x, y, w, h) is always precise, no pixel rounding applies here",
+                      "since": null,
+                      "value": 2
+                    }
+                  ]
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "StringEnum": [
+                    {
+                      "desc": "control position (x, y, w, h) is always rounded to whole pixels (game default)",
+                      "since": null,
+                      "value": "AUTO"
+                    },
+                    {
+                      "desc": "control position (x, y, w, h) is rounded to whole pixels only when not animating",
+                      "since": null,
+                      "value": "ON"
+                    },
+                    {
+                      "desc": "control position (x, y, w, h) is always precise, no pixel rounding applies here",
+                      "since": null,
+                      "value": "OFF"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

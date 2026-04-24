@@ -1,0 +1,109 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the number of given empty positions in the vehicle.\n{{Feature|informative|To return the actual units in the vehicle use [[fullCrew]]. However if only the number is desired, use [[emptyPositions]] because it is faster.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_freeCargoAndFFVPositions = vehicle player emptyPositions \"Cargo\";</sqf>",
+    "<sqf>_freeCargoOnlyPositions = vehicle player emptyPositions \"CargoNoFFV\";</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation",
+    "Unit Control"
+  ],
+  "id": "emptyPositions",
+  "name": "emptyPositions",
+  "problem_notes": [],
+  "see_also": [
+    "moveInDriver",
+    "moveInTurret",
+    "moveInCommander",
+    "moveInGunner",
+    "moveInCargo",
+    "getCargoIndex"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "position"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "",
+          "name": "position",
+          "type": {
+            "StringEnum": [
+              {
+                "desc": null,
+                "since": null,
+                "value": "Commander"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Driver"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Gunner"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "value": "Cargo"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.10"
+                },
+                "value": ""
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.10"
+                },
+                "value": "CargoNoFFV"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.10"
+                },
+                "value": "CargoFFV"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.14"
+                },
+                "value": "Turret"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

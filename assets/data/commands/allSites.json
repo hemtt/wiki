@@ -1,0 +1,43 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return all sites in map.\n{{Feature|warning|This command is considered deprecated and is no longer supported}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_allSites = allSites;</sqf>"
+  ],
+  "groups": [
+    "Broken Commands",
+    "Sides"
+  ],
+  "id": "allSites",
+  "name": "allSites",
+  "problem_notes": [],
+  "see_also": [
+    "deleteSite",
+    "createSite",
+    "allGroups",
+    "allDead",
+    "playableUnits",
+    "switchableUnits",
+    "vehicles",
+    "allUnitsUAV",
+    "allCurators",
+    "allDeadMen"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      }
+    }
+  ]
+}

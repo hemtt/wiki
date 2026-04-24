@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Set the state of a given task.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_tskKillSpongebob setTaskState \"Succeeded\";</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "setTaskState",
+  "name": "setTaskState",
+  "problem_notes": [],
+  "see_also": [
+    "Tasks",
+    "createSimpleTask",
+    "removeSimpleTask",
+    "setSimpleTaskDescription",
+    "setSimpleTaskDestination",
+    "setTaskResult",
+    "taskState"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "task",
+          "state"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "task",
+          "type": "Task"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "state value may be one of:\n*\"None\"\n*\"Created\"\n*\"Assigned\"\n*\"Succeeded\"\n*\"Failed\"\n*\"Canceled\"",
+          "name": "state",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines the title effect to show on activation via [Type, Effect, Text] where\n\n'Type' \n\nThe title effect does not disappear on deactivation, this should be done manually if required.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_trigger setTitleEffect [\"TEXT\", \"PLAIN DOWN\", \"Hello world.\"];</sqf>"
+  ],
+  "groups": [
+    "Triggers",
+    "Waypoints"
+  ],
+  "id": "setTitleEffect",
+  "name": "setTitleEffect",
+  "problem_notes": [],
+  "see_also": [
+    "createTrigger",
+    "setSoundEffect",
+    "setMusicEffect"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "triggerOrWaypoint",
+          [
+            "type",
+            "effect",
+            "text"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "or [[Waypoint]]",
+          "name": "triggerOrWaypoint",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "defines [[Title Effect Type]] when not NONE",
+              "name": "type",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "NONE"
+                  },
+                  {
+                    "desc": "''text'' defines the shown object , a subclass of {{hl|CfgTitles}} (see [[cutObj]])",
+                    "since": null,
+                    "value": "OBJECT"
+                  },
+                  {
+                    "desc": "''text'' defines a resource class, a subclass of RscTitles (see [[cutRsc]])",
+                    "since": null,
+                    "value": "RES"
+                  },
+                  {
+                    "desc": "''text'' defines text string to show (see [[cutText]])",
+                    "since": null,
+                    "value": "TEXT"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "effect",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "text",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

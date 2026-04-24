@@ -1,0 +1,86 @@
+{
+  "argument_loc": "Global",
+  "description": "Adds an Event Handler to the given object.\n* As many Event Handlers of any type can be added - existing Event Handlers do not get overwritten\n* Use [[removeEventHandler]] to remove an Event Handler\nRead [[:Category:Event Handlers|Event Handlers]] for more information and a list of all available Event Handlers.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nthis addEventHandler [\"Killed\", {\n\tparams [\"_unit\", \"_killer\"];\n\tsystemChat format [\"%1 has been killed by %2.\", _unit, _killer];\n}];\n</sqf>",
+    "<sqs>_index = player addEventHandler [\"Killed\", { _this exec \"playerKilled.sqs\" }]</sqs>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "addEventHandler",
+  "name": "addEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "removeEventHandler",
+    "removeAllEventHandlers",
+    ":Category:Event",
+    "Handlers|Event",
+    "Handlers",
+    "addMPEventHandler",
+    "addMissionEventHandler",
+    "BIS_fnc_addScriptedEventHandler",
+    "getEventHandlerInfo"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.85",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "target",
+          [
+            "type",
+            "code"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "or {{GVI|arma3|2.10|size= 0.75}} [[Group]]",
+          "name": "target",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "the index of the added Event Handler. Indices start at 0 for each unit and increment with each added Event Handler.",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "see [[:Category:Event Handlers|Event Handlers]] for the full list of available options",
+              "name": "type",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "code that should be executed when the Event Handler fires; executed in [[missionNamespace]] by default. Several [[Magic Variables]] are available",
+              "name": "code",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": "Event Handler parameters are accessible via <sqf inline>_this</sqf>\nThe Event Handler type is available as <sqf inline>_thisEvent</sqf>\nThe Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
+                    "since": null,
+                    "type": "Code"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

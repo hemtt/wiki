@@ -1,0 +1,90 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Process an animation of 3D [[Arma: GUI Configuration]]. Command uses name defined by source property and works similar like [[animateSource]] command.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_control3D ctrlAnimateModel [\"Close\", 1];</sqf>",
+    "<sqf>_ctrlLaptop ctrlAnimateModel [\"Lid\", 1, 2];</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Object"
+  ],
+  "id": "ctrlAnimateModel",
+  "name": "ctrlAnimateModel",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlAnimationPhaseModel",
+    "ctrlCreate",
+    "ctrlDelete",
+    "ctrlModel",
+    "ctrlPosition",
+    "ctrlSetPosition",
+    "ctrlClassName",
+    "displayCtrl",
+    "ctrlModelScale",
+    "ctrlSetModelScale",
+    "ctrlModelDirAndUp",
+    "ctrlSetModelDirAndUp"
+  ],
+  "since": {
+    "arma3": "1.84"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          [
+            "source",
+            "phase",
+            "speed"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "3D control",
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "common source",
+              "name": "source",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "wanted animation phase",
+              "name": "phase",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default [[false]])",
+              "name": "speed",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": "[[Boolean]] - when set to [[true]], animation is instant\n{{GVI|arma3|1.66|size= 0.75}} [[Number]] - > 0 is treated as config speed value multiplier",
+                    "since": null,
+                    "type": "Boolean"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

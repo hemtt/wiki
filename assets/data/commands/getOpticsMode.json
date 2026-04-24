@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the class name of the current optic mode of the current weapon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nplayer getOpticsMode 0; // get current weapon's optic mode\nplayer getOpticsMode 1; // get primary weapon's optic mode\nplayer getOpticsMode 2; // get launcher's optic mode\nplayer getOpticsMode 3; // get handgun's optic mode\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getOpticsMode",
+  "name": "getOpticsMode",
+  "problem_notes": [],
+  "see_also": [
+    "setOpticsMode"
+  ],
+  "since": {
+    "arma3": "2.10"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "slot"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "class name of the current optic mode of the current weapon",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be one of",
+          "name": "slot",
+          "type": {
+            "NumberEnum": [
+              {
+                "desc": "Current weapon",
+                "since": null,
+                "value": 0
+              },
+              {
+                "desc": "Primary weapon",
+                "since": null,
+                "value": 1
+              },
+              {
+                "desc": "Secondary weapon",
+                "since": null,
+                "value": 2
+              },
+              {
+                "desc": "Handgun",
+                "since": null,
+                "value": 3
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

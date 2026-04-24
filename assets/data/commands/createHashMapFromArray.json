@@ -1,0 +1,93 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Creates a new [[HashMap]] and initializes it from a key-value pair array",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>createHashMapFromArray [[\"a\", 1], [\"b\", 2], [\"c\", 3]];</sqf>",
+    "<sqf>[1, 2, 3, 4] createHashMapFromArray []; // returns [[1, <null>], [2, <null>], [4, <null>], [3, <null>]]</sqf>",
+    "<sqf>[1, 2, 3] createHashMapFromArray [\"one\", \"two\", \"three\", \"four\"]; // returns [[1, \"one\"], [2, \"two\"], [3, \"three\"]]</sqf>"
+  ],
+  "groups": [
+    "HashMap",
+    "Arrays"
+  ],
+  "id": "createHashMapFromArray",
+  "name": "createHashMapFromArray",
+  "problem_notes": [],
+  "see_also": [
+    "createHashMap"
+  ],
+  "since": {
+    "arma3": "2.02"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          [
+            "keyN",
+            "valueN"
+          ]
+        ]
+      },
+      "ret": {
+        "type": "HashMapUnknown"
+      },
+      "right": {
+        "Array": [
+          {
+            "Infinite": [
+              {
+                "Item": {
+                  "name": "keyN",
+                  "type": "HashMapKey"
+                }
+              },
+              {
+                "Item": {
+                  "name": "valueN",
+                  "type": "Anything"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "keys",
+          "values"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "keys",
+          "type": {
+            "ArrayUnsized": {
+              "value": "HashMapKey"
+            }
+          }
+        }
+      },
+      "ret": {
+        "type": "HashMapUnknown"
+      },
+      "right": {
+        "Item": {
+          "name": "values",
+          "type": {
+            "ArrayUnsized": {
+              "value": "Anything"
+            }
+          }
+        }
+      },
+      "since": {
+        "arma3": "2.04"
+      }
+    }
+  ]
+}

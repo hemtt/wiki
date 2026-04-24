@@ -1,0 +1,88 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Adds a user action event handler to the current mission and returns its event handler index.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>private _ehId = addUserActionEventHandler [\"ReloadMagazine\", \"Activate\", { systemChat \"reloading!\"; }];</sqf>"
+  ],
+  "groups": [
+    "Event Handlers"
+  ],
+  "id": "addUserActionEventHandler",
+  "name": "addUserActionEventHandler",
+  "problem_notes": [],
+  "see_also": [
+    "removeUserActionEventHandler",
+    "removeAllUserActionEventHandlers",
+    "Arma",
+    "3:",
+    "Event",
+    "Handlers#UserAction",
+    "Event",
+    "Handlers|UserAction",
+    "Event",
+    "Handlers"
+  ],
+  "since": {
+    "arma3": "2.06"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "keyName",
+          "event",
+          "expression"
+        ]
+      },
+      "ret": {
+        "desc": "the index of the currently added UserAction event handler is returned",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "action key name - see [[inputAction/actions]]",
+              "name": "keyName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "event name - see [[Arma 3: Event Handlers#UserAction Event Handlers|UserAction Event Handlers]].",
+              "name": "event",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Activate"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Deactivate"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Analog"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "expression that will be executed in [[missionNamespace]] when event handler fires.\n* {{hl|{{Link|Magic Variables#thisEventHandler|_thisEventHandler}}}} returns the event handler index\n* {{hl|{{Link|Magic Variables#thisEvent|_thisEvent}}}} returns the event type (the ''event'' parameter, either {{hl|\"Activate\"}}, {{hl|\"Deactivate\"}} or {{hl|\"Analog\"}})",
+              "name": "expression",
+              "type": "Code"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

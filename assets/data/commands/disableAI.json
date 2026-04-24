@@ -1,0 +1,59 @@
+{
+  "argument_loc": "Local",
+  "description": "Disables parts of the AI behaviour to get a better control over the actions of a unit. If the unit changes locality, this command might need to be executed again at the new locality to maintain effect.\n\n{{Feature|warning|This command might cause unexpected behaviour when used on a player-controlled unit.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>MyUnit disableAI \"AUTOTARGET\";</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "disableAI",
+  "name": "disableAI",
+  "problem_notes": [],
+  "see_also": [
+    "enableAI",
+    "checkAIFeature",
+    "enableAIFeature",
+    "getUnitState",
+    "disableRemoteSensors",
+    "vehicleMoveInfo"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "feature"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "AI unit",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "possible values are:\n* {{GVI|arma3|1.66|size= 0.75}}  \"ALL\"\n* \"AUTOTARGET\"\n* \"MOVE\"\n* \"TARGET\"\n* \"TEAMSWITCH\"\n* \"WEAPONAIM\"\n* {{GVI|ofp|1.99|size= 0.75}} \"ANIM\"\n* {{GVI|arma2oa|1.60|size= 0.75}} \"FSM\"\n* {{GVI|arma3|1.42|size= 0.75}}  \"AIMINGERROR\"\n* {{GVI|arma3|1.42|size= 0.75}}  \"SUPPRESSION\"\n* {{GVI|arma3|1.54|size= 0.75}}  \"CHECKVISIBLE\"\n* {{GVI|arma3|1.56|size= 0.75}}  \"AUTOCOMBAT\"\n* {{GVI|arma3|1.56|size= 0.75}}  \"COVER\"\n* {{GVI|arma3|1.62|size= 0.75}}  \"PATH\"\n* {{GVI|arma3|1.76|size= 0.75}}  \"MINEDETECTION\"\n* {{GVI|arma3|1.92|size= 0.75}}  \"LIGHTS\"\n* {{GVI|arma3|1.92|size= 0.75}}  \"NVG\"\n* {{GVI|arma3|1.96|size= 0.75}}  \"RADIOPROTOCOL\"\n* {{GVI|arma3|2.18|size= 0.75}}  \"FIREWEAPON\"",
+          "name": "feature",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

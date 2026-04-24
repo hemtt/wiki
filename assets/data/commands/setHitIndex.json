@@ -1,0 +1,128 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the current level of damage for a specific Hit Point. All hit points can be obtained with [[getAllHitPointsDamage]] command.",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>vehicle player setHitIndex [1, 1];</sqf>",
+    "<sqf>player setHitIndex [7, 0.5];</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setHitIndex",
+  "name": "setHitIndex",
+  "problem_notes": [],
+  "see_also": [
+    "getAllHitPointsDamage",
+    "getHitIndex",
+    "getHitPointDamage",
+    "setHitPointDamage",
+    "setHit",
+    "getHit",
+    "setDamage",
+    "damage",
+    "forceHitPointsDamageSync"
+  ],
+  "since": {
+    "arma3": "1.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "hitPartIndex",
+            "damage",
+            "useEffects",
+            "killer",
+            "instigator",
+            "breakRotor"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle to be damaged",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "hit part index of the Hit Point",
+              "name": "hitPartIndex",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "level of damage, 0 = no damage, 1 = full damage",
+              "name": "damage",
+              "type": {
+                "NumberRange": [
+                  0,
+                  1
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "[[false]] to skip destruction effects",
+              "name": "useEffects",
+              "optional": true,
+              "since": {
+                "arma3": "1.68"
+              },
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "objnull",
+              "desc": "the entity that caused the damage. If the damage leads to the death of the unit, the killer will be used as the object that caused the kill. <br>\n* It can be used to show \"killed by player\" in debriefing statistics and kill messages in the chat (if death messages are enabled). <br>\n* It will alter the killer's [[rating]] as if the killer directly killed the unit. <br>\n* It will be listed as <sqf inline>_killer</sqf> parameter in the [[Arma_3:_Event_Handlers#Killed|Killed]] event handler.",
+              "name": "killer",
+              "optional": true,
+              "since": {
+                "arma3": "2.08"
+              },
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "default": "objnull",
+              "desc": "the person that instigated the damage.\n* if a tank is a killer, the tank gunner that pulled the trigger is instigator\n* it will be listed as <sqf inline>_instigator</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler.",
+              "name": "instigator",
+              "optional": true,
+              "since": {
+                "arma3": "2.12"
+              },
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "if the hitpoint is rotor on a helicopter, [[true]] will break the rotor as well as play corresponding sound if 'useEffects' is also [[true]].",
+              "name": "breakRotor",
+              "optional": true,
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

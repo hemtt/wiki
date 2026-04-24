@@ -1,0 +1,85 @@
+{
+  "argument_loc": "Global",
+  "description": "Applies given force for one frame (essentially an impulse) to unit or given PhysX object at given position.\n{{Feature|informative|For more information see {{Link|http://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/apireference/files/classPxRigidBody.html|NVIDIA docs}}.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "Apply force [0,1000,0] defined in world space (not factoring object actual positioning) to object position [1,0,0]:\n<sqf>_object addForce [[0,1000,0], [1,0,0]];</sqf>",
+    "Apply force [0,1000,0] defined in model space (relative to object) to object position [1,0,0]:\n<sqf>_object addForce [_object vectorModelToWorld [0,1000,0], [1,0,0]];</sqf>",
+    "Can be used on units since {{arma3}} v2.04:\n<sqf>\nif (local bob) then\n{\n\t0 spawn \n\t{\n\t\tbob addForce [bob vectorModelToWorld [0,-200,0], bob selectionPosition \"rightfoot\"];\n\t\tsleep 5;\n\t\tbob setUnconscious false;\n\t};\n};\n</sqf>",
+    "<sqf>\nplayer addForce [player vectorModelToWorld [0, -1, 0], [0, 1, 0], false]; // not unconscious\n</sqf>"
+  ],
+  "groups": [
+    "PhysX"
+  ],
+  "id": "addForce",
+  "name": "addForce",
+  "problem_notes": [],
+  "see_also": [
+    "addTorque",
+    "awake",
+    "isAwake",
+    "vectorModelToWorld",
+    "vectorModelToWorldVisual",
+    "selectionPosition",
+    "disableBrakes",
+    "brakesDisabled"
+  ],
+  "since": {
+    "arma3": "1.72"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "force",
+            "position",
+            "setUnconscious"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "PhysX object or {{GVI|arma3|2.04|size= 0.75}}{{Icon|localargument|24}} unit, in which case the unit must be local and will be [[setUnconscious|set unconscious]]",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "force vector in world space; force is expressed in",
+              "name": "force",
+              "type": "Vector3d"
+            }
+          },
+          {
+            "Item": {
+              "desc": "relative to object",
+              "name": "position",
+              "type": "Position3dRelative"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "only applies to \"CAManBase\" ''object''; set to [[false]] to keep the person conscious",
+              "name": "setUnconscious",
+              "optional": true,
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

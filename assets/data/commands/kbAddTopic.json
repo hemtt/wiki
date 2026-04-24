@@ -1,0 +1,106 @@
+{
+  "argument_loc": "Local",
+  "description": "Register conversation topic to given person. See [[Conversations]] for more details.\n{{Feature|informative|Only the speaker(s) need to have the topic added.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player kbAddTopic [\"myTest\", \"myTest.bikb\", \"myTest.fsm\", compile preprocessFileLineNumbers \"myTest.sqf\"];</sqf>",
+    "<sqf>player kbAddTopic [\"itsGettingWarm\", \"weatherTalk.bikb\"];</sqf>"
+  ],
+  "groups": [
+    "Conversations"
+  ],
+  "id": "kbAddTopic",
+  "name": "kbAddTopic",
+  "problem_notes": [],
+  "see_also": [
+    "Conversations",
+    "kbHasTopic",
+    "kbTell",
+    "kbWasSaid",
+    "kbReact",
+    "kbRemoveTopic",
+    "kbAddDatabase",
+    "kbAddDatabaseTargets",
+    "FSM",
+    "FSM",
+    "Editor"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "person",
+          [
+            "topicName",
+            "conversationFile",
+            "fsmFile",
+            "eventHandler"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "person",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "the topic id for further reference",
+              "name": "topicName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": ".bikb file path",
+              "name": "conversationFile",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": ".fsm file path. Receives the following parameters:\n* _sentenceId: the sentence as defined in the .bikb file\n* _topic: TopicName registered via kbAddTopic\n* _this: the person that was talked to (receiver)\n* _from: the person that talked to the receiver and triggered the script",
+              "name": "fsmFile",
+              "optional": true,
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "code to execute - given String will be [[compile]]d. This is not an sqf file path.<br>",
+              "name": "eventHandler",
+              "optional": true,
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

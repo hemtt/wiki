@@ -1,0 +1,74 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the AI rule of Radar usage (Emission Control). Automatic means Radar switched on only when in Combat. The command doesn't affect player-controlled vehicles.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_vehicle setVehicleRadar 1;</sqf>"
+  ],
+  "groups": [
+    "Sensors"
+  ],
+  "id": "setVehicleRadar",
+  "name": "setVehicleRadar",
+  "problem_notes": [],
+  "see_also": [
+    "isVehicleRadarOn",
+    "vehicleReportRemoteTargets",
+    "setVehicleReportRemoteTargets",
+    "vehicleReceiveRemoteTargets",
+    "setVehicleReceiveRemoteTargets",
+    "vehicleReportOwnPosition",
+    "setVehicleReportOwnPosition",
+    "reportRemoteTarget",
+    "confirmSensorTarget"
+  ],
+  "since": {
+    "arma3": "1.70"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "rule"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "an AI-controlled vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "can be one of the following",
+          "name": "rule",
+          "type": {
+            "NumberEnum": [
+              {
+                "desc": "automatic",
+                "since": null,
+                "value": 0
+              },
+              {
+                "desc": "forced on",
+                "since": null,
+                "value": 1
+              },
+              {
+                "desc": "forced off",
+                "since": null,
+                "value": 2
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

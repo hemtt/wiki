@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the scheme used for the Stamina system.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>setStaminaScheme \"Default\";</sqf>"
+  ],
+  "groups": [
+    "Stamina System"
+  ],
+  "id": "setStaminaScheme",
+  "name": "setStaminaScheme",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Stamina"
+  ],
+  "since": {
+    "arma3": "1.54"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "scheme"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "* \"Normal\"\n* \"FastDrain\"\n* \"Exhausted\"\n* \"Default\"",
+          "name": "scheme",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Defines how waypoints are shown to the player in map view. For 3D HUD visibility see [[setWaypointVisible]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>[_grp, 2] showWaypoint \"ALWAYS\";</sqf>"
+  ],
+  "groups": [
+    "Waypoints"
+  ],
+  "id": "showWaypoint",
+  "name": "showWaypoint",
+  "problem_notes": [],
+  "see_also": [
+    "waypointShow"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "waypoint",
+          "show"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "waypoint",
+          "type": "Waypoint"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "possible values are:\n* \"NEVER\" - Never show\n* \"EASY\" - Show only if {{hl|showCadetWP}} is enabled in global [[Arma 3: Difficulty Settings|difficulty]].\n* \"ALWAYS\" - Always show",
+          "name": "show",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

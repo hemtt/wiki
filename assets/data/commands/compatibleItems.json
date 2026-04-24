@@ -1,0 +1,81 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all items (attachments) that can be mounted on the given weapon.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\ncompatibleItems \"arifle_Katiba_GL_F\"; // [\"optic_Nightstalker\",\"optic_tws\",\"optic_tws_mg\",\"optic_NVS\", ...]\n</sqf>",
+    "<sqf>\ncompatibleItems [\"arifle_Katiba_GL_F\", \"PointerSlot\"]; // [\"acc_flashlight\",\"acc_flashlight_broken\",\"acc_pointer_IR\", ...]\n</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "compatibleItems",
+  "name": "compatibleItems",
+  "problem_notes": [],
+  "see_also": [
+    "compatibleWeapons",
+    "compatibleMagazines",
+    "BIS_fnc_compatibleItems",
+    "canAdd"
+  ],
+  "since": {
+    "arma3": "2.10"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "weapon"
+      },
+      "ret": {
+        "desc": "compatible attachments",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "weapon class name",
+          "name": "weapon",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "weapon",
+          "slot"
+        ]
+      },
+      "ret": {
+        "desc": "compatible attachments",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "weapon class name",
+              "name": "weapon",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "class name of the slot (defined under WeaponSlotsInfo class in weapon config), for example:\n* \"CowsSlot\" for optics\n* \"MuzzleSlot\" for silencers\n* \"PointerSlot\" for laser pointers and flashlights\n* \"UnderBarrelSlot\" for bipods",
+              "name": "slot",
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

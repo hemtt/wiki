@@ -1,0 +1,38 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns the grid increment for the given transformation type.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_currentIncrement = get3DENGrid \"t\";</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENGrid",
+  "name": "get3DENGrid",
+  "problem_notes": [],
+  "see_also": [
+    "set3DENGrid"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "type"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "name of transformation type. Can be:\n* {{hl|\"r\"}} - Rotation\n* {{hl|\"t\"}} - Translation\n* {{hl|\"s\"}} - Scale",
+          "name": "type",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

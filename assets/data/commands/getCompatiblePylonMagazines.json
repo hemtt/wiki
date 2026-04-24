@@ -1,0 +1,98 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Get array of compatible pylon magazines",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n// returns array of arrays containing all compatible magazines\nvehicle player getCompatiblePylonMagazines 0;\n</sqf>",
+    "<sqf>\n// returns array of compatible magazines for the 3rd pylon if it exists; otherwise returns array of arrays (see above)\njet1 getCompatiblePylonMagazines 3;\n</sqf>",
+    "<sqf>\n// returns array of compatible magazines for \"pylon1\" class, defined in\n// configFile >> \"CfgVehicles\" >> \"B_Plane_CAS_01_dynamicLoadout_F\" >> \"Components\" >> \"TransportPylonsComponent\" >> \"Pylons\"\n\"B_Plane_CAS_01_dynamicLoadout_F\" getCompatiblePylonMagazines \"pylon1\";\n</sqf>"
+  ],
+  "groups": [
+    "Vehicle Loadouts"
+  ],
+  "id": "getCompatiblePylonMagazines",
+  "name": "getCompatiblePylonMagazines",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Vehicle",
+    "Loadouts",
+    "getPylonMagazines",
+    "setAmmoOnPylon",
+    "ammoOnPylon",
+    "animatePylon",
+    "animateBay",
+    "setPylonsPriority",
+    "setPylonLoadout"
+  ],
+  "since": {
+    "arma3": "1.72"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "pylon"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "aircraft object or config class",
+          "name": "vehicle",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "String"
+              }
+            ]
+          }
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "OneOf": [
+                {
+                  "desc": null,
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "desc": null,
+                  "since": null,
+                  "type": {
+                    "ArrayUnsized": {
+                      "value": {
+                        "ArrayUnsized": {
+                          "value": "String"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "or [[String]]\n* If [[String]] - pylon class name from {{hl|TransportPylonsComponent &gt;&gt; pylons}} class\n* If [[Number]] - pylon ID\n* If an invalid pylon ID or class name is provided, such as 0 or \"\", all compatible magazines from all pylons are returned.",
+          "name": "pylon",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

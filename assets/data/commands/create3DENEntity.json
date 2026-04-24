@@ -1,0 +1,124 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create new [[Eden Entity]]. Used for creating individual entities; to create a [[Eden_Editor:_Composition|composition]] (e.g., infantry squad), use [[create3DENComposition]] and to create a [[Eden_Editor:_Layer|layer]] use [[add3DENLayer]].<br>\nThis is the only way to add new editable entities to an [[:Category:Eden Editor|Eden Editor]] scenario. Other 'create' commands like [[createVehicle]] or [[createUnit]] will still work, but the resulting entity will not be editable.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>dude1 = create3DENEntity [\"Object\", \"B_Soldier_F\", screenToWorld [0.5, 0.5]];</sqf>",
+    "<sqf>dude2 = group dude1 create3DENEntity [\"Object\", \"B_Soldier_AR_F\", screenToWorld [0.5, 0.5]];</sqf>",
+    "<sqf>myMarker = create3DENEntity [\"Marker\", \"mil_warning\", getPosATL player];</sqf>",
+    "<sqf>mytrigger = create3DENEntity [\"Trigger\", \"EmptyDetectorArea10x10\", getPosATL player];</sqf>",
+    "{{GVI|arma3|2.06|size= 0.75}} Create a shape marker:\n<sqf>\nm = create3DENEntity [\"Marker\", \"\", getPosATL player];\t// default rectangular marker\nm set3DENAttribute [\"markerType\", 1];\t\t\t\t\t// 0 - rectangle; 1 - ellipse\nm set3DENAttribute [\"brush\", \"DiagGrid\"];\n</sqf>",
+    "{{GVI|arma3|2.14|size= 0.75}} Create a comment:\n<sqf>\nmyComment = create3DENEntity [\"Comment\", \"loc_talk\", [0,0,0]];\nmyComment set3DENAttribute [\"name\", \"Title Here\"];\nmyComment set3DENAttribute [\"description\", \"Tooltip Here\"];\n</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "create3DENEntity",
+  "name": "create3DENEntity",
+  "problem_notes": [],
+  "see_also": [
+    "create3DENComposition",
+    "delete3DENEntities",
+    "add3DENLayer"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "mode",
+          "class",
+          "position",
+          "isEmpty"
+        ]
+      },
+      "ret": {
+        "desc": "([[Eden_ID]] for Comment)",
+        "type": "EdenEntity"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "can be \"Object\", \"Trigger\", \"Waypoint\", \"Logic\", \"Marker\" or {{GVI|arma3|2.14|size= 0.75}} \"Comment\"",
+              "name": "mode",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "entity class, defined in one of the following classes:\n* {{hl|CfgVehicles}} - objects and logic entities\n* {{hl|CfgNonAIVehicles}} - triggers\n* {{hl|CfgWaypoint}} - waypoints\n* {{hl|CfgMarkers}} - markers",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "[[true]] to create vehicle without crew",
+              "name": "isEmpty",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "group",
+          [
+            "mode",
+            "class",
+            "position"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "group in which an AI character or waypoint is created.\n* When missing for AI characters, a new group is created for them\n* When missing for waypoints, an error is logged and nothing is created\n* When used on any other mode, it is ignored and the entity is created as usual",
+          "name": "group",
+          "type": "Group"
+        }
+      },
+      "ret": {
+        "desc": "([[Eden_ID]] for Comment)",
+        "type": "EdenEntity"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "can be \"Object\", \"Trigger\", \"Waypoint\", \"Logic\", \"Marker\" or {{GVI|arma3|2.14|size= 0.75}} \"Comment\"",
+              "name": "mode",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "entity class",
+              "name": "class",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "position",
+              "type": "Position"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

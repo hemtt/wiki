@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Unloads given extension loaded previously with [[callExtension]] so that extension developer could rapidly tweak developed extension without restarting the game.\n{{Feature|important|This command was introduced in {{arma3}} dev v2.11.149751 and for security reasons is only effective in DevBranch; it does nothing in stable branch.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>freeExtension \"myExt\";</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "freeExtension",
+  "name": "freeExtension",
+  "problem_notes": [],
+  "see_also": [
+    "callExtension"
+  ],
+  "since": {
+    "arma3": "2.12"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "extension"
+      },
+      "ret": {
+        "desc": "or [[Nothing]]\n* [[false]] if extension unloading attempt failed, [[true]] otherwise\n* [[Nothing]] if not dev branch",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "extension name (see [[callExtension]])",
+          "name": "extension",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

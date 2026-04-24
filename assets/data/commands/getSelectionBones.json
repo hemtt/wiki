@@ -1,0 +1,98 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array of bone names to which the specified selection is attached.\n{{Feature|important|This command is relatively slow because it searches in all vertices of every bone.}}",
+  "effect_loc": "Unspecified",
+  "examples": [],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getSelectionBones",
+  "name": "getSelectionBones",
+  "problem_notes": [],
+  "see_also": [
+    "selectionPosition",
+    "selectionNames",
+    "getBoneNames"
+  ],
+  "since": {
+    "arma3": "2.18"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "selectionName",
+            "LOD"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "array of bone names",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "selectionName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "",
+              "name": "LOD",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Memory"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "Geometry"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "FireGeometry"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "LandContact"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "HitPoints"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "value": "ViewGeometry"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Local",
+  "description": "Selects a subject page in the [[Diary|diary]]. The subject page is selected but the command does not open the map by default, which could be opened with [[openMap]] if necessary.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>\nopenMap true;\nplayer selectDiarySubject \"Diary\";\n</sqf>"
+  ],
+  "groups": [
+    "Briefing"
+  ],
+  "id": "selectDiarySubject",
+  "name": "selectDiarySubject",
+  "problem_notes": [],
+  "see_also": [
+    "processDiaryLink",
+    "createDiaryLink",
+    "createDiarySubject",
+    "diarySubjectExists",
+    "allDiarySubjects"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "player",
+          "subject"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "player",
+          "name": "player",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] if subject was successfully selected",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "subject name, for example \"Diary\" (see also [[Diary]]).",
+          "name": "subject",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}
