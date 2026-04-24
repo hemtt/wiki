@@ -1,0 +1,68 @@
+name: setCameraEffect
+desc: |-
+  Applies an effect to the current camera of the player.
+
+  {{Feature|arma3|This command is not present in {{arma3}}.}}
+groups:
+- Camera Control
+syntax:
+- call: !Binary
+  - triggerOrWaypoint
+  - - type
+    - position
+  ret:
+    type: Nothing
+  left: !Item
+    name: triggerOrWaypoint
+    desc: or [[Waypoint]]
+    type: Object
+  right: !Array
+  - !Item
+    name: type
+    desc: |-
+      effect type (a subclass of CfgCameraEffects.Array)
+      * "TERMINATE"
+      * "INTERNAL"
+      * "ZOOMIN"
+      * "ZOOMINSLOW"
+      * "AROUND"
+      * "AROUNDSLOW"
+      * "ZOOMANDAROUND"
+      * "AROUNDANDZOOMINSLOW"
+      * "ZOOMINS"
+      * "FIXED"
+      * "FIXEDWITHZOOM"
+      * "EXTERNAL"
+      * "$TERMINATE$"
+      * "TOP"
+      * "LEFT"
+      * "RIGHT"
+      * "FRONT"
+      * "BACK"
+      * "LEFT FRONT"
+      * "RIGHT FRONT"
+      * "LEFT BACK"
+      * "RIGHT BACK"
+      * "LEFT TOP"
+      * "RIGHT TOP"
+      * "FRONT TOP"
+      * "BACK TOP"
+      * "BOTTOM"
+    type: String
+  - !Item
+    name: position
+    desc: relative position
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+examples:
+- <sqf>myTrigger setCameraEffect ["ZoomIn", "FRONT"];</sqf>
+- <sqf>_waypoint1 setCameraEffect ["FIXED", "RIGHT TOP"];</sqf>
+see_also:
+- cameraEffect
