@@ -1,0 +1,52 @@
+name: addMissionEventHandler
+desc: 'Adds event handler attached to the current mission and returns event handler handle. For the list of available mission event handlers see: [[Arma 3: Mission Event Handlers]]'
+groups:
+- Event Handlers
+syntax:
+- call: !Unary
+  - event
+  - expression
+  - arguments
+  ret:
+    type: Number
+    desc: the index of the currently added mission event handler is returned
+  right: !Array
+  - !Item
+    name: event
+    desc: event name
+    type: String
+  - !Item
+    name: expression
+    desc: |-
+      expression that will be executed in [[missionNamespace]] when event handler fires.
+      * If the event handler has some data to return upon activation they are stored in the {{hl|_this}} variable
+      * {{GVI|arma3|1.64|size= 0.75}} the event handler's handle is stored in {{hl|_thisEventHandler}} variable and is available during event handler code execution
+      * {{GVI|arma3|2.04|size= 0.75}} it is possible to pass additional arguments to the EH code via optional param. The ''args'' are stored in {{hl|_thisArgs}} variable
+      * {{GVI|arma3|2.06|size= 0.75}} the event's name is available from {{hl|_thisEvent}} variable
+    type: !OneOf
+    - type: Code
+      desc: null
+      since: null
+    - type: String
+      desc: null
+      since: null
+  - !Item
+    name: arguments
+    desc: additional arguments to be passed to the EH code. Available during code execution via {{hl|_thisArgs}} variable.
+    type: !ArrayUnsized
+      value: Anything
+    optional: true
+    default: <sqf inline>[]</sqf>
+    since:
+      arma3: '2.04'
+argument_loc: Unspecified
+effect_loc: Local
+since:
+  arma3: '0.50'
+examples:
+- <sqf>_id = addMissionEventHandler ["PlayerDisconnected", { systemChat str _this }];</sqf>
+- <sqf>_id = addMissionEventHandler ["EachFrame", { systemChat str [_thisArgs, time] }, [time]];</sqf>
+see_also:
+- removeMissionEventHandler
+- removeAllMissionEventHandlers
+- getEventHandlerInfo
