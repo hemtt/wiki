@@ -1,0 +1,59 @@
+name: enableAIFeature
+desc: Enables/disables given AI feature.
+groups:
+- AI Behaviour
+syntax:
+- call: !Binary
+  - feature
+  - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: feature
+    desc: |-
+      can be:
+      * {{hl|"AwareFormationSoft"}}
+      * {{hl|"CombatFormationSoft"}}
+    type: String
+  right: !Item
+    name: enable
+    desc: '[[true]] to enable, [[false]] to disable'
+    type: Boolean
+- call: !Binary
+  - unit
+  - - feature
+    - enable
+  ret:
+    type: Nothing
+  left: !Item
+    name: unit
+    desc: unit to test AI feature for
+    type: Object
+  right: !Array
+  - !Item
+    name: feature
+    desc: see [[disableAI]] / [[enableAI]] for possible values
+    type: String
+  - !Item
+    name: enable
+    desc: '[[true]] to enable, [[false]] to disable'
+    type: Boolean
+  since:
+    arma3: '1.96'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma2: '1.05'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>"AwareFormationSoft" enableAIFeature true;</sqf>
+- <sqf>bob enableAIFeature ["AUTOTARGET", false];</sqf>
+see_also:
+- checkAIFeature
+- enableAI
+- disableAI
+- getUnitState
+- disableRemoteSensors
+- vehicleMoveInfo
