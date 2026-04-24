@@ -1,0 +1,25 @@
+name: get3DENEntity
+desc: Returns [[Eden Entity]] based on its [[Eden ID]].
+groups:
+- Eden Editor
+syntax:
+- call: !Unary ID
+  ret:
+    type: EdenEntity
+    desc: |-
+      or [[Number]]
+      * If the ''ID'' points to an [[Eden Entity]] the entity is returned
+      * If it points to a [[Eden Editor: Layer]] or [[Eden Editor: Comment]] the ''ID'' is returned
+      * If no entity with given ''ID'' exists {{hl|-1}} is returned
+  right: !Item
+    name: ID
+    desc: '[[Eden ID]]'
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.56'
+examples:
+- <sqf>myEntity = get3DENEntity 1;</sqf>
+see_also:
+- get3DENEntityID
