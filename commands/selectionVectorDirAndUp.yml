@@ -50,22 +50,12 @@ syntax:
     type: String
   - !Item
     name: LOD
-    desc: |-
-      the LOD that contains the selection:
-      * [[String]] - can be one of:
-      ** "Memory"
-      ** "Geometry"
-      ** "FireGeometry"
-      ** "LandContact"
-      ** "HitPoints"
-      ** "ViewGeometry"
-      * [[Number]] - command searches for a LOD with the similar [[LOD resolutions|resolution]] (see [[allLODs]]).
+    desc: the LOD that contains the selection
     type: !OneOf
     - type: String
-      desc: null
-      since: null
-    - type: Number
-      desc: null
+      desc: |-
+        [[String]] - can be one of:
+        [[Number]] - command searches for a LOD with the similar [[LOD resolutions|resolution]] (see [[allLODs]]).
       since: null
 argument_loc: Global
 effect_loc: Unspecified
