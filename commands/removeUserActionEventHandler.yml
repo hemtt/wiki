@@ -16,12 +16,17 @@ syntax:
     type: String
   - !Item
     name: event
-    desc: |-
-      event name - see [[Arma 3: Event Handlers#UserAction Event Handlers|UserAction Event Handlers]]. Can be one of:
-      * "Activate"
-      * "Deactivate"
-      * "Analog"
-    type: String
+    desc: 'event name - see [[Arma 3: Event Handlers#UserAction Event Handlers|UserAction Event Handlers]].'
+    type: !StringEnum
+    - value: Activate
+      desc: null
+      since: null
+    - value: Deactivate
+      desc: null
+      since: null
+    - value: Analog
+      desc: null
+      since: null
   - !Item
     name: index
     desc: index returned by [[addUserActionEventHandler]]
