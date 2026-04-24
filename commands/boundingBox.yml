@@ -1,0 +1,57 @@
+name: boundingBox
+desc: |-
+  [[File:Boundingbox.jpg|right|200px]] Returns a bounding box of given object in model coordinate space, adjusted according to destruction/animation of an object. This command is rather generous on the size estimation, for more precise coordinates use [[boundingBoxReal]].
+  {{Feature|informative|In {{GVI|arma3|1.92}} The output of both syntaxes got extended to include bounding sphere diameter. See also [[sizeOf]].}}
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: Position3dRelative
+    desc: an array with the extreme points of the model, as well as bounding box sphere diameter.<br>Format [[xmin, ymin, zmin], [xmax, ymax, zmax], boundingSphereDiameter].
+  right: !Item
+    name: object
+    type: Object
+- call: !Binary
+  - clippingType
+  - object
+  ret:
+    type: Position3dRelative
+    desc: an array with the extreme points of the model bounding box, as well as bounding box sphere diameter.<br>Format [[xmin, ymin, zmin], [xmax, ymax, zmax], boundingSphereDiameter].
+  left: !Item
+    name: clippingType
+    desc: clipping type could be
+    type: !NumberEnum
+    - value: 0
+      desc: ClipVisual (could significantly reduce the size of bounding boxes on buildings)
+      since: null
+    - value: 1
+      desc: ClipShadow
+      since: null
+    - value: 2
+      desc: ClipGeometry
+      since: null
+    - value: 3
+      desc: ClipGeneral (Default, the same type that is used in main syntax)
+      since: null
+  right: !Item
+    name: object
+    type: Object
+  since:
+    arma3: '1.92'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>private _box = boundingBox _abrams;</sqf>
+- <sqf>hint str (0 boundingBox cursorObject);</sqf>
+see_also:
+- sizeOf
+- boundingBoxReal
+- boundingCenter
+- BIS_fnc_boundingBoxDimensions
