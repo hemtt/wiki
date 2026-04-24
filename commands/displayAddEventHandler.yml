@@ -1,0 +1,64 @@
+name: displayAddEventHandler
+desc: |-
+  Adds an event handler to the given display. See [[User Interface Event Handlers]] for the full list of event names.
+  If applicable, see [[DIK_KeyCodes]] for a list of key code constants, which are relevant to key related user interface events like: [[User Interface Event Handlers#onKeyDown|KeyDown]] & [[User Interface Event Handlers#onKeyUp|KeyUp]].
+  {{Feature|important|Display EHs are processed from last to first added; an input override should be set up in the first added EH.}}
+  {{Feature|informative|The event handler ID can be accessed inside the event handler code using the <sqf inline>_thisEventHandler</sqf> [[Magic_Variables#thisEventHandler|magic variable]].}}
+groups:
+- GUI Control - Event Handlers
+- Event Handlers
+syntax:
+- call: !Binary
+  - display
+  - - eventName
+    - code
+  ret:
+    type: Number
+    desc: index of the newly added event handler or {{hl|-1}} if creation failed
+  left: !Item
+    name: display
+    type: Display
+  right: !Array
+  - !Item
+    name: eventName
+    desc: event name
+    type: String
+  - !Item
+    name: code
+    desc: |-
+      the code which gets executed when event is triggered. Returning [[true]] in event handler code will override default engine handling for keyboard events.
+      * Event Handler parameters are accessible via {{hl|_this}}
+      * The Event Handler type is available as {{hl|_thisEvent}}
+      * The Event Handler index is available as {{hl|_thisEventHandler}}
+    type: !OneOf
+    - type: String
+      desc: null
+      since: null
+    - type: Code
+      desc: null
+      since:
+        arma3: '1.06'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>moduleName_keyDownEHId = findDisplay 46 displayAddEventHandler ["KeyDown", "hint str _this;"];</sqf>
+- <sqf>moduleName_keyDownEHId = findDisplay 46 displayAddEventHandler ["KeyDown", { hint str _this }];</sqf>
+see_also:
+- disableSerialization
+- displayRemoveAllEventHandlers
+- displayRemoveEventHandler
+- displaySetEventHandler
+- ctrlAddEventHandler
+- User_Interface_Event_Handlers|UI
+- Event
+- Handlers
+- findDisplay
+- DIK_KeyCodes|DIK
+- Key
+- Codes
+- keyName
