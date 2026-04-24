@@ -5,15 +5,26 @@ groups:
 syntax:
 - call: !Unary task
   ret:
-    type: String
-    desc: |-
-      current state of task - can be one of:
-      * "None"
-      * "Created"
-      * "Assigned"
-      * "Succeeded"
-      * "Failed"
-      * "Canceled"
+    type: !StringEnum
+    - value: None
+      desc: null
+      since: null
+    - value: Created
+      desc: null
+      since: null
+    - value: Assigned
+      desc: null
+      since: null
+    - value: Succeeded
+      desc: null
+      since: null
+    - value: Failed
+      desc: null
+      since: null
+    - value: Canceled
+      desc: null
+      since: null
+    desc: current state of task -
   right: !Item
     name: task
     desc: the task you want to query
