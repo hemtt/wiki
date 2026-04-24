@@ -1,0 +1,41 @@
+name: add3DENConnection
+desc: '[[Eden Editor: Connecting|Connect]] entities together. Be aware to select the correct type of [[Eden Entity|Eden Entities]]. For example, grouping only works between entities of type [[Group]].'
+groups:
+- Eden Editor
+syntax:
+- call: !Unary
+  - type
+  - from
+  - to
+  ret:
+    type: Boolean
+    desc: '[[true]] If the connection was made'
+  right: !Array
+  - !Item
+    name: type
+    desc: |-
+      connection class from <sqf inline>"Cfg3DEN" >> "Connections"</sqf>:
+      * {{hl|Group}}
+      * {{hl|RandomStart}}
+      * {{hl|Sync}}
+      * {{hl|TriggerOwner}}
+      * {{hl|WaypointActivation}}
+    type: String
+  - !Item
+    name: from
+    desc: entities which are being connected
+    type: !ArrayUnsized
+      value: EdenEntity
+  - !Item
+    name: to
+    desc: entity to which entities will be connected to
+    type: EdenEntity
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.56'
+examples:
+- <sqf>add3DENConnection ["RandomStart", get3DENSelected "Object", "marker_0"];// Set random start on marker "marker_0" for all selected objects.</sqf>
+see_also:
+- remove3DENConnection
+- get3DENConnections
