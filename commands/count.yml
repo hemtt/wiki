@@ -1,0 +1,69 @@
+name: count
+desc: |-
+  Can be used to count:
+  * The number of elements in an array (returns the already internally known array size)
+  * The number of elements in an array matching the condition
+  * The number of sub-entries in a config entry
+  * {{GVI|arma3|1.28|size= 0.75}} The number of characters in an ANSI string {{Feature|informative|If Unicode support is desired, see [[forceUnicode]].}}
+groups:
+- Arrays
+- Strings
+- Config
+- HashMap
+syntax:
+- call: !Unary value
+  ret:
+    type: Number
+  right: !Item
+    name: value
+    desc: ', [[Config]], [[HashMap]] or [[Array]] of [[Anything]]'
+    type: String
+- call: !Binary
+  - condition
+  - array
+  ret:
+    type: Number
+  left: !Item
+    name: condition
+    desc: condition that must return [[true]] for the tested element to be counted. The variable {{hl|[[Magic Variables#x|_x]]}} will contain the currently tested element
+    type: Code
+  right: !Item
+    name: array
+    type: !ArrayUnsized
+      value: Anything
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  ofp: '1.00'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- |-
+  <sqf>
+  count [0, 0, 1, 2]; // returns 4
+  count units group player; // returns number of units in player group
+  </sqf>
+- |-
+  <sqf>
+  private _cnt = { _x == 4 } count [1, 9, 8, 3, 4, 4, 4, 5, 6]; // returns 3
+  _cnt = { alive _x } count allUnits; // returns the number of alive units
+  </sqf>
+- <sqf>private _cnt = count (configFile >> "CfgVehicles");</sqf>
+- <sqf>hint str count "japa is the man!"; // 16</sqf>
+- <sqf>hint format ["There are %1 elements in the provided hashmap", count _myHashMap];</sqf>
+see_also:
+- apply
+- select
+- in
+- find
+- countFriendly
+- countEnemy
+- countUnknown
+- countSide
+- countType
+- findIf
+- forceUnicode
