@@ -31,15 +31,20 @@ syntax:
     default: '""'
   - !Item
     name: httpMethod
-    desc: |-
-      can be one of:
-      * "POST"
-      * "GET"
-      * "DELETE"
-      * "PUT"
-    type: String
-    optional: true
-    default: '"get", or "post" if ''''data'''' is provided - case-insensitive'
+    desc: (Optional, default "GET", or "POST" if ''data'' is provided - case-insensitive)
+    type: !StringEnum
+    - value: POST
+      desc: null
+      since: null
+    - value: GET
+      desc: null
+      since: null
+    - value: DELETE
+      desc: null
+      since: null
+    - value: PUT
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 server_exec: true
