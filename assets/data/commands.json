@@ -94,9 +94,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_less%253D_b",
+      "id": "a_less%3D_b",
       "name": "<=",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if '''a''' is less than or equal to '''b''', else returns [[false]].",
@@ -104,9 +104,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_less%3D_b",
+      "id": "a_less%253D_b",
       "name": "<=",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Assigns the result of expression on the right to the variable on the left. Technically this is not a command and it is not listed in [[supportInfo]]; this is more of a compiler instruction.\n{{Feature|important|The following structure is invalid: <sqf inline>a = b = c = 4;</sqf>.}}",
@@ -24927,7 +24927,7 @@
   ],
   "failed": 278,
   "passed": 2413,
-  "timestamp": 1777404707,
+  "timestamp": 1777428102,
   "total": 2693,
   "version": "1.0"
 }
