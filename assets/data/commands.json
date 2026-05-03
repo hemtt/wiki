@@ -204,16 +204,6 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `positionOrTarget` not found in pool"
-      ],
-      "groups": [],
-      "id": "HUDMovementLevels",
-      "name": "HUDMovementLevels",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
         "Exceeded maximum recursion depth while parsing Value"
       ],
       "groups": [],
@@ -2112,16 +2102,6 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
-      ],
-      "groups": [],
-      "id": "backpackSpaceFor",
-      "name": "backpackSpaceFor",
-      "status": "Failed"
-    },
-    {
       "description": "Returns an array of all backpack names a unit has in its inventory, excluding the one it carries on the back.",
       "groups": [
         "Unit Inventory"
@@ -2915,16 +2895,6 @@
       "id": "ceil",
       "name": "ceil",
       "status": "Passed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'chat - is use of the text chat enabled'"
-      ],
-      "groups": [],
-      "id": "channelEnabled",
-      "name": "channelEnabled",
-      "status": "Failed"
     },
     {
       "description": "Checks whether cheats are enabled (whether the designers' version is running).",
@@ -4272,16 +4242,6 @@
       "groups": [],
       "id": "ctrlAddEventHandler",
       "name": "ctrlAddEventHandler",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "ctrlAngle",
-      "name": "ctrlAngle",
       "status": "Failed"
     },
     {
@@ -5703,16 +5663,6 @@
       "id": "currentWeaponTurret",
       "name": "currentWeaponTurret",
       "status": "Passed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "currentZeroing",
-      "name": "currentZeroing",
-      "status": "Failed"
     },
     {
       "description": "Returns the object under cursor. This command is quite different from [[cursorTarget]] as it is more precise in determining the boundaries of the pointed at object and can detect a larger variety of objects including map objects and trees.",
@@ -10317,16 +10267,6 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
-      ],
-      "groups": [],
-      "id": "getResolution",
-      "name": "getResolution",
-      "status": "Failed"
-    },
-    {
       "description": "Returns various properties for the respawning vehicle (see [[Vehicle Respawn]]). All properties are synched over the network and should be the same on every client including [[JIP]].",
       "groups": [
         "Multiplayer"
@@ -10586,16 +10526,6 @@
       "id": "getTextWidth",
       "name": "getTextWidth",
       "status": "Passed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "getTextureInfo",
-      "name": "getTextureInfo",
-      "status": "Failed"
     },
     {
       "description": "Returns total DLC usage time in this game session",
@@ -11507,16 +11437,6 @@
       "id": "inflamed",
       "name": "inflamed",
       "status": "Passed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "infoPanel",
-      "name": "infoPanel",
-      "status": "Failed"
     },
     {
       "description": "Controls availability of component to given object info panel.",
@@ -20662,7 +20582,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+        "Failed to parse array with element line: 'visualTargetSize [[Number]] - previous value'"
       ],
       "groups": [],
       "id": "setTargetSize",
@@ -21941,16 +21861,6 @@
       "groups": [],
       "id": "simulCloudOcclusion",
       "name": "simulCloudOcclusion",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "simulInClouds",
-      "name": "simulInClouds",
       "status": "Failed"
     },
     {
@@ -24925,9 +24835,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 278,
-  "passed": 2413,
-  "timestamp": 1777812658,
-  "total": 2693,
+  "failed": 269,
+  "passed": 2422,
+  "timestamp": 1777834345,
+  "total": 2684,
   "version": "1.0"
 }
