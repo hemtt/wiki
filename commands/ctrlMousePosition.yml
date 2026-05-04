@@ -1,0 +1,23 @@
+name: ctrlMousePosition
+desc: Returns position of the mouse on the screen relative to UI Control in UI coordinates. Also works within [[CT_CONTROLS_GROUP]]s. In that case, returned position is relative to the position of the group.
+groups:
+- GUI Control - Positioning
+syntax:
+- call: !Unary control
+  ret:
+    type: Position2d
+    desc: x and y UI coordinates of the mouse position
+  right: !Item
+    name: control
+    type: Control
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.00'
+examples:
+- <sqf>private _mouseRelPos = ctrlMousePosition _ctrl;</sqf>
+see_also:
+- ctrlSetMousePosition
+- setMousePosition
+- getMousePosition
+- ctrlMapCursor
