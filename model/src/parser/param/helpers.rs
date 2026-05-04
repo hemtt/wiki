@@ -79,10 +79,10 @@ pub fn extract_string_enum_value(text: &str) -> Option<String> {
 
     // Try plain \"VALUE\" format (just quoted string at start of line)
     let trimmed = text.trim_start();
-    if trimmed.starts_with('\"') {
-        if let Some(end) = trimmed[1..].find('\"') {
-            return Some(trimmed[1..end + 1].to_string());
-        }
+    if trimmed.starts_with('\"')
+        && let Some(end) = trimmed[1..].find('\"')
+    {
+        return Some(trimmed[1..end + 1].to_string());
     }
 
     None
@@ -104,11 +104,12 @@ pub fn extract_string_enum_value_with_desc(text: &str) -> Option<(String, Option
     }
 
     // If not found, try plain \"VALUE\" format
-    if value.is_none() && remainder.starts_with('\"') {
-        if let Some(end) = remainder[1..].find('\"') {
-            value = Some(remainder[1..end + 1].to_string());
-            remainder = &remainder[end + 2..];
-        }
+    if value.is_none()
+        && remainder.starts_with('\"')
+        && let Some(end) = remainder[1..].find('\"')
+    {
+        value = Some(remainder[1..end + 1].to_string());
+        remainder = &remainder[end + 2..];
     }
 
     // Extract description if present

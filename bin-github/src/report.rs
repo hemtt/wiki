@@ -1,19 +1,18 @@
-use std::collections::HashMap;
-
 use arma3_wiki_model::{EventHandler, EventHandlerNamespace, ParsedEventHandler, Version};
+use indexmap::IndexMap;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Report {
     passed_commands: Vec<String>,
-    failed_commands: HashMap<String, Vec<String>>,
+    failed_commands: IndexMap<String, Vec<String>>,
     outdated_commands: Vec<String>,
 
     unknown_types_commands: Vec<(String, String)>,
 
-    passed_event_handlers: HashMap<EventHandlerNamespace, Vec<ParsedEventHandler>>,
-    failed_event_handlers: HashMap<EventHandlerNamespace, Vec<EventHandler>>,
-    outdated_event_handlers: HashMap<EventHandlerNamespace, Vec<ParsedEventHandler>>,
+    passed_event_handlers: IndexMap<EventHandlerNamespace, Vec<ParsedEventHandler>>,
+    failed_event_handlers: IndexMap<EventHandlerNamespace, Vec<EventHandler>>,
+    outdated_event_handlers: IndexMap<EventHandlerNamespace, Vec<ParsedEventHandler>>,
 
     updated_version: Option<Version>,
 }
@@ -23,16 +22,35 @@ impl Report {
     pub fn new(updated_version: Option<Version>) -> Self {
         Self {
             passed_commands: Vec::new(),
-            failed_commands: HashMap::new(),
+            failed_commands: IndexMap::new(),
             outdated_commands: Vec::new(),
 
             unknown_types_commands: Vec::new(),
 
-            passed_event_handlers: HashMap::new(),
-            failed_event_handlers: HashMap::new(),
-            outdated_event_handlers: HashMap::new(),
+            passed_event_handlers: IndexMap::new(),
+            failed_event_handlers: IndexMap::new(),
+            outdated_event_handlers: IndexMap::new(),
 
             updated_version,
+        }
+    }
+
+    pub fn sort(&mut self) {
+        self.passed_commands.sort();
+        self.failed_commands.sort_keys();
+        self.outdated_commands.sort();
+
+        self.passed_event_handlers.sort_keys();
+        for handlers in self.passed_event_handlers.values_mut() {
+            handlers.sort();
+        }
+        self.failed_event_handlers.sort_keys();
+        for handlers in self.failed_event_handlers.values_mut() {
+            handlers.sort();
+        }
+        self.outdated_event_handlers.sort_keys();
+        for handlers in self.outdated_event_handlers.values_mut() {
+            handlers.sort();
         }
     }
 
@@ -63,7 +81,7 @@ impl Report {
     }
 
     #[must_use]
-    pub const fn failed_commands(&self) -> &HashMap<String, Vec<String>> {
+    pub const fn failed_commands(&self) -> &IndexMap<String, Vec<String>> {
         &self.failed_commands
     }
 
@@ -80,21 +98,21 @@ impl Report {
     #[must_use]
     pub const fn passed_event_handlers(
         &self,
-    ) -> &HashMap<EventHandlerNamespace, Vec<ParsedEventHandler>> {
+    ) -> &IndexMap<EventHandlerNamespace, Vec<ParsedEventHandler>> {
         &self.passed_event_handlers
     }
 
     #[must_use]
     pub const fn failed_event_handlers(
         &self,
-    ) -> &HashMap<EventHandlerNamespace, Vec<EventHandler>> {
+    ) -> &IndexMap<EventHandlerNamespace, Vec<EventHandler>> {
         &self.failed_event_handlers
     }
 
     #[must_use]
     pub const fn outdated_event_handlers(
         &self,
-    ) -> &HashMap<EventHandlerNamespace, Vec<ParsedEventHandler>> {
+    ) -> &IndexMap<EventHandlerNamespace, Vec<ParsedEventHandler>> {
         &self.outdated_event_handlers
     }
 

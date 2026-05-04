@@ -24,6 +24,7 @@ nonstandard_style = "warn"
 
 [workspace.dependencies]
 fs-err = "3.3.0"
+indexmap = { version = "2.14.0", features = ["serde"] }
 serde = "1.0.228"
 serde_json = "1.0.149"
 serde_yaml = { version = "0.9.34-deprecated" }

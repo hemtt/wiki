@@ -45,6 +45,10 @@ async fn main() {
     fs_err::write(&report_path, report_json).expect("Failed to write report");
     println!("Report written to {}", report_path.display());
     let report_path = PathBuf::from("dist/report.json");
+
+    // Sort report for consistent output
+    report.sort();
+
     fs_err::write(
         &report_path,
         serde_json::to_string_pretty(&report).expect("Failed to serialize report"),

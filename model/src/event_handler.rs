@@ -4,7 +4,7 @@ use crate::Version;
 
 use super::{Locality, ParamItem, Since};
 
-#[derive(Clone, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, serde::Serialize, serde::Deserialize)]
 pub enum EventHandler {
     Failed(String, String),
     Parsed(ParsedEventHandler),
@@ -35,6 +35,18 @@ pub struct ParsedEventHandler {
     #[serde(default)]
     #[serde(skip_serializing_if = "Vec::is_empty")]
     examples: Vec<String>,
+}
+
+impl PartialOrd for ParsedEventHandler {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl Ord for ParsedEventHandler {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.id.cmp(&other.id)
+    }
 }
 
 impl ParsedEventHandler {
@@ -232,7 +244,9 @@ impl ParsedEventHandler {
     }
 }
 
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize)]
+#[derive(
+    Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, serde::Serialize, serde::Deserialize,
+)]
 #[allow(clippy::module_name_repetitions)]
 pub enum EventHandlerNamespace {
     Standard,
