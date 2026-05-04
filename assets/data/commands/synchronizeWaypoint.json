@@ -37,14 +37,19 @@
       },
       "left": {
         "Item": {
-          "desc": "can be",
+          "desc": "can be\n* [[Object]] - [[Trigger|trigger]]\n* [[Waypoint]] - [[Array]] format of [[Waypoint]]",
           "name": "triggerOrWaypoint",
           "type": {
             "OneOf": [
               {
-                "desc": "[[Object]] - [[Trigger|trigger]]\n[[Waypoint]] - [[Array]] format of [[Waypoint]]",
+                "desc": null,
                 "since": null,
                 "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Waypoint"
               }
             ]
           }

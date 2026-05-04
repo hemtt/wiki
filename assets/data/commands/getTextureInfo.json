@@ -1,0 +1,119 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return texture information - resolution in pixels (mipmap level 0) and average colour. Multiply the pixel values by [[pixelW]] and [[pixelH]] to get screen coordinates.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>getTextureInfo \"a3\\characters_f\\blufor\\data\\clothing1_co.paa\"; // [2048, 2048, [0.458824, 0.427451, 0.34902, 1]]</sqf>",
+    "<sqf>getTextureInfo [\"\\A3\\UI_f\\Data\\Logos\\arma3_shadow_ca.paa\", 0.1]; // [0.150111, 0.1]</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "getTextureInfo",
+  "name": "getTextureInfo",
+  "problem_notes": [],
+  "see_also": [
+    "pixelW",
+    "pixelH",
+    "getModelInfo",
+    "supportInfo",
+    "getObjectType",
+    "getObjectTextures"
+  ],
+  "since": {
+    "arma3": "2.06"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "texture"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "width",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "height",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "rgbaAverageColour",
+              "since": {
+                "arma3": "2.08"
+              },
+              "type": "ArrayColorRgba"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "texture path (.paa, .jpg, .ogv)",
+          "name": "texture",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "texture",
+          "sizeH"
+        ]
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "width of the texture in screen units",
+              "name": "width",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "height of the texture in screen units",
+              "name": "height",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "texture path (.paa, .jpg, .ogv)",
+              "name": "texture",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "texture height in screen size",
+              "name": "sizeH",
+              "type": "Number"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}

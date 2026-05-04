@@ -1,0 +1,55 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns if given position is in clouds.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>simulInClouds getPos player;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "simulInClouds",
+  "name": "simulInClouds",
+  "problem_notes": [
+    "{{Feature|Eden Editor|SimulWeather seems to be disabled in [[:Category:Eden Editor|Eden Editor]] and scenario preview.}}"
+  ],
+  "see_also": [
+    "setSimulWeatherLayers",
+    "simulCloudDensity",
+    "simulCloudOcclusion"
+  ],
+  "since": {
+    "arma3": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "pos"
+      },
+      "ret": {
+        "desc": "[[true]] if given position is in clouds. [[Nothing]] if given arguments are incorrect",
+        "type": {
+          "OneOf": [
+            {
+              "desc": null,
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "desc": null,
+              "since": null,
+              "type": "Nothing"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "pos",
+          "type": "Position"
+        }
+      }
+    }
+  ]
+}

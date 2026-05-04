@@ -1,0 +1,144 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns hierarchy of the given config class. Just like with [[inheritsFrom]], only complete config classes are supported (before {{GVI|arma3|2.14|size= 0.75}}). Since {{GVI|arma3|2.22|size= 0.75}}, an alt syntax is added, which allows to return parents identical to [[BIS_fnc_returnParents]] (see Example 2)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_hierarchy = configHierarchy (configFile >> \"CfgVehicles\" >> \"Car\");\n// Returns [bin\\config.bin, bin\\config.bin/CfgVehicles, bin\\config.bin/CfgVehicles/Car]\n</sqf>",
+    "<sqf>\n_bis_fnc_returnParents = configHierarchy [configFile >> \"CfgVehicles\" >> \"Land_FirePlace_F\", true, true, true, true];\n// Returns [\"Land_FirePlace_F\",\"House_F\",\"House\",\"HouseBase\",\"NonStrategic\",\"Building\",\"Static\",\"All\"]\n</sqf>"
+  ],
+  "groups": [
+    "Config"
+  ],
+  "id": "configHierarchy",
+  "name": "configHierarchy",
+  "problem_notes": [],
+  "see_also": [
+    "configClasses",
+    "configProperties",
+    "missionConfigFile",
+    "campaignConfigFile",
+    "a",
+    "/",
+    "b",
+    "config",
+    "greater",
+    "greater",
+    "name|config",
+    ">>",
+    "name",
+    "configName",
+    "count",
+    "getArray",
+    "getText",
+    "getNumber",
+    "inheritsFrom",
+    "isArray",
+    "isClass",
+    "isNumber",
+    "isText",
+    "select",
+    "isKindOf",
+    "BIS_fnc_returnParents"
+  ],
+  "since": {
+    "arma3": "1.48"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "config"
+      },
+      "ret": {
+        "desc": "ordered from parent to child",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Config"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "target config",
+          "name": "config",
+          "type": "Config"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "config",
+          "classesOnly",
+          "includeBases",
+          "reversedOrder",
+          "configNames"
+        ]
+      },
+      "ret": {
+        "desc": "Strings represent config names",
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "OneOf": [
+                {
+                  "desc": null,
+                  "since": null,
+                  "type": "Config"
+                },
+                {
+                  "desc": null,
+                  "since": null,
+                  "type": "String"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "target config",
+              "name": "config",
+              "type": "Config"
+            }
+          },
+          {
+            "Item": {
+              "desc": "when [[true]], only classes are included in output and not properties",
+              "name": "classesOnly",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "when [[true]], returned parents will include base classes (see description)",
+              "name": "includeBases",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "when [[true]], the return order is from child to parent",
+              "name": "reversedOrder",
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "desc": "when [[true]], the return is [[Array]] of [[String]]s, when [[false]] - [[Array]] of [[Config]]s. Default: [[false]]",
+              "name": "configNames",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}

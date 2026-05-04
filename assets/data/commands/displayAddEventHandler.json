@@ -67,14 +67,21 @@
           },
           {
             "Item": {
-              "desc": "the code which gets executed when event is triggered. Returning [[true]] in event handler code will override default engine handling for keyboard events.",
+              "desc": "the code which gets executed when event is triggered. Returning [[true]] in event handler code will override default engine handling for keyboard events.\nSeveral [[Magic Variables]] are available:\n* Event Handler parameters are accessible via {{hl|_this}}\n* The Event Handler type is available as {{hl|_thisEvent}}\n* The Event Handler index is available as {{hl|_thisEventHandler}}",
               "name": "code",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "Event Handler parameters are accessible via {{hl|_this}}\nThe Event Handler type is available as {{hl|_thisEvent}}\nThe Event Handler index is available as {{hl|_thisEventHandler}}",
+                    "desc": null,
                     "since": null,
                     "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": {
+                      "arma3": "1.06"
+                    },
+                    "type": "Code"
                   }
                 ]
               }

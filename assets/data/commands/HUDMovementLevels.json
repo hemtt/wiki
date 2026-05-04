@@ -1,0 +1,82 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns movement borders for HUD",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>HUDMovementLevels; // returns e.g [0,0,0,0,0,0,[0,0,0]]</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "HUDMovementLevels",
+  "name": "HUDMovementLevels",
+  "problem_notes": [],
+  "see_also": [
+    "setHUDMovementLevels"
+  ],
+  "since": {
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "in m/s",
+              "name": "minSpeed",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "in m/s",
+              "name": "maxSpeed",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "in meters",
+              "name": "minAlt",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "in meters",
+              "name": "maxAlt",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "in degrees",
+              "name": "minDir",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "in degrees",
+              "name": "maxDir",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": ", [[Object]]",
+              "name": "positionOrTarget",
+              "since": null,
+              "type": "Position"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

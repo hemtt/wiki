@@ -1,0 +1,41 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns position of the mouse on the screen relative to UI Control in UI coordinates. Also works within [[CT_CONTROLS_GROUP]]s. In that case, returned position is relative to the position of the group.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _mouseRelPos = ctrlMousePosition _ctrl;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "ctrlMousePosition",
+  "name": "ctrlMousePosition",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetMousePosition",
+    "setMousePosition",
+    "getMousePosition",
+    "ctrlMapCursor"
+  ],
+  "since": {
+    "arma3": "2.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "desc": "x and y UI coordinates of the mouse position",
+        "type": "Position2d"
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns an array containing all information about current client screen resolution.\n\n{{Feature|arma3|\n'''Render resolution''' is not returned by this command.<br>\nA sampling setting of '''50%''' means half of native width ''and'' half of native height, resulting in a render resolution of '''''25%''''' the original resolution.}}\n{{Feature | important | The engine default value for {{hl|fovTop}} is '''0.75''' in case it is needed to calculate difference with custom FOV.}}\n{{Feature|informative|The {{hl|aspectRatio}} is calculated as {{hl|fovLeft&nbsp;/&nbsp;fovTop}} and should be the same as {{hl|screenW&nbsp;/&nbsp;screenH}} for undistorted image if the FOV is custom. Some of the common values:\n{{{!}} class{{=}}\"wikitable\"\n! 16/9 !! 16/10 !! 5/4 !! 4/3 !! 16/9 triple screen\n{{!}}-\n{{!}} 1.777777(…) {{!}}{{!}} 1.6 {{!}}{{!}} 1.25 {{!}}{{!}} 1.333333(…) {{!}}{{!}} 5.333333(…)\n{{!}}}\n}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _res = getResolution;</sqf>\n\nExample result with a single 16:9 monitor:\n<sqf>\n[\n\t1920,\t\t// width\n\t1080,\t\t// height\n\t792,\t\t// 2D viewport width\n\t594,\t\t// 2D viewport height\n\t1.77778,\t// aspect ratio\n\t0.55,\t\t// UI scale\n\t0.75,\t\t// fovTop\n\t1.33333,\t// fovLeft\n\tfalse\t\t// tripleHead\n]\n</sqf>\nExample result with a triple 16:9 monitor setup:\n<sqf>\n[\n\t5760,\t\t// width\n\t1080,\t\t// height\n\t792,\t\t// 2D viewport width\n\t594,\t\t// 2D viewport height\n\t5.33333,\t// aspect ratio\n\t0.55\t\t// UI scale\n]\n</sqf>\nExample result on a dedicated server:\n<sqf>\n[\n\t160,\t\t// width\n\t120,\t\t// height\n\t136,\t\t// 2D viewport width\n\t102,\t\t// 2D viewport height\n\t1.33333,\t// aspect ratio\n\t0.85\t\t// UI scale\n]\n</sqf>"
+  ],
+  "groups": [
+    "System",
+    "GUI Control - Positioning"
+  ],
+  "id": "getResolution",
+  "name": "getResolution",
+  "problem_notes": [],
+  "see_also": [
+    "getObjectFOV",
+    "worldToScreen",
+    "screenToWorld",
+    "safeZoneX",
+    "safeZoneY",
+    "safeZoneW",
+    "safeZoneH"
+  ],
+  "since": {
+    "arma2oa": "1.55",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "width of the screen in pixels",
+              "name": "screenW",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "height of the screen in pixels",
+              "name": "screenH",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "width of the 4:3 view port in pixels",
+              "name": "viewPortW",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "height of the 4:3 view port in pixels",
+              "name": "viewPortH",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "screen aspect ratio",
+              "name": "aspectRatio",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "the scale of the UI, which affects view port size:",
+              "name": "uiScale",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "vertical FOV in [[rad]]ians, the same as {{hl|fovTop}} value from the user profile",
+              "name": "fovTop",
+              "since": {
+                "arma3": "1.94"
+              },
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "horizontal FOV in [[rad]]ians, the same as{{hl|fovLeft}} value from the user profile",
+              "name": "fovLeft",
+              "since": {
+                "arma3": "1.94"
+              },
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "[[true]] if user has triple head screen (see also [[safeZoneXAbs]], [[safeZoneWAbs]])",
+              "name": "tripleHead",
+              "since": {
+                "arma3": "1.94"
+              },
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "current texture quality set in user preferences in 0..1 range, where 0 is lowest, 1 is highest",
+              "name": "textureQuality",
+              "since": {
+                "arma3": "2.10"
+              },
+              "type": "Number"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

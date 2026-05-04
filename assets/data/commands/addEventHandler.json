@@ -66,14 +66,19 @@
           },
           {
             "Item": {
-              "desc": "code that should be executed when the Event Handler fires; executed in [[missionNamespace]] by default. Several [[Magic Variables]] are available",
+              "desc": "code that should be executed when the Event Handler fires; executed in [[missionNamespace]] by default. Several [[Magic Variables]] are available\n* Event Handler parameters are accessible via <sqf inline>_this</sqf>\n* The Event Handler type is available as <sqf inline>_thisEvent</sqf>\n* The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
               "name": "code",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "Event Handler parameters are accessible via <sqf inline>_this</sqf>\nThe Event Handler type is available as <sqf inline>_thisEvent</sqf>\nThe Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
+                    "desc": null,
                     "since": null,
                     "type": "Code"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
                   }
                 ]
               }

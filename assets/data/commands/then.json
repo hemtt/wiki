@@ -60,7 +60,7 @@
                 "type": "Code"
               },
               {
-                "desc": "[[Array]] of [[Code]] - array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}",
+                "desc": "array of two [[Code]] elements in format [thenCode, elseCode]; see {{Link|#Example 3}}",
                 "since": null,
                 "type": {
                   "ArrayUnsized": {

@@ -19,7 +19,8 @@
     "moveInCommander",
     "moveInGunner",
     "moveInCargo",
-    "getCargoIndex"
+    "getCargoIndex",
+    "moveInAny"
   ],
   "since": {
     "arma1": "1.00",

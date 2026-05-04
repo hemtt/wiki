@@ -1,0 +1,103 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns current zeroing.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _zeroing = currentZeroing player;</sqf>",
+    "<sqf>(player currentZeroing [\"arifle_MX_GL_F\", \"GL_3GL_F\"]) params [\"_distance\", \"_zeroingIndex\"];</sqf>",
+    "<sqf>\nprivate _zeroing = currentZeroing myVehicle; // does not work\nprivate _zeroing = currentZeroing gunner myVehicle; // works\n</sqf>"
+  ],
+  "groups": [
+    "Weapons"
+  ],
+  "id": "currentZeroing",
+  "name": "currentZeroing",
+  "problem_notes": [],
+  "see_also": [
+    "setWeaponZeroing"
+  ],
+  "since": {
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "object"
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "unit (vehicles are not supported)",
+          "name": "object",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "object",
+          [
+            "weaponClass",
+            "muzzleClass"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "unit (vehicles are not supported)",
+          "name": "object",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "distance in meters, Since {{GVI|arma3|2.20|size= 0.75}} supports laser rangefinder value",
+              "name": "distance",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "0 ≙ 50 m, 1 ≙ 100 m, 2 ≙ 150 m, ..., -1 for laser rangefinding",
+              "name": "zeroingIndex",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "class name of weapon",
+              "name": "weaponClass",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "currently active muzzle or first that is found",
+              "desc": "muzzle classname",
+              "name": "muzzleClass",
+              "optional": true,
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.04"
+      }
+    }
+  ]
+}

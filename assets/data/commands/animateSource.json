@@ -66,14 +66,19 @@
           },
           {
             "Item": {
-              "desc": "(Optional, default [[false]])",
+              "desc": "(Optional, default [[false]])\n* [[Boolean]] - when set to [[true]], animation is instant\n* {{GVI|arma3|1.66|size= 0.75}} [[Number]] > 0 is treated as config speed value multiplier. Since {{GVI|arma3|2.10|size= 0.75}} values <= 0 will instantly reset animation to initPhase.",
               "name": "speed",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "[[Boolean]] - when set to [[true]], animation is instant\n{{GVI|arma3|1.66|size= 0.75}} [[Number]] > 0 is treated as config speed value multiplier. Since {{GVI|arma3|2.10|size= 0.75}} values <= 0 will instantly reset animation to initPhase.",
+                    "desc": null,
                     "since": null,
                     "type": "Boolean"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
                   }
                 ]
               }

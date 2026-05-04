@@ -52,14 +52,19 @@
           },
           {
             "Item": {
-              "desc": "passed params array is [musicClassname, eventHandlerId] where",
+              "desc": "passed params array is [musicClassname, eventHandlerId] where\n<sqf>params [\"_musicClassname\", \"_eventHandlerId\", \"_currentPosition\", \"_totalLength\"];</sqf>\n* musicClassName: [[String]] - [[Description.ext#Music|CfgMusic]] class name of the music that started\n* eventHandlerId: [[Number]] - event handler id (same as returned by [[addMusicEventHandler]] usage)\n* {{GVI|arma3|2.18|size= 0.75}} currentPosition: [[Number]] - current playback position in 0..1 range (see [[getMusicPlayedTime]])\n* {{GVI|arma3|2.18|size= 0.75}} totalLength: [[Number]] - track total length in seconds",
               "name": "function",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "musicClassName: [[String]] - [[Description.ext#Music|CfgMusic]] class name of the music that started\neventHandlerId: [[Number]] - event handler id (same as returned by [[addMusicEventHandler]] usage)\n{{GVI|arma3|2.18|size= 0.75}} currentPosition: [[Number]] - current playback position in 0..1 range (see [[getMusicPlayedTime]])\n{{GVI|arma3|2.18|size= 0.75}} totalLength: [[Number]] - track total length in seconds",
+                    "desc": null,
                     "since": null,
                     "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
                   }
                 ]
               }

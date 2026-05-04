@@ -1,0 +1,64 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns information about what is currently displayed on given player's info panel.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>infoPanel \"left\" params [\"_componentClass\", \"_componentType\"];</sqf>"
+  ],
+  "groups": [
+    "Custom Panels"
+  ],
+  "id": "infoPanel",
+  "name": "infoPanel",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Custom",
+    "Info",
+    "infoPanels",
+    "setInfoPanel",
+    "infoPanelComponents",
+    "enableInfoPanelComponent",
+    "infoPanelComponentEnabled",
+    "openGPS"
+  ],
+  "since": {
+    "arma3": "1.72"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "infoPanelId"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "''EmptyDisplay'' when no panel is open",
+              "name": "componentClass",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "''EmptyDisplayComponent'' when no panel is open",
+              "name": "componentType",
+              "since": null,
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "info panel classname, or \"left\" or \"right\"",
+          "name": "infoPanelId",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

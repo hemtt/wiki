@@ -40,14 +40,19 @@
       },
       "right": {
         "Item": {
-          "desc": "code executed on click. The following variables are available",
+          "desc": "code executed on click. The following variables are available\n* _pos: [[Position#Introduction|Position2D]] - clicked position\n* _units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')\n* _shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map\n* _alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map",
           "name": "command",
           "type": {
             "OneOf": [
               {
-                "desc": "_pos: [[Position#Introduction|Position2D]] - clicked position\n_units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')\n_shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map\n_alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map",
+                "desc": null,
                 "since": null,
                 "type": "String"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Code"
               }
             ]
           }
@@ -72,14 +77,19 @@
       },
       "right": {
         "Item": {
-          "desc": "code executed on click. The following variables are available",
+          "desc": "code executed on click. The following variables are available\n* _this: [[Anything]] - Params passed to onMapSingleClick\n* _pos: [[Position#Introduction|Position2D]] - clicked position\n* _units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')\n* _shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map\n* _alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map",
           "name": "command",
           "type": {
             "OneOf": [
               {
-                "desc": "_this: [[Anything]] - Params passed to onMapSingleClick\n_pos: [[Position#Introduction|Position2D]] - clicked position\n_units: [[Array]] of [[Object]]s - units which were selected (via function keys) before opening the map (''may be non-functional in Arma'')\n_shift: [[Boolean]] - Whether {{Controls|Shift}} was pressed when clicking on the map\n_alt: [[Boolean]] - Whether {{Controls|Alt}} was pressed when clicking on the map",
+                "desc": null,
                 "since": null,
                 "type": "String"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Code"
               }
             ]
           }

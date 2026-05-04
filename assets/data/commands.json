@@ -202,6 +202,15 @@
       "status": "Passed"
     },
     {
+      "description": "Returns movement borders for HUD",
+      "groups": [
+        "Interaction"
+      ],
+      "id": "HUDMovementLevels",
+      "name": "HUDMovementLevels",
+      "status": "Passed"
+    },
+    {
       "description": "No documentation available",
       "errors": [
         "Exceeded maximum recursion depth while parsing Value"
@@ -1311,14 +1320,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Returns information about all loaded Extensions",
+      "groups": [
+        "System"
       ],
-      "groups": [],
       "id": "allExtensions",
       "name": "allExtensions",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Return a list of all groups created on the following sides [[east]], [[west]], [[resistance]]/[[independent]] and [[civilian]] only. Does not contain groups of [[sideLogic]].",
@@ -1433,14 +1441,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns a list of [[getPlayerID|player ids]] of all the users on an MP server.\n{{Feature|informative|This also lists [[Arma 3: Headless Client|Headless Clients]].}}",
+      "groups": [
+        "Multiplayer",
+        "Object Detection"
       ],
-      "groups": [],
       "id": "allUsers",
       "name": "allUsers",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns a list of all variables from the desired namespace.",
@@ -2099,6 +2107,15 @@
       ],
       "id": "backpackMagazines",
       "name": "backpackMagazines",
+      "status": "Passed"
+    },
+    {
+      "description": "Returns how much space is in backpack for given weapon or magazine",
+      "groups": [
+        "Containers"
+      ],
+      "id": "backpackSpaceFor",
+      "name": "backpackSpaceFor",
       "status": "Passed"
     },
     {
@@ -2897,6 +2914,15 @@
       "status": "Passed"
     },
     {
+      "description": "Returns [[Array]] of [[Boolean]]s in format [enabledChat, enabledVoN] for the given channel.\nFor more information about enabling/disabling of chat channels see [[enableChannel]].\n\n{{{!}} class=\"wikitable align-center\"\n! colspan=\"16\" {{!}} [[Channel IDs|Channel ID]] number correspondence\n{{!}}-\n{{!}} colspan=\"6\" {{!}} Default Channels\n{{!}} colspan=\"10\" {{!}} Custom Channels\n{{!}}- style=\"font-size: .9em\"\n{{!}} Global\n{{!}} Side\n{{!}} Command\n{{!}} Group\n{{!}} Vehicle\n{{!}} Direct\n{{!}} CC&nbsp;1\n{{!}} CC&nbsp;2\n{{!}} CC&nbsp;3\n{{!}} CC&nbsp;4\n{{!}} CC&nbsp;5\n{{!}} CC&nbsp;6\n{{!}} CC&nbsp;7\n{{!}} CC&nbsp;8\n{{!}} CC&nbsp;9\n{{!}} CC&nbsp;10\n{{!}}-\n{{!}} 0\n{{!}} 1\n{{!}} 2\n{{!}} 3\n{{!}} 4\n{{!}} 5\n{{!}} 6\n{{!}} 7\n{{!}} 8\n{{!}} 9\n{{!}} 10\n{{!}} 11\n{{!}} 12\n{{!}} 13\n{{!}} 14\n{{!}} 15\n{{!}}}",
+      "groups": [
+        "Radio and Chat"
+      ],
+      "id": "channelEnabled",
+      "name": "channelEnabled",
+      "status": "Passed"
+    },
+    {
       "description": "Checks whether cheats are enabled (whether the designers' version is running).",
       "groups": [
         "System"
@@ -3473,14 +3499,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns hierarchy of the given config class. Just like with [[inheritsFrom]], only complete config classes are supported (before {{GVI|arma3|2.14|size= 0.75}}). Since {{GVI|arma3|2.22|size= 0.75}}, an alt syntax is added, which allows to return parents identical to [[BIS_fnc_returnParents]] (see Example 2)",
+      "groups": [
+        "Config"
       ],
-      "groups": [],
       "id": "configHierarchy",
       "name": "configHierarchy",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns name of config entry.",
@@ -3689,14 +3714,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
+      "description": "Returns how many units in the given array belong to given side.",
+      "groups": [
+        "Sides",
+        "Object Detection"
       ],
-      "groups": [],
       "id": "countSide",
       "name": "countSide",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Count how many objects in the array are of given type. This command also works with parent classes like \"Air\", \"Tank\", and \"Car\". For a full class reference see [[CfgVehicles|Classes]].",
@@ -4245,6 +4270,15 @@
       "status": "Failed"
     },
     {
+      "description": "Gets rotation info of a control set as {{hl|ST_PICTURE}}. Supported control types:\n* [[CT_STATIC]]\n* {{GVI|arma3|2.10|size= 0.75}} [[CT_ACTIVETEXT]]",
+      "groups": [
+        "GUI Control - Positioning"
+      ],
+      "id": "ctrlAngle",
+      "name": "ctrlAngle",
+      "status": "Passed"
+    },
+    {
       "description": "Process an animation of 3D [[Arma: GUI Configuration]]. Command uses name defined by source property and works similar like [[animateSource]] command.",
       "groups": [
         "GUI Control - Object"
@@ -4587,14 +4621,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Returns position of the mouse on the screen relative to UI Control in UI coordinates. Also works within [[CT_CONTROLS_GROUP]]s. In that case, returned position is relative to the position of the group.",
+      "groups": [
+        "GUI Control - Positioning"
       ],
-      "groups": [],
       "id": "ctrlMousePosition",
       "name": "ctrlMousePosition",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the parent [[Display]] of the given control. For parent [[Control]]s group see [[ctrlParentControlsGroup]].",
@@ -5116,7 +5149,7 @@
       "status": "Passed"
     },
     {
-      "description": "Sets the text of a control of the currently active user dialog or display.\nThis command can be used for static texts, buttons, edit lines and active texts as well as for images, where you can use it to set the image path.\n<br>\nRead [[Arma: GUI Configuration]] for more information about user dialogs and controls.<br>\nUse [[endl]] to insert line breaks.\n\nSince {{GVI|arma3|2.06|size= 0.75}} supported control types are:\n{{Columns|4|\n* [[CT_STATIC]]\n* [[CT_EDIT]]\n* [[CT_XKEYDESC]]\n* [[CT_XBUTTON]]\n* [[CT_SHORTCUTBUTTON]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_BUTTON]]\n* [[CT_ACTIVETEXT]]\n}}",
+      "description": "Sets the text of a control of the currently active user dialog or display.\nThis command can be used for static texts, buttons, edit lines and active texts as well as for images, where you can use it to set the image path.\n<br>\nRead [[Arma: GUI Configuration]] for more information about user dialogs and controls.<br>\nUse [[endl]] to insert line breaks.\n\nSince {{GVI|arma3|2.06|size= 0.75}} supported control types are:\n{{Columns|4|\n* [[CT_STATIC]]\n* [[CT_EDIT]]\n* [[CT_XKEYDESC]]\n* [[CT_XBUTTON]]\n* [[CT_SHORTCUTBUTTON]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_BUTTON]]\n* [[CT_ACTIVETEXT]]\n}}\n\nSince {{GVI|arma3|2.22|size= 0.75}} [[CT_PROGRESS]] is also supported.",
       "groups": [
         "GUI Control"
       ],
@@ -5260,7 +5293,7 @@
       "status": "Passed"
     },
     {
-      "description": "Returns the text of a control of the currently active user dialog. This command can be used on static texts, buttons, edit lines and active texts as well as for images, where it returns the image path. Does not work on HTML control and returns empty string \"\". Since Arma 3 v2.05.147765 supported control types are:\n* [[CT_STATIC]]\n* [[CT_EDIT]]\n* [[CT_XKEYDESC]]\n* [[CT_XBUTTON]]\n* [[CT_SHORTCUTBUTTON]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_BUTTON]]\n* [[CT_ACTIVETEXT]]",
+      "description": "Returns the text of a control of the currently active user dialog. This command can be used on static texts, buttons, edit lines and active texts as well as for images, where it returns the image path. Does not work on HTML control and returns empty string \"\". Since {{GVI|arma3|2.05|size= 0.75}} supported control types are:\n{{Columns|4|* [[CT_STATIC]]\n\n* [[CT_EDIT]]\n* [[CT_XKEYDESC]]\n* [[CT_XBUTTON]]\n* [[CT_SHORTCUTBUTTON]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_BUTTON]]\n* [[CT_ACTIVETEXT]]\n}}\n\nSince {{GVI|arma3|2.20|size= 0.75}} [[CT_PROGRESS]] is also supported.",
       "groups": [
         "GUI Control"
       ],
@@ -5662,6 +5695,15 @@
       ],
       "id": "currentWeaponTurret",
       "name": "currentWeaponTurret",
+      "status": "Passed"
+    },
+    {
+      "description": "Returns current zeroing.",
+      "groups": [
+        "Weapons"
+      ],
+      "id": "currentZeroing",
+      "name": "currentZeroing",
       "status": "Passed"
     },
     {
@@ -9805,14 +9847,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Returns mouse position in UI coordinates.",
+      "groups": [
+        "GUI Control - Positioning"
       ],
-      "groups": [],
       "id": "getMousePosition",
       "name": "getMousePosition",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns elapsed time in seconds for currently playing music track.",
@@ -10267,6 +10308,16 @@
       "status": "Passed"
     },
     {
+      "description": "Returns an array containing all information about current client screen resolution.\n\n{{Feature|arma3|\n'''Render resolution''' is not returned by this command.<br>\nA sampling setting of '''50%''' means half of native width ''and'' half of native height, resulting in a render resolution of '''''25%''''' the original resolution.}}\n{{Feature | important | The engine default value for {{hl|fovTop}} is '''0.75''' in case it is needed to calculate difference with custom FOV.}}\n{{Feature|informative|The {{hl|aspectRatio}} is calculated as {{hl|fovLeft&nbsp;/&nbsp;fovTop}} and should be the same as {{hl|screenW&nbsp;/&nbsp;screenH}} for undistorted image if the FOV is custom. Some of the common values:\n{{{!}} class{{=}}\"wikitable\"\n! 16/9 !! 16/10 !! 5/4 !! 4/3 !! 16/9 triple screen\n{{!}}-\n{{!}} 1.777777(…) {{!}}{{!}} 1.6 {{!}}{{!}} 1.25 {{!}}{{!}} 1.333333(…) {{!}}{{!}} 5.333333(…)\n{{!}}}\n}}",
+      "groups": [
+        "System",
+        "GUI Control - Positioning"
+      ],
+      "id": "getResolution",
+      "name": "getResolution",
+      "status": "Passed"
+    },
+    {
       "description": "Returns various properties for the respawning vehicle (see [[Vehicle Respawn]]). All properties are synched over the network and should be the same on every client including [[JIP]].",
       "groups": [
         "Multiplayer"
@@ -10525,6 +10576,15 @@
       ],
       "id": "getTextWidth",
       "name": "getTextWidth",
+      "status": "Passed"
+    },
+    {
+      "description": "Return texture information - resolution in pixels (mipmap level 0) and average colour. Multiply the pixel values by [[pixelW]] and [[pixelH]] to get screen coordinates.",
+      "groups": [
+        "System"
+      ],
+      "id": "getTextureInfo",
+      "name": "getTextureInfo",
       "status": "Passed"
     },
     {
@@ -11436,6 +11496,15 @@
       ],
       "id": "inflamed",
       "name": "inflamed",
+      "status": "Passed"
+    },
+    {
+      "description": "Returns information about what is currently displayed on given player's info panel.",
+      "groups": [
+        "Custom Panels"
+      ],
+      "id": "infoPanel",
+      "name": "infoPanel",
       "status": "Passed"
     },
     {
@@ -19695,14 +19764,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Sets a polyline marker's path. Works only on the computer that executes this command.",
+      "groups": [
+        "Markers"
       ],
-      "groups": [],
       "id": "setMarkerPolylineLocal",
       "name": "setMarkerPolylineLocal",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Moves the marker. If position is given in 3D format, {{hl|z}} coordinate is stored with the marker and will be used when marker is passed to commands like [[createVehicle]], [[createUnit]], [[createAgent]], [[createMine]], [[setVehiclePosition]] for example. In case of an object, the object's model [0,0,0] is used.\n{{Feature|informative|\n'''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.\nAs such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).\n}}",
@@ -21865,6 +21933,15 @@
       "id": "simulCloudOcclusion",
       "name": "simulCloudOcclusion",
       "status": "Failed"
+    },
+    {
+      "description": "Returns if given position is in clouds.",
+      "groups": [
+        "Environment"
+      ],
+      "id": "simulInClouds",
+      "name": "simulInClouds",
+      "status": "Passed"
     },
     {
       "description": "Sets simul cloud cover. This command does not affect overcast value.<br /><br />\n\nThis command was not implemented up until {{GVI|arma3|2.18}}",
@@ -24838,9 +24915,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 270,
-  "passed": 2421,
-  "timestamp": 1777860495,
-  "total": 2684,
+  "failed": 263,
+  "passed": 2428,
+  "timestamp": 1777860760,
+  "total": 2693,
   "version": "1.0"
 }

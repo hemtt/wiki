@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Array]] of [[Boolean]]s in format [enabledChat, enabledVoN] for the given channel.\nFor more information about enabling/disabling of chat channels see [[enableChannel]].\n\n{{{!}} class=\"wikitable align-center\"\n! colspan=\"16\" {{!}} [[Channel IDs|Channel ID]] number correspondence\n{{!}}-\n{{!}} colspan=\"6\" {{!}} Default Channels\n{{!}} colspan=\"10\" {{!}} Custom Channels\n{{!}}- style=\"font-size: .9em\"\n{{!}} Global\n{{!}} Side\n{{!}} Command\n{{!}} Group\n{{!}} Vehicle\n{{!}} Direct\n{{!}} CC&nbsp;1\n{{!}} CC&nbsp;2\n{{!}} CC&nbsp;3\n{{!}} CC&nbsp;4\n{{!}} CC&nbsp;5\n{{!}} CC&nbsp;6\n{{!}} CC&nbsp;7\n{{!}} CC&nbsp;8\n{{!}} CC&nbsp;9\n{{!}} CC&nbsp;10\n{{!}}-\n{{!}} 0\n{{!}} 1\n{{!}} 2\n{{!}} 3\n{{!}} 4\n{{!}} 5\n{{!}} 6\n{{!}} 7\n{{!}} 8\n{{!}} 9\n{{!}} 10\n{{!}} 11\n{{!}} 12\n{{!}} 13\n{{!}} 14\n{{!}} 15\n{{!}}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_isGlobalChatEnabled = (channelEnabled 0) select 0; // check if user can use text on global channel</sqf>",
+    "<sqf>_isGlobalVoiceEnabled = (channelEnabled 0) select 1; // check if user can use the VoN on global channel</sqf>",
+    "<sqf>\n// sets all variables\n(channelEnabled 0) params [\n\t\"_isGlobalChatEnabled\",\n\t\"_isGlobalVoiceEnabled\",\n\t\"_areMarkersEnabled\",\n\t\"_isMapDrawingEnabled\"\n];</sqf>"
+  ],
+  "groups": [
+    "Radio and Chat"
+  ],
+  "id": "channelEnabled",
+  "name": "channelEnabled",
+  "problem_notes": [],
+  "see_also": [
+    "currentChannel",
+    "setCurrentChannel",
+    "getPlayerChannel",
+    "enableChannel",
+    "radioChannelCreate"
+  ],
+  "since": {
+    "arma3": "1.42"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "channelID"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "is use of the text chat enabled",
+              "name": "chat",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "is use of the voice chat enabled",
+              "name": "VoN",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "can map markers be created",
+              "name": "mapMarkers",
+              "since": {
+                "arma3": "2.20"
+              },
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "can players draw on the map",
+              "name": "mapDrawing",
+              "since": {
+                "arma3": "2.20"
+              },
+              "type": "Boolean"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "[[Channel IDs|Channel ID]] (see description)",
+          "name": "channelID",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns how many units in the given array belong to given side.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_num = west countSide list _triggerOne;</sqf>",
+    "<sqf>_numCivPlayable = civilian countSide playableUnits;</sqf>"
+  ],
+  "groups": [
+    "Sides",
+    "Object Detection"
+  ],
+  "id": "countSide",
+  "name": "countSide",
+  "problem_notes": [],
+  "see_also": [
+    "countFriendly",
+    "countEnemy",
+    "countUnknown",
+    "count",
+    "countType",
+    "playersNumber",
+    "units",
+    "allUnits"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.00",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "side",
+          "array"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "side",
+          "type": "Side"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "array",
+          "type": {
+            "ArrayUnsized": {
+              "value": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Object"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Group"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

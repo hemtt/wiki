@@ -1,0 +1,62 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Gets rotation info of a control set as {{hl|ST_PICTURE}}. Supported control types:\n* [[CT_STATIC]]\n* {{GVI|arma3|2.10|size= 0.75}} [[CT_ACTIVETEXT]]",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>ctrlAngle _control;</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Positioning"
+  ],
+  "id": "ctrlAngle",
+  "name": "ctrlAngle",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetAngle"
+  ],
+  "since": {
+    "arma3": "1.52"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "angle",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "centerX",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "centerY",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "picture control",
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

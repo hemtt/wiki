@@ -110,14 +110,19 @@
           },
           {
             "Item": {
-              "desc": "the LOD that contains the selection",
+              "desc": "the LOD that contains the selection\n* [[String]] - can be one of:\n** \"Memory\"\n** \"Geometry\"\n** \"FireGeometry\"\n** \"LandContact\"\n** \"HitPoints\"\n** \"ViewGeometry\"\n* [[Number]] - command searches for a LOD with the similar [[LOD resolutions|resolution]] (see [[allLODs]]).",
               "name": "LOD",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "[[String]] - can be one of:\n[[Number]] - command searches for a LOD with the similar [[LOD resolutions|resolution]] (see [[allLODs]]).",
+                    "desc": null,
                     "since": null,
                     "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
                   }
                 ]
               }

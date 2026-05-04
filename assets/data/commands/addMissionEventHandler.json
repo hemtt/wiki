@@ -45,14 +45,19 @@
           },
           {
             "Item": {
-              "desc": "expression that will be executed in [[missionNamespace]] when event handler fires.",
+              "desc": "expression that will be executed in [[missionNamespace]] when event handler fires.\n* If the event handler has some data to return upon activation they are stored in the {{hl|_this}} variable\n* {{GVI|arma3|1.64|size= 0.75}} the event handler's handle is stored in {{hl|_thisEventHandler}} variable and is available during event handler code execution\n* {{GVI|arma3|2.04|size= 0.75}} it is possible to pass additional arguments to the EH code via optional param. The ''args'' are stored in {{hl|_thisArgs}} variable\n{{Feature|important|Only arguments of simple types get proper serialization. [[Object]]s, [[Group]]s etc will not serialize and appear as NULLs on game load.}}\n* {{GVI|arma3|2.06|size= 0.75}} the event's name is available from {{hl|_thisEvent}} variable",
               "name": "expression",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "If the event handler has some data to return upon activation they are stored in the {{hl|_this}} variable\n{{GVI|arma3|1.64|size= 0.75}} the event handler's handle is stored in {{hl|_thisEventHandler}} variable and is available during event handler code execution\n{{GVI|arma3|2.04|size= 0.75}} it is possible to pass additional arguments to the EH code via optional param. The ''args'' are stored in {{hl|_thisArgs}} variable\n{{GVI|arma3|2.06|size= 0.75}} the event's name is available from {{hl|_thisEvent}} variable",
+                    "desc": null,
                     "since": null,
                     "type": "Code"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "String"
                   }
                 ]
               }

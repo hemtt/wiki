@@ -59,14 +59,19 @@
           },
           {
             "Item": {
-              "desc": "expression to execute.<br>",
+              "desc": "expression to execute.<br>\nIf EH has some data to return upon event (e.g. the \"MPKilled\" EH will return an array with 2 elements: the killed unit, and the killer), it is passed in {{hl|_this}} variable.\n{{Feature|arma3|Since Arma 3 v.1.64 the EH handle is also stored in {{hl|_thisEventHandler}} variable and is available during EH code execution.}}\n* Event Handler parameters are accessible via <sqf inline>_this</sqf>\n* The Event Handler type is available as <sqf inline>_thisEvent</sqf>\n* The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
               "name": "expression",
               "type": {
                 "OneOf": [
                   {
-                    "desc": "Event Handler parameters are accessible via <sqf inline>_this</sqf>\nThe Event Handler type is available as <sqf inline>_thisEvent</sqf>\nThe Event Handler index is available as <sqf inline>_thisEventHandler</sqf>",
+                    "desc": null,
                     "since": null,
                     "type": "String"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Code"
                   }
                 ]
               }
