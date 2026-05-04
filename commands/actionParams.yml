@@ -1,0 +1,110 @@
+name: actionParams
+desc: Returns [[Array]] with params for given user action id (similar to [[addAction]] param array).
+groups:
+- Interaction
+syntax:
+- call: !Binary
+  - entity
+  - id
+  ret:
+    type: !ArraySized
+    - name: title
+      type: String
+      default: null
+      desc: action title text
+      since: null
+    - name: script
+      type: String
+      default: null
+      desc: script file or script expression assigned to the action
+      since: null
+    - name: arguments
+      type: !OneOf
+      - type: Anything
+        desc: null
+        since: null
+      - type: Nothing
+        desc: null
+        since: null
+      default: null
+      desc: arguments passed to the action
+      since: null
+    - name: priority
+      type: Number
+      default: null
+      desc: action priority on the action menu
+      since: null
+    - name: showWindow
+      type: Boolean
+      default: null
+      desc: whether the action is shown in the center of the screen too
+      since: null
+    - name: hideOnUse
+      type: Boolean
+      default: null
+      desc: whether the action menu should close after selecting the action
+      since: null
+    - name: shortcut
+      type: String
+      default: null
+      desc: action bindings to some existing engine action if any
+      since: null
+    - name: condition
+      type: String
+      default: null
+      desc: expression returning [[true]] or [[nil]] for action to appear on the action menu
+      since: null
+    - name: radius
+      type: Number
+      default: null
+      desc: max distance to entity at which action becomes available. -1 means it is engine default (~15m)
+      since: null
+    - name: unconscious
+      type: Boolean
+      default: null
+      desc: whether the action is available to [[setUnconscious|unconscious]] person
+      since: null
+    - name: textWindowBackground
+      type: String
+      default: null
+      desc: same as textWindowBackground in [[setUserActionText]]
+      since: null
+    - name: textWindowForeground
+      type: String
+      default: null
+      desc: same as textWindowForeground in [[setUserActionText]]
+      since: null
+    - name: selection
+      type: String
+      default: null
+      desc: named selection in Geometry LOD to which the action is attached
+      since: null
+    - name: memoryPoint
+      type: String
+      default: null
+      desc: memory point on the object to which the action is attached
+      since: null
+  left: !Item
+    name: entity
+    desc: entity with added user actions
+    type: Object
+  right: !Item
+    name: id
+    desc: id of existing user action (returned by [[addAction]] or [[actionIDs]])
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.64'
+examples:
+- <sqf>_params = player actionParams 0;</sqf>
+see_also:
+- actionIDs
+- addAction
+- setUserActionText
+- inGameUISetEventHandler
+- showHUD
+- inputAction
+- removeAction
+- removeAllActions
+- action
