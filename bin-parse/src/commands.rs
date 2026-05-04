@@ -107,10 +107,8 @@ pub async fn commands(client: &Client, report: Report, args: &[String]) -> Repor
                 failed.write().await.push((name, e));
             } else if let Ok((did_change, errors)) = result {
                 if errors.is_empty() {
+                    report.lock().await.add_passed_command(name.clone());
                     if did_change {
-                        report.lock().await.add_passed_command(name);
-                    } else {
-                        report.lock().await.add_passed_command(name.clone());
                         report.lock().await.add_outdated_command(name);
                     }
                 } else {
