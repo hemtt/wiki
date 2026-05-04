@@ -1,0 +1,61 @@
+name: currentZeroing
+desc: Returns current zeroing.
+groups:
+- Weapons
+syntax:
+- call: !Unary object
+  ret:
+    type: Number
+  right: !Item
+    name: object
+    desc: unit (vehicles are not supported)
+    type: Object
+- call: !Binary
+  - object
+  - - weaponClass
+    - muzzleClass
+  ret:
+    type: !ArraySized
+    - name: distance
+      type: Number
+      default: null
+      desc: distance in meters, Since {{GVI|arma3|2.20|size= 0.75}} supports laser rangefinder value
+      since: null
+    - name: zeroingIndex
+      type: Number
+      default: null
+      desc: 0 ≙ 50 m, 1 ≙ 100 m, 2 ≙ 150 m, ..., -1 for laser rangefinding
+      since: null
+  left: !Item
+    name: object
+    desc: unit (vehicles are not supported)
+    type: Object
+  right: !Array
+  - !Item
+    name: weaponClass
+    desc: class name of weapon
+    type: String
+  - !Item
+    name: muzzleClass
+    desc: muzzle classname
+    type: String
+    optional: true
+    default: currently active muzzle or first that is found
+  since:
+    arma3: '2.04'
+argument_loc: Local
+effect_loc: Unspecified
+since:
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>private _zeroing = currentZeroing player;</sqf>
+- <sqf>(player currentZeroing ["arifle_MX_GL_F", "GL_3GL_F"]) params ["_distance", "_zeroingIndex"];</sqf>
+- |-
+  <sqf>
+  private _zeroing = currentZeroing myVehicle; // does not work
+  private _zeroing = currentZeroing gunner myVehicle; // works
+  </sqf>
+see_also:
+- setWeaponZeroing
