@@ -83,7 +83,7 @@ fn try_simple_type(source: &str) -> Result<Option<Value>, String> {
         "if type" | "iftype" => Some(Value::IfType),
         "location" => Some(Value::Location),
         "namespace" => Some(Value::Namespace),
-        "nothing" => Some(Value::Nothing),
+        "nothing" | "nil" => Some(Value::Nothing),
         "number" => Some(Value::Number),
         "object" => Some(Value::Object),
         "script handle" | "scripthandle" => Some(Value::ScriptHandle),
