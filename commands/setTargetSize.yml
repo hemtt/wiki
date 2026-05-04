@@ -1,0 +1,51 @@
+name: setTargetSize
+desc: |-
+  Sets target size (see irTargetSize and others from vehicle config) override on vehicle.
+  Returns the previously active values. Note if the array is empty, it will only return the previous/current values, and not set new ones. So this also functions as a getter.
+groups: []
+syntax:
+- call: !Binary
+  - vehicle
+  - - visualTargetSize
+    - irTargetSize
+    - radarTargetSize
+  ret:
+    type: !ArraySized
+    - name: visualTargetSize
+      type: Number
+      default: null
+      desc: previous value
+      since: null
+    - name: irTargetSize
+      type: Number
+      default: null
+      desc: previous value
+      since: null
+    - name: radarTargetSize
+      type: Number
+      default: null
+      desc: previous value
+      since: null
+  left: !Item
+    name: vehicle
+    desc: A transport vehicle
+    type: Object
+  right: !Array
+  - !Item
+    name: visualTargetSize
+    desc: set to -1 to disable override and use config values. Otherwise value between 0-2
+    type: Number
+  - !Item
+    name: irTargetSize
+    type: Number
+  - !Item
+    name: radarTargetSize
+    type: Number
+argument_loc: Global
+effect_loc: Local
+since:
+  arma3: '2.22'
+branch: Dev
+examples:
+- <sqf>_previous = vehicle player setTargetSize [0,0,0];</sqf>
+- <sqf>_sizes = vehicle player setTargetSize [];</sqf>
