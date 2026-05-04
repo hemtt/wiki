@@ -1,0 +1,68 @@
+name: getTextureInfo
+desc: Return texture information - resolution in pixels (mipmap level 0) and average colour. Multiply the pixel values by [[pixelW]] and [[pixelH]] to get screen coordinates.
+groups:
+- System
+syntax:
+- call: !Unary texture
+  ret:
+    type: !ArraySized
+    - name: width
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: height
+      type: Number
+      default: null
+      desc: null
+      since: null
+    - name: rgbaAverageColour
+      type: ArrayColorRgba
+      default: null
+      desc: null
+      since:
+        arma3: '2.08'
+  right: !Item
+    name: texture
+    desc: texture path (.paa, .jpg, .ogv)
+    type: String
+- call: !Unary
+  - texture
+  - sizeH
+  ret:
+    type: !ArraySized
+    - name: width
+      type: Number
+      default: null
+      desc: width of the texture in screen units
+      since: null
+    - name: height
+      type: Number
+      default: null
+      desc: height of the texture in screen units
+      since: null
+  right: !Array
+  - !Item
+    name: texture
+    desc: texture path (.paa, .jpg, .ogv)
+    type: String
+  - !Item
+    name: sizeH
+    desc: texture height in screen size
+    type: Number
+  since:
+    arma3: '2.22'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.06'
+examples:
+- <sqf>getTextureInfo "a3\characters_f\blufor\data\clothing1_co.paa"; // [2048, 2048, [0.458824, 0.427451, 0.34902, 1]]</sqf>
+- <sqf>getTextureInfo ["\A3\UI_f\Data\Logos\arma3_shadow_ca.paa", 0.1]; // [0.150111, 0.1]</sqf>
+see_also:
+- pixelW
+- pixelH
+- getModelInfo
+- supportInfo
+- getObjectType
+- getObjectTextures
