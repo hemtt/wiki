@@ -64,3 +64,4 @@ see_also:
 - moveInGunner
 - moveInCargo
 - getCargoIndex
+- moveInAny
