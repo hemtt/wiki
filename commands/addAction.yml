@@ -32,14 +32,19 @@ syntax:
     type: String
   - !Item
     name: script
-    desc: either path to the script file, relative to the mission folder or string with code or the actual script code. If the string is a path to script file, the script file must have extension .[[SQS Syntax|SQS]] or .[[SQF Syntax|SQF]]. The script, whether it is a file or a code, will run in [[Scheduler#Scheduled Environment|scheduled environment]], i.e. it is ok to use [[sleep]]. Parameters array passed to the script upon activation in ''[[Magic Variables#this|_this]]'' variable is
+    desc: |-
+      either path to the script file, relative to the mission folder or string with code or the actual script code. If the string is a path to script file, the script file must have extension .[[SQS Syntax|SQS]] or .[[SQF Syntax|SQF]]. The script, whether it is a file or a code, will run in [[Scheduler#Scheduled Environment|scheduled environment]], i.e. it is ok to use [[sleep]]. Parameters array passed to the script upon activation in ''[[Magic Variables#this|_this]]'' variable is
+      <sqf>params ["_target", "_caller", "_actionId", "_arguments"];</sqf>
+      * target: [[Object]] - the object which the action is assigned to
+      * caller: [[Object]] - the unit that activated the action
+      * actionID: [[Number]] - activated action's ID (same as [[addAction]]'s return value)
+      * arguments: [[Anything]] - arguments given to the script if you are using the extended syntax
     type: !OneOf
     - type: String
-      desc: |-
-        target: [[Object]] - the object which the action is assigned to
-        caller: [[Object]] - the unit that activated the action
-        actionID: [[Number]] - activated action's ID (same as [[addAction]]'s return value)
-        arguments: [[Anything]] - arguments given to the script if you are using the extended syntax
+      desc: null
+      since: null
+    - type: Code
+      desc: null
       since: null
   - !Item
     name: arguments
