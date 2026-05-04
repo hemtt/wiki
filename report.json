@@ -31,6 +31,7 @@
     "actionKeysNames",
     "actionKeysNamesArray",
     "actionName",
+    "actionParams",
     "activateAddons",
     "activateKey",
     "activatedAddons",
@@ -1553,6 +1554,7 @@
     "posWorldToScreen",
     "pose",
     "position",
+    "positionCameraToWorld",
     "ppEffectAdjust",
     "ppEffectCommit",
     "ppEffectCommitted",
@@ -1899,6 +1901,7 @@
     "setLightIR",
     "setLightIntensity",
     "setLightUseFlare",
+    "setLightVolumeShape",
     "setLightnings",
     "setLocalWindParams",
     "setMagazineTurretAmmo",
@@ -2004,6 +2007,7 @@
     "setSystemOfUnits",
     "setTIParameter",
     "setTargetAge",
+    "setTargetSize",
     "setTaskMarkerOffset",
     "setTaskState",
     "setTerrainGrid",
@@ -2397,6 +2401,7 @@
     "waypointName",
     "waypointPosition",
     "waypointScript",
+    "waypointShow",
     "waypointSpeed",
     "waypointStatements",
     "waypointTimeout",
@@ -2447,9 +2452,6 @@
     ],
     "actionNow": [
       "Unknown simple type: array"
-    ],
-    "actionParams": [
-      "Failed to parse array with element line: 'arguments: [[Anything]] or [[nil]] - arguments passed to the action'"
     ],
     "addCuratorSelected": [
       "Unknown simple type: array"
@@ -2970,9 +2972,6 @@
     "periscopeElevation": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
-    "positionCameraToWorld": [
-      "Unknown simple type: array"
-    ],
     "ppEffectCreate": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -3093,9 +3092,6 @@
     "setJointDrivePosition": [
       "Unknown simple type: netobject"
     ],
-    "setLightVolumeShape": [
-      "Unknown simple type: array"
-    ],
     "setMarkerPolyline": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -3107,9 +3103,6 @@
     ],
     "setPilotCameraRotation": [
       "Unknown simple type: array"
-    ],
-    "setTargetSize": [
-      "Failed to parse array with element line: 'visualTargetSize [[Number]] - previous value'"
     ],
     "setTaskResult": [
       "Unknown simple type: unknown"
@@ -3201,9 +3194,6 @@
     "vectorCrossProduct": [
       "Unknown simple type: array"
     ],
-    "waypointShow": [
-      "Unknown simple type: array"
-    ],
     "weaponAccessories": [
       "Unknown simple type: array"
     ],
@@ -3223,7 +3213,6 @@
   "outdated_commands": [
     "!_a",
     "%2B",
-    "HUDMovementLevels",
     "a_%25_b",
     "a_%26%26_b",
     "a_%3D_b",
@@ -3232,38 +3221,11 @@
     "a_:_b",
     "a_greater%3D_b",
     "a_less%3D_b",
-    "addAction",
-    "addEventHandler",
-    "addMPEventHandler",
-    "addMissionEventHandler",
-    "addMusicEventHandler",
-    "allExtensions",
-    "allUsers",
-    "animateSource",
-    "backpackSpaceFor",
-    "channelEnabled",
-    "configHierarchy",
-    "countSide",
-    "ctrlAngle",
-    "ctrlAnimateModel",
-    "ctrlMousePosition",
-    "ctrlSetText",
-    "ctrlText",
-    "currentZeroing",
-    "displayAddEventHandler",
-    "emptyPositions",
-    "getMousePosition",
-    "getResolution",
-    "getTextureInfo",
-    "infoPanel",
-    "onMapSingleClick",
-    "onPlayerConnected",
-    "onPlayerDisconnected",
-    "selectionVectorDirAndUp",
-    "setMarkerPolylineLocal",
-    "simulInClouds",
-    "synchronizeWaypoint",
-    "then"
+    "actionParams",
+    "positionCameraToWorld",
+    "setLightVolumeShape",
+    "setTargetSize",
+    "waypointShow"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
