@@ -11,12 +11,16 @@ syntax:
     type: Nothing
   left: !Item
     name: triggerOrWaypoint
-    desc: can be
+    desc: |-
+      can be
+      * [[Object]] - [[Trigger|trigger]]
+      * [[Waypoint]] - [[Array]] format of [[Waypoint]]
     type: !OneOf
     - type: Object
-      desc: |-
-        [[Object]] - [[Trigger|trigger]]
-        [[Waypoint]] - [[Array]] format of [[Waypoint]]
+      desc: null
+      since: null
+    - type: Waypoint
+      desc: null
       since: null
   right: !Item
     name: waypoints
