@@ -1,0 +1,52 @@
+name: HUDMovementLevels
+desc: Returns movement borders for HUD
+groups:
+- Interaction
+syntax:
+- call: Nular
+  ret:
+    type: !ArraySized
+    - name: minSpeed
+      type: Number
+      default: null
+      desc: in m/s
+      since: null
+    - name: maxSpeed
+      type: Number
+      default: null
+      desc: in m/s
+      since: null
+    - name: minAlt
+      type: Number
+      default: null
+      desc: in meters
+      since: null
+    - name: maxAlt
+      type: Number
+      default: null
+      desc: in meters
+      since: null
+    - name: minDir
+      type: Number
+      default: null
+      desc: in degrees
+      since: null
+    - name: maxDir
+      type: Number
+      default: null
+      desc: in degrees
+      since: null
+    - name: positionOrTarget
+      type: Position
+      default: null
+      desc: ', [[Object]]'
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>HUDMovementLevels; // returns e.g [0,0,0,0,0,0,[0,0,0]]</sqf>
+see_also:
+- setHUDMovementLevels
