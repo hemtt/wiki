@@ -5,7 +5,6 @@
     "-",
     "AGLToASL",
     "AISFinishHeal",
-    "ASLToAGL",
     "ASLToATL",
     "ATLToASL",
     "HUDMovementLevels",
@@ -58,7 +57,6 @@
     "addHandgunItem",
     "addHeadgear",
     "addItem",
-    "addItemCargo",
     "addItemCargoGlobal",
     "addItemPool",
     "addItemToBackpack",
@@ -78,7 +76,6 @@
     "addMissionEventHandler",
     "addMusicEventHandler",
     "addOwnedMine",
-    "addPlayerScores",
     "addPrimaryWeaponItem",
     "addPublicVariableEventHandler",
     "addRating",
@@ -133,7 +130,6 @@
     "allMapMarkers",
     "allMines",
     "allMissionObjects",
-    "allObjects",
     "allPlayers",
     "allSimpleObjects",
     "allSites",
@@ -212,7 +208,6 @@
     "batteryChargeRTD",
     "behaviour",
     "benchmark",
-    "bezierInterpolation",
     "binocular",
     "binocularItems",
     "binocularMagazine",
@@ -222,7 +217,6 @@
     "boundingCenter",
     "brakesDisabled",
     "break",
-    "breakOut",
     "breakTo",
     "breakWith",
     "briefingName",
@@ -273,9 +267,7 @@
     "cameraView",
     "campaignConfigFile",
     "canAdd",
-    "canAddItemToBackpack",
     "canAddItemToUniform",
-    "canAddItemToVest",
     "canDeployWeapon",
     "canFire",
     "canMove",
@@ -348,7 +340,6 @@
     "compatibleMagazines",
     "compile",
     "compileFinal",
-    "compileScript",
     "completedFSM",
     "configFile",
     "configHierarchy",
@@ -357,7 +348,6 @@
     "configOf",
     "configProperties",
     "configSourceAddonList",
-    "configSourceMod",
     "configSourceModList",
     "config_greater_greater_name",
     "confirmSensorTarget",
@@ -409,7 +399,6 @@
     "ctAddHeader",
     "ctClear",
     "ctCurSel",
-    "ctData",
     "ctFindHeaderRows",
     "ctFindRowHeader",
     "ctHeaderControls",
@@ -436,7 +425,6 @@
     "ctrlChecked",
     "ctrlClassName",
     "ctrlCommit",
-    "ctrlCommitted",
     "ctrlCreate",
     "ctrlDelete",
     "ctrlEnable",
@@ -474,8 +462,6 @@
     "ctrlSetAutoScrollRewind",
     "ctrlSetAutoScrollSpeed",
     "ctrlSetBackgroundColor",
-    "ctrlSetChecked",
-    "ctrlSetDisabledColor",
     "ctrlSetEventHandler",
     "ctrlSetFade",
     "ctrlSetFocus",
@@ -499,11 +485,9 @@
     "ctrlSetFontHeightH4",
     "ctrlSetFontHeightH5",
     "ctrlSetFontHeightH6",
-    "ctrlSetFontHeightSecondary",
     "ctrlSetFontP",
     "ctrlSetFontPB",
     "ctrlSetFontSecondary",
-    "ctrlSetForegroundColor",
     "ctrlSetModel",
     "ctrlSetModelDirAndUp",
     "ctrlSetModelScale",
@@ -527,13 +511,11 @@
     "ctrlSetTooltipColorBox",
     "ctrlSetTooltipColorShade",
     "ctrlSetTooltipColorText",
-    "ctrlSetTooltipMaxWidth",
     "ctrlSetURL",
     "ctrlSetURLOverlayMode",
     "ctrlShadow",
     "ctrlShow",
     "ctrlShown",
-    "ctrlStyle",
     "ctrlText",
     "ctrlTextColor",
     "ctrlTextHeight",
@@ -637,7 +619,6 @@
     "diag_getTerrainGrid",
     "diag_getTerrainHeight",
     "diag_getTerrainSegmentOffset",
-    "diag_lightNewLoad",
     "diag_log",
     "diag_logSlowFrame",
     "diag_mergeConfigFile",
@@ -646,7 +627,6 @@
     "diag_resetShapes",
     "diag_scope",
     "diag_setLightNew",
-    "diag_setTerrainHeight",
     "diag_tickTime",
     "diag_toggle",
     "dialog",
@@ -659,7 +639,6 @@
     "difficultyEnabledRTD",
     "directSay",
     "direction",
-    "directionStabilizationEnabled",
     "disableAI",
     "disableBrakes",
     "disableCollisionWith",
@@ -672,7 +651,6 @@
     "disableTIEquipment",
     "disableUAVConnectability",
     "disableUserInput",
-    "displayAddEventHandler",
     "displayChild",
     "displayCtrl",
     "displayNull",
@@ -693,7 +671,6 @@
     "doFSM",
     "doFire",
     "doFollow",
-    "doGetOut",
     "doMove",
     "doStop",
     "doSuppressiveFire",
@@ -788,7 +765,6 @@
     "exit",
     "exitWith",
     "exp",
-    "expectedDestination",
     "exportJIPMessages",
     "exportLandscapeXYZ",
     "eyeDirection",
@@ -808,7 +784,6 @@
     "findCover",
     "findDisplay",
     "findEditorObject",
-    "findEmptyPosition",
     "findEmptyPositionReady",
     "findNearestEnemy",
     "finishMissionInit",
@@ -844,7 +819,6 @@
     "forceHitPointsDamageSync",
     "forceMap",
     "forceRespawn",
-    "forceSpeed",
     "forceUnicode",
     "forceWalk",
     "forceWeaponFire",
@@ -862,7 +836,6 @@
     "formationTask",
     "freeExtension",
     "freeLook",
-    "friendly",
     "from",
     "fromEditor",
     "fuel",
@@ -878,14 +851,12 @@
     "get3DENGrid",
     "get3DENLayer",
     "get3DENLayerEntities",
-    "get3DENLinesVisible",
     "get3DENMissionAttribute",
     "get3DENMouseOver",
     "get3DENSelected",
     "getAimingCoef",
     "getAllOwnedMines",
     "getAmmoCargo",
-    "getAnimAimPrecision",
     "getAnimSpeedCoef",
     "getArray",
     "getArtilleryAmmo",
@@ -911,7 +882,6 @@
     "getCorpse",
     "getCruiseControl",
     "getCurrentPlayerLevel",
-    "getCursorObjectParams",
     "getCustomAimCoef",
     "getCustomSoundController",
     "getCustomSoundControllerCount",
@@ -961,7 +931,6 @@
     "getNextId",
     "getNumber",
     "getObjectArgument",
-    "getObjectDLC",
     "getObjectFOV",
     "getObjectID",
     "getObjectProxy",
@@ -1027,10 +996,8 @@
     "getTextWidth",
     "getTextureInfo",
     "getTotalDLCUsageTime",
-    "getTowParent",
     "getTurretLimits",
     "getTurretOpticsMode",
-    "getUnitFreefallInfo",
     "getUnitState",
     "getUserInfo",
     "getUserMFDText",
@@ -1054,13 +1021,11 @@
     "groupFromNetId",
     "groupIconSelectable",
     "groupId",
-    "groupOwner",
     "groupRadio",
     "groupSelectUnit",
     "groupSelectedUnits",
     "groups",
     "grpNull",
-    "gunner",
     "gusts",
     "halt",
     "handgunMagazine",
@@ -1100,7 +1065,6 @@
     "import",
     "importAllGroups",
     "importance",
-    "inGameUISetEventHandler",
     "inPolygon",
     "inRangeOfArtillery",
     "incapacitatedState",
@@ -1147,7 +1111,6 @@
     "isEqualTo",
     "isEqualType",
     "isEqualTypeAll",
-    "isEqualTypeAny",
     "isEqualTypeArray",
     "isEqualTypeParams",
     "isFilePatchingEnabled",
@@ -1190,13 +1153,11 @@
     "isRemoteExecutedJIP",
     "isSaving",
     "isSensorTargetConfirmed",
-    "isServer",
     "isShowing3DIcons",
     "isSimpleObject",
     "isSprintAllowed",
     "isStaminaEnabled",
     "isSteamMission",
-    "isSteamOverlayEnabled",
     "isStreamFriendlyUIEnabled",
     "isStressDamageEnabled",
     "isSwitchingWeapon",
@@ -1217,7 +1178,6 @@
     "isWeaponRested",
     "itemCargo",
     "items",
-    "itemsWithMagazines",
     "joinAs",
     "joinAsSilent",
     "joinSilent",
@@ -1263,11 +1223,9 @@
     "lbSetPictureRightColorDisabled",
     "lbSetPictureRightColorSelected",
     "lbSetSelectColor",
-    "lbSetSelectColorRight",
     "lbSetSelected",
     "lbSetText",
     "lbSetTextRight",
-    "lbSetTooltip",
     "lbSetValue",
     "lbSize",
     "lbSort",
@@ -1285,7 +1243,6 @@
     "leaderboardRequestRowsGlobalAroundUser",
     "leaderboardState",
     "leaveVehicle",
-    "libraryDisclaimers",
     "lifeState",
     "lightAttachObject",
     "lightDetachObject",
@@ -1345,7 +1302,6 @@
     "loadUniform",
     "loadVest",
     "localNamespace",
-    "localize",
     "locationNull",
     "locationPosition",
     "lock",
@@ -1422,7 +1378,6 @@
     "menuSort",
     "menuText",
     "menuURL",
-    "menuValue",
     "merge",
     "min",
     "mineActive",
@@ -1442,7 +1397,6 @@
     "modelToWorld",
     "modelToWorldVisualWorld",
     "modelToWorldWorld",
-    "moonIntensity",
     "morale",
     "move",
     "move3DENCamera",
@@ -1507,7 +1461,6 @@
     "onTeamSwitch",
     "openCuratorInterface",
     "openDLCPage",
-    "openDSInterface",
     "openGPS",
     "openMap",
     "openSteamApp",
@@ -1539,7 +1492,6 @@
     "playMove",
     "playMoveNow",
     "playMusic",
-    "playScriptedMission",
     "playSound",
     "playSound3D",
     "playSoundUI",
@@ -1592,13 +1544,11 @@
     "putWeaponPool",
     "queryItemsPool",
     "queryMagazinePool",
-    "queryWeaponPool",
     "rad",
     "radioChannelAdd",
     "radioChannelRemove",
     "radioChannelSetLabel",
     "radioEnabled",
-    "radioVolume",
     "rain",
     "rainParams",
     "rainbow",
@@ -1628,7 +1578,6 @@
     "removeAllCuratorAddons",
     "removeAllCuratorCameraAreas",
     "removeAllCuratorEditingAreas",
-    "removeAllEventHandlers",
     "removeAllHandgunItems",
     "removeAllItems",
     "removeAllItemsWithMagazines",
@@ -1688,7 +1637,6 @@
     "removeWeaponItem",
     "removeWeaponTurret",
     "reportRemoteTarget",
-    "requiredVersion",
     "resetCamShake",
     "resetSubgroupDirection",
     "resistance",
@@ -1701,7 +1649,6 @@
     "reversedMouseY",
     "roadAt",
     "roadsConnectedTo",
-    "roleDescription",
     "ropeAttachEnabled",
     "ropeAttachedObjects",
     "ropeAttachedTo",
@@ -1720,15 +1667,12 @@
     "round",
     "runInitScript",
     "safeZoneH",
-    "safeZoneW",
     "safeZoneWAbs",
     "safeZoneX",
     "safeZoneXAbs",
     "safeZoneY",
     "save3DENInventory",
     "save3DENPreferences",
-    "saveGame",
-    "saveIdentity",
     "saveJoysticks",
     "saveMissionProfileNamespace",
     "saveOverlay",
@@ -1743,7 +1687,6 @@
     "scoreSide",
     "screenshot",
     "scriptDone",
-    "scriptName",
     "scriptNull",
     "scudState",
     "secondaryWeapon",
@@ -1775,7 +1718,6 @@
     "serverName",
     "serverNamespace",
     "serverStartMission",
-    "serverTime",
     "set",
     "set3DENAttachedCursorEntity",
     "set3DENAttribute",
@@ -1783,7 +1725,6 @@
     "set3DENGrid",
     "set3DENIconsVisible",
     "set3DENLayer",
-    "set3DENLinesVisible",
     "set3DENLogicType",
     "set3DENMissionAttribute",
     "set3DENMissionAttributes",
@@ -1831,7 +1772,6 @@
     "setCuratorEditingAreaType",
     "setCuratorSelected",
     "setCuratorSelectionPreset",
-    "setCuratorWaypointCost",
     "setCurrentChannel",
     "setCurrentTask",
     "setCurrentWaypoint",
@@ -1839,7 +1779,6 @@
     "setCustomMissionData",
     "setCustomSoundController",
     "setCustomWeightRTD",
-    "setDate",
     "setDebriefingText",
     "setDefaultCamera",
     "setDestination",
@@ -1905,7 +1844,6 @@
     "setLightnings",
     "setLocalWindParams",
     "setMagazineTurretAmmo",
-    "setMarkerAlpha",
     "setMarkerAlphaLocal",
     "setMarkerBrush",
     "setMarkerBrushLocal",
@@ -1920,7 +1858,6 @@
     "setMarkerShadow",
     "setMarkerShadowLocal",
     "setMarkerShape",
-    "setMarkerShapeLocal",
     "setMarkerSize",
     "setMarkerSizeLocal",
     "setMarkerText",
@@ -1947,10 +1884,8 @@
     "setObjectViewDistance",
     "setOvercast",
     "setOwner",
-    "setOxygenRemaining",
     "setParticleCircle",
     "setParticleClass",
-    "setParticleFire",
     "setParticleParams",
     "setParticleRandom",
     "setPhysicsCollisionFlag",
@@ -1978,7 +1913,6 @@
     "setRain",
     "setRainbow",
     "setRandomLip",
-    "setRank",
     "setRectangular",
     "setRepairCargo",
     "setRotorBrakeRTD",
@@ -2003,9 +1937,7 @@
     "setStaminaScheme",
     "setStarterRTD",
     "setStatValue",
-    "setSuppression",
     "setSystemOfUnits",
-    "setTIParameter",
     "setTargetAge",
     "setTargetSize",
     "setTaskMarkerOffset",
@@ -2056,7 +1988,6 @@
     "setVehicleInit",
     "setVehicleLock",
     "setVehicleRadar",
-    "setVehicleReceiveRemoteTargets",
     "setVehicleReportOwnPosition",
     "setVehicleReportRemoteTargets",
     "setVehicleTIPars",
@@ -2069,7 +2000,6 @@
     "setWantedRPMRTD",
     "setWaterFillPercentage",
     "setWaterLeakiness",
-    "setWaves",
     "setWaypointBehaviour",
     "setWaypointCombatMode",
     "setWaypointCompletionRadius",
@@ -2101,7 +2031,6 @@
     "showCommandingMenu",
     "showCompass",
     "showCuratorCompass",
-    "showGPS",
     "showHUD",
     "showLegend",
     "showMap",
@@ -2139,7 +2068,6 @@
     "sideUnknown",
     "simpleTasks",
     "simulInClouds",
-    "simulSetHumidity",
     "simulWeatherSync",
     "simulationEnabled",
     "sin",
@@ -2148,13 +2076,11 @@
     "skill",
     "skillFinal",
     "skipTime",
-    "sleep",
     "sliderPosition",
     "sliderSetPosition",
     "sliderSetRange",
     "sliderSetSpeed",
     "slingLoadAssistantShown",
-    "soldierMagazines",
     "someAmmo",
     "sort",
     "soundVolume",
@@ -2170,7 +2096,6 @@
     "startLoadingScreen",
     "steamGameRecordingEvent",
     "step",
-    "stop",
     "stopEngineRTD",
     "stopSound",
     "stopped",
@@ -2224,7 +2149,6 @@
     "text",
     "textLog",
     "textLogFormat",
-    "tg",
     "then",
     "throw",
     "throwables",
@@ -2238,7 +2162,6 @@
     "to",
     "toFixed",
     "toLower",
-    "toLowerANSI",
     "toString",
     "toUpper",
     "toUpperANSI",
@@ -2309,7 +2232,6 @@
     "unassignItem",
     "unassignTeam",
     "unassignVehicle",
-    "underwater",
     "uniform",
     "uniformContainer",
     "uniformItems",
@@ -2332,11 +2254,9 @@
     "unregisterTask",
     "updateMenuItem",
     "updateObjectTree",
-    "useAIOperMapObstructionTest",
     "useAudioTimeForMoves",
     "userInputDisabled",
     "vectorAdd",
-    "vectorDiff",
     "vectorDir",
     "vectorDirVisual",
     "vectorDistance",
@@ -2373,7 +2293,6 @@
     "vestContainer",
     "vestItems",
     "vestMagazines",
-    "viewDistance",
     "visibleCompass",
     "visibleGPS",
     "visibleMap",
@@ -2383,13 +2302,11 @@
     "visibleWatch",
     "waitUntil",
     "waterDamaged",
-    "waves",
     "waypointAttachObject",
     "waypointAttachVehicle",
     "waypointAttachedObject",
     "waypointAttachedVehicle",
     "waypointBehaviour",
-    "waypointCombatMode",
     "waypointCompletionRadius",
     "waypointDescription",
     "waypointForceBehaviour",
@@ -2422,7 +2339,6 @@
     "weaponsTurret",
     "weightRTD",
     "west",
-    "while",
     "wind",
     "windDir",
     "windRTD",
@@ -2495,9 +2411,6 @@
     "camSetTarget": [
       "Unknown simple type: array"
     ],
-    "clearForcesRTD": [
-      "Unknown simple type: array"
-    ],
     "combatMode": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -2508,9 +2421,6 @@
       "Exceeded maximum recursion depth while parsing Value"
     ],
     "composeText": [
-      "Exceeded maximum recursion depth while parsing Value"
-    ],
-    "configClasses": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
     "createDiaryRecord": [
@@ -2527,12 +2437,6 @@
     ],
     "createTarget": [
       "Unknown simple type: target"
-    ],
-    "createUnit": [
-      "Unknown simple type: array"
-    ],
-    "createVehicleLocal": [
-      "Exceeded maximum recursion depth while parsing Value"
     ],
     "crew": [
       "Unknown simple type: array"
@@ -2834,9 +2738,6 @@
     "infoPanels": [
       "Unknown simple type: array"
     ],
-    "insert": [
-      "Unknown simple type: array"
-    ],
     "insertEditorObject": [
       "Unknown simple type: array"
     ],
@@ -2872,9 +2773,6 @@
     ],
     "lineIntersectsObjs": [
       "Exceeded maximum recursion depth while parsing Value"
-    ],
-    "lineIntersectsSurfaces": [
-      "Param `surfaceNormal` not found in pool"
     ],
     "lineIntersectsWith": [
       "Exceeded maximum recursion depth while parsing Value"
@@ -2921,9 +2819,6 @@
     "menuEnable": [
       "Param `path {{Feature|obsolete|This old syntax is kept only for backward compatibility.|arma3|2.06}}` not found in pool"
     ],
-    "menuHover": [
-      "Unknown simple type: array"
-    ],
     "missionStart": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -2936,9 +2831,6 @@
     "moonPhase": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
-    "moveInAny": [
-      "Unknown simple type: array"
-    ],
     "moveTarget": [
       "Unknown simple type: target"
     ],
@@ -2950,9 +2842,6 @@
     ],
     "nearTargets": [
       "Exceeded maximum recursion depth while parsing Value"
-    ],
-    "nearestMines": [
-      "Unknown simple type: array"
     ],
     "nearestObjects": [
       "Unknown simple type: array"
@@ -2975,9 +2864,6 @@
     "ppEffectCreate": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
-    "private": [
-      "Exceeded maximum recursion depth while parsing Value"
-    ],
     "pylonAction": [
       "Failed to parse parameter for command 'pylonAction': ''"
     ],
@@ -2987,16 +2873,10 @@
     "radioChannelInfo": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
-    "radioChannelSetCallSign": [
-      "Unknown simple type: array"
-    ],
     "random": [
       "Invalid number range format: '[[number]] in range from ''min'' to ''max'', weighted by ''mid'''"
     ],
     "regexFind": [
-      "Exceeded maximum recursion depth while parsing Value"
-    ],
-    "remoteExec": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
     "remoteExecCall": [
@@ -3032,17 +2912,11 @@
     "secondaryWeaponItems": [
       "Unknown simple type: array"
     ],
-    "select": [
-      "Unknown simple type: array"
-    ],
     "selectBestPlaces": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
     "sendAUMessage": [
       "Unknown simple type: array"
-    ],
-    "sendAnalyticEvent": [
-      "Failed to parse array with element line: 'value: [[String]], [[Number]], [[Boolean]] or [[Array]] - entry's value; if an [[Array]], inserts its content at the end of ''keyValuePairs''; if any other [[Data Types|Data Type]], it is ignored'"
     ],
     "sendCloudRequest": [
       "Unknown simple type: -"
@@ -3063,9 +2937,6 @@
       "Unknown simple type: -"
     ],
     "setDrawIcon": [
-      "Unknown simple type: array"
-    ],
-    "setDriveOnPath": [
       "Unknown simple type: array"
     ],
     "setEditorObjectScope": [
