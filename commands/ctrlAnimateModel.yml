@@ -25,12 +25,16 @@ syntax:
     type: Number
   - !Item
     name: speed
-    desc: (Optional, default [[false]])
+    desc: |-
+      (Optional, default [[false]])
+      * [[Boolean]] - when set to [[true]], animation is instant
+      * {{GVI|arma3|1.66|size= 0.75}} [[Number]] - > 0 is treated as config speed value multiplier
     type: !OneOf
     - type: Boolean
-      desc: |-
-        [[Boolean]] - when set to [[true]], animation is instant
-        {{GVI|arma3|1.66|size= 0.75}} [[Number]] - > 0 is treated as config speed value multiplier
+      desc: null
+      since: null
+    - type: Number
+      desc: null
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
