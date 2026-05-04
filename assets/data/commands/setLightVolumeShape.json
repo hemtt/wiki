@@ -1,0 +1,96 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the {{hl|#lightreflector}}'s volume shape. An empty shape will switch the light off.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_light setLightVolumeShape [\"a3\\data_f\\VolumeLightFlashlight.p3d\", [1, 1, 1]];</sqf>"
+  ],
+  "groups": [
+    "Lights"
+  ],
+  "id": "setLightVolumeShape",
+  "name": "setLightVolumeShape",
+  "problem_notes": [],
+  "see_also": [
+    "setLightColor",
+    "setLightAmbient",
+    "setLightBrightness",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightIntensity",
+    "setLightAttenuation",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightFlareMaxDistance",
+    "setLightDayLight",
+    "setLightIR"
+  ],
+  "since": {
+    "arma3": "2.06"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "lightReflector",
+          [
+            "shapePath",
+            "scale"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "object of class {{hl|#lightreflector}})",
+          "name": "lightReflector",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "\"\" to turn the light off",
+              "name": "shapePath",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "scale",
+              "type": {
+                "ArraySized": [
+                  {
+                    "default": null,
+                    "desc": null,
+                    "name": "sizeX",
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "default": null,
+                    "desc": null,
+                    "name": "sizeY",
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "default": null,
+                    "desc": null,
+                    "name": "sizeZ",
+                    "since": null,
+                    "type": "Number"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

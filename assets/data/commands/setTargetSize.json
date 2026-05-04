@@ -1,0 +1,89 @@
+{
+  "argument_loc": "Global",
+  "description": "Sets target size (see irTargetSize and others from vehicle config) override on vehicle.\nReturns the previously active values. Note if the array is empty, it will only return the previous/current values, and not set new ones. So this also functions as a getter.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_previous = vehicle player setTargetSize [0,0,0];</sqf>",
+    "<sqf>_sizes = vehicle player setTargetSize [];</sqf>"
+  ],
+  "groups": [],
+  "id": "setTargetSize",
+  "name": "setTargetSize",
+  "problem_notes": [],
+  "see_also": [],
+  "since": {
+    "arma3": "2.22"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "visualTargetSize",
+            "irTargetSize",
+            "radarTargetSize"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "A transport vehicle",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "previous value",
+              "name": "visualTargetSize",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "previous value",
+              "name": "irTargetSize",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "previous value",
+              "name": "radarTargetSize",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "set to -1 to disable override and use config values. Otherwise value between 0-2",
+              "name": "visualTargetSize",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "irTargetSize",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "radarTargetSize",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

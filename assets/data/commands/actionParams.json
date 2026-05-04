@@ -1,0 +1,170 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns [[Array]] with params for given user action id (similar to [[addAction]] param array).",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_params = player actionParams 0;</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "actionParams",
+  "name": "actionParams",
+  "problem_notes": [],
+  "see_also": [
+    "actionIDs",
+    "addAction",
+    "setUserActionText",
+    "inGameUISetEventHandler",
+    "showHUD",
+    "inputAction",
+    "removeAction",
+    "removeAllActions",
+    "action"
+  ],
+  "since": {
+    "arma3": "1.64"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "entity",
+          "id"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "entity with added user actions",
+          "name": "entity",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "action title text",
+              "name": "title",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "script file or script expression assigned to the action",
+              "name": "script",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "arguments passed to the action",
+              "name": "arguments",
+              "since": null,
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Anything"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Nothing"
+                  }
+                ]
+              }
+            },
+            {
+              "default": null,
+              "desc": "action priority on the action menu",
+              "name": "priority",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "whether the action is shown in the center of the screen too",
+              "name": "showWindow",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "whether the action menu should close after selecting the action",
+              "name": "hideOnUse",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "action bindings to some existing engine action if any",
+              "name": "shortcut",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "expression returning [[true]] or [[nil]] for action to appear on the action menu",
+              "name": "condition",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "max distance to entity at which action becomes available. -1 means it is engine default (~15m)",
+              "name": "radius",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "whether the action is available to [[setUnconscious|unconscious]] person",
+              "name": "unconscious",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "same as textWindowBackground in [[setUserActionText]]",
+              "name": "textWindowBackground",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "same as textWindowForeground in [[setUserActionText]]",
+              "name": "textWindowForeground",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "named selection in Geometry LOD to which the action is attached",
+              "name": "selection",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "memory point on the object to which the action is attached",
+              "name": "memoryPoint",
+              "since": null,
+              "type": "String"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "id of existing user action (returned by [[addAction]] or [[actionIDs]])",
+          "name": "id",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

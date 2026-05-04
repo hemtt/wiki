@@ -371,14 +371,13 @@
       "status": "Failed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'arguments: [[Anything]] or [[nil]] - arguments passed to the action'"
+      "description": "Returns [[Array]] with params for given user action id (similar to [[addAction]] param array).",
+      "groups": [
+        "Interaction"
       ],
-      "groups": [],
       "id": "actionParams",
       "name": "actionParams",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Activates the listed addons.",
@@ -16063,14 +16062,14 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "[[File:PositionCameraToWorld.jpg|right|200px]]Get the world coordinate space ({{Link|Position#PositionAGL|AGL}}) from a camera-relative position.<br>",
+      "groups": [
+        "Camera Control",
+        "Positions"
       ],
-      "groups": [],
       "id": "positionCameraToWorld",
       "name": "positionCameraToWorld",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Set [[Post Process Effects|post process effect]] parameters.\n\n{{Feature|informative|The two syntaxes differ in what format of the params they accept. The syntax with PP name expects colors to be packed into arrays within main array, while the syntax with PP handle can handle both flat and packed array. Therefore it is recommended to use the universal packed format, such as shown in the examples.}}",
@@ -19636,14 +19635,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "Sets the {{hl|#lightreflector}}'s volume shape. An empty shape will switch the light off.",
+      "groups": [
+        "Lights"
       ],
-      "groups": [],
       "id": "setLightVolumeShape",
       "name": "setLightVolumeShape",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Changes the lightnings value smoothly during the given time (in seconds). A time of zero means there will be an immediate change.<br><br>\n'''NOTE''': This command will have no effect (even though the value of [[lightnings]] changes) unless {{hl|Manual Override}} option is selected in the editor in the Intel, which is normally off.<br><br>\n[[File:setLightnings.jpg|left|600px]]",
@@ -20651,14 +20649,11 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse array with element line: 'visualTargetSize [[Number]] - previous value'"
-      ],
+      "description": "Sets target size (see irTargetSize and others from vehicle config) override on vehicle.\nReturns the previously active values. Note if the array is empty, it will only return the previous/current values, and not set new ones. So this also functions as a getter.",
       "groups": [],
       "id": "setTargetSize",
       "name": "setTargetSize",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Sets the task marker position in model space.",
@@ -24558,14 +24553,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
+      "description": "A getter for [[showWaypoint]] command.",
+      "groups": [
+        "Waypoints"
       ],
-      "groups": [],
       "id": "waypointShow",
       "name": "waypointShow",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Gets the waypoint speed.\n\nPossible values are:\n* \"UNCHANGED\"\n* \"LIMITED\"\n* \"NORMAL\"\n* \"FULL\"",
@@ -24915,9 +24909,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 263,
-  "passed": 2428,
-  "timestamp": 1777861431,
+  "failed": 258,
+  "passed": 2433,
+  "timestamp": 1777882554,
   "total": 2693,
   "version": "1.0"
 }
