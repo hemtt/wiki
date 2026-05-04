@@ -80,15 +80,12 @@ fn array_of_or() {
         }
     );
 
-    let line = "return: [[Array]] of [[Object]]s and/or [[Group]]s";
+    let line = "return: [[Array]] of [[Object]]s or [[Group]]s";
     let (param_item, errors) =
         ParamItem::parse("test", line).expect("Failed to parse array of line");
     assert!(errors.is_empty());
     assert_eq!(param_item.name, "return");
-    assert_eq!(
-        param_item.desc.as_deref(),
-        None,
-    );
+    assert_eq!(param_item.desc.as_deref(), None);
     assert_eq!(
         param_item.typ,
         Value::ArrayUnsized {
