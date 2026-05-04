@@ -26,13 +26,17 @@ syntax:
     type: String
   - !Item
     name: code
-    desc: code that should be executed when the Event Handler fires; executed in [[missionNamespace]] by default. Several [[Magic Variables]] are available
+    desc: |-
+      code that should be executed when the Event Handler fires; executed in [[missionNamespace]] by default. Several [[Magic Variables]] are available
+      * Event Handler parameters are accessible via <sqf inline>_this</sqf>
+      * The Event Handler type is available as <sqf inline>_thisEvent</sqf>
+      * The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>
     type: !OneOf
     - type: Code
-      desc: |-
-        Event Handler parameters are accessible via <sqf inline>_this</sqf>
-        The Event Handler type is available as <sqf inline>_thisEvent</sqf>
-        The Event Handler index is available as <sqf inline>_thisEventHandler</sqf>
+      desc: null
+      since: null
+    - type: String
+      desc: null
       since: null
 argument_loc: Global
 effect_loc: Local
