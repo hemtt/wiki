@@ -16,7 +16,8 @@
   "problem_notes": [],
   "see_also": [
     "directionStabilizationEnabled",
-    "lockCameraTo"
+    "lockCameraTo",
+    "enableGunStabilization"
   ],
   "since": {
     "arma3": "2.06"

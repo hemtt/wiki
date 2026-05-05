@@ -1,0 +1,46 @@
+{
+  "argument_loc": "Global",
+  "description": "Returns an array of all backpack names a unit has in its inventory, excluding the one it carries on the back.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _allCarriedBackpackTypes = backpacks player + [backpack player];</sqf>"
+  ],
+  "groups": [
+    "Unit Inventory"
+  ],
+  "id": "backpacks",
+  "name": "backpacks",
+  "problem_notes": [],
+  "see_also": [
+    "backpack",
+    "itemsWithMagazines",
+    "assignedItems",
+    "items",
+    "magazines",
+    "everyBackpack"
+  ],
+  "since": {
+    "arma3": "2.14"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

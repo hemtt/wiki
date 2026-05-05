@@ -1,0 +1,92 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables/disables turret gun stabilisation.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>vehicle player enableGunStabilization [3, [0]];</sqf>"
+  ],
+  "groups": [
+    "Camera Control",
+    "Turrets"
+  ],
+  "id": "enableGunStabilization",
+  "name": "enableGunStabilization",
+  "problem_notes": [],
+  "see_also": [
+    "enableDirectionStabilization",
+    "directionStabilizationEnabled",
+    "lockCameraTo"
+  ],
+  "since": {
+    "arma3": "2.22"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "mode",
+            "turretPath"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "the previous mode, also returns -1 on error",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "can be one of",
+              "name": "mode",
+              "type": {
+                "NumberEnum": [
+                  {
+                    "desc": "clear override",
+                    "since": null,
+                    "value": -1
+                  },
+                  {
+                    "desc": "no stabilisation",
+                    "since": null,
+                    "value": 0
+                  },
+                  {
+                    "desc": "elevation stabilisation",
+                    "since": null,
+                    "value": 1
+                  },
+                  {
+                    "desc": "traverse stabilisation",
+                    "since": null,
+                    "value": 2
+                  },
+                  {
+                    "desc": "both",
+                    "since": null,
+                    "value": 3
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "name": "turretPath",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
