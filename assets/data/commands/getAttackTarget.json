@@ -1,26 +1,21 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Get current stamina (~ seconds until depletion)",
+  "description": "Returns the target given unit is engaging.",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>getStamina player;</sqf>"
+    "<sqf>private _unitsTarget = getAttackTarget _unit;</sqf>"
   ],
   "groups": [
-    "Stamina System"
+    "Object Manipulation"
   ],
-  "id": "getStamina",
-  "name": "getStamina",
+  "id": "getAttackTarget",
+  "name": "getAttackTarget",
   "problem_notes": [],
   "see_also": [
-    "Arma",
-    "3:",
-    "Stamina",
-    "setStamina",
-    "setFatigue",
-    "getFatigue"
+    "assignedTarget"
   ],
   "since": {
-    "arma3": "1.54"
+    "arma3": "2.00"
   },
   "status": "Passed",
   "syntax": [
@@ -29,7 +24,7 @@
         "Unary": "unit"
       },
       "ret": {
-        "type": "Number"
+        "type": "Object"
       },
       "right": {
         "Item": {

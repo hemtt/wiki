@@ -624,7 +624,7 @@
       ],
       "id": "addHandgunItem",
       "name": "addHandgunItem",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Creates a headgear item and tries to link it to headgear slot. If slot is occupied with another item, the item in the slot will be replaced.",
@@ -930,7 +930,7 @@
       ],
       "id": "addSwitchableUnit",
       "name": "addSwitchableUnit",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Add given member to given team. Effect is local, unless both member and team are local to PC on which command is executed, then effect is global.\n\n<br><br> The same [[Team Member]] can be member of several different [[teams]] at the same time.",
@@ -1873,7 +1873,7 @@
       ],
       "id": "assignedCommander",
       "name": "assignedCommander",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns the soldier assigned to the given vehicle as a driver.",
@@ -2124,7 +2124,7 @@
       ],
       "id": "backpacks",
       "name": "backpacks",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns the current charge of a helicopter's batteries.\n* 0: empty\n* 1: fully charged",
@@ -4692,7 +4692,7 @@
       ],
       "id": "ctrlScrollValues",
       "name": "ctrlScrollValues",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Sets text color of given control when it is selected.",
@@ -4728,7 +4728,7 @@
       ],
       "id": "ctrlSetAutoScrollRewind",
       "name": "ctrlSetAutoScrollRewind",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Sets number of second required to scroll to next line. If speed < 0, auto-scroll is disabled. Setter for [[ctrlAutoScrollSpeed]].\n<br><br>\nAutorscroll is available for [[DialogControls-ListBoxes|CT_LISTBOX]] and [[CT_CONTROLS_GROUP]] types of controls only. Autoscroll will wait [[ctrlAutoScrollDelay]] seconds (must be  > 0) and then will scroll the scroll bar down to the bottom. [[ctrlAutoScrollSpeed]] defines the speed with which scrollbar is scrolled. If [[ctrlAutoScrollRewind]] is [[true]], the control will fade out, immediately rewind to the top, then fade in, wait [[ctrlAutoScrollDelay]] seconds and then repeat the scrolling in a loop. If user focuses on the control, autoscrolling is interrupted.",
@@ -5826,7 +5826,7 @@
       ],
       "id": "dayTime",
       "name": "dayTime",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Deactivates the given keyname for the current user profile. The keys are used to unlock missions or campaigns.\n\nSee keys, keysLimit and doneKeys in the [[Description.ext#keys|description.ext]] file of the missions.",
@@ -6196,7 +6196,7 @@
       ],
       "id": "diag_codePerformance",
       "name": "diag_codePerformance",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns the duration of the previous frame in seconds",
@@ -6595,16 +6595,6 @@
       "id": "difficultyEnabledRTD",
       "name": "difficultyEnabledRTD",
       "status": "Passed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
-      ],
-      "groups": [],
-      "id": "difficultyOption",
-      "name": "difficultyOption",
-      "status": "Failed"
     },
     {
       "description": "Sends given audio message to the direct channel. Command operates just like xxxxRadio commands, but the sound is played over direct channel and is independent of [[fadeSound]]. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol or a kbAddTopic. The transmission will play only on the PC where command was executed. If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]). Use [[clearRadio]] to clear chat history\n{{Feature|informative|When transmitting unit gets killed, transmission will be interrupted. However when receiving unit gets killed, the transmission continues to play.}}",
@@ -9108,7 +9098,7 @@
       ],
       "id": "getAttackTarget",
       "name": "getAttackTarget",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -9663,7 +9653,7 @@
       ],
       "id": "getLeaning",
       "name": "getLeaning",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -9925,7 +9915,7 @@
       ],
       "id": "getObjectID",
       "name": "getObjectID",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -10462,7 +10452,7 @@
       ],
       "id": "getStamina",
       "name": "getStamina",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns value of the given stat.<br>\nA list of possible StatNames can be found here: [[Arma 3: Stat Names]]",
@@ -12554,7 +12544,7 @@
       ],
       "id": "itemsWithMagazines",
       "name": "itemsWithMagazines",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -13846,7 +13836,7 @@
       ],
       "id": "loadUniform",
       "name": "loadUniform",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns current percentage of mass from items stored in a vest relative to the maximum capacity of the vest. <br>\nIt is equivalent to this formula:\n<sqf>_loadVest = massOfAllItemsInVest / getContainerMaxLoad vest player;</sqf>",
@@ -16427,7 +16417,7 @@
       ],
       "id": "queryItemsPool",
       "name": "queryItemsPool",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Return number of magazines of type name in magazine pool (used in campaign to transfer magazines into next mission).",
@@ -17891,7 +17881,7 @@
       ],
       "id": "say",
       "name": "say",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -20361,7 +20351,7 @@
       ],
       "id": "setRain",
       "name": "setRain",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Changes the rainbow value smoothly during the given time (in seconds). A time of zero means there will be an immediate change.",
@@ -20931,6 +20921,16 @@
       "id": "setUnitFreefallHeight",
       "name": "setUnitFreefallHeight",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "setUnitLoadout",
+      "name": "setUnitLoadout",
+      "status": "Failed"
     },
     {
       "description": "Set unit position rules. This command will not change the stance of the human player, even though it will change the output of [[unitPos]] command. To change player stance use [[playAction]] or [[playActionNow]]:\n<sqf>\nplayer playAction \"PlayerProne\"; // DOWN\nplayer playAction \"PlayerStand\"; // UP\nplayer playAction \"PlayerCrouch\"; // MIDDLE\n</sqf>",
@@ -23204,7 +23204,7 @@
       ],
       "id": "turretOwner",
       "name": "turretOwner",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns the unit in the vehicle turret. To find turret path of known unit, see [[unitTurret]].",
@@ -24164,7 +24164,7 @@
       ],
       "id": "vehicleMoveInfo",
       "name": "vehicleMoveInfo",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Sends the audio message to the vehicle radio channel. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol. The transmission will play only on the PC where command was executed. If you need the transmission to play on all computers, you have to execute it globally (see [[remoteExec]]).\n{{Feature|informative|When transmitting unit gets killed, transmission will be interrupted. However when receiving unit gets killed, the transmission continues to play.}}",
@@ -24900,8 +24900,8 @@
     }
   ],
   "failed": 257,
-  "passed": 2431,
-  "timestamp": 1777945680,
+  "passed": 2416,
+  "timestamp": 1777967674,
   "total": 2692,
   "version": "1.0"
 }
