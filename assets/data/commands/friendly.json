@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns ''Friendly'' side which is friendly to all units.\n{{Feature|warning|This command is not functional and appears to have be replaced by [[sideFriendly]].}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqs>?_side == friendly : hint \"Hey buddy!\"</sqs>"
+  ],
+  "groups": [
+    "Sides"
+  ],
+  "id": "friendly",
+  "name": "friendly",
+  "problem_notes": [],
+  "see_also": [
+    "sideFriendly"
+  ],
+  "since": {
+    "ofp": "1.78"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Side"
+      }
+    }
+  ]
+}

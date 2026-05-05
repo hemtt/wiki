@@ -181,7 +181,7 @@
       ],
       "id": "ASLToAGL",
       "name": "ASLToAGL",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Converts a position from [[Position#PositionASL|PositionASL]] to [[Position#PositionATL|PositionATL]]",
@@ -651,7 +651,7 @@
       ],
       "id": "addItemCargo",
       "name": "addItemCargo",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Global variant of [[addItemCargo]].",
@@ -854,7 +854,7 @@
       ],
       "id": "addPlayerScores",
       "name": "addPlayerScores",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Adds weapon item, including magazine, directly to the [[primaryWeapon]]. This is used for infantry weapons.",
@@ -1380,7 +1380,7 @@
       ],
       "id": "allObjects",
       "name": "allObjects",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns a list of all units controlled by connected clients. This includes:\n* Normal human players (including dead players)\n* [[Eden Editor: System#Virtual Entities|Virtual Entities]] (see ''Systems'' → ''Logic Entities'' → ''Virtual Entities'' in the [[:Category:Eden Editor|Eden Editor]])\n** [[Arma 3: Headless Client|Headless Clients]] ({{hl|HeadlessClient_F}})\n** Virtual Curators ({{hl|VirtualCurator_F}}, {{hl|*_VirtualCurator_F}})\n** Virtual Spectators ({{hl|VirtualSpectator_F}})\n\nUse [[BIS_fnc_listPlayers]] or see {{Link|#Example 1}} to only get human players.",
@@ -2160,7 +2160,7 @@
       ],
       "id": "bezierInterpolation",
       "name": "bezierInterpolation",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns class name of currently used binocular weapon.",
@@ -2250,7 +2250,7 @@
       ],
       "id": "breakOut",
       "name": "breakOut",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Breaks block to scope named ''name''.\n\nScope name can be assigned using the [[scopeName]] command.",
@@ -2737,7 +2737,7 @@
       ],
       "id": "canAddItemToBackpack",
       "name": "canAddItemToBackpack",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Checks if given object can be stored into soldier's uniform.\n\n{{Feature|important|\nAvoid passing an empty string <sqf inline>\"\"</sqf> to this command as it will create a warning dialog:\n[[File:a3 warning badvehicletype.jpg|none|alt= Warning Message: Bad vehicle type|Warning Message: Bad vehicle type]]\nThis message will show once per mission restart.\n}}",
@@ -2755,7 +2755,7 @@
       ],
       "id": "canAddItemToVest",
       "name": "canAddItemToVest",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if a unit's weapon can be deployed.",
@@ -3019,6 +3019,16 @@
       "id": "clearBackpackCargoGlobal",
       "name": "clearBackpackCargoGlobal",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "clearForcesRTD",
+      "name": "clearForcesRTD",
+      "status": "Failed"
     },
     {
       "description": "Removes all icons from group.",
@@ -3447,7 +3457,7 @@
       ],
       "id": "compileScript",
       "name": "compileScript",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Checks whether the given FSM is completed. The FSM handle is the number returned by the [[execFSM]] command.",
@@ -3466,6 +3476,16 @@
       "groups": [],
       "id": "composeText",
       "name": "composeText",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
+      "groups": [],
+      "id": "configClasses",
+      "name": "configClasses",
       "status": "Failed"
     },
     {
@@ -3540,7 +3560,7 @@
       ],
       "id": "configSourceMod",
       "name": "configSourceMod",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns an array of mods (CfgMods) in which the given config class is defined.",
@@ -4010,6 +4030,16 @@
       "status": "Passed"
     },
     {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "createUnit",
+      "name": "createUnit",
+      "status": "Failed"
+    },
+    {
       "description": "Creates an empty object of given classname type.\nSee [[Arma 3: Assets]] / [[Arma 3: createVehicle/vehicles]], or [[:Category:CfgVehicles]] for earlier games.\n\n{{Feature|informative|\n* To create objects of type {{hl|\"Logic\"}}, use [[createUnit]].\n* To create an editable [[:Category: Eden Editor| Eden Editor]] entity, see [[create3DENEntity]].\n}}\n\n{{Feature|arma3|\nTo avoid vehicle randomisation in {{arma3}}, set the {{hl|BIS_enableRandomization}} variable immediately after creating the vehicle:\n<sqf>\nprivate \"_vehicle\";\nisNil { // run [[Scheduler#Unscheduled Environment|unscheduled]]\n\t_vehicle = \"C_Offroad_01_F\" createVehicle getPosATL player;\n\t_vehicle setVariable [\"BIS_enableRandomization\", false];\n};\n// the _vehicle variable is available after that\n</sqf>\nSee the [[Arma 3: Vehicle Customisation]] page for more information and settings.\n}}",
       "groups": [
         "Object Manipulation"
@@ -4026,6 +4056,16 @@
       "id": "createVehicleCrew",
       "name": "createVehicleCrew",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
+      "groups": [],
+      "id": "createVehicleLocal",
+      "name": "createVehicleLocal",
+      "status": "Failed"
     },
     {
       "description": "No documentation available",
@@ -4081,7 +4121,7 @@
       ],
       "id": "ctData",
       "name": "ctData",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Gets array of indices of rows under this header.",
@@ -4340,7 +4380,7 @@
       ],
       "id": "ctrlCommitted",
       "name": "ctrlCommitted",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Creates a new control in the given display.<br>\nThe control class could be an existing class from the [[configFile | main config]] or a custom class defined in the [[missionConfigFile | mission config]].\nThe main config is searched first, if the class does not exist there, the mission config is searched.\nSome of the common controls defined in the main config that can be used with this command:\n<spoiler text=\"Show list\">\n{{Feature|informative|This list contains controls which are guaranteed to work with this command. However, controls not listed here should work as well - as long as they are properly defined.}}\n\n{{{!}} class=\"wikitable\" width=\"100%\"\n! Class !! Description !! Available since\n{{!}}-\n{{!}} RscText {{!}}{{!}} simple text box {{!}}{{!}}\n{{!}}-\n{{!}} RscStructuredText {{!}}{{!}} text box which supports [[Structured Text|structured text]] {{!}}{{!}}\n{{!}}-\n{{!}} RscTextMulti {{!}}{{!}} simple multiline text box {{!}}{{!}}\n{{!}}-\n{{!}} RscPicture {{!}}{{!}} simple picture box {{!}}{{!}}\n{{!}}-\n{{!}} RscPictureKeepAspect {{!}}{{!}} picture box that doesn't stretch picture {{!}}{{!}}\n{{!}}-\n{{!}} RscEdit {{!}}{{!}} input box {{!}}{{!}}\n{{!}}-\n{{!}} RscEditMulti {{!}}{{!}} multiline input box {{!}}{{!}}\n{{!}}-\n{{!}} RscEditReadOnly {{!}}{{!}} input box with [[DialogControls-EditBox | {{hl|c= canModify {{=}} false;}}]] {{!}}{{!}} {{GVI|arma3|1.98}}\n{{!}}-\n{{!}} RscEditMultiReadOnly {{!}}{{!}} multiline input box with [[DialogControls-EditBox | {{hl|c= canModify {{=}} false;}}]]{{!}}{{!}} {{GVI|arma3|1.98}}\n{{!}}-\n{{!}} RscTree {{!}}{{!}} tree view control {{!}}{{!}}\n{{!}}-\n{{!}} RscTreeMulti {{!}}{{!}} multi-select tree view {{!}}{{!}} {{GVI|arma3|2.02}}\n{{!}}-\n{{!}} RscTreeSearch {{!}}{{!}} searchable tree view control (see Example 4) {{!}}{{!}}\n{{!}}-\n{{!}} RscVideo {{!}}{{!}} picture control with autostart for video texture (see [[BIS_fnc_playVideo]]) {{!}}{{!}}\n{{!}}-\n{{!}} RscVideoKeepAspect {{!}}{{!}} picture control for video to keep original video aspect ratio {{!}}{{!}}\n{{!}}-\n{{!}} RscButtonMenuBIKI {{!}}{{!}} shortcut button with url pointing to \"https://community.bistudio.com/wiki/\" {{!}}{{!}} {{GVI|arma3|1.98}}\n{{!}}-\n{{!}} RscControlsGroup {{!}}{{!}} default controls group {{!}}{{!}}\n{{!}}-\n{{!}} RscControlsGroupNoScrollbars {{!}}{{!}} controls group without scrollbars {{!}}{{!}}\n{{!}}-\n{{!}} RscControlsGroupNoHScrollbars {{!}}{{!}} controls group without horizontal scrollbar {{!}}{{!}}\n{{!}}-\n{{!}} RscControlsGroupNoVScrollbars {{!}}{{!}} controls group without vertical scrollbar {{!}}{{!}}\n{{!}}}\n</spoiler>\n{{Feature|important|If you are creating [[CT_MAP]] control dynamically, use [[ctrlMapSetPosition]] to update control position instead of [[ctrlSetPosition]].}}",
@@ -4715,7 +4755,7 @@
       ],
       "id": "ctrlSetChecked",
       "name": "ctrlSetChecked",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the colorDisabled attribute of a control.",
@@ -4724,7 +4764,7 @@
       ],
       "id": "ctrlSetDisabledColor",
       "name": "ctrlSetDisabledColor",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "{{Feature|obsolete|Use [[ctrlAddEventHandler]] instead as it can stack event handlers.|arma2|1.00}}\nSets given event handler of given control: any previously added event handler is removed.\n\n{{Feature|informative|\n* See [[User Interface Event Handlers]] for the full list of handler names\n* See also [[DIK KeyCodes]] for a list of key code constants relevant to key-related events like [[User_Interface_Event_Handlers#onKeyDown|KeyDown]] and [[User_Interface_Event_Handlers#onKeyUp|KeyUp]]\n}}\n\n{{Feature|important|When using the event names listed [[User Interface Event Handlers|here]] with the [[ctrlAddEventHandler]], [[ctrlSetEventHandler]], [[displayAddEventHandler]] or [[displaySetEventHandler]] commands, the prefix \"on\" in the event name must be removed (e.g. ''''ButtonDown'''' instead of ''''onButtonDown'''').}}",
@@ -4941,7 +4981,7 @@
       ],
       "id": "ctrlSetFontHeightSecondary",
       "name": "ctrlSetFontHeightSecondary",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets P font of given HTML control or its size.",
@@ -4977,7 +5017,7 @@
       ],
       "id": "ctrlSetForegroundColor",
       "name": "ctrlSetForegroundColor",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets model for 3D-[[Arma: GUI Configuration|Dialogs]] (see [[Arma 3: createSimpleObject/objects]] for a p3d models' list).",
@@ -5195,7 +5235,7 @@
       ],
       "id": "ctrlSetTooltipMaxWidth",
       "name": "ctrlSetTooltipMaxWidth",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets URL property of the given control subject to {{hl|allowedHTMLLoadURIs[]}} whitelisting in [[CfgCommands]] config. Supported controls are:\n* {{hl|CT_BUTTON}}\n* {{hl|CT_SHORTCUTBUTTON}} \n* {{hl|CT_ACTIVETEXT}}",
@@ -5249,7 +5289,7 @@
       ],
       "id": "ctrlStyle",
       "name": "ctrlStyle",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns the text of a control of the currently active user dialog. This command can be used on static texts, buttons, edit lines and active texts as well as for images, where it returns the image path. Does not work on HTML control and returns empty string \"\". Since {{GVI|arma3|2.05|size= 0.75}} supported control types are:\n{{Columns|4|* [[CT_STATIC]]\n\n* [[CT_EDIT]]\n* [[CT_XKEYDESC]]\n* [[CT_XBUTTON]]\n* [[CT_SHORTCUTBUTTON]]\n* [[CT_STRUCTURED_TEXT]]\n* [[CT_BUTTON]]\n* [[CT_ACTIVETEXT]]\n}}\n\nSince {{GVI|arma3|2.20|size= 0.75}} [[CT_PROGRESS]] is also supported.",
@@ -6327,7 +6367,7 @@
       ],
       "id": "diag_lightNewLoad",
       "name": "diag_lightNewLoad",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -6441,7 +6481,7 @@
       ],
       "id": "diag_setTerrainHeight",
       "name": "diag_setTerrainHeight",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -6594,7 +6634,7 @@
       ],
       "id": "directionStabilizationEnabled",
       "name": "directionStabilizationEnabled",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Disables parts of the AI behaviour to get a better control over the actions of a unit. If the unit changes locality, this command might need to be executed again at the new locality to maintain effect.\n\n{{Feature|warning|This command might cause unexpected behaviour when used on a player-controlled unit.}}",
@@ -6714,7 +6754,7 @@
       ],
       "id": "displayAddEventHandler",
       "name": "displayAddEventHandler",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns child display of the given display.",
@@ -6907,7 +6947,7 @@
       ],
       "id": "doGetOut",
       "name": "doGetOut",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Order the given unit(s) to move to the given position (without radio messages). Upon reaching its destination, if it is the group leader it will order the group to form around it's new position. If it is not the leader, it will immediately be ordered to return to formation by the group leader and begin moving back to the group. Use [[doStop]] to stop units returning to formation. [[moveToCompleted]] will return true when a unit issued this command reaches its destination.",
@@ -7877,7 +7917,7 @@
       ],
       "id": "expectedDestination",
       "name": "expectedDestination",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Creates a log file containing an overview on all JIP (network) messages currently in the JIP queue.\nThe file is created in the same directory as [[Crash_Files|.rpt file]].\n{{Feature|informative|[[BattlEye]]'s RCON variant of this command is {{hl|#exportJIPqueue}} (see also [[Multiplayer Server Commands]]).}}\nFile name examples:\n* {{hl|jipqueue_12024_2024-10-25_11-31-11.log}} (using {{hl|#exportJIPqueue}} chat command)\n* {{hl|jipqueue-12024-2024-10-25_11-31-11.fileNameParameter.log}} (using [[exportJIPMessages]] sqf command)\nFile content example: <spoiler text=\"Show example\">\n<pre>\ntime = 78814.063\n\n==================================================================================================\nObjects: \n---------------------------------------------------------------------------------------------\n\tType_96 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_107 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_109 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_113 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_118 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tUnknown creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_332 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_334 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_198 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tUnknown creator:4 networkId:0 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_332 creator:4 networkId:1 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_334 creator:4 networkId:2 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_109 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_113 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_118 creator:2 networkId:ID - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_195 creator:2 networkId:ID - owner __SERVER__ (2)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:3 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:4 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:5 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:6 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:7 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_99 creator:4 networkId:8 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:12 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:13 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:15 - owner NAME (1c7f3773)\n---------------------------------------------------------------------------------------------\n\tType_96 creator:4 networkId:49 - owner NAME (1c7f3773)\n\n==================================================================================================\n_initMessages - Total: 7601\n\t            Type_330 :     4\n\t             Type_60 :     6\n\t            Type_272 :    31\n\t            Type_273 :    31\n\t            Type_274 :  4481\n\t             Type_64 :   435\n\t            Type_291 :   147\n\t            Type_292 :     1\n\t            Type_187 :    50\n\t            Type_248 :  1846\n\t             Type_53 :    70\n\t             Type_54 :   341\n\t            Type_294 :     3\n\t             Type_10 :    69\n\t            Type_385 :     1\n\t            Type_295 :     1\n\t            Type_296 :    16\n\t            Type_328 :     4\n\t            Type_329 :     4\n\t             Type_59 :    60\n\n==================================================================================================\n_initMessagesRE - Total: 0\n\n==================================================================================================\n_jipMarkerInfos - Total: 0\n\n</pre>\n</spoiler>",
@@ -8070,7 +8110,7 @@
       ],
       "id": "findEmptyPosition",
       "name": "findEmptyPosition",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Preloads area to be used with [[findEmptyPosition]] command and returns [[true]] when area is ready.\nThe size of the area preloaded is from {{hl|center - radius - maxDistance}} to {{hl|center + radius + maxDistance}}\n{{Feature|important|Preloading large areas may take a long time, we are talking minutes. However once preloaded, it stays preloaded even after mission restart.}}",
@@ -8439,7 +8479,7 @@
       ],
       "id": "forceSpeed",
       "name": "forceSpeed",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "<div style=\"float: right\">\nList of the commands that work with [[forceUnicode]]\n{{Columns|2|\n* [[copyFromClipboard]]\n* [[copyToClipboard]]\n* [[count]]\n* [[find]]\n* [[in]]\n* [[insert]]\n* [[reverse]]\n* [[select]]\n* [[splitString]]\n* [[trim]]\n* [[regexFind]]\n* [[regexMatch]]\n* [[regexReplace]]\n}}\n</div>\nSets the Unicode flag which forces some of the string manipulation commands to switch to {{Link|https://en.wikipedia.org/wiki/Unicode}}.\nThe Unicode flag is always set right after [[forceUnicode]] command execution, but is reset depending on the command mode (see ''{{Link|#Syntax 1|mode}}'').\n\nWhen the flag is set it will also affect all scopes within the script including child scopes (see [[diag_scope]]).\nThere are many other string manipulation commands like [[ctrlSetText]], [[getTextWidth]], etc. that support Unicode by design so no additional forcing is needed.",
@@ -8605,7 +8645,7 @@
       ],
       "id": "friendly",
       "name": "friendly",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Continue sequence of [[for]] construct. It sets the start value of the index variable.",
@@ -8822,7 +8862,7 @@
       ],
       "id": "get3DENLinesVisible",
       "name": "get3DENLinesVisible",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Return value of [[Eden_Editor:_Scenario_Atttributes|scenario attribute]]. For a list of all available mission attributes see [[Eden_Editor:_Setting_Attributes#Scenario|Mission Attributes]].\n{{Feature|important|Attributes are available only within the Eden Editor workspace. You cannot access them in scenario preview or exported scenario!}}",
@@ -8976,7 +9016,7 @@
       ],
       "id": "getAnimAimPrecision",
       "name": "getAnimAimPrecision",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Get coefficient for animation speed.",
@@ -9068,7 +9108,7 @@
       ],
       "id": "getAttackTarget",
       "name": "getAttackTarget",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -9253,7 +9293,7 @@
       ],
       "id": "getCursorObjectParams",
       "name": "getCursorObjectParams",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns aimPrecision from animation state with custom value that will directly affects weapon sway size and speed.",
@@ -9867,7 +9907,7 @@
       ],
       "id": "getObjectDLC",
       "name": "getObjectDLC",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns Field of View of the given object in [[rad]]ians. Static objects return default value, which is 1.\nFOV of [[objNull]] is 0.\nObject FOV is indirectly connected with optics magnification or player view zoom, the narrower the angle the greater the zoom.\n{{Feature|informative|The FOV returned by this command doesn't change if user has custom FOV set in profile. Use it in combination with [[getResolution]] to adjust for the difference if required.}}",
@@ -10563,7 +10603,7 @@
       ],
       "id": "getTowParent",
       "name": "getTowParent",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -10600,7 +10640,7 @@
       ],
       "id": "getUnitFreefallInfo",
       "name": "getUnitFreefallInfo",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -10902,7 +10942,7 @@
       ],
       "id": "groupOwner",
       "name": "groupOwner",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sends the audio message to the group radio channel. The message is defined in CfgRadio in the [[Description.ext|description.ext]] file or config radio protocol. \n{{Feature|important|\nThe unit must have an [[assignItem|assigned]] radio item (such as '''''\"ItemRadio\"''''') to see or transmit the messages.\nA radio item must have the property <syntaxhighlight lang=\"cpp\" inline>simulation = \"ItemRadio\";</syntaxhighlight> in its [[CfgWeapons_Config_Reference#simulation.3D.22Weapon.22|CfgWeapons config]].\n}}\n{{Feature|informative|When the transmitting unit gets killed, the transmission is interrupted. However when the receiving unit gets killed, the transmission continues to play.}}",
@@ -10957,7 +10997,7 @@
       ],
       "id": "gunner",
       "name": "gunner",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Return the current gusts value.",
@@ -11401,7 +11441,7 @@
       ],
       "id": "inGameUISetEventHandler",
       "name": "inGameUISetEventHandler",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Checks whether position is inside given polygon. The polygon is only checked in 2 dimensions, i.e. the value of Z is ignored.",
@@ -11538,6 +11578,16 @@
       "id": "inputMouse",
       "name": "inputMouse",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "insert",
+      "name": "insert",
+      "status": "Failed"
     },
     {
       "description": "No documentation available",
@@ -11846,7 +11896,7 @@
       ],
       "id": "isEqualTypeAny",
       "name": "isEqualTypeAny",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Compares types of all elements of one array to types of all elements of another array. Since Arma 3 v2.09.149634 no additional check is needed to make sure the first argument is an [[Array]].",
@@ -12249,7 +12299,7 @@
       ],
       "id": "isServer",
       "name": "isServer",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns true if the editor is set to draw 3D icons.\n{{Feature|informative|Some Old Editor Command}}",
@@ -12303,7 +12353,7 @@
       ],
       "id": "isSteamOverlayEnabled",
       "name": "isSteamOverlayEnabled",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns the status of STREAM FRIENDLY UI setting in UI (OPTIONS >> GAME >> GENERAL >> STREAM FRIENDLY UI).",
@@ -12504,7 +12554,7 @@
       ],
       "id": "itemsWithMagazines",
       "name": "itemsWithMagazines",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -12950,7 +13000,7 @@
       ],
       "id": "lbSetSelectColorRight",
       "name": "lbSetSelectColorRight",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the selection state of the given row of the given listbox of style LB_MULTI.\nThe command has to be called for every row which is needed to be selected in multi-selection listbox. Use negative index -1 to select/deselect all rows (since {{GVI|arma3|2.12}}).\nFor single selection listbox use [[lbSetCurSel]] instead.",
@@ -12986,7 +13036,7 @@
       ],
       "id": "lbSetTooltip",
       "name": "lbSetTooltip",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the additional value in the row with the given index of a [[CT_LISTBOX]] or [[CT_COMBO]] control.",
@@ -13189,7 +13239,7 @@
       ],
       "id": "libraryDisclaimers",
       "name": "libraryDisclaimers",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns the life state of the given unit.\n{{{!}} class=\"wikitable\"\n! {{arma2}}\n! {{arma3}}\n{{!}}-\n{{!}}\n* \"ALIVE\"\n* \"DEAD\"\n* \"DEAD-RESPAWN\"\n* \"DEAD-SWITCHING\"\n* \"ASLEEP\"\n* \"UNCONSCIOUS\"\n{{!}}\n* \"HEALTHY\"\n* \"DEAD\"\n* \"DEAD-RESPAWN\"\n* \"DEAD-SWITCHING\"\n* \"INCAPACITATED\"\n* \"INJURED\"\n{{!}}}\n\n{{Feature | arma3 | In {{arma3}}, [[lifeState]] seems to change to \"INJURED\" when <sqf inline>damage aliveUnit >= 0.1</sqf> (0.1 seeming to be the value defined in config under {{sic|\"InjuredTreshold\"|Threshold}}). When the state is \"INCAPACITATED\", a sub-state is available via [[incapacitatedState]] command.}}",
@@ -13274,6 +13324,16 @@
       "groups": [],
       "id": "lineIntersectsObjs",
       "name": "lineIntersectsObjs",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Param `surfaceNormal` not found in pool"
+      ],
+      "groups": [],
+      "id": "lineIntersectsSurfaces",
+      "name": "lineIntersectsSurfaces",
       "status": "Failed"
     },
     {
@@ -13826,7 +13886,7 @@
       ],
       "id": "localize",
       "name": "localize",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "A non-existing [[Location]]. To compare non-existent locations use [[isNull]] or [[isEqualTo]]:\n<sqf>\nlocationNull == locationNull;\t\t\t// false\nisNull locationNull;\t\t\t\t\t// true\nlocationNull isEqualTo locationNull;\t// true\n</sqf>",
@@ -14466,6 +14526,16 @@
       "status": "Passed"
     },
     {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "menuHover",
+      "name": "menuHover",
+      "status": "Failed"
+    },
+    {
       "description": "Returns picture set into item on given path.",
       "groups": [
         "GUI Control - Menu"
@@ -14608,7 +14678,7 @@
       ],
       "id": "menuValue",
       "name": "menuValue",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Merges two [[HashMap]]s.",
@@ -14822,7 +14892,7 @@
       ],
       "id": "moonIntensity",
       "name": "moonIntensity",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -14863,12 +14933,15 @@
     },
     {
       "description": "Moves unit to the first available seat in the specified vehicle.\n\nThe order of priorities is the same order used in squad command when you order subordinates to get in vehicle to any position and is the same order used in Zeus when you drag units to a vehicle.<br><br>\nSeat assignment seems to use the following priority logic:<br>\ndriver ([[moveInDriver]]) &rarr; commander ([[moveInCommander]]) &rarr; gunner ([[moveInGunner]]) &rarr; turrets ([[moveInTurret]]) &rarr; cargo ([[moveInCargo]]).\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}\n{{Feature|informative|This command will move player into the [[locked]] vehicle or seat just as well.}}",
+      "errors": [
+        "Unknown simple type: array"
+      ],
       "groups": [
         "Unit Control"
       ],
       "id": "moveInAny",
       "name": "moveInAny",
-      "status": "Unknown"
+      "status": "Failed"
     },
     {
       "description": "Moves a unit into a vehicle cargo position (immediately and without animation).\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}",
@@ -15111,6 +15184,16 @@
       "id": "nearestLocations",
       "name": "nearestLocations",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "nearestMines",
+      "name": "nearestMines",
+      "status": "Failed"
     },
     {
       "description": "Returns the nearest object of given type (or inherited classes) to given position within a sphere. Hardcoded radius is 50 meters.\nUnlike with [[nearestObjects]], where distance is measured in 2D space, [[nearestObject]] will be closest object in 3D space.\n\n{{Feature|informative|\n* in {{ofp}}, only objects of the exact provided class are found.\n* if an object ID is used ({{Link|#Syntax 4}}, see {{Link|#Example 2}}) the search range is unlimited\n}}",
@@ -15523,7 +15606,7 @@
       ],
       "id": "openDSInterface",
       "name": "openDSInterface",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Opens or closes minimap if player has {{hl|\"ItemGPS\"}} linked in inventory and {{hl|\"MinimapDisplayComponent\"}} is not disabled with [[enableInfoPanelComponent]]. Returns [[true]] on success. If more than one minimap is open (see [[infoPanels]], [[infoPanel]]) each call to the command will close only 1 minimap. Visibility of minimap can be checked with [[visibleGPS]] command.",
@@ -15848,7 +15931,7 @@
       ],
       "id": "playScriptedMission",
       "name": "playScriptedMission",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Plays a sound from CfgSounds. Sound can be defined in [[missionConfigFile]], [[configFile]] or [[campaignConfigFile]].",
@@ -16170,6 +16253,16 @@
       "status": "Passed"
     },
     {
+      "description": "No documentation available",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
+      "groups": [],
+      "id": "private",
+      "name": "private",
+      "status": "Failed"
+    },
+    {
       "description": "Disables the implicit inheritance of local variables, as defined in the parent scope.<br>\nBy default, any local variables defined in a parent scope are available to the lower scope code.<br>\nAfter using [[privateAll]], parent scope variables can no longer be accessed implicitly. However, it is still possible to explicitly access parent scope variables using the [[import]] command.",
       "groups": [
         "Variables"
@@ -16352,7 +16445,7 @@
       ],
       "id": "queryWeaponPool",
       "name": "queryWeaponPool",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Converts given value in degrees to radians. 1 radian equals 180 degrees divided by [[pi]].",
@@ -16404,6 +16497,16 @@
       "status": "Passed"
     },
     {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "radioChannelSetCallSign",
+      "name": "radioChannelSetCallSign",
+      "status": "Failed"
+    },
+    {
       "description": "Set the custom radio channel's label.",
       "groups": [
         "Radio and Chat",
@@ -16429,7 +16532,7 @@
       ],
       "id": "radioVolume",
       "name": "radioVolume",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns the current value of rain density.",
@@ -16591,6 +16694,16 @@
     {
       "description": "No documentation available",
       "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
+      "groups": [],
+      "id": "remoteExec",
+      "name": "remoteExec",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
         "Invalid call: see [[remoteExec]]"
       ],
       "groups": [],
@@ -16733,7 +16846,7 @@
       ],
       "id": "removeAllEventHandlers",
       "name": "removeAllEventHandlers",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Removes all items from [[handgunWeapon]], except magazine.",
@@ -17302,7 +17415,7 @@
       ],
       "id": "requiredVersion",
       "name": "requiredVersion",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Stops any ongoing camera shake effects. Does not prevent new effects from being created. To disallow new effects altogether, [[enableCamShake]] should be used.",
@@ -17430,7 +17543,7 @@
       ],
       "id": "roleDescription",
       "name": "roleDescription",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns [[true]] if entity can be attached to a rope end.",
@@ -17631,7 +17744,7 @@
       ],
       "id": "safeZoneW",
       "name": "safeZoneW",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns absolute [[safeZoneW]] including all monitors.<br>\n[[File:UI_12-3.jpg|600px]]",
@@ -17694,7 +17807,7 @@
       ],
       "id": "saveGame",
       "name": "saveGame",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Saves units's identity to [[Objects.sav]] file in campaign directory as entry name.",
@@ -17703,7 +17816,7 @@
       ],
       "id": "saveIdentity",
       "name": "saveIdentity",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Saves joysticks key mappings into the joysticks.cfg file. Engine add these joysticks to the Joystick Scheme mapping dialog in options controls section.",
@@ -17872,7 +17985,7 @@
       ],
       "id": "scriptName",
       "name": "scriptName",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "A non-existing or [[scriptDone|completed]] [[Script Handle]]. To compare non-existent scripts use [[isNull]] or [[isEqualTo]]:\n<sqf>\nscriptNull == scriptNull;\t\t\t// ERROR! == cannot be used with script object\nisNull scriptNull;\t\t\t\t\t// true\nscriptNull isEqualTo scriptNull;\t// true\n</sqf>",
@@ -17919,6 +18032,16 @@
       "id": "secondaryWeaponMagazine",
       "name": "secondaryWeaponMagazine",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "select",
+      "name": "select",
+      "status": "Failed"
     },
     {
       "description": "No documentation available",
@@ -18090,6 +18213,16 @@
     {
       "description": "No documentation available",
       "errors": [
+        "Failed to parse array with element line: 'value: [[String]], [[Number]], [[Boolean]] or [[Array]] - entry's value; if an [[Array]], inserts its content at the end of ''keyValuePairs''; if any other [[Data Types|Data Type]], it is ignored'"
+      ],
+      "groups": [],
+      "id": "sendAnalyticEvent",
+      "name": "sendAnalyticEvent",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
         "Unknown simple type: -"
       ],
       "groups": [],
@@ -18237,7 +18370,7 @@
       ],
       "id": "serverTime",
       "name": "serverTime",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Changes the element at the given zero-based index of the [[Array|array]]. \n\n{{Feature|informative|If the index is out of bounds, the array will [[resize]] to incorporate the index as its last value, padding with [[nil]] as necessary (see {{Link|#Example 4}}). }}",
@@ -18310,7 +18443,7 @@
       ],
       "id": "set3DENLinesVisible",
       "name": "set3DENLinesVisible",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the new type of Logic object(s). For other objects use [[set3DENObjectType]].",
@@ -18754,7 +18887,7 @@
       ],
       "id": "setCuratorWaypointCost",
       "name": "setCuratorWaypointCost",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets given channel as current chat channel. Scripted way of selecting desired channel on the UI.\nThe given channel may be disabled (see [[enableChannel]]), this is why this command returns boolean, [[true]] on success or [[false]] on failure. \n{{{!}} class=\"wikitable align-center\"\n! colspan=\"13\" {{!}} [[Channel IDs|channel ID]] number correspondence\n{{!}}-\n{{!}} {{n/a}}\n{{!}} Global\n{{!}} Side\n{{!}} Command\n{{!}} Group\n{{!}} Vehicle\n{{!}} Direct\n{{!}} Custom1\n{{!}} rowspan=\"2\" {{!}} ..\n{{!}} Custom10\n{{!}} {{GVI|arma3|2.22|size= 0.75}} Custom11\n{{!}} rowspan=\"2\" {{!}} ..\n{{!}} Custom50\n{{!}}-\n{{!}} -1\n{{!}} 0\n{{!}} 1\n{{!}} 2\n{{!}} 3\n{{!}} 4\n{{!}} 5\n{{!}} 6\n{{!}} 15\n{{!}} 26\n{{!}} 65\n{{!}}}",
@@ -18847,7 +18980,7 @@
       ],
       "id": "setDate",
       "name": "setDate",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets debriefing title, text, subtitle, picture and background for a mission ending.\nThe end type could be the engine-defined (\"CONTINUE\", \"KILLED\", \"LOSER\", \"END1\", \"END2\", \"END3\", \"END4\", \"END5\", \"END6\"), config-defined (see [[Debriefing#Configuration|CfgDebriefing]]) or, with an alternative syntax of this command, any [[String]].\nGiven texts will be used to replace the corresponding texts on the debriefing screen.\n\n{{Feature|important|In order to benefit from alternative syntax functionality, there will have to be at least '''three''' arguments passed to the command; '''two''' arguments will trigger the old behaviour.}}\n[[File:endMission.jpg|400px]] [[File:failMission.jpg|400px]]",
@@ -18929,6 +19062,16 @@
       "groups": [],
       "id": "setDrawIcon",
       "name": "setDrawIcon",
+      "status": "Failed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: array"
+      ],
+      "groups": [],
+      "id": "setDriveOnPath",
+      "name": "setDriveOnPath",
       "status": "Failed"
     },
     {
@@ -19534,7 +19677,7 @@
       ],
       "id": "setMarkerAlpha",
       "name": "setMarkerAlpha",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the marker alpha. See [[setMarkerAlpha]].",
@@ -19679,7 +19822,7 @@
       ],
       "id": "setMarkerShapeLocal",
       "name": "setMarkerShapeLocal",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the marker's size.\n{{Feature|informative|\n'''Multiplayer optimisation:''' Global marker commands always broadcast the ''entire'' marker state over the network.\nAs such, the number of network messages exchanged when creating or editing a marker can be reduced by performing all but the last operation using local marker commands, then using a global marker command for the last change (and subsequent global broadcast of all changes applied to the marker).\n}}",
@@ -19952,7 +20095,7 @@
       ],
       "id": "setOxygenRemaining",
       "name": "setOxygenRemaining",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Updates particle source, creates particles in circle with given radius. Velocity is transformed and added to total velocity. The random particle positioning is calculated in relation to the nearest surface. Since Arma 3 2.22, this could be overridden (will also override onSurface = true).",
@@ -19979,7 +20122,7 @@
       ],
       "id": "setParticleFire",
       "name": "setParticleFire",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Set parameters to particle source. Array is in format [[ParticleArray]]. <br>\n\nSince Arma 3 version 1.11.114706 you can use this command to overwrite many values set by [[setParticleClass]], particularity those defined in [[ParticleArray]]. Correspondence between CfgCloudlets class param names and command array of params:\n<sqf>\nparticleSource setParticleParams\n[\n\t/*\n\t\tString or Array - If string then the name of the particleShape. And following default values are used:\n\t\t\tparticleFSNtieth = 1\n\t\t\tparticleFSIndex = 0\n\t\t\tparticleFSFrameCount = 1\n\t\t\tparticleFSLoop = 1\n\t*/\n\t[\n\t\tparticleShape,\t\t\t/* String */\n\t\tparticleFSNtieth,\t\t/* Number */\n\t\tparticleFSIndex,\t\t/* Number */\n\t\tparticleFSFrameCount,\t/* Number */\n\t\tparticleFSLoop\t\t\t/* Optional - Number. Default: 1 */\n\t],\n\tanimationName,\t\t\t\t/* String */\n\tparticleType,\t\t\t\t/* String - Enum: Billboard, SpaceObject */\n\ttimerPeriod,\t\t\t\t/* Number */\n\tlifeTime,\t\t\t\t\t/* Number */\n\tpos3D,\t\t\t\t\t\t/* 3D Array of numbers as relative position to particleSource or (if object at index 18 is set) object. \n\t\t\t\t\t\t\t\t\tOr (if object at index 18 is set) String as memoryPoint of object. */\n\tmoveVelocity,\t\t\t\t/* 3D Array of numbers. */\n\trotationVelocity,\t\t\t/* Number */\n\tweight,\t\t\t\t\t\t/* Number */\n\tvolume,\t\t\t\t\t\t/* Number */\n\trubbing,\t\t\t\t\t/* Number */\n\tsizeOverLifetime,\t\t\t/* Array of Numbers */\n\tcolor,\t\t\t\t\t\t/* Array of Array of RGBA Numbers */\n\tanimationSpeed,\t\t\t\t/* Array of Number */\n\trandomDirectionPeriod,\t\t/* Number */\n\trandomDirectionIntensity,\t/* Number */\n\tonTimerScript,\t\t\t\t/* String */\n\tbeforeDestroyScript,\t\t/* String */\n\tobj,\t\t\t\t\t\t/* Object */\n\tangle,\t\t\t\t\t\t/* Optional Number - Default: 0 */\n\tonSurface,\t\t\t\t\t/* Optional Boolean - Default: true */\n\tbounceOnSurface,\t\t\t/* Optional Number - Default: -1 */\n\temissiveColor,\t\t\t\t/* Optional Array of Array of RGBA Numbers - Default [0,0,0,0] */\n\tvectorDirOrVectorDirAndUp\t/* Optional vector dir or [vectorDir, vectorUp]\n\t\tSince Arma 3 v1.92 it is possible to set the initial direction of the SpaceObject\n\t\tSince Arma 3 v2.12 it is possible to use a [vectorDir, vectorUp] array */\n];\n</sqf>",
@@ -20218,7 +20361,7 @@
       ],
       "id": "setRain",
       "name": "setRain",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Changes the rainbow value smoothly during the given time (in seconds). A time of zero means there will be an immediate change.",
@@ -20245,7 +20388,7 @@
       ],
       "id": "setRank",
       "name": "setRank",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Set the shape of a location to be either rectangular or elliptical. Locations default shape is elliptical.",
@@ -20475,7 +20618,7 @@
       ],
       "id": "setSuppression",
       "name": "setSuppression",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Set system of units. This will only impact gauges from advanced flight model.\n{{Feature|important|This command is buggy: any value other than 0 (metric) will display both units at the same time.}}",
@@ -20494,7 +20637,7 @@
       ],
       "id": "setTIParameter",
       "name": "setTIParameter",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets how the target is known to the other centers. They behave like the target was seen age seconds ago.",
@@ -20790,16 +20933,6 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
-      ],
-      "groups": [],
-      "id": "setUnitLoadout",
-      "name": "setUnitLoadout",
-      "status": "Failed"
-    },
-    {
       "description": "Set unit position rules. This command will not change the stance of the human player, even though it will change the output of [[unitPos]] command. To change player stance use [[playAction]] or [[playActionNow]]:\n<sqf>\nplayer playAction \"PlayerProne\"; // DOWN\nplayer playAction \"PlayerStand\"; // UP\nplayer playAction \"PlayerCrouch\"; // MIDDLE\n</sqf>",
       "groups": [
         "Unit Control"
@@ -21008,7 +21141,7 @@
       ],
       "id": "setVehicleReceiveRemoteTargets",
       "name": "setVehicleReceiveRemoteTargets",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets that the vehicle will share its own position via datalink to the [[Side]] center.",
@@ -21136,7 +21269,7 @@
       ],
       "id": "setWaves",
       "name": "setWaves",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Switches the unit behaviour when the waypoint becomes active.\n<br>\n<br>\nPossible values are:\n* \"UNCHANGED\"\n* \"CARELESS\"\n* \"SAFE\"\n* \"AWARE\"\n* \"COMBAT\"\n* \"STEALTH\"\n\nSee the [[AIBehaviour]] page for details of the effect of this command on AI units.",
@@ -21424,7 +21557,7 @@
       ],
       "id": "showGPS",
       "name": "showGPS",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Enable / disable showing of HUD. Defines visibility of weapon crosshair and any informational tags that appear when pointing the weapon at an object as well as availability of the default action menu. Unfortunately, it also hides icons drawn with [[drawIcon3D]].\n{{Feature|arma3|\n'''Since {{arma3}} v1.50''' there is a Description.ext's [[Description.ext#showHUD|showHUD[]]] array param that is identical in format to the extended [[showHUD]] command.\nWhen present, it will disable [[showHUD]] command entirely, allowing mission makers to permanently alter visibility of some HUD elements.<br>\n'''Since {{arma3}} v2.04''' it is possible to force drawing of [[drawIcon3D]] icons when HUD is hidden.\nThe icons will also show when custom camera is [[camCreate|created]] and the view is switched to it via [[switchCamera]] or [[cameraEffect]] provided [[cameraEffectEnableHUD]] is enabled.\nFor more information see [[drawIcon3D]].\n}}",
@@ -21803,7 +21936,7 @@
       ],
       "id": "simulSetHumidity",
       "name": "simulSetHumidity",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Synchronizes Simul Weather with {{arma}} weather, generates all keyframes.",
@@ -21885,7 +22018,7 @@
       ],
       "id": "sleep",
       "name": "sleep",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns current thumb position of [[CT_SLIDER]] or [[CT_XSLIDER]] with given idc of topmost user [[dialog]].",
@@ -21959,7 +22092,7 @@
       ],
       "id": "soldierMagazines",
       "name": "soldierMagazines",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Check if unit has some ammo.",
@@ -22115,7 +22248,7 @@
       ],
       "id": "stop",
       "name": "stop",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Instant engines stop. \n{{Feature|afm}}",
@@ -22710,7 +22843,7 @@
       ],
       "id": "tg",
       "name": "tg",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Links an [[If Type]] with [[Code]] to be executed if said [[If Type]]'s condition is [[true]]; otherwise, \"[[else]]\" code is executed if provided.<br>\nThe alternative syntax allows to set \"[[then]]\" code and \"[[else]]\" code in one array.\n{{Feature|informative|Variables declared inside ''thenCode'' are private to that code block - see {{Link|Variables#Local Variables Scope}}.}}",
@@ -22871,7 +23004,7 @@
       ],
       "id": "toLowerANSI",
       "name": "toLowerANSI",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Converts the supplied [[Array]] of [[Number]]s into a [[String]] through {{Link|https://en.wikipedia.org/wiki/Unicode}} characters representation conversion, or provided [[Code]] to [[compile|compilable]] [[String]].",
@@ -23517,7 +23650,7 @@
       ],
       "id": "underwater",
       "name": "underwater",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns name of uniform.",
@@ -23742,7 +23875,7 @@
       ],
       "id": "useAIOperMapObstructionTest",
       "name": "useAIOperMapObstructionTest",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -23818,7 +23951,7 @@
       ],
       "id": "vectorDiff",
       "name": "vectorDiff",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "[[File:arma3_object-vectors.jpg|thumb|right|An object with its [[vectorDir]], [[vectorUp]] and [[vectorSide]] (vectors not to scale)]]\nReturns an object's direction vector in world space.\n\n{{Feature|important|The vector is '''not necessarily [[vectorNormalized|normalized]]'''. The [[vectorMagnitude|magnitude]] of the vector depends on the [[getObjectScale|object's scale]].}}\n\nFor an object facing one of the cardinal directions on perfectly flat ground (parallel to the XY-plane of the world space), [[vectorDir]] returns simple values:\n* {{hl|[0, 1, 0]}} if the object is facing directly north\n* {{hl|[1, 0, 0]}} if the object is facing directly east\n* {{hl|[0, -1, 0]}} if the object is facing directly south\n* {{hl|[-1, 0, 0]}} if the object is facing directly west",
@@ -24161,7 +24294,7 @@
       ],
       "id": "viewDistance",
       "name": "viewDistance",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Checks if the player has compass opened and visible. Keep in mind that the GPS minimap in Arma 3 also shows the direction.",
@@ -24254,7 +24387,7 @@
       ],
       "id": "waves",
       "name": "waves",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Attaches a static object via its numeric ID to the given waypoint. Not to be confused with [[synchronizeWaypoint]]!\n\n{{Feature|important|\n* The [[#Syntax|main syntax]] doesn't work in {{arma3}} anymore.\n* The [[#Alternative_Syntax|alternative syntax]] is (at least) available since {{arma2}}.\n}}",
@@ -24308,7 +24441,7 @@
       ],
       "id": "waypointCombatMode",
       "name": "waypointCombatMode",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Gets the radius around the waypoint where the waypoint is completed.",
@@ -24651,7 +24784,7 @@
       ],
       "id": "while",
       "name": "while",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns the current wind vector (in m/s).",
@@ -24766,9 +24899,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 243,
-  "passed": 2349,
-  "timestamp": 1777922142,
-  "total": 2679,
+  "failed": 257,
+  "passed": 2431,
+  "timestamp": 1777945680,
+  "total": 2692,
   "version": "1.0"
 }

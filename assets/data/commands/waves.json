@@ -1,0 +1,29 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Return waves value.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>waveIntensity = waves;</sqf>"
+  ],
+  "groups": [
+    "Environment"
+  ],
+  "id": "waves",
+  "name": "waves",
+  "problem_notes": [],
+  "see_also": [
+    "setWaves"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": "Nular",
+      "ret": {
+        "type": "Number"
+      }
+    }
+  ]
+}

@@ -40,11 +40,13 @@
       },
       "left": {
         "Item": {
+          "desc": "transport",
           "name": "vehicle",
           "type": "Object"
         }
       },
       "ret": {
+        "desc": "the number of available positions ignoring locked positions",
         "type": "Number"
       },
       "right": {
@@ -104,6 +106,41 @@
             ]
           }
         }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "position"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "transport",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "the number of available positions ignoring locked positions",
+        "type": "Number"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "see [[moveInAny]]. Empty string \"\" returns number of all free positions",
+              "name": "position",
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
       }
     }
   ]

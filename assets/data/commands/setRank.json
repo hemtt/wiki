@@ -1,0 +1,52 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets rank of given unit.\n\n{{Feature|arma3|Before {{arma3}} v1.68 and in previous titles, this command was {{Icon|globalArgument|32}} {{Icon|localEffect|32}}.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player setRank \"COLONEL\";</sqf>"
+  ],
+  "groups": [
+    "Unit Identity"
+  ],
+  "id": "setRank",
+  "name": "setRank",
+  "problem_notes": [],
+  "see_also": [
+    "rank",
+    "setUnitRank"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unitName",
+          "rank"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unitName",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "one of:\n* {{hl|\"PRIVATE\"}}\n* {{hl|\"CORPORAL\"}}\n* {{hl|\"SERGEANT\"}}\n* {{hl|\"LIEUTENANT\"}}\n* {{hl|\"CAPTAIN\"}}\n* {{hl|\"MAJOR\"}}\n* {{hl|\"COLONEL\"}}",
+          "name": "rank",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

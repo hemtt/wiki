@@ -1,21 +1,24 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Returns the target given unit is engaging.",
+  "description": "Returns aim precision for current animation",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>private _unitsTarget = getAttackTarget _unit;</sqf>"
+    "<sqf>private _aimPrecision = getAnimAimPrecision player;</sqf>"
   ],
   "groups": [
-    "Object Manipulation"
+    "Animations",
+    "Stamina System"
   ],
-  "id": "getAttackTarget",
-  "name": "getAttackTarget",
+  "id": "getAnimAimPrecision",
+  "name": "getAnimAimPrecision",
   "problem_notes": [],
   "see_also": [
-    "assignedTarget"
+    "Arma",
+    "3:",
+    "Stamina"
   ],
   "since": {
-    "arma3": "2.00"
+    "arma3": "1.54"
   },
   "status": "Passed",
   "syntax": [
@@ -24,7 +27,7 @@
         "Unary": "unit"
       },
       "ret": {
-        "type": "Object"
+        "type": "Number"
       },
       "right": {
         "Item": {
