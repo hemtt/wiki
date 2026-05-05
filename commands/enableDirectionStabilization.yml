@@ -34,3 +34,4 @@ examples:
 see_also:
 - directionStabilizationEnabled
 - lockCameraTo
+- enableGunStabilization
