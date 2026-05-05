@@ -55,7 +55,6 @@
     "addForce",
     "addGoggles",
     "addGroupIcon",
-    "addHandgunItem",
     "addHeadgear",
     "addItem",
     "addItemCargo",
@@ -86,7 +85,6 @@
     "addScore",
     "addScoreSide",
     "addSecondaryWeaponItem",
-    "addSwitchableUnit",
     "addTeamMember",
     "addToRemainsCollector",
     "addTorque",
@@ -184,7 +182,6 @@
     "assignTeam",
     "assignToAirport",
     "assignedCargo",
-    "assignedCommander",
     "assignedDriver",
     "assignedGroup",
     "assignedGunner",
@@ -208,7 +205,6 @@
     "backpackItems",
     "backpackMagazines",
     "backpackSpaceFor",
-    "backpacks",
     "batteryChargeRTD",
     "behaviour",
     "benchmark",
@@ -467,11 +463,9 @@
     "ctrlRemoveAllEventHandlers",
     "ctrlRemoveEventHandler",
     "ctrlScale",
-    "ctrlScrollValues",
     "ctrlSetActiveColor",
     "ctrlSetAngle",
     "ctrlSetAutoScrollDelay",
-    "ctrlSetAutoScrollRewind",
     "ctrlSetAutoScrollSpeed",
     "ctrlSetBackgroundColor",
     "ctrlSetChecked",
@@ -586,7 +580,6 @@
     "damage",
     "date",
     "dateToNumber",
-    "dayTime",
     "deActivateKey",
     "debriefingText",
     "debugFSM",
@@ -620,7 +613,6 @@
     "diag_activeSQSScripts",
     "diag_captureFrameToFile",
     "diag_captureSlowFrame",
-    "diag_codePerformance",
     "diag_deltaTime",
     "diag_drawMode",
     "diag_dumpCalltraceToLog",
@@ -894,6 +886,7 @@
     "getAssetDLCInfo",
     "getAssignedCuratorLogic",
     "getAssignedCuratorUnit",
+    "getAttackTarget",
     "getBackpackCargo",
     "getBleedingRemaining",
     "getBoneNames",
@@ -941,7 +934,6 @@
     "getHitIndex",
     "getHitPointDamage",
     "getItemCargo",
-    "getLeaning",
     "getLighting",
     "getLightingAt",
     "getLoginStatus",
@@ -962,7 +954,6 @@
     "getObjectArgument",
     "getObjectDLC",
     "getObjectFOV",
-    "getObjectID",
     "getObjectProxy",
     "getObjectScale",
     "getObjectType",
@@ -1013,7 +1004,6 @@
     "getSoundController",
     "getSoundControllerResult",
     "getSpeed",
-    "getStamina",
     "getStatValue",
     "getSubtitleOptions",
     "getSuppression",
@@ -1216,7 +1206,6 @@
     "isWeaponRested",
     "itemCargo",
     "items",
-    "itemsWithMagazines",
     "joinAs",
     "joinAsSilent",
     "joinSilent",
@@ -1341,7 +1330,6 @@
     "loadMagazine",
     "loadOverlay",
     "loadStatus",
-    "loadUniform",
     "loadVest",
     "localNamespace",
     "localize",
@@ -1589,7 +1577,6 @@
     "pushBack",
     "pushBackUnique",
     "putWeaponPool",
-    "queryItemsPool",
     "queryMagazinePool",
     "queryWeaponPool",
     "rad",
@@ -1735,7 +1722,6 @@
     "saveStatus",
     "saveVar",
     "savingEnabled",
-    "say",
     "say3D",
     "scopeName",
     "score",
@@ -1974,6 +1960,7 @@
     "setPylonLoadout",
     "setPylonsPriority",
     "setRadioMsg",
+    "setRain",
     "setRainbow",
     "setRandomLip",
     "setRank",
@@ -2258,7 +2245,6 @@
     "true",
     "try",
     "turretLocal",
-    "turretOwner",
     "turretUnit",
     "tvAdd",
     "tvClear",
@@ -2357,7 +2343,6 @@
     "vehicle",
     "vehicleCargoEnabled",
     "vehicleChat",
-    "vehicleMoveInfo",
     "vehicleRadio",
     "vehicleReceiveRemoteTargets",
     "vehicleReportOwnPosition",
@@ -2599,9 +2584,6 @@
       "Unknown simple type: array"
     ],
     "diag_testScriptSimpleVM": [
-      "Unknown simple type: array"
-    ],
-    "difficultyOption": [
       "Unknown simple type: array"
     ],
     "drawArrow": [
@@ -3108,6 +3090,9 @@
     "setTurretLimits": [
       "Param `vehicle` not found in pool"
     ],
+    "setUnitLoadout": [
+      "Unknown simple type: array"
+    ],
     "setVariable": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -3215,8 +3200,7 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b",
-    "emptyPositions"
+    "a_less%3D_b"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
