@@ -590,16 +590,6 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Unknown simple type: array"
-      ],
-      "groups": [],
-      "id": "addForceGeneratorRTD",
-      "name": "addForceGeneratorRTD",
-      "status": "Failed"
-    },
-    {
       "description": "Create a new item and try to link it into goggles (glasses) slot.\n{{Feature | informative | This command does '''not''' add NVGs, which are [[hmd]] slot items (see [[linkItem]] instead).}}",
       "groups": [
         "Unit Inventory"
@@ -3476,16 +3466,6 @@
       "groups": [],
       "id": "composeText",
       "name": "composeText",
-      "status": "Failed"
-    },
-    {
-      "description": "No documentation available",
-      "errors": [
-        "Exceeded maximum recursion depth while parsing Value"
-      ],
-      "groups": [],
-      "id": "configClasses",
-      "name": "configClasses",
       "status": "Failed"
     },
     {
@@ -19494,7 +19474,7 @@
       ],
       "id": "setInfoPanel",
       "name": "setInfoPanel",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "No documentation available",
@@ -24919,9 +24899,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 258,
-  "passed": 2434,
-  "timestamp": 1778007884,
-  "total": 2694,
+  "failed": 256,
+  "passed": 2433,
+  "timestamp": 1778031136,
+  "total": 2692,
   "version": "1.0"
 }
