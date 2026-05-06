@@ -1889,6 +1889,7 @@
     "setHumidity",
     "setIdentity",
     "setImportance",
+    "setInfoPanel",
     "setLeader",
     "setLightAmbient",
     "setLightAttenuation",
@@ -2459,6 +2460,9 @@
     "addEditorObject": [
       "Unknown simple type: array"
     ],
+    "addForceGeneratorRTD": [
+      "Unknown simple type: array"
+    ],
     "addMagazine": [
       "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool"
     ],
@@ -2505,6 +2509,9 @@
       "Exceeded maximum recursion depth while parsing Value"
     ],
     "composeText": [
+      "Exceeded maximum recursion depth while parsing Value"
+    ],
+    "configClasses": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
     "createDiaryRecord": [
