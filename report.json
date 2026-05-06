@@ -1,6 +1,5 @@
 {
   "passed_commands": [
-    "!_a",
     "%2B",
     "-",
     "AGLToASL",
@@ -697,7 +696,6 @@
     "doMove",
     "doStop",
     "doSuppressiveFire",
-    "doTarget",
     "doWatch",
     "doorPhase",
     "drawEllipse",
@@ -710,10 +708,8 @@
     "drawTriangle",
     "drawXPolygon",
     "driver",
-    "drop",
     "dynamicSimulationDistance",
     "dynamicSimulationDistanceCoef",
-    "dynamicSimulationEnabled",
     "dynamicSimulationSystemEnabled",
     "east",
     "echo",
@@ -1139,7 +1135,6 @@
     "isBurning",
     "isClass",
     "isCollisionLightOn",
-    "isCopilotEnabled",
     "isDLCAvailable",
     "isDamageAllowed",
     "isDedicated",
@@ -1387,7 +1382,6 @@
     "markerBrush",
     "markerChannel",
     "markerColor",
-    "markerDir",
     "markerDrawPriority",
     "markerPos",
     "markerShadow",
@@ -1533,7 +1527,6 @@
     "pixelGridNoUIScale",
     "pixelH",
     "pixelW",
-    "playAction",
     "playActionNow",
     "playGesture",
     "playMission",
@@ -1558,7 +1551,6 @@
     "positionCameraToWorld",
     "ppEffectAdjust",
     "ppEffectCommit",
-    "ppEffectCommitted",
     "ppEffectDestroy",
     "ppEffectEnable",
     "ppEffectEnabled",
@@ -1795,7 +1787,6 @@
     "setAccTime",
     "setActualCollectiveRTD",
     "setAirplaneThrottle",
-    "setAirportSide",
     "setAmmo",
     "setAmmoCargo",
     "setAmmoOnPylon",
@@ -1964,7 +1955,6 @@
     "setPitch",
     "setPlateNumber",
     "setPlayable",
-    "setPlayerRespawnTime",
     "setPlayerVoNVolume",
     "setPos",
     "setPosASL",
@@ -2147,7 +2137,6 @@
     "size",
     "sizeOf",
     "skill",
-    "skillFinal",
     "skipTime",
     "sleep",
     "sliderPosition",
@@ -3162,9 +3151,6 @@
     "targetsQuery": [
       "Failed to parse array with element line: 'targetPosition: [[Array]] - [x,y] of the target'"
     ],
-    "taskDestination": [
-      "Exceeded maximum recursion depth while parsing Value"
-    ],
     "taskMarkerOffset": [
       "Unknown simple type: array"
     ],
@@ -3212,7 +3198,6 @@
     ]
   },
   "outdated_commands": [
-    "!_a",
     "%2B",
     "a_%25_b",
     "a_%26%26_b",
