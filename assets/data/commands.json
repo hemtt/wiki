@@ -8,7 +8,7 @@
       ],
       "id": "!_a",
       "name": "!",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Selects an element from an [[Array]], same as [[select]] command for arrays, but has [[Order of Precedence|higher precedence]].\n{{Feature|informative|'''#''' has higher precedence than all binary operators, but it has lower precedence than unary operators (see {{Link|#Example 3}}).}}",
@@ -6983,7 +6983,7 @@
       ],
       "id": "doTarget",
       "name": "doTarget",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Order the given unit(s) to watch the given position or target (without radio messages). Use [[objNull]] as the target to order a unit to stop watching a position/target.",
@@ -7144,7 +7144,7 @@
       ],
       "id": "drop",
       "name": "drop",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "A getter for [[setDynamicSimulationDistance]].",
@@ -7171,7 +7171,7 @@
       ],
       "id": "dynamicSimulationEnabled",
       "name": "dynamicSimulationEnabled",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "A getter for [[enableDynamicSimulationSystem]]",
@@ -11824,7 +11824,7 @@
       ],
       "id": "isCopilotEnabled",
       "name": "isCopilotEnabled",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns true if the DLC (CDLC included) is marked as available on Steam.\nOfficial and Creator DLC appIds can be found on [[:Category:Arma 3: DLCs & Expansions|Arma 3: DLCs & Expansions]] and [[:Category:Arma 3: CDLCs|Arma 3: CDLCs]] pages.\n{{Feature|important|This command will return [[true]] if the DLC is owned, even if it is '''not''' installed!}}",
@@ -14321,7 +14321,7 @@
       ],
       "id": "markerDir",
       "name": "markerDir",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns marker draw priority.",
@@ -15878,7 +15878,7 @@
       ],
       "id": "playAction",
       "name": "playAction",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "When used on a person, a smooth transition to the given action will be initiated, but all previous playAction are discarded.\n{{Feature|arma3|For {{arma3}} actions, see [[playAction/actions]].}}",
@@ -16106,7 +16106,7 @@
       ],
       "id": "ppEffectCommitted",
       "name": "ppEffectCommitted",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "No documentation available",
@@ -18553,7 +18553,7 @@
       ],
       "id": "setAirportSide",
       "name": "setAirportSide",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets custom ammo count in the currently loaded magazine of the specified weapon or muzzle.",
@@ -20261,7 +20261,7 @@
       ],
       "id": "setPlayerRespawnTime",
       "name": "setPlayerRespawnTime",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets provided player's Voice over Network (VoN) volume.",
@@ -22019,7 +22019,7 @@
       ],
       "id": "skillFinal",
       "name": "skillFinal",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Jumps the specified number of hours forward or backward.<br>The time of day and tides are adjusted, but no changes are made to any units. If present, the lower level of clouds instantly jump to the position they would be in if time had passed normally.",
@@ -22642,6 +22642,16 @@
       "id": "taskDescription",
       "name": "taskDescription",
       "status": "Passed"
+    },
+    {
+      "description": "No documentation available",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
+      "groups": [],
+      "id": "taskDestination",
+      "name": "taskDestination",
+      "status": "Failed"
     },
     {
       "description": "Shows info about new, changed or failed task. The text can contain several lines. {{hl|\\n}} is used to set a line return.\n{{Feature|arma3|It is recommended to use [[BIS_fnc_showNotification]] in order to maintain {{arma3}}'s visual style.}}",
@@ -24909,9 +24919,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 257,
-  "passed": 2423,
-  "timestamp": 1778074088,
-  "total": 2693,
+  "failed": 258,
+  "passed": 2434,
+  "timestamp": 1778095240,
+  "total": 2694,
   "version": "1.0"
 }
