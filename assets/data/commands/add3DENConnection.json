@@ -1,9 +1,10 @@
 {
   "argument_loc": "Unspecified",
-  "description": "[[Eden Editor: Connecting|Connect]] entities together. Be aware to select the correct type of [[Eden Entity|Eden Entities]]. For example, grouping only works between entities of type [[Group]].",
+  "description": "[[Eden Editor: Connecting|Connect]] entities together. Be aware to select the correct type of [[Eden Entity|Eden Entities]] for the connection type.",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>add3DENConnection [\"RandomStart\", get3DENSelected \"Object\", \"marker_0\"];// Set random start on marker \"marker_0\" for all selected objects.</sqf>"
+    "<sqf>add3DENConnection [\"RandomStart\", get3DENSelected \"Object\", \"marker_0\"];// Set random start on marker \"marker_0\" for all selected objects.</sqf>",
+    "<sqf>\n// Group all selected units to the first selected group\nprivate _group = get3DENSelected \"Group\" param [0, grpNull];\nprivate _units = get3DENSelected \"Objects\";\n\nadd3DENConnection [\"Group\", _units, _group];\n</sqf>"
   ],
   "groups": [
     "Eden Editor"
