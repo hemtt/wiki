@@ -153,4 +153,5 @@ see_also:
 - removeAction]],
 - removeAllActions]],
 - action]],
+- shownAction]],
 - BIS_fnc_holdActionAdd
