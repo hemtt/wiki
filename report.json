@@ -3223,8 +3223,8 @@
     "a_:_b",
     "a_greater%3D_b",
     "a_less%3D_b",
-    "add3DENConnection",
     "addAction",
+    "isActionMenuVisible",
     "shownAction"
   ],
   "unknown_types_commands": [],
