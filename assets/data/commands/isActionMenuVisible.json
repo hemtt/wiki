@@ -15,6 +15,7 @@
     "inGameUISetEventHandler",
     "commandingMenu",
     "showCommandingMenu",
+    "shownAction",
     "BIS_fnc_addCommMenuItem",
     "BIS_fnc_removeCommMenuItem"
   ],
