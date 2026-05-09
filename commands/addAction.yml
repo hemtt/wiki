@@ -150,8 +150,8 @@ see_also:
 - inGameUISetEventHandler
 - showHUD
 - inputAction
-- removeAction]],
-- removeAllActions]],
-- action]],
-- shownAction]],
+- removeAction
+- removeAllActions
+- action
+- shownAction
 - BIS_fnc_holdActionAdd
