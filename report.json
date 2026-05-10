@@ -218,6 +218,7 @@
     "binocularMagazine",
     "blufor",
     "boundingBox",
+    "boundingBoxReal",
     "boundingCenter",
     "brakesDisabled",
     "break",
@@ -476,6 +477,7 @@
     "ctrlSetChecked",
     "ctrlSetDisabledColor",
     "ctrlSetEventHandler",
+    "ctrlSetFade",
     "ctrlSetFocus",
     "ctrlSetFont",
     "ctrlSetFontH1",
@@ -3059,6 +3061,9 @@
     "setDamage": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
+    "setDammage": [
+      "Unknown simple type: -"
+    ],
     "setDrawIcon": [
       "Unknown simple type: array"
     ],
@@ -3145,6 +3150,9 @@
     ],
     "surfaceType": [
       "Found 'since' for unknown parameter p3"
+    ],
+    "systemTime": [
+      "Exceeded maximum recursion depth while parsing Value"
     ],
     "targets": [
       "Unknown simple type: array"
