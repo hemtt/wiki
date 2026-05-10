@@ -2214,7 +2214,7 @@
       ],
       "id": "boundingBoxReal",
       "name": "boundingBoxReal",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns the position of the original (loaded) center of an object in model coordinates. Despite its name, it has nothing to do with [[boundingBox]] or [[boundingBoxReal]], it returns offset where {{hl|[0, 0, 0]}} was [[Object Builder]] / [[Oxygen 2]] when model was created.",
@@ -4783,7 +4783,7 @@
       ],
       "id": "ctrlSetFade",
       "name": "ctrlSetFade",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Sets the input focus on given control.\n\n{{Feature|important|\n* [[ctrlSetFocus]] seems to only work on controls that accept any input from keyboard or mouse.\n* if [[ctrlSetFocus]] is used on a [[CT_CONTROLS_GROUP]] that contains an interactable control, that control will automatically be active.\n* if [[ctrlSetFocus]] is used on a [[CT_CONTROLS_GROUP]] in which there are no interactable controls, then [[ctrlSetFocus]] will do nothing.}}",
@@ -18973,6 +18973,16 @@
       "status": "Failed"
     },
     {
+      "description": "No documentation available",
+      "errors": [
+        "Unknown simple type: -"
+      ],
+      "groups": [],
+      "id": "setDammage",
+      "name": "setDammage",
+      "status": "Failed"
+    },
+    {
       "description": "Sets mission date and time. Players joining after mission start will get the current server [[date]] including the year.\n{{Feature|important|\nWhile the game creates February 29th in a leap year, it removes December 31st.<br>\nFor example, <sqf inline>setDate [1980,12,31,12,0]</sqf> will result in the game jumping to [1981,1,1,12,0] as 1980 is a leap year.\n}}",
       "groups": [
         "Mission Information",
@@ -22531,6 +22541,16 @@
       "status": "Passed"
     },
     {
+      "description": "No documentation available",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
+      "groups": [],
+      "id": "systemTime",
+      "name": "systemTime",
+      "status": "Failed"
+    },
+    {
       "description": "Returns [[systemTime]] according to '''U'''niversal '''T'''ime '''C'''oordinated time scale.",
       "groups": [
         "Time"
@@ -24908,9 +24928,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 256,
-  "passed": 2433,
-  "timestamp": 1778417588,
-  "total": 2693,
+  "failed": 258,
+  "passed": 2435,
+  "timestamp": 1778438741,
+  "total": 2695,
   "version": "1.0"
 }
