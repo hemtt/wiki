@@ -723,7 +723,6 @@
     "effectiveCommander",
     "elevatePeriscope",
     "else",
-    "emptyPositions",
     "enableAI",
     "enableAIFeature",
     "enableAimPrecision",
@@ -2619,6 +2618,9 @@
     ],
     "drawLink": [
       "Unknown simple type: array"
+    ],
+    "emptyPositions": [
+      "Param `ignoreLocked` not found in pool"
     ],
     "enableFreeLook": [
       "Failed to parse parameter for command 'enableFreeLook': '[[Boolean]] - enable or disable the toggle'"
