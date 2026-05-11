@@ -7259,13 +7259,16 @@
     },
     {
       "description": "Returns the number of given empty positions in the vehicle.\n{{Feature|informative|To return the actual units in the vehicle use [[fullCrew]]. However if only the number is desired, use [[emptyPositions]] because it is faster.}}",
+      "errors": [
+        "Param `ignoreLocked` not found in pool"
+      ],
       "groups": [
         "Object Manipulation",
         "Unit Control"
       ],
       "id": "emptyPositions",
       "name": "emptyPositions",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Enables parts of the AI behavior that was disabled by [[disableAI]]. \n{{Feature|important|When player switches and leaves behind AI unit, you need to enable \"TeamSwitch\" AI on it <sqf inline>_unit enableAI \"TeamSwitch\";</sqf> so that the unit continues with [[waypoints]].}}\n{{Feature|arma3|Since Arma 3 v1.96 it is possible to return the state of the given AI flag via [[checkAIFeature]] or set it using alias command [[enableAIFeature]].}}",
@@ -24928,9 +24931,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 258,
-  "passed": 2435,
-  "timestamp": 1778489841,
+  "failed": 259,
+  "passed": 2434,
+  "timestamp": 1778509375,
   "total": 2695,
   "version": "1.0"
 }
