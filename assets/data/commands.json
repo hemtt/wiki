@@ -930,7 +930,7 @@
       ],
       "id": "addSwitchableUnit",
       "name": "addSwitchableUnit",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Add given member to given team. Effect is local, unless both member and team are local to PC on which command is executed, then effect is global.\n\n<br><br> The same [[Team Member]] can be member of several different [[teams]] at the same time.",
@@ -6007,7 +6007,7 @@
       ],
       "id": "deleteResources",
       "name": "deleteResources",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Removes the site.\n{{Feature|warning|This command is considered deprecated and is no longer supported}}",
@@ -16684,7 +16684,7 @@
       ],
       "id": "reloadEnabled",
       "name": "reloadEnabled",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Switches on remote control of the unit. The command was {{Icon|globalArgument|32}} prior to {{GVI|arma3|2.14}}). For more info see [[Remote Control Tutorial]].\n\nIf the drone is remote it will get transferred to the player's PC.\n{{Feature|informative|See also [[remoteControlled]], [[isRemoteControlling]], and {{Link|#Example 4}} for a getter workaround for earlier game versions.}}\n{{Feature|warning|Always use [[switchCamera]] first (when needed) before using [[remoteControl]] as doing it after may lead to unpredictable results.}}",
@@ -24932,8 +24932,8 @@
     }
   ],
   "failed": 259,
-  "passed": 2434,
-  "timestamp": 1778593817,
+  "passed": 2431,
+  "timestamp": 1778614108,
   "total": 2695,
   "version": "1.0"
 }
