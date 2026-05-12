@@ -86,7 +86,6 @@
     "addScore",
     "addScoreSide",
     "addSecondaryWeaponItem",
-    "addSwitchableUnit",
     "addTeamMember",
     "addToRemainsCollector",
     "addTorque",
@@ -606,7 +605,6 @@
     "deleteMarker",
     "deleteMarkerLocal",
     "deleteRange",
-    "deleteResources",
     "deleteSite",
     "deleteStatus",
     "deleteTeam",
@@ -1611,7 +1609,6 @@
     "registerTask",
     "registeredTasks",
     "reload",
-    "reloadEnabled",
     "remoteControl",
     "remoteControlled",
     "remoteExecutedJIPID",
@@ -3224,7 +3221,8 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b"
+    "a_less%3D_b",
+    "markerShape"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
