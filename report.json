@@ -2823,6 +2823,12 @@
     "hcGroupParams": [
       "Unknown simple type: array"
     ],
+    "hiddenActions": [
+      "Unknown simple type: array"
+    ],
+    "hideActions": [
+      "Exceeded maximum recursion depth while parsing Value"
+    ],
     "in": [
       "Unknown simple type: array"
     ],
@@ -3224,7 +3230,8 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b"
+    "a_less%3D_b",
+    "shownAction"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
