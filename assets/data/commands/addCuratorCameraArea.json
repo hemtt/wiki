@@ -3,7 +3,7 @@
   "description": "Adds or changes curator camera area (depends on if ID is already used).",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>myCurator addCuratorCameraArea [3,position mySoldier,300];</sqf>"
+    "<sqf>myCurator addCuratorCameraArea [3, position mySoldier, 300];</sqf>"
   ],
   "groups": [
     "Curator"

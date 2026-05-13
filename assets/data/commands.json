@@ -14384,7 +14384,7 @@
       "status": "Passed"
     },
     {
-      "description": "Returns the shape of given marker.",
+      "description": "Returns the shape of given marker. markerShape#Example_2\n\n{{Feature|informative|This command can be used as a fast way to check if a marker exists. See {{Link|#Example 2}}.}}",
       "groups": [
         "Markers"
       ],
@@ -24953,7 +24953,7 @@
   ],
   "failed": 261,
   "passed": 2434,
-  "timestamp": 1778681045,
+  "timestamp": 1778700610,
   "total": 2697,
   "version": "1.0"
 }

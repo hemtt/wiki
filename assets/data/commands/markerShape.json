@@ -1,9 +1,10 @@
 {
   "argument_loc": "Global",
-  "description": "Returns the shape of given marker.",
+  "description": "Returns the shape of given marker. markerShape#Example_2\n\n{{Feature|informative|This command can be used as a fast way to check if a marker exists. See {{Link|#Example 2}}.}}",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>if (markerShape \"Marker1\" == \"RECTANGLE\") then { hint \"Marker1 is a rectangle!\" };</sqf>"
+    "<sqf>if (markerShape \"Marker1\" == \"RECTANGLE\") then { hint \"Marker1 is a rectangle!\" };</sqf>",
+    "<sqf>if (markerShape \"Marker1\" == \"\") then { hint \"Marker1 does not exist!\" };</sqf>"
   ],
   "groups": [
     "Markers"
