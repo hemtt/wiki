@@ -30,7 +30,7 @@ server_exec: true
 since:
   arma3: '1.16'
 examples:
-- <sqf>myCurator addCuratorCameraArea [3,position mySoldier,300];</sqf>
+- <sqf>myCurator addCuratorCameraArea [3, position mySoldier, 300];</sqf>
 see_also:
 - Arma
 - '3:'
