@@ -1,6 +1,6 @@
 name: shownAction
 desc: |-
-  Get the internal enum of the displayed action (or -1 if none are displayed). Action enums: <spoiler><div style="font-size: 0.9em">
+  Get the internal enum of the displayed action (or 0 if none are displayed). Action enums: <spoiler><div style="font-size: 0.9em">
   {{Columns|4|
   # GetInCommander
   # GetInDriver
@@ -207,7 +207,7 @@ syntax:
 - call: Nular
   ret:
     type: Number
-    desc: action enum (see description) or -1 if no action is shown
+    desc: action enum (see description) or 0 otherwise
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
@@ -217,6 +217,8 @@ examples:
 - <sqf>if (shownAction == 111) then { hint "Open inventory action is shown" };</sqf>
 - <sqf>if (shownAction == 79) then { hint "Drop that lighter, now" };</sqf>
 see_also:
+- hideActions
+- hiddenActions
 - visibleMap
 - shownGPS
 - shownWatch
