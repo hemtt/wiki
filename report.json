@@ -3231,7 +3231,8 @@
     "a_:_b",
     "a_greater%3D_b",
     "a_less%3D_b",
-    "shownAction"
+    "addCuratorCameraArea",
+    "markerShape"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
