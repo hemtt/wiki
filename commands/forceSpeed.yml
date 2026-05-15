@@ -27,9 +27,12 @@ since:
   arma3: '0.50'
 examples:
 - <sqf>_helicopter forceSpeed 150;</sqf>
+- <sqf>_vtol forceSpeed 0; // vtol stop and hover </sqf>
+- <sqf>_vtol forceSpeed -1; // vtol resume </sqf>
 see_also:
 - getForcedSpeed
 - forceWalk
 - isWalking
 - isForcedWalk
 - getSpeed
+- limitSpeed
