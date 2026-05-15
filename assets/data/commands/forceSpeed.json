@@ -3,7 +3,9 @@
   "description": "Force the speed limit on given object (object will never attempt to move faster than given by forceSpeed). Use negative value to return to default behaviour.\n{{Feature|important|This has no effect on [[player]]s.}}",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>_helicopter forceSpeed 150;</sqf>"
+    "<sqf>_helicopter forceSpeed 150;</sqf>",
+    "<sqf>_vtol forceSpeed 0; // vtol stop and hover </sqf>",
+    "<sqf>_vtol forceSpeed -1; // vtol resume </sqf>"
   ],
   "groups": [
     "Object Manipulation"
@@ -16,7 +18,8 @@
     "forceWalk",
     "isWalking",
     "isForcedWalk",
-    "getSpeed"
+    "getSpeed",
+    "limitSpeed"
   ],
   "since": {
     "arma1": "1.00",

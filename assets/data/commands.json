@@ -13321,13 +13321,16 @@
     },
     {
       "description": "Limit the speed of an AI-driven vehicle or AI person to given value. It has continuous effect and AI will not break through the speed limitation until one is contacted, engaged or regrouped.",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
       "groups": [
         "Unit Control",
         "Object Manipulation"
       ],
       "id": "limitSpeed",
       "name": "limitSpeed",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Creates a structured text containing a line break.",
@@ -24951,9 +24954,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 261,
-  "passed": 2434,
-  "timestamp": 1778851642,
+  "failed": 262,
+  "passed": 2433,
+  "timestamp": 1778872556,
   "total": 2697,
   "version": "1.0"
 }
