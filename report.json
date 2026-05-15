@@ -1291,7 +1291,6 @@
     "lightDetachObject",
     "lightIsOn",
     "lightnings",
-    "limitSpeed",
     "lineBreak",
     "linearConversion",
     "linkItem",
@@ -2877,6 +2876,9 @@
     "libraryCredits": [
       "Unknown simple type: array"
     ],
+    "limitSpeed": [
+      "Exceeded maximum recursion depth while parsing Value"
+    ],
     "lineIntersects": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -3230,7 +3232,8 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b"
+    "a_less%3D_b",
+    "forceSpeed"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
