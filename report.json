@@ -3232,8 +3232,7 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b",
-    "forceSpeed"
+    "a_less%3D_b"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
