@@ -4,14 +4,15 @@ groups:
 - GUI Control - ListNBox
 syntax:
 - call: !Unary
-  - idc
+  - ctrl
   - data
   ret:
     type: Number
     desc: row index
   right: !Array
   - !Item
-    name: idc
+    name: ctrl
+    desc: ', [[Control]] since {{GVI|arma3|2.22}}'
     type: Number
   - !Item
     name: data
