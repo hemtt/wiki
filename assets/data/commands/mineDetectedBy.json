@@ -3,7 +3,7 @@
   "description": "Returns [[true]] if mine has been detected by a given side",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>(allMines select 0) mineDetectedBy west;</sqf>"
+    "<sqf>\nif (_myMine mineDetectedBy opfor) then\n{\n\thint \"Children yearn for the mines\";\n};\n</sqf>"
   ],
   "groups": [
     "Mines"
@@ -27,7 +27,7 @@
       "call": {
         "Binary": [
           "mine",
-          "faction"
+          "side"
         ]
       },
       "left": {
@@ -41,7 +41,7 @@
       },
       "right": {
         "Item": {
-          "name": "faction",
+          "name": "side",
           "type": "Side"
         }
       }
