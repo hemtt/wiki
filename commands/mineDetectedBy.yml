@@ -5,21 +5,21 @@ groups:
 syntax:
 - call: !Binary
   - mine
-  - faction
+  - side
   ret:
     type: Boolean
   left: !Item
     name: mine
     type: Object
   right: !Item
-    name: faction
+    name: side
     type: Side
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
   arma3: '1.24'
 examples:
-- <sqf>(allMines select 0) mineDetectedBy west;</sqf>
+- "<sqf>\nif (_myMine mineDetectedBy opfor) then\n{\n\thint \"Children yearn for the mines\";\n};\n</sqf>"
 see_also:
 - allMines
 - detectedMines
