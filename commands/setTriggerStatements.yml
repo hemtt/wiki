@@ -29,6 +29,7 @@ syntax:
       code that is executed when the trigger is activated. Special variables available here:
       * [[thisTrigger]] ([[Object]]) - trigger instance
       * [[thisList]] ([[Array]]) - array of all detected entities
+      * [[thisActivator]] ([[Object]]) {{GVI|arma3|2.22}} -  what or who activated the trigger, default: [[thisTrigger]]
     type: String
   - !Item
     name: deactivation
