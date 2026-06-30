@@ -69,7 +69,7 @@
           },
           {
             "Item": {
-              "desc": "code that is executed when the trigger is activated. Special variables available here:\n* [[thisTrigger]] ([[Object]]) - trigger instance\n* [[thisList]] ([[Array]]) - array of all detected entities",
+              "desc": "code that is executed when the trigger is activated. Special variables available here:\n* [[thisTrigger]] ([[Object]]) - trigger instance\n* [[thisList]] ([[Array]]) - array of all detected entities\n* [[thisActivator]] ([[Object]]) {{GVI|arma3|2.22}} -  what or who activated the trigger, default: [[thisTrigger]]",
               "name": "activation",
               "type": "String"
             }
