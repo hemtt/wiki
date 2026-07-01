@@ -47,6 +47,7 @@ since:
   arma3: '0.50'
 examples:
 - <sqf>_trg setTriggerStatements ["this", "hint 'trigger on'", "hint 'trigger off'"];</sqf>
+- Since Arma 3 v2.22:<sqf>_trg setTriggerStatements ["this", "hint ('Activated by ' + str thisActivator)", ""];</sqf>
 see_also:
 - triggerStatements
 - createTrigger
