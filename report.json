@@ -2022,7 +2022,6 @@
     "setTrafficDistance",
     "setTrafficGap",
     "setTrafficSpeed",
-    "setTriggerActivation",
     "setTriggerArea",
     "setTriggerInterval",
     "setTriggerStatements",
@@ -2243,7 +2242,6 @@
     "toUpper",
     "toUpperANSI",
     "triggerActivated",
-    "triggerActivation",
     "triggerAmmo",
     "triggerArea",
     "triggerAttachObject",
@@ -3119,6 +3117,9 @@
     "setTaskResult": [
       "Unknown simple type: unknown"
     ],
+    "setTriggerActivation": [
+      "Param `persistent` not found in pool"
+    ],
     "setTurretLimits": [
       "Param `vehicle` not found in pool"
     ],
@@ -3191,6 +3192,9 @@
     "toJSON": [
       "Failed to parse parameter for command 'toJSON': 'data - Only certain [[Data Types]] are supported:\n* [[Boolean]] - serialized as JSON boolean\n* [[Number]] - serialized as JSON number (floating-point)\n* [[String]] - serialized as JSON string\n* [[Array]] - Serialized as JSON array. Unsupported elements (e.g. [[Object]]s) are converted to JSON null.\n* [[HashMap]] - Serialized as JSON object. Only [[String]] keys are supported, other keys are ignored. Unsupported values (e.g. [[Object]]s) are converted to JSON null.\n* [[nil]] - serialized as JSON null {{Feature|important|The [[nil]] value can only be passed as a member of an [[Array]] or [[HashMap]]. It cannot be passed directly as the command would simply not execute.}}'"
     ],
+    "triggerActivation": [
+      "Failed to parse array with element line: 'persistent: [[Boolean]] {{GVI|arma3|2.24}} - See [[setTriggerActivation]]'"
+    ],
     "updateDrawIcon": [
       "Unknown simple type: array"
     ],
@@ -3233,6 +3237,7 @@
     "a_:_b",
     "a_greater%3D_b",
     "a_less%3D_b",
+    "setRadioMsg",
     "setTriggerStatements"
   ],
   "unknown_types_commands": [],
