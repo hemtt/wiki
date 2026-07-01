@@ -20381,7 +20381,7 @@
       "status": "Passed"
     },
     {
-      "description": "Sets radio trigger menu title text (0 -> 0 -> map radio). Use \"NULL\" to disable radio slot. Use \"\" to restore default title",
+      "description": "Sets radio trigger menu title text (0 -> 0 -> map radio). Use \"NULL\" to disable radio slot. Use \"\" to restore default title. \n{{Feature|informative| The same effect could be achieved by using [[setTriggerText]] (see Example 2)}}",
       "groups": [
         "Triggers",
         "Interaction"
@@ -20843,12 +20843,15 @@
     },
     {
       "description": "Defines the trigger activation type.\n\nSee [[ArmA:_Mission_Editor#Triggers_Mode_.28F3.29|ArmA:Mission Editor - Triggers]] for a thorough overview of triggers and its fields for activation, effects, etc.",
+      "errors": [
+        "Param `persistent` not found in pool"
+      ],
       "groups": [
         "Triggers"
       ],
       "id": "setTriggerActivation",
       "name": "setTriggerActivation",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "[[File:setTriggerArea.jpg|thumb|300px|Trigger axis a, b and c (''half'' of their x, y and z dimensions)]] Defines the area monitored by the given trigger. The area could be either rectangular or elliptical.\n{{Feature|informative|\nJust like with a and b dimensions, c dimension will alter area in opposite directions from the trigger position along z axis. Therefore if the trigger position is on the surface, half of the trigger area will be above the surface and half below. To place the whole area above the surface, adjust trigger position (move it up c meters). If c is not specified or &lt;{{=}} 0, the trigger's height is considered infinite like 2D triggers.}}",
@@ -23100,12 +23103,15 @@
     },
     {
       "description": "Returns trigger activation. \n\n{{Feature | important | The trigger could be [[Multiplayer Scripting#Locality|local]] or remote but the result returned by this command will be for the trigger activation set up locally on the client that executed the command. See [[createTrigger]] for more info.}}",
+      "errors": [
+        "Failed to parse array with element line: 'persistent: [[Boolean]] {{GVI|arma3|2.24}} - See [[setTriggerActivation]]'"
+      ],
       "groups": [
         "Triggers"
       ],
       "id": "triggerActivation",
       "name": "triggerActivation",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Triggers a munition such as shells, bullets, missiles, rockets, mines and bombs (''shotSubmunition/shotShell/shotBullet/shotMissile/shotRocket'') as if it did hit.\nIf ammo uses submunition, then creation of submunition will be triggered. Since Arma 3 v 2.22 it is possible to manipulate mine timer, cook grenades and alter missile trigger distance.",
@@ -24954,9 +24960,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 262,
-  "passed": 2433,
-  "timestamp": 1782847856,
+  "failed": 264,
+  "passed": 2431,
+  "timestamp": 1782871960,
   "total": 2697,
   "version": "1.0"
 }

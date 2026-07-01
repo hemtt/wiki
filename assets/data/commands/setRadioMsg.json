@@ -1,9 +1,10 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Sets radio trigger menu title text (0 -> 0 -> map radio). Use \"NULL\" to disable radio slot. Use \"\" to restore default title",
+  "description": "Sets radio trigger menu title text (0 -> 0 -> map radio). Use \"NULL\" to disable radio slot. Use \"\" to restore default title. \n{{Feature|informative| The same effect could be achieved by using [[setTriggerText]] (see Example 2)}}",
   "effect_loc": "Local",
   "examples": [
-    "<sqf>1 setRadioMsg \"Click meeeeeeeeee\"; //changes title of radio Alpha</sqf>"
+    "<sqf>1 setRadioMsg \"Click meeeeeeeeee\"; //changes title of radio Alpha</sqf>",
+    "<sqf>_radioTrigger setTriggerText \"Click meeeeeeeeee\"; //changes title of whatever radio the trigger was set to</sqf>"
   ],
   "groups": [
     "Triggers",
