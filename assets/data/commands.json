@@ -14969,15 +14969,12 @@
     },
     {
       "description": "Moves unit to the first available seat in the specified vehicle.\n\nThe order of priorities is the same order used in squad command when you order subordinates to get in vehicle to any position and is the same order used in Zeus when you drag units to a vehicle.<br><br>\nSeat assignment seems to use the following priority logic:<br>\ndriver ([[moveInDriver]]) &rarr; commander ([[moveInCommander]]) &rarr; gunner ([[moveInGunner]]) &rarr; turrets ([[moveInTurret]]) &rarr; cargo ([[moveInCargo]]).\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}\n{{Feature|informative|This command will move player into the [[locked]] vehicle or seat just as well.}}",
-      "errors": [
-        "Unknown simple type: array"
-      ],
       "groups": [
         "Unit Control"
       ],
       "id": "moveInAny",
       "name": "moveInAny",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Moves a unit into a vehicle cargo position (immediately and without animation).\n{{Feature|informative|See [[AI Group Vehicle Management]] for more information.}}\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}",
@@ -24960,9 +24957,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 264,
-  "passed": 2431,
-  "timestamp": 1783019304,
+  "failed": 263,
+  "passed": 2432,
+  "timestamp": 1783043331,
   "total": 2697,
   "version": "1.0"
 }

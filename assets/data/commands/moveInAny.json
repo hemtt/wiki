@@ -1,0 +1,112 @@
+{
+  "argument_loc": "Global",
+  "description": "Moves unit to the first available seat in the specified vehicle.\n\nThe order of priorities is the same order used in squad command when you order subordinates to get in vehicle to any position and is the same order used in Zeus when you drag units to a vehicle.<br><br>\nSeat assignment seems to use the following priority logic:<br>\ndriver ([[moveInDriver]]) &rarr; commander ([[moveInCommander]]) &rarr; gunner ([[moveInGunner]]) &rarr; turrets ([[moveInTurret]]) &rarr; cargo ([[moveInCargo]]).\n{{Feature|important|If the unit is already in a vehicle, nothing will happen. You should use [[moveOut]] to move the unit out of his vehicle before trying to move him into a new (or same) vehicle.}}\n{{Feature|informative|This command will move player into the [[locked]] vehicle or seat just as well.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>player moveInAny tank;</sqf>",
+    "<sqf>player moveInAny [tank, [\"CARGO\", \"TURRET\"]]; // checks free cargo position, if not available, checks free turret next</sqf>"
+  ],
+  "groups": [
+    "Unit Control"
+  ],
+  "id": "moveInAny",
+  "name": "moveInAny",
+  "problem_notes": [],
+  "see_also": [
+    "moveInDriver",
+    "moveInCommander",
+    "moveInGunner",
+    "moveInTurret",
+    "moveInCargo",
+    "emptyPositions"
+  ],
+  "since": {
+    "arma3": "1.18"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "vehicle"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "person",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success, [[false]] on failure",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "transport",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          [
+            "vehicle",
+            "positions",
+            "ignoreLocked"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "person",
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "[[true]] on success, [[false]] on failure",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "transport",
+              "name": "vehicle",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "array of positions to check and in which order. Positions are (in default order):\n* \"DRIVER\" - driver\n* \"COMMANDER\" - commander turret (turret configured as commander)\n* \"GUNNER\" - gunner turret (turret configured as gunner)\n* \"TURRET\" - other turrets incl. FFV but excl. gunner or commander turret\n* \"CARGO\" - cargo seats excl. FFV",
+              "name": "positions",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "String"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "[[true]] to ignore locked positions",
+              "name": "ignoreLocked",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}
