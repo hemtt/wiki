@@ -20683,10 +20683,13 @@
     },
     {
       "description": "Sets target size (see irTargetSize and others from vehicle config) override on vehicle.\nReturns the previously active values. Note if the array is empty, it will only return the previous/current values, and not set new ones. So this also functions as a getter.",
+      "errors": [
+        "Exceeded maximum recursion depth while parsing Value"
+      ],
       "groups": [],
       "id": "setTargetSize",
       "name": "setTargetSize",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Sets the task marker position in model space.",
@@ -24957,9 +24960,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 263,
-  "passed": 2432,
-  "timestamp": 1783085512,
+  "failed": 264,
+  "passed": 2431,
+  "timestamp": 1783105216,
   "total": 2697,
   "version": "1.0"
 }
