@@ -1445,6 +1445,7 @@
     "morale",
     "move",
     "move3DENCamera",
+    "moveInAny",
     "moveInCargo",
     "moveInCommander",
     "moveInDriver",
@@ -2946,9 +2947,6 @@
     "moonPhase": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
-    "moveInAny": [
-      "Unknown simple type: array"
-    ],
     "moveTarget": [
       "Unknown simple type: target"
     ],
@@ -3236,7 +3234,8 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b"
+    "a_less%3D_b",
+    "moveInAny"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
