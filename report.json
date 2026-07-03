@@ -2007,7 +2007,6 @@
     "setSystemOfUnits",
     "setTIParameter",
     "setTargetAge",
-    "setTargetSize",
     "setTaskMarkerOffset",
     "setTaskState",
     "setTerrainGrid",
@@ -3111,6 +3110,9 @@
     ],
     "setPilotCameraRotation": [
       "Unknown simple type: array"
+    ],
+    "setTargetSize": [
+      "Exceeded maximum recursion depth while parsing Value"
     ],
     "setTaskResult": [
       "Unknown simple type: unknown"
