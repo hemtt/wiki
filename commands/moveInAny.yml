@@ -18,19 +18,59 @@ syntax:
     desc: '[[true]] on success, [[false]] on failure'
   left: !Item
     name: unit
+    desc: person
     type: Object
   right: !Item
     name: vehicle
+    desc: transport
     type: Object
+- call: !Binary
+  - unit
+  - - vehicle
+    - positions
+    - ignoreLocked
+  ret:
+    type: Boolean
+    desc: '[[true]] on success, [[false]] on failure'
+  left: !Item
+    name: unit
+    desc: person
+    type: Object
+  right: !Array
+  - !Item
+    name: vehicle
+    desc: transport
+    type: Object
+  - !Item
+    name: positions
+    desc: |-
+      array of positions to check and in which order. Positions are (in default order):
+      * "DRIVER" - driver
+      * "COMMANDER" - commander turret (turret configured as commander)
+      * "GUNNER" - gunner turret (turret configured as gunner)
+      * "TURRET" - other turrets incl. FFV but excl. gunner or commander turret
+      * "CARGO" - cargo seats excl. FFV
+    type: !ArrayUnsized
+      value: String
+  - !Item
+    name: ignoreLocked
+    desc: '[[true]] to ignore locked positions'
+    type: Boolean
+    optional: true
+    default: 'false'
+  since:
+    arma3: '2.22'
 argument_loc: Global
 effect_loc: Global
 since:
   arma3: '1.18'
 examples:
 - <sqf>player moveInAny tank;</sqf>
+- <sqf>player moveInAny [tank, ["CARGO", "TURRET"]]; // checks free cargo position, if not available, checks free turret next</sqf>
 see_also:
 - moveInDriver
 - moveInCommander
 - moveInGunner
 - moveInTurret
 - moveInCargo
+- emptyPositions
