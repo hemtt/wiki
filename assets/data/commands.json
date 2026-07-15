@@ -94,9 +94,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_less%3D_b",
+      "id": "a_less%253D_b",
       "name": "<=",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns [[true]] if '''a''' is less than or equal to '''b''', else returns [[false]].",
@@ -104,9 +104,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_less%253D_b",
+      "id": "a_less%3D_b",
       "name": "<=",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Assigns the result of expression on the right to the variable on the left. Technically this is not a command and it is not listed in [[supportInfo]]; this is more of a compiler instruction.\n{{Feature|important|The following structure is invalid: <sqf inline>a = b = c = 4;</sqf>.}}",
@@ -133,9 +133,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_greater%3D_b",
+      "id": "a_greater%253D_b",
       "name": ">=",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns if ''a'' is greater than or equal to ''b''.",
@@ -143,9 +143,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_greater%253D_b",
+      "id": "a_greater%3D_b",
       "name": ">=",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns [[Config | config]] entry with given name (alias of [[a / b]], slightly faster but with [[Operators#Order of Precedence|lower precedence]])",
@@ -24962,7 +24962,7 @@
   ],
   "failed": 264,
   "passed": 2431,
-  "timestamp": 1784120871,
+  "timestamp": 1784141778,
   "total": 2697,
   "version": "1.0"
 }
