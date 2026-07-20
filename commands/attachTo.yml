@@ -103,3 +103,4 @@ see_also:
 - setVectorDirAndUp
 - modelToWorld
 - BIS_fnc_transformVectorDirAndUp
+- BIS_fnc_attachToRelative
