@@ -30,7 +30,8 @@
     "setVectorUp",
     "setVectorDirAndUp",
     "modelToWorld",
-    "BIS_fnc_transformVectorDirAndUp"
+    "BIS_fnc_transformVectorDirAndUp",
+    "BIS_fnc_attachToRelative"
   ],
   "since": {
     "arma2": "1.00",
