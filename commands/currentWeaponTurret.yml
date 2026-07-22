@@ -26,3 +26,4 @@ see_also:
 - addWeaponTurret
 - removeWeaponTurret
 - turretLocal
+- currentWeapon
