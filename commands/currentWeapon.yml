@@ -29,3 +29,5 @@ see_also:
 - currentZeroing
 - magazinesTurret
 - weaponsTurret
+- currentWeaponTurret
+- weaponState
