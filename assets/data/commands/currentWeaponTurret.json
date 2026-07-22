@@ -16,7 +16,8 @@
     "currentMagazineTurret",
     "addWeaponTurret",
     "removeWeaponTurret",
-    "turretLocal"
+    "turretLocal",
+    "currentWeapon"
   ],
   "since": {
     "arma3": "1.12"

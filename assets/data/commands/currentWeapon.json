@@ -21,7 +21,9 @@
     "currentWeaponMode",
     "currentZeroing",
     "magazinesTurret",
-    "weaponsTurret"
+    "weaponsTurret",
+    "currentWeaponTurret",
+    "weaponState"
   ],
   "since": {
     "arma2": "1.00",
