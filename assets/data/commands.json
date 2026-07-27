@@ -12471,7 +12471,7 @@
       "status": "Passed"
     },
     {
-      "description": "Returns true if UAV is connected to some terminal. Termnal onnection is handled [[local]]ly, therefore the result of this command will be returned only for the client on which this command is executed.",
+      "description": "Returns true if UAV is connected to some terminal. Terminal connection is handled [[local]]ly, therefore the result of this command will be returned only for the client on which this command is executed.",
       "groups": [
         "Remote Control"
       ],
@@ -24962,7 +24962,7 @@
   ],
   "failed": 264,
   "passed": 2431,
-  "timestamp": 1785144373,
+  "timestamp": 1785161366,
   "total": 2697,
   "version": "1.0"
 }

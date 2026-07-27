@@ -1,6 +1,6 @@
 {
   "argument_loc": "Global",
-  "description": "Returns true if UAV is connected to some terminal. Termnal onnection is handled [[local]]ly, therefore the result of this command will be returned only for the client on which this command is executed.",
+  "description": "Returns true if UAV is connected to some terminal. Terminal connection is handled [[local]]ly, therefore the result of this command will be returned only for the client on which this command is executed.",
   "effect_loc": "Local",
   "examples": [
     "<sqf>_isConnected = isUAVConnected cursorTarget;</sqf>"
