@@ -43,6 +43,7 @@ syntax:
       * {{GVI|arma3|1.92|size= 0.75}}  "NVG"
       * {{GVI|arma3|1.96|size= 0.75}}  "RADIOPROTOCOL"
       * {{GVI|arma3|2.18|size= 0.75}}  "FIREWEAPON"
+      * {{GVI|arma3|2.22|size= 0.75}}  "COMMAND"
       * {{GVI|arma3|2.22|size= 0.75}}  "HEARING"
     type: String
 argument_loc: Local
