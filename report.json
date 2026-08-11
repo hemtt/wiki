@@ -3236,11 +3236,14 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b"
+    "a_less%3D_b",
+    "childAttached",
+    "detachChild",
+    "parentAttached"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
   "failed_event_handlers": {},
   "outdated_event_handlers": {},
-  "updated_version": null
+  "updated_version": "2.22"
 }
