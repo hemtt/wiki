@@ -14,7 +14,6 @@ argument_loc: Local
 effect_loc: Unspecified
 since:
   arma3: '2.22'
-branch: Dev
 see_also:
 - attachChild
 - parentAttached
