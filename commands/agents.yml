@@ -17,6 +17,7 @@ since:
   arma3: '0.50'
 examples:
 - <sqf>{ agent _x moveTo position player } forEach agents;</sqf>
+- <sqf>agents apply {typeOf agent _x}; // ["Snake_random_F","Snake_random_F","Snake_random_F","Rabbit_F"]</sqf>
 see_also:
 - teams
 - agent
