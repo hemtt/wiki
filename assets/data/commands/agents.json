@@ -3,7 +3,8 @@
   "description": "Return a list of agents in the current mission.",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>{ agent _x moveTo position player } forEach agents;</sqf>"
+    "<sqf>{ agent _x moveTo position player } forEach agents;</sqf>",
+    "<sqf>agents apply {typeOf agent _x}; // [\"Snake_random_F\",\"Snake_random_F\",\"Snake_random_F\",\"Rabbit_F\"]</sqf>"
   ],
   "groups": [
     "Teams",

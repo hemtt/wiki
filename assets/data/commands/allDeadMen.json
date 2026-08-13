@@ -1,6 +1,6 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Return a list of dead units including agents. Dead unit might be inside vehicle.",
+  "description": "Return a list of dead units including [[agents]]. Dead unit might be inside vehicle.",
   "effect_loc": "Unspecified",
   "examples": [
     "<sqf>{ deleteVehicle _x } forEach allDeadMen;</sqf>"
