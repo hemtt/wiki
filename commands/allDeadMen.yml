@@ -1,5 +1,5 @@
 name: allDeadMen
-desc: Return a list of dead units including agents. Dead unit might be inside vehicle.
+desc: Return a list of dead units including [[agents]]. Dead unit might be inside vehicle.
 groups:
 - Object Detection
 syntax:
