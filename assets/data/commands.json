@@ -24765,12 +24765,15 @@
     },
     {
       "description": "Returns the given or currently selected weapon state for unit or vehicle.\nWith {{Link|#Syntax 2}}, if no optional arguments are present, currently selected weapon is queried.\n{{Feature|arma3|\nSince {{arma3}} v1.70 this command has been improved and extended:\n* A vehicle's weapon query doesn't need a weapon operator provided the weapon or muzzle is specified in optional param.<br>(keep in mind that by default a vehicle has no weapons selected)\n* Driver turret can now be accessed as well with turret path [-1].\n* Muzzle name is supported as well as weapon name. The command searches for weapon first, then if not found, muzzle is searched for.\n}}",
+      "errors": [
+        "Failed to parse array with element line: '{{GVI|arma3|2.06|size= 0.75}} roundReloadPhase: [[Number]] in range -1 or 0..1 - current ammo round reload phase (see [[weaponReloadingTime]]). -1 when weapon has magazine removed'"
+      ],
       "groups": [
         "Weapons"
       ],
       "id": "weaponState",
       "name": "weaponState",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Returns array of names of all unit's weapons.",
@@ -24960,9 +24963,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 264,
-  "passed": 2431,
-  "timestamp": 1787163560,
+  "failed": 265,
+  "passed": 2430,
+  "timestamp": 1787186086,
   "total": 2697,
   "version": "1.0"
 }
