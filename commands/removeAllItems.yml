@@ -1,5 +1,5 @@
 name: removeAllItems
-desc: Removes all special items from the unit.
+desc: Removes all special [[items]] from the unit.
 groups:
 - Unit Inventory
 syntax:
