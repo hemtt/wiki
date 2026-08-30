@@ -3,9 +3,9 @@
   "description": "Compiles an expression / takes an existing [[HashMap]] and makes it final, preventing it from being modified or overwritten (by [[=]] assignation, [[publicVariable]], [[set]] or any other command).\n{{Feature|informative|This feature is only available in the retail version of {{arma3}}.}}",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>\n_myCode = compileFinal \"a = a + 1\";\ncall _myCode;\n \n// repeated compile won't have any effect\n_myCode = compileFinal \"a = a + 2\";\n</sqf>",
-    "<sqf>\n// duplicate code will be final as well\n_myDuplicateCode = _myCode;\n\n// an alternative is to copy str'd code (since Arma 3 v2.02)\nprivate _myNonFinalCopy = compile toString _myCode;\n</sqf>",
-    "<sqf>\n// since {{arma3}} v2.14\nprivate _readonlyCode = compileFinal { systemChat \"Hello World!\"; };\nprivate _readonlyHashMap = compileFinal _myHashMap;\n</sqf>"
+    "<sqf>\nMyCode = compileFinal \"a = a + 1\";\ncall MyCode;\n \n// repeated compile won't have any effect\nMyCode = compileFinal \"a = a + 2\";\n</sqf>",
+    "<sqf>\n// duplicate code will be final as well\nMyDuplicateCode = MyCode;\n\n// an alternative is to copy str'd code (since {{arma3}} v2.02)\nMyNonFinalCopy = compile toString MyCode;\n</sqf>",
+    "<sqf>\n// since {{arma3}} v2.14\nReadonlyCode = compileFinal { systemChat \"Hello World!\"; };\nReadonlyHashMap = compileFinal _myHashMap;\n</sqf>"
   ],
   "groups": [
     "Strings"
