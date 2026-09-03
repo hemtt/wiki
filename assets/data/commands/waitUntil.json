@@ -76,7 +76,7 @@
           },
           {
             "Item": {
-              "desc": "a timeout in seconds of game time ([[sleep]] vs [[uiSleep]]). The timeout is only checked after the condition was checked.",
+              "desc": "a timeout in seconds of game time ([[sleep]] vs [[uiSleep]]). The timeout is only checked after the condition was checked. Any negative value disables the timeout",
               "name": "timeout",
               "type": "Number"
             }
