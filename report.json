@@ -1471,7 +1471,6 @@
     "nearestObject",
     "needReload",
     "netId",
-    "netObjNull",
     "newOverlay",
     "nextMenuItemIndex",
     "nextWeatherChange",
@@ -2969,6 +2968,9 @@
     "needService": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
+    "netObjNull": [
+      "Unknown simple type: netobject"
+    ],
     "param": [
       "Exceeded maximum recursion depth while parsing Value"
     ],
@@ -3238,7 +3240,9 @@
     "a_*_b",
     "a_:_b",
     "a_greater%3D_b",
-    "a_less%3D_b"
+    "a_less%3D_b",
+    "objNull",
+    "typeName"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
