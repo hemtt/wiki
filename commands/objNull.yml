@@ -1,5 +1,5 @@
 name: objNull
-desc: "A non-existent [[Object]]. To compare non-existent objects use [[isNull]] or [[isEqualTo]]:\n<sqf>\nobjNull == objNull;\t\t\t// false\nisNull objNull;\t\t\t\t// true\nobjNull isEqualTo objNull;\t// true\n</sqf>"
+desc: "A non-existent [[Object]]. To compare non-existent objects use [[isNull]] or [[isEqualTo]]:\n<sqf>\nobjNull == objNull;\t\t\t// false\nobjNull != objNull;\t\t\t// true\nisNull objNull;\t\t\t\t// true\nobjNull isEqualTo objNull;\t// true\ntypeName objNull;           // \"OBJECT\"\n</sqf>"
 groups:
 - Variables
 syntax:
@@ -30,5 +30,6 @@ see_also:
 - teamMemberNull
 - scriptNull
 - configNull
+- netObjNull
 - typeName
 - isNull
