@@ -15287,13 +15287,16 @@
     },
     {
       "description": "A non-existing network object. {{Feature|informative|'''NetObject''' data type was never implemented in {{arma3}} - this command always returns [[false]].}}",
+      "errors": [
+        "Unknown simple type: netobject"
+      ],
       "groups": [
         "Broken Commands",
         "Variables"
       ],
       "id": "netObjNull",
       "name": "netObjNull",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Creates the new overlay dialog for the specified type of overlay. \n{{Feature|informative|Some Old Editor Command}}",
@@ -15360,7 +15363,7 @@
       "status": "Passed"
     },
     {
-      "description": "A non-existent [[Object]]. To compare non-existent objects use [[isNull]] or [[isEqualTo]]:\n<sqf>\nobjNull == objNull;\t\t\t// false\nisNull objNull;\t\t\t\t// true\nobjNull isEqualTo objNull;\t// true\n</sqf>",
+      "description": "A non-existent [[Object]]. To compare non-existent objects use [[isNull]] or [[isEqualTo]]:\n<sqf>\nobjNull == objNull;\t\t\t// false\nobjNull != objNull;\t\t\t// true\nisNull objNull;\t\t\t\t// true\nobjNull isEqualTo objNull;\t// true\ntypeName objNull;           // \"OBJECT\"\n</sqf>",
       "groups": [
         "Variables"
       ],
@@ -23620,7 +23623,7 @@
       "status": "Passed"
     },
     {
-      "description": "Returns the [[:Category:Data Types|Data Type]] of an expression. \n\nThe type is returned as on of the following all-uppercase strings:\n{{Columns|5|\n* \"[[Array|ARRAY]]\"\n* \"[[Boolean|BOOL]]\"\n* \"[[Code|CODE]]\"\n* \"[[Config|CONFIG]]\"\n* \"[[Control|CONTROL]]\"\n* \"[[Display|DISPLAY]]\"\n* \"[[Group|GROUP]]\"\n* \"[[Object|OBJECT]]\"\n* \"[[Number|SCALAR]]\" (and \"[[Number|NaN]]\")\n* \"[[Script Handle|SCRIPT]]\"\n* \"[[Side|SIDE]]\"\n* \"[[String|STRING]]\"\n* \"[[Structured Text|TEXT]]\"\n* {{GVI|arma1|1.08|size= 0.75}} \"[[Location|LOCATION]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Team Member|TEAM_MEMBER]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Namespace|NAMESPACE]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Diary Record|DIARY_RECORD]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Task|TASK]]\"\n* {{GVI|arma3|2.02|size= 0.75}} \"[[HashMap|HASHMAP]]\"\n}}\nThey represent the available [[:Category:Data Types|Data Types]] in {{arma}}.\n{{Feature|arma3|For type comparison, use [[isEqualType]] command instead.}}",
+      "description": "Returns the [[:Category:Data Types|Data Type]] of an expression. \n\nThe type is returned as on of the following all-uppercase strings:\n{{Columns|5|\n* \"[[Array|ARRAY]]\"\n* \"[[Boolean|BOOL]]\"\n* \"[[Code|CODE]]\"\n* \"[[Config|CONFIG]]\"\n* \"[[Control|CONTROL]]\"\n* \"[[Display|DISPLAY]]\"\n* \"[[Group|GROUP]]\"\n* \"[[Object|OBJECT]]\"\n* \"[[Number|SCALAR]]\" (and \"[[Number|NaN]]\")\n* \"[[Script Handle|SCRIPT]]\"\n* \"[[Side|SIDE]]\"\n* \"[[String|STRING]]\"\n* \"[[Structured Text|TEXT]]\"\n* {{GVI|arma1|1.08|size= 0.75}} \"[[Location|LOCATION]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Team Member|TEAM_MEMBER]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Namespace|NAMESPACE]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Diary Record|DIARY_RECORD]]\"\n* {{GVI|arma2|1.00|size= 0.75}} \"[[Task|TASK]]\"\n* {{GVI|arma3|2.02|size= 0.75}} \"[[HashMap|HASHMAP]]\"\n* {{GVI|arma3|2.24|size= 0.75}} \"[[NetObject]]\"\n}}\nThey represent the available [[:Category:Data Types|Data Types]] in {{arma}}.\n{{Feature|arma3|For type comparison, use [[isEqualType]] command instead.}}",
       "groups": [
         "Variables"
       ],
@@ -24963,9 +24966,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 265,
-  "passed": 2430,
-  "timestamp": 1790073039,
+  "failed": 266,
+  "passed": 2429,
+  "timestamp": 1790092451,
   "total": 2697,
   "version": "1.0"
 }
