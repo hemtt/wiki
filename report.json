@@ -2170,7 +2170,6 @@
     "step",
     "stop",
     "stopEngineRTD",
-    "stopSound",
     "stopped",
     "str",
     "sunOrMoon",
@@ -3154,6 +3153,9 @@
     "soundParams": [
       "Unknown simple type: netobject"
     ],
+    "stopSound": [
+      "Param `id or sound` not found in pool"
+    ],
     "supportInfo": [
       "Unknown simple type: array"
     ],
@@ -3241,7 +3243,7 @@
     "a_:_b",
     "a_greater%3D_b",
     "a_less%3D_b",
-    "say3D"
+    "playSound3D"
   ],
   "unknown_types_commands": [],
   "passed_event_handlers": {},
