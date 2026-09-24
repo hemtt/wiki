@@ -22322,12 +22322,15 @@
     },
     {
       "description": "Terminates the given sound",
+      "errors": [
+        "Param `id or sound` not found in pool"
+      ],
       "groups": [
         "Sounds"
       ],
       "id": "stopSound",
       "name": "stopSound",
-      "status": "Passed"
+      "status": "Failed"
     },
     {
       "description": "Check if unit is stopped by [[stop]] command.",
@@ -24966,9 +24969,9 @@
       "status": "Passed"
     }
   ],
-  "failed": 266,
-  "passed": 2429,
-  "timestamp": 1790265870,
+  "failed": 267,
+  "passed": 2428,
+  "timestamp": 1790283270,
   "total": 2697,
   "version": "1.0"
 }
