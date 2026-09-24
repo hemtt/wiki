@@ -133,9 +133,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_greater%253D_b",
+      "id": "a_greater%3D_b",
       "name": ">=",
-      "status": "Unknown"
+      "status": "Passed"
     },
     {
       "description": "Returns if ''a'' is greater than or equal to ''b''.",
@@ -143,9 +143,9 @@
         "Math",
         "Variables"
       ],
-      "id": "a_greater%3D_b",
+      "id": "a_greater%253D_b",
       "name": ">=",
-      "status": "Passed"
+      "status": "Unknown"
     },
     {
       "description": "Returns [[Config | config]] entry with given name (alias of [[a / b]], slightly faster but with [[Operators#Order of Precedence|lower precedence]])",
@@ -17940,7 +17940,7 @@
       "status": "Failed"
     },
     {
-      "description": "Lets an object say given sound in 3D space.\nThis allows broadcasting of positional music or sound from a source, without having to script a fade sound or music command. The source has to be [[alive]].\nCompare this with [[say2D]] which will always play a sound at the location of the player after he has been in the vicinity of a broadcasting sound.\nSound is defined in {{Link|Description.ext#CfgSounds|\"CfgSounds\"}} of the [[Description.ext]] or main config.\n\n{{Feature|informative|\nThe name of the command is the clue to its usage. It is meant for playing short sounds within short range. Consecutive execution of the command cues the sounds, the next sound would not start until the previous sound is finished, hence the need for the short sounds. The simulation of speed of sound would delay next sound and might mess with the timing of the cued sounds, especially if used globally. Additionally the sounds are not synced for JIP players. A long playing sound will not be heard by newly joined payers. To summarise:\n\n* An object can only \"say\" '''one''' sound at a time\n* In order to stop a [[say3D]] sound: delete the returned '''sound source''' with [[deleteVehicle]], or kill the '''sound source''' with e.g [[setDamage]].\n* Forcing the speed of sound simulation may delay the queued sound to play right after the previous sound, even if the second sound does not simulate sound delay (e.g sound 1 plays with a 5s delay, ends, ''then'' sound 2 plays). If the queued sound uses speed of sound simulation, it will be delayed from the end of the first sound (they will not follow \"as expected\"). Makes the ''offset'' parameter ignored.\n* '''Do use''' it for short distance short sounds with speed of sound simulation off.\n* When used with 'isGlobal' option, a null [[NetObject]] is returned. To stop such sound globally, destroy the sound source 'from' object.\n}}",
+      "description": "Lets an object say given sound in 3D space.\nThis allows broadcasting of positional music or sound from a source, without having to script a fade sound or music command. The source has to be [[alive]].\nCompare this with [[say2D]] which will always play a sound at the location of the player after he has been in the vicinity of a broadcasting sound.\nSound is defined in {{Link|Description.ext#CfgSounds|\"CfgSounds\"}} of the [[Description.ext]] or main config.\n\n{{Feature|informative|\nThe name of the command is the clue to its usage. It is meant for playing short sounds within short range. Consecutive execution of the command queues the sounds, the next sound would not start until the previous sound is finished, hence the need for the short sounds. The simulation of speed of sound would delay next sound and might mess with the timing of the queued sounds, especially if used globally. Additionally the sounds are not synced for JIP players. A long playing sound will not be heard by newly joined payers. To summarise:\n\n* An object can only \"say\" '''one''' sound at a time\n* In order to stop a [[say3D]] sound: delete the returned '''sound source''' with [[deleteVehicle]], or kill the '''sound source''' with e.g [[setDamage]].\n* Forcing the speed of sound simulation may delay the queued sound to play right after the previous sound, even if the second sound does not simulate sound delay (e.g sound 1 plays with a 5s delay, ends, ''then'' sound 2 plays). If the queued sound uses speed of sound simulation, it will be delayed from the end of the first sound (they will not follow \"as expected\"). Makes the ''offset'' parameter ignored.\n* '''Do use''' it for short distance short sounds with speed of sound simulation off.\n* When used with 'isGlobal' option, a null [[NetObject]] is returned. To stop such sound globally, destroy the sound source 'from' object.\n}}",
       "groups": [
         "Sounds"
       ],
@@ -24968,7 +24968,7 @@
   ],
   "failed": 266,
   "passed": 2429,
-  "timestamp": 1790196535,
+  "timestamp": 1790215140,
   "total": 2697,
   "version": "1.0"
 }
