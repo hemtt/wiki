@@ -22,7 +22,7 @@ syntax:
   - sound
   ret:
     type: Object
-    desc: the sound source or null [[NetObject]] - when 'isGlobal' is [[true]]
+    desc: the sound source or [[NetObject]] - when 'isGlobal' is [[true]]
   left: !Item
     name: from
     desc: |-
@@ -82,3 +82,5 @@ see_also:
 - createSoundSource
 - playSoundUI
 - setRandomLip
+- stopSound
+- soundParams
