@@ -20,7 +20,9 @@
     "playSound3D",
     "createSoundSource",
     "playSoundUI",
-    "setRandomLip"
+    "setRandomLip",
+    "stopSound",
+    "soundParams"
   ],
   "since": {
     "arma2": "1.00",
@@ -45,7 +47,7 @@
         }
       },
       "ret": {
-        "desc": "the sound source or null [[NetObject]] - when 'isGlobal' is [[true]]",
+        "desc": "the sound source or [[NetObject]] - when 'isGlobal' is [[true]]",
         "type": "Object"
       },
       "right": {
