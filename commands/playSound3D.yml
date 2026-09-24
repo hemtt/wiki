@@ -34,10 +34,10 @@ syntax:
     default: 'false'
   - !Item
     name: soundPosition
-    desc: position for sound emitter, overrides ''soundSource''. [[Object]] is also supported (see note below).
+    desc: position for sound emitter, overrides ''soundSource''. [[Object]] is also supported (see note below). Since {{GVI|arma3|2.24|size= 0.75}} use [[nil]] to skip this param
     type: Position3dASL
     optional: true
-    default: '[0,0,0]'
+    default: nil
   - !Item
     name: volume
     desc: sound volume. A value greater than 5 gets capped
@@ -93,6 +93,7 @@ examples:
 - <sqf>playSound3D ["A3\Sounds_F\sfx\blip1.wss", player, false, getPosASL player, 1, 1, 0];</sqf>
 - <sqf>playSound3D [getMissionPath "mySound.ogg", player]; // to play a mission directory sound</sqf>
 - "Sound file extension must be specified even if a config entry has none:\n<sqf>\nplaySound3D [\"A3\\Sounds_F\\sfx\\alarm_independent\", player];\t\t// no sound\nplaySound3D [\"A3\\Sounds_F\\sfx\\alarm_independent.wss\", player];\t// alarm\n</sqf>"
+- Example 2 from Arma 3 v2.24 <sqf>playSound3D ["A3\Sounds_F\sfx\blip1.wss", player, false, nil, 1, 1, 0];</sqf>
 see_also:
 - say3D
 - playSound
