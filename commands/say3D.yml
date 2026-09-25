@@ -37,10 +37,10 @@ syntax:
     desc: |-
       or [[Array]]
       * [[String]] - classname of the sound to be played. Defined in [[CfgSounds]] including [[Description.ext]]
-      * [[Array]] with [sound, maxDistance, pitch, isSpeech, offset, simulateSpeedOfSound, playMode, isGlobal]
+      * [[Array]] with [sound, maxDistance, pitchCoef, isSpeech, offset, simulateSpeedOfSound, playMode, isGlobal]
       ** sound: [[String]] - classname of the sound to be played. Defined in [[Description.ext#CfgSounds|CfgSounds]] including [[Description.ext]]
       ** maxDistance: [[Number]] - (Optional, default 100) maximum distance in meters at which the sound can be heard
-      ** pitch: [[Number]] - (Optional, default 1) pitch of the sound
+      ** pitchCoef: [[Number]] - (Optional, default 1) multiplier to the [[CfgSounds]] defined pitch.
       ** {{GVI|arma3|1.92|size= 0.75}} isSpeech: [[Boolean]] or {{GVI|arma3|2.04|size= 0.75}} [[Number]] - (Optional, default [[false]])
       *** 0/[[false]] = play as sound ([[fadeSound]] applies)
       *** 1/[[true]] = play as speech ([[fadeSpeech]] applies), filters are not applied to it (i.e. house or vehicle interior one)
