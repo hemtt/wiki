@@ -6,8 +6,8 @@ groups:
 syntax:
 - call: !Unary obj
   ret:
-    type: !ArrayUnsized
-      value: Waypoint
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Waypoint]]s
   right: !Item
     name: obj
     desc: or [[Waypoint]]
