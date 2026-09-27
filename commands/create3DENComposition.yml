@@ -7,8 +7,8 @@ syntax:
   - configPath
   - position
   ret:
-    type: !ArrayUnsized
-      value: EdenEntity
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Eden Entity|Eden Entities]]
   right: !Array
   - !Item
     name: configPath
