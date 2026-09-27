@@ -58,19 +58,19 @@ syntax:
   - !Item
     name: shadow
     desc: |-
-      can be one of:
-      * 0 ([[false]]): no shadow
-      * 1: shadow (for text)
-      * 2 ([[true]]): outline (works for text and for icon only if icon angle is 0)
+      0 ([[false]]): no shadow
+      1: shadow (for text)
+      2 ([[true]]): outline (works for text and for icon only if icon angle is 0)
     type: !OneOf
-    - type: Number
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
       desc: null
       since: null
-    - type: Boolean
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
       desc: null
       since: null
-    optional: true
-    default: 'false'
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
   - !Item
     name: textSize
     desc: size of the text in UI units
