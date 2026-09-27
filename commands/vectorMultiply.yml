@@ -10,8 +10,8 @@ syntax:
   - numArray
   - multiplier
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   left: !Item
     name: numArray
     desc: an array of any size to be multiplied with the multiplier
