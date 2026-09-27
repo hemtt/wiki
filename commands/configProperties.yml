@@ -11,8 +11,8 @@ syntax:
   - condition
   - inherit
   ret:
-    type: !ArrayUnsized
-      value: Config
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Config]]s
   right: !Array
   - !Item
     name: config
