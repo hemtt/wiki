@@ -13,8 +13,8 @@ syntax:
     type: TeamMember
   right: !Item
     name: resources
-    type: !ArrayUnsized
-      value: String
+    desc: of [[String]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Global
 effect_loc: Local
 since:
