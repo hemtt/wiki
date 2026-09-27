@@ -1,0 +1,31 @@
+name: missionStart
+desc: Returns date and time when mission started. Because this command returns the time of the actual start of the mission, it might not be available in ''pre-init'' or ''init'', but is guaranteed to be available in ''post-init'' when <sqf inline>time > 0</sqf>.
+multiplayer_note: Command only has the desired return value in multiplayer.
+groups:
+- Mission Information
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: format {{hl|[year, month, day, hour, minute, second]}} in multiplayer, which differs from [[date]] format only by seconds. In SP returns {{hl|[0,0,0,0,0,0]}}
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  ofp: '1.80'
+  ofpe: '1.00'
+  arma1: '1.00'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>setDate (missionStart select [0,5]);</sqf>
+- "Set real date:\n<sqf>\n//postInit = 1;\nif (isServer) then\n{\n\twaitUntil { time > 0 };\n\tsetDate (missionStart select [0, 5]);\n};\n</sqf>"
+see_also:
+- date
+- time
+- dayTime
+- serverTime
+- setDate
+- systemTime
+- systemTimeUTC
