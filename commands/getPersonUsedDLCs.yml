@@ -6,8 +6,8 @@ groups:
 syntax:
 - call: !Unary unit
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   right: !Item
     name: unit
     type: Object
