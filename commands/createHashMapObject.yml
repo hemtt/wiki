@@ -20,18 +20,35 @@ syntax:
   - !Item
     name: classDefinition
     desc: |-
-      or [[Array]] of [[Array]]s, format [name, value]:
-      * {{hl|"#create"}}: [[Code]] - this is the hashmap object's constructor
-      * {{hl|"#clone"}}: [[Code]] - this is code happening when cloning is done on this hashmap object
-      * {{hl|"#delete"}}: [[Code]] - this is the hashmap object's destructor. It will always be executed inside [[missionNamespace]].
-      * {{hl|"#str"}}: [[Code]] - code that is used to evaluate what is displayed when the [[str]] function is called on the object - must return [[String]]
-      * {{hl|"#flags"}}: [[Array]] of [[String]]s - case-''in''sensitive flags regarding this hashmap object
-      ** "noCopy": forbids copying, <sqf inline>+_hashMapObject</sqf> will throw an error
-      ** "sealed": prevents from adding and removing any keys - key values can still be edited
-      ** "unscheduled": all methods (including {{hl|#clone}} and {{hl|#create}}) will be executed in {{Link|Scheduler#Unscheduled Environment|unscheduled environment}}
-      * {{hl|"#base"}}: [[Array]] or [[HashMap]] - declaration of base class for inheritance
-      * {{hl|"#type"}}: [[String]] - can be used to give a object a "type name", on inheritance types will be merged into an [[Array]]
-    type: HashMapUnknown
+      this is the hashmap object's constructor
+      this is code happening when cloning is done on this hashmap object
+      this is the hashmap object's destructor. It will always be executed inside [[missionNamespace]].
+      code that is used to evaluate what is displayed when the [[str]] function is called on the object - must return [[String]]
+      {{hl|"#flags"}}: [[Array]] of [[String]]s - case-''in''sensitive flags regarding this hashmap object
+      declaration of base class for inheritance
+      can be used to give a object a "type name", on inheritance types will be merged into an [[Array]]
+    type: !OneOf
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: this is the hashmap object's constructor
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: this is code happening when cloning is done on this hashmap object
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: this is the hashmap object's destructor. It will always be executed inside [[missionNamespace]].
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: code that is used to evaluate what is displayed when the [[str]] function is called on the object - must return [[String]]
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: case-''in''sensitive flags regarding this hashmap object
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: declaration of base class for inheritance
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: can be used to give a object a "type name", on inheritance types will be merged into an [[Array]]
+      since: null
   - !Item
     name: constructorArguments
     desc: passed as <sqf inline>_this</sqf> argument to the "#create" method.
