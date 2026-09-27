@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary vehicle
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   right: !Item
     name: vehicle
     desc: a vehicle with MFD
