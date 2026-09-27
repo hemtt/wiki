@@ -20,8 +20,8 @@ syntax:
     desc: returns the deleted element if one existed
   left: !Item
     name: array
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: index
     desc: see the note in description
@@ -48,8 +48,8 @@ syntax:
     desc: deleted elements in order of user supplied indexes
   left: !Item
     name: array
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: indexes
     desc: multiple indexes, negative indexes are supported and would remove elements counting from the end of array (see {{Link|#Example 4}}).
