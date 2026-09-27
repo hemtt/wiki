@@ -10,12 +10,12 @@ syntax:
   - units
   - height
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   left: !Item
     name: units
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: height
     desc: height above terrain level ([[Position#PositionATL|PositionATL]])
@@ -24,8 +24,8 @@ syntax:
   - group
   - height
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   left: !Item
     name: group
     desc: AI group
