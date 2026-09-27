@@ -22,8 +22,8 @@ groups:
 syntax:
 - call: !Unary type
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   right: !Item
     name: type
     type: String
