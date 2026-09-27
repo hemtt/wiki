@@ -1,8 +1,9 @@
 name: setTargetSize
 desc: |-
-  Sets target size (see irTargetSize and others from vehicle config) override on vehicle.
-  Returns the previously active values. Note if the array is empty, it will only return the previous/current values, and not set new ones. So this also functions as a getter.
-groups: []
+  Sets target size (see <syntaxhighlight lang="cpp" inline>irTargetSize</syntaxhighlight> and others from vehicle config) override on vehicle.
+  {{Feature|informative|Passing an empty array returns the current values without modifying them, so this commands works as both getter and setter.}}
+groups:
+- Sensors
 syntax:
 - call: !Binary
   - vehicle
@@ -10,30 +11,16 @@ syntax:
     - irTargetSize
     - radarTargetSize
   ret:
-    type: !ArraySized
-    - name: visualTargetSize
-      type: Number
-      default: null
-      desc: previous value
-      since: null
-    - name: irTargetSize
-      type: Number
-      default: null
-      desc: previous value
-      since: null
-    - name: radarTargetSize
-      type: Number
-      default: null
-      desc: previous value
-      since: null
+    type: !Unknown 'Unknown simple type: array'
+    desc: with previous [visualTargetSize, irTargetSize, radarTargetSize] values
   left: !Item
     name: vehicle
-    desc: A transport vehicle
+    desc: a transport vehicle
     type: Object
   right: !Array
   - !Item
     name: visualTargetSize
-    desc: set to -1 to disable override and use config values. Otherwise value between 0-2
+    desc: 0..2 value, set to -1 to disable override and use config values
     type: Number
   - !Item
     name: irTargetSize
@@ -45,7 +32,8 @@ argument_loc: Global
 effect_loc: Local
 since:
   arma3: '2.22'
-branch: Dev
 examples:
-- <sqf>_previous = vehicle player setTargetSize [0,0,0];</sqf>
-- <sqf>_sizes = vehicle player setTargetSize [];</sqf>
+- <sqf>private _previousSizes = vehicle player setTargetSize [0,0,0]; // set</sqf>
+- <sqf>private _currentSizes = vehicle player setTargetSize []; // get</sqf>
+see_also:
+- getSensorTargets
