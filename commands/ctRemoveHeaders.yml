@@ -13,8 +13,8 @@ syntax:
     type: Control
   right: !Item
     name: indices
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Local
 effect_loc: Local
 since:
