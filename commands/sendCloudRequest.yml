@@ -1,0 +1,19 @@
+name: sendCloudRequest
+desc: '{{Feature|obsolete|Same behaviour as [[sendCloudRequestServer]]; use this or [[sendCloudRequestClient]] instead.}}'
+alias:
+- '[[sendCloudRequestServer]]'
+groups:
+- Argo
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Unknown simple type: -'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  argo: '1.00'
+examples:
+- '-'
+see_also:
+- sendCloudRequestServer
+- sendCloudRequestClient
