@@ -5,12 +5,12 @@ groups:
 syntax:
 - call: !Unary artilleryList
   ret:
-    type: !ArrayUnsized
-      value: String
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[String]]s
   right: !Item
     name: artilleryList
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Global
 effect_loc: Unspecified
 since:
