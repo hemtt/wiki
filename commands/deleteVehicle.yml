@@ -18,8 +18,8 @@ syntax:
     type: Nothing
   right: !Item
     name: objects
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
   since:
     arma3: '2.18'
 argument_loc: Global
