@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary box
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   right: !Item
     name: box
     type: Object
