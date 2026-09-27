@@ -16,8 +16,8 @@ syntax:
   right: !Array
   - !Item
     name: objects
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
   - !Item
     name: addCrew
     type: Boolean
