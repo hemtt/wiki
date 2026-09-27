@@ -11,8 +11,8 @@ syntax:
   - radius
   - sortPosition
   ret:
-    type: !ArrayUnsized
-      value: Location
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Location]]s
   right: !Array
   - !Item
     name: centre
