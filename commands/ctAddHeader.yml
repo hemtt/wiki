@@ -12,10 +12,9 @@ syntax:
       desc: null
       since: null
     - name: createdControls
-      type: !ArrayUnsized
-        value: Control
+      type: !Unknown 'Unknown simple type: array'
       default: null
-      desc: null
+      desc: of [[Control]]s
       since: null
   right: !Item
     name: control
