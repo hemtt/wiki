@@ -26,11 +26,11 @@ syntax:
   right: !Item
     name: params
     desc: |-
+      of [[Number]]s
       * "Arma" - no parameters
       * "Filmic" - format [shoulderStrength, linearStrength, linearAngle, toeStrength, toeNumerator, toeDenominator, linearWhite, exposureBias]
       * "Reinhard" - format [linearWhite, saturation]
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Local
 since:
