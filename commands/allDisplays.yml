@@ -25,8 +25,8 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: !ArrayUnsized
-      value: Display
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Display]]s
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
