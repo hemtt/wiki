@@ -40,17 +40,15 @@ syntax:
       desc: null
       since: null
     - name: roundReloadPhase
-      type: !NumberRange
-      - 0
-      - 1
+      type: !Unknown 'Failed to parse start of number range ''-1 or 0'': invalid float literal'
       default: null
-      desc: current ammo round reload phase (see [[weaponReloadingTime]])
+      desc: current ammo round reload phase (see [[weaponReloadingTime]]). -1 when weapon has magazine removed
       since:
         arma3: '2.06'
     - name: magazineReloadPhase
       type: !NumberRange
-      - 0
       - 1
+      - 0
       default: null
       desc: current magazine reload phase, 0 - reload complete. &gt; 0 - reload in progress
       since:
