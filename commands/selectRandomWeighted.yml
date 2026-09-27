@@ -28,12 +28,12 @@ syntax:
     desc: random weighted value or [[Nothing]] if any of arrays is empty or all weights are 0
   left: !Item
     name: values
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: weights
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
