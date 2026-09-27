@@ -14,17 +14,19 @@ syntax:
   right: !Item
     name: mode
     desc: |-
-      , [[Number]] or [[Array]]:
-      * [[String]] - class name defined in the optic's {{hl|OpticsModes}} config class
-      * [[Number]] - 0-based index of the optic mode with 0 being the default optic mode
-      * [[Array]] with [slotIndex, opticsModeIndexOrClassName]
-      ** slotIndex: [[Number]], can be one of:
-      *** 0 - Current weapon
-      *** 1 - Primary weapon
-      *** 2 - Secondary weapon
-      *** 3 - Handgun
-      ** opticsModeIndexOrClassName: [[String]] or [[Number]] as above
-    type: String
+      class name defined in the optic's {{hl|OpticsModes}} config class
+      0-based index of the optic mode with 0 being the default optic mode
+      [[Array]] with [slotIndex, opticsModeIndexOrClassName]
+    type: !OneOf
+    - type: String
+      desc: class name defined in the optic's {{hl|OpticsModes}} config class
+      since: null
+    - type: Number
+      desc: 0-based index of the optic mode with 0 being the default optic mode
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
