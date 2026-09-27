@@ -11,8 +11,8 @@ groups:
 syntax:
 - call: !Unary vehicle
   ret:
-    type: !ArrayUnsized
-      value: TurretPath
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Turret Path]]s
   right: !Item
     name: vehicle
     type: Object
@@ -20,8 +20,8 @@ syntax:
   - vehicle
   - includeFFV
   ret:
-    type: !ArrayUnsized
-      value: TurretPath
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Turret Path]]s
   right: !Array
   - !Item
     name: vehicle
