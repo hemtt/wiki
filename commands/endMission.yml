@@ -13,17 +13,43 @@ syntax:
   right: !Item
     name: endType
     desc: |-
-      can be a custom one {{GVI|arma3|1.00|size= 0.75}}, or one of:
-      * "CONTINUE" (does nothing)
-      * "KILLED"
-      * "LOSER"
-      * "END1"
-      * "END2"
-      * "END3"
-      * "END4"
-      * "END5"
-      * "END6"
-    type: String
+      "CONTINUE" (does nothing)
+      "KILLED"
+      "LOSER"
+      "END1"
+      "END2"
+      "END3"
+      "END4"
+      "END5"
+      "END6"
+    type: !OneOf
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "killed"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "loser"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "end1"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "end2"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "end3"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "end4"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "end5"'
+      desc: null
+      since: null
+    - type: !Unknown 'Unknown simple type: "end6"'
+      desc: null
+      since: null
 argument_loc: Local
 effect_loc: Local
 since:
