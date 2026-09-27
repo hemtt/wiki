@@ -7,8 +7,8 @@ syntax:
   - position
   - radius
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   left: !Item
     name: position
     desc: ', [[Position#Introduction|Position2D]] or [[Object]]'
@@ -21,8 +21,8 @@ syntax:
   - - typeName
     - radius
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   left: !Item
     name: position
     desc: ', [[Position#Introduction|Position2D]] or [[Object]]'
