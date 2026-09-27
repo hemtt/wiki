@@ -13,8 +13,8 @@ syntax:
     desc: index of inserted element or -1
   left: !Item
     name: array
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: element
     type: Anything
