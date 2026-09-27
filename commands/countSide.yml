@@ -14,14 +14,8 @@ syntax:
     type: Side
   right: !Item
     name: array
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: Object
-        desc: null
-        since: null
-      - type: Group
-        desc: null
-        since: null
+    desc: of [[Object]]s or [[Group]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Global
 effect_loc: Unspecified
 since:
