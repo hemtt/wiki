@@ -11,8 +11,8 @@ syntax:
     type: Nothing
   left: !Item
     name: array
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
   right: !Array
   - !Item
     name: from
