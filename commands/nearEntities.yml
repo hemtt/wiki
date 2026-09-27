@@ -85,11 +85,19 @@ syntax:
   left: !Item
     name: area
     desc: |-
-      , [[Object]] or [[Array]]:
-      * [[String]] - marker name
-      * [[Object]] - trigger
-      * [[Array]] - format [center, a, b, angle, isRectangular, c] or {{GVI|arma3|2.22|size= 0.75}} [center, a, b, angle, isRectangular, c, usePosWorld] (see [[inArea]])
-    type: String
+      marker name
+      trigger
+      format [center, a, b, angle, isRectangular, c] or {{GVI|arma3|2.22|size= 0.75}} [center, a, b, angle, isRectangular, c, usePosWorld] (see [[inArea]])
+    type: !OneOf
+    - type: String
+      desc: marker name
+      since: null
+    - type: Object
+      desc: trigger
+      since: null
+    - type: !Unknown 'Unknown simple type: array'
+      desc: format [center, a, b, angle, isRectangular, c] or {{GVI|arma3|2.22|size= 0.75}} [center, a, b, angle, isRectangular, c, usePosWorld] (see [[inArea]])
+      since: null
   right: !Array
   - !Item
     name: types
