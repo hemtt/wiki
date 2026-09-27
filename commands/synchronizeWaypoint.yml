@@ -24,8 +24,8 @@ syntax:
       since: null
   right: !Item
     name: waypoints
-    type: !ArrayUnsized
-      value: Waypoint
+    desc: of [[Waypoint]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
