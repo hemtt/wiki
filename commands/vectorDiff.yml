@@ -10,16 +10,16 @@ syntax:
   - vector1
   - vector2
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   left: !Item
     name: vector1
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: vector2
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
