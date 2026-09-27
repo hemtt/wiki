@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary curatorObj
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   right: !Item
     name: curatorObj
     desc: curator module.
