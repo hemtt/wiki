@@ -1,0 +1,41 @@
+name: sendAnalyticEvent
+desc: Generates new analytics events with given values, acceptable value types are string, scalar and bool.
+multiplayer_note: '{{Feature|informative|Analytics are reserved to official server instances (server or client).}}'
+groups:
+- Argo
+syntax:
+- call: !Unary
+  - eventName
+  - keyValuePairs
+  ret:
+    type: Boolean
+    desc: '[[true]] when done (not if the analytics were sent), [[false]] if the provided array is wrong'
+  right: !Array
+  - !Item
+    name: eventName
+    desc: '''''unknown possible values'''''
+    type: String
+  - !Item
+    name: keyValuePairs
+    type: !ArraySized
+    - name: key
+      type: String
+      default: null
+      desc: entry's name
+      since: null
+    - name: value
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: entry's value; if an [[Array]], inserts its content at the end of ''keyValuePairs''; if any other [[Data Types|Data Type]], it is ignored
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  argo: '1.00'
+examples:
+- "<sqf>\nif (onOfficialServer) then\n{\n\tsendAnalyticEvent [\"EventName\", [\"key1\", false], [\"key2\", 1], [\"key3\", \"two\"]];\n};\n</sqf>"
+see_also:
+- onOfficialServer
+- sendCloudRequest
+- sendCloudRequestClient
+- sendCloudRequestServer
