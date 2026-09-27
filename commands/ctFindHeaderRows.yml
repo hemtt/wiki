@@ -7,8 +7,8 @@ syntax:
   - ctrl
   - index
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   left: !Item
     name: ctrl
     type: Control
