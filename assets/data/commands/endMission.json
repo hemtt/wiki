@@ -1,0 +1,110 @@
+{
+  "argument_loc": "Local",
+  "description": "Finish the mission.\n'''Mission saves are deleted'''. Use [[failMission]] if they should not be.\n{{Feature|arma3|To maintain {{arma3}} visual style, it is recommended to use [[BIS_fnc_endMission]] instead.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>endMission \"END1\";</sqf>",
+    "<sqf>[\"END1\"] remoteExec [\"endMission\", 0, true]; // Arma 3</sqf>"
+  ],
+  "groups": [
+    "Mission Information"
+  ],
+  "id": "endMission",
+  "name": "endMission",
+  "problem_notes": [],
+  "see_also": [
+    "missionEnd",
+    "failMission",
+    "forceEnd"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "endType"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "\"CONTINUE\" (does nothing)\n\"KILLED\"\n\"LOSER\"\n\"END1\"\n\"END2\"\n\"END3\"\n\"END4\"\n\"END5\"\n\"END6\"",
+          "name": "endType",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Exceeded maximum recursion depth while parsing Value"
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"killed\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"loser\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"end1\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"end2\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"end3\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"end4\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"end5\""
+                }
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: \"end6\""
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

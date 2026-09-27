@@ -1,0 +1,69 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Sets the optic mode of the current weapon to the given class name or the index.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>player setOpticsMode \"Hamr2Scope\"; // Default optic mode for optic_Hamr</sqf>",
+    "<sqf>player setOpticsMode 0;</sqf>",
+    "<sqf>player setOpticsMode [1, 0]; // reset the optics mode of the player's primary weapon to the default</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "setOpticsMode",
+  "name": "setOpticsMode",
+  "problem_notes": [],
+  "see_also": [
+    "getOpticsMode"
+  ],
+  "since": {
+    "arma3": "2.10"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "unit",
+          "mode"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "class name defined in the optic's {{hl|OpticsModes}} config class\n0-based index of the optic mode with 0 being the default optic mode\n[[Array]] with [slotIndex, opticsModeIndexOrClassName]",
+          "name": "mode",
+          "type": {
+            "OneOf": [
+              {
+                "desc": "class name defined in the optic's {{hl|OpticsModes}} config class",
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": "0-based index of the optic mode with 0 being the default optic mode",
+                "since": null,
+                "type": "Number"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": {
+                  "Unknown": "Exceeded maximum recursion depth while parsing Value"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

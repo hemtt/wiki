@@ -34,13 +34,11 @@
             },
             {
               "default": null,
-              "desc": null,
+              "desc": "of [[String]]s",
               "name": "selections",
               "since": null,
               "type": {
-                "ArrayUnsized": {
-                  "value": "String"
-                }
+                "Unknown": "Unknown simple type: array"
               }
             },
             {

@@ -110,6 +110,7 @@
   ],
   "statuses": [
     "Failed",
+    "Partial",
     "Passed"
   ]
 }

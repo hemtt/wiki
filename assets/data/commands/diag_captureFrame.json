@@ -1,0 +1,57 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "This command starts counting frames from the moment it is executed and when the count reaches the number passed as param, the current frame is captured and captured data UI dialog appears, similar to [[diag_captureSlowFrame]]. This can also be executed on a dedicated Server and because a Server has no UI it will behave like [[diag_captureFrameToFile]].\n{{Feature|important|BattlEye's RCON variant of this command is '''#captureFrame'''}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>diag_captureFrame 1; // capture the first frame after command execution</sqf>",
+    "<sqf>diag_captureFrame 24; // capture 24th frame after command execution</sqf>"
+  ],
+  "groups": [
+    "Diagnostic",
+    "Performance Profiling"
+  ],
+  "id": "diag_captureFrame",
+  "name": "diag_captureFrame",
+  "problem_notes": [],
+  "see_also": [
+    "Arma",
+    "3:",
+    "Diagnostics",
+    "Exe",
+    "Performance",
+    "Profiling",
+    "Arma",
+    "3:",
+    "Cheats",
+    "Multiplayer_Server_Commands#Performance_Profiling|Admin",
+    "chat",
+    "commands",
+    "diag_captureFrameToFile",
+    "diag_captureSlowFrame",
+    "diag_logSlowFrame",
+    "logEntities",
+    "exportJIPMessages"
+  ],
+  "since": {
+    "arma2oa": "1.63",
+    "arma3": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "frame"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "next n-th frame to be captured",
+          "name": "frame",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

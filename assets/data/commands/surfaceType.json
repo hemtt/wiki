@@ -1,0 +1,88 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns what surface type is at the given position. For surface texture see [[surfaceTexture]] command.<br>\n<br>\n{{Feature|informative|The command returns surface type of the ground, even underneath objects such as buildings and roads}}\n<spoiler text=\"Show surface types (Armed Assault)\">\n* #GRASSSOUTH\n* #GRASSGENERAL\n* #SANDGENERAL\n</spoiler>\n<spoiler text=\"Show surface types (Arma 2)\">\n* #UTGRASS - for natural surfaces\n* #UTCONCRETE - for urban surfaces\n</spoiler>\n<spoiler text=\"Show surface types (Arma 3)\">\n{{Columns|4|\n* BuildingRubble\n* BuildingRubble_exp\n* cardboard\n* cardboard_exp\n* carpet\n* carpet_exp\n* carpet_inside\n* carpet_in_exp\n* concrete\n* concrete_exp\n* concrete_hall\n* concrete_hall_exp\n* concrete_inside\n* concrete_in_exp\n* concrete_out\n* Default\n* dirtrunway\n* floor\n* floor_exp\n* floor_inside\n* floor_in_exp\n* GdtAsphalt\n* GdtBeach\n* GdtCliff\n* GdtConcrete\n* GdtDead\n* GdtDesert\n* GdtDirt\n* GdtField\n* GdtForest\n* GdtForestMalden\n* GdtForestPine\n* GdtGrassDry\n* GdtGrassGreen\n* GdtGrassLong\n* GdtGrassShort\n* GdtGrassTall\n* GdtGrassWild\n* GdtKLCobblestone\n* GdtKLDirt\n* GdtKlField\n* GdtKLForestCon\n* GdtKLForestDec\n* GdtKLGrass1\n* GdtKLGrass2\n* GdtKlSoil\n* GdtKlStubble\n* GdtKlTarmac\n* GdtKlWeatheredTarmac\n* GdtMarsh\n* GdtMud\n* GdtRedDirt\n* GdtRock\n* GdtRubble\n* GdtSeabed\n* GdtSeabedExp\n* GdtSoil\n* GdtStony\n* GdtStonyThistle\n* GdtStratisBeach\n* GdtStratisConcrete\n* GdtStratisDirt\n* GdtStratisDryGrass\n* GdtStratisForestPine\n* GdtStratisGreenGrass\n* GdtStratisRocky\n* GdtStratisSeabed\n* GdtStratisSeabedCluttered\n* GdtStratisThistles\n* GdtThorn\n* GdtVolcano\n* GdtVolcanoBeach\n* GdtVRsurface01\n* GdtWeed\n* GdtWildField\n* grid\n* grid_exp\n* lino\n* lino_exp\n* lino_in_exp\n* mat_in_exp\n* metalPlate\n* metalPlatePressed_exp\n* metalPlate_exp\n* metalPlate_in_exp\n* mud\n* mud_exp\n* parquet\n* planks\n* planks_exp\n* planks_inside\n* planks_in_exp\n* road\n* road_exp\n* roof_tiles_exp\n* rubble\n* rubble_exp\n* sand\n* sand_exp\n* softwood_in_exp\n* steel\n* steel_exp\n* stones\n* stones_exp\n* straw_exp\n* SurfIntConcrete\n* SurfIntMetal\n* SurfIntTiles\n* SurfIntWood\n* surfint_concrete\n* surfint_metal\n* surfint_tiles\n* surfint_wood\n* SurfMetal\n* SurfRoadConcrete\n* SurfRoadConcrete_exp\n* SurfRoadDirt\n* SurfRoadDirt_Enoch\n* SurfRoadDirt_exp\n* SurfRoadTarmac\n* SurfRoadTarmac1_Enoch\n* SurfRoadTarmac2_Enoch\n* SurfRoadTarmac3_Enoch\n* SurfRoadTarmac_exp\n* SurfRoofTiles\n* SurfRoofTin\n* SurfTrailDirt_Enoch\n* SurfTrailDirt_exp\n* SurfWater\n* SurfWood\n* surf_metal\n* surf_roadconcrete\n* surf_roaddirt\n* surf_roadtarmac\n* surf_rooftiles\n* surf_rooftin\n* surf_wood\n* TEST_SurfNormal\n* tiling\n* trash\n* trash_exp\n* Water\n* wavyMetal\n* wavyMetal_exp\n* woodenFloor\n}}\n</spoiler>",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _surface = surfaceType [4500, 4500];</sqf>",
+    "<sqf>hint surfaceType getPosWorld player;</sqf>",
+    "<sqf>\nprivate _pos = getPosWorld player;\n_pos set [2, true]; // use layer mask\nsurfaceType _pos;\n</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "surfaceType",
+  "name": "surfaceType",
+  "problem_notes": [],
+  "see_also": [
+    "surfaceTexture",
+    "surfaceIsWater",
+    "surfaceNormal",
+    "getAllEnvSoundControllers"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "x",
+          "y",
+          "z or useLayerMask"
+        ]
+      },
+      "ret": {
+        "desc": "Surface type",
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "world x coordinate of the position",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "world y coordinate of the position",
+              "name": "y",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "When a number is provided (Z in 3D positions), it is ignored. When a boolean is provided, it defines whether the layer mask should be used. Using the layer mask is more accurate but slightly slower.",
+              "name": "z or useLayerMask",
+              "optional": true,
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Boolean"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

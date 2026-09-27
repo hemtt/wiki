@@ -1,0 +1,96 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns limits of [[CT_SLIDER]] or [[CT_XSLIDER]].",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>sliderRange _ctrlSlider params [\"_minValue\", \"_maxValue\"];</sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "sliderRange",
+  "name": "sliderRange",
+  "problem_notes": [],
+  "see_also": [
+    "sliderPosition",
+    "sliderSetPosition",
+    "sliderSetRange",
+    "sliderSetSpeed",
+    "sliderSpeed"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "ofp": "1.85",
+    "ofpe": "1.00",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "idc"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "minValue",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "maxValue",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "idc of the control",
+          "name": "idc",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Unary": "control"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "minValue",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "maxValue",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      }
+    }
+  ]
+}

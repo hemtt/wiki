@@ -1,0 +1,78 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns currently selected throwable (and the muzzle it is loaded into), which will be launched if the user presses {{Controls|G}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>currentThrowable player; // [\"SmokeShellGreen\", \"SmokeShellGreenMuzzle\", [1.00002e+007, 0], 1]</sqf>",
+    "<sqf>\n_ct = currentThrowable player;\t\t\t\t// [\"HandGrenade\", \"HandGrenadeMuzzle\", [1e+007, 0], 1]\n_id = (_ct select 2 select 0) - 1e7;\t\t// 18\n</sqf>"
+  ],
+  "groups": [
+    "Weapons",
+    "Unit Inventory"
+  ],
+  "id": "currentThrowable",
+  "name": "currentThrowable",
+  "problem_notes": [],
+  "see_also": [
+    "selectThrowable",
+    "currentWeapon",
+    "currentMagazine",
+    "currentMuzzle",
+    "BIS_fnc_isThrowable"
+  ],
+  "since": {
+    "arma3": "1.48"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "unit"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": null,
+              "name": "magazineName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": null,
+              "name": "muzzleName",
+              "since": null,
+              "type": "String"
+            },
+            {
+              "default": null,
+              "desc": "of [[Number]] pairs: [itemWorldID, creatorID]",
+              "name": "id",
+              "since": null,
+              "type": {
+                "Unknown": "Unknown simple type: array"
+              }
+            },
+            {
+              "default": null,
+              "desc": "magazine ammo",
+              "name": "ammoCount",
+              "since": {
+                "arma3": "2.22"
+              },
+              "type": "Number"
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "name": "unit",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Draws an icon on the map.\nAs this command needs to be called every frame, it is preferable using the [[User Interface Event Handlers#onDraw|onDraw]] UI Event Handler.\n{{Feature|informative|Some useful icons can be found in <sqf inline>configFile >> \"CfgVehicleIcons\"</sqf>.}}",
+  "effect_loc": "Local",
+  "examples": [
+    "Red icon with text:\n<sqf>\nfindDisplay 12 displayCtrl 51 ctrlAddEventHandler [\"Draw\", {\n\t_this select 0 drawIcon [\n\t\t\"iconStaticMG\", // custom images can also be used: getMissionPath \"\\myFolder\\myIcon.paa\"\n\t\t[1,0,0,1],\n\t\tgetPosASLVisual player,\n\t\t24,\n\t\t24,\n\t\tgetDirVisual player,\n\t\t\"Player Vehicle\",\n\t\t1,\n\t\t0.03,\n\t\t\"TahomaB\",\n\t\t\"right\"\n\t]\n}];\n</sqf>",
+    "Green text only:\n<sqf>\nfindDisplay 12 displayCtrl 51 ctrlAddEventHandler [\"Draw\", {\n\t_this select 0 drawIcon [\n\t\t\"#(rgb,1,1,1)color(1,1,1,1)\",\n\t\t[0,1,0,1],\n\t\tplayer,\n\t\t0,\n\t\t0,\n\t\t0,\n\t\tname player\n\t]\n}];\n</sqf>"
+  ],
+  "groups": [
+    "GUI Control - Map"
+  ],
+  "id": "drawIcon",
+  "name": "drawIcon",
+  "problem_notes": [],
+  "see_also": [
+    "drawArrow",
+    "drawEllipse",
+    "drawLine",
+    "drawRectangle",
+    "drawPolygon",
+    "drawTriangle",
+    "drawXPolygon"
+  ],
+  "since": {
+    "arma1": "1.00",
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "map",
+          [
+            "texture",
+            "color",
+            "position",
+            "width",
+            "height",
+            "angle",
+            "text",
+            "shadow",
+            "textSize",
+            "font",
+            "align"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "map",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "icon texture",
+              "name": "texture",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "text and icon color",
+              "name": "color",
+              "type": "ArrayColorRgba"
+            }
+          },
+          {
+            "Item": {
+              "desc": ", [[Position#Introduction|Position2D]] or [[Position#Introduction|Position3D]]",
+              "name": "position",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "width of the icon (but not the text)",
+              "name": "width",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "height of the icon (but not the text)",
+              "name": "height",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "rotation angle of the icon not the text (add to it [[ctrlMapDir]] to show correctly on rotating minimap)",
+              "name": "angle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"\"",
+              "desc": "",
+              "name": "text",
+              "optional": true,
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "0 ([[false]]): no shadow\n1: shadow (for text)\n2 ([[true]]): outline (works for text and for icon only if icon angle is 0)",
+              "name": "shadow",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "Unknown": "Exceeded maximum recursion depth while parsing Value"
+                    }
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "Unknown": "Exceeded maximum recursion depth while parsing Value"
+                    }
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": {
+                      "Unknown": "Exceeded maximum recursion depth while parsing Value"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "-1",
+              "desc": "size of the text in UI units",
+              "name": "textSize",
+              "optional": true,
+              "since": {
+                "arma3": "0.72"
+              },
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"\"",
+              "desc": "text's font",
+              "name": "font",
+              "optional": true,
+              "since": {
+                "arma3": "0.72"
+              },
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"right\"",
+              "desc": "text alignment. Can be:\n* \"left\"\n* \"right\"\n* \"center\"",
+              "name": "align",
+              "optional": true,
+              "since": {
+                "arma3": "0.72"
+              },
+              "type": "String"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

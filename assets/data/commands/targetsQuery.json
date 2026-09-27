@@ -1,0 +1,167 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns sorted array of targets, '''known''' to the enquirer (including own troops), where the accuracy coefficient reflects how close the result matches the query. This command could be CPU intensive.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "Return all known targets for player:\n<sqf>_targets = player targetsQuery [objNull, sideUnknown, \"\", [], 0];</sqf>",
+    "Prioritise all known OPFOR targets and return targets less than 10 seconds old:\n<sqf>_targets = player targetsQuery [objNull, east, \"\", [], 10];</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "targetsQuery",
+  "name": "targetsQuery",
+  "problem_notes": [],
+  "see_also": [
+    "targets",
+    "nearTargets",
+    "targetsAggregate",
+    "targetKnowledge",
+    "knowsAbout",
+    "reveal",
+    "forgetTarget",
+    "setTargetAge",
+    "getHideFrom"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "enquirer",
+          [
+            "targetIgnore",
+            "targetSide",
+            "targetType",
+            "targetPosition",
+            "targetMaxAge"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "for whom the query will be made",
+          "name": "enquirer",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "default": null,
+                  "desc": "a coefficient, which reflects how close the returned result to the query filter. (1 - best match)",
+                  "name": "accuracy",
+                  "since": null,
+                  "type": {
+                    "NumberRange": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                {
+                  "default": null,
+                  "desc": "the actual target object",
+                  "name": "target",
+                  "since": null,
+                  "type": "Object"
+                },
+                {
+                  "default": null,
+                  "desc": "side of the target",
+                  "name": "targetSide",
+                  "since": null,
+                  "type": "Side"
+                },
+                {
+                  "default": null,
+                  "desc": "target [[typeOf]]",
+                  "name": "targetType",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "default": null,
+                  "desc": "[x,y] of the target",
+                  "name": "targetPosition",
+                  "since": null,
+                  "type": {
+                    "Unknown": "Unknown simple type: array"
+                  }
+                },
+                {
+                  "default": null,
+                  "desc": "the actual target age in seconds (can be negative)",
+                  "name": "targetAge",
+                  "since": null,
+                  "type": "Number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "target object to exclude from results. [[objNull]] - return every target",
+              "name": "targetIgnore",
+              "type": "Object"
+            }
+          },
+          {
+            "Item": {
+              "desc": "desired side of the target. [[sideUnknown]] - any side",
+              "name": "targetSide",
+              "type": "Side"
+            }
+          },
+          {
+            "Item": {
+              "desc": "desired target [[typeOf]]. \"\" - any type",
+              "name": "targetType",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "desired target position (only [x,y] is considered). Position tolerance is 200m from the actual position of the target. [] - any position",
+              "name": "targetPosition",
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position2d"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Position3d"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "desired max age of the target. This will limit returned results to the targets younger than specified age. 0 - any age",
+              "name": "targetMaxAge",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

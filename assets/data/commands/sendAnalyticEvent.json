@@ -1,0 +1,74 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Generates new analytics events with given values, acceptable value types are string, scalar and bool.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nif (onOfficialServer) then\n{\n\tsendAnalyticEvent [\"EventName\", [\"key1\", false], [\"key2\", 1], [\"key3\", \"two\"]];\n};\n</sqf>"
+  ],
+  "groups": [
+    "Argo"
+  ],
+  "id": "sendAnalyticEvent",
+  "name": "sendAnalyticEvent",
+  "problem_notes": [],
+  "see_also": [
+    "onOfficialServer",
+    "sendCloudRequest",
+    "sendCloudRequestClient",
+    "sendCloudRequestServer"
+  ],
+  "since": {
+    "argo": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "eventName",
+          "keyValuePairs"
+        ]
+      },
+      "ret": {
+        "desc": "[[true]] when done (not if the analytics were sent), [[false]] if the provided array is wrong",
+        "type": "Boolean"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "''unknown possible values''",
+              "name": "eventName",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "name": "keyValuePairs",
+              "type": {
+                "ArraySized": [
+                  {
+                    "default": null,
+                    "desc": "entry's name",
+                    "name": "key",
+                    "since": null,
+                    "type": "String"
+                  },
+                  {
+                    "default": null,
+                    "desc": "entry's value; if an [[Array]], inserts its content at the end of ''keyValuePairs''; if any other [[Data Types|Data Type]], it is ignored",
+                    "name": "value",
+                    "since": null,
+                    "type": {
+                      "Unknown": "Unknown simple type: array"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

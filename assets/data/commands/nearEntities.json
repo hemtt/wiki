@@ -1,0 +1,262 @@
+{
+  "argument_loc": "Global",
+  "description": "[[File:sphere_radius.jpg|right|200px]]\nFinds entities inside a sphere with the given radius. If the alternative syntax is used, only entities of given types or subtypes are listed.\nEntities returned are not sorted by distance.\n\nThe main syntax does not return dead entities or entities inside vehicles. If you need to return those, use the {{Link|#Syntax 3|alternative syntax}} (with ''includeCrew'' set to [[true]]) or the [[entities]] command.\n\n{{Feature|informative|This command is [[Code Optimisation#nearEntities and nearestObjects|much faster]] than [[nearestObjects]] for on-foot soldier and vehicle detection.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\n_list = player nearEntities 20;\n_list = ASLToAGL getPosASL player nearEntities 50;\n_list = player nearEntities [\"Man\", 1000];\n_list = ASLToAGL getPosASL player nearEntities [\"LaserTarget\", 3000];\n_list = player nearEntities [[\"Car\", \"Motorcycle\", \"Tank\"], 50];\n_list = ASLToAGL getPosASL player nearEntities [[\"Man\", \"Air\", \"Car\", \"Motorcycle\", \"Tank\"], 200];\n</sqf>"
+  ],
+  "groups": [
+    "Object Detection"
+  ],
+  "id": "nearEntities",
+  "name": "nearEntities",
+  "problem_notes": [],
+  "see_also": [
+    "entities",
+    "findNearestEnemy",
+    "nearestBuilding",
+    "nearestObject",
+    "nearestObjects",
+    "nearObjects",
+    "nearestLocation",
+    "nearTargets",
+    "nearSupplies",
+    "nearestLocationWithDubbing",
+    "nearObjectsReady",
+    "nearRoads",
+    "nearestMines"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "position",
+          "radius"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "search centre",
+          "name": "position",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3dAGL"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              }
+            ]
+          }
+        }
+      },
+      "ret": {
+        "desc": "not sorted",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "radius of the sphere",
+          "name": "radius",
+          "type": "Number"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "position",
+          [
+            "type",
+            "radius"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "search centre",
+          "name": "position",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position3dAGL"
+              },
+              {
+                "desc": null,
+                "since": null,
+                "type": "Position2d"
+              }
+            ]
+          }
+        }
+      },
+      "ret": {
+        "desc": "not sorted",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "type(s) to search for. See [[isKindOf]]",
+              "name": "type",
+              "type": {
+                "ArrayUnsized": {
+                  "value": {
+                    "OneOf": [
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": "String"
+                      },
+                      {
+                        "desc": null,
+                        "since": null,
+                        "type": {
+                          "ArrayUnsized": {
+                            "value": "String"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "desc": "radius of the sphere",
+              "name": "radius",
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "area",
+          [
+            "types",
+            "matchExactType",
+            "aliveOnly",
+            "includeCrew"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "marker name\ntrigger\nformat [center, a, b, angle, isRectangular, c] or {{GVI|arma3|2.22|size= 0.75}} [center, a, b, angle, isRectangular, c, usePosWorld] (see [[inArea]])",
+          "name": "area",
+          "type": {
+            "OneOf": [
+              {
+                "desc": "marker name",
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": "trigger",
+                "since": null,
+                "type": "Object"
+              },
+              {
+                "desc": "format [center, a, b, angle, isRectangular, c] or {{GVI|arma3|2.22|size= 0.75}} [center, a, b, angle, isRectangular, c, usePosWorld] (see [[inArea]])",
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: array"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ret": {
+        "desc": "not sorted",
+        "type": {
+          "ArrayUnsized": {
+            "value": "Object"
+          }
+        }
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "type(s) to search for or [] empty array to return every type",
+              "name": "types",
+              "type": {
+                "ArrayUnsized": {
+                  "value": "String"
+                }
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "[[true]] for an exact type match, [[false]] for an [[isKindOf]] match",
+              "name": "matchExactType",
+              "optional": true,
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "true",
+              "desc": "[[true]] to ignore dead entities, [[false]] to include them",
+              "name": "aliveOnly",
+              "optional": true,
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "[[true]] to include crew of vehicles in search",
+              "name": "includeCrew",
+              "optional": true,
+              "type": "Boolean"
+            }
+          }
+        ]
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

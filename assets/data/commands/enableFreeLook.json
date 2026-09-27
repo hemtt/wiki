@@ -1,0 +1,40 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Enables or disables the freelook toggle (2x Alt)",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>enableFreeLook true;</sqf>",
+    "<sqf>// a function to get the current state without making changes\nprivate _fnc_isFreeLookToggled = \n{\n  private _oldState = enableFreeLook true; // enable temporarily; get state\n  enableFreeLook _oldState;\n  _oldState; // return the state\n};\n\nprivate _isFreeLookToggled = call _fnc_isFreeLookToggled;\n\n// a function to toggle the state\nprivate _fnc_toggleFreeLook = \n{\n  enableFreeLook !enableFreeLook false;\n};\n\ncall _fnc_toggleFreeLook; // toggle it (if enabled->disable it, and vice versa)\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "enableFreeLook",
+  "name": "enableFreeLook",
+  "problem_notes": [],
+  "see_also": [
+    "freeLook"
+  ],
+  "since": {
+    "arma3": "2.22"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enable"
+      },
+      "ret": {
+        "desc": "Previous state",
+        "type": "Boolean"
+      },
+      "right": {
+        "Item": {
+          "desc": "enable or disable the toggle",
+          "name": "enable",
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}

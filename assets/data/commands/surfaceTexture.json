@@ -1,0 +1,79 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Same as [[surfaceType]], but returns texture path to ground texture as string.\n{{Feature|informative|The texture returned is of the ground, even if there is a road at that position. To get road texture use [[getRoadInfo]] command.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _groundTexture = surfaceTexture getPosATL player;</sqf>",
+    "<sqf>\nprivate _pos = getPosATL player;\n_pos set [2, true]; // use layer mask\nprivate _groundTexture = surfaceTexture _pos;\n</sqf>"
+  ],
+  "groups": [
+    "Positions"
+  ],
+  "id": "surfaceTexture",
+  "name": "surfaceTexture",
+  "problem_notes": [],
+  "see_also": [
+    "surfaceType",
+    "getRoadInfo"
+  ],
+  "since": {
+    "arma3": "2.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "x",
+          "y",
+          "useLayerMask"
+        ]
+      },
+      "ret": {
+        "desc": "Surface texture",
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "world x coordinate of the position",
+              "name": "x",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "world y coordinate of the position",
+              "name": "y",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "When a number is provided (Z in 3D positions), it is ignored. When a boolean is provided, it defines whether the layer mask should be used. Using the layer mask is more accurate but slightly slower.",
+              "name": "useLayerMask",
+              "since": {
+                "arma3": "2.18"
+              },
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Boolean"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

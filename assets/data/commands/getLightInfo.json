@@ -1,0 +1,175 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns various properties for the given {{hl|#lightpoint}} or {{hl|#lightreflector}}. ConePars and VolumeShapePars are exclusive properties of {{hl|#lightreflector}} only.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>private _lightInfo = getLightInfo light1;</sqf>",
+    "<sqf>private _lightIntensity = light1 getLightInfo 0;</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getLightInfo",
+  "name": "getLightInfo",
+  "problem_notes": [],
+  "see_also": [
+    "setLightIntensity",
+    "setLightColor",
+    "setLightAmbient",
+    "setLightDayLight",
+    "setLightIR",
+    "setLightUseFlare",
+    "setLightFlareSize",
+    "setLightFlareMaxDistance",
+    "setLightAttenuation",
+    "lightAttachObject",
+    "lightDetachObject",
+    "setLightConePars",
+    "getUnitFreefallInfo",
+    "setLightConePars",
+    "getEntityInfo",
+    "getModelInfo"
+  ],
+  "since": {
+    "arma3": "2.22"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "light"
+      },
+      "ret": {
+        "type": {
+          "ArraySized": [
+            {
+              "default": null,
+              "desc": "getter for [[setLightIntensity]] ([[setLightBrightness]] also sets intensity in a weird way, but it is also obsolete)",
+              "name": "intensity",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightColor]]",
+              "name": "diffuseColor",
+              "since": null,
+              "type": "ArrayColor"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightAmbient]]",
+              "name": "ambientColor",
+              "since": null,
+              "type": "ArrayColor"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightDayLight]]",
+              "name": "dayLight",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightIR]]",
+              "name": "IR",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightUseFlare]]",
+              "name": "useFlare",
+              "since": null,
+              "type": "Boolean"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightFlareSize]]",
+              "name": "flareSize",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightFlareMaxDistance]]",
+              "name": "flareMaxDistance",
+              "since": null,
+              "type": "Number"
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightAttenuation]]",
+              "name": "attenuationPars",
+              "since": null,
+              "type": {
+                "Unknown": "Unknown simple type: array"
+              }
+            },
+            {
+              "default": null,
+              "desc": "getter for [[lightAttachObject]], [[lightDetachObject]]",
+              "name": "attachedToPars",
+              "since": null,
+              "type": {
+                "Unknown": "Unknown simple type: array"
+              }
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightConePars]]",
+              "name": "conePars",
+              "since": null,
+              "type": {
+                "Unknown": "Unknown simple type: array"
+              }
+            },
+            {
+              "default": null,
+              "desc": "getter for [[setLightVolumeShape]]",
+              "name": "volumeShapePars",
+              "since": null,
+              "type": {
+                "Unknown": "Unknown simple type: array"
+              }
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "{{hl|#lightpoint}} or {{hl|#lightreflector}}",
+          "name": "light",
+          "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "light",
+          "index"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "{{hl|#lightpoint}} or {{hl|#lightreflector}}",
+          "name": "light",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "desc": "depends on the requested property, or [[Nothing]]",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "property index (see main syntax, for example 0 for light intensity)",
+          "name": "index",
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

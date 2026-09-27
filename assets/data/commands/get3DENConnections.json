@@ -1,0 +1,60 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns all [[Eden Editor: Connecting|connections]] currently present on an entity.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>get3DENConnections _trigger; // Can return [[\"WaypointActivation\",[B Alpha 4-5,0]]]</sqf>"
+  ],
+  "groups": [
+    "Eden Editor"
+  ],
+  "id": "get3DENConnections",
+  "name": "get3DENConnections",
+  "problem_notes": [],
+  "see_also": [
+    "add3DENConnection",
+    "remove3DENConnection"
+  ],
+  "since": {
+    "arma3": "1.56"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "type": {
+          "ArrayUnsized": {
+            "value": {
+              "ArraySized": [
+                {
+                  "default": null,
+                  "desc": "connection class from ''Cfg3DEN >> Connections''",
+                  "name": "type",
+                  "since": null,
+                  "type": "String"
+                },
+                {
+                  "default": null,
+                  "desc": ": Entitiy the connection leads to",
+                  "name": "to",
+                  "since": null,
+                  "type": "EdenEntity"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "or [[Eden ID]]",
+          "name": "entity",
+          "type": "EdenEntity"
+        }
+      }
+    }
+  ]
+}

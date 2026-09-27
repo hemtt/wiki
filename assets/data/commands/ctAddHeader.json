@@ -52,13 +52,11 @@
             },
             {
               "default": null,
-              "desc": null,
+              "desc": "of [[Control]]s",
               "name": "createdControls",
               "since": null,
               "type": {
-                "ArrayUnsized": {
-                  "value": "Control"
-                }
+                "Unknown": "Unknown simple type: array"
               }
             }
           ]

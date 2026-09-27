@@ -32,24 +32,20 @@
           "ArraySized": [
             {
               "default": null,
-              "desc": null,
+              "desc": "of [[Object]]s",
               "name": "objects",
               "since": null,
               "type": {
-                "ArrayUnsized": {
-                  "value": "Object"
-                }
+                "Unknown": "Unknown simple type: array"
               }
             },
             {
               "default": null,
-              "desc": null,
+              "desc": "of [[Group]]s",
               "name": "groups",
               "since": null,
               "type": {
-                "ArrayUnsized": {
-                  "value": "Group"
-                }
+                "Unknown": "Unknown simple type: array"
               }
             },
             {
@@ -61,13 +57,11 @@
             },
             {
               "default": null,
-              "desc": null,
+              "desc": "of [[String]]s",
               "name": "markers",
               "since": null,
               "type": {
-                "ArrayUnsized": {
-                  "value": "String"
-                }
+                "Unknown": "Unknown simple type: array"
               }
             }
           ]

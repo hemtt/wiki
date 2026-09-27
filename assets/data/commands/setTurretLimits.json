@@ -1,0 +1,135 @@
+{
+  "argument_loc": "Local",
+  "description": "Sets the rotation and elevation limits for the given turret. The limits are relative to model orientation of the turret. For example to allow 360 degree turning it is enough to set turn limits to (-180, 180). The limits can only be set within the limits defined in config and cannot exceed them. To reset to config defaults pass the turret argument only (Example 2).",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>m2 setTurretLimits [[0], -45, 45, -10, 10];</sqf>",
+    "<sqf>m2 setTurretLimits [[0]]; //reset</sqf>",
+    "<sqf>m2 setTurretLimits [[0], -45, 45, -10, 10, true];</sqf>"
+  ],
+  "groups": [
+    "Turrets"
+  ],
+  "id": "setTurretLimits",
+  "name": "setTurretLimits",
+  "problem_notes": [],
+  "see_also": [
+    "getTurretLimits",
+    "setTurretOpticsMode",
+    "turretLocal",
+    "selectWeaponTurret",
+    "lockCameraTo"
+  ],
+  "since": {
+    "arma3": "2.12"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "turret",
+            "minTurn",
+            "maxTurn",
+            "minElev",
+            "maxElev",
+            "soft"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle the turret belongs to",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "turret path",
+              "name": "turret",
+              "type": "TurretPath"
+            }
+          },
+          {
+            "Item": {
+              "desc": "from 0 to -angle in degrees (left)",
+              "name": "minTurn",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "from 0 to +angle in degrees (right)",
+              "name": "maxTurn",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "from 0 to -angle in degrees (down)",
+              "name": "minElev",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "from 0 to +angle in degrees (up)",
+              "name": "maxElev",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "[[true]] to gradually move turret to the new limits (if turret is currenty oriented out of new limts). [[false]] to snap to the new limits. Default: [[false]]",
+              "name": "soft",
+              "optional": true,
+              "since": {
+                "arma3": "2.22"
+              },
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          [
+            "turret"
+          ]
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "vehicle the turret belongs to",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "turret path (to reset)",
+              "name": "turret",
+              "type": "TurretPath"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

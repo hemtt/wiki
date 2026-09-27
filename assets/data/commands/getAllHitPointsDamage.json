@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Global",
+  "description": "Get provided object's hit points damage.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nhint str getAllHitPointsDamage player;\n/*\n[\n\t[\"hitface\",\"hitneck\",\"hithead\",\"hitpelvis\",\"hitabdomen\",\"hitdiaphragm\",\"hitchest\",\"hitbody\",\"hitarms\",\"hithands\",\"hitlegs\",\"incapacitated\"],\n\t[\"face_hub\",\"neck\",\"head\",\"pelvis\",\"spine1\",\"spine2\",\"spine3\",\"body\",\"arms\",\"hands\",\"legs\",\"body\"],\n\t[0,0,0,0,0,0,0,0,0,0,0,0]\n]\n*/\n</sqf>",
+    "<sqf>\nhint str getAllHitPointsDamage vehicle player;\n/*\n[\n\t[\"hithull\",\"hitengine\",\"hitengine2\",\"hitavionics\",\"hitfuel\",\"hitfuel2\",\"hitglass1\",\"hitlaileron\",\"hitraileron\",\"hitlcrudder\",\"hitrrudder\",\"hitlcelevator\",\"hitrelevator\",\"#gear_f_lights\"],\n\t[\"hithull\",\"hitengine\",\"hitengine2\",\"hitavionics\",\"hitfuel\",\"hitfuel2\",\"hitglass1\",\"hitlaileron\",\"hitraileron\",\"hitlcrudder\",\"hitrrudder\",\"hitlcelevator\",\"hitrelevator\",\" \"],\n\t[0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n]\n*/\n</sqf>"
+  ],
+  "groups": [
+    "Object Manipulation"
+  ],
+  "id": "getAllHitPointsDamage",
+  "name": "getAllHitPointsDamage",
+  "problem_notes": [],
+  "see_also": [
+    "setHitPointDamage",
+    "getHitPointDamage",
+    "setHitIndex",
+    "getHitIndex",
+    "setHit",
+    "getHit",
+    "setDamage",
+    "damage"
+  ],
+  "since": {
+    "arma3": "1.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "entity"
+      },
+      "ret": {
+        "desc": "hitpointNames: [[Array]] of [[String]]s\nselectionNames: [[Array]] of [[String]]s\ndamageValues: [[Array]] of [[Number]]s in range 0..1 - where 0 = no damage, 1 = full damage",
+        "type": {
+          "OneOf": [
+            {
+              "desc": null,
+              "since": null,
+              "type": {
+                "Unknown": "Exceeded maximum recursion depth while parsing Value"
+              }
+            },
+            {
+              "desc": null,
+              "since": null,
+              "type": {
+                "Unknown": "Exceeded maximum recursion depth while parsing Value"
+              }
+            },
+            {
+              "desc": "where 0 = no damage, 1 = full damage",
+              "since": null,
+              "type": {
+                "Unknown": "Exceeded maximum recursion depth while parsing Value"
+              }
+            }
+          ]
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "object to be queried",
+          "name": "entity",
+          "type": "Object"
+        }
+      }
+    }
+  ]
+}
