@@ -1,0 +1,47 @@
+name: compatibleWeapons
+desc: Returns all compatible weapons for given weapon item, weapon magazine or weapon slot.
+groups:
+- Weapons
+syntax:
+- call: !Unary name
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: |-
+      of [[Array]]s in format:
+      * [weapon, slot] - for weapon items
+      * [weapon, muzzle] - for weapon magazines (primary muzzle returned as "this")
+      * [weapon, slot] - for weapon slot
+  right: !Item
+    name: name
+    desc: |-
+      "CowsSlot" for optics
+      "MuzzleSlot" for silencers
+      "PointerSlot" for laser pointers and flashlights
+      "UnderBarrelSlot" for bipods
+    type: !OneOf
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: null
+      since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.22'
+examples:
+- <sqf>compatibleWeapons "LaserBatteries"; // [["Laserdesignator_pilotCamera","this"],["Laserdesignator_mounted","this"],...]</sqf>
+- <sqf>compatibleWeapons "PointerSlot"; // [["arifle_MX_ACO_pointer_F","PointerSlot"],["arifle_TRG21_F","PointerSlot"],...]</sqf>
+- <sqf>compatibleWeapons "1Rnd_HE_Grenade_shell"; // [["arifle_Katiba_GL_F","EGLM"],["arifle_Katiba_GL_ACO_F","EGLM"],...]</sqf>
+- <sqf>compatibleWeapons "bipod_01_F_blk"; // [["arifle_MX_ACO_pointer_F","UnderBarrelSlot"],["arifle_MX_F","UnderBarrelSlot"],...]</sqf>
+see_also:
+- compatibleItems
+- compatibleMagazines
+- BIS_fnc_compatibleItems
+- canAdd
