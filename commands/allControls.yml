@@ -5,15 +5,15 @@ groups:
 syntax:
 - call: !Unary display
   ret:
-    type: !ArrayUnsized
-      value: Control
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Control]]s
   right: !Item
     name: display
     type: Display
 - call: !Unary controlsGroup
   ret:
-    type: !ArrayUnsized
-      value: Control
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Control]]s
   right: !Item
     name: controlsGroup
     desc: '[[CT_CONTROLS_GROUP]]'
