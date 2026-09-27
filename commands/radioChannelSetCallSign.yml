@@ -1,0 +1,32 @@
+name: radioChannelSetCallSign
+desc: Set the custom radio chat channel's callsign / VoN callsign.
+groups:
+- Radio and Chat
+- Custom Radio and Chat
+syntax:
+- call: !Binary
+  - customChannelID
+  - callSign
+  ret:
+    type: Nothing
+  left: !Item
+    name: customChannelID
+    desc: '[[Channel IDs|custom channel ID]] returned by [[radioChannelCreate]] command'
+    type: Number
+  right: !Item
+    name: callSign
+    desc: 'custom chat callsign or [callSign, callSignVoN]. Available parameters: <spoiler>'
+    type: !Unknown 'Unknown simple type: array'
+argument_loc: Global
+effect_loc: Global
+since:
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>4 radioChannelSetCallSign "(%UNIT_ID) %UNIT_RANK %UNIT_NAME%UNIT_GRP_LEADER"; // (1) Sgt Ben Kelly, group leader</sqf>
+- <sqf>4 radioChannelSetCallSign ["%UNIT_VEH_POSITION, %UNIT_VEH_NAME", "%UNIT_NAME%UNIT_GRP_LEADER"];</sqf>
+see_also:
+- radioChannelAdd
+- radioChannelCreate
+- radioChannelRemove
+- radioChannelSetLabel
