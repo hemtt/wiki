@@ -10,8 +10,8 @@ syntax:
     type: String
   left: !Item
     name: array
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: separator
     desc: separator used to join array elements.
