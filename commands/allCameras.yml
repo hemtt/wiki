@@ -1,0 +1,18 @@
+name: allCameras
+desc: Return a list of all existing cameras.
+groups:
+- Camera Control
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Param `TIindex` not found in pool: [ParamItem { name: "camera", desc: Some("the camera itself (see [[camCreate]])"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: "r2tInfos", desc: Some("of [[Array]]s with [r2tName, r2tEffectName, ppEffectType, TIindex]"), typ: Unknown("Unknown simple type: array"), optional: false, default: None, since: None }, ParamItem { name: "isPrimary", desc: Some("whether or not this camera is the current main one"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: "effectName", desc: Some("see [[cameraEffect]] for possible values"), typ: String, optional: true, default: None, since: None }, ParamItem { name: "viewMode", desc: Some("0 = normal, 1 = NVG, 2 = TI, 3 = NVG + TI"), typ: Number, optional: true, default: None, since: None }, ParamItem { name: "TIIndex", desc: Some("see [[setCamUseTI]] for possible values"), typ: Number, optional: true, default: None, since: None }]'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.18'
+examples:
+- "<sqf>\n{\n\tparams [\"_camera\", \"_r2tInfos\", \"_isPrimary\", \"_ppEffectName\", \"_viewMode\", \"_TIindex\"];\n\t{\n\t\tparams[\"_r2tName\", \"_ppEffectName\", \"_ppEffectType\", \"_TIindex\"];\n\t} forEach _r2tInfos;\n} forEach allCameras;\n</sqf>"
+- "<sqf>\nprivate _allCamerasInfo = allCameras;\n{\n\tparams [\"_camera\", \"\", \"_isPrimary\"];\n\tif (!_isPrimary) then { camDestroy _camera };\n} forEach _allCamerasInfo;\n</sqf>"
+see_also:
+- camCreate
+- camDestroy
