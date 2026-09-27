@@ -39,7 +39,7 @@ syntax:
       * [[String]] - classname of the sound to be played. Defined in [[CfgSounds]] including [[Description.ext]]
       * [[Array]] with [sound, maxDistance, pitchCoef, isSpeech, offset, simulateSpeedOfSound, playMode, isGlobal]
       ** sound: [[String]] - classname of the sound to be played. Defined in [[Description.ext#CfgSounds|CfgSounds]] including [[Description.ext]]
-      ** maxDistance: [[Number]] - (Optional, default 100) maximum distance in meters at which the sound can be heard
+      ** maxDistance: [[Number]] - (Optional, default 100) maximum distance in meters at which the sound can be heard. -1 to use the maxDistance from the sound config
       ** pitchCoef: [[Number]] - (Optional, default 1) multiplier to the [[CfgSounds]] defined pitch. The final audio pitch is clipped between 0.5 and 2.0
       ** {{GVI|arma3|1.92|size= 0.75}} isSpeech: [[Boolean]] or {{GVI|arma3|2.04|size= 0.75}} [[Number]] - (Optional, default [[false]])
       *** 0/[[false]] = play as sound ([[fadeSound]] applies)
