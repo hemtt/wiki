@@ -1,0 +1,63 @@
+name: hideActions
+desc: |-
+  {{Feature|important|This command is a work in progress and can evolve until release on stable branch.}}
+  Hides/unhides user UI actions given by their enum number (see [[shownAction]]).
+
+  {{Feature|informative|This command hides actions for the current player ([[focusOn]]), a respawned player will have all actions unhidden so it must be reapplied.}}
+groups:
+- Interaction
+syntax:
+- call: !Unary
+  - mode
+  - actions
+  ret:
+    type: Nothing
+  right: !Array
+  - !Item
+    name: mode
+    desc: |-
+      only given actions (if previously hidden) would be unhidden
+      only given actions would be hidden
+      all hidden actions will be unhidden except for the given actions
+      all actions will be hidden except for the given actions
+    type: !OneOf
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: only given actions (if previously hidden) would be unhidden
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: only given actions would be hidden
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: all hidden actions will be unhidden except for the given actions
+      since: null
+    - type: !Unknown Exceeded maximum recursion depth while parsing Value
+      desc: all actions will be hidden except for the given actions
+      since: null
+  - !Item
+    name: actions
+    desc: of [[Number]]s (see [[shownAction]])
+    type: !Unknown 'Unknown simple type: array'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.22'
+examples:
+- <sqf>hideActions [true, [1, 2]]; //hide GetInCommander and GetInDriver actions</sqf>
+- <sqf>hideActions ["UnhideSelected", [1, 2]]; //unhide GetInCommander and GetInDriver actions</sqf>
+- <sqf>hideActions [1, [91]]; //hide all user added actions</sqf>
+- <sqf>hideActions ["HideAllButSelected", [91]]; //hide all engine actions leaving only user added</sqf>
+- <sqf>hideActions [3, []]; //hide all actions</sqf>
+- <sqf>hideActions ["UnhideAllButSelected", []]; //unhide all hidden actions</sqf>
+see_also:
+- hiddenActions
+- shownAction
+- visibleMap
+- shownGPS
+- shownWatch
+- shownCompass
+- shownUAVFeed
+- shownHUD
+- addAction
+- action
+- isActionMenuVisible
+- Arma_3:_Mission_Event_Handlers#ActionTargetChanged
