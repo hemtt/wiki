@@ -1,0 +1,23 @@
+name: get3DENIconsVisible
+desc: Gets visibility state of [[:Category:Eden Editor|Eden Editor]] icons.
+groups:
+- Eden Editor
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: |-
+      of [[Boolean]]s format [shownInMap, shownInScene]:
+      * shownInMap: [[Boolean]] - icons's map visibility
+      * shownInScene: [[Boolean]] - icons's scene visibility
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.56'
+examples:
+- <sqf>if (get3DENIconsVisible select 0) then { hint "Icons are visible on the map." };</sqf>
+- <sqf>get3DENIconsVisible params ["_shownInMap", "_shownInScene"];</sqf>
+see_also:
+- set3DENIconsVisible
+- set3DENLinesVisible
+- get3DENLinesVisible
