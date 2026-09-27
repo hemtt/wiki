@@ -1,0 +1,39 @@
+name: getModelInfo
+desc: Returns object's model info. Model path is suitable for use with [[createSimpleObject]] command.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary object
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: |-
+      array in format [modelName, modelPath, hasSkeleton, placingPoint, mass]
+      * modelName: [[String]] - For example "car.p3d"
+      * modelPath: [[String]] - Full path to model. For example: "a3\data\models\car.p3d"
+      * hasSkeleton: [[Boolean]] - Returns whether the model has a skeleton (which usually means it's also animated)
+      * {{GVI|arma3|2.08}} placingPoint: [[Vector3D]] - Placing point of the model in model coordinates. Placing point is always in format [0,0,z].
+      * {{GVI|arma3|2.18}} mass: [[Number]] - Mass defined in the p3d model
+  right: !Item
+    name: object
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.50'
+examples:
+- <sqf>_modelInfo = getModelInfo player; // ["b_soldier_03.p3d", "a3\characters_f\blufor\b_soldier_03.p3d", true, [0,0,0]]</sqf>
+- <sqf>_modelInfo = getModelInfo cursorObject;</sqf>
+- |-
+  Get Z ASL using placing point:
+  <sqf>_zASL = (heli modelToWorldWorld (getModelInfo heli select 3)) select 2;</sqf>
+see_also:
+- cursorObject
+- cursorTarget
+- createSimpleObject
+- getObjectType
+- getObjectTextures
+- objectParent
+- setVelocityTransformation
+- getUnitFreefallInfo
+- getEntityInfo
+- getMass
