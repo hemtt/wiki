@@ -9,8 +9,8 @@ syntax:
   - str
   - delimiters
   ret:
-    type: !ArrayUnsized
-      value: String
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[String]]s
   left: !Item
     name: str
     desc: the string to split
