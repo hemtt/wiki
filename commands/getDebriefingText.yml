@@ -1,0 +1,30 @@
+name: getDebriefingText
+desc: A getter for [[setDebriefingText]].
+groups:
+- Briefing
+syntax:
+- call: !Unary end
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: |-
+      format:
+      * [text, title] if old syntax of [[setDebriefingText]] was used)
+      * [text, title, subtitle, picture, background] if [[setDebriefingText]]'s alternative syntax was used
+      * empty array if [[setDebriefingText]] was not used
+  right: !Item
+    name: end
+    desc: end type
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.06'
+examples:
+- <sqf>private _debriefingTextDeath = getDebriefingText "endDeath";</sqf>
+see_also:
+- setDebriefingText
+- disableDebriefingStats
+- enableDebriefingStats
+- endMission
+- failMission
+- missionEnd
