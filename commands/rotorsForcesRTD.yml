@@ -7,9 +7,8 @@ groups:
 syntax:
 - call: !Unary helicopter
   ret:
-    type: !ArrayUnsized
-      value: !ArrayUnsized
-        value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Array]] of [[Number]]s
   right: !Item
     name: helicopter
     type: Object
