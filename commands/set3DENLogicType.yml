@@ -10,8 +10,8 @@ syntax:
     type: Nothing
   left: !Item
     name: objects
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: classname
     desc: name of the cfgVehicles class
