@@ -1,0 +1,110 @@
+name: getLightInfo
+desc: Returns various properties for the given {{hl|#lightpoint}} or {{hl|#lightreflector}}. ConePars and VolumeShapePars are exclusive properties of {{hl|#lightreflector}} only.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary light
+  ret:
+    type: !ArraySized
+    - name: intensity
+      type: Number
+      default: null
+      desc: getter for [[setLightIntensity]] ([[setLightBrightness]] also sets intensity in a weird way, but it is also obsolete)
+      since: null
+    - name: diffuseColor
+      type: ArrayColor
+      default: null
+      desc: getter for [[setLightColor]]
+      since: null
+    - name: ambientColor
+      type: ArrayColor
+      default: null
+      desc: getter for [[setLightAmbient]]
+      since: null
+    - name: dayLight
+      type: Boolean
+      default: null
+      desc: getter for [[setLightDayLight]]
+      since: null
+    - name: IR
+      type: Boolean
+      default: null
+      desc: getter for [[setLightIR]]
+      since: null
+    - name: useFlare
+      type: Boolean
+      default: null
+      desc: getter for [[setLightUseFlare]]
+      since: null
+    - name: flareSize
+      type: Number
+      default: null
+      desc: getter for [[setLightFlareSize]]
+      since: null
+    - name: flareMaxDistance
+      type: Number
+      default: null
+      desc: getter for [[setLightFlareMaxDistance]]
+      since: null
+    - name: attenuationPars
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: getter for [[setLightAttenuation]]
+      since: null
+    - name: attachedToPars
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: getter for [[lightAttachObject]], [[lightDetachObject]]
+      since: null
+    - name: conePars
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: getter for [[setLightConePars]]
+      since: null
+    - name: volumeShapePars
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: getter for [[setLightVolumeShape]]
+      since: null
+  right: !Item
+    name: light
+    desc: '{{hl|#lightpoint}} or {{hl|#lightreflector}}'
+    type: Object
+- call: !Binary
+  - light
+  - index
+  ret:
+    type: Anything
+    desc: depends on the requested property, or [[Nothing]]
+  left: !Item
+    name: light
+    desc: '{{hl|#lightpoint}} or {{hl|#lightreflector}}'
+    type: Object
+  right: !Item
+    name: index
+    desc: property index (see main syntax, for example 0 for light intensity)
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.22'
+examples:
+- <sqf>private _lightInfo = getLightInfo light1;</sqf>
+- <sqf>private _lightIntensity = light1 getLightInfo 0;</sqf>
+see_also:
+- setLightIntensity
+- setLightColor
+- setLightAmbient
+- setLightDayLight
+- setLightIR
+- setLightUseFlare
+- setLightFlareSize
+- setLightFlareMaxDistance
+- setLightAttenuation
+- lightAttachObject
+- lightDetachObject
+- setLightConePars
+- getUnitFreefallInfo
+- setLightConePars
+- getEntityInfo
+- getModelInfo
