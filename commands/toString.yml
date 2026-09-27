@@ -10,8 +10,8 @@ syntax:
     desc: '{{Link|https://en.wikipedia.org/wiki/Unicode}} numbers converted to [[String]] of characters'
   right: !Item
     name: array
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 - call: !Unary code
   ret:
     type: String
