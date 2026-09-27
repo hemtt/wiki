@@ -8,14 +8,8 @@ syntax:
     type: Nothing
   right: !Item
     name: entities
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: EdenEntity
-        desc: null
-        since: null
-      - type: EdenID
-        desc: null
-        since: null
+    desc: of [[Eden Entity]] or [[Eden ID]]
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
