@@ -17,8 +17,8 @@ syntax:
     type: Number
   right: !Item
     name: positions
-    type: !ArrayUnsized
-      value: Position3d
+    desc: of [[Position#Introduction|Position3D]]
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
