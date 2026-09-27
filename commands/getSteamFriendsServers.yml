@@ -1,0 +1,19 @@
+name: getSteamFriendsServers
+desc: Returns servers information of Steam friends currently playing the game.
+multiplayer_note: '{{Feature|important|Does ''''''not'''''' work in multiplayer - returns an empty array.}}'
+groups:
+- System
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Array]] of [[String]]s in format [ipAndPort, steamFriendName]
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.00'
+examples:
+- <sqf>getSteamFriendsServers; // returns e.g [["127.42.33.8:2302", "MyFriend"], ["127.84.66.16:4604", "My Best Friend"]]</sqf>
+see_also:
+- isMultiplayer
+- connectToServer
