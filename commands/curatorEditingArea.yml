@@ -1,0 +1,26 @@
+name: curatorEditingArea
+desc: Returns all curator editing areas.
+groups:
+- Curator
+syntax:
+- call: !Unary curator
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: 'of [[Array|array]]s in format: [ID, [[Position#PositionAGL|PositionAGL]], radius]'
+  right: !Item
+    name: curator
+    desc: curator module.
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.16'
+examples:
+- <sqf>_editingAreas = curatorEditingArea myCurator;</sqf>
+see_also:
+- Arma
+- '3:'
+- Curator
+- addCuratorEditingArea
+- removeCuratorEditingArea
+- removeAllCuratorEditingAreas
