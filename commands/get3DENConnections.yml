@@ -1,0 +1,32 @@
+name: get3DENConnections
+desc: 'Returns all [[Eden Editor: Connecting|connections]] currently present on an entity.'
+groups:
+- Eden Editor
+syntax:
+- call: !Unary entity
+  ret:
+    type: !ArrayUnsized
+      value: !ArraySized
+      - name: type
+        type: String
+        default: null
+        desc: connection class from ''Cfg3DEN >> Connections''
+        since: null
+      - name: to
+        type: EdenEntity
+        default: null
+        desc: ': Entitiy the connection leads to'
+        since: null
+  right: !Item
+    name: entity
+    desc: or [[Eden ID]]
+    type: EdenEntity
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.56'
+examples:
+- <sqf>get3DENConnections _trigger; // Can return [["WaypointActivation",[B Alpha 4-5,0]]]</sqf>
+see_also:
+- add3DENConnection
+- remove3DENConnection
