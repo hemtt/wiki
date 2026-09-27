@@ -1,0 +1,71 @@
+name: toArray
+desc: |-
+  Converts the supplied [[String]] into an [[Array]] of [[Number]]s. The numbers in the created array are the decimal {{Link|https://en.wikipedia.org/wiki/Unicode|Unicode}} representations of characters.
+  {{Feature|arma3|Since v2.04 this command can also handle [[HashMap]]s. See alternative syntax.}}
+groups:
+- Arrays
+- HashMap
+- Strings
+syntax:
+- call: !Unary string
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
+  right: !Item
+    name: string
+    type: String
+- call: !Unary hashMap
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: array in format [[key, key, ...], [value, value, ...]]
+  right: !Item
+    name: hashMap
+    type: HashMapUnknown
+  since:
+    arma3: '2.04'
+- call: !Binary
+  - hashMap
+  - splitArrays
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: |-
+      array in either one of the following formats:
+      * splitArrays: [[true]] - {{hl|[[key1, key2, ...], [value1, value2, ...]]}}
+      * splitArrays: [[false]] - {{hl|[[key1, value1], [key2, value2], ...]}} This is very inefficient since the engine has to create many small arrays
+  left: !Item
+    name: hashMap
+    type: HashMapUnknown
+  right: !Item
+    name: splitArrays
+    desc: see return value
+    type: Boolean
+  since:
+    arma3: '2.04'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma1: '1.09'
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>hint format ["%1", toArray "AaŒ"];// Returns "[65,97,338]"</sqf>
+- <sqf>toArray _hashMap params ["_keys", "_values"];</sqf>
+- "<sqf>\nprivate _hashmap = [\"cow\", \"cat\", \"chicken\"] createHashMapFromArray [10000, 20000, 20000];\n_hashmap toArray true;\t// returns [[\"cow\", \"cat\", \"chicken\"], [10000, 20000, 20000]] - same as Syntax 2\n_hashmap toArray false;\t// returns [[\"cow\", 10000], [\"cat\", 20000], [\"chicken\", 20000]]\n</sqf>"
+see_also:
+- set
+- resize
+- reverse
+- select
+- in
+- find
+- toString
+- count
+- deleteAt
+- splitString
+- joinString
+- toUpperANSI]],
+- '{{Link|http://www.utf8-chartable.de/|Unicode'
+- Character
+- Table}}
