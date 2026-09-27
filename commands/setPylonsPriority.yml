@@ -13,8 +13,8 @@ syntax:
     type: Object
   right: !Item
     name: priorities
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
