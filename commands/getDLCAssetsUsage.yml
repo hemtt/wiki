@@ -1,0 +1,22 @@
+name: getDLCAssetsUsage
+desc: Returns an array of the DLC usage times.
+groups:
+- DLC
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: array of DLC usage information, containing DLC items in format:<br>
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.16'
+examples:
+- <sqf>_dlcAssetsUsageInfo = getDLCAssetsUsage;</sqf>
+see_also:
+- getDLCs
+- getObjectDLC
+- getPersonUsedDLCs
+- getMissionDLCs
+- getDLCAssetsUsageByName
+- getAssetDLCInfo
