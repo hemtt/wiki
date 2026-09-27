@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: !ArrayUnsized
-      value: String
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[String]]s
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
