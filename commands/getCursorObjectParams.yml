@@ -12,10 +12,9 @@ syntax:
       desc: null
       since: null
     - name: selections
-      type: !ArrayUnsized
-        value: String
+      type: !Unknown 'Unknown simple type: array'
       default: null
-      desc: null
+      desc: of [[String]]s
       since: null
     - name: distance
       type: Number
