@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary layerID
   ret:
-    type: !ArrayUnsized
-      value: EdenEntity
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Eden Entity|Eden Entities]]
   right: !Item
     name: layerID
     desc: layer ID as returned by [[add3DENLayer]] command
