@@ -13,8 +13,8 @@ syntax:
     type: Nothing
   left: !Item
     name: unitArray
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: allow
     desc: '[[true]] allows the [[units]] to enter, [[false]] denies them'
