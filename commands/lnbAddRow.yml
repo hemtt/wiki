@@ -16,8 +16,8 @@ syntax:
     type: Number
   - !Item
     name: data
-    type: !ArrayUnsized
-      value: String
+    desc: of [[String]]s
+    type: !Unknown 'Unknown simple type: array'
 - call: !Binary
   - ctrl
   - data
@@ -29,8 +29,8 @@ syntax:
     type: Control
   right: !Item
     name: data
-    type: !ArrayUnsized
-      value: String
+    desc: of [[String]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Local
 effect_loc: Local
 since:
