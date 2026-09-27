@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary side
   ret:
-    type: !ArrayUnsized
-      value: Group
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Group]]s
   right: !Item
     name: side
     type: Side
