@@ -19,14 +19,8 @@ syntax:
   - !Infinite
     - !Item
       name: entitiesN
-      type: !ArrayUnsized
-        value: !OneOf
-        - type: EdenEntity
-          desc: null
-          since: null
-        - type: EdenID
-          desc: null
-          since: null
+      desc: of [[Eden Entity]] or [[Eden ID]]
+      type: !Unknown 'Unknown simple type: array'
     - !Item
       name: classN
       desc: attribute name
