@@ -19,7 +19,12 @@ syntax:
     - name: repeating
       type: Boolean
       default: null
-      desc: null
+      desc: See [[setTriggerActivation]]
+      since: null
+    - name: persistent
+      type: !Unknown 'Unknown simple type: '
+      default: null
+      desc: See [[setTriggerActivation]]
       since: null
   right: !Item
     name: trigger
