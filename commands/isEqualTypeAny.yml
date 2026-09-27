@@ -13,8 +13,8 @@ syntax:
     type: Anything
   right: !Item
     name: types
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
