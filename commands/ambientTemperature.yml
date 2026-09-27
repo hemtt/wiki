@@ -1,0 +1,17 @@
+name: ambientTemperature
+desc: 'Returns ambient temperature on the current terrain in Celsius in format: [airTemperature, blackSurfaceTemperature, whiteSurfaceTemperature]'
+groups:
+- Environment
+syntax:
+- call: Nular
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s in format [airTemperature, blackSurfaceTemperature, whiteSurfaceTemperature]
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.06'
+examples:
+- <sqf>private _airTemp = ambientTemperature select 0;</sqf>
+see_also:
+- forceWeatherChange
