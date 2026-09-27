@@ -1,0 +1,20 @@
+name: getVehicleTIPars
+desc: Returns TI parameters of a vehicle.
+groups:
+- Object Manipulation
+syntax:
+- call: !Unary vehicle
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: with [aliveFactor, movementFactor, metabolismFactor]
+  right: !Item
+    name: vehicle
+    type: Object
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.00'
+examples:
+- <sqf>getVehicleTIPars _veh;</sqf>
+see_also:
+- setVehicleTIPars
