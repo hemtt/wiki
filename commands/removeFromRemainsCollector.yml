@@ -8,8 +8,8 @@ syntax:
     type: Nothing
   right: !Item
     name: remains
-    type: !ArrayUnsized
-      value: Object
+    desc: of [[Object]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Global
 effect_loc: Global
 since:
