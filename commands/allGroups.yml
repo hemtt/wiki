@@ -6,8 +6,8 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: !ArrayUnsized
-      value: Group
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Group]]s
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
