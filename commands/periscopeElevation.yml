@@ -1,0 +1,36 @@
+name: periscopeElevation
+desc: Returns current periscope elevation value, see also [[elevatePeriscope]].
+groups:
+- Object Manipulation
+- Animations
+syntax:
+- call: !Binary
+  - vehicle
+  - turretPath
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: |-
+      format [elevation, isLocked]:
+      * elevation: [[Number]] - current periscope elevation value. -1 in case of an invalid turret
+      * isLocked: [[Boolean]] - whether or not user override is blocked
+  left: !Item
+    name: vehicle
+    desc: vehicle with periscope tech
+    type: Object
+  right: !Item
+    name: turretPath
+    type: TurretPath
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.00'
+examples:
+- <sqf>_eddie periscopeElevation [0] params ["_elevation", "_isLocked"];</sqf>
+see_also:
+- elevatePeriscope
+- animationPhase
+- allTurrets
+- Arma
+- '3:'
+- Event
+- Handlers#PeriscopeElevationChanged|PeriscopeElevationChanged
