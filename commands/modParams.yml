@@ -1,0 +1,30 @@
+name: modParams
+desc: Returns list of mod parameters according to given options, values are in same order as the given options.
+groups:
+- Mods and Addons
+syntax:
+- call: !Unary
+  - modClass
+  - options
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: retrieved requested data on success or empty array {{hl|[]}}
+  right: !Array
+  - !Item
+    name: modClass
+    desc: mod classname
+    type: String
+  - !Item
+    name: options
+    desc: 'can be: <spoiler>'
+    type: !ArrayUnsized
+      value: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.62'
+examples:
+- <sqf>_data = modParams ["Kart", ["name", "logo", "picture"]];</sqf>
+see_also:
+- configSourceModList
+- configSourceMod
