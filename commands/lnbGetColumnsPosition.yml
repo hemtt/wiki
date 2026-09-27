@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary _ctrl
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   right: !Item
     name: _ctrl
     type: Control
