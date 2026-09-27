@@ -23,10 +23,10 @@ future_incompatible = "warn"
 nonstandard_style = "warn"
 
 [workspace.dependencies]
-fs-err = "3.3.0"
-indexmap = { version = "2.14.0", features = ["serde"] }
-serde = "1.0.228"
-serde_json = "1.0.149"
+fs-err = "3.3.1"
+indexmap = { version = "2.14.2", features = ["serde"] }
+serde = "1.0.229"
+serde_json = "1.0.151"
 serde_yaml = { version = "0.9.34-deprecated" }
-tokio = "1.51.0"
+tokio = "1.53.1"
 urlencoding = "2.1.3"

@@ -222,11 +222,7 @@ fn extract_nested_array_pattern(array: &[Arg]) -> Option<(Vec<Arg>, usize)> {
             let mut bases = Vec::new();
             for inner_item in inner {
                 if let Arg::Item(s) = inner_item {
-                    if let Some(base) = extract_base_name(s) {
-                        bases.push(base);
-                    } else {
-                        return None; // Not a numbered item
-                    }
+                    bases.push(extract_base_name(s)?);
                 } else {
                     return None; // Not an item
                 }

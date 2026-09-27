@@ -1,0 +1,27 @@
+{{RV|type=command
+
+|game1= arma3
+|version1= 1.56
+
+|gr1= Eden Editor
+
+|descr= Returns the value of the given entity's [[Eden_Editor:_Entity_Attributes|attribute]] in [[:Category:Eden Editor|Eden Editor]].<br><br>
+An attribute is identified by its {{hl|property}} ({{hl|data}} when it is engine-drive attribute) value in config. For the list of all attributes with their properties, see [[Eden_Editor:_Setting_Attributes#Attributes|Setting Attributes]].
+
+{{Feature|important|Attributes are available only within the Eden Editor workspace. You cannot access them in scenario preview or exported scenario!}}
+
+|s1= entity [[get3DENAttribute]] attribute
+
+|p1= entity: [[Eden Entity]] or [[Eden ID]]
+
+|p2= attribute: [[String]] - attribute property
+
+|r1= [[Array]] of [[Anything]]
+
+|x1= <sqf>
+// returns variable name of the object under cursor
+systemChat str ((get3DENMouseOver select 1) get3DENAttribute "name");
+</sqf>
+
+|seealso= [[set3DENAttribute]] [[set3DENAttributes]] [[set3DENMissionAttributes]] [[get3DENMissionAttribute]] [[clear3DENAttribute]]
+}}

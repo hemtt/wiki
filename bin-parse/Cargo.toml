@@ -12,11 +12,11 @@ arma3-wiki-model = { path = "../model", features = ["parser"] }
 arma3-wiki-github = { path = "../bin-github" }
 
 fs-err = { workspace = true }
-futures = "0.3.31"
+futures = "0.3.34"
 httpdate = { version = "1.0.3" }
-indicatif = { version = "0.18.4" }
-regex = { version = "1.12.3" }
-reqwest = { version = "0.13.2" }
+indicatif = { version = "0.18.6" }
+regex = { version = "1.13.1" }
+reqwest = { version = "0.13.5" }
 serde_json = { workspace = true }
 serde_yaml = { workspace = true }
 tokio = { workspace = true , features = ["full"] }

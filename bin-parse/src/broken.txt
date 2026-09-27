@@ -1,0 +1,17 @@
+createTarget
+deleteTarget
+moveTarget
+findCover
+enemy
+echo
+createSite
+deleteSite
+allSites
+textLog
+textLogFormat
+debugLog
+debugFSM
+setVehicleId
+setHideBehind
+setPosASL2
+removeClothing

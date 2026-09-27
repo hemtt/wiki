@@ -1,7 +1,7 @@
 use std::sync::atomic::AtomicUsize;
 
 use octocrab::{
-    models::{issues::Issue, IssueState},
+    models::{IssueState, issues::Issue},
     params::State,
 };
 

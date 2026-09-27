@@ -27,7 +27,7 @@ pub struct CommunityDetails {
 impl CommunityDetails {
     pub fn load() -> Self {
         serde_yaml::from_str::<CommunityDetails>(
-            &std::fs::read_to_string(PathBuf::from(".community_details.yaml"))
+            &fs_err::read_to_string(PathBuf::from(".community_details.yaml"))
                 .expect("Failed to read community details"),
         )
         .expect("Failed to parse community details")

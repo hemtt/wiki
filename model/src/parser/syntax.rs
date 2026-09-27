@@ -15,10 +15,7 @@ impl Syntax {
         let mut ret = None;
         let mut since = None;
         let mut effect = None;
-        loop {
-            let Some((key, _)) = blocks.peek() else {
-                break;
-            };
+        while let Some((key, _)) = blocks.peek() {
             if !should_parse(block_type(key)) {
                 break;
             }

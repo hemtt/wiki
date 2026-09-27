@@ -22,22 +22,5 @@ fn parse(path: &str) {
     assert!(result.1.is_empty());
 }
 
-parse!(activatedAddons);
-parse!(addAction);
-parse!(camSetDir);
-parse!(createSoundSource);
-parse!(diag_drawMode);
-parse!(drawIcon);
-parse!(forEach);
-parse!(formatText);
-parse!(isFinal);
-parse!(lnbSetPictureColor);
-parse!(local);
-parse!(remoteExec);
-parse!(ropeCreate);
-parse!(setDamage);
-parse!(setHitPointDamage);
-parse!(setRain);
-parse!(setVariable);
-parse!(teamSwitch);
-parse!(throw);
+parse!(get3DENAttribute);
+parse!(get3DENConnections);

@@ -1,6 +1,6 @@
 use std::process::Command;
 
-use octocrab::{models::pulls::PullRequest, Octocrab};
+use octocrab::{Octocrab, models::pulls::PullRequest};
 
 mod issues;
 

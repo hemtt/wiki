@@ -1,0 +1,21 @@
+{{RV|type=command
+
+|game1= arma3
+|version1= 1.56
+
+|gr1= Eden Editor
+
+|descr= Returns all [[Eden Editor: Connecting|connections]] currently present on an entity.
+
+|s1= [[get3DENConnections]]  entity
+
+|p1= entity: [[Eden Entity]] or [[Eden ID]]
+
+|r1= [[Array]] of [[Array]]s with [type, to]
+* type: [[String]] - connection class from ''Cfg3DEN >> Connections''
+* to: [[Eden Entity]]: Entitiy the connection leads to
+
+|x1= <sqf>get3DENConnections _trigger; // Can return [["WaypointActivation",[B Alpha 4-5,0]]]</sqf>
+
+|seealso= [[add3DENConnection]] [[remove3DENConnection]]
+}}

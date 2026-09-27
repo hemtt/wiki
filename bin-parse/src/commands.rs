@@ -1,4 +1,4 @@
-use arma3_wiki_model::{Command, Value};
+use arma3_wiki_model::Command;
 use std::{collections::HashMap, path::Path, sync::Arc};
 
 use arma3_wiki_github::report::Report;
@@ -40,16 +40,22 @@ pub async fn list(client: &Client) -> HashMap<String, String> {
         Regex::new(r#"(?m)<li><a href="(.+?)" title="(.+?)">"#).expect("Failed to compile regex");
     let mut list = HashMap::new();
 
+    let broken_content = include_str!("broken.txt");
+    let broken: std::collections::HashSet<&str> = broken_content.lines().collect();
+
     for cap in regex.captures_iter(&body) {
         let name = cap[1]
             .trim_start_matches("https://community.bistudio.com")
             .trim_start_matches("/wiki/")
             .to_string();
+        if broken.contains(name.as_str()) {
+            continue;
+        }
         list.insert(
             name,
             format!(
                 "https://community.bistudio.com/wiki/{}",
-                &cap[1]
+                cap[1]
                     .trim_start_matches("https://community.bistudio.com")
                     .trim_start_matches("/wiki/")
             ),
