@@ -9,8 +9,8 @@ syntax:
   - objectType
   - objectCollection
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   left: !Item
     name: objectType
     desc: type can be a combination of types according to bit flag operation (see [[getObjectType]])
@@ -80,8 +80,8 @@ syntax:
   - objectType
   - objectCollection
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
   left: !Item
     name: objectType
     desc: type of the objects (will exact match return of [[typeOf]])
