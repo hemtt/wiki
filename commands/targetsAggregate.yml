@@ -1,0 +1,122 @@
+name: targetsAggregate
+desc: Aggregate candidates.
+groups:
+- Object Manipulation
+syntax:
+- call: !Binary
+  - - speaker
+    - side
+    - classname
+    - position
+    - timeMax
+  - candidates
+  ret:
+    type: !ArraySized
+    - name: countInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["COUNT%1", index], count on index]'
+      since: null
+    - name: sideInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["SIDE%1", index], side or string] if string then $ == "equal to queried"'
+      since: null
+    - name: unitInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["UNIT%1", index], string]  $ == "equal to queried", otherwise the "type" of the unit? Should be CfgVehicles config type I think'
+      since: null
+    - name: placeInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["PLACE%1", index], [[centerX, centerY], radius]]'
+      since: null
+    - name: timeInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["TIME%1", index], string or array] if string then $ == "equal to queried", otherwise [timeMin, timeMax]'
+      since: null
+    - name: uCountInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["UCOUNT%1", index], scalar count]'
+      since: null
+    - name: uTypeInfo
+      type: !Unknown 'Unknown simple type: array'
+      default: null
+      desc: '[[[format]] ["UTYPE%1", index], string name] a classname? Will be format ["*%1", classname] if count &gt; 1'
+      since: null
+  left: !Array
+  - !Item
+    name: speaker
+    type: Object
+  - !Item
+    name: side
+    desc: if provided, a target with a side matching ''side'' will see it replaced by {{hl|"$"}}
+    type: Side
+  - !Item
+    name: classname
+    desc: '{{hl|CfgVehicles}} classname - if provided, a target with a type matching ''''classname'''' will see it replaced by {{hl|"$"}}'
+    type: String
+  - !Item
+    name: position
+    desc: centre of a hardcoded 200m radius
+    type: !Unknown Exceeded maximum recursion depth while parsing Value
+  - !Item
+    name: timeMax
+    desc: max age of the target
+    type: Number
+  right: !Item
+    name: candidates
+    type: !ArrayUnsized
+      value: !ArraySized
+      - name: accuracy
+        type: Number
+        default: null
+        desc: 'a coefficient, which reflects how close the returned result to the query filter. Range: 0..1, 1 being the best match'
+        since: null
+      - name: target
+        type: Object
+        default: null
+        desc: the actual target object
+        since: null
+      - name: targetSide
+        type: Side
+        default: null
+        desc: side of the target
+        since: null
+      - name: targetType
+        type: String
+        default: null
+        desc: target [[typeOf]]
+        since: null
+      - name: targetPosition
+        type: Position2d
+        default: null
+        desc: '[x,y] of the target'
+        since: null
+      - name: targetAge
+        type: Number
+        default: null
+        desc: the actual target age in seconds (can be negative)
+        since: null
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- "<sqf>_aggregation = [player, sideEnemy, \"\", [], 0] targetsAggregate (player targetsQuery [objNull, sideUnknown, \"\", [], 0]);\n/*\n\treturns e.g\n\t[\n\t\t[\n\t\t\t[\"COUNT0\", 1],\n\t\t\t[\"SIDE0\", WEST],\n\t\t\t[\"UNIT0\", \"B_Soldier_F\"],\n\t\t\t[\"PLACE0\", [[<null>,<null>], 0, <null>]],\n\t\t\t[\"TIME0\", [-0.9, -0.9]],\n\t\t\t[\"UCOUNT0\", 1],\n\t\t\t[\"UTYPE0\", ...\n\t\t]\n\t]\n*/\n</sqf>\nwith e.g\n* one Orca Helicopter\n* one T-100 Varsuk tank\n* one T-140K Angara tank\n* one MBT-52 Kuma tank (independent, set as enemy to blufor)\n<sqf>\n/*\n\t[\n\t\t[[\"COUNT0\",1],[\"SIDE0\",EAST],[\"UNIT0\",\"O_Heli_Light_02_dynamicLoadout_F\"],[\"PLACE0\",[[<null>,<null>],0,<null>]],[\"TIME0\",[-0.982,-0.982]],[\"UCOUNT0\",1],[\"UTYPE0\",\"O_Heli_Light_02_dynamicLoadout_F\"]],\n\t\t[[\"COUNT1\",1],[\"SIDE1\",GUER],[\"UNIT1\",\"I_MBT_03_cannon_F\"],[\"PLACE1\",[[<null>,<null>],0,<null>]],[\"TIME1\",[-0.982,-0.982]],[\"UCOUNT1\",1],[\"UTYPE1\",\"I_MBT_03_cannon_F\"]],\n\t\t[[\"COUNT2\",2],[\"SIDE2\",EAST],[\"UNIT2\",\"*Tank_F\"],[\"PLACE2\",[[<null>,<null>],4.34554,<null>]],[\"TIME2\",[-0.982,-0.982]],[\"UCOUNT2\",2],[\"UTYPE2\",\"*O_MBT_02_cannon_F\"]]]\n\t[\n\t\t[[\"COUNT0\",1],[\"SIDE0\",EAST],[\"UNIT0\",\"O_Heli_Light_02_dynamicLoadout_F\"],[\"PLACE0\",[[<null>,<null>],0,<null>]],[\"TIME0\",[-1,-1]],[\"UCOUNT0\",1],[\"UTYPE0\",\"O_Heli_Light_02_dynamicLoadout_F\"]],\n\t\t[[\"COUNT1\",1],[\"SIDE1\",GUER],[\"UNIT1\",\"I_MBT_03_cannon_F\"],[\"PLACE1\",[[<null>,<null>],0,<null>]],[\"TIME1\",[-1,-1]],[\"UCOUNT1\",1],[\"UTYPE1\",\"I_MBT_03_cannon_F\"]],\n\t\t[[\"COUNT2\",2],[\"SIDE2\",EAST],[\"UNIT2\",\"*Tank_F\"],[\"PLACE2\",[[<null>,<null>],4.34565,<null>]],[\"TIME2\",[-1,-1]],[\"UCOUNT2\",2],[\"UTYPE2\",\"*O_MBT_02_cannon_F\"]]\n\t]\n*/\n</sqf>"
+see_also:
+- targets
+- targetsQuery
+- nearTargets
+- targetKnowledge
+- knowsAbout
+- reveal
+- forgetTarget
+- setTargetAge
+- getHideFrom
