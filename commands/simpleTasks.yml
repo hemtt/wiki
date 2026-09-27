@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary unit
   ret:
-    type: !ArrayUnsized
-      value: Task
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Task]]s
   right: !Item
     name: unit
     type: Object
