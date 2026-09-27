@@ -9,8 +9,8 @@ syntax:
   - prefix
   - fileExtension
   ret:
-    type: !ArrayUnsized
-      value: String
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[String]]s
   right: !Array
   - !Item
     name: prefix
