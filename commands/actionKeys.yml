@@ -12,16 +12,16 @@ groups:
 syntax:
 - call: !Unary userAction
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   right: !Item
     name: userAction
     type: String
 - call: !Unary
   - userAction
   ret:
-    type: !ArrayUnsized
-      value: String
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[String]]s
   right: !Array
   - !Item
     name: userAction
