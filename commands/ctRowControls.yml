@@ -7,8 +7,8 @@ syntax:
   - control
   - index
   ret:
-    type: !ArrayUnsized
-      value: Control
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Control]]s
   left: !Item
     name: control
     type: Control
