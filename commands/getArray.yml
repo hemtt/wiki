@@ -5,8 +5,8 @@ groups:
 syntax:
 - call: !Unary config
   ret:
-    type: !ArrayUnsized
-      value: Anything
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Anything]]
   right: !Item
     name: config
     type: Config
