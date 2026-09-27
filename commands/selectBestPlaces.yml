@@ -1,0 +1,63 @@
+name: selectBestPlaces
+desc: Find the places with the maximum value of ''expression'' in the given area. Places can be on water. Results are sorted by value. Search pattern is randomised every command execution.
+groups:
+- Mission Information
+syntax:
+- call: !Unary
+  - position
+  - radius
+  - expression
+  - precision
+  - sourcesCount
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: 'with [[position: [[Position#Introduction|Position2D]], expressionResult: [[Number]]], ...]'
+  right: !Array
+  - !Item
+    name: position
+    desc: ', [[Position#Introduction|Position3D]] or [[Position#Introduction|Position2D]]'
+    type: Object
+  - !Item
+    name: radius
+    type: Number
+  - !Item
+    name: expression
+    desc: |-
+      arithmetic expression. [[Simple_Expression|Simple expression]] var names containing values from 0 to 1 depending on location (see also [[Ambient Parameters]]):
+      * forest
+      * trees
+      * meadow
+      * hills
+      * houses
+      * sea
+      * coast
+      * night
+      * rain
+      * windy
+      * deadBody
+      * waterDepth
+      * camDepth
+    type: String
+  - !Item
+    name: precision
+    type: Number
+  - !Item
+    name: sourcesCount
+    desc: max results to return. The maximum possible is the number of random samples, which is n = (2 * radius / precision)^2
+    type: Number
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma2: '1.00'
+  arma2oa: '1.50'
+  tkoh: '1.00'
+  arma3: '0.50'
+examples:
+- <sqf>myPlaces = selectBestPlaces [position player, 50, "meadow + 2*hills", 1, 5];</sqf>
+see_also:
+- getEnvSoundController
+- getAllEnvSoundControllers
+- findEmptyPosition
+- isFlatEmpty
+- Ambient
+- Parameters
