@@ -14,8 +14,8 @@ syntax:
     type: Number
   - !Item
     name: path
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 - call: !Binary
   - ctrl
   - path
@@ -26,8 +26,8 @@ syntax:
     type: Control
   right: !Item
     name: path
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Local
 effect_loc: Local
 since:
