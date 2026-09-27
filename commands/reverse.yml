@@ -8,8 +8,8 @@ syntax:
     type: Nothing
   right: !Item
     name: array
-    type: !ArrayUnsized
-      value: Anything
+    desc: of [[Anything]]
+    type: !Unknown 'Unknown simple type: array'
 - call: !Unary string
   ret:
     type: String
