@@ -7,16 +7,14 @@ syntax:
   ret:
     type: !ArraySized
     - name: objects
-      type: !ArrayUnsized
-        value: Object
+      type: !Unknown 'Unknown simple type: array'
       default: null
-      desc: null
+      desc: of [[Object]]s
       since: null
     - name: groups
-      type: !ArrayUnsized
-        value: Group
+      type: !Unknown 'Unknown simple type: array'
       default: null
-      desc: null
+      desc: of [[Group]]s
       since: null
     - name: waypoints
       type: Waypoint
@@ -24,10 +22,9 @@ syntax:
       desc: null
       since: null
     - name: markers
-      type: !ArrayUnsized
-        value: String
+      type: !Unknown 'Unknown simple type: array'
       default: null
-      desc: null
+      desc: of [[String]]s
       since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
