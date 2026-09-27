@@ -15,8 +15,8 @@ syntax:
   right: !Array
   - !Item
     name: polygon
-    type: !ArrayUnsized
-      value: Position3d
+    desc: of [[Position#Introduction|Position3D]]
+    type: !Unknown 'Unknown simple type: array'
   - !Item
     name: color
     type: ArrayColorRgba
