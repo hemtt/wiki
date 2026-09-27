@@ -7,16 +7,8 @@ syntax:
   - vehicle
   - pylon
   ret:
-    type: !ArrayUnsized
-      value: !OneOf
-      - type: String
-        desc: null
-        since: null
-      - type: !ArrayUnsized
-          value: !ArrayUnsized
-            value: String
-        desc: null
-        since: null
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[String]]s, or [[Array]] of [[Array]] of [[String]]s
   left: !Item
     name: vehicle
     desc: aircraft object or config class
