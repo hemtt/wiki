@@ -1,18 +1,17 @@
 name: netObjNull
-desc: A non-existing network object. {{Feature|informative|'''NetObject''' data type was never implemented in {{arma3}} - this command always returns [[false]].}}
+desc: "A non-existent [[NetObject]]. To compare non-existent objects use [[isNull]] or [[isEqualTo]]:\n<sqf>\nnetObjNull == netObjNull;\t\t\t// false\nnetObjNull != netObjNull;\t\t\t// true\nisNull netObjNull;\t\t\t\t    // true\nnetObjNull isEqualTo netObjNull;\t// true\ntypeName netObjNull;                // \"NetObject\"\nnetObjNull isEqualType netObjNull;  // true\n</sqf>. \n{{Feature|informative| This command always returned [[false]] prior to Arma 3 2.24}}"
 groups:
-- Broken Commands
 - Variables
 syntax:
 - call: Nular
   ret:
-    type: Boolean
-    desc: always returns [[false]]
+    type: !Unknown 'Unknown simple type: netobject'
+    desc: null net object. Before Arma 3 2.24 [[Boolean]], always returned [[false]]
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
   arma3: '1.00'
 examples:
-- '-'
+- <sqf>str netObjNull; // <NULL-NetObject></sqf>
 see_also:
 - objNull
