@@ -24,8 +24,8 @@ impl Branch {
         match s {
             "stable" => Ok(Self::Stable),
             "dev" => Ok(Self::Dev),
-            "diag" => Ok(Self::Diag),
-            "diag prof" => Ok(Self::DiagProf),
+            "diag" | "diagnostic" => Ok(Self::Diag),
+            "diag prof" | "diagnostic profiling" => Ok(Self::DiagProf),
             _ => Err(format!("Unknown branch: {s}")),
         }
     }

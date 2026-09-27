@@ -89,6 +89,7 @@ fn generate_commands_file(
         "version": "1.0",
         "commands": commands_data,
         "passed": report.passed_commands.len(),
+        "partial": report.partial_commands.len(),
         "failed": report.failed_commands.len(),
         "total": commands_data.len()
     });
@@ -153,6 +154,7 @@ fn generate_filters_file(commands: &[(String, Command)]) -> io::Result<()> {
         }
         // For now, statuses are added dynamically based on report
         statuses.insert("Passed".to_string());
+        statuses.insert("Partial".to_string());
         statuses.insert("Failed".to_string());
         // statuses.insert("Outdated".to_string());
     }

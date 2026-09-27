@@ -24,3 +24,4 @@ fn parse(path: &str) {
 
 parse!(get3DENAttribute);
 parse!(get3DENConnections);
+parse!(serverCommand);

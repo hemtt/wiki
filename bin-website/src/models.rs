@@ -5,6 +5,7 @@ use std::collections::HashMap;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Report {
     pub passed_commands: Vec<String>,
+    pub partial_commands: Vec<String>,
     pub failed_commands: HashMap<String, Vec<String>>,
     pub outdated_commands: Vec<String>,
     pub unknown_types_commands: Option<Vec<(String, String)>>,
@@ -17,6 +18,8 @@ pub struct Report {
 pub fn get_command_status(name: &str, report: &Report) -> CommandStatus {
     if report.passed_commands.iter().any(|s| s == name) {
         CommandStatus::Passed
+    } else if report.partial_commands.iter().any(|s| s == name) {
+        CommandStatus::Partial
     } else if report.failed_commands.contains_key(name) {
         CommandStatus::Failed
     } else if report.outdated_commands.iter().any(|s| s == name) {
@@ -29,6 +32,7 @@ pub fn get_command_status(name: &str, report: &Report) -> CommandStatus {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum CommandStatus {
     Passed,
+    Partial,
     Failed,
     Outdated,
     Unknown,
@@ -38,6 +42,7 @@ impl CommandStatus {
     pub const fn as_str(self) -> &'static str {
         match self {
             Self::Passed => "Passed",
+            Self::Partial => "Partial",
             Self::Failed => "Failed",
             Self::Outdated => "Outdated",
             Self::Unknown => "Unknown",

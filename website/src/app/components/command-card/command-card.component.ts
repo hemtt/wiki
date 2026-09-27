@@ -16,6 +16,7 @@ export class CommandCardComponent {
         const baseClasses = 'px-3 py-1 rounded text-xs font-semibold';
         const statusClasses: Record<string, string> = {
             Passed: 'bg-green-100 text-green-800',
+            Partial: 'bg-blue-100 text-blue-800',
             Failed: 'bg-red-100 text-red-800',
             Outdated: 'bg-yellow-100 text-yellow-800',
             Unknown: 'bg-gray-100 text-gray-800',

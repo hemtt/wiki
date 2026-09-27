@@ -15,6 +15,7 @@ impl Syntax {
         let mut ret = None;
         let mut since = None;
         let mut effect = None;
+        let mut server_exec = None;
         while let Some((key, _)) = blocks.peek() {
             if !should_parse(block_type(key)) {
                 break;
@@ -61,6 +62,11 @@ impl Syntax {
                 ("s", _, "effect") => {
                     effect = Some(Locality::parse(block)?);
                 }
+                ("s", _, "exec") => {
+                    if block == "server" {
+                        server_exec = Some(true);
+                    }
+                }
                 _ => {
                     break;
                 }
@@ -87,6 +93,7 @@ impl Syntax {
             right,
             since,
             effect,
+            server_exec,
         })
     }
 }
@@ -94,6 +101,6 @@ impl Syntax {
 fn should_parse(block_type: (&str, i16, &str)) -> bool {
     matches!(
         block_type,
-        ("p", _, "" | "since") | ("r", _, _) | ("s", _, "since" | "effect")
+        ("p", _, "" | "since") | ("r", _, _) | ("s", _, "since" | "effect" | "exec")
     )
 }

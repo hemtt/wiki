@@ -85,13 +85,14 @@ export class CommandViewerComponent implements OnInit {
             case 'status': {
                 const statusOrder: Record<string, number> = {
                     Passed: 0,
-                    Outdated: 1,
-                    Failed: 2,
-                    Unknown: 3,
+                    Partial: 1,
+                    Outdated: 2,
+                    Failed: 3,
+                    Unknown: 4,
                 };
                 sorted.sort(
                     (a, b) =>
-                        (statusOrder[a.status] ?? 3) - (statusOrder[b.status] ?? 3),
+                        (statusOrder[a.status] ?? 4) - (statusOrder[b.status] ?? 4),
                 );
                 break;
             }

@@ -29,14 +29,14 @@ pub fn try_simple_line(source: &str) -> Result<Option<ParamItem>, String> {
                 let potential_desc = trimmed[end_bracket + 2..].trim();
 
                 // Verify this is a valid type by trying to parse it
-                if Value::parse(potential_type, 0).is_ok() && !potential_desc.is_empty() {
+                if Value::parse_or_unknown(potential_type, 0).is_ok() && !potential_desc.is_empty() {
                     (potential_type, Some(potential_desc.to_string()))
                 } else {
                     (trimmed, None)
                 }
             })
         };
-    let typ = Value::parse(type_part.trim(), 0)?;
+    let typ = Value::parse_or_unknown(type_part.trim(), 0)?;
     let name = name_part.trim().to_string();
     let (default, optional, desc) = desc.map_or((None, false, None), |desc| {
         if let Some((default, desc)) = try_optional(&desc) {
@@ -183,15 +183,19 @@ pub fn try_array_with(source: &str) -> Result<Option<ParamItem>, String> {
             (None, false, Some(desc))
         }
     });
-    let param = Param::build_from_arg(&arg, &params)?;
+    let param = Param::build_from_arg(&arg, &params);
     Ok(Some(ParamItem {
         name: name_part.trim().to_string(),
-        typ: if wrap_arrays {
-            Value::ArrayUnsized {
-                value: Box::new(param.as_value()),
+        typ: if let Ok(param) = param {
+            if wrap_arrays {
+                Value::ArrayUnsized {
+                    value: Box::new(param.as_value()),
+                }
+            } else {
+                param.as_value()
             }
         } else {
-            param.as_value()
+            Value::Unknown(param.unwrap_err().to_string())
         },
         desc,
         default,
@@ -506,8 +510,8 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
     };
 
     // Try to parse the types
-    let type1_val = Value::parse(type1_clean, 0)?;
-    let _type2_val = Value::parse(type2_clean, 0)?;
+    let type1_val = Value::parse_or_unknown(type1_clean, 0)?;
+    let _type2_val = Value::parse_or_unknown(type2_clean, 0)?;
 
     // Collect entries from remaining lines
     let mut entries: Vec<(Option<String>, Option<String>, Option<String>)> = Vec::new(); // (val1, val2, description)
@@ -646,7 +650,7 @@ pub fn try_multiple_type_enum(source: &str) -> Result<Option<ParamItem>, String>
             });
 
             one_of_values.push(OneOfValue {
-                typ: Value::parse(type2_clean, 0)?,
+                typ: Value::parse_or_unknown(type2_clean, 0)?,
                 desc: None,
                 since: type2_since,
             });
@@ -791,7 +795,7 @@ pub fn try_oneof_types(source: &str) -> Result<Option<ParamItem>, String> {
     let mut one_of_values: Vec<OneOfValue> = Vec::new();
 
     for (type_str, desc) in &type_descs {
-        let typ = Value::parse(type_str, 0)?;
+        let typ = Value::parse_or_unknown(type_str, 0)?;
         one_of_values.push(OneOfValue {
             typ,
             desc: desc.clone(),

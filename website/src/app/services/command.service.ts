@@ -10,7 +10,7 @@ export interface Command {
     id: string;
     description: string;
     groups: string[];
-    status: 'Passed' | 'Failed' | 'Outdated' | 'Unknown';
+    status: 'Passed' | 'Partial' | 'Failed' | 'Outdated' | 'Unknown';
     errors?: string[];
 }
 

@@ -188,4 +188,8 @@ impl Command {
     pub fn add_see_also(&mut self, see_also: String) {
         self.see_also.push(see_also);
     }
+
+    pub fn has_unknown_type(&self) -> bool {
+        self.syntax.iter().any(|s| s.has_unknown_type())
+    }
 }

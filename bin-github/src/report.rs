@@ -5,6 +5,7 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Report {
     passed_commands: Vec<String>,
+    partial_commands: Vec<String>,
     failed_commands: IndexMap<String, Vec<String>>,
     outdated_commands: Vec<String>,
 
@@ -22,6 +23,7 @@ impl Report {
     pub fn new(updated_version: Option<Version>) -> Self {
         Self {
             passed_commands: Vec::new(),
+            partial_commands: Vec::new(),
             failed_commands: IndexMap::new(),
             outdated_commands: Vec::new(),
 
@@ -37,6 +39,7 @@ impl Report {
 
     pub fn sort(&mut self) {
         self.passed_commands.sort();
+        self.partial_commands.sort();
         self.failed_commands.sort_keys();
         self.outdated_commands.sort();
 
@@ -56,6 +59,10 @@ impl Report {
 
     pub fn add_passed_command(&mut self, command: String) {
         self.passed_commands.push(command);
+    }
+
+    pub fn add_partial_command(&mut self, command: String) {
+        self.partial_commands.push(command);
     }
 
     pub fn add_failed_command(&mut self, command: String, error: String) {
@@ -78,6 +85,11 @@ impl Report {
     #[must_use]
     pub fn passed_commands(&self) -> &[String] {
         &self.passed_commands
+    }
+
+    #[must_use]
+    pub fn partial_commands(&self) -> &[String] {
+        &self.partial_commands
     }
 
     #[must_use]

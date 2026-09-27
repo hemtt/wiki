@@ -19,6 +19,9 @@ pub struct Syntax {
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
     pub effect: Option<Locality>,
+    #[serde(default)]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub server_exec: Option<bool>,
 }
 
 impl Syntax {
@@ -30,6 +33,7 @@ impl Syntax {
         right: Option<Param>,
         since: Option<Since>,
         effect: Option<Locality>,
+        server_exec: Option<bool>,
     ) -> Self {
         Self {
             call,
@@ -38,6 +42,7 @@ impl Syntax {
             right,
             since,
             effect,
+            server_exec,
         }
     }
 
@@ -99,5 +104,11 @@ impl Syntax {
 
     pub const fn set_since(&mut self, since: Option<Since>) {
         self.since = since;
+    }
+
+    pub fn has_unknown_type(&self) -> bool {
+        self.ret.typ().is_unknown()
+        || self.left.as_ref().is_some_and(|param| param.has_unknown_type())
+        || self.right.as_ref().is_some_and(|param| param.has_unknown_type())
     }
 }

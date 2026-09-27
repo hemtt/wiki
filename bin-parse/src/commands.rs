@@ -111,9 +111,13 @@ pub async fn commands(client: &Client, report: Report, args: &[String]) -> Repor
             if let Err(e) = result {
                 println!("Failed {name}");
                 failed.write().await.push((name, e));
-            } else if let Ok((did_change, errors)) = result {
+            } else if let Ok((did_change, has_unknown_type, errors)) = result {
                 if errors.is_empty() {
-                    report.lock().await.add_passed_command(name.clone());
+                    if has_unknown_type {
+                        report.lock().await.add_partial_command(name.clone());
+                    } else {
+                        report.lock().await.add_passed_command(name.clone());
+                    }
                     if did_change {
                         report.lock().await.add_outdated_command(name);
                     }
@@ -160,7 +164,7 @@ pub async fn command(
     name: String,
     url: String,
     retry: bool,
-) -> Result<(bool, Vec<ParseError>), String> {
+) -> Result<(bool, bool, Vec<ParseError>), String> {
     let mut dist_path = Path::new("./dist/commands").join(&name);
     dist_path.set_extension("yml");
 
@@ -253,7 +257,7 @@ pub async fn command(
     } else {
         if skip {
             pg.println(format!("Skipping {name}, less than {SKIP_IF_LESS_THAN}h"));
-            return Ok((false, Vec::new()));
+            return Ok((false, false, Vec::new()));
         }
         let res = match client.bi_get(&raw_url).send().await {
             Ok(res) => res,
@@ -307,7 +311,7 @@ pub async fn command(
                 if old
                     == serde_yaml::to_string(&parsed).expect("Failed to serialize parsed command")
                 {
-                    return Ok((false, errors));
+                    return Ok((false, parsed.has_unknown_type(), errors));
                 }
             }
             pg.println(format!("Saving to {}", dist_path.display()));
@@ -328,7 +332,7 @@ pub async fn command(
             )
             .await
             .expect("Failed to write to dist file");
-            Ok((true, errors))
+            Ok((true, parsed.has_unknown_type(), errors))
         }
         Err(e) => {
             if std::env::args().any(|arg| arg == "--interactive") {

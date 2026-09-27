@@ -1,6 +1,10 @@
 use crate::{OneOfValue, Since, Value};
 
 impl Value {
+    pub fn parse_or_unknown(source: &str, depth: u8) -> Result<Self, String> {
+        Self::parse(source, depth).or_else(|e| Ok(Self::Unknown(e.to_string())))
+    }
+
     pub fn parse(source: &str, depth: u8) -> Result<Self, String> {
         if depth > 5 {
             return Err("Exceeded maximum recursion depth while parsing Value".to_string());

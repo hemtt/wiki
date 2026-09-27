@@ -22,11 +22,11 @@ impl Param {
     ) -> Result<Self, String> {
         match call {
             Call::Nular => Err("Nular calls have no parameters".to_string()),
-            Call::Unary(left) => {
+            Call::Unary(right) => {
                 if is_left {
                     return Err("Unary call has no left parameter".to_string());
                 }
-                Self::build_from_arg(left, pool)
+                Self::build_from_arg(right, pool)
             }
             Call::Binary(left, right) => {
                 if is_left {
@@ -48,7 +48,7 @@ impl Param {
                 pool.iter()
                     .find(|param| &param.name == name)
                     .cloned()
-                    .ok_or_else(|| format!("Param `{name}` not found in pool"))?,
+                    .ok_or_else(|| format!("Param `{name}` not found in pool: {:?}", pool))?,
             )),
             Arg::Array(arg_list) => Ok(Self::Array(
                 arg_list
@@ -140,6 +140,14 @@ impl Param {
                     }
                 }
             }
+        }
+    }
+
+    pub fn has_unknown_type(&self) -> bool {
+        match &self {
+            Self::Item(param_item) => param_item.typ().is_unknown(),
+            Self::Array(array) => array.iter().any(|item| item.has_unknown_type()),
+            Self::Infinite(infinite) => infinite.iter().any(|item| item.has_unknown_type()),
         }
     }
 }
@@ -236,5 +244,9 @@ impl ParamItem {
 
     pub const fn set_since(&mut self, since: Option<Since>) {
         self.since = since;
+    }
+
+    pub fn has_unknown_type(&self) -> bool {
+        self.typ.is_unknown()
     }
 }
