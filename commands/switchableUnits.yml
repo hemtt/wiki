@@ -13,8 +13,8 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: !ArrayUnsized
-      value: Object
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Object]]s
 argument_loc: Unspecified
 effect_loc: Local
 since:
