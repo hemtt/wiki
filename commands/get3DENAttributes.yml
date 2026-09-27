@@ -1,0 +1,27 @@
+name: get3DENAttributes
+desc: Retrieve all attributes and their values of the specified (optional) category.
+groups:
+- Eden Editor
+syntax:
+- call: !Binary
+  - entity
+  - category
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+  left: !Item
+    name: entity
+    type: Object
+  right: !Item
+    name: category
+    desc: ("" to get all attributes, [[typeOf]] to get Object Specific attributes)
+    type: String
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '2.18'
+examples:
+- ''
+see_also:
+- set3DENAttributes
+- set3DENAttribute
+- get3DENMissionAttributes
