@@ -14,8 +14,8 @@ syntax:
     type: Object
   right: !Item
     name: addons
-    type: !ArrayUnsized
-      value: String
+    desc: of [[String]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 server_exec: true
