@@ -7,8 +7,8 @@ groups:
 syntax:
 - call: !Unary type
   ret:
-    type: !ArrayUnsized
-      value: EdenEntity
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Eden Entity]]
   right: !Item
     name: type
     desc: entity type
