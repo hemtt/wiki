@@ -10,8 +10,8 @@ syntax:
   - vector1
   - vector2
   ret:
-    type: !ArrayUnsized
-      value: Number
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
   left: !Item
     name: vector1
     desc: can be any size
