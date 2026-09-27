@@ -14,8 +14,8 @@ syntax:
     type: Vector3d
   right: !Item
     name: vector
-    type: !ArrayUnsized
-      value: Number
+    desc: of [[Number]]s
+    type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
