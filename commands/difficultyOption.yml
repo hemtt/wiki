@@ -1,0 +1,61 @@
+name: difficultyOption
+desc: |-
+  Checks specific difficulty settings of the current user.
+  Difficulty flag names can be found in the {{hl|CfgDifficultyPresets}} config class or in [[server.armaprofile|ArmA profile]] file under class {{hl|DifficultyPresets/xxx/Options}} (xxx being Recruit, Regular or Veteran).
+  This command replaces [[difficultyEnabled]] as many options have multiple values and former command only provided [[Boolean]] return.
+groups:
+- Difficulty
+syntax:
+- call: !Unary optionName
+  ret:
+    type: Number
+  right: !Item
+    name: optionName
+    desc: |-
+      difficulty option name; one of:
+      * reducedDamage
+      * groupIndicators
+      * friendlyTags
+      * enemyTags
+      * detectedMines
+      * commands
+      * waypoints
+      * weaponInfo
+      * stanceIndicator
+      * staminaBar
+      * weaponCrosshair
+      * visionAid
+      * thirdPersonView
+      * cameraShake
+      * scoreTable
+      * deathMessages
+      * vonID
+      * mapContent
+      * autoReport
+      * multipleSaves
+    type: String
+- call: !Unary array
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: array of all options and current values in format [["Option1", value1], ...["OptionN", valueN]]
+  right: !Item
+    name: array
+    desc: any array, could be empty array []
+    type: !Unknown 'Unknown simple type: array'
+  since:
+    arma3: '2.14'
+argument_loc: Unspecified
+effect_loc: Unspecified
+since:
+  arma3: '1.58'
+examples:
+- <sqf>hint str (difficultyOption "friendlyTags");</sqf>
+- "Remember last [[cameraView]] per vehicle:\n<sqf>\nplayer addEventHandler [\"GetOutMan\", {\n\tparams [\"_unit\", \"\", \"_vehicle\"];\n\t_unit setVariable [_vehicle call BIS_fnc_netId, cameraView];\n}];\nplayer addEventHandler [\"GetInMan\", {\n\tif (difficultyOption \"thirdPersonView\" == 2) then {\n\t\tparams [\"_unit\", \"\", \"_vehicle\"];\n\t\t_unit switchCamera (_unit getVariable [_vehicle call BIS_fnc_netId, \"INTERNAL\"]);\n\t};\n}];\n</sqf>"
+see_also:
+- difficulty
+- difficultyEnabledRTD
+- Arma
+- '3:'
+- Difficulty
+- Settings
+- missionDifficulty
