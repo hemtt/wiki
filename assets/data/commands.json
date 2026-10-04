@@ -559,7 +559,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"[type,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addEditorObject",
@@ -714,7 +714,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool: [ParamItem { name: \"unitName\", desc: Some(\"person to add the magazines to\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"magazineName\", desc: Some(\"magazine name. See the topic [[:Category:Weapons]] for reference about possible values.\"), typ: String, optional: false, default: None, since: None }]"
+        "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool: [ParamItem { name: \"magazineName\", desc: Some(\"magazine name. See the topic [[:Category:Weapons]] for reference about possible values.\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"unitName\", desc: Some(\"person to add the magazines to\"), typ: Object, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addMagazine",
@@ -7008,7 +7008,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `from` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[from,to,param type,line type,color]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `from` not found in pool: [ParamItem { name: \"[from,to,param type,line type,color]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "drawLink",
@@ -7193,7 +7193,7 @@
     {
       "description": "Returns the number of given empty positions in the vehicle.\n{{Feature|informative|To return the actual units in the vehicle use [[fullCrew]]. However if only the number is desired, use [[emptyPositions]] because it is faster.}}",
       "errors": [
-        "Param `ignoreLocked` not found in pool: [ParamItem { name: \"ignoreLocked (Optional)\", desc: Some(\"[[true]] to ignore locked positions. Default: [[false]]\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"vehicle\", desc: Some(\"transport\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"position\", desc: Some(\"see [[moveInAny]]. Empty string \\\"\\\" returns number of all free positions\"), typ: String, optional: false, default: None, since: None }]"
+        "Param `ignoreLocked` not found in pool: [ParamItem { name: \"position\", desc: Some(\"see [[moveInAny]]. Empty string \\\"\\\" returns number of all free positions\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"ignoreLocked (Optional)\", desc: Some(\"[[true]] to ignore locked positions. Default: [[false]]\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"vehicle\", desc: Some(\"transport\"), typ: Object, optional: false, default: None, since: None }]"
       ],
       "groups": [
         "Object Manipulation",
@@ -7797,7 +7797,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `object` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[object,script]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `object` not found in pool: [ParamItem { name: \"[object,script]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "execEditorScript",
@@ -8274,7 +8274,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `code` not found in pool: [ParamItem { name: \"array\", desc: Some(\"the array to iterate over\"), typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"{{{!}} class=\\\"wikitable align-center float-right\\\"\\n! Game\\n{{!}} {{GVI|ofp|1.00}}\\n{{!}} {{GVI|ofp|1.85}}\\n{{!}} {{GVI|arma1|1.00}}\\n{{!}} {{GVI|arma2|1.00}}\\n{{!}} {{GVI|arma2oa|1.50}}\\n{{!}} {{GVI|arma3|1.00}}\\n{{!}} {{GVI|tkoh|1.00}}\\n{{!}}-\\n! [[String]] support\\n{{!}} colspan=\\\"3\\\" {{!}} {{Icon|checked}}\\n{{!}} colspan=\\\"4\\\" {{!}} {{Icon|unchecked}}\\n{{!}}-\\n! [[Code]] support\\n{{!}} {{Icon|unchecked}}\\n{{!}} colspan=\\\"6\\\" {{!}} {{Icon|checked}}\\n{{!}}}\\ncode\", desc: Some(\"{{hl|[[Magic Variables#x|_x]]}}: iterated item\\n{{GVI|arma2oa|1.55|size= 0.75}} {{hl|[[Magic Variables#forEachIndex|_forEachIndex]]}}: item's index\"), typ: OneOf([OneOfValue { typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), desc: None, since: None }, OneOfValue { typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), desc: None, since: None }]), optional: false, default: None, since: None }]"
+        "Param `code` not found in pool: [ParamItem { name: \"{{{!}} class=\\\"wikitable align-center float-right\\\"\\n! Game\\n{{!}} {{GVI|ofp|1.00}}\\n{{!}} {{GVI|ofp|1.85}}\\n{{!}} {{GVI|arma1|1.00}}\\n{{!}} {{GVI|arma2|1.00}}\\n{{!}} {{GVI|arma2oa|1.50}}\\n{{!}} {{GVI|arma3|1.00}}\\n{{!}} {{GVI|tkoh|1.00}}\\n{{!}}-\\n! [[String]] support\\n{{!}} colspan=\\\"3\\\" {{!}} {{Icon|checked}}\\n{{!}} colspan=\\\"4\\\" {{!}} {{Icon|unchecked}}\\n{{!}}-\\n! [[Code]] support\\n{{!}} {{Icon|unchecked}}\\n{{!}} colspan=\\\"6\\\" {{!}} {{Icon|checked}}\\n{{!}}}\\ncode\", desc: Some(\"{{hl|[[Magic Variables#x|_x]]}}: iterated item\\n{{GVI|arma2oa|1.55|size= 0.75}} {{hl|[[Magic Variables#forEachIndex|_forEachIndex]]}}: item's index\"), typ: OneOf([OneOfValue { typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), desc: None, since: None }, OneOfValue { typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), desc: None, since: None }]), optional: false, default: None, since: None }, ParamItem { name: \"array\", desc: Some(\"the array to iterate over\"), typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "forEach",
@@ -12586,7 +12586,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `argumentArray1` not found in pool: [ParamItem { name: \"receiver\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"argumentArrayN\", desc: Some(\"format [argumentName, argumentValue, argumentText, argumentSpeech]:\\n* argumentName: [[String]]\\n* argumentValue: [[Code]]\\n* argumentText: [[String]]\\n* argumentSpeech: [[Array]] of [[String]]s - each string is an already defined word in config.\"), typ: Unknown(\"Unknown simple type: array\"), optional: true, default: None, since: None }, ParamItem { name: \"forceRadio\", desc: Some(\"(Optional)\"), typ: OneOf([OneOfValue { typ: StringEnum([StringEnumValue { value: \"false to force use of radio\", desc: None, since: None }]), desc: None, since: None }]), optional: false, default: None, since: None }, ParamItem { name: \"topicName\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"person\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"sentenceClass\", desc: None, typ: String, optional: false, default: None, since: None }]"
+        "Param `argumentArray1` not found in pool: [ParamItem { name: \"receiver\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"topicName\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"sentenceClass\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"person\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"argumentArrayN\", desc: Some(\"format [argumentName, argumentValue, argumentText, argumentSpeech]:\\n* argumentName: [[String]]\\n* argumentValue: [[Code]]\\n* argumentText: [[String]]\\n* argumentSpeech: [[Array]] of [[String]]s - each string is an already defined word in config.\"), typ: Unknown(\"Unknown simple type: array\"), optional: true, default: None, since: None }, ParamItem { name: \"forceRadio\", desc: Some(\"(Optional)\"), typ: OneOf([OneOfValue { typ: StringEnum([StringEnumValue { value: \"false to force use of radio\", desc: None, since: None }]), desc: None, since: None }]), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "kbTell",
@@ -16118,7 +16118,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `_identifier = value <span style=\"margin-left: 7em\">'''{{Color|red|From {{arma2}} v1.00 to {{arma3}} v1.52:}}''' see '''` not found in pool: [ParamItem { name: \"_identifier\", desc: Some(\", for example <sqf inline>_myVar</sqf>\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }, ParamItem { name: \"value\", desc: Some(\": value to assign to the variable\"), typ: Anything, optional: false, default: None, since: None }]"
+        "Param `_identifier = value <span style=\"margin-left: 7em\">'''{{Color|red|From {{arma2}} v1.00 to {{arma3}} v1.52:}}''' see '''` not found in pool: [ParamItem { name: \"value\", desc: Some(\": value to assign to the variable\"), typ: Anything, optional: false, default: None, since: None }, ParamItem { name: \"_identifier\", desc: Some(\", for example <sqf inline>_myVar</sqf>\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "private",
@@ -16921,7 +16921,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `from` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[from,param type]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `from` not found in pool: [ParamItem { name: \"[from,param type]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "removeDrawLinks",
@@ -18795,7 +18795,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `killer` not found in pool: [ParamItem { name: \"{{Icon|serverExec|28}} instigator\", desc: Some(\"the person that instigated the damage.\\n* if a tank is a killer, the tank gunner that pulled the trigger is instigator\\n* it will be listed as <sqf inline>_instigator</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler\\n* MP restricted similar to [[setShotParents]], will be ignored unless executed on the server or headless client in MP\\n** the above MP restriction does not apply to trees, poles and walls\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 12 }), argo: None }) }, ParamItem { name: \"object\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"{{Icon|serverExec|28}} killer\", desc: Some(\"the entity that caused the damage (can be anything). If the damage leads to the death of the unit, the killer will be used as the object that caused the kill.\\n* it can be used to show \\\"killed by player\\\" in debriefing statistics and kill messages in the chat (if death messages are enabled).\\n* it will alter the killer's [[rating]] as if the killer directly killed the unit\\n* it will be listed as <sqf inline>_killer</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler\\n* it influences a tree/pole/wall fall direction (it will fall ''away'' from ''killer'')\\n* ''killer'' is ignored if [[setDamage]] is called on a player client machine unless ''object'' is one of these three entity types - see {{Link|#Example 3}}\\n* MP restricted similar to [[setShotParents]], will be ignored unless executed on the server or headless client in MP\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 12 }), argo: None }) }, ParamItem { name: \"damage\", desc: Some(\"range 0..1, 0 = pristine/healthy condition, 1 = entirely destroyed/killed\"), typ: Number, optional: false, default: None, since: None }, ParamItem { name: \"allowResurrection\", desc: Some(\"- Will re-set [[alive]] state of previously dead object.\"), typ: Boolean, optional: true, default: Some(\"false\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 22 }), argo: None }) }, ParamItem { name: \"useEffects\", desc: Some(\"[[false]] to skip destruction effects\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }, ParamItem { name: \"shot\", desc: Some(\"- shot that caused the damage.\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 22 }), argo: None }) }]"
+        "Param `killer` not found in pool: [ParamItem { name: \"object\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"useEffects\", desc: Some(\"[[false]] to skip destruction effects\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }, ParamItem { name: \"{{Icon|serverExec|28}} instigator\", desc: Some(\"the person that instigated the damage.\\n* if a tank is a killer, the tank gunner that pulled the trigger is instigator\\n* it will be listed as <sqf inline>_instigator</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler\\n* MP restricted similar to [[setShotParents]], will be ignored unless executed on the server or headless client in MP\\n** the above MP restriction does not apply to trees, poles and walls\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 12 }), argo: None }) }, ParamItem { name: \"damage\", desc: Some(\"range 0..1, 0 = pristine/healthy condition, 1 = entirely destroyed/killed\"), typ: Number, optional: false, default: None, since: None }, ParamItem { name: \"{{Icon|serverExec|28}} killer\", desc: Some(\"the entity that caused the damage (can be anything). If the damage leads to the death of the unit, the killer will be used as the object that caused the kill.\\n* it can be used to show \\\"killed by player\\\" in debriefing statistics and kill messages in the chat (if death messages are enabled).\\n* it will alter the killer's [[rating]] as if the killer directly killed the unit\\n* it will be listed as <sqf inline>_killer</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler\\n* it influences a tree/pole/wall fall direction (it will fall ''away'' from ''killer'')\\n* ''killer'' is ignored if [[setDamage]] is called on a player client machine unless ''object'' is one of these three entity types - see {{Link|#Example 3}}\\n* MP restricted similar to [[setShotParents]], will be ignored unless executed on the server or headless client in MP\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 12 }), argo: None }) }, ParamItem { name: \"allowResurrection\", desc: Some(\"- Will re-set [[alive]] state of previously dead object.\"), typ: Boolean, optional: true, default: Some(\"false\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 22 }), argo: None }) }, ParamItem { name: \"shot\", desc: Some(\"- shot that caused the damage.\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 22 }), argo: None }) }]"
       ],
       "groups": [],
       "id": "setDamage",
@@ -18896,7 +18896,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `object` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[object,texture,color,offset,width,height,maintain size?,angle,string identifier,shadow,is3D,draw line?,priority]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `object` not found in pool: [ParamItem { name: \"[object,texture,color,offset,width,height,maintain size?,angle,string identifier,shadow,is3D,draw line?,priority]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "setDrawIcon",
@@ -20626,7 +20626,7 @@
     {
       "description": "Defines the trigger activation type.\n\nSee [[ArmA:_Mission_Editor#Triggers_Mode_.28F3.29|ArmA:Mission Editor - Triggers]] for a thorough overview of triggers and its fields for activation, effects, etc.",
       "errors": [
-        "Param `persistent` not found in pool: [ParamItem { name: \"type\", desc: Some(\"how trigger is it activated. Can be:\\n* {{hl|\\\"PRESENT\\\"}}\\n* {{hl|\\\"NOT PRESENT\\\"}}\\n* {{hl|\\\"WEST D\\\"}}\\n* {{hl|\\\"EAST D\\\"}}\\n* {{hl|\\\"GUER D\\\"}}\\n* {{hl|\\\"CIV D\\\"}}\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"repeating\", desc: Some(\"activation can happen repeatedly\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"by\", desc: Some(\"who activates trigger. Can be {{hl|\\\"NONE\\\"}}, or:\\n* {{hl|\\\"EAST\\\"}}\\n* {{hl|\\\"WEST\\\"}}\\n* {{hl|\\\"GUER\\\"}}\\n* {{hl|\\\"CIV\\\"}}\\n* {{hl|\\\"LOGIC\\\"}}\\n* {{hl|\\\"ANY\\\"}}\\n* {{GVI|arma3|1.68|size= 0.75}} {{hl|\\\"ANYPLAYER\\\"}}\\n* {{hl|\\\"ALPHA\\\"}}\\n* {{hl|\\\"BRAVO\\\"}}\\n* {{hl|\\\"CHARLIE\\\"}}\\n* {{hl|\\\"DELTA\\\"}}\\n* {{hl|\\\"ECHO\\\"}}\\n* {{hl|\\\"FOXTROT\\\"}}\\n* {{hl|\\\"GOLF\\\"}}\\n* {{hl|\\\"HOTEL\\\"}}\\n* {{hl|\\\"INDIA\\\"}}\\n* {{hl|\\\"JULIET\\\"}}\\n* {{hl|\\\"STATIC\\\"}}\\n* {{hl|\\\"VEHICLE\\\"}}\\n* {{hl|\\\"GROUP\\\"}}\\n* {{hl|\\\"LEADER\\\"}}\\n* {{hl|\\\"MEMBER\\\"}}\\n* {{hl|\\\"WEST SEIZED\\\"}}\\n* {{hl|\\\"EAST SEIZED\\\"}}\\n* {{hl|\\\"GUER SEIZED\\\"}}\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"trigger\", desc: Some(\"trigger object\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"persistent (Optional)\", desc: Some(\"when [[false]] stops persistent condition execution and vehicle list building on non-repeating trigger; is ignored in radio and repeating triggers. Default: [[true]]\"), typ: Boolean, optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }]"
+        "Param `persistent` not found in pool: [ParamItem { name: \"repeating\", desc: Some(\"activation can happen repeatedly\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"persistent (Optional)\", desc: Some(\"when [[false]] stops persistent condition execution and vehicle list building on non-repeating trigger; is ignored in radio and repeating triggers. Default: [[true]]\"), typ: Boolean, optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }, ParamItem { name: \"trigger\", desc: Some(\"trigger object\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"type\", desc: Some(\"how trigger is it activated. Can be:\\n* {{hl|\\\"PRESENT\\\"}}\\n* {{hl|\\\"NOT PRESENT\\\"}}\\n* {{hl|\\\"WEST D\\\"}}\\n* {{hl|\\\"EAST D\\\"}}\\n* {{hl|\\\"GUER D\\\"}}\\n* {{hl|\\\"CIV D\\\"}}\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"by\", desc: Some(\"who activates trigger. Can be {{hl|\\\"NONE\\\"}}, or:\\n* {{hl|\\\"EAST\\\"}}\\n* {{hl|\\\"WEST\\\"}}\\n* {{hl|\\\"GUER\\\"}}\\n* {{hl|\\\"CIV\\\"}}\\n* {{hl|\\\"LOGIC\\\"}}\\n* {{hl|\\\"ANY\\\"}}\\n* {{GVI|arma3|1.68|size= 0.75}} {{hl|\\\"ANYPLAYER\\\"}}\\n* {{hl|\\\"ALPHA\\\"}}\\n* {{hl|\\\"BRAVO\\\"}}\\n* {{hl|\\\"CHARLIE\\\"}}\\n* {{hl|\\\"DELTA\\\"}}\\n* {{hl|\\\"ECHO\\\"}}\\n* {{hl|\\\"FOXTROT\\\"}}\\n* {{hl|\\\"GOLF\\\"}}\\n* {{hl|\\\"HOTEL\\\"}}\\n* {{hl|\\\"INDIA\\\"}}\\n* {{hl|\\\"JULIET\\\"}}\\n* {{hl|\\\"STATIC\\\"}}\\n* {{hl|\\\"VEHICLE\\\"}}\\n* {{hl|\\\"GROUP\\\"}}\\n* {{hl|\\\"LEADER\\\"}}\\n* {{hl|\\\"MEMBER\\\"}}\\n* {{hl|\\\"WEST SEIZED\\\"}}\\n* {{hl|\\\"EAST SEIZED\\\"}}\\n* {{hl|\\\"GUER SEIZED\\\"}}\"), typ: String, optional: false, default: None, since: None }]"
       ],
       "groups": [
         "Triggers"
@@ -21417,7 +21417,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"[type,class,side,position]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,class,side,position]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "showNewEditorObject",
@@ -21948,7 +21948,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `id or sound` not found in pool: [ParamItem { name: \"id\", desc: Some(\"id returned by [[playSoundUI]] and [[playSound3D]] commands, -1 to return all currently playing ids\"), typ: Number, optional: false, default: None, since: None }, ParamItem { name: \"sound\", desc: Some(\"sound returned by [[say3D]] command or the unit, in which case current [[say3D]] unit's sound params are returned\"), typ: Unknown(\"Unknown simple type: netobject\"), optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }]"
+        "Param `id or sound` not found in pool: [ParamItem { name: \"sound\", desc: Some(\"sound returned by [[say3D]] command or the unit, in which case current [[say3D]] unit's sound params are returned\"), typ: Unknown(\"Unknown simple type: netobject\"), optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }, ParamItem { name: \"id\", desc: Some(\"id returned by [[playSoundUI]] and [[playSound3D]] commands, -1 to return all currently playing ids\"), typ: Number, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "soundParams",
@@ -23669,7 +23669,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `object` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[object,string identifier,color,offset,width,height,maintain size?,angle,shadow]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `object` not found in pool: [ParamItem { name: \"[object,string identifier,color,offset,width,height,maintain size?,angle,shadow]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "updateDrawIcon",
@@ -24723,7 +24723,7 @@
   "failed": 40,
   "partial": 359,
   "passed": 2278,
-  "timestamp": 1791113338,
+  "timestamp": 1791130001,
   "total": 2691,
   "version": "1.0"
 }
