@@ -1,6 +1,6 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Returns the current fade factor of control.<br>\n{{ Feature | Informative | Despite having <syntaxhighlight lang=\"cpp\" inline>fade = 1;</syntaxhighlight> inside a control's config, <sqf inline>ctrlFade</sqf> will '''still report a fade of 0'''.<br>\nOnly the value actually set by [[ctrlSetFade]] will be returned by [[ctrlFade]].}}",
+  "description": "Returns the current fade factor of control.<br>\n{{Feature|informative|\nDespite having <syntaxhighlight lang=\"cpp\" inline>fade = 1;</syntaxhighlight> inside a control's config, this command '''will''' report a fade of 0.<br>\nOnly the value actually set by [[ctrlSetFade]] will be returned by [[ctrlFade]].\n}}",
   "effect_loc": "Unspecified",
   "examples": [
     "<sqf>_fade = ctrlFade _control;</sqf>"
