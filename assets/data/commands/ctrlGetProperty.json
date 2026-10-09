@@ -1,0 +1,82 @@
+{
+  "argument_loc": "Local",
+  "description": "Returns one or multiple given properties of given control.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>_ctrl ctrlGetProperty \"x\"; // Return 0.015</sqf>",
+    "<sqf>_ctrl ctrlGetProperty [\"x\", \"colorBackground\"]; // Return <noWiki>{</noWiki>\"x\": 0.015, \"colorBackground\": [1, 0.4, 1, 1]<noWiki>}</noWiki></sqf>"
+  ],
+  "groups": [
+    "GUI Control"
+  ],
+  "id": "ctrlGetProperty",
+  "name": "ctrlGetProperty",
+  "problem_notes": [],
+  "see_also": [
+    "ctrlSetProperty",
+    ":Category:",
+    "Control",
+    "Types|Control",
+    "Types"
+  ],
+  "since": {
+    "arma3": "2.24"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "property"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "Return value depends on the property",
+        "type": "Anything"
+      },
+      "right": {
+        "Item": {
+          "desc": "Any property available for given control type. Case insensitive",
+          "name": "property",
+          "type": "String"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "properties"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "desc": "in format:\n* key: [[String]] -  Name of the property\n* value: [[Anything]] - Value depends on the property",
+        "type": "HashMapUnknown"
+      },
+      "right": {
+        "Item": {
+          "desc": "Properties available for given control type. Case insensitive",
+          "name": "properties",
+          "type": {
+            "ArrayUnsized": {
+              "value": "String"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
