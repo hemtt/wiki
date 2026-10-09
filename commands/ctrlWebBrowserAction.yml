@@ -1,6 +1,6 @@
 name: ctrlWebBrowserAction
 desc: |-
-  Executes an action on a WebBrowser control. The type of parameters depends on the action type. Possible Actions are:
+  Executes an action on a [[CT_WEBBROWSER|WebBrowser control]]. The type of parameters depends on the action type. Possible Actions are:
   {{{!}} class="wikitable"
   {{!}}-
   ! Action
@@ -57,13 +57,23 @@ desc: |-
   {{!}}-
   {{!}} StopBrowser
   {{!}}
-  {{!}}
+  {{!}} [[Nothing]]
   {{!}} Freezes the currently displayed image (the same image will keep being displayed). Closes the browser and free's all resources of it. This is useful if the Browser is only used to generate a static element and it doesn't need to keep updating it. It saves CPU and Memory resources.
   {{!}}-
   {{!}} ResumeBrowser
   {{!}}
-  {{!}}
+  {{!}} [[Nothing]]
   {{!}} Unfreezes the browser, and loads the currently set URL (Either that was set before StopBrowser, or which has been set while the browser was paused). Note that when unfreezing, the browser may show one or two black frames while the page is loading. For seemless transition from Paused/Resumed state, you can use a ui2texture and not send any displayUpdate's to it until you consider the resumed browser to be ready.
+  {{!}}-
+  {{!}} SetBrowserInternalSize {{GVI|arma3|2.24}}
+  {{!}} [[Scalar]], [[Scalar]] (width, height)
+  {{!}} [[Nothing]]
+  {{!}} Sets the browsers internal render size. Any display will scale the texture up/down as needed.
+  {{!}}-
+  {{!}} SetControlReference {{GVI|arma3|2.24}}
+  {{!}} [[Control]]
+  {{!}} [[Nothing]]
+  {{!}} Sets the control to be referenced by [[CT_CONTROL_REF]] control.
   {{!}}}
 groups:
 - GUI Control
