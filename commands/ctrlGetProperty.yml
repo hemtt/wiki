@@ -1,0 +1,49 @@
+name: ctrlGetProperty
+desc: Returns one or multiple given properties of given control.
+groups:
+- GUI Control
+syntax:
+- call: !Binary
+  - control
+  - property
+  ret:
+    type: Anything
+    desc: Return value depends on the property
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: property
+    desc: Any property available for given control type. Case insensitive
+    type: String
+- call: !Binary
+  - control
+  - properties
+  ret:
+    type: HashMapUnknown
+    desc: |-
+      in format:
+      * key: [[String]] -  Name of the property
+      * value: [[Anything]] - Value depends on the property
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: properties
+    desc: Properties available for given control type. Case insensitive
+    type: !ArrayUnsized
+      value: String
+argument_loc: Local
+effect_loc: Local
+since:
+  arma3: '2.24'
+branch: Dev
+examples:
+- <sqf>_ctrl ctrlGetProperty "x"; // Return 0.015</sqf>
+- '<sqf>_ctrl ctrlGetProperty ["x", "colorBackground"]; // Return <noWiki>{</noWiki>"x": 0.015, "colorBackground": [1, 0.4, 1, 1]<noWiki>}</noWiki></sqf>'
+see_also:
+- ctrlSetProperty
+- ':Category:'
+- Control
+- Types|Control
+- Types
