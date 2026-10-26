@@ -1,6 +1,6 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Returns DLC information about given object or model.",
+  "description": "Returns DLC information about given object or model. The alt syntax quieries config and finds config defined model.",
   "effect_loc": "Unspecified",
   "examples": [
     "<sqf>getAssetDLCInfo player;</sqf>",
