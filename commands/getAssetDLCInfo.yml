@@ -1,5 +1,5 @@
 name: getAssetDLCInfo
-desc: Returns DLC information about given object or model.
+desc: Returns DLC information about given object or model. The alt syntax quieries config and finds config defined model.
 groups:
 - DLC
 syntax:
