@@ -3,7 +3,7 @@
   "description": "Checks if given object can be stored in inventory of given object or any inventory container ([[uniform]], [[vest]], [[backpack]]) of given unit.<br>\nBefore {{arma3}} v2.10 this comment verified only the biggest container when multiple items were queried; now it checks all containers.\n\n{{Feature|important|\nAvoid passing an empty string <sqf inline>\"\"</sqf> to this command as it will create a warning dialog:\n[[File:a3 warning badvehicletype.jpg|none|alt= Warning Message: Bad vehicle type|Warning Message: Bad vehicle type]]\nThis message will show once per mission restart.\n}}",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf\n>if (player canAdd \"FirstAidKit\") then\n{\n\tplayer addItem \"FirstAidKit\";\n}\nelse\n{\n\thint \"Not enough space\";\n};\n</sqf>",
+    "<sqf>if (player canAdd \"FirstAidKit\") then\n{\n\tplayer addItem \"FirstAidKit\";\n}\nelse\n{\n\thint \"Not enough space\";\n};\n</sqf>",
     "<sqf>\nif (_box canAdd \"FirstAidKit\") then\n{\n\t_box addWeaponCargo [\"FirstAidKit\", 1];\n}\nelse\n{\n\thint \"Not enough space\";\n};\n</sqf>",
     "<sqf>car canAdd [currentWeapon player, 50];</sqf>",
     "<sqf>\n// check if attachment can be loaded\n\"arifle_Katiba_GL_F\" canAdd \"acc_pointer_IR\";\n\"arifle_Katiba_GL_F\" canAdd [\"acc_pointer_IR\", \"PointerSlot\"];\n</sqf>",
