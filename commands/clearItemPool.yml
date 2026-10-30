@@ -3,17 +3,14 @@ desc: Removes all items from ammo box (or any general weapon holder container)
 groups:
 - Weapon Pool
 syntax:
-- call: !Unary box
+- call: Nular
   ret:
     type: Nothing
-  right: !Item
-    name: box
-    type: Object
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
   arma3: '1.00'
 examples:
-- <sqf>clearItemPool jeepOne;</sqf>
+- <sqf>clearItemPool;</sqf>
 see_also:
 - addItemPool
