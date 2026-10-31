@@ -6,9 +6,10 @@ syntax:
 - call: !Unary unitOrGroup
   ret:
     type: Object
+    desc: or [[Team Member]]
   right: !Item
     name: unitOrGroup
-    desc: or [[Group]]
+    desc: ', [[Group]] or [[Team Member]]'
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
