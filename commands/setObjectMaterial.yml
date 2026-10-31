@@ -15,7 +15,7 @@ syntax:
   right: !Array
   - !Item
     name: selectionNumber
-    desc: or [[String]] (since {{GVI|arma3|2.10}}).
+    desc: or {{GVI|arma3|2.10|size= 0.75}} [[String]]
     type: Number
   - !Item
     name: material
