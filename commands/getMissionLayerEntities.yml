@@ -15,9 +15,10 @@ syntax:
   right: !Item
     name: layerName
     desc: |-
+      or [[Number]]
       * [[String]] - case-insensitive; layer name in the editor. If multiple layers with the same name are present in the scenario, the first found one is used
       * [[Number]] - layer ID in the editor
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: String
 argument_loc: Unspecified
 effect_loc: Unspecified
 server_exec: true
