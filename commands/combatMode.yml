@@ -18,9 +18,10 @@ syntax:
   right: !Item
     name: group
     desc: |-
+      or [[Object]]
       * [[Group]]
       * [[Object]] of type [[Object|Unit]] - if the argument is unit [[Object]], unit's current group is used.
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: Group
 argument_loc: Global
 effect_loc: Unspecified
 since:
