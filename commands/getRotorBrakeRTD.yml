@@ -1,14 +1,14 @@
 name: getRotorBrakeRTD
 desc: |-
-  Returns if rotor break is on.
+  Returns the state of the rotor brake.
   {{Feature|afm}}
 groups:
 - RTD
 syntax:
 - call: !Unary helicopter
   ret:
-    type: Boolean
-    desc: '[[true]] if on, otherwise [[false]]'
+    type: Number
+    desc: rotor brake state, see [[setRotorBrakeRTD]]
   right: !Item
     name: helicopter
     type: Object
@@ -18,6 +18,6 @@ since:
   tkoh: '1.00'
   arma3: '1.34'
 examples:
-- <sqf>_isOn = getRotorBrakeRTD _heli;</sqf>
+- <sqf>_brakeState = getRotorBrakeRTD _heli;</sqf>
 see_also:
 - setRotorBrakeRTD
