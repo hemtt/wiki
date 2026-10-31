@@ -11,7 +11,7 @@ syntax:
     desc: base64-encoded 64 bits hash
   right: !Item
     name: value
-    desc: ', [[Boolean]], [[Code]], [[Config]], [[Group]], [[Namespace]], [[NaN]], [[Number]], [[Object]], [[Side]] or [[String]]'
+    desc: ', [[Boolean]], [[Code]], [[Config]], [[Group]], [[HashMap]], [[Namespace]], [[NaN]], [[Number]], [[Object]], [[Script Handle]], [[Side]] or [[String]]'
     type: !Unknown 'Unknown simple type: array'
 argument_loc: Unspecified
 effect_loc: Unspecified
