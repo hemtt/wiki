@@ -19,7 +19,7 @@ syntax:
       * "DIAMOND"
   right: !Item
     name: target
-    desc: or [[Group]]
+    desc: ', [[Group]] or [[Team Member]]'
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
