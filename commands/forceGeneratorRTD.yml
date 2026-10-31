@@ -5,8 +5,7 @@ groups:
 syntax:
 - call: !Unary index
   ret:
-    type: Number
-    desc: force index
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: index
     desc: index
