@@ -8,7 +8,16 @@ syntax:
     type: Boolean
   right: !Item
     name: unitName
-    type: Object
+    desc: if an array is given, only its first element is used
+    type: !ArrayUnsized
+      value: !OneOf
+      - type: Object
+        desc: null
+        since: null
+      - type: !ArrayUnsized
+          value: Object
+        desc: null
+        since: null
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
