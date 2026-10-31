@@ -8,8 +8,7 @@ syntax:
   - from
   - to
   ret:
-    type: Boolean
-    desc: '[[true]] If the connection was made'
+    type: Nothing
   right: !Array
   - !Item
     name: type
