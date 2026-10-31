@@ -10,7 +10,7 @@ syntax:
   - var2
   ret:
     type: Number
-    desc: distance in meters or 1e10 if distance cannot be calculated
+    desc: squared distance in square meters or 1e10 if distance cannot be calculated
   left: !Item
     name: var1
     desc: or [[Position]]
@@ -19,6 +19,20 @@ syntax:
     name: var2
     desc: or [[Position]]
     type: Object
+- call: !Binary
+  - location1
+  - location2
+  ret:
+    type: Number
+    desc: squared distance in square meters or 1e10 if distance cannot be calculated
+  left: !Item
+    name: location1
+    desc: or [[Position]]
+    type: Location
+  right: !Item
+    name: location2
+    desc: or [[Position]]
+    type: Location
 - call: !Binary
   - a
   - b
