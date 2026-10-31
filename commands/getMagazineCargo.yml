@@ -7,7 +7,7 @@ syntax:
 - call: !Unary object
   ret:
     type: !Unknown 'Unknown simple type: array'
-    desc: of arrays. [["5MagsType1","10MagsType2"],[5,10]]
+    desc: '[["5MagsType1","10MagsType2"],[5,10]]'
   right: !Item
     name: object
     desc: vehicle or ammo box
