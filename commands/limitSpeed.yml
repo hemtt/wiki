@@ -17,7 +17,14 @@ syntax:
   right: !Item
     name: speed
     desc: in km/h; By default, it's {{hl|2 * maxSpeed}} of the vehicle/unit (which is defined in config). See Example 1.
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: Boolean
+      desc: null
+      since:
+        arma3: '2.22'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
