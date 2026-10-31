@@ -1,0 +1,224 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Draws an icon at the given position in the game world. This command has to be executed every frame. Use the [[Arma 3: Mission Event Handlers#Draw3D|Draw3D]] Mission Event Handler (which is executed every frame if the user can see the icon).<br>\nIn order for the results of this command to be visible through a [[camCreate|custom camera]], enable HUD with [[cameraEffectEnableHUD]].<br>\n<sqf inline>showHUD false</sqf> will hide the icon drawn by this command.<br>\nIn order for arrows to appear, the icon texture should exist. The arrow size is proportionate to the icon size.\n\n{{Feature|informative|\n* To avoid flickering and ensure visual fidelity, always use the [[Position#Formats|visual]] (render time scope) variant of position commands, such as [[getPosASLVisual]].\n* The ''width'' and ''height'' parameters are multipliers for {{hl|activeWidth}} and {{hl|activeHeight}} set in config. So for example, if one needs to create an icon half the screen wide (<sqf inline>safeZoneW / 2</sqf>) and half the screen tall (<sqf inline>safeZoneH / 2</sqf>), divide these by the according config values: <sqf>\nprivate _iconWidth = (safeZoneW / 2) / getNumber (configFile >> \"CfgInGameUI\" >> \"Cursor\" >> \"activeWidth\");\nprivate _iconHeight = (safeZoneH / 2) / getNumber (configFile >> \"CfgInGameUI\" >> \"Cursor\" >> \"activeHeight\");\n</sqf>\n}}",
+  "effect_loc": "Local",
+  "examples": [
+    "Icon and text:\n<sqf>\naddMissionEventHandler [\"Draw3D\", {\n\tdrawIcon3D [\"targetIcon.paa\", [1, 1, 1, 1], ASLToAGL getPosASLVisual cursorTarget, 1, 1, 45, \"Target\", 1, 0.05, \"TahomaB\"];\n}];\n</sqf>",
+    "Just text:\n<sqf>\naddMissionEventHandler [\"Draw3D\", {\n\tdrawIcon3D [\"\", [1, 0, 0, 1], ASLToAGL getPosASLVisual cursorTarget, 0, 0, 0, \"Target\", 1, 0.05, \"PuristaMedium\"];\n}];\n</sqf>",
+    "<sqf>\niconPos = player getPos [10, 0] vectorAdd [0,0,2];\naddMissionEventHandler [\"draw3D\",\n{\n\tdrawIcon3D\n\t[\n\t\t\"\\a3\\ui_f\\data\\IGUI\\Cfg\\Radar\\radar_ca.paa\",\n\t\t[0, 0, 1, 1],\n\t\ticonPos,\n\t\t5,\n\t\t5,\n\t\tgetDirVisual player,\n\t\t\"COMPASS\",\n\t\t0,\n\t\t0.3,\n\t\t\"PuristaMedium\",\n\t\t\"center\",\n\t\ttrue\n\t];\n}];\n</sqf>",
+    "Since {{GVI|arma3|2.04}}\n<sqf>\npos = player getPos [10, 0] vectorAdd [0,0,2];\naddMissionEventHandler [\"draw3D\",\n{\n\t_k = 10 / (player distance pos);\n\tdrawIcon3D\n\t[\n\t\t\"\\a3\\ui_f\\data\\IGUI\\Cfg\\Radar\\radar_ca.paa\",\n\t\t[1, 0, 0, 1],\n\t\tpos,\n\t\t1 * _k,\n\t\t1 * _k,\n\t\t0,\n\t\tname player,\n\t\t0,\n\t\t0.04 * _k,\n\t\t\"RobotoCondensed\",\n\t\t\"right\",\n\t\ttrue,\n\t\t0.005 * _k,\n\t\t-0.035 * _k\n\t];\n}];\n</sqf>",
+    "Since {{GVI|arma3|2.22}}\n<sqf>\nremoveAllMissionEventHandlers \"Draw3D\"; \ndeleteVehicle flagA; \nflagA = createVehicle [\"Flag_AAF_F\", position player, [], 0, \"NONE\"]; \nicon = createHashMapFromArray \n[ \n\t[\"@position\", [flagA, 5]], \n\t[\"@texture\", \"\\A3\\Data_F\\Flags\\Flag_AAF_CO.paa\"], \n\t[\"@texts\", [[\"Sector Alpha\", 0.025, 0, 0.05, [1,1,0,1]]]], \n\t[\"@size\", 0.05], \n\t[\"@drawArrows\", true], \n\t[\"@arrowText\", [\"A\", 0.04, 0.5, 0.3, [1,1,0,1]]],\n\t[\"@arrowSize\", 0.06], \n\t[\"@fade\", [10, 100]], \n\t[\"@arrowColor\", [0,1,0,1]], \n\t[\"@progress\", [0.005, 0.05, -0.01, 0, [0.8,0.8,0,1], [0,0.6,0,0.6]]], \n\t[\"@progressValue\", 0.67] \n]; \naddMissionEventHandler [\"Draw3D\", {drawIcon3D icon}];\n</sqf>"
+  ],
+  "groups": [
+    "Interaction"
+  ],
+  "id": "drawIcon3D",
+  "name": "drawIcon3D",
+  "problem_notes": [],
+  "see_also": [
+    "drawLine3D",
+    "getMissionPath",
+    "showHUD",
+    "cameraEffectEnableHUD"
+  ],
+  "since": {
+    "arma3": "0.50"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": [
+          "texture",
+          "color",
+          "position",
+          "width",
+          "height",
+          "angle",
+          "text",
+          "shadow",
+          "textSize",
+          "font",
+          "textAlign",
+          "drawSideArrows",
+          "offsetX",
+          "offsetY"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "desc": "icon texture",
+              "name": "texture",
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "or [[Array]] of two [[Color|Color (RGBA)]]\n* [[Color|Color (RGBA)]] - icon color\n* {{GVI|arma3|2.04|size= 0.75}} [[Array]] of two [[Array]]s format [[Color|Color (RGBA)]] - Icon and text color",
+              "name": "color",
+              "type": "ArrayColorRgba"
+            }
+          },
+          {
+            "Item": {
+              "desc": "icon position",
+              "name": "position",
+              "type": "Position3dAGL"
+            }
+          },
+          {
+            "Item": {
+              "desc": "icon width",
+              "name": "width",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "icon height",
+              "name": "height",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "desc": "icon rotation angle",
+              "name": "angle",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"\"",
+              "desc": "text label to display next to the icon",
+              "name": "text",
+              "optional": true,
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "default": "0",
+              "desc": "\n* [[Number]]:\n** 0: no shadow\n** 1: shadow (not used in this context, used in UI context)\n** 2: outline\n* [[Boolean]]:\n** [[true]] - outline\n** [[false]] - no shadow",
+              "name": "shadow",
+              "optional": true,
+              "type": {
+                "OneOf": [
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Number"
+                  },
+                  {
+                    "desc": null,
+                    "since": null,
+                    "type": "Boolean"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "size of system",
+              "desc": "text size",
+              "name": "textSize",
+              "optional": true,
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "\"robotocondensedbold\"",
+              "desc": "font class name from {{hl|CfgFontFamilies}} (see {{Link|FXY File Format#Available Fonts}})",
+              "name": "font",
+              "optional": true,
+              "type": "String"
+            }
+          },
+          {
+            "Item": {
+              "desc": "(Optional, default \"center\") text alignment",
+              "name": "textAlign",
+              "type": {
+                "StringEnum": [
+                  {
+                    "desc": "aligns the end of text line with the given position (text appears to the left of the position)",
+                    "since": null,
+                    "value": "left"
+                  },
+                  {
+                    "desc": "aligns the beginning of text line with the given position (text appears to the right of the position)",
+                    "since": null,
+                    "value": "right"
+                  },
+                  {
+                    "desc": "aligns the middle of text line with the given position (text appears central to the position)",
+                    "since": null,
+                    "value": "center"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Item": {
+              "default": "false",
+              "desc": "[[true]] to draw arrows and the text label at edge of screen when the icon moves off the screen",
+              "name": "drawSideArrows",
+              "optional": true,
+              "type": "Boolean"
+            }
+          },
+          {
+            "Item": {
+              "default": "0",
+              "desc": "X offset for the icon text",
+              "name": "offsetX",
+              "optional": true,
+              "since": {
+                "arma3": "2.04"
+              },
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "default": "0",
+              "desc": "Y offset for the icon text",
+              "name": "offsetY",
+              "optional": true,
+              "since": {
+                "arma3": "2.04"
+              },
+              "type": "Number"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Unary": "icon"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "hashmap structure in the following case-sensitive, @-prefixed format:\n* @position: [[Array]] - the only mandatory parameter, can be one of the following formats:\n** [x, y, (z:0)] - [[Position#Position2D|Position2D]] or [[Position#PositionAGL|PositionAGL]]\n** [object, offsetZ]\n*** object: [[Object]]\n*** offsetZ: [[Number]] vertical offset\n** [object, selection, offsetZ, lodIndex]\n*** object: [[Object]]\n*** selection: [[String]] - model selection, see [[animationNames]], [[selectionNames]]\n*** offsetZ: [[Number]] - (Optional, default 0) vertical offset\n*** lodIndex: [[Number]] - (Optional, default Memory LOD index, see [[allLODs]])\n* @texture: [[String]] - (Optional, default \"\") icon image\n* @size: [[Number]] - (Optional) texture sizeH, the sizeW is automatic, based on original texture dimensions (To find texture width use [[getTextureInfo]])\n* @font: [[String]] - (Optional) global font name. Default current system font.\n* @color: [[Color]] - (Optional, default White) icon color\n* @shadow: [[Number]] - (Optional, default 0) could be one of the following:\n** 0 - no shadow\n** 1 - normal shadow (slight offset to the right and bottom)\n** 2 - outline ('@shadowColor' does not work here, this outline is always black)\n** 3 - thicker shadow (offset to the right and bottom, dynamic, approx 1.5% of the icon (w+h)/2)\n** 4 - thicker outline (dynamic, approx 1.5% of the icon (w+h)/2)\n* @shadowColor: [[Color]] - (Optional, default [0,0,0,0]) '@shadow' color (see above)\n* @fade: [[Array]] - (Optional, default [-1, -1]) in format [distMin, distMax] start and end distance of icon fade\n* @dynamic: [[Boolean]] - (Optional, default [[false]]) [[true]] to change icon size dynamically with percieved view distance [[false]] static size\n* @offsetX: [[Number]] - (Optional, default 0) x offset in screen units. > 0 offset right, < 0 offset left (always 0 if @drawArrows [[true]])\n* @offsetY: [[Number]] - (Optional, default 0) y offset in screen units. > 0 offset down, < 0 offset up (always 0 if @drawArrows [[true]])\n* @hardAlpha: [[Number]] - (Optional, default -1) 0..1 global alpha override for entire icon\n* @checkVisibility: [[Boolean]] - (Optional, default [[false]]) [[true]] the icon will be obstructed by objects, smoke and vegetation\n* @drawArrows: [[Boolean]] - (Optional, default [[false]]) [[true]] to draw side out of view arrows and text for static icons only. Always [[false]] if @dynamic [[true]]\n* @arrowTexture: [[String]] - (Optional, default \"\\a3\\Ui_f\\data\\IGUI\\Cfg\\Cursors\\outArrow_ca.paa\") arrow texture\n* @arrowSize: [[Number]] - (Optional, default @size) arrow size, capped if smaller than @arrowText size\n* @arrowColor: [[Color]] - (Optional, default @color) arrow color\n* @arrowText: [[Array]] - (Optional, default []) text to draw next to side arrows for static icons only in format [text, size, offsetXCoef, offsetYCoef, color, shadow]:\n** text: [[String]] - text to show next to arrow\n** size: [[Number]] - (Optional, default current system font size) text height in screen units (To find text width use [[getTextWidth]])\n** offsetXCoef: [[Number]] - (Optional, default 1) X-spacing coefficient between arrows and text\n** offsetYCoef: [[Number]] - (Optional, default 1) Y-spacing coefficient between arrows and text\n** color: [[Color]] (Optional, default White) text color\n** shadow: [[Boolean]] (Optional, default [[false]]) [[true]] to outline, [[false]] no shadow\n* @texts: [[Array]] of [[Array]]s - (Optional, default []) multiple visible texts in format [[text, size, offsetX, offsetY, color, shadow], ...]:\n** text: [[String]] - text to show\n** size: [[Number]] - (Optional, default current system font size) text height in screen units (To find text width use [[getTextWidth]])\n** offsetX: [[Number]] - (Optional, default 0) x offset in screen units. > 0 offset right, < 0 offset left\n** offsetY: [[Number]] - (Optional, default 0) y offset in screen units. > 0 offset down, < 0 offset up\n** color: [[Color]] (Optional, default White) text color\n** shadow: [[Boolean]] (Optional, default [[false]]) [[true]] to outline, [[false]] no shadow\n* @progress: [[Array]] - (Optional, default []) progress bar in format [width, height, offsetX, offsetY, colorFG, colorBG]:\n** width: [[Number]] - width of the progress bar in screen units (width < height - vertical bar)\n** height: [[Number]] - height of the progress bar in screen units (height <= width - horizontal bar)\n** offsetX: [[Number]] - (Optional, default 0) x offset\n** offsetY: [[Number]] - (Optional, default 0) y offset\n** colorFG: [[Color]] - (Optional, default White) forground color\n** colorBG: [[Color]] - (Optional, default Grey) background color\n* @progressValue: [[Number]] - (Optional, default -1) progress bar progress in 0...1 range. -1 - progress bar is not drawn",
+          "name": "icon",
+          "type": "HashMapUnknown"
+        }
+      },
+      "since": {
+        "arma3": "2.22"
+      }
+    }
+  ]
+}

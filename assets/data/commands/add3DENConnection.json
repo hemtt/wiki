@@ -30,8 +30,7 @@
         ]
       },
       "ret": {
-        "desc": "[[true]] If the connection was made",
-        "type": "Boolean"
+        "type": "Nothing"
       },
       "right": {
         "Array": [

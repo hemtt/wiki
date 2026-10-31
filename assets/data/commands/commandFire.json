@@ -43,7 +43,7 @@
       },
       "left": {
         "Item": {
-          "desc": "of type [[Object|Unit]] or [[Array]] of [[Object|Unit]]s",
+          "desc": "or [[Array]] of [[Object]]s",
           "name": "unit",
           "type": "Object"
         }

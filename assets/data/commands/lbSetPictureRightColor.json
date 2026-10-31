@@ -1,9 +1,8 @@
 {
   "argument_loc": "Unspecified",
-  "description": "Sets the color of the second (right aligned) picture of the given index of the listbox with id idc of the topmost user dialog to the given color.\nColor which consists from only zeros means disable this override.",
+  "description": "Sets the color of the second (right aligned) picture of the item with the given index of the listbox to the given color.\nColor which consists from only zeros means disable this override.",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>lbSetPictureRightColor [101, 0, [0, 1, 0, 0.5]];</sqf>",
     "<sqf>_ctrl lbSetPictureRightColor [0, [1, 1, 1, 1]];</sqf>"
   ],
   "groups": [
@@ -42,41 +41,6 @@
   },
   "status": "Passed",
   "syntax": [
-    {
-      "call": {
-        "Unary": [
-          "idc",
-          "index",
-          "color"
-        ]
-      },
-      "ret": {
-        "type": "Nothing"
-      },
-      "right": {
-        "Array": [
-          {
-            "Item": {
-              "desc": "control id",
-              "name": "idc",
-              "type": "Number"
-            }
-          },
-          {
-            "Item": {
-              "name": "index",
-              "type": "Number"
-            }
-          },
-          {
-            "Item": {
-              "name": "color",
-              "type": "ArrayColorRgba"
-            }
-          }
-        ]
-      }
-    },
     {
       "call": {
         "Binary": [

@@ -1,0 +1,71 @@
+{
+  "argument_loc": "Local",
+  "description": "Enable the new {{Link|link= https://forums.bistudio.com/topic/191515-ai-driving-feedback-topic/|text= AI driving}}, used to test the old and new AI driving.\n{{Feature|important|[[setDriveOnPath]] does not work if the vehicle doesn't have an AI steering component or if it's disabled.}}",
+  "effect_loc": "Global",
+  "examples": [
+    "<sqf>useAISteeringComponent true;</sqf>",
+    "<sqf>myTank useAISteeringComponent false;</sqf>"
+  ],
+  "groups": [
+    "AI Behaviour"
+  ],
+  "id": "useAISteeringComponent",
+  "name": "useAISteeringComponent",
+  "problem_notes": [],
+  "see_also": [
+    "isUsingAISteeringComponent",
+    "isAISteeringComponentEnabled",
+    "sendSimpleCommand",
+    "enableAI",
+    "disableAI",
+    "enableAIFeature",
+    "vehicleMoveInfo"
+  ],
+  "since": {
+    "arma3": "1.60"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "enabled"
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enabled",
+          "type": "Boolean"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "vehicle",
+          "enabled"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "the vehicle to enable/disable the feature for",
+          "name": "vehicle",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "name": "enabled",
+          "type": "Boolean"
+        }
+      },
+      "since": {
+        "arma3": "2.18"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Returns array with all [[localize]]d keys from the given [[Stringtable.xml | stringtable]] or the array of all stringtables names if empty string {{hl|\"\"}} is given. Common stringtables are: {{hl|\"Global\"}}, {{hl|\"Mission\"}}, {{hl|\"Campaign\"}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _randomKey = selectRandom diag_localized \"Global\";\nhint format [\"Key: %1\\nValue: %2\", _randomKey, localize _randomKey];\n</sqf>",
+    "<sqf>private _allTables = diag_localized \"\";</sqf>",
+    "<sqf>diag_localized \"Global\" select 0; // \"$STR_A3_SHOWCASE_SLINGLOADING_15_AMMODROPPED_PIL_0\"</sqf>"
+  ],
+  "groups": [
+    "Strings",
+    "Localization"
+  ],
+  "id": "diag_localized",
+  "name": "diag_localized",
+  "problem_notes": [],
+  "see_also": [
+    "localize",
+    "isLocalized",
+    "getTextRaw",
+    "Stringtable.csv",
+    "Stringtable.xml",
+    "BIS_fnc_localize"
+  ],
+  "since": {
+    "arma3": "2.04"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "stringtable"
+      },
+      "ret": {
+        "desc": "see description",
+        "type": {
+          "ArrayUnsized": {
+            "value": "String"
+          }
+        }
+      },
+      "right": {
+        "Item": {
+          "desc": "stringtable name or \"\"",
+          "name": "stringtable",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

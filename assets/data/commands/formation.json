@@ -40,7 +40,7 @@
       },
       "right": {
         "Item": {
-          "desc": "or [[Group]]",
+          "desc": ", [[Group]] or [[Team Member]]",
           "name": "target",
           "type": "Object"
         }

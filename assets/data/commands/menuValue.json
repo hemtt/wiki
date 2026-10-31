@@ -67,6 +67,29 @@
           }
         ]
       }
+    },
+    {
+      "call": {
+        "Binary": [
+          "control",
+          "path"
+        ]
+      },
+      "left": {
+        "Item": {
+          "name": "control",
+          "type": "Control"
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "name": "path",
+          "type": "TreeViewPath"
+        }
+      }
     }
   ]
 }

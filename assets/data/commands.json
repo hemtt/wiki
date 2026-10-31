@@ -559,7 +559,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"[type,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addEditorObject",
@@ -714,7 +714,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool: [ParamItem { name: \"unitName\", desc: Some(\"person to add the magazines to\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"magazineName\", desc: Some(\"magazine name. See the topic [[:Category:Weapons]] for reference about possible values.\"), typ: String, optional: false, default: None, since: None }]"
+        "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool: [ParamItem { name: \"magazineName\", desc: Some(\"magazine name. See the topic [[:Category:Weapons]] for reference about possible values.\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"unitName\", desc: Some(\"person to add the magazines to\"), typ: Object, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addMagazine",
@@ -1614,7 +1614,7 @@
       ],
       "id": "animate",
       "name": "animate",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Forces animation of bay to given state, -1 for reset to engine handling, can cause weapon inoperative, because weapon is released when bay state == 1.\n{{Feature|informative|\nWhile there is no getter to read the animation phase of the given bay, the [[animationPhase]] command can be used with the individual bay door name from [[animationNames]] as a workaround (See {{Link|#Example 3}}).\n}}",
@@ -3012,7 +3012,7 @@
       ],
       "id": "clearForcesRTD",
       "name": "clearForcesRTD",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Removes all icons from group.",
@@ -3042,7 +3042,7 @@
       "status": "Passed"
     },
     {
-      "description": "Removes all items from ammo box (or any general weapon holder container)",
+      "description": "Removes all items from the weapon pool (used in campaigns to transfer items to the next mission).",
       "groups": [
         "Weapon Pool"
       ],
@@ -3230,7 +3230,7 @@
       ],
       "id": "combatMode",
       "name": "combatMode",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Sets or gets the combat pace for the local player. If the right-hand array is empty, the command will simply return the current combat pace mode without making any changes to combat pace.",
@@ -4229,7 +4229,7 @@
       ],
       "id": "ctrlAddEventHandler",
       "name": "ctrlAddEventHandler",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Gets rotation info of a control set as {{hl|ST_PICTURE}}. Supported control types:\n* [[CT_STATIC]]\n* {{GVI|arma3|2.10|size= 0.75}} [[CT_ACTIVETEXT]]",
@@ -6347,7 +6347,7 @@
       ],
       "id": "diag_localized",
       "name": "diag_localized",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Dumps the argument's value to the [[arma.RPT|report file]]. Each call creates a new line in the file.",
@@ -6994,7 +6994,7 @@
       ],
       "id": "drawIcon3D",
       "name": "drawIcon3D",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Draws a laserbeam and a lightpoint at the impact location of the laser.<br>\nThis command has to be executed every frame - see {{Link|Arma 3: Mission Event Handlers#Draw3D}}.<br>\nLasers drawn with this command are subject to the same limitations as weapon attachment lasers. These limitations are defined in the {{hl|CfgIRLaserSettings}} config class.",
@@ -7212,7 +7212,7 @@
     {
       "description": "Returns the number of given empty positions in the vehicle.\n{{Feature|informative|To return the actual units in the vehicle use [[fullCrew]]. However if only the number is desired, use [[emptyPositions]] because it is faster.}}",
       "errors": [
-        "Param `ignoreLocked` not found in pool: [ParamItem { name: \"vehicle\", desc: Some(\"transport\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"ignoreLocked (Optional)\", desc: Some(\"[[true]] to ignore locked positions. Default: [[false]]\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"position\", desc: Some(\"see [[moveInAny]]. Empty string \\\"\\\" returns number of all free positions\"), typ: String, optional: false, default: None, since: None }]"
+        "Param `ignoreLocked` not found in pool: [ParamItem { name: \"ignoreLocked (Optional)\", desc: Some(\"[[true]] to ignore locked positions. Default: [[false]]\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"vehicle\", desc: Some(\"transport\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"position\", desc: Some(\"see [[moveInAny]]. Empty string \\\"\\\" returns number of all free positions\"), typ: String, optional: false, default: None, since: None }]"
       ],
       "groups": [
         "Object Manipulation",
@@ -8399,7 +8399,7 @@
       ],
       "id": "forceGeneratorRTD",
       "name": "forceGeneratorRTD",
-      "status": "Passed"
+      "status": "Partial"
     },
     {
       "description": "Synchronises hitpoints values and total damage across current network clients as well as JIP.\nPossible uses after executing script commands such as [[setHit]], [[setHitIndex]], [[setHitPointDamage]] or in conjunction with {{Link|Arma 3: Event Handlers#HandleDamage|HandleDamage}} event handler (see {{Link|#Example 2}}).",
@@ -10262,7 +10262,7 @@
       "status": "Passed"
     },
     {
-      "description": "Returns if rotor break is on.\n{{Feature|afm}}",
+      "description": "Returns the state of the rotor brake.\n{{Feature|afm}}",
       "groups": [
         "RTD"
       ],
@@ -11532,7 +11532,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,value,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"[type,value,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "insertEditorObject",
@@ -12605,7 +12605,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `argumentArray1` not found in pool: [ParamItem { name: \"argumentArrayN\", desc: Some(\"format [argumentName, argumentValue, argumentText, argumentSpeech]:\\n* argumentName: [[String]]\\n* argumentValue: [[Code]]\\n* argumentText: [[String]]\\n* argumentSpeech: [[Array]] of [[String]]s - each string is an already defined word in config.\"), typ: Unknown(\"Unknown simple type: array\"), optional: true, default: None, since: None }, ParamItem { name: \"sentenceClass\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"forceRadio\", desc: Some(\"(Optional)\"), typ: OneOf([OneOfValue { typ: StringEnum([StringEnumValue { value: \"false to force use of radio\", desc: None, since: None }]), desc: None, since: None }]), optional: false, default: None, since: None }, ParamItem { name: \"person\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"receiver\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"topicName\", desc: None, typ: String, optional: false, default: None, since: None }]"
+        "Param `argumentArray1` not found in pool: [ParamItem { name: \"argumentArrayN\", desc: Some(\"format [argumentName, argumentValue, argumentText, argumentSpeech]:\\n* argumentName: [[String]]\\n* argumentValue: [[Code]]\\n* argumentText: [[String]]\\n* argumentSpeech: [[Array]] of [[String]]s - each string is an already defined word in config.\"), typ: Unknown(\"Unknown simple type: array\"), optional: true, default: None, since: None }, ParamItem { name: \"sentenceClass\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"person\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"forceRadio\", desc: Some(\"(Optional)\"), typ: OneOf([OneOfValue { typ: StringEnum([StringEnumValue { value: \"false to force use of radio\", desc: None, since: None }]), desc: None, since: None }]), optional: false, default: None, since: None }, ParamItem { name: \"receiver\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"topicName\", desc: None, typ: String, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "kbTell",
@@ -12894,7 +12894,7 @@
       "status": "Passed"
     },
     {
-      "description": "Sets the color of the second (right aligned) picture of the given index of the listbox with id idc of the topmost user dialog to the given color.\nColor which consists from only zeros means disable this override.",
+      "description": "Sets the color of the second (right aligned) picture of the item with the given index of the listbox to the given color.\nColor which consists from only zeros means disable this override.",
       "groups": [
         "GUI Control - ListBox"
       ],
@@ -12903,7 +12903,7 @@
       "status": "Passed"
     },
     {
-      "description": "Sets the disabled color of second (right aligned) picture of the item with the given index of the listbox with id idc of the topmost user dialog to the given color.\nColor which consists from only zeros means disable this override.",
+      "description": "Sets the disabled color of second (right aligned) picture of the item with the given index of the listbox to the given color.\nColor which consists from only zeros means disable this override.",
       "groups": [
         "GUI Control - ListBox"
       ],
@@ -13226,7 +13226,7 @@
       ],
       "id": "limitSpeed",
       "name": "limitSpeed",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Creates a structured text containing a line break.",
@@ -16572,14 +16572,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse parameter for command 'remoteExec': 'targets - (Optional, default 0):\n* [[Number]] (See also [[Multiplayer Scripting#Machine network ID|Machine network ID]]):\n** 0: the order will be executed globally, i.e. on the server and every connected client, including the machine where [[remoteExec]] originated\n** 2: the order will only be executed on the server - is both dedicated and hosted server. See [[Multiplayer_Scripting#Different_machines_and_how_to_target_them|for more info]]\n** Other number: the order will be executed on the machine where [[clientOwner]] matches the given number\n** Negative number: the effect is inverted: -2 means every client but not the server, -12 means the server and every client, except for the client where [[clientOwner]] returns 12\n* [[Object]] - the order will be executed where the given object is [[Multiplayer Scripting#Locality|local]]\n* [[String]] - interpreted as an [[Identifier]] (variable name); the function / command will be executed where the object or group identified by the variable with the provided name is [[Multiplayer Scripting#Locality|local]]\n* [[Side]] - the order will be executed on machines where the player is on the specified side\n* [[Group]] - the order will be executed on machines where the player is in the specified group (not where said group is local!)\n* [[Array]] - array of any combination of the types listed above'"
+      "description": "Asks the server to execute the given function or script command on the given target machine(s).\n* Functions are executed in the [[Scheduler#Scheduled Environment|scheduled environment]]; suspension is allowed.\n* Script commands are executed in the [[Scheduler#Unscheduled Environment|unscheduled environment]]; suspension is not allowed (see {{Link|#Example 7}}).\n\nRead [[Arma 3: Remote Execution]] for more information about remote execution, security features and JIP techniques.\n\n{{Feature|informative|[[remoteExec]]/[[remoteExecCall]] can be used in single player as well, as it is considered as player-hosted multiplayer.}}\n\n{{Feature|important|The direct execution of [[call]] or [[spawn]] via [[remoteExec]] (or [[remoteExecCall]]) should be avoided to prevent issues in cases where the remote execution of [[call]] or [[spawn]] is blocked by [[Arma 3: CfgRemoteExec|CfgRemoteExec]]. It is instead recommended to create a function to be itself remote-executed.}}\n\n{{Feature|warning|The order of persistent remote execution for JIP players is not guaranteed, i.e. the order in which multiple calls are added is not necessarily the order they will be executed for joining player.}}",
+      "groups": [
+        "Multiplayer"
       ],
-      "groups": [],
       "id": "remoteExec",
       "name": "remoteExec",
-      "status": "Failed"
+      "status": "Partial"
     },
     {
       "description": "No documentation available",
@@ -17766,7 +17765,7 @@
       ],
       "id": "say2D",
       "name": "say2D",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Lets an object say given sound in 3D space.\nThis allows broadcasting of positional music or sound from a source, without having to script a fade sound or music command. The source has to be [[alive]].\nCompare this with [[say2D]] which will always play a sound at the location of the player after he has been in the vicinity of a broadcasting sound.\nSound is defined in {{Link|Description.ext#CfgSounds|\"CfgSounds\"}} of the [[Description.ext]] or main config.\n\n{{Feature|informative|\nThe name of the command is the clue to its usage. It is meant for playing short sounds within short range. Consecutive execution of the command queues the sounds, the next sound would not start until the previous sound is finished, hence the need for the short sounds. The simulation of speed of sound would delay next sound and might mess with the timing of the queued sounds, especially if used globally. Additionally the sounds are not synced for JIP players. A long playing sound will not be heard by newly joined payers. To summarise:\n\n* An object can only \"say\" '''one''' sound at a time\n* In order to stop a [[say3D]] sound: delete the returned '''sound source''' with [[deleteVehicle]], or kill the '''sound source''' with e.g [[setDamage]].\n* Forcing the speed of sound simulation may delay the queued sound to play right after the previous sound, even if the second sound does not simulate sound delay (e.g sound 1 plays with a 5s delay, ends, ''then'' sound 2 plays). If the queued sound uses speed of sound simulation, it will be delayed from the end of the first sound (they will not follow \"as expected\"). Makes the ''offset'' parameter ignored.\n* '''Do use''' it for short distance short sounds with speed of sound simulation off.\n* When used with 'isGlobal' option, a null [[NetObject]] is returned. To stop such sound globally, destroy the sound source 'from' object.\n}}",
@@ -17806,14 +17805,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Param `position` not found in pool: [ParamItem { name: \"camera\", desc: Some(\"camera object\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"screen\", desc: Some(\"screen position, see [[SafeZone]] for more information\"), typ: ArraySized([ArraySizedElement { name: \"x\", typ: Number, default: None, desc: None, since: None }, ArraySizedElement { name: \"y\", typ: Number, default: None, desc: None, since: None }]), optional: false, default: None, since: None }]"
+      "description": "Returns the position on landscape ([[Position#PositionAGL|PositionAGL]]) corresponding to the given point on screen (in UI coordinates). \n{{Feature|informative|\nThis command performs an intersection with the ground/water surface, from the camera position along the [[screenToWorldDirection]] vector up to {{hl|viewDistance}} for terrain intersection and {{hl|2 * viewDistance}} for water intersection. In other words, it is similar to doing: \n<sqf>\nprivate _p1 = AGLToASL positionCameraToWorld [0, 0, 0];\t\t\t\t\t// camera position ASL\nprivate _vector = screenToWorldDirection _screenPos;\t\t\t\t\t// \"aim\" vector\nprivate _p2 = _p1 vectorAdd (_vector vectorMultiply viewDistance * 2);\t// the ray does not go beyond 2 * view distance\nASLToAGL terrainIntersectAtASL [_p1, _p2]\n</sqf>\n}}",
+      "groups": [
+        "Positions"
       ],
-      "groups": [],
       "id": "screenToWorld",
       "name": "screenToWorld",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Returns the 3D vector in world corresponding to the given point on the screen (in UI coordinates), as if the vector was aiming from the camera to the screen position.",
@@ -18120,7 +18118,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `receiver` not found in pool: [ParamItem { name: \"[receiver,[type] or [type,parentTask],priority,name1,value1,name2,value2,...]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"sender\", desc: None, typ: TeamMember, optional: false, default: None, since: None }]"
+        "Param `receiver` not found in pool: [ParamItem { name: \"sender\", desc: None, typ: TeamMember, optional: false, default: None, since: None }, ParamItem { name: \"[receiver,[type] or [type,parentTask],priority,name1,value1,name2,value2,...]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "sendTask",
@@ -18812,14 +18810,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Param `killer` not found in pool: [ParamItem { name: \"useEffects\", desc: Some(\"[[false]] to skip destruction effects\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }, ParamItem { name: \"object\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"damage\", desc: Some(\"range 0..1, 0 = pristine/healthy condition, 1 = entirely destroyed/killed\"), typ: Number, optional: false, default: None, since: None }, ParamItem { name: \"{{Icon|serverExec|28}} instigator\", desc: Some(\"the person that instigated the damage.\\n* if a tank is a killer, the tank gunner that pulled the trigger is instigator\\n* it will be listed as <sqf inline>_instigator</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler\\n* MP restricted similar to [[setShotParents]], will be ignored unless executed on the server or headless client in MP\\n** the above MP restriction does not apply to trees, poles and walls\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 12 }), argo: None }) }, ParamItem { name: \"allowResurrection\", desc: Some(\"- Will re-set [[alive]] state of previously dead object.\"), typ: Boolean, optional: true, default: Some(\"false\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 22 }), argo: None }) }, ParamItem { name: \"shot\", desc: Some(\"- shot that caused the damage.\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 22 }), argo: None }) }, ParamItem { name: \"{{Icon|serverExec|28}} killer\", desc: Some(\"the entity that caused the damage (can be anything). If the damage leads to the death of the unit, the killer will be used as the object that caused the kill.\\n* it can be used to show \\\"killed by player\\\" in debriefing statistics and kill messages in the chat (if death messages are enabled).\\n* it will alter the killer's [[rating]] as if the killer directly killed the unit\\n* it will be listed as <sqf inline>_killer</sqf> parameter in the [[Arma 3: Event Handlers#Killed|Killed]] event handler\\n* it influences a tree/pole/wall fall direction (it will fall ''away'' from ''killer'')\\n* ''killer'' is ignored if [[setDamage]] is called on a player client machine unless ''object'' is one of these three entity types - see {{Link|#Example 3}}\\n* MP restricted similar to [[setShotParents]], will be ignored unless executed on the server or headless client in MP\"), typ: Object, optional: true, default: Some(\"objnull\"), since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 12 }), argo: None }) }]"
+      "description": "{{{!}} class=\"wikitable float-right align-center-col-2\"\n{{!}}+ \n! {{Link|Category: Event Handlers|Event Handler}}\n! Triggered\n{{!}}-\n{{!}} {{hl|Hit}}\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} {{hl|HandleDamage}}\n{{!}} {{Icon|unchecked}}\n{{!}}-\n{{!}} {{hl|Killed}}\n{{!}} {{Icon|checked}}\n{{!}}-\n{{!}} {{hl|MPKilled}}\n{{!}} {{Icon|checked}}\n{{!}}}\n\nSets the damage (or lack thereof) of an object/unit. The alternative syntax allows to skip destruction effects for vehicles and buildings and set a tree/pole/wall fall direction (away from ''killer'').",
+      "groups": [
+        "Object Manipulation"
       ],
-      "groups": [],
       "id": "setDamage",
       "name": "setDamage",
-      "status": "Failed"
+      "status": "Partial"
     },
     {
       "description": "Entirely identical to [[setDamage]] that was introduced to fix a typographical error in the command's name.\n{{Feature|informative|See [[setDamage]] for this command's documentation.}}",
@@ -18828,7 +18825,7 @@
       ],
       "id": "setDammage",
       "name": "setDammage",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Sets mission date and time. Players joining after mission start will get the current server [[date]] including the year.\n{{Feature|important|\nWhile the game creates February 29th in a leap year, it removes December 31st.<br>\nFor example, <sqf inline>setDate [1980,12,31,12,0]</sqf> will result in the game jumping to [1981,1,1,12,0] as 1980 is a leap year.\n}}",
@@ -20645,7 +20642,7 @@
     {
       "description": "Defines the trigger activation type.\n\nSee [[ArmA:_Mission_Editor#Triggers_Mode_.28F3.29|ArmA:Mission Editor - Triggers]] for a thorough overview of triggers and its fields for activation, effects, etc.",
       "errors": [
-        "Param `persistent` not found in pool: [ParamItem { name: \"by\", desc: Some(\"who activates trigger. Can be {{hl|\\\"NONE\\\"}}, or:\\n* {{hl|\\\"EAST\\\"}}\\n* {{hl|\\\"WEST\\\"}}\\n* {{hl|\\\"GUER\\\"}}\\n* {{hl|\\\"CIV\\\"}}\\n* {{hl|\\\"LOGIC\\\"}}\\n* {{hl|\\\"ANY\\\"}}\\n* {{GVI|arma3|1.68|size= 0.75}} {{hl|\\\"ANYPLAYER\\\"}}\\n* {{hl|\\\"ALPHA\\\"}}\\n* {{hl|\\\"BRAVO\\\"}}\\n* {{hl|\\\"CHARLIE\\\"}}\\n* {{hl|\\\"DELTA\\\"}}\\n* {{hl|\\\"ECHO\\\"}}\\n* {{hl|\\\"FOXTROT\\\"}}\\n* {{hl|\\\"GOLF\\\"}}\\n* {{hl|\\\"HOTEL\\\"}}\\n* {{hl|\\\"INDIA\\\"}}\\n* {{hl|\\\"JULIET\\\"}}\\n* {{hl|\\\"STATIC\\\"}}\\n* {{hl|\\\"VEHICLE\\\"}}\\n* {{hl|\\\"GROUP\\\"}}\\n* {{hl|\\\"LEADER\\\"}}\\n* {{hl|\\\"MEMBER\\\"}}\\n* {{hl|\\\"WEST SEIZED\\\"}}\\n* {{hl|\\\"EAST SEIZED\\\"}}\\n* {{hl|\\\"GUER SEIZED\\\"}}\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"repeating\", desc: Some(\"activation can happen repeatedly\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"trigger\", desc: Some(\"trigger object\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"type\", desc: Some(\"how trigger is it activated. Can be:\\n* {{hl|\\\"PRESENT\\\"}}\\n* {{hl|\\\"NOT PRESENT\\\"}}\\n* {{hl|\\\"WEST D\\\"}}\\n* {{hl|\\\"EAST D\\\"}}\\n* {{hl|\\\"GUER D\\\"}}\\n* {{hl|\\\"CIV D\\\"}}\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"persistent (Optional)\", desc: Some(\"when [[false]] stops persistent condition execution and vehicle list building on non-repeating trigger; is ignored in radio and repeating triggers. Default: [[true]]\"), typ: Boolean, optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }]"
+        "Param `persistent` not found in pool: [ParamItem { name: \"repeating\", desc: Some(\"activation can happen repeatedly\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"persistent (Optional)\", desc: Some(\"when [[false]] stops persistent condition execution and vehicle list building on non-repeating trigger; is ignored in radio and repeating triggers. Default: [[true]]\"), typ: Boolean, optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }, ParamItem { name: \"type\", desc: Some(\"how trigger is it activated. Can be:\\n* {{hl|\\\"PRESENT\\\"}}\\n* {{hl|\\\"NOT PRESENT\\\"}}\\n* {{hl|\\\"WEST D\\\"}}\\n* {{hl|\\\"EAST D\\\"}}\\n* {{hl|\\\"GUER D\\\"}}\\n* {{hl|\\\"CIV D\\\"}}\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"trigger\", desc: Some(\"trigger object\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"by\", desc: Some(\"who activates trigger. Can be {{hl|\\\"NONE\\\"}}, or:\\n* {{hl|\\\"EAST\\\"}}\\n* {{hl|\\\"WEST\\\"}}\\n* {{hl|\\\"GUER\\\"}}\\n* {{hl|\\\"CIV\\\"}}\\n* {{hl|\\\"LOGIC\\\"}}\\n* {{hl|\\\"ANY\\\"}}\\n* {{GVI|arma3|1.68|size= 0.75}} {{hl|\\\"ANYPLAYER\\\"}}\\n* {{hl|\\\"ALPHA\\\"}}\\n* {{hl|\\\"BRAVO\\\"}}\\n* {{hl|\\\"CHARLIE\\\"}}\\n* {{hl|\\\"DELTA\\\"}}\\n* {{hl|\\\"ECHO\\\"}}\\n* {{hl|\\\"FOXTROT\\\"}}\\n* {{hl|\\\"GOLF\\\"}}\\n* {{hl|\\\"HOTEL\\\"}}\\n* {{hl|\\\"INDIA\\\"}}\\n* {{hl|\\\"JULIET\\\"}}\\n* {{hl|\\\"STATIC\\\"}}\\n* {{hl|\\\"VEHICLE\\\"}}\\n* {{hl|\\\"GROUP\\\"}}\\n* {{hl|\\\"LEADER\\\"}}\\n* {{hl|\\\"MEMBER\\\"}}\\n* {{hl|\\\"WEST SEIZED\\\"}}\\n* {{hl|\\\"EAST SEIZED\\\"}}\\n* {{hl|\\\"GUER SEIZED\\\"}}\"), typ: String, optional: false, default: None, since: None }]"
       ],
       "groups": [
         "Triggers"
@@ -20862,14 +20859,15 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse parameter for command 'setVariable': 'public - (Optional, default [[false]]) can be one of:\n* [[Boolean]] - if set to [[true]], the variable is broadcast globally and is persistent ([[Multiplayer Scripting#Join In Progress|JIP]] compatible) {{Icon|globalEffect|32}}\n* [[Number]] - the variable is only set on the client with the given [[Multiplayer Scripting#Machine network ID|Machine network ID]]. If the number is negative, the variable is set on every client except for the one with the given ID.\n* [[Array]] of [[Number]]s - array of [[Multiplayer Scripting#Machine network ID|Machine network IDs]]\n\nThis parameter is only available if the varspace parameter is a [[Namespace]], [[Object]] or [[Group]]. Furthermore, only the following [[:Category: Data Types|Data Types]] can be broadcast:\n{{{!}} class=\"wikitable align-center\"\n! Type\n{{!}} [[Number]]\n{{!}} [[Boolean]]\n{{!}} [[Object]]\n{{!}} [[Group]]\n{{!}} [[String]]\n{{!}} [[Structured Text|Text]]\n{{!}} [[Array]]\n{{!}} [[Code]]\n{{!}} [[Nothing]] ([[nil]])\n{{!}} [[HashMap]]\n{{!}}-\n! Since\n{{!}} colspan=\"6\" {{!}} {{GVI|arma1|1.00}}\n{{!}} colspan=\"2\" {{!}} {{GVI|arma1|1.09}}\n{{!}} {{GVI|arma3|1.26}}\n{{!}} {{GVI|arma3|2.02}}\n{{!}}}'"
+      "description": "Set variable to given value in the variable space of given element. Can be used to broadcast variables over the network.<br>\nTo remove a variable, set it to [[nil]] (see {{Link|#Example 5}}) - note that this does not work on [[Object]] and [[createLocation|scripted]] [[Location]] namespaces (the variable will be set to [[nil]] but will remain listed by [[allVariables]]).\n\n{{Feature|warning|\n[[missionNamespace]], [[uiNamespace]], [[parsingNamespace]] and [[profileNamespace]] variables '''cannot''' be named as commands - e.g <sqf inline>missionNamespace setVariable [\"west\", 123];</sqf> conflicts with the [[west]] command and will result in a {{hl|Reserved variable in expression}} error, [[west]] being a scripting command (other namespaces do not have such limitation).\nSee also [[:Category:Scripting Commands|all available script commands]].\n}}",
+      "groups": [
+        "Variables",
+        "Namespaces",
+        "Multiplayer"
       ],
-      "groups": [],
       "id": "setVariable",
       "name": "setVariable",
-      "status": "Failed"
+      "status": "Partial"
     },
     {
       "description": "Set object's direction vector. Up vector will remain unchanged.",
@@ -21436,7 +21434,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"[type,class,side,position]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,class,side,position]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "showNewEditorObject",
@@ -22114,7 +22112,7 @@
     {
       "description": "Terminates the given sound",
       "errors": [
-        "Param `id or sound` not found in pool: [ParamItem { name: \"id\", desc: Some(\"id returned by [[playSoundUI]] and [[playSound3D]] commands{{Feature|important|Sound ids are local.}}\"), typ: Number, optional: false, default: None, since: None }, ParamItem { name: \"sound\", desc: Some(\"sound object such as [[say3D]], in which case the particular sound is stopped, or entity such as soldier, then all [[say3D]] sounds current and queued are stopped. Note that passing [[NetObject]], when [[say3D]] is executed with 'isGlobal' option, will cause error. To stop global sound one needs to destroy the source, i.e. kill the speaking unit.\"), typ: Object, optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }]"
+        "Param `id or sound` not found in pool: [ParamItem { name: \"sound\", desc: Some(\"sound object such as [[say3D]], in which case the particular sound is stopped, or entity such as soldier, then all [[say3D]] sounds current and queued are stopped. Note that passing [[NetObject]], when [[say3D]] is executed with 'isGlobal' option, will cause error. To stop global sound one needs to destroy the source, i.e. kill the speaking unit.\"), typ: Object, optional: false, default: None, since: Some(Since { flashpoint: None, flashpoint_elite: None, armed_assault: None, arma_2: None, arma_2_arrowhead: None, take_on_helicopters: None, arma_3: Some(Version { major: 2, minor: 24 }), argo: None }) }, ParamItem { name: \"id\", desc: Some(\"id returned by [[playSoundUI]] and [[playSound3D]] commands{{Feature|important|Sound ids are local.}}\"), typ: Number, optional: false, default: None, since: None }]"
       ],
       "groups": [
         "Sounds"
@@ -22824,14 +22822,13 @@
       "status": "Passed"
     },
     {
-      "description": "No documentation available",
-      "errors": [
-        "Failed to parse parameter for command 'toJSON': 'data - Only certain [[Data Types]] are supported:\n* [[Boolean]] - serialized as JSON boolean\n* [[Number]] - serialized as JSON number (floating-point)\n* [[String]] - serialized as JSON string\n* [[Array]] - Serialized as JSON array. Unsupported elements (e.g. [[Object]]s) are converted to JSON null.\n* [[HashMap]] - Serialized as JSON object. Only [[String]] keys are supported, other keys are ignored. Unsupported values (e.g. [[Object]]s) are converted to JSON null.\n* [[nil]] - serialized as JSON null {{Feature|important|The [[nil]] value can only be passed as a member of an [[Array]] or [[HashMap]]. It cannot be passed directly as the command would simply not execute.}}'"
+      "description": "Converts data to {{Link|https://en.wikipedia.org/wiki/JSON|JSON}}.",
+      "groups": [
+        "Strings"
       ],
-      "groups": [],
       "id": "toJSON",
       "name": "toJSON",
-      "status": "Failed"
+      "status": "Passed"
     },
     {
       "description": "Converts the supplied Unicode string to all lowercase characters. If the string doesn't have characters with [[toArray|codes]] > 255, use [[toLowerANSI]].",
@@ -23729,7 +23726,7 @@
       ],
       "id": "useAISteeringComponent",
       "name": "useAISteeringComponent",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Switch between elapsed game time and audio time being used as animation timer. Used for audio/animation synchronization.",
@@ -23774,7 +23771,7 @@
       ],
       "id": "vectorCos",
       "name": "vectorCos",
-      "status": "Partial"
+      "status": "Passed"
     },
     {
       "description": "Cross product of two 3D vectors. \n<br>In layman's terms, if you have a polygon (surface) defined by 3 points, you can find a normal to it (just like terrain [[surfaceNormal]]). To invert direction of the normal, swap arguments around.",
@@ -24739,10 +24736,10 @@
       "status": "Passed"
     }
   ],
-  "failed": 41,
-  "partial": 359,
-  "passed": 2279,
-  "timestamp": 1793396843,
+  "failed": 36,
+  "partial": 352,
+  "passed": 2291,
+  "timestamp": 1793415800,
   "total": 2693,
   "version": "1.0"
 }

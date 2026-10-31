@@ -54,9 +54,8 @@
       },
       "left": {
         "Item": {
-          "desc": "or [[Group]]",
           "name": "groupName",
-          "type": "Object"
+          "type": "Group"
         }
       },
       "ret": {

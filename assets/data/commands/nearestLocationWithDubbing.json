@@ -3,7 +3,7 @@
   "description": "Find the nearest location having a non-empty speech.\n{{Feature|arma3|No locations are dubbed in {{arma3}}.}}",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>_location = nearestLocationWithDubbing player;</sqf>",
+    "<sqf>_location = nearestLocationWithDubbing ASLToAGL getPosASL player;</sqf>",
     "<sqf>_location = nearestLocationWithDubbing getMarkerPos \"myMarker\";</sqf>"
   ],
   "groups": [
@@ -43,9 +43,9 @@
       },
       "right": {
         "Item": {
-          "desc": "or [[Position#PositionAGL|PositionAGL]] or [[Position#Introduction|Position2D]]",
+          "desc": "or [[Position#Introduction|Position2D]]",
           "name": "position",
-          "type": "Object"
+          "type": "Position3dAGL"
         }
       }
     }

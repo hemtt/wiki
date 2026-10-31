@@ -3,7 +3,8 @@
   "description": "Returns the shown text in the item with the given position of the given 2D listbox.",
   "effect_loc": "Local",
   "examples": [
-    "<sqf>_text = _ctrl lnbText [0,0];</sqf>"
+    "<sqf>_text = _ctrl lnbText [0,0];</sqf>",
+    "<sqf>_text = lnbText [101, [0,1]];</sqf>"
   ],
   "groups": [
     "GUI Control - ListNBox"
@@ -73,6 +74,46 @@
               "name": "column",
               "type": "Number"
             }
+          }
+        ]
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          [
+            "row",
+            "column"
+          ]
+        ]
+      },
+      "ret": {
+        "type": "String"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Array": [
+              {
+                "Item": {
+                  "name": "row",
+                  "type": "Number"
+                }
+              },
+              {
+                "Item": {
+                  "name": "column",
+                  "type": "Number"
+                }
+              }
+            ]
           }
         ]
       }

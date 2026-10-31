@@ -31,7 +31,7 @@
       "right": {
         "Item": {
           "name": "edenEntity",
-          "type": "Object"
+          "type": "EdenEntity"
         }
       }
     }

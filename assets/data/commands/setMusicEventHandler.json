@@ -3,8 +3,8 @@
   "description": "Sets given music track event handler. Will overwrite other music event handlers.\n{{Feature|obsolete|Use [[addMusicEventHandler]] instead as it can stack music event handlers.}}",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>_ehID = setMusicEventHandler [\"MusicStart\", \"hint str _this\"];</sqf>",
-    "<sqf>_ehID = setMusicEventHandler [\"MusicStop\", \"hint str _this\"];</sqf>"
+    "<sqf>setMusicEventHandler [\"MusicStart\", \"hint str _this\"];</sqf>",
+    "<sqf>setMusicEventHandler [\"MusicStop\", \"hint str _this\"];</sqf>"
   ],
   "groups": [
     "Event Handlers",
@@ -32,8 +32,7 @@
         ]
       },
       "ret": {
-        "desc": "id of the event handler",
-        "type": "Number"
+        "type": "Nothing"
       },
       "right": {
         "Array": [

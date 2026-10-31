@@ -29,8 +29,7 @@
         ]
       },
       "ret": {
-        "desc": "[[true]] If the connection was removed",
-        "type": "Boolean"
+        "type": "Nothing"
       },
       "right": {
         "Array": [

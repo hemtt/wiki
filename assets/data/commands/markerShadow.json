@@ -27,7 +27,7 @@
         "Unary": "marker"
       },
       "ret": {
-        "desc": ": [[true]] if marker is enabled, [[false]] if not",
+        "desc": "[[true]] if marker is enabled, [[false]] if not",
         "type": "Boolean"
       },
       "right": {

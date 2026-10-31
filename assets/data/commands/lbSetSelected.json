@@ -66,7 +66,7 @@
         "Array": [
           {
             "Item": {
-              "desc": "or since {{GVI|arma3|2.12}} [[Array]] of [[Number]]s",
+              "desc": "or {{GVI|arma3|2.12|size= 0.75}} [[Array]] of [[Number]]s",
               "name": "index",
               "type": "Number"
             }

@@ -37,7 +37,7 @@
         }
       },
       "ret": {
-        "desc": "distance in meters or 1e10 if distance cannot be calculated",
+        "desc": "squared distance in square meters or 1e10 if distance cannot be calculated",
         "type": "Number"
       },
       "right": {
@@ -45,6 +45,32 @@
           "desc": "or [[Position]]",
           "name": "var2",
           "type": "Object"
+        }
+      }
+    },
+    {
+      "call": {
+        "Binary": [
+          "location1",
+          "location2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "or [[Position]]",
+          "name": "location1",
+          "type": "Location"
+        }
+      },
+      "ret": {
+        "desc": "squared distance in square meters or 1e10 if distance cannot be calculated",
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "or [[Position]]",
+          "name": "location2",
+          "type": "Location"
         }
       }
     },

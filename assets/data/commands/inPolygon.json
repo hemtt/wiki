@@ -32,7 +32,7 @@
       },
       "left": {
         "Item": {
-          "desc": ", {{GVI|arma3|2.14|size= 0.75}} [[Object]] or [[Group]]",
+          "desc": "or {{GVI|arma3|2.14|size= 0.75}} [[Object]]",
           "name": "position",
           "type": "Position3d"
         }

@@ -1,0 +1,78 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Converts data to {{Link|https://en.wikipedia.org/wiki/JSON|JSON}}.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nprivate _result = toJSON [\"this\", \"is\", \"an\", \"array\"];\n</sqf>\nResult:\n<syntaxhighlight lang=\"json\">\n[\"this\",\"is\",\"an\",\"array\"]\n</syntaxhighlight>",
+    "<sqf>\nprivate _hashMap = createHashMap;\n_hashMap set [\"bKey\", true];\n_hashMap set [\"sKey\", \"Hello there\"];\n_hashMap set [\"oKey\", player];\n_hashMap set [\"nKey\", 42];\n_hashMap set [\"hKey\", [\"key1\", \"key2\", \"yolo\"] createHashMapFromArray [\"General Kenobi\", true, \"Hello it's me\"]];\ntoJSON _hashMap;\n</sqf>\nResult (formatted for readability):\n<syntaxhighlight lang=\"json\">\n{\n\t\"bKey\": true,\n\t\"sKey\": \"Hello there\",\n\t\"oKey\": null,\n\t\"nkey\": 42,\n\t\"hKey\": {\n\t\t\"key1\": \"General Kenobi\",\n\t\t\"key2\": true,\n\t\t\"yolo\": \"Hello it's me\"\n\t}\n}\n</syntaxhighlight>",
+    "<sqf>\nprivate _jsonPlayer = toJSON player; // empty string - [[Object]] is not supported\n</sqf>"
+  ],
+  "groups": [
+    "Strings"
+  ],
+  "id": "toJSON",
+  "name": "toJSON",
+  "problem_notes": [],
+  "see_also": [
+    "fromJSON",
+    "toString",
+    "str"
+  ],
+  "since": {
+    "arma3": "2.18"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "data"
+      },
+      "ret": {
+        "desc": "JSON string",
+        "type": "String"
+      },
+      "right": {
+        "Item": {
+          "desc": "serialized as JSON boolean\nserialized as JSON number (floating-point)\nserialized as JSON string\nSerialized as JSON array. Unsupported elements (e.g. [[Object]]s) are converted to JSON null.\nSerialized as JSON object. Only [[String]] keys are supported, other keys are ignored. Unsupported values (e.g. [[Object]]s) are converted to JSON null.\nserialized as JSON null {{Feature|important|The [[nil]] value can only be passed as a member of an [[Array]] or [[HashMap]]. It cannot be passed directly as the command would simply not execute.}}",
+          "name": "data",
+          "type": {
+            "OneOf": [
+              {
+                "desc": "serialized as JSON boolean",
+                "since": null,
+                "type": "Boolean"
+              },
+              {
+                "desc": "serialized as JSON number (floating-point)",
+                "since": null,
+                "type": "Number"
+              },
+              {
+                "desc": "serialized as JSON string",
+                "since": null,
+                "type": "String"
+              },
+              {
+                "desc": "Serialized as JSON array. Unsupported elements (e.g. [[Object]]s) are converted to JSON null.",
+                "since": null,
+                "type": {
+                  "Unknown": "Unknown simple type: array"
+                }
+              },
+              {
+                "desc": "Serialized as JSON object. Only [[String]] keys are supported, other keys are ignored. Unsupported values (e.g. [[Object]]s) are converted to JSON null.",
+                "since": null,
+                "type": "HashMapUnknown"
+              },
+              {
+                "desc": "serialized as JSON null {{Feature|important|The [[nil]] value can only be passed as a member of an [[Array]] or [[HashMap]]. It cannot be passed directly as the command would simply not execute.}}",
+                "since": null,
+                "type": "Nothing"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

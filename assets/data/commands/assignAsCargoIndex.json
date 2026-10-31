@@ -46,7 +46,7 @@
         }
       },
       "ret": {
-        "type": "Boolean"
+        "type": "Nothing"
       },
       "right": {
         "Array": [

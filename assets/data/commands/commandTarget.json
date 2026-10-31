@@ -4,7 +4,7 @@
   "effect_loc": "Global",
   "examples": [
     "<sqf>_ESoldier1 commandTarget _WSoldier1;</sqf>",
-    "<sqf>player commandTarget [ted, bill];</sqf>"
+    "<sqf>[_ESoldier1, _ESoldier2] commandTarget _WSoldier1;</sqf>"
   ],
   "groups": [
     "Groups"
@@ -36,6 +36,7 @@
       },
       "left": {
         "Item": {
+          "desc": "or [[Array]] of [[Object]]s",
           "name": "unit",
           "type": "Object"
         }
@@ -45,7 +46,6 @@
       },
       "right": {
         "Item": {
-          "desc": "or [[Array]] of [[Object]]s",
           "name": "target",
           "type": "Object"
         }

@@ -38,6 +38,7 @@
       },
       "right": {
         "Item": {
+          "desc": "or [[Structured Text]]",
           "name": "text",
           "type": "String"
         }

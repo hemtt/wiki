@@ -1,0 +1,56 @@
+{
+  "argument_loc": "Global",
+  "description": "Plays given sound in 2D.",
+  "effect_loc": "Local",
+  "examples": [
+    "<sqf>player say2D \"HelloThere\";</sqf>",
+    "<sqf>[player, _officer] say2D [\"HelloThere\", 50, 0.9];</sqf>"
+  ],
+  "groups": [
+    "Sounds"
+  ],
+  "id": "say2D",
+  "name": "say2D",
+  "problem_notes": [],
+  "see_also": [
+    "say",
+    "say3D",
+    "playSound",
+    "createSoundSource",
+    "playSoundUI"
+  ],
+  "since": {
+    "arma2": "1.00",
+    "arma2oa": "1.50",
+    "arma3": "0.50",
+    "tkoh": "1.00"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "from",
+          "sound"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "or [[Array]]\n* [[Object]] - the sound source\n* [[Array]] with [from, to]\n** from: [[Object]] - sound source\n** to: [[Object]] - target",
+          "name": "from",
+          "type": "Object"
+        }
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Item": {
+          "desc": "or [[Array]]\n* [[String]] - class name of the sound to be played. Defined in CfgSounds including [[Description.ext]]\n* [[Array]] with [sound, maxTitlesDistance, speed]\n** sound: [[String]] - class name of the sound to be played. Defined in CfgSounds including [[Description.ext]]\n** maxTitlesDistance: [[Number]] (Optional, default 100) - max. distance in meters at which the sound can be heard\n** speed: [[Number]] (Optional, default 1) - pitch of the sound",
+          "name": "sound",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}

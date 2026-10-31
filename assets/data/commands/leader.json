@@ -35,11 +35,12 @@
         "Unary": "unitOrGroup"
       },
       "ret": {
+        "desc": "or [[Team Member]]",
         "type": "Object"
       },
       "right": {
         "Item": {
-          "desc": "or [[Group]]",
+          "desc": ", [[Group]] or [[Team Member]]",
           "name": "unitOrGroup",
           "type": "Object"
         }

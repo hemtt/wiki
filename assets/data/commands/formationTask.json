@@ -28,7 +28,7 @@
         "Unary": "unit"
       },
       "ret": {
-        "desc": ": \"EXCLUDED\", \"MOVE\", \"COVER\", \"LEADER\", \"NOTHING\"",
+        "desc": "\"EXCLUDED\", \"MOVE\", \"COVER\", \"LEADER\", \"NOTHING\"",
         "type": "String"
       },
       "right": {

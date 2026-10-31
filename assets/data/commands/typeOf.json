@@ -39,7 +39,7 @@
       },
       "right": {
         "Item": {
-          "desc": ", since {{GVI|arma3|2.22}} [[Control]], [[Display]]",
+          "desc": ", {{GVI|arma3|2.22|size= 0.75}} [[Control]] or {{GVI|arma3|2.22|size= 0.75}} [[Display]]",
           "name": "target",
           "type": "Object"
         }

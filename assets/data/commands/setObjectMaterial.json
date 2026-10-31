@@ -46,7 +46,7 @@
         "Array": [
           {
             "Item": {
-              "desc": "or [[String]] (since {{GVI|arma3|2.10}}).",
+              "desc": "or {{GVI|arma3|2.10|size= 0.75}} [[String]]",
               "name": "selectionNumber",
               "type": "Number"
             }

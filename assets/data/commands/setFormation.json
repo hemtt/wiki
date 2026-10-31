@@ -36,7 +36,7 @@
       },
       "left": {
         "Item": {
-          "desc": "or [[Group]]",
+          "desc": ", [[Group]] or [[Team Member]]",
           "name": "group",
           "type": "Object"
         }

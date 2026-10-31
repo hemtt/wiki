@@ -44,7 +44,7 @@
       },
       "right": {
         "Item": {
-          "desc": ", [[Control]], [[Display]], [[Group]], [[Location]], [[Task]], [[Script Handle]], [[Config]] or [[Diary Record]]",
+          "desc": ", [[Control]], [[Display]], [[Group]], [[Location]], [[Task]], [[Script Handle]], [[Config]], [[Diary Record]] or [[Team Member]]",
           "name": "entity",
           "type": "Object"
         }

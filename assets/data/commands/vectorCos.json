@@ -1,0 +1,95 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Cosine of angle between two 3D or 2D vectors.",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>_cos = getPos player vectorCos [0,0,2];</sqf>"
+  ],
+  "groups": [
+    "Math - Vectors"
+  ],
+  "id": "vectorCos",
+  "name": "vectorCos",
+  "problem_notes": [],
+  "see_also": [
+    "vectorAdd",
+    "vectorDiff",
+    "vectorCrossProduct",
+    "vectorDotProduct",
+    "vectorMagnitude",
+    "vectorMagnitudeSqr",
+    "vectorMultiply",
+    "vectorDistance",
+    "vectorDistanceSqr",
+    "vectorDir",
+    "vectorUp",
+    "setVectorDir",
+    "setVectorUp",
+    "setVectorDirAndUp",
+    "vectorNormalized",
+    "vectorFromTo",
+    "matrixMultiply",
+    "matrixTranspose"
+  ],
+  "since": {
+    "arma3": "1.22"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Binary": [
+          "vector1",
+          "vector2"
+        ]
+      },
+      "left": {
+        "Item": {
+          "desc": "When [[Vector2D]] is provided the z coordinate is defaulted to 0",
+          "name": "vector1",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Vector3d"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.00"
+                },
+                "type": "Vector2d"
+              }
+            ]
+          }
+        }
+      },
+      "ret": {
+        "type": "Number"
+      },
+      "right": {
+        "Item": {
+          "desc": "When [[Vector2D]] is provided the z coordinate is defaulted to 0",
+          "name": "vector2",
+          "type": {
+            "OneOf": [
+              {
+                "desc": null,
+                "since": null,
+                "type": "Vector3d"
+              },
+              {
+                "desc": null,
+                "since": {
+                  "arma3": "2.00"
+                },
+                "type": "Vector2d"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

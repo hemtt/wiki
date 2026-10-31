@@ -3,7 +3,8 @@
   "description": "Removes row with the given index from the given listbox or combobox.",
   "effect_loc": "Unspecified",
   "examples": [
-    "<sqf>_ctrl lnbDeleteRow 1;</sqf>"
+    "<sqf>_ctrl lnbDeleteRow 1;</sqf>",
+    "<sqf>lnbDeleteRow [105, 0];</sqf>"
   ],
   "groups": [
     "GUI Control - ListNBox"
@@ -62,6 +63,33 @@
           "name": "row",
           "type": "Number"
         }
+      }
+    },
+    {
+      "call": {
+        "Unary": [
+          "idc",
+          "row"
+        ]
+      },
+      "ret": {
+        "type": "Nothing"
+      },
+      "right": {
+        "Array": [
+          {
+            "Item": {
+              "name": "idc",
+              "type": "Number"
+            }
+          },
+          {
+            "Item": {
+              "name": "row",
+              "type": "Number"
+            }
+          }
+        ]
       }
     }
   ]

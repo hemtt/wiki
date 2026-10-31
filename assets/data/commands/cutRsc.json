@@ -118,7 +118,21 @@
         }
       },
       "ret": {
-        "type": "Nothing"
+        "desc": "if layer is a [[Number]]\nif layer is a [[String]]: the layer number used for that name",
+        "type": {
+          "OneOf": [
+            {
+              "desc": "if layer is a [[Number]]",
+              "since": null,
+              "type": "Nothing"
+            },
+            {
+              "desc": "if layer is a [[String]]: the layer number used for that name",
+              "since": null,
+              "type": "Number"
+            }
+          ]
+        }
       },
       "right": {
         "Array": [
