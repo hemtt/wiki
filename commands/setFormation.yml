@@ -10,7 +10,7 @@ syntax:
     type: Nothing
   left: !Item
     name: group
-    desc: or [[Group]]
+    desc: ', [[Group]] or [[Team Member]]'
     type: Object
   right: !Item
     name: formation
