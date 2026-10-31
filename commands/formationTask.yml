@@ -6,7 +6,7 @@ syntax:
 - call: !Unary unit
   ret:
     type: String
-    desc: ': "EXCLUDED", "MOVE", "COVER", "LEADER", "NOTHING"'
+    desc: '"EXCLUDED", "MOVE", "COVER", "LEADER", "NOTHING"'
   right: !Item
     name: unit
     type: Object
