@@ -7,9 +7,17 @@ alias:
 groups:
 - Object Manipulation
 syntax:
-- call: Nular
+- call: !Binary
+  - object
+  - damage
   ret:
-    type: !Unknown 'Unknown simple type: -'
+    type: Nothing
+  left: !Item
+    name: object
+    type: Object
+  right: !Item
+    name: damage
+    type: Number
 argument_loc: Global
 effect_loc: Global
 since:
