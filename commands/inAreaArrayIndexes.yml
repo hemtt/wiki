@@ -15,7 +15,8 @@ syntax:
   - positions
   - area
   ret:
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !ArrayUnsized
+      value: Number
     desc: indexes of matched positions in positions array
   left: !Item
     name: positions
@@ -47,7 +48,8 @@ syntax:
     - c
     - usePosWorld
   ret:
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !ArrayUnsized
+      value: Number
     desc: indexes of matched positions in positions array
   left: !Item
     name: positions
@@ -96,7 +98,8 @@ syntax:
   - positions
   - - posN
   ret:
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !ArrayUnsized
+      value: Number
     desc: indexes of matched positions in positions array
   left: !Item
     name: positions
