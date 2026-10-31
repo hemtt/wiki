@@ -8,7 +8,7 @@ syntax:
 - call: !Unary marker
   ret:
     type: Boolean
-    desc: ': [[true]] if marker is enabled, [[false]] if not'
+    desc: '[[true]] if marker is enabled, [[false]] if not'
   right: !Item
     name: marker
     desc: the marker
