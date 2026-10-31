@@ -55,7 +55,16 @@ syntax:
     - showInMap
     - drawOverHUD
   ret:
-    type: Nothing
+    type: !OneOf
+    - type: Nothing
+      desc: if layer is a [[Number]]
+      since: null
+    - type: Number
+      desc: 'if layer is a [[String]]: the layer number used for that name'
+      since: null
+    desc: |-
+      if layer is a [[Number]]
+      if layer is a [[String]]: the layer number used for that name
   left: !Item
     name: layer
     desc: |-
