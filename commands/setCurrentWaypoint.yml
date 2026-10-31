@@ -10,8 +10,7 @@ syntax:
     type: Nothing
   left: !Item
     name: groupName
-    desc: or [[Group]]
-    type: Object
+    type: Group
   right: !Item
     name: waypoint
     type: Waypoint
