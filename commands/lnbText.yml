@@ -19,6 +19,23 @@ syntax:
   - !Item
     name: column
     type: Number
+- call: !Unary
+  - idc
+  - - row
+    - column
+  ret:
+    type: String
+  right: !Array
+  - !Item
+    name: idc
+    type: Number
+  - !Array
+    - !Item
+      name: row
+      type: Number
+    - !Item
+      name: column
+      type: Number
 argument_loc: Local
 effect_loc: Local
 since:
@@ -28,6 +45,7 @@ since:
   arma3: '0.50'
 examples:
 - <sqf>_text = _ctrl lnbText [0,0];</sqf>
+- <sqf>_text = lnbText [101, [0,1]];</sqf>
 see_also:
 - lnbAddArray
 - lnbAddColumn
