@@ -27,6 +27,7 @@ syntax:
     desc: '- The new task will be a sub task of the parent task'
     type: Task
     optional: true
+    default: tasknull
 argument_loc: Global
 effect_loc: Local
 since:
