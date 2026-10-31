@@ -10,7 +10,7 @@ syntax:
     type: Boolean
   left: !Item
     name: position
-    desc: ', {{GVI|arma3|2.14|size= 0.75}} [[Object]] or [[Group]]'
+    desc: or {{GVI|arma3|2.14|size= 0.75}} [[Object]]
     type: Position3d
   right: !Item
     name: polygon
