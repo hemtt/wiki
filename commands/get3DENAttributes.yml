@@ -10,7 +10,7 @@ syntax:
     type: !Unknown 'Unknown simple type: array'
   left: !Item
     name: entity
-    type: Object
+    type: EdenEntity
   right: !Item
     name: category
     desc: ("" to get all attributes, [[typeOf]] to get Object Specific attributes)
