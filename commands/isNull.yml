@@ -48,7 +48,7 @@ syntax:
     type: Boolean
   right: !Item
     name: entity
-    desc: ', [[Control]], [[Display]], [[Group]], [[Location]], [[Task]], [[Script Handle]], [[Config]] or [[Diary Record]]'
+    desc: ', [[Control]], [[Display]], [[Group]], [[Location]], [[Task]], [[Script Handle]], [[Config]], [[Diary Record]] or [[Team Member]]'
     type: Object
 argument_loc: Global
 effect_loc: Unspecified
