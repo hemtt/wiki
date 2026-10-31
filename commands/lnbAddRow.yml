@@ -12,7 +12,7 @@ syntax:
   right: !Array
   - !Item
     name: ctrl
-    desc: ', [[Control]] since {{GVI|arma3|2.22}}'
+    desc: or {{GVI|arma3|2.22|size= 0.75}} [[Control]]
     type: Number
   - !Item
     name: data
