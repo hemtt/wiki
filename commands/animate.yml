@@ -34,7 +34,14 @@ syntax:
   - !Item
     name: speed
     desc: when [[true]] animation is instant; [[Number]] > 0 is treated as config speed value multiplier
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !OneOf
+    - type: Boolean
+      desc: null
+      since: null
+    - type: Number
+      desc: null
+      since:
+        arma3: '1.66'
     optional: true
     default: 'false'
 argument_loc: Global
