@@ -7,7 +7,7 @@ groups:
 syntax:
 - call: Nular
   ret:
-    type: !Unknown 'Unknown simple type: array'
+    type: Nothing
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
