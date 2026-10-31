@@ -11,20 +11,22 @@ syntax:
   left: !Item
     name: from
     desc: |-
+      or [[Array]]
       * [[Object]] - the sound source
       * [[Array]] with [from, to]
       ** from: [[Object]] - sound source
       ** to: [[Object]] - target
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: Object
   right: !Item
     name: sound
     desc: |-
+      or [[Array]]
       * [[String]] - class name of the sound to be played. Defined in CfgSounds including [[Description.ext]]
       * [[Array]] with [sound, maxTitlesDistance, speed]
       ** sound: [[String]] - class name of the sound to be played. Defined in CfgSounds including [[Description.ext]]
       ** maxTitlesDistance: [[Number]] (Optional, default 100) - max. distance in meters at which the sound can be heard
       ** speed: [[Number]] (Optional, default 1) - pitch of the sound
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: String
 argument_loc: Global
 effect_loc: Local
 since:
