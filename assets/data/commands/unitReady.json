@@ -35,30 +35,8 @@
       },
       "right": {
         "Item": {
-          "desc": "if an array is given, only its first element is used",
           "name": "unitName",
-          "type": {
-            "ArrayUnsized": {
-              "value": {
-                "OneOf": [
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": "Object"
-                  },
-                  {
-                    "desc": null,
-                    "since": null,
-                    "type": {
-                      "ArrayUnsized": {
-                        "value": "Object"
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "type": "Object"
         }
       }
     }
