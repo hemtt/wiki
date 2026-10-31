@@ -12,6 +12,7 @@ syntax:
     type: Nothing
   right: !Item
     name: text
+    desc: or [[Structured Text]]
     type: String
 argument_loc: Unspecified
 effect_loc: Local
