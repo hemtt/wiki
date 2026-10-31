@@ -68,7 +68,8 @@ syntax:
     default: '""'
   - !Item
     name: shadow
-    desc: |-
+    desc: |2-
+
       * [[Number]]:
       ** 0: no shadow
       ** 1: shadow (not used in this context, used in UI context)
@@ -76,7 +77,15 @@ syntax:
       * [[Boolean]]:
       ** [[true]] - outline
       ** [[false]] - no shadow
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !OneOf
+    - type: Number
+      desc: null
+      since: null
+    - type: Boolean
+      desc: null
+      since: null
+    optional: true
+    default: '0'
   - !Item
     name: textSize
     desc: text size
