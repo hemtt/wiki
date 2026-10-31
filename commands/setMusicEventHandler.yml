@@ -10,8 +10,7 @@ syntax:
   - type
   - function
   ret:
-    type: Number
-    desc: id of the event handler
+    type: Nothing
   right: !Array
   - !Item
     name: type
@@ -26,8 +25,8 @@ effect_loc: Unspecified
 since:
   arma3: '1.02'
 examples:
-- <sqf>_ehID = setMusicEventHandler ["MusicStart", "hint str _this"];</sqf>
-- <sqf>_ehID = setMusicEventHandler ["MusicStop", "hint str _this"];</sqf>
+- <sqf>setMusicEventHandler ["MusicStart", "hint str _this"];</sqf>
+- <sqf>setMusicEventHandler ["MusicStop", "hint str _this"];</sqf>
 see_also:
 - addMusicEventHandler
 - removeMusicEventHandler
