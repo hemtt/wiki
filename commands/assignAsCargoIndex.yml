@@ -10,7 +10,7 @@ syntax:
   - - vehicle
     - index
   ret:
-    type: Boolean
+    type: Nothing
   left: !Item
     name: character
     desc: character to assign
