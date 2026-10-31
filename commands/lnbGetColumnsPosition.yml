@@ -10,6 +10,13 @@ syntax:
   right: !Item
     name: _ctrl
     type: Control
+- call: !Unary idc
+  ret:
+    type: !Unknown 'Unknown simple type: array'
+    desc: of [[Number]]s
+  right: !Item
+    name: idc
+    type: Number
 argument_loc: Local
 effect_loc: Local
 since:
