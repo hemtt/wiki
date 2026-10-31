@@ -7,8 +7,7 @@ groups:
 syntax:
 - call: !Unary position
   ret:
-    type: Number
-    desc: force index
+    type: !Unknown 'Unknown simple type: array'
   right: !Item
     name: position
     desc: position where to force generator is created.
