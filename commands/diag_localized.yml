@@ -6,7 +6,8 @@ groups:
 syntax:
 - call: !Unary stringtable
   ret:
-    type: !Unknown Exceeded maximum recursion depth while parsing Value
+    type: !ArrayUnsized
+      value: String
     desc: see description
   right: !Item
     name: stringtable
