@@ -19,7 +19,7 @@ syntax:
   right: !Array
   - !Item
     name: index
-    desc: or since {{GVI|arma3|2.12}} [[Array]] of [[Number]]s
+    desc: or {{GVI|arma3|2.12|size= 0.75}} [[Array]] of [[Number]]s
     type: Number
   - !Item
     name: selected
