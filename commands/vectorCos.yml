@@ -11,11 +11,25 @@ syntax:
   left: !Item
     name: vector1
     desc: When [[Vector2D]] is provided the z coordinate is defaulted to 0
-    type: !Unknown 'Unknown simple type: '
+    type: !OneOf
+    - type: Vector3d
+      desc: null
+      since: null
+    - type: Vector2d
+      desc: null
+      since:
+        arma3: '2.00'
   right: !Item
     name: vector2
     desc: When [[Vector2D]] is provided the z coordinate is defaulted to 0
-    type: !Unknown 'Unknown simple type: '
+    type: !OneOf
+    - type: Vector3d
+      desc: null
+      since: null
+    - type: Vector2d
+      desc: null
+      since:
+        arma3: '2.00'
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
