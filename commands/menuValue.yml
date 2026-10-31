@@ -15,6 +15,17 @@ syntax:
   - !Item
     name: path
     type: TreeViewPath
+- call: !Binary
+  - control
+  - path
+  ret:
+    type: Number
+  left: !Item
+    name: control
+    type: Control
+  right: !Item
+    name: path
+    type: TreeViewPath
 argument_loc: Unspecified
 effect_loc: Unspecified
 since:
