@@ -70,10 +70,10 @@ desc: |-
   {{!}} [[Nothing]]
   {{!}} Sets the browsers internal render size. Any display will scale the texture up/down as needed.
   {{!}}-
-  {{!}} SetControlReference {{GVI|arma3|2.24}}
+  {{!}} SetControlReference
   {{!}} [[Control]]
   {{!}} [[Nothing]]
-  {{!}} Sets the control to be referenced by [[CT_CONTROL_REF]] control.
+  {{!}} This has moved to [[ctrlProperty]] command. You cannot use this version here.
   {{!}}}
 groups:
 - GUI Control
