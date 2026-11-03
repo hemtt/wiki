@@ -1,0 +1,39 @@
+{
+  "argument_loc": "Unspecified",
+  "description": "Create a web request returning an SQF promise, allowing communication with web servers in game.\n{{Feature|informative|See {{Link|Arma 3: WebAPI|WebAPI}} for a full tutorial.}}",
+  "effect_loc": "Unspecified",
+  "examples": [
+    "<sqf>\nspawn {\n\tprivate _handle = webRequest #{\n\t\t\"type\": \"http\",\n\t\t//\"method\": \"GET\", \"GET\" is default\n\t\t\"origin\": \"test\",\n\t\t\"url\": \"https://myip.wtf/text\"\n\t};\n\tprivate _result = waitUntil _handle; // suspend until it is ready\n\t_result params [\"_request\", \"_result\"];\n\tsystemChat format [\"My IP is: %1\", _result get \"body\"];\n};\n</sqf>"
+  ],
+  "groups": [
+    "System"
+  ],
+  "id": "webRequest",
+  "name": "webRequest",
+  "problem_notes": [],
+  "see_also": [
+    "callExtension",
+    "connectToServer"
+  ],
+  "since": {
+    "arma3": "2.24"
+  },
+  "status": "Passed",
+  "syntax": [
+    {
+      "call": {
+        "Unary": "request"
+      },
+      "ret": {
+        "desc": "a {{Link|Script Handle#Promise Handles|promise}}",
+        "type": "ScriptHandle"
+      },
+      "right": {
+        "Item": {
+          "name": "request",
+          "type": "HashMapUnknown"
+        }
+      }
+    }
+  ]
+}
