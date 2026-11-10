@@ -6,7 +6,8 @@
     "<sqf>_control ctrlSetFontHeight 0.05;</sqf>"
   ],
   "groups": [
-    "GUI Control - HTML"
+    "GUI Control - HTML",
+    "GUI Control"
   ],
   "id": "ctrlSetFontHeight",
   "name": "ctrlSetFontHeight",
