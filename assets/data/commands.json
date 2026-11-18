@@ -559,7 +559,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"[type,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,[name1,value1,...],subtype class]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addEditorObject",
@@ -714,7 +714,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool: [ParamItem { name: \"unitName\", desc: Some(\"person to add the magazines to\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"magazineName\", desc: Some(\"magazine name. See the topic [[:Category:Weapons]] for reference about possible values.\"), typ: String, optional: false, default: None, since: None }]"
+        "Param `magazineName<br>\n{{Icon|localArgument|32}}{{Icon|globalEffect|32}}` not found in pool: [ParamItem { name: \"magazineName\", desc: Some(\"magazine name. See the topic [[:Category:Weapons]] for reference about possible values.\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"unitName\", desc: Some(\"person to add the magazines to\"), typ: Object, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addMagazine",
@@ -805,7 +805,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `menu or index` not found in pool: [ParamItem { name: \"[menu or index,text,command,priority]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
+        "Param `menu or index` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[menu or index,text,command,priority]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "addMenuItem",
@@ -7028,7 +7028,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `from` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[from,to,param type,line type,color]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `from` not found in pool: [ParamItem { name: \"[from,to,param type,line type,color]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "drawLink",
@@ -7213,7 +7213,7 @@
     {
       "description": "Returns the number of given empty positions in the vehicle.\n{{Feature|informative|To return the actual units in the vehicle use [[fullCrew]]. However if only the number is desired, use [[emptyPositions]] because it is faster.}}",
       "errors": [
-        "Param `ignoreLocked` not found in pool: [ParamItem { name: \"position\", desc: Some(\"see [[moveInAny]]. Empty string \\\"\\\" returns number of all free positions\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"ignoreLocked (Optional)\", desc: Some(\"[[true]] to ignore locked positions. Default: [[false]]\"), typ: Boolean, optional: false, default: None, since: None }, ParamItem { name: \"vehicle\", desc: Some(\"transport\"), typ: Object, optional: false, default: None, since: None }]"
+        "Param `ignoreLocked` not found in pool: [ParamItem { name: \"position\", desc: Some(\"see [[moveInAny]]. Empty string \\\"\\\" returns number of all free positions\"), typ: String, optional: false, default: None, since: None }, ParamItem { name: \"vehicle\", desc: Some(\"transport\"), typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"ignoreLocked (Optional)\", desc: Some(\"[[true]] to ignore locked positions. Default: [[false]]\"), typ: Boolean, optional: false, default: None, since: None }]"
       ],
       "groups": [
         "Object Manipulation",
@@ -7817,7 +7817,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `object` not found in pool: [ParamItem { name: \"[object,script]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
+        "Param `object` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[object,script]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "execEditorScript",
@@ -12606,7 +12606,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `argumentArray1` not found in pool: [ParamItem { name: \"receiver\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"sentenceClass\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"argumentArrayN\", desc: Some(\"format [argumentName, argumentValue, argumentText, argumentSpeech]:\\n* argumentName: [[String]]\\n* argumentValue: [[Code]]\\n* argumentText: [[String]]\\n* argumentSpeech: [[Array]] of [[String]]s - each string is an already defined word in config.\"), typ: Unknown(\"Unknown simple type: array\"), optional: true, default: None, since: None }, ParamItem { name: \"topicName\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"person\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"forceRadio\", desc: Some(\"(Optional)\"), typ: OneOf([OneOfValue { typ: StringEnum([StringEnumValue { value: \"false to force use of radio\", desc: None, since: None }]), desc: None, since: None }]), optional: false, default: None, since: None }]"
+        "Param `argumentArray1` not found in pool: [ParamItem { name: \"sentenceClass\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"receiver\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"forceRadio\", desc: Some(\"(Optional)\"), typ: OneOf([OneOfValue { typ: StringEnum([StringEnumValue { value: \"false to force use of radio\", desc: None, since: None }]), desc: None, since: None }]), optional: false, default: None, since: None }, ParamItem { name: \"person\", desc: None, typ: Object, optional: false, default: None, since: None }, ParamItem { name: \"topicName\", desc: None, typ: String, optional: false, default: None, since: None }, ParamItem { name: \"argumentArrayN\", desc: Some(\"format [argumentName, argumentValue, argumentText, argumentSpeech]:\\n* argumentName: [[String]]\\n* argumentValue: [[Code]]\\n* argumentText: [[String]]\\n* argumentSpeech: [[Array]] of [[String]]s - each string is an already defined word in config.\"), typ: Unknown(\"Unknown simple type: array\"), optional: true, default: None, since: None }]"
       ],
       "groups": [],
       "id": "kbTell",
@@ -14421,7 +14421,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `path {{Feature|obsolete|This old syntax is kept only for backward compatibility.|arma3|2.06}}` not found in pool: [ParamItem { name: \"path\", desc: None, typ: TreeViewPath, optional: false, default: None, since: None }, ParamItem { name: \"control\", desc: None, typ: Control, optional: false, default: None, since: None }]"
+        "Param `path {{Feature|obsolete|This old syntax is kept only for backward compatibility.|arma3|2.06}}` not found in pool: [ParamItem { name: \"control\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"path\", desc: None, typ: TreeViewPath, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "menuEnable",
@@ -16138,7 +16138,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `_identifier = value <span style=\"margin-left: 7em\">'''{{Color|red|From {{arma2}} v1.00 to {{arma3}} v1.52:}}''' see '''` not found in pool: [ParamItem { name: \"_identifier\", desc: Some(\", for example <sqf inline>_myVar</sqf>\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }, ParamItem { name: \"value\", desc: Some(\": value to assign to the variable\"), typ: Anything, optional: false, default: None, since: None }]"
+        "Param `_identifier = value <span style=\"margin-left: 7em\">'''{{Color|red|From {{arma2}} v1.00 to {{arma3}} v1.52:}}''' see '''` not found in pool: [ParamItem { name: \"value\", desc: Some(\": value to assign to the variable\"), typ: Anything, optional: false, default: None, since: None }, ParamItem { name: \"_identifier\", desc: Some(\", for example <sqf inline>_myVar</sqf>\"), typ: Unknown(\"Exceeded maximum recursion depth while parsing Value\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "private",
@@ -18129,7 +18129,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `state` not found in pool: [ParamItem { name: \"[state,result,sentence]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"task\", desc: None, typ: Task, optional: false, default: None, since: None }]"
+        "Param `state` not found in pool: [ParamItem { name: \"task\", desc: None, typ: Task, optional: false, default: None, since: None }, ParamItem { name: \"[state,result,sentence]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "sendTaskResult",
@@ -21435,7 +21435,7 @@
     {
       "description": "No documentation available",
       "errors": [
-        "Param `type` not found in pool: [ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }, ParamItem { name: \"[type,class,side,position]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }]"
+        "Param `type` not found in pool: [ParamItem { name: \"[type,class,side,position]\", desc: None, typ: Unknown(\"Unknown simple type: array\"), optional: false, default: None, since: None }, ParamItem { name: \"map\", desc: None, typ: Control, optional: false, default: None, since: None }]"
       ],
       "groups": [],
       "id": "showNewEditorObject",
@@ -24749,7 +24749,7 @@
   "failed": 36,
   "partial": 352,
   "passed": 2292,
-  "timestamp": 1794960590,
+  "timestamp": 1795013123,
   "total": 2694,
   "version": "1.0"
 }
